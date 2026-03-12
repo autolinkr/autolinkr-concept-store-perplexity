@@ -1,0 +1,16 @@
+# Shopify Theme Configuration
+# https://shopify.dev/docs/themes/tools/cli/configuration
+
+[environments.development]
+# Replace CONCEPT_THEME_ID with the numeric ID of ConceptThemePerplexity
+# Find it in: Shopify Admin > Online Store > Themes > ... > Edit code
+# URL will contain: /themes/XXXXXXXXXX/editor
+theme = "CONCEPT_THEME_ID"
+store = "YOUR_STORE.myshopify.com"
+ignore = [
+  "config/settings_data.json"
+]
+
+[environments.production]
+theme = "CONCEPT_THEME_ID"
+store = "YOUR_STORE.myshopify.com"

@@ -1,0 +1,23 @@
+# Shopify CLI
+.shopify/
+shopify.theme.toml.bak
+
+# Node
+node_modules/
+.npm/
+.pnpm-store/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env / secrets
+.env
+.env.local
+*.pem

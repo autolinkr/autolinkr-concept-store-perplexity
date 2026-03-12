@@ -66,9 +66,9 @@ shopify theme push --theme-id <CONCEPT_THEME_ID>
 
 - [x] GitHub repository created
 - [x] Directory structure scaffolded (OS 2.0 standard)
-- [ ] `ConceptThemePerplexity` theme ID confirmed (pending)
+- [x] `ConceptThemePerplexity` theme ID confirmed — `184215470114`
 - [ ] Shopify CLI authenticated
-- [ ] Initial theme pull completed
+- [x] Initial theme pull completed — 339 files synced 2026-03-12
 - [ ] Implementation plan reviewed (Phase 4)
 
 ## Decisions & Assumptions

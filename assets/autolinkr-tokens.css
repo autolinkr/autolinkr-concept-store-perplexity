@@ -266,3 +266,19 @@ h1, h2, h3, h4, h5, h6,
   white-space: nowrap;
   border: 0;
 }
+
+/* ── Amber button variant (Elite upsell) ── */
+.al-btn--amber {
+  background: var(--al-amber, #FF9500);
+  color: #000;
+  border-color: var(--al-amber, #FF9500);
+}
+
+.al-btn--amber:hover,
+.al-btn--amber:focus-visible {
+  background: #FFB340;
+  border-color: #FFB340;
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(255, 149, 0, 0.3);
+}

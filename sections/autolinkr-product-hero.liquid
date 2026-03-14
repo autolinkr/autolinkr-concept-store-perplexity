@@ -1,0 +1,491 @@
+{% comment %}
+  autolinkr-product-hero.liquid
+  AutoLinkr Product Page — Hero Block
+  Phase B — ConceptThemePerplexity
+
+  Renders:
+  - Product images (gallery + zoom)
+  - Product title, price, variant selector
+  - Add-to-Cart (full-width, 56px)
+  - Sticky ATC bar on scroll
+  - Trust signals row
+  - "Ad-first" cold traffic ready (all brand context above fold)
+  - Streaming callout (Pro/Elite only)
+  - Elite upgrade nudge (when on Pro page)
+  - aReviews star badge
+{% endcomment %}
+
+{{ 'autolinkr-product.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign product = product
+  assign is_pro   = false
+  assign is_elite = false
+  assign is_base  = false
+  assign is_dash  = false
+  assign is_tablet = false
+  if product.handle == 'the-autolinkr-pro' or product.handle == 'shop-the-autolinkr-pro'
+    assign is_pro = true
+  endif
+  if product.handle == 'autolinkr-elite'
+    assign is_elite = true
+  endif
+  if product.handle == 'autolinkr-base'
+    assign is_base = true
+  endif
+  if product.handle == 'autolinkr-dash'
+    assign is_dash = true
+  endif
+  if product.handle == 'autolinkr-tablet'
+    assign is_tablet = true
+  endif
+  assign show_streaming_callout = false
+  if is_pro or is_elite
+    assign show_streaming_callout = true
+  endif
+  assign show_elite_nudge = false
+  if is_pro
+    assign show_elite_nudge = true
+  endif
+  assign current_variant = product.selected_or_first_available_variant
+  assign featured_media  = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+-%}
+
+<section
+  class="al-pdp-hero"
+  id="al-pdp-hero"
+  data-section-id="{{ section.id }}"
+  data-section-type="autolinkr-product-hero"
+  data-product-id="{{ product.id }}"
+>
+  <div class="al-container al-pdp-hero__inner">
+
+    {%- comment %} ── LEFT: GALLERY ── {%- endcomment %}
+    <div class="al-pdp-gallery" id="al-pdp-gallery">
+
+      {%- comment %} Main image {%- endcomment %}
+      <div class="al-pdp-gallery__main">
+        {%- if product.media.size > 0 -%}
+          {%- for media in product.media -%}
+            <div
+              class="al-pdp-gallery__slide{% if forloop.first %} is-active{% endif %}"
+              data-media-id="{{ media.id }}"
+            >
+              {%- if media.media_type == 'image' -%}
+                {{
+                  media
+                  | image_url: width: 900
+                  | image_tag:
+                    class: 'al-pdp-gallery__img',
+                    widths: '400, 600, 900',
+                    sizes: '(max-width: 767px) 92vw, 44vw',
+                    loading: 'eager',
+                    fetchpriority: 'high',
+                    alt: media.alt | default: product.title
+                }}
+              {%- elsif media.media_type == 'video' -%}
+                <div class="al-pdp-gallery__video-wrap">
+                  <video
+                    class="al-pdp-gallery__video"
+                    autoplay muted loop playsinline preload="metadata"
+                  >
+                    {%- for source in media.sources -%}
+                      <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                    {%- endfor -%}
+                  </video>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          <div class="al-pdp-gallery__slide is-active">
+            <div class="al-pdp-gallery__placeholder">
+              {{ 'product-1' | placeholder_svg_tag: 'al-pdp-gallery__placeholder-svg' }}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment %} Thumbnails {%- endcomment %}
+      {%- if product.media.size > 1 -%}
+      <div class="al-pdp-gallery__thumbs" role="list" aria-label="Product images">
+        {%- for media in product.media limit: 6 -%}
+          <button
+            class="al-pdp-gallery__thumb{% if forloop.first %} is-active{% endif %}"
+            data-media-id="{{ media.id }}"
+            aria-label="View image {{ forloop.index }}"
+            role="listitem"
+          >
+            {{
+              media
+              | image_url: width: 120
+              | image_tag:
+                class: 'al-pdp-gallery__thumb-img',
+                widths: '80, 120',
+                loading: 'lazy',
+                alt: media.alt | default: product.title
+            }}
+          </button>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+
+    </div><!-- /.al-pdp-gallery -->
+
+    {%- comment %} ── RIGHT: PRODUCT INFO ── {%- endcomment %}
+    <div class="al-pdp-info">
+
+      {%- comment %} Eyebrow badges {%- endcomment %}
+      <div class="al-pdp-info__eyebrow">
+        {%- if is_pro -%}
+          <span class="al-badge al-badge--blue">Best Seller</span>
+        {%- elsif is_elite -%}
+          <span class="al-badge al-badge--amber">Most Capable</span>
+        {%- elsif is_dash -%}
+          <span class="al-badge al-badge--green">New</span>
+        {%- endif -%}
+
+        {%- comment %} aReviews star badge — rendered by the aReviews app widget {%- endcomment %}
+        <div class="al-pdp-info__stars" data-reviews-widget="star-badge" data-product-id="{{ product.id }}">
+          {%- comment %} aReviews injects stars here via their JS widget {%- endcomment %}
+          <span class="al-pdp-info__stars-fallback" aria-label="4.9 out of 5 stars">
+            <span class="al-star-icons" aria-hidden="true">★★★★★</span>
+            <span class="al-pdp-info__review-count">4.9 (2,400+ reviews)</span>
+          </span>
+        </div>
+      </div>
+
+      {%- comment %} Product title {%- endcomment %}
+      <h1 class="al-pdp-info__title">{{ product.title }}</h1>
+
+      {%- comment %} Short description {%- endcomment %}
+      {%- if product.metafields.custom.short_description != blank -%}
+        <p class="al-pdp-info__short-desc">{{ product.metafields.custom.short_description }}</p>
+      {%- elsif section.settings.short_description != blank -%}
+        <p class="al-pdp-info__short-desc">{{ section.settings.short_description }}</p>
+      {%- else -%}
+        {%- if is_pro -%}
+          <p class="al-pdp-info__short-desc">Converts your wired CarPlay to wireless — plus unlocks Netflix, YouTube, and Google Play on your factory screen. Plug in, pair once, and drive.</p>
+        {%- elsif is_elite -%}
+          <p class="al-pdp-info__short-desc">Everything in Pro, plus split-screen multitasking and a faster processor. Stream two apps side-by-side while navigating. The ultimate upgrade.</p>
+        {%- elsif is_base -%}
+          <p class="al-pdp-info__short-desc">Converts your wired CarPlay or Android Auto to wireless. Simple, reliable, no subscription. The entry-level wireless upgrade.</p>
+        {%- elsif is_dash -%}
+          <p class="al-pdp-info__short-desc">Dual 1080P front and cabin dashcam with IR night vision, 170° wide angle, WiFi app control, G-sensor, and loop recording. Never drive without proof again.</p>
+        {%- elsif is_tablet -%}
+          <p class="al-pdp-info__short-desc">Portable 7" wireless CarPlay screen for any car. No factory CarPlay required — works with iPhone and Android via Bluetooth and WiFi.</p>
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- comment %} Streaming callout (Pro/Elite only) {%- endcomment %}
+      {%- if show_streaming_callout -%}
+      <div class="al-pdp-info__streaming-callout">
+        <div class="al-pdp-info__streaming-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8a6 6 0 1012 0A6 6 0 002 8z" stroke="#2D7FF9" stroke-width="1.5"/><path d="M6.5 5.5l4 2.5-4 2.5V5.5z" fill="#2D7FF9"/></svg>
+          Streaming Apps Included
+        </div>
+        <div class="al-pdp-info__streaming-apps">
+          <span class="al-pdp-info__app-chip al-pdp-info__app-chip--netflix">Netflix</span>
+          <span class="al-pdp-info__app-chip al-pdp-info__app-chip--youtube">YouTube</span>
+          <span class="al-pdp-info__app-chip al-pdp-info__app-chip--play">Google Play</span>
+          <span class="al-pdp-info__app-chip al-pdp-info__app-chip--spotify">Spotify</span>
+        </div>
+      </div>
+      {%- endif -%}
+
+      {%- comment %} Price {%- endcomment %}
+      <div class="al-pdp-info__price-row" id="al-pdp-price">
+        <span class="al-pdp-info__price" data-price>
+          {{ current_variant.price | money }}
+        </span>
+        {%- if current_variant.compare_at_price > current_variant.price -%}
+          <span class="al-pdp-info__compare-price" data-compare-price>
+            {{ current_variant.compare_at_price | money }}
+          </span>
+          <span class="al-pdp-info__savings">
+            Save {{ current_variant.compare_at_price | minus: current_variant.price | money }}
+          </span>
+        {%- endif -%}
+      </div>
+
+      {%- comment %} Variant selector {%- endcomment %}
+      {%- unless product.has_only_default_variant -%}
+      <div class="al-pdp-info__variants">
+        {%- for option in product.options_with_values -%}
+          <div class="al-pdp-info__option" data-option-index="{{ forloop.index0 }}">
+            <label class="al-pdp-info__option-label">
+              {{ option.name }}:
+              <span class="al-pdp-info__option-selected" data-option-selected="{{ forloop.index0 }}">
+                {{ option.selected_value }}
+              </span>
+            </label>
+            <div class="al-pdp-info__option-values">
+              {%- for value in option.values -%}
+                {%- assign variant_for_value = product.variants | where: "option1", value | first -%}
+                {%- if option.position == 2 -%}
+                  {%- assign variant_for_value = product.variants | where: "option2", value | first -%}
+                {%- endif -%}
+                <button
+                  class="al-pdp-info__option-btn{% if value == option.selected_value %} is-selected{% endif %}{% if variant_for_value.available == false %} is-sold-out{% endif %}"
+                  data-option-index="{{ forloop.parentloop.index0 }}"
+                  data-option-value="{{ value | escape }}"
+                  data-variant-id="{{ variant_for_value.id }}"
+                  {%- assign is_selected = false -%}
+                  {%- if value == option.selected_value -%}{%- assign is_selected = true -%}{%- endif -%}
+                  aria-pressed="{{ is_selected }}"
+                  {%- if variant_for_value.available == false %} aria-disabled="true"{% endif %}
+                >
+                  {{ value }}
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+      {%- endunless -%}
+
+      {%- comment %} Add to cart form {%- endcomment %}
+      <form
+        action="/cart/add"
+        method="post"
+        id="al-pdp-form"
+        class="al-pdp-info__form"
+        data-type="add-to-cart-form"
+        data-product-id="{{ product.id }}"
+      >
+        <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+        <input type="hidden" name="quantity" value="1">
+
+        <div class="al-pdp-info__atc-wrap">
+          {%- if current_variant.available -%}
+            <button
+              type="submit"
+              name="add"
+              class="al-btn al-btn--primary al-btn--xl al-pdp-atc"
+              data-add-to-cart
+              aria-label="Add {{ product.title }} to cart"
+            >
+              <span class="al-pdp-atc__label" data-atc-label>Add to Cart</span>
+              <span class="al-pdp-atc__price" data-atc-price>— {{ current_variant.price | money }}</span>
+              <svg class="al-pdp-atc__spinner al-hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="rgba(255,255,255,0.3)" stroke-width="2"/><path d="M10 2a8 8 0 018 8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          {%- else -%}
+            <button
+              type="button"
+              class="al-btn al-btn--ghost al-btn--xl al-pdp-atc al-pdp-atc--sold-out"
+              disabled
+            >
+              Sold Out — Check Back Soon
+            </button>
+          {%- endif -%}
+
+          {%- comment %} Buy it now (Shopify dynamic checkout) {%- endcomment %}
+          {%- if section.settings.show_dynamic_checkout and current_variant.available -%}
+            <div class="al-pdp-info__dynamic-checkout">
+              {{ form | payment_button }}
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- comment %} Klaviyo back-in-stock form (sold out variants) {%- endcomment %}
+        {%- unless current_variant.available -%}
+          <div class="al-pdp-info__bis" id="al-bis-form">
+            <p class="al-pdp-info__bis-text">Get notified when it's back:</p>
+            <div class="klaviyo-bis-trigger" data-variant-id="{{ current_variant.id }}">
+              {%- comment %} Klaviyo Back-in-Stock widget mounts here {%- endcomment %}
+            </div>
+          </div>
+        {%- endunless -%}
+
+      </form>
+
+      {%- comment %} Trust micro-row {%- endcomment %}
+      <ul class="al-pdp-info__trust" role="list">
+        <li class="al-pdp-info__trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5L3 4V7.5c0 2.9 2.1 5.6 5 6.3 2.9-.7 5-3.4 5-6.3V4L8 1.5z" stroke="#30D158" stroke-width="1.25" stroke-linejoin="round"/><path d="M5.5 8l2 2 3.5-3.5" stroke="#30D158" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          30-Day Returns
+        </li>
+        <li class="al-pdp-info__trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 6h12M2 6l1.5-3h7.5L13 6M2 6v6a1 1 0 001 1h10a1 1 0 001-1V6" stroke="#2D7FF9" stroke-width="1.25" stroke-linecap="round"/></svg>
+          Free Shipping
+        </li>
+        <li class="al-pdp-info__trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="5.5" stroke="#FF9500" stroke-width="1.25"/><path d="M5.5 8l2 2 3-3" stroke="#FF9500" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ships in 24 hrs
+        </li>
+        <li class="al-pdp-info__trust-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="5" width="10" height="7.5" rx="1" stroke="#A1A1A6" stroke-width="1.25"/><path d="M5.5 5V4a2.5 2.5 0 015 0v1" stroke="#A1A1A6" stroke-width="1.25" stroke-linecap="round"/></svg>
+          Secure Checkout
+        </li>
+      </ul>
+
+      {%- comment %} Elite upgrade nudge — shown on Pro page only {%- endcomment %}
+      {%- if show_elite_nudge -%}
+      <div class="al-pdp-info__elite-nudge">
+        <div class="al-pdp-info__elite-nudge-inner">
+          <div class="al-pdp-info__elite-nudge-text">
+            <strong>Want Split-Screen?</strong>
+            <span>Upgrade to AutoLinkr Elite™ for split-screen multitasking + faster CPU.</span>
+          </div>
+          <a
+            href="/products/autolinkr-elite"
+            class="al-pdp-info__elite-nudge-link"
+            data-cta="pdp-elite-nudge"
+          >
+            See Elite — $199.99 →
+          </a>
+        </div>
+      </div>
+      {%- endif -%}
+
+      {%- comment %} Requires existing CarPlay disclaimer (Adapters only) {%- endcomment %}
+      {%- if is_pro or is_elite or is_base -%}
+      <p class="al-pdp-info__disclaimer">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.5" stroke="#6E6E73" stroke-width="1.25"/><path d="M7 6.5V9.5M7 4.5v.5" stroke="#6E6E73" stroke-width="1.25" stroke-linecap="round"/></svg>
+        Requires factory-installed wired CarPlay or Android Auto. Does not add CarPlay to vehicles without it.
+      </p>
+      {%- endif -%}
+
+      {%- comment %} Tablet dealer value comparison (Tablet only) {%- endcomment %}
+      {%- if is_tablet -%}
+      <div class="al-pdp-info__dealer-compare">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1.5l1.5 4h4L9.5 8l1.25 3.5L7 9.5l-3.75 2 1.25-3.5L1.5 5.5h4L7 1.5z" fill="#FF9500"/></svg>
+        Dealer head unit upgrade: <strong>$500–$1,500</strong>. AutoLinkr Tablet™: <strong>$74.99</strong>. Works with any car.
+      </div>
+      {%- endif -%}
+
+    </div><!-- /.al-pdp-info -->
+
+  </div><!-- /.al-pdp-hero__inner -->
+
+</section>
+
+{%- comment %} ── STICKY ATC BAR ── {%- endcomment %}
+<div class="al-sticky-atc" id="al-sticky-atc" aria-hidden="true" role="region" aria-label="Sticky add to cart">
+  <div class="al-container al-sticky-atc__inner">
+    <div class="al-sticky-atc__product">
+      {%- if product.featured_image -%}
+        {{
+          product.featured_image
+          | image_url: width: 80
+          | image_tag: class: 'al-sticky-atc__img', loading: 'lazy', alt: product.title
+        }}
+      {%- endif -%}
+      <div>
+        <span class="al-sticky-atc__title">{{ product.title }}</span>
+        <span class="al-sticky-atc__price" data-sticky-price>{{ current_variant.price | money }}</span>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="al-btn al-btn--primary al-sticky-atc__btn"
+      data-sticky-atc
+      aria-label="Add {{ product.title }} to cart"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  // Sticky ATC bar — show after scrolling past the main ATC button
+  var hero  = document.getElementById('al-pdp-hero');
+  var sticky = document.getElementById('al-sticky-atc');
+  if (!hero || !sticky) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) {
+        sticky.classList.add('is-visible');
+        sticky.setAttribute('aria-hidden', 'false');
+      } else {
+        sticky.classList.remove('is-visible');
+        sticky.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }, { threshold: 0, rootMargin: '-120px 0px 0px 0px' });
+
+  observer.observe(hero);
+
+  // Sticky ATC click → submit main form
+  var stickyBtn = sticky.querySelector('[data-sticky-atc]');
+  if (stickyBtn) {
+    stickyBtn.addEventListener('click', function() {
+      var mainForm = document.getElementById('al-pdp-form');
+      if (mainForm) {
+        var submitBtn = mainForm.querySelector('[data-add-to-cart]');
+        if (submitBtn) submitBtn.click();
+      }
+    });
+  }
+
+  // Gallery thumbnails
+  var thumbs = document.querySelectorAll('.al-pdp-gallery__thumb');
+  var slides = document.querySelectorAll('.al-pdp-gallery__slide');
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var mediaId = thumb.getAttribute('data-media-id');
+      thumbs.forEach(function(t) { t.classList.remove('is-active'); });
+      slides.forEach(function(s) { s.classList.remove('is-active'); });
+      thumb.classList.add('is-active');
+      var target = document.querySelector('.al-pdp-gallery__slide[data-media-id="' + mediaId + '"]');
+      if (target) target.classList.add('is-active');
+    });
+  });
+
+  // Variant selector
+  var optionBtns = document.querySelectorAll('.al-pdp-info__option-btn');
+  optionBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var optionIndex = btn.getAttribute('data-option-index');
+      var value       = btn.getAttribute('data-option-value');
+      var variantId   = btn.getAttribute('data-variant-id');
+
+      // Update selected state
+      document.querySelectorAll('.al-pdp-info__option-btn[data-option-index="' + optionIndex + '"]').forEach(function(b) {
+        b.classList.remove('is-selected');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('is-selected');
+      btn.setAttribute('aria-pressed', 'true');
+
+      // Update label
+      var label = document.querySelector('[data-option-selected="' + optionIndex + '"]');
+      if (label) label.textContent = value;
+
+      // Update hidden variant ID
+      var variantInput = document.querySelector('[data-variant-id]');
+      if (variantInput && variantId) variantInput.value = variantId;
+    });
+  });
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "AL Product Hero",
+  "tag": "section",
+  "class": "al-pdp-hero-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "short_description",
+      "label": "Short Description (overrides default)",
+      "info": "Leave blank to use the auto-detected product description."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dynamic_checkout",
+      "label": "Show Dynamic Checkout Button (Buy It Now)",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "AL Product Hero"
+    }
+  ]
+}
+{% endschema %}

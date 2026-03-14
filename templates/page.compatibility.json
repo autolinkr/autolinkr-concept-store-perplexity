@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "compatibility-intro": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Find Your Perfect AutoLinkr Match",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "text": "<p>Answer a few quick questions and we'll recommend the right AutoLinkr product for your car and needs. Takes under 60 seconds.</p>"
+      }
+    },
+    "jebbit-quiz": {
+      "type": "custom-liquid",
+      "settings": {
+        "liquid": "<!-- JEBBIT QUIZ EMBED — Adapter Selector Quiz -->\n<!-- Replace the src URL below with your Jebbit embed URL -->\n<div class='jebbit-quiz-wrapper' style='max-width:900px;margin:0 auto;padding:24px 0;'>\n  <!-- PLACEHOLDER: Replace with actual Jebbit embed code -->\n  <div style='background:#f5f5f5;border:2px dashed #ccc;border-radius:12px;padding:60px 40px;text-align:center;'>\n    <p style='font-size:20px;font-weight:700;color:#333;margin-bottom:12px;'>*Jebbit Quiz Placeholder — Adapter Selector*</p>\n    <p style='color:#666;font-size:14px;margin-bottom:24px;'>Replace this block with your Jebbit embed code. Suggested quiz flow:<br>1. Does your car have factory CarPlay? → 2. What phone do you use? → 3. Do you want streaming? → 4. Split-screen vs standard? → Product recommendation</p>\n    <p style='color:#888;font-size:13px;'>To embed: Jebbit Dashboard → Your Quiz → Share → Embed → Copy iframe code → Paste in theme editor</p>\n  </div>\n</div>"
+      }
+    },
+    "compatibility-fallback": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "col-1": {
+          "type": "column",
+          "settings": {
+            "icon": "checkmark",
+            "heading": "Factory CarPlay Car + Want Streaming",
+            "text": "<p>AutoLinkr Pro™ is your best value choice — wireless CarPlay plus Netflix, YouTube, and Google Play for $79.99.</p>"
+          }
+        },
+        "col-2": {
+          "type": "column",
+          "settings": {
+            "icon": "bolt",
+            "heading": "Factory CarPlay Car + Want Split-Screen",
+            "text": "<p>AutoLinkr Elite™ unlocks split-screen multitasking with a faster CPU — run two apps simultaneously on your factory display.</p>"
+          }
+        },
+        "col-3": {
+          "type": "column",
+          "settings": {
+            "icon": "wifi",
+            "heading": "Any Car, No Factory CarPlay",
+            "text": "<p>AutoLinkr Tablet™ brings wireless CarPlay to any car — no factory CarPlay required. Works with iPhone and Android.</p>"
+          }
+        },
+        "col-4": {
+          "type": "column",
+          "settings": {
+            "icon": "shield",
+            "heading": "Want Dashcam Protection",
+            "text": "<p>AutoLinkr Dash™ installs in any car with a 12V outlet. Dual 1080P, IR night vision, and WiFi app — from $69.99.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "col-1",
+        "col-2",
+        "col-3",
+        "col-4"
+      ],
+      "settings": {
+        "style": "icons-top",
+        "columns": 2,
+        "text_alignment": "left",
+        "heading": "Quick Guide — Find Your AutoLinkr",
+        "heading_size": "h3",
+        "heading_alignment": "center",
+        "subheading": "Or use the quiz above for a personalized recommendation"
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "compatibility-intro",
+    "jebbit-quiz",
+    "compatibility-fallback"
+  ]
+}

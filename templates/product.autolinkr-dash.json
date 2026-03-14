@@ -1,21 +1,518 @@
 {
   "sections": {
-    "al-product-hero": {
-      "type": "autolinkr-product-hero",
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true,
+            "show_product_title": true
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {
+            "show_sold_out": false,
+            "show_save_amount": true,
+            "save_type": "percent"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-lg",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h1",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "text-tagline": {
+          "type": "text",
+          "settings": {
+            "text": "Dual 1080P front + rear recording with IR night vision, 170° wide-angle lens, and WiFi app control. Always-on protection, loop recording, and G-sensor collision detection.",
+            "text_size": "text-base",
+            "icon": "none"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "enable_dynamic_variants": true,
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": false
+          }
+        },
+        "text-variant-note": {
+          "type": "text",
+          "settings": {
+            "text": "Choose your storage: No SD Card (use your own), 32GB, or 64GB pre-installed.",
+            "text_size": "text-sm",
+            "icon": "none"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": true,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "text-trust-1": {
+          "type": "text",
+          "settings": {
+            "text": "✓ Free & Fast Shipping",
+            "text_size": "text-sm",
+            "icon": "none"
+          }
+        },
+        "text-trust-2": {
+          "type": "text",
+          "settings": {
+            "text": "✓ 30-Day Money-Back Guarantee",
+            "text_size": "text-sm",
+            "icon": "none"
+          }
+        },
+        "text-trust-3": {
+          "type": "text",
+          "settings": {
+            "text": "✓ 1-Year Warranty Included",
+            "text_size": "text-sm",
+            "icon": "none"
+          }
+        },
+        "collapsible-whats-included": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": true,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "What's Included",
+            "content": "<ul><li>AutoLinkr Dash™ Front Camera</li><li>Rear Camera (with cable)</li><li>Adhesive Mount</li><li>Power Cable (12V car adapter)</li><li>SD Card (if selected variant)</li><li>Quick-Start Guide</li></ul>",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Full Specifications",
+            "content": "<ul><li><strong>Resolution:</strong> Dual 1080P Full HD (front + rear)</li><li><strong>Field of View:</strong> 170° ultra-wide front, 140° rear</li><li><strong>Night Vision:</strong> IR infrared night vision (clear footage in darkness)</li><li><strong>Loop Recording:</strong> Automatic — old footage overwritten when card is full</li><li><strong>G-Sensor:</strong> Auto-locks footage on collision or hard braking</li><li><strong>Connectivity:</strong> WiFi app control (iOS + Android)</li><li><strong>Parking Mode:</strong> Motion detection while parked</li><li><strong>Power:</strong> 12V car power adapter (included)</li><li><strong>Storage:</strong> microSD (Class 10 or above) — No SD, 32GB, or 64GB options</li><li><strong>Operating Temp:</strong> -20°C to 70°C</li></ul>",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-installation": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Installation Guide",
+            "content": "<ol><li>Attach front camera to windshield with adhesive mount (top center, behind rearview mirror).</li><li>Route rear camera cable along the headliner to the back window.</li><li>Connect power cable to 12V outlet (cigarette lighter).</li><li>Format SD card using the camera menu before first use.</li><li>Download the AutoLinkr WiFi app to view live footage and adjust settings.</li></ol><p><em>No professional installation required. Average setup time: 20-30 minutes.</em></p>",
+            "text_size": "text-sm"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "text_size": "text-sm"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "breadcrumb",
+        "badges",
+        "title",
+        "text-tagline",
+        "variant_picker",
+        "text-variant-note",
+        "buy_buttons",
+        "sticky_buy_button",
+        "text-trust-1",
+        "text-trust-2",
+        "text-trust-3",
+        "collapsible-whats-included",
+        "collapsible-specs",
+        "collapsible-installation",
+        "description",
+        "rating"
+      ],
       "settings": {
-        "show_dynamic_checkout": true
+        "enable_sticky_info": true,
+        "full_width": false,
+        "gallery_layout": "stacked",
+        "thumbnail_position": "bottom",
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
+        "image_zoom": "lightbox",
+        "mobile_layout": "columns",
+        "hide_variants": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true
       }
     },
-    "al-product-features": {
-      "type": "autolinkr-product-features",
+    "multicolumn-features": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "col-1": {
+          "type": "column",
+          "settings": {
+            "icon": "eye",
+            "heading": "Dual 1080P Recording",
+            "text": "<p>Front and rear cameras both capture full 1080P HD — crystal-clear footage in any incident, day or night.</p>"
+          }
+        },
+        "col-2": {
+          "type": "column",
+          "settings": {
+            "icon": "moon",
+            "heading": "IR Night Vision",
+            "text": "<p>Infrared night vision captures clear footage in complete darkness. Most dash cams go black at night — not this one.</p>"
+          }
+        },
+        "col-3": {
+          "type": "column",
+          "settings": {
+            "icon": "search",
+            "heading": "170° Ultra-Wide Lens",
+            "text": "<p>Capture lane changes, side-impact risks, and pedestrians. The 170° angle sees everything in front of your vehicle.</p>"
+          }
+        },
+        "col-4": {
+          "type": "column",
+          "settings": {
+            "icon": "wifi",
+            "heading": "WiFi App Control",
+            "text": "<p>View live footage, download clips, and adjust settings directly from your phone using the free AutoLinkr app.</p>"
+          }
+        },
+        "col-5": {
+          "type": "column",
+          "settings": {
+            "icon": "lock",
+            "heading": "G-Sensor Protection",
+            "text": "<p>Detects collisions and hard braking — automatically locks that footage so it can't be overwritten by loop recording.</p>"
+          }
+        },
+        "col-6": {
+          "type": "column",
+          "settings": {
+            "icon": "refresh",
+            "heading": "Loop Recording",
+            "text": "<p>Continuously records and automatically overwrites oldest files when the SD card is full. Set it and forget it — always recording.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "col-1",
+        "col-2",
+        "col-3",
+        "col-4",
+        "col-5",
+        "col-6"
+      ],
       "settings": {
-        "show_crosssell": true,
-        "crosssell_products": "autolinkr-tablet"
+        "style": "icons-top",
+        "columns": 3,
+        "text_alignment": "center",
+        "heading": "Professional-Grade Protection for Every Drive",
+        "heading_size": "h3",
+        "heading_alignment": "center"
       }
+    },
+    "image-placeholder-front": {
+      "type": "custom-liquid",
+      "settings": {
+        "liquid": "<div style='background:#f0f0f0;padding:40px;text-align:center;border:2px dashed #ccc;border-radius:8px;margin:24px 0;'><p style='font-size:18px;font-weight:600;color:#555;'>*Place image: AutoLinkr Dash mounted on windshield — daytime exterior shot*</p><p style='color:#888;font-size:14px;'>Recommended: 1200x800px showing camera mounted cleanly behind rearview mirror</p></div>"
+      }
+    },
+    "number-counter": {
+      "type": "number-counter",
+      "blocks": {
+        "counter-1": {
+          "type": "counter",
+          "settings": {
+            "title": "Resolution",
+            "number": "1080",
+            "unit": "P",
+            "duration": 2
+          }
+        },
+        "counter-2": {
+          "type": "counter",
+          "settings": {
+            "title": "Field of View",
+            "number": "170",
+            "unit": "°",
+            "duration": 2
+          }
+        },
+        "counter-3": {
+          "type": "counter",
+          "settings": {
+            "title": "Cameras Included",
+            "number": "2",
+            "unit": "",
+            "duration": 2
+          }
+        },
+        "counter-4": {
+          "type": "counter",
+          "settings": {
+            "title": "Money-Back Guarantee",
+            "number": "30",
+            "unit": " Day",
+            "duration": 2
+          }
+        }
+      },
+      "block_order": [
+        "counter-1",
+        "counter-2",
+        "counter-3",
+        "counter-4"
+      ],
+      "settings": {
+        "columns": 4,
+        "columns_mobile": "2",
+        "text_alignment": "center",
+        "swipe_on_mobile": false
+      }
+    },
+    "image-placeholder-night": {
+      "type": "custom-liquid",
+      "settings": {
+        "liquid": "<div style='background:#f0f0f0;padding:40px;text-align:center;border:2px dashed #ccc;border-radius:8px;margin:24px 0;'><p style='font-size:18px;font-weight:600;color:#555;'>*Place image: Night vision footage comparison — side by side standard camera vs AutoLinkr Dash IR night vision*</p><p style='color:#888;font-size:14px;'>Recommended: 1600x700px split image showing night vision superiority</p></div>"
+      }
+    },
+    "scrolling-text": {
+      "type": "scrolling-text",
+      "blocks": {
+        "st-1": {
+          "type": "text",
+          "settings": {
+            "text": "Dual 1080P",
+            "text_size": 120
+          }
+        },
+        "st-2": {
+          "type": "text",
+          "settings": {
+            "text": "IR Night Vision",
+            "text_size": 120
+          }
+        },
+        "st-3": {
+          "type": "text",
+          "settings": {
+            "text": "170° Wide Angle",
+            "text_size": 120
+          }
+        },
+        "st-4": {
+          "type": "text",
+          "settings": {
+            "text": "Loop Recording",
+            "text_size": 120
+          }
+        },
+        "st-5": {
+          "type": "text",
+          "settings": {
+            "text": "G-Sensor Protected",
+            "text_size": 120
+          }
+        },
+        "st-6": {
+          "type": "text",
+          "settings": {
+            "text": "WiFi App Control",
+            "text_size": 120
+          }
+        }
+      },
+      "block_order": [
+        "st-1",
+        "st-2",
+        "st-3",
+        "st-4",
+        "st-5",
+        "st-6"
+      ],
+      "settings": {
+        "direction": "left",
+        "speed": 20,
+        "enable_twin": true
+      }
+    },
+    "testimonials-banner": {
+      "type": "testimonials-banner",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"A driver hit me in a parking lot and drove off. My AutoLinkr Dash caught the whole thing — plate number and all. The footage was perfect.\"</p>",
+            "author": "Rachel S.",
+            "author_info": "2020 Toyota RAV4 — Verified Buyer"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"Night vision is incredible. Most dash cams are useless at night but this one captures everything with full clarity.\"</p>",
+            "author": "Tom A.",
+            "author_info": "2021 Ford Mustang — Verified Buyer"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"Easy 20-minute install. The WiFi app lets me pull footage straight to my phone. Exactly what I was looking for.\"</p>",
+            "author": "Priya M.",
+            "author_info": "2022 Honda CR-V — Verified Buyer"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "image_height": "650px",
+        "content_position": "middle_center"
+      }
+    },
+    "faq-section": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "Does the AutoLinkr Dash work with my car?",
+            "text": "<p>Yes — the AutoLinkr Dash is universal and works with any vehicle that has a 12V power outlet (cigarette lighter). No wiring or installation knowledge required.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "What size SD card do I need?",
+            "text": "<p>We recommend a Class 10 microSD card. You can choose a 32GB or 64GB card when purchasing, or select 'No SD Card' to use your own. A 32GB card holds approximately 4-6 hours of 1080P footage before loop recording overwrites old files.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "Does it record when the car is parked?",
+            "text": "<p>Yes — parking mode uses motion detection to record when movement is detected near your vehicle. Requires the camera to be hardwired for constant power, or using the included 12V adapter which powers off when the car is off.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "How do I view my footage?",
+            "text": "<p>Three ways: (1) Download the free AutoLinkr WiFi app on iOS or Android and connect to the camera's WiFi hotspot. (2) Remove the SD card and insert into any card reader. (3) View directly on the camera's built-in screen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "style": "bordered",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h3",
+        "heading_alignment": "center"
+      }
+    },
+    "adapter-upsell": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_tag": "h3",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "text-upsell": {
+          "type": "text",
+          "settings": {
+            "text": "Already have factory CarPlay? Add the AutoLinkr Pro™ and go fully wireless. Most drivers bundle both for the complete upgrade.",
+            "text_size": "text-sm",
+            "icon": "none"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "enable_back_in_stock": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "text-upsell",
+        "buy_buttons"
+      ],
+      "settings": {
+        "product": "the-autolinkr-pro",
+        "media_size": 50,
+        "gallery_layout": "stacked"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Frequently Bought Together",
+        "heading_size": "h3",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2"
+      }
+    },
+    "apps-reviews": {
+      "type": "apps",
+      "settings": {}
     }
   },
   "order": [
-    "al-product-hero",
-    "al-product-features"
+    "main-product",
+    "multicolumn-features",
+    "image-placeholder-front",
+    "number-counter",
+    "image-placeholder-night",
+    "scrolling-text",
+    "testimonials-banner",
+    "faq-section",
+    "adapter-upsell",
+    "product-recommendations",
+    "apps-reviews"
   ]
 }

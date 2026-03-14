@@ -1,278 +1,174 @@
 {
   "sections": {
-    "main": {
+    "main-page": {
       "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "heading_size": "title-xl",
-        "heading_alignment": "text-left",
-        "heading_tag": "h1",
-        "text_size": "text-base",
-        "padding_top": 72,
-        "padding_bottom": 120,
-        "divider": false,
-        "narrow": true,
-        "rounded": false
-      }
+      "settings": {}
     },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "FAQ's",
-            "heading_size": "title-xl tracking-heading",
-            "heading_tag": "h1",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Welcome to our FAQ, we are so happy to have you here and as a client. <br\/>We have tried to answer the most common questions.<\/p>",
-            "text_size": "subtext-md",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "text_alignment": "left",
-        "text_alignment_mobile": "left",
-        "heading": "",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 0,
-        "divider": false,
-        "narrow": false,
-        "rounded": false
-      }
-    },
-    "empty-space": {
-      "type": "empty-space",
-      "settings": {
-        "desktop_height": 120,
-        "mobile_height": 44,
-        "color_background": "",
-        "gradient_background": ""
-      }
-    },
-    "faq": {
+    "faq-adapters": {
       "type": "faq",
       "blocks": {
-        "rich-text-1": {
+        "cat-adapters": {
           "type": "rich-text",
           "settings": {
-            "heading": "Shipping & Returns",
-            "text": "<p>Below are some common questions about shipping, returns, and exchanges<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "heading": "CarPlay Adapters"
           }
         },
-        "question-1": {
+        "q1": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "title": "Does my car need factory CarPlay to use an AutoLinkr adapter?",
+            "text": "<p>Yes. AutoLinkr Pro™, Elite™, and Base™ adapters require factory-installed wired CarPlay. They convert your wired CarPlay connection to wireless — they do NOT add CarPlay to vehicles that don't already have it.</p><p>Not sure if your car has CarPlay? Check your vehicle's settings menu or visit our <a href='/pages/compatibility'>Compatibility Checker</a>.</p>"
           }
         },
-        "question-2": {
+        "q2": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "title": "What's the difference between AutoLinkr Base, Pro, and Elite?",
+            "text": "<p><strong>AutoLinkr Base™ ($69.99):</strong> Wireless CarPlay only. No streaming apps.</p><p><strong>AutoLinkr Pro™ ($79.99):</strong> Wireless CarPlay + Netflix, YouTube, and Google Play Store. Best value.</p><p><strong>AutoLinkr Elite™ ($199.99):</strong> Everything in Pro + split-screen multitasking + faster CPU processor. Our most advanced model.</p><p>We recommend Pro for most drivers, and Elite for power users who want to run two apps simultaneously.</p>"
           }
         },
-        "question-4": {
+        "q3": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "title": "How do I set up my AutoLinkr adapter?",
+            "text": "<p>Setup takes under 60 seconds:</p><ol><li>Plug the AutoLinkr adapter into your factory CarPlay USB port.</li><li>Your car screen will prompt you to connect.</li><li>Enable Bluetooth and Wi-Fi on your iPhone and follow the pairing prompts.</li><li>Once paired, every future drive connects automatically.</li></ol><p>No apps required for initial setup.</p>"
           }
         },
-        "question-5": {
+        "q4": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "title": "Will it work with my iPhone?",
+            "text": "<p>AutoLinkr adapters are compatible with iPhone 7 and newer running iOS 10 or above. This covers the vast majority of iPhones in use today.</p>"
           }
         },
-        "rich-text-2": {
-          "type": "rich-text",
-          "settings": {
-            "heading": "Orders",
-            "text": "<p>Below are some of are common questions about orders<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "question-6": {
+        "q5": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "title": "Does AutoLinkr work with Android phones?",
+            "text": "<p>AutoLinkr Pro™, Elite™, and Base™ are designed for Apple CarPlay (iPhone). For Android users, the AutoLinkr Tablet™ is our standalone portable CarPlay solution that works with any car and any phone setup.</p>"
           }
         },
-        "question-7": {
+        "q6": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "title": "Do I need an internet connection to use streaming apps?",
+            "text": "<p>Yes, streaming apps like Netflix and YouTube require an active data connection. This can be your iPhone's cellular hotspot (using your iPhone's hotspot feature) or a Wi-Fi connection. Your iPhone's regular data plan works fine — streaming quality is typically SD to save data.</p>"
           }
         },
-        "question-8": {
+        "q7": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "question-9": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "rich-text-3": {
-          "type": "rich-text",
-          "settings": {
-            "heading": "Products",
-            "text": "<p>Below are some common questions about our products<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "question-10": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "question-11": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "question-12": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "contact": {
-          "type": "contact",
-          "settings": {
-            "heading": "Didn’t find your answer?",
-            "text": "<p>Don't hestitate to contact us<\/p>",
-            "show_phone": false,
-            "avatar_height": 60,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "title": "Is it safe to stream while driving?",
+            "text": "<p>Streaming video is intended for use while parked or when a passenger is operating the app. As a driver, you should always keep your eyes on the road. AutoLinkr recommends following all local traffic laws and using streaming features responsibly.</p>"
           }
         }
       },
-      "block_order": [
-        "rich-text-1",
-        "question-1",
-        "question-2",
-        "question-4",
-        "question-5",
-        "rich-text-2",
-        "question-6",
-        "question-7",
-        "question-8",
-        "question-9",
-        "rich-text-3",
-        "question-10",
-        "question-11",
-        "question-12",
-        "contact"
-      ],
+      "block_order": ["cat-adapters", "q1", "q2", "q3", "q4", "q5", "q6", "q7"],
       "settings": {
-        "style": "with-border",
+        "style": "bordered",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "subheading": "Everything you need to know about AutoLinkr products"
+      }
+    },
+    "faq-dash": {
+      "type": "faq",
+      "blocks": {
+        "cat-dash": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "AutoLinkr Dash™ Cam"
+          }
+        },
+        "dq1": {
+          "type": "question",
+          "settings": {
+            "title": "Does the dash cam work with any car?",
+            "text": "<p>Yes. The AutoLinkr Dash™ is a universal dash cam that works with any vehicle that has a 12V power outlet (cigarette lighter). No special car compatibility required.</p>"
+          }
+        },
+        "dq2": {
+          "type": "question",
+          "settings": {
+            "title": "What SD card size should I get?",
+            "text": "<p>We offer 3 options: No SD Card (use your own Class 10 microSD), 32GB (~4-6 hours of 1080P footage), or 64GB (~8-10 hours). With loop recording, old footage is automatically overwritten when full, so even 32GB provides continuous protection.</p>"
+          }
+        },
+        "dq3": {
+          "type": "question",
+          "settings": {
+            "title": "Does the rear camera record in HD too?",
+            "text": "<p>Yes — both the front and rear cameras record in 1080P Full HD. The rear camera connects via the included cable and records simultaneously with the front camera.</p>"
+          }
+        },
+        "dq4": {
+          "type": "question",
+          "settings": {
+            "title": "How do I access my footage?",
+            "text": "<p>Three options: (1) Use the free AutoLinkr WiFi app on your iOS or Android phone to connect and download clips wirelessly. (2) Remove the microSD card and use any card reader. (3) View footage directly on the camera's built-in display.</p>"
+          }
+        },
+        "dq5": {
+          "type": "question",
+          "settings": {
+            "title": "What is the G-sensor?",
+            "text": "<p>The G-sensor detects sudden impacts, sharp braking, or collisions. When triggered, it automatically locks the current footage file to prevent it from being overwritten by loop recording. This ensures incident footage is always preserved — even if you're not aware an incident occurred.</p>"
+          }
+        }
+      },
+      "block_order": ["cat-dash", "dq1", "dq2", "dq3", "dq4", "dq5"],
+      "settings": {
+        "style": "bordered",
         "heading": "",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 0,
-        "padding_bottom": 120,
-        "divider": false,
-        "narrow": false,
-        "rounded": false
+        "heading_size": "h3",
+        "heading_alignment": "center"
+      }
+    },
+    "faq-orders": {
+      "type": "faq",
+      "blocks": {
+        "cat-orders": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "Orders & Shipping"
+          }
+        },
+        "oq1": {
+          "type": "question",
+          "settings": {
+            "title": "How fast will I receive my order?",
+            "text": "<p>Standard orders ship within 1-2 business days. Shipping times vary by location — most US customers receive their order within 3-5 business days. Expedited shipping options are available at checkout.</p>"
+          }
+        },
+        "oq2": {
+          "type": "question",
+          "settings": {
+            "title": "What is your return policy?",
+            "text": "<p>We offer a 30-day money-back guarantee on all products. If you're not satisfied for any reason, contact us within 30 days of delivery and we'll process a full refund — no questions asked.</p>"
+          }
+        },
+        "oq3": {
+          "type": "question",
+          "settings": {
+            "title": "Does AutoLinkr offer a warranty?",
+            "text": "<p>Yes — all AutoLinkr products come with a 1-year limited warranty covering manufacturing defects. If your product develops a defect within 12 months of purchase, we'll replace it free of charge.</p>"
+          }
+        }
+      },
+      "block_order": ["cat-orders", "oq1", "oq2", "oq3"],
+      "settings": {
+        "style": "bordered",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "center"
       }
     }
   },
   "order": [
-    "main",
-    "rich-text",
-    "empty-space",
-    "faq"
+    "main-page",
+    "faq-adapters",
+    "faq-dash",
+    "faq-orders"
   ]
 }

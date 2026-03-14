@@ -15,3 +15,31 @@
 | 1.4 | 2026-03-13 | Added aReviews as Section 12.8 — documents visibility control strategy per product, Klaviyo review request integration, and no-standalone-reviews-page confirmation; updated Recommended Apps table (aReviews replaces Judge.me/Loox, Rebuy replaces ReConvert, Recharge and Jebbit added); Phase C task C5 updated to reference aReviews configuration |
 | 1.3 | 2026-03-13 | Added Section 12: App Stack Integration Plan — full Klaviyo flow library (8 flows: abandoned cart, abandoned checkout, post-purchase 8-email series, Pro/Elite track, winback, browse abandonment, VIP subscription events, Jebbit quiz completion), Klaviyo SMS strategy, segment library; Rebuy Smart Cart config with 6 upsell rules, product page widgets, post-purchase thank-you offers; Recharge VIP subscription billing + Klaviyo event mapping + churn reduction system; Jebbit Quiz 1 (Adapter Selector, 3-question logic) + Quiz 2 (Compatibility Checker); app integration build sequence added to all 4 implementation phases; 90-day app stack revenue model (+$65K–$85K/mo conservative) |
 | 1.2 | 2026-03-13 | (1) Elevated Dash™ to co-primary strategic pillar alongside Tablet™; (2) Added Dash Pro™ as aspirational SKU anchor; (3) Revised site architecture: new /dash, /dash-pro, /tablet routes, updated nav mega-menu; (4) Added complete Dash™ product page blueprint (Section 6.2) and Dash Pro™ teaser page (Section 6.3); (5) Rewrote homepage hero section for dual-hero Dash/Tablet layout; (6) Added cross-sell logic between Dash™ and Tablet™; (7) Added Dash Pro™ waitlist flow with Klaviyo integration |
+
+---
+
+## Document Purpose
+
+This document is the **single source of truth** for the AutoLinkr website redesign and conversion optimization project. It contains:
+1. Strategic diagnosis of the current website
+2. Brand identity and design system
+3. Complete site architecture
+4. Page-by-page content and conversion blueprints
+5. Technical implementation checklist
+6. 8-week phased execution timeline
+7. App stack integration plan (Klaviyo, Rebuy, Recharge, Jebbit, aReviews)
+
+---
+
+## Key Data Summary
+
+| Metric | Current | Target (8 weeks) |
+|---|---|---|
+| Monthly Revenue | $823K | $1.2M |
+| Conversion Rate | 1.8% | 3.2% |
+| AOV | $67 | $95 |
+| Email List | 18K | 35K |
+| Repeat Purchase Rate | 22% | 38% |
+| Mobile Conversion | 1.1% | 2.4% |
+
+*All targets are conservative estimates based on industry benchmarks for DTC Shopify stores in the automotive accessories category.*

@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "al-product-hero": {
+      "type": "autolinkr-product-hero",
+      "settings": {
+        "show_dynamic_checkout": true
+      }
+    },
+    "al-product-features": {
+      "type": "autolinkr-product-features",
+      "settings": {
+        "show_crosssell": true,
+        "crosssell_products": "the-autolinkr-pro,autolinkr-elite"
+      }
+    }
+  },
+  "order": [
+    "al-product-hero",
+    "al-product-features"
+  ]
+}

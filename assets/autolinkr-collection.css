@@ -1,0 +1,212 @@
+/**
+ * autolinkr-collection.css
+ * AutoLinkr Collection Pages — Hero, Grid, Cards
+ * Phase C — ConceptThemePerplexity
+ */
+
+/* ─────────────────────────────────────────────
+   COLLECTION HERO
+───────────────────────────────────────────── */
+.al-col-hero {
+  padding: var(--al-space-10) 0 var(--al-space-16);
+}
+
+.al-col-hero__header {
+  text-align: center;
+  margin-bottom: var(--al-space-10);
+}
+
+.al-col-hero__title {
+  font-size: var(--al-text-3xl);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--al-gray-900);
+  margin-bottom: var(--al-space-3);
+}
+
+.al-col-hero__desc {
+  font-size: var(--al-text-base);
+  color: var(--al-gray-600);
+  max-width: 48ch;
+  margin: 0 auto var(--al-space-3);
+  line-height: 1.6;
+}
+
+.al-col-hero__count {
+  font-size: var(--al-text-sm);
+  color: var(--al-gray-400);
+  margin: 0;
+}
+
+.al-col-hero__empty {
+  text-align: center;
+  color: var(--al-gray-500);
+  padding: var(--al-space-16) 0;
+}
+
+/* ─────────────────────────────────────────────
+   PRODUCT GRID
+───────────────────────────────────────────── */
+.al-col-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--al-space-4);
+}
+
+@media (min-width: 768px) {
+  .al-col-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--al-space-6);
+  }
+}
+
+@media (min-width: 1200px) {
+  .al-col-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.al-col-grid__item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─────────────────────────────────────────────
+   PRODUCT CARD
+───────────────────────────────────────────── */
+.al-col-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--al-white);
+  border: 1px solid var(--al-gray-200);
+  border-radius: var(--al-radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  height: 100%;
+}
+
+.al-col-card:hover {
+  box-shadow: var(--al-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Card image */
+.al-col-card__img-wrap {
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--al-gray-50);
+}
+
+.al-col-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.al-col-card:hover .al-col-card__img {
+  transform: scale(1.03);
+}
+
+.al-col-card__img--placeholder {
+  width: 100%;
+  height: 100%;
+  color: var(--al-gray-300);
+}
+
+/* Badge */
+.al-col-card__badge {
+  position: absolute;
+  top: var(--al-space-2);
+  left: var(--al-space-2);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.al-col-card__badge--sale {
+  background: var(--al-red-500, #ef4444);
+  color: #fff;
+}
+
+/* Card body */
+.al-col-card__body {
+  padding: var(--al-space-3) var(--al-space-3) var(--al-space-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--al-space-2);
+}
+
+.al-col-card__title {
+  font-size: var(--al-text-sm);
+  font-weight: 600;
+  color: var(--al-gray-900);
+  text-decoration: none;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.al-col-card__title:hover {
+  color: var(--al-blue-600, #2563eb);
+}
+
+.al-col-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--al-space-2);
+}
+
+.al-col-card__price {
+  font-size: var(--al-text-base);
+  font-weight: 700;
+  color: var(--al-gray-900);
+}
+
+.al-col-card__compare {
+  font-size: var(--al-text-sm);
+  color: var(--al-gray-400);
+  text-decoration: line-through;
+}
+
+/* Quick add */
+.al-col-card__quick-add-form {
+  margin-top: auto;
+}
+
+.al-col-card__quick-add-btn {
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE TWEAKS
+───────────────────────────────────────────── */
+@media (max-width: 479px) {
+  .al-col-hero__title {
+    font-size: var(--al-text-2xl);
+  }
+
+  .al-col-card__body {
+    padding: var(--al-space-2) var(--al-space-2) var(--al-space-3);
+  }
+
+  .al-col-card__title {
+    font-size: 13px;
+  }
+
+  .al-col-card__price {
+    font-size: var(--al-text-sm);
+  }
+}

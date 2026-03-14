@@ -1,0 +1,201 @@
+{% comment %}
+  autolinkr-hero.liquid
+  AutoLinkr Homepage Hero Section
+  Phase A — ConceptThemePerplexity
+  Layout: split (text left, visual right) → stacked on mobile
+  Headline: "Turn Your Wired CarPlay Into Wireless"
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'autolinkr-hero.css' | asset_url }}" media="all">
+
+<section class="al-hero" id="ALHero" aria-label="AutoLinkr hero">
+  <div class="al-hero__inner al-container">
+
+    {%- comment %} ── TEXT COLUMN ─────────────────────────── {%- endcomment %}
+    <div class="al-hero__text">
+
+      {%- comment %} Eyebrow badge {%- endcomment %}
+      <div class="al-hero__badge al-badge al-badge-blue">
+        ⭐ Rated #1 Wireless CarPlay Adapter
+      </div>
+
+      {%- comment %} Headline {%- endcomment %}
+      <h1 class="al-hero__headline">
+        Turn Your Wired CarPlay<br>
+        Into <span class="al-hero__highlight">Wireless</span>
+      </h1>
+
+      {%- comment %} Subhead {%- endcomment %}
+      <p class="al-hero__subhead">
+        Plug in once. Connect automatically every time.
+        AutoLinkr works with any iPhone + any car with wired CarPlay.
+        No apps. No subscriptions. 30-day returns.
+      </p>
+
+      {%- comment %} CTA buttons {%- endcomment %}
+      <div class="al-hero__ctas">
+        <a
+          href="/products/the-autolinkr-pro"
+          class="al-btn al-btn-primary al-hero__cta-primary"
+        >
+          Shop AutoLinkr Pro — $79.99
+        </a>
+        <a
+          href="/products/the-autolinkr-pro#comparison"
+          class="al-btn al-btn-secondary al-hero__cta-secondary"
+        >
+          Compare All Models
+        </a>
+      </div>
+
+      {%- comment %} Trust row {%- endcomment %}
+      <div class="al-hero__trust">
+        <div class="al-hero__trust-item">
+          <span class="al-stars">★★★★★</span>
+          <span>4.8 · 2,400+ reviews</span>
+        </div>
+        <div class="al-hero__trust-sep" aria-hidden="true">·</div>
+        <div class="al-hero__trust-item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M7 1l1.5 4h4.5l-3.5 2.5 1.5 4L7 9l-3.5 2.5 1.5-4L1 5h4.5L7 1z" fill="currentColor"/>
+          </svg>
+          <span>Free shipping</span>
+        </div>
+        <div class="al-hero__trust-sep" aria-hidden="true">·</div>
+        <div class="al-hero__trust-item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>30-day returns</span>
+        </div>
+      </div>
+
+    </div>{%- comment %} /.al-hero__text {%- endcomment %}
+
+    {%- comment %} ── VISUAL COLUMN ───────────────────────── {%- endcomment %}
+    <div class="al-hero__visual">
+
+      {%- comment %} Product image or placeholder ── {%- endcomment %}
+      {%- if section.settings.hero_image != blank -%}
+        <div class="al-hero__image-wrap">
+          <img
+            src="{{ section.settings.hero_image | image_url: width: 600 }}"
+            srcset="
+              {{ section.settings.hero_image | image_url: width: 400 }} 400w,
+              {{ section.settings.hero_image | image_url: width: 600 }} 600w,
+              {{ section.settings.hero_image | image_url: width: 800 }} 800w
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="{{ section.settings.hero_image_alt | default: 'AutoLinkr Pro wireless CarPlay adapter' }}"
+            width="600"
+            height="500"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </div>
+      {%- else -%}
+        <div class="al-hero__placeholder">
+          <div class="al-hero__placeholder-device">
+            <div class="al-hero__placeholder-screen">
+              <div class="al-hero__placeholder-ui">
+                <div class="al-hero__placeholder-maps">Maps</div>
+                <div class="al-hero__placeholder-apps">
+                  <div class="al-hero__placeholder-app">Music</div>
+                  <div class="al-hero__placeholder-app">Phone</div>
+                  <div class="al-hero__placeholder-app">Messages</div>
+                  <div class="al-hero__placeholder-app">Podcasts</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="al-hero__placeholder-caption">AutoLinkr Pro™ in action</div>
+        </div>
+      {%- endif -%}
+
+      {%- comment %} Feature callout chips ── {%- endcomment %}
+      <div class="al-hero__chips">
+        <div class="al-hero__chip">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Plug &amp; play setup
+        </div>
+        <div class="al-hero__chip">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Auto-connects in 3s
+        </div>
+        <div class="al-hero__chip">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Works with all iPhones
+        </div>
+        <div class="al-hero__chip">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          No subscription
+        </div>
+      </div>
+
+    </div>{%- comment %} /.al-hero__visual {%- endcomment %}
+
+  </div>{%- comment %} /.al-hero__inner {%- endcomment %}
+
+  {%- comment %} ── SOCIAL PROOF BAR ─────────────────────── {%- endcomment %}
+  <div class="al-hero__proof">
+    <div class="al-hero__proof-inner al-container">
+
+      <div class="al-hero__proof-item">
+        <span class="al-hero__proof-number">2,400+</span>
+        <span class="al-hero__proof-label">5-Star Reviews</span>
+      </div>
+      <div class="al-hero__proof-div" aria-hidden="true"></div>
+
+      <div class="al-hero__proof-item">
+        <span class="al-hero__proof-number">98%</span>
+        <span class="al-hero__proof-label">Customer Satisfaction</span>
+      </div>
+      <div class="al-hero__proof-div" aria-hidden="true"></div>
+
+      <div class="al-hero__proof-item">
+        <span class="al-hero__proof-number">50,000+</span>
+        <span class="al-hero__proof-label">Cars Upgraded</span>
+      </div>
+      <div class="al-hero__proof-div" aria-hidden="true"></div>
+
+      <div class="al-hero__proof-item">
+        <span class="al-hero__proof-number">3s</span>
+        <span class="al-hero__proof-label">Avg. Connect Time</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "AutoLinkr Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero product image"
+    },
+    {
+      "type": "text",
+      "id": "hero_image_alt",
+      "label": "Hero image alt text",
+      "default": "AutoLinkr Pro wireless CarPlay adapter"
+    }
+  ],
+  "presets": [
+    {
+      "name": "AutoLinkr Hero"
+    }
+  ]
+}
+{% endschema %}

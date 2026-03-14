@@ -1,0 +1,382 @@
+{% comment %}
+  AutoLinkr Header — Sticky Nav
+  Implementation Plan v1.4 — Section 4.1
+  Nav: [Logo] Adapters▾ | Dash Cams▾ | Accessories▾ | Shop All | Help▾ | [Cart]
+  Mobile: Hamburger + sticky bottom dock
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'autolinkr-tokens.css' | asset_url }}" media="all">
+<link rel="stylesheet" href="{{ 'autolinkr-header.css' | asset_url }}" media="all">
+
+<header class="al-header" id="ALHeader" role="banner">
+  <div class="al-header__inner al-container">
+
+    {%- comment %} Logo ─────────────────────────────── {%- endcomment %}
+    <a href="{{ routes.root_url }}" class="al-header__logo" aria-label="{{ shop.name }} — Home">
+      {%- if section.settings.logo != blank -%}
+        <img
+          src="{{ section.settings.logo | image_url: width: 160 }}"
+          alt="{{ shop.name }}"
+          width="140"
+          height="40"
+          loading="eager"
+        >
+      {%- else -%}
+        <span class="al-header__logo-text">AutoLinkr</span>
+      {%- endif -%}
+    </a>
+
+    {%- comment %} Desktop Nav ───────────────────────── {%- endcomment %}
+    <nav class="al-nav" aria-label="Main navigation">
+      <ul class="al-nav__list" role="list">
+
+        {%- comment %} Adapters ▾ {%- endcomment %}
+        <li class="al-nav__item al-nav__item--has-dropdown">
+          <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-adapters">
+            Adapters
+            <svg class="al-nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="al-dropdown al-dropdown--adapters" id="dropdown-adapters" role="region" aria-label="Adapters menu">
+            <div class="al-dropdown__inner">
+
+              {%- comment %} Product cards row {%- endcomment %}
+              <div class="al-dropdown__products">
+
+                <a href="/products/autolinkr-base" class="al-dropdown__product al-dropdown__product--secondary">
+                  <div class="al-dropdown__product-name">AutoLinkr™ Base</div>
+                  <div class="al-dropdown__product-price">$69.99</div>
+                  <div class="al-dropdown__product-desc">Wireless CarPlay only</div>
+                  <div class="al-dropdown__product-upgrade">Upgrade to Pro for $10 more →</div>
+                </a>
+
+                <a href="/products/the-autolinkr-pro" class="al-dropdown__product al-dropdown__product--primary">
+                  <div class="al-dropdown__product-badge al-badge al-badge-blue">⭐ Best Seller</div>
+                  <div class="al-dropdown__product-name">AutoLinkr Pro™</div>
+                  <div class="al-dropdown__product-price">$79.99</div>
+                  <div class="al-dropdown__product-desc">Wireless + Streaming</div>
+                </a>
+
+                <a href="/products/autolinkr-elite" class="al-dropdown__product al-dropdown__product--secondary">
+                  <div class="al-dropdown__product-name">AutoLinkr Elite™</div>
+                  <div class="al-dropdown__product-price">$199.99</div>
+                  <div class="al-dropdown__product-desc">Split-screen + fastest CPU</div>
+                  <div class="al-dropdown__product-diff">vs. Pro: adds split-screen</div>
+                </a>
+
+              </div>{%- comment %} /.al-dropdown__products {%- endcomment %}
+
+              {%- comment %} Tablet callout {%- endcomment %}
+              <div class="al-dropdown__divider"></div>
+              <a href="/products/autolinkr-tablet" class="al-dropdown__tablet-callout">
+                <span class="al-dropdown__tablet-label">Don't have factory CarPlay?</span>
+                <span class="al-dropdown__tablet-link">
+                  AutoLinkr Tablet™ — $74.99 · Works in any car · Portable →
+                </span>
+              </a>
+
+              {%- comment %} Compare link {%- endcomment %}
+              <a href="/products/the-autolinkr-pro#comparison" class="al-dropdown__compare">
+                Compare All Adapters →
+              </a>
+
+            </div>
+          </div>
+        </li>
+
+        {%- comment %} Dash Cams ▾ {%- endcomment %}
+        <li class="al-nav__item al-nav__item--has-dropdown">
+          <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-dash">
+            Dash Cams
+            <svg class="al-nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="al-dropdown al-dropdown--dash" id="dropdown-dash" role="region" aria-label="Dash Cams menu">
+            <div class="al-dropdown__inner al-dropdown__inner--simple">
+
+              <a href="/products/autolinkr-dash" class="al-dropdown__simple-link">
+                <div>
+                  <div class="al-dropdown__simple-name">AutoLinkr Dash™</div>
+                  <div class="al-dropdown__simple-desc">Dual 1080P · IR Night Vision · $69.99–$89.99</div>
+                </div>
+                <span class="al-badge al-badge-green">In Stock</span>
+              </a>
+
+              <a href="/pages/dash-pro" class="al-dropdown__simple-link al-dropdown__simple-link--muted">
+                <div>
+                  <div class="al-dropdown__simple-name">Dash Pro™</div>
+                  <div class="al-dropdown__simple-desc">Professional-grade · Coming soon</div>
+                </div>
+                <span class="al-badge al-badge-amber">Waitlist</span>
+              </a>
+
+            </div>
+          </div>
+        </li>
+
+        {%- comment %} Accessories ▾ {%- endcomment %}
+        <li class="al-nav__item al-nav__item--has-dropdown">
+          <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-accessories">
+            Accessories
+            <svg class="al-nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="al-dropdown al-dropdown--accessories" id="dropdown-accessories" role="region" aria-label="Accessories menu">
+            <div class="al-dropdown__inner al-dropdown__inner--simple">
+
+              <a href="/products/magsafe-mount" class="al-dropdown__simple-link">
+                <div>
+                  <div class="al-dropdown__simple-name">MagSafe Phone Mount™</div>
+                  <div class="al-dropdown__simple-desc">Magnetic · Wireless charging · $29.99</div>
+                </div>
+              </a>
+
+              <a href="/products/gapguard" class="al-dropdown__simple-link">
+                <div>
+                  <div class="al-dropdown__simple-name">GapGuard™</div>
+                  <div class="al-dropdown__simple-desc">Seat gap filler · $19.99–$29.99</div>
+                </div>
+              </a>
+
+              <a href="/products/aroma-diffuser" class="al-dropdown__simple-link">
+                <div>
+                  <div class="al-dropdown__simple-name">Car Aroma Diffuser™</div>
+                  <div class="al-dropdown__simple-desc">Cedar Woods · 3 oils included · $39.99</div>
+                </div>
+              </a>
+
+              <div class="al-dropdown__divider"></div>
+
+              <a href="/products/vip-membership" class="al-dropdown__simple-link al-dropdown__vip-link">
+                <div>
+                  <div class="al-dropdown__simple-name">VIP Membership</div>
+                  <div class="al-dropdown__simple-desc">15% off every order · $9.99/mo</div>
+                </div>
+                <span class="al-badge al-badge-amber">Members Save 15%</span>
+              </a>
+
+            </div>
+          </div>
+        </li>
+
+        {%- comment %} Shop All (direct link, no dropdown) {%- endcomment %}
+        <li class="al-nav__item">
+          <a href="/collections/all" class="al-nav__link">Shop All</a>
+        </li>
+
+        {%- comment %} Help ▾ {%- endcomment %}
+        <li class="al-nav__item al-nav__item--has-dropdown">
+          <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-help">
+            Help
+            <svg class="al-nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="al-dropdown al-dropdown--help" id="dropdown-help" role="region" aria-label="Help menu">
+            <div class="al-dropdown__inner al-dropdown__inner--simple">
+
+              <a href="/pages/compatible-cars" class="al-dropdown__simple-link al-dropdown__simple-link--featured">
+                <div>
+                  <div class="al-dropdown__simple-name">Is My Car Compatible?</div>
+                  <div class="al-dropdown__simple-desc">Check compatibility in 30 seconds</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+
+              <div class="al-dropdown__divider"></div>
+
+              <a href="/pages/faq" class="al-dropdown__simple-link">
+                <div class="al-dropdown__simple-name">FAQ</div>
+              </a>
+              <a href="/pages/setup-guide" class="al-dropdown__simple-link">
+                <div class="al-dropdown__simple-name">Setup Guide</div>
+              </a>
+              <a href="/pages/contact" class="al-dropdown__simple-link">
+                <div class="al-dropdown__simple-name">Contact Us</div>
+              </a>
+              <a href="/policies/shipping-policy" class="al-dropdown__simple-link">
+                <div class="al-dropdown__simple-name">Shipping &amp; Returns</div>
+              </a>
+
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </nav>{%- comment %} /.al-nav {%- endcomment %}
+
+    {%- comment %} Right actions ─────────────────────── {%- endcomment %}
+    <div class="al-header__actions">
+      <a href="{{ routes.cart_url }}" class="al-header__cart" aria-label="Cart ({{ cart.item_count }} items)">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+          <path d="M2 2h2l2.4 11H16l2-8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="18" r="1" fill="currentColor"/>
+          <circle cx="15" cy="18" r="1" fill="currentColor"/>
+        </svg>
+        {%- if cart.item_count > 0 -%}
+          <span class="al-header__cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+        {%- endif -%}
+      </a>
+
+      {%- comment %} Mobile hamburger {%- endcomment %}
+      <button class="al-header__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="al-mobile-menu" id="ALHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>{%- comment %} /.al-header__inner {%- endcomment %}
+</header>
+
+{%- comment %} ─── MOBILE MENU ───────────────────────────── {%- endcomment %}
+<div class="al-mobile-menu" id="al-mobile-menu" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="al-mobile-menu__overlay" id="ALMenuOverlay"></div>
+  <nav class="al-mobile-menu__panel">
+
+    <div class="al-mobile-menu__header">
+      <a href="{{ routes.root_url }}" class="al-header__logo" aria-label="{{ shop.name }}">
+        {%- if section.settings.logo != blank -%}
+          <img src="{{ section.settings.logo | image_url: width: 120 }}" alt="{{ shop.name }}" width="100" height="28" loading="lazy">
+        {%- else -%}
+          <span class="al-header__logo-text">AutoLinkr</span>
+        {%- endif -%}
+      </a>
+      <button class="al-mobile-menu__close" aria-label="Close menu" id="ALMenuClose">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="al-mobile-menu__body">
+
+      {%- comment %} Adapters accordion {%- endcomment %}
+      <div class="al-mob-group">
+        <button class="al-mob-group__trigger" aria-expanded="false">
+          Adapters
+          <svg class="al-nav__chevron" width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="al-mob-group__list" aria-hidden="true">
+          <li><a href="/products/the-autolinkr-pro" class="al-mob-group__link al-mob-group__link--featured">AutoLinkr Pro™ — $79.99 <span class="al-badge al-badge-blue">Best Seller</span></a></li>
+          <li><a href="/products/autolinkr-elite" class="al-mob-group__link">AutoLinkr Elite™ — $199.99</a></li>
+          <li><a href="/products/autolinkr-base" class="al-mob-group__link">AutoLinkr™ Base — $69.99</a></li>
+          <li><a href="/products/autolinkr-tablet" class="al-mob-group__link">AutoLinkr Tablet™ — $74.99</a></li>
+          <li><a href="/products/the-autolinkr-pro#comparison" class="al-mob-group__link al-mob-group__link--compare">Compare All Adapters →</a></li>
+        </ul>
+      </div>
+
+      {%- comment %} Dash Cams accordion {%- endcomment %}
+      <div class="al-mob-group">
+        <button class="al-mob-group__trigger" aria-expanded="false">
+          Dash Cams
+          <svg class="al-nav__chevron" width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="al-mob-group__list" aria-hidden="true">
+          <li><a href="/products/autolinkr-dash" class="al-mob-group__link">AutoLinkr Dash™ — $69.99–$89.99</a></li>
+          <li><a href="/pages/dash-pro" class="al-mob-group__link al-mob-group__link--muted">Dash Pro™ — Coming Soon</a></li>
+        </ul>
+      </div>
+
+      {%- comment %} Accessories accordion {%- endcomment %}
+      <div class="al-mob-group">
+        <button class="al-mob-group__trigger" aria-expanded="false">
+          Accessories
+          <svg class="al-nav__chevron" width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="al-mob-group__list" aria-hidden="true">
+          <li><a href="/products/magsafe-mount" class="al-mob-group__link">MagSafe Phone Mount™ — $29.99</a></li>
+          <li><a href="/products/gapguard" class="al-mob-group__link">GapGuard™ — $19.99–$29.99</a></li>
+          <li><a href="/products/aroma-diffuser" class="al-mob-group__link">Car Aroma Diffuser™ — $39.99</a></li>
+          <li><a href="/products/vip-membership" class="al-mob-group__link">VIP Membership — $9.99/mo</a></li>
+        </ul>
+      </div>
+
+      <a href="/collections/all" class="al-mob-direct-link">Shop All</a>
+
+      {%- comment %} Help accordion {%- endcomment %}
+      <div class="al-mob-group">
+        <button class="al-mob-group__trigger" aria-expanded="false">
+          Help
+          <svg class="al-nav__chevron" width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="al-mob-group__list" aria-hidden="true">
+          <li><a href="/pages/compatible-cars" class="al-mob-group__link al-mob-group__link--featured">Is My Car Compatible?</a></li>
+          <li><a href="/pages/faq" class="al-mob-group__link">FAQ</a></li>
+          <li><a href="/pages/setup-guide" class="al-mob-group__link">Setup Guide</a></li>
+          <li><a href="/pages/contact" class="al-mob-group__link">Contact Us</a></li>
+          <li><a href="/policies/shipping-policy" class="al-mob-group__link">Shipping &amp; Returns</a></li>
+        </ul>
+      </div>
+
+    </div>{%- comment %} /.al-mobile-menu__body {%- endcomment %}
+
+    <div class="al-mobile-menu__footer">
+      <a href="/products/the-autolinkr-pro" class="al-btn al-btn-primary" style="width:100%;justify-content:center;">
+        Shop AutoLinkr Pro — $79.99
+      </a>
+    </div>
+
+  </nav>
+</div>
+
+{%- comment %} ─── MOBILE BOTTOM DOCK ──────────────────────── {%- endcomment %}
+<div class="al-dock" aria-label="Quick navigation" role="navigation">
+  <a href="{{ routes.root_url }}" class="al-dock__item {% if request.path == '/' %}al-dock__item--active{% endif %}">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M3 9l8-7 8 7v11H14v-6H8v6H3V9z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="/collections/adapters" class="al-dock__item {% if request.path contains 'adapter' or request.path contains 'autolinkr-pro' or request.path contains 'autolinkr-elite' %}al-dock__item--active{% endif %}">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="3" y="6" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 6V4M15 6V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <span>Adapters</span>
+  </a>
+  <a href="/collections/safety" class="al-dock__item {% if request.path contains 'dash' %}al-dock__item--active{% endif %}">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="3" y="8" width="16" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="7.5" cy="12.5" r="1.5" fill="currentColor"/><path d="M12 12.5h5M3 8L5 5h12l2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <span>Dash Cams</span>
+  </a>
+  <a href="{{ routes.cart_url }}" class="al-dock__item al-dock__item--cart {% if request.path contains 'cart' %}al-dock__item--active{% endif %}">
+    <span class="al-dock__cart-wrap">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 2h2l2.4 11H16l2-8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="18" r="1" fill="currentColor"/><circle cx="15" cy="18" r="1" fill="currentColor"/></svg>
+      {%- if cart.item_count > 0 -%}
+        <span class="al-dock__cart-badge">{{ cart.item_count }}</span>
+      {%- endif -%}
+    </span>
+    <span>Cart</span>
+  </a>
+</div>
+
+<script src="{{ 'autolinkr-header.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "AutoLinkr Header",
+  "class": "al-header-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 80,
+      "max": 200,
+      "step": 10,
+      "default": 140,
+      "unit": "px",
+      "label": "Logo width"
+    }
+  ],
+  "presets": [
+    {
+      "name": "AutoLinkr Header"
+    }
+  ]
+}
+{% endschema %}

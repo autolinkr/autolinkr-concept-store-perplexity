@@ -17,10 +17,10 @@
             "show_save_amount": false
           }
         },
-        "text-best-badge": {
+        "text-elite-badge": {
           "type": "text",
           "settings": {
-            "text": "🏆 Our Most Advanced Adapter",
+            "text": "🏆 Our Most Advanced Adapter — The Only One With Split-Screen",
             "text_size": "text-sm",
             "icon": "none"
           }
@@ -38,7 +38,7 @@
         "text-tagline": {
           "type": "text",
           "settings": {
-            "text": "Everything in Pro — plus split-screen multitasking and a faster CPU. Navigate + stream simultaneously on your factory screen.",
+            "text": "Everything in Pro — plus split-screen multitasking and a faster CPU. Navigate + stream simultaneously on your factory screen. Once you go Elite, there's nowhere left to upgrade.",
             "text_size": "text-base",
             "icon": "none"
           }
@@ -59,9 +59,7 @@
             "show_price": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false,
-            "enable_back_in_stock": true,
-            "show_back_in_stock_name": false,
-            "show_back_in_stock_phone": false
+            "enable_back_in_stock": true
           }
         },
         "sticky_buy_button": {
@@ -73,7 +71,7 @@
           "settings": {
             "heading": "",
             "enable_carousel": false,
-            "show_below_media": false
+            "show_below_media": true
           }
         },
         "text-trust-1": {
@@ -95,19 +93,28 @@
         "text-trust-3": {
           "type": "text",
           "settings": {
-            "text": "✓ 1-Year Warranty Included",
+            "text": "✓ 1-Year Warranty — 50,000+ Happy Drivers",
             "text_size": "text-sm",
             "icon": "none"
+          }
+        },
+        "collapsible-elite-vs-pro": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": true,
+            "style": "with-border",
+            "heading": "Elite vs Pro — What's the Difference?",
+            "content": "<ul><li><strong>Split-Screen:</strong> Elite only — navigate and stream on one screen simultaneously</li><li><strong>Faster CPU:</strong> Elite uses a more powerful processor for smoother multitasking</li><li><strong>Streaming:</strong> Both support Netflix, YouTube, Google Play</li><li><strong>Wireless CarPlay:</strong> Both convert your factory wired CarPlay to wireless</li><li><strong>Setup:</strong> Both connect in under 60 seconds, auto-connect on every future drive</li></ul><p>If you want the absolute best experience — with zero compromises — Elite is your answer.</p>",
+            "text_size": "text-sm"
           }
         },
         "collapsible-whats-included": {
           "type": "collapsible_tab",
           "settings": {
-            "opened": true,
+            "opened": false,
             "style": "with-border",
-            "icon": "none",
             "heading": "What's Included",
-            "content": "<ul><li>AutoLinkr Elite™ Adapter</li><li>USB-A to USB-C Cable (high-speed)</li><li>Premium Quick-Start Guide</li></ul>",
+            "content": "<ul><li>AutoLinkr Elite™ Adapter</li><li>USB-A to USB-C Cable</li><li>USB-C to USB-C Cable</li><li>Quick-Start Guide</li></ul>",
             "text_size": "text-sm"
           }
         },
@@ -116,9 +123,8 @@
           "settings": {
             "opened": false,
             "style": "with-border",
-            "icon": "none",
-            "heading": "Works With",
-            "content": "<p><strong>Requirements:</strong> Vehicle must have factory-installed wired CarPlay. AutoLinkr Elite™ does NOT add CarPlay to vehicles without it.</p><p><strong>Compatible iPhones:</strong> iPhone 7 and newer running iOS 10+</p><p><strong>Compatible Vehicles:</strong> Any car with factory wired CarPlay (2016+). Works with BMW, Mercedes, Honda, Toyota, Ford, Chevy, Audi, VW, and 100+ other makes.</p>",
+            "heading": "Will This Work With My Car?",
+            "content": "<p><strong>Supports 97%+ of vehicles with factory wired CarPlay.</strong></p><p>Requirements:</p><ul><li>✔ Model Year 2016 or newer</li><li>✔ Factory-installed wired Apple CarPlay</li><li>✔ iPhone 7 or newer (iOS 10+)</li></ul><p>Works with BMW, Mercedes, Honda, Toyota, Ford, Chevy, Audi, VW, Hyundai, Kia, and 100+ other makes.</p><p><em>Note: AutoLinkr Elite™ does NOT add CarPlay to vehicles that don't already have it factory-installed.</em></p>",
             "text_size": "text-sm"
           }
         },
@@ -127,26 +133,18 @@
           "settings": {
             "opened": false,
             "style": "with-border",
-            "icon": "none",
-            "heading": "Streaming + Split-Screen Apps",
-            "content": "<p>AutoLinkr Elite™ unlocks the full streaming ecosystem AND split-screen multitasking:</p><ul><li>Netflix + navigation simultaneously (split-screen)</li><li>YouTube</li><li>Google Play Store (download any app)</li><li>Hulu, Disney+, Amazon Prime Video</li><li>Spotify, Apple Music</li><li>Waze + YouTube Music side-by-side</li></ul><p><em>Split-screen lets you run two apps at once on your factory display — exclusive to Elite.</em></p>",
+            "heading": "Streaming Apps Unlocked",
+            "content": "<p>AutoLinkr Elite™ gives your factory CarPlay screen full streaming access:</p><ul><li>Netflix</li><li>YouTube</li><li>Google Play Store (download any app)</li><li>Hulu, Disney+, Amazon Prime Video</li><li>Spotify, Apple Music, Pandora</li><li>Waze, Google Maps (simultaneously with streaming)</li><li>TikTok, ESPN, and more</li></ul><p><em>An internet/data connection is required for streaming apps.</em></p>",
             "text_size": "text-sm"
           }
         },
-        "collapsible-elite-vs-pro": {
+        "collapsible-shipping": {
           "type": "collapsible_tab",
           "settings": {
             "opened": false,
             "style": "with-border",
-            "icon": "none",
-            "heading": "Elite vs. Pro — What's the Difference?",
-            "content": "<p><strong>AutoLinkr Pro™</strong> — Wireless CarPlay + full streaming (Netflix, YouTube, Google Play). Single app at a time.</p><p><strong>AutoLinkr Elite™</strong> — Everything in Pro, PLUS split-screen multitasking (run 2 apps side-by-side) and a faster processor for zero-lag performance.</p><p>If you're a power user who wants the absolute best — Elite is your choice.</p>",
-            "text_size": "text-sm"
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
+            "heading": "Shipping & Returns",
+            "content": "<p>Shipping on this item is <strong>FREE</strong>! Orders ship within 1–2 business days. Most US customers receive delivery within 3–5 business days.</p><p><strong>30-Day Money-Back Guarantee</strong> — If you're not completely satisfied, return it for a full refund, no questions asked. <strong>1-Year Warranty</strong> on all manufacturing defects.</p>",
             "text_size": "text-sm"
           }
         },
@@ -158,7 +156,7 @@
       "block_order": [
         "breadcrumb",
         "badges",
-        "text-best-badge",
+        "text-elite-badge",
         "title",
         "text-tagline",
         "variant_picker",
@@ -168,11 +166,11 @@
         "text-trust-1",
         "text-trust-2",
         "text-trust-3",
+        "collapsible-elite-vs-pro",
         "collapsible-whats-included",
         "collapsible-works-with",
         "collapsible-streaming",
-        "collapsible-elite-vs-pro",
-        "description",
+        "collapsible-shipping",
         "rating"
       ],
       "settings": {
@@ -189,109 +187,107 @@
         "enable_video_looping": true
       }
     },
+    "feature-strip": {
+      "type": "al-feature-strip",
+      "blocks": {
+        "f1": {"type": "item", "settings": {"icon": "bolt", "title": "Split-Screen Multitasking", "subtitle": "Navigate + stream at once"}},
+        "f2": {"type": "item", "settings": {"icon": "cpu", "title": "Faster CPU", "subtitle": "Buttery-smooth performance"}},
+        "f3": {"type": "item", "settings": {"icon": "shield", "title": "30-Day Guarantee", "subtitle": "Full refund, no hassle"}},
+        "f4": {"type": "item", "settings": {"icon": "star", "title": "4.8★ Reviews", "subtitle": "50,000+ verified buyers"}}
+      },
+      "block_order": ["f1", "f2", "f3", "f4"]
+    },
     "multicolumn-features": {
       "type": "multicolumn-with-icons",
       "blocks": {
         "col-1": {
           "type": "column",
           "settings": {
-            "icon": "bolt",
-            "heading": "Split-Screen Multitasking",
-            "text": "<p>Run two apps simultaneously — GPS + Netflix, YouTube + Spotify. This is the feature that sets Elite apart from everything else on the market.</p>"
+            "icon": "layout",
+            "heading": "True Split-Screen",
+            "text": "<p>The only CarPlay adapter that lets you run navigation and full-screen video simultaneously. Your factory display becomes two screens in one.</p>"
           }
         },
         "col-2": {
           "type": "column",
           "settings": {
-            "icon": "processor",
-            "heading": "Faster CPU Processor",
-            "text": "<p>Elite's upgraded chip delivers faster app load times, smoother video playback, and zero buffering — even when running two apps at once.</p>"
+            "icon": "play-button",
+            "heading": "Full Streaming Universe",
+            "text": "<p>Netflix, YouTube, and the entire Google Play Store on your factory screen. Every streaming app, every playlist, every podcast.</p>"
           }
         },
         "col-3": {
           "type": "column",
           "settings": {
-            "icon": "play-button",
-            "heading": "Full Streaming Suite",
-            "text": "<p>Netflix, YouTube, Google Play Store — stream anything. The Google Play Store lets you install virtually any Android app on your screen.</p>"
+            "icon": "wifi",
+            "heading": "Fastest 5GHz Wireless",
+            "text": "<p>Elite's upgraded processor pairs with dual-band 5GHz to deliver flawless wireless CarPlay — no stuttering, no disconnects, ever.</p>"
           }
         },
         "col-4": {
           "type": "column",
           "settings": {
-            "icon": "wifi",
-            "heading": "Seamless Wireless CarPlay",
-            "text": "<p>Pair once, connect every time. Your iPhone connects automatically the moment you start the car — no cables, no delays.</p>"
+            "icon": "shield",
+            "heading": "The Final Upgrade",
+            "text": "<p>You can't out-upgrade Elite. Once it's installed, you have the best in-car tech experience your factory screen can deliver.</p>"
           }
         }
       },
-      "block_order": [
-        "col-1",
-        "col-2",
-        "col-3",
-        "col-4"
-      ],
+      "block_order": ["col-1", "col-2", "col-3", "col-4"],
       "settings": {
-        "style": "icons-top",
+        "style": "with-border",
         "columns": 4,
-        "text_alignment": "center",
-        "heading": "The Most Capable CarPlay Adapter on the Market",
-        "heading_size": "h3",
-        "heading_alignment": "center"
+        "text_alignment": "left",
+        "heading": "You Have the Best. Here's What That Means.",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2"
       }
     },
-    "image-placeholder-splitscreen": {
-      "type": "custom-liquid",
+    "image-splitscreen": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Navigate and Stream. — At the Same Time.",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Only AutoLinkr Elite™ delivers true split-screen on your factory CarPlay display. Pull up Google Maps on the left, stream YouTube on the right. Your co-pilot controls the entertainment while you focus on the road.</p><p>Pro users stream. Elite users do everything — simultaneously.</p>",
+            "text_size": "text-base"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get AutoLinkr Elite™ — $199.99",
+            "button_link": "/products/autolinkr-elite",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
       "settings": {
-        "liquid": "<div style='background:#f0f0f0;padding:40px;text-align:center;border:2px dashed #ccc;border-radius:8px;margin:24px 0;'><p style='font-size:18px;font-weight:600;color:#555;'>*Place image: Split-screen view on car display — navigation on left, Netflix on right*</p><p style='color:#888;font-size:14px;'>Recommended: 1600x900px showing the split-screen feature in action</p></div>"
+        "image": "shopify://shop_images/al-elite-splitscreen.png",
+        "image_height": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "middle"
       }
     },
     "number-counter": {
       "type": "number-counter",
       "blocks": {
-        "counter-1": {
-          "type": "counter",
-          "settings": {
-            "title": "Happy Drivers",
-            "number": "50",
-            "unit": "K+",
-            "duration": 2
-          }
-        },
-        "counter-2": {
-          "type": "counter",
-          "settings": {
-            "title": "Average Rating",
-            "number": "4.8",
-            "unit": "★",
-            "duration": 2
-          }
-        },
-        "counter-3": {
-          "type": "counter",
-          "settings": {
-            "title": "Apps Available",
-            "number": "1",
-            "unit": "M+",
-            "duration": 2
-          }
-        },
-        "counter-4": {
-          "type": "counter",
-          "settings": {
-            "title": "Money-Back Guarantee",
-            "number": "30",
-            "unit": " Day",
-            "duration": 2
-          }
-        }
+        "c1": {"type": "counter", "settings": {"title": "Happy Drivers", "number": "50K+", "unit": "", "duration": 2}},
+        "c2": {"type": "counter", "settings": {"title": "Average Rating", "number": "4.8", "unit": "★", "duration": 2}},
+        "c3": {"type": "counter", "settings": {"title": "Setup Time", "number": "60", "unit": "sec", "duration": 2}},
+        "c4": {"type": "counter", "settings": {"title": "Upgrade Over Pro", "number": "$120", "unit": "", "duration": 2}}
       },
-      "block_order": [
-        "counter-1",
-        "counter-2",
-        "counter-3",
-        "counter-4"
-      ],
+      "block_order": ["c1", "c2", "c3", "c4"],
       "settings": {
         "columns": 4,
         "columns_mobile": "2",
@@ -302,57 +298,14 @@
     "scrolling-text": {
       "type": "scrolling-text",
       "blocks": {
-        "st-1": {
-          "type": "text",
-          "settings": {
-            "text": "Split-Screen Exclusive",
-            "text_size": 120
-          }
-        },
-        "st-2": {
-          "type": "text",
-          "settings": {
-            "text": "Navigate + Stream",
-            "text_size": 120
-          }
-        },
-        "st-3": {
-          "type": "text",
-          "settings": {
-            "text": "Faster CPU",
-            "text_size": 120
-          }
-        },
-        "st-4": {
-          "type": "text",
-          "settings": {
-            "text": "Netflix On Screen",
-            "text_size": 120
-          }
-        },
-        "st-5": {
-          "type": "text",
-          "settings": {
-            "text": "Google Play Store",
-            "text_size": 120
-          }
-        },
-        "st-6": {
-          "type": "text",
-          "settings": {
-            "text": "Our Best Adapter",
-            "text_size": 120
-          }
-        }
+        "s1": {"type": "text", "settings": {"text": "Split-Screen Multitasking", "text_size": 100}},
+        "s2": {"type": "text", "settings": {"text": "Netflix + Maps Simultaneously", "text_size": 100}},
+        "s3": {"type": "text", "settings": {"text": "Faster CPU", "text_size": 100}},
+        "s4": {"type": "text", "settings": {"text": "Google Play Store", "text_size": 100}},
+        "s5": {"type": "text", "settings": {"text": "The Best. Period.", "text_size": 100}},
+        "s6": {"type": "text", "settings": {"text": "Wireless CarPlay", "text_size": 100}}
       },
-      "block_order": [
-        "st-1",
-        "st-2",
-        "st-3",
-        "st-4",
-        "st-5",
-        "st-6"
-      ],
+      "block_order": ["s1","s2","s3","s4","s5","s6"],
       "settings": {
         "direction": "left",
         "speed": 20,
@@ -362,52 +315,50 @@
     "product-comparison": {
       "type": "product-comparison",
       "blocks": {
-        "prod-pro": {
+        "p-pro": {
           "type": "product",
           "settings": {
             "product": "the-autolinkr-pro",
             "heading_1": "Wireless CarPlay",
             "value_1": "<p>✓</p>",
-            "heading_2": "Netflix / YouTube",
+            "heading_2": "Netflix & YouTube",
             "value_2": "<p>✓</p>",
             "heading_3": "Google Play Store",
             "value_3": "<p>✓</p>",
             "heading_4": "Split-Screen",
             "value_4": "<p>✗</p>",
-            "heading_5": "Processor Speed",
-            "value_5": "<p>Standard</p>"
+            "heading_5": "Price",
+            "value_5": "<p>$79.99</p>"
           }
         },
-        "prod-elite": {
+        "p-elite": {
           "type": "product",
           "settings": {
             "product": "autolinkr-elite",
             "heading_1": "Wireless CarPlay",
             "value_1": "<p>✓</p>",
-            "heading_2": "Netflix / YouTube",
+            "heading_2": "Netflix & YouTube",
             "value_2": "<p>✓</p>",
             "heading_3": "Google Play Store",
             "value_3": "<p>✓</p>",
             "heading_4": "Split-Screen",
             "value_4": "<p>✓</p>",
-            "heading_5": "Processor Speed",
-            "value_5": "<p>Upgraded CPU</p>"
+            "heading_5": "Price",
+            "value_5": "<p>$199.99</p>"
           }
         }
       },
-      "block_order": [
-        "prod-pro",
-        "prod-elite"
-      ],
+      "block_order": ["p-pro", "p-elite"],
       "settings": {
         "highlight_differences": true,
         "sticky_product_info": true,
         "show_price": true,
         "show_vendor": false,
-        "heading": "Pro vs. Elite — Side by Side",
-        "heading_size": "h3",
-        "heading_alignment": "center",
-        "subheading": "You already have the best — here's exactly why"
+        "heading": "Pro Is Great. Elite Is the Best.",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "The split-screen alone makes Elite worth it for anyone who uses navigation and streaming together"
       }
     },
     "testimonials-banner": {
@@ -416,49 +367,88 @@
         "t1": {
           "type": "testimonial",
           "settings": {
-            "text": "<p>\"The split-screen feature is a game changer. I run Waze on the left and YouTube on the right. My daily commute is completely transformed.\"</p>",
-            "author": "David M.",
-            "author_info": "2023 BMW 3 Series — Verified Buyer"
+            "text": "<p>\"I had the Pro for a week and immediately upgraded to Elite when I found out about split-screen. Running Google Maps and Netflix at the same time while my wife navigates is next level.\"</p>",
+            "author": "Derek M.",
+            "author_info": "2023 BMW X5 — Verified Buyer"
           }
         },
         "t2": {
           "type": "testimonial",
           "settings": {
-            "text": "<p>\"I had the Pro and decided to upgrade to Elite. The speed difference is noticeable and split-screen is worth every extra dollar.\"</p>",
-            "author": "Lisa N.",
-            "author_info": "2022 Mercedes C-Class — Verified Buyer"
+            "text": "<p>\"The Elite is genuinely the last thing I'll ever need for my car's display. Split-screen works flawlessly. My factory BMW screen went from outdated to incredible.\"</p>",
+            "author": "Priya L.",
+            "author_info": "2022 BMW 5-Series — Verified Buyer"
           }
         },
         "t3": {
           "type": "testimonial",
           "settings": {
-            "text": "<p>\"Best car upgrade I've ever made. Navigation + Netflix for my kids in the back seat mirror? Everyone in my family loves it.\"</p>",
+            "text": "<p>\"Bought Elite after reading the comparison. The faster CPU is noticeable — zero lag switching between apps. Netflix and Waze running side-by-side is wild.\"</p>",
             "author": "Carlos V.",
-            "author_info": "2021 Chevy Tahoe — Verified Buyer"
+            "author_info": "2021 Mercedes C-Class — Verified Buyer"
           }
         }
       },
-      "block_order": [
-        "t1",
-        "t2",
-        "t3"
-      ],
+      "block_order": ["t1", "t2", "t3"],
       "settings": {
+        "image": "shopify://shop_images/al-elite-hero.png",
         "image_height": "650px",
-        "content_position": "middle_center"
+        "content_position": "md:items-center md:justify-center"
       }
     },
-    "image-placeholder-lifestyle": {
-      "type": "custom-liquid",
+    "how-it-works": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "step1": {
+          "type": "column",
+          "settings": {
+            "icon": "plug",
+            "heading": "1 — Plug In",
+            "text": "<p>Connect AutoLinkr Elite™ to your car's factory CarPlay USB port using the included cable.</p>"
+          }
+        },
+        "step2": {
+          "type": "column",
+          "settings": {
+            "icon": "bluetooth",
+            "heading": "2 — Pair Once",
+            "text": "<p>Connect your iPhone via Bluetooth and join the Wi-Fi hotspot. One-time setup under 60 seconds total.</p>"
+          }
+        },
+        "step3": {
+          "type": "column",
+          "settings": {
+            "icon": "wifi",
+            "heading": "3 — Auto-Connect",
+            "text": "<p>Every future drive connects automatically when you start your car. No cables, no steps.</p>"
+          }
+        },
+        "step4": {
+          "type": "column",
+          "settings": {
+            "icon": "layout",
+            "heading": "4 — Split & Stream",
+            "text": "<p>Enable split-screen mode and run navigation side-by-side with any streaming app. Welcome to Elite.</p>"
+          }
+        }
+      },
+      "block_order": ["step1", "step2", "step3", "step4"],
       "settings": {
-        "liquid": "<div style='background:#f0f0f0;padding:40px;text-align:center;border:2px dashed #ccc;border-radius:8px;margin:24px 0;'><p style='font-size:18px;font-weight:600;color:#555;'>*Place image: Driver enjoying wireless CarPlay with Elite adapter visible*</p><p style='color:#888;font-size:14px;'>Recommended: 1400x900px premium lifestyle shot, dark/moody tones</p></div>"
+        "style": "icons-top",
+        "columns": 4,
+        "text_alignment": "center",
+        "heading": "Setup in Under 60 Seconds",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "No tools, no apps, no installation knowledge required"
       }
     },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
         "heading": "Complete Your Setup",
-        "heading_size": "h3",
+        "heading_size": "title-sm",
         "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2"
@@ -471,13 +461,14 @@
   },
   "order": [
     "main-product",
+    "feature-strip",
     "multicolumn-features",
-    "image-placeholder-splitscreen",
+    "image-splitscreen",
     "number-counter",
     "scrolling-text",
     "product-comparison",
     "testimonials-banner",
-    "image-placeholder-lifestyle",
+    "how-it-works",
     "product-recommendations",
     "apps-reviews"
   ]

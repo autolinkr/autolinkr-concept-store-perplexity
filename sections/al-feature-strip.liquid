@@ -1,1 +1,128 @@
-{% comment %} AL Feature Strip — see workspace for full file {% endcomment %}
+{% comment %}
+  AutoLinkr Feature Strip — horizontal icon row with dark treatment
+{% endcomment %}
+
+{%- style -%}
+.al-fs {
+  background-color: var(--al-surface);
+  border-top: 1px solid var(--al-border-subtle);
+  border-bottom: 1px solid var(--al-border-subtle);
+  padding: var(--al-sp-6) 0;
+}
+.al-fs__inner {
+  max-width: var(--al-max-w);
+  margin: 0 auto;
+  padding: 0 var(--al-sp-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--al-sp-6);
+}
+.al-fs__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 180px;
+}
+.al-fs__icon {
+  width: 36px;
+  height: 36px;
+  background: var(--al-accent-dim);
+  border: 1px solid rgba(45,127,249,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.al-fs__icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--al-accent);
+  stroke: currentColor;
+}
+.al-fs__text strong {
+  display: block;
+  font-family: var(--al-font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--al-text-1);
+  line-height: 1.2;
+}
+.al-fs__text span {
+  font-size: 0.8125rem;
+  color: var(--al-text-3);
+}
+@media (max-width: 768px) {
+  .al-fs__inner { gap: var(--al-sp-4); }
+  .al-fs__item { min-width: calc(50% - 8px); }
+}
+{%- endstyle -%}
+
+<div class="al-fs">
+  <div class="al-fs__inner">
+    {%- for block in section.blocks -%}
+      <div class="al-fs__item" {{ block.shopify_attributes }}>
+        <div class="al-fs__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            {%- case block.settings.icon -%}
+              {%- when 'truck' -%}
+                <path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-3 9h8a2 2 0 002-2v-3a2 2 0 00-2-2h-8m0 7a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0z"/>
+              {%- when 'shield' -%}
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              {%- when 'refresh' -%}
+                <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+              {%- when 'star' -%}
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              {%- when 'bolt' -%}
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              {%- when 'lock' -%}
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+            {%- endcase -%}
+          </svg>
+        </div>
+        <div class="al-fs__text">
+          <strong>{{ block.settings.title }}</strong>
+          <span>{{ block.settings.subtitle }}</span>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "AL — Feature Strip",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Feature",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [
+            {"value": "truck", "label": "Truck / Shipping"},
+            {"value": "shield", "label": "Shield / Guarantee"},
+            {"value": "refresh", "label": "Refresh / Return"},
+            {"value": "star", "label": "Star / Rating"},
+            {"value": "bolt", "label": "Bolt / Speed"},
+            {"value": "lock", "label": "Lock / Security"}
+          ], "default": "truck" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Free Shipping" },
+        { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "On every order" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "AL — Feature Strip",
+    "blocks": [
+      {"type": "item", "settings": {"icon": "truck", "title": "Free Shipping", "subtitle": "On every order"}},
+      {"type": "item", "settings": {"icon": "shield", "title": "30-Day Guarantee", "subtitle": "Love it or full refund"}},
+      {"type": "item", "settings": {"icon": "refresh", "title": "Easy Returns", "subtitle": "Hassle-free process"}},
+      {"type": "item", "settings": {"icon": "star", "title": "4.8★ Rating", "subtitle": "50,000+ verified reviews"}}
+    ]
+  }]
+}
+{% endschema %}

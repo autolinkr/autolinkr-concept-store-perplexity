@@ -1,1 +1,335 @@
-{% comment %} AL Brand Hero — see workspace for full file {% endcomment %}
+{% comment %}
+  AutoLinkr Brand Hero Section
+  Full-bleed cinematic hero with AI image background, headline, sub, CTA
+  Works standalone or as homepage hero
+{% endcomment %}
+
+{%- style -%}
+.al-bh {
+  position: relative;
+  width: 100%;
+  min-height: {{ section.settings.min_height }}px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--al-bg);
+}
+
+.al-bh__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.al-bh__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: {{ section.settings.focal_point }};
+  opacity: {{ section.settings.image_opacity | divided_by: 100.0 }};
+}
+
+.al-bh__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    rgba(10,10,12,{{ section.settings.overlay_left_opacity | divided_by: 100.0 }}) 0%,
+    rgba(10,10,12,{{ section.settings.overlay_center_opacity | divided_by: 100.0 }}) 50%,
+    rgba(10,10,12,0.1) 100%
+  );
+}
+
+.al-bh__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--al-max-w);
+  margin: 0 auto;
+  padding: var(--al-sp-20) var(--al-sp-6);
+}
+
+.al-bh__inner {
+  max-width: {{ section.settings.content_width }}px;
+}
+
+.al-bh__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--al-font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--al-accent);
+  background: rgba(45, 127, 249, 0.1);
+  border: 1px solid rgba(45, 127, 249, 0.25);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  animation: al-fade-up 0.5s 0.1s both;
+}
+
+.al-bh__eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--al-accent);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.al-bh__headline {
+  font-family: var(--al-font-display);
+  font-size: var(--al-text-hero);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--al-text-1);
+  margin: 0 0 24px;
+  animation: al-fade-up 0.5s 0.15s both;
+}
+
+.al-bh__headline em {
+  font-style: normal;
+  background: linear-gradient(135deg, #2D7FF9 0%, #60B2FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.al-bh__sub {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--al-text-2);
+  max-width: 540px;
+  margin: 0 0 40px;
+  animation: al-fade-up 0.5s 0.2s both;
+}
+
+.al-bh__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  animation: al-fade-up 0.5s 0.25s both;
+}
+
+.al-bh__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--al-font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #2D7FF9, #1A6AE0);
+  padding: 14px 28px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(45, 127, 249, 0.4);
+  transition: all 220ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.al-bh__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 36px rgba(45, 127, 249, 0.55);
+  color: #fff;
+}
+
+.al-bh__cta-arrow {
+  width: 18px; height: 18px;
+  transition: transform 200ms ease;
+}
+.al-bh__cta:hover .al-bh__cta-arrow { transform: translateX(3px); }
+
+.al-bh__ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--al-font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--al-text-2);
+  padding: 13px 24px;
+  border: 1.5px solid var(--al-border);
+  border-radius: 10px;
+  transition: all 220ms ease;
+}
+.al-bh__ghost:hover {
+  border-color: var(--al-accent);
+  color: var(--al-accent);
+  background: rgba(45, 127, 249, 0.07);
+}
+
+.al-bh__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+  animation: al-fade-up 0.5s 0.3s both;
+}
+
+.al-bh__stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.al-bh__stat-val {
+  font-family: var(--al-font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--al-text-1);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.al-bh__stat-label {
+  font-size: 0.8125rem;
+  color: var(--al-text-3);
+  margin-top: 4px;
+}
+
+.al-bh__stat-divider {
+  width: 1px;
+  background: var(--al-border);
+  align-self: stretch;
+}
+
+@media (max-width: 768px) {
+  .al-bh { min-height: {{ section.settings.min_height_mobile }}px; }
+  .al-bh__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10,10,12,0.3) 0%,
+      rgba(10,10,12,0.7) 60%,
+      rgba(10,10,12,0.95) 100%
+    );
+  }
+  .al-bh__content { padding: var(--al-sp-16) var(--al-sp-4) var(--al-sp-12); }
+  .al-bh__stat-divider { display: none; }
+  .al-bh__stats { gap: 16px; }
+}
+{%- endstyle -%}
+
+<section class="al-bh">
+  <div class="al-bh__bg">
+    {%- if section.settings.background_image != blank -%}
+      {%- assign bg_url = section.settings.background_image | image_url: width: 2400 -%}
+      <img src="{{ bg_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-img">
+    {%- endif -%}
+  </div>
+  <div class="al-bh__overlay"></div>
+
+  <div class="al-bh__content">
+    <div class="al-bh__inner">
+      {%- if section.settings.eyebrow != blank -%}
+        <div class="al-bh__eyebrow">{{ section.settings.eyebrow }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="al-bh__headline">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="al-bh__sub">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+
+      <div class="al-bh__actions">
+        {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
+          <a href="{{ section.settings.cta_link }}" class="al-bh__cta">
+            {{ section.settings.cta_label }}
+            <svg class="al-bh__cta-arrow" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9h12M10 4l5 5-5 5"/>
+            </svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.ghost_label != blank and section.settings.ghost_link != blank -%}
+          <a href="{{ section.settings.ghost_link }}" class="al-bh__ghost">
+            {{ section.settings.ghost_label }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.show_stats -%}
+        <div class="al-bh__stats">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'stat' -%}
+              {%- unless forloop.first -%}
+                <div class="al-bh__stat-divider"></div>
+              {%- endunless -%}
+              <div class="al-bh__stat" {{ block.shopify_attributes }}>
+                <span class="al-bh__stat-val">{{ block.settings.value }}</span>
+                <span class="al-bh__stat-label">{{ block.settings.label }}</span>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "AL — Brand Hero",
+  "tag": "section",
+  "settings": [
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "select", "id": "focal_point", "label": "Image focal point", "options": [
+        {"value": "center center", "label": "Center"},
+        {"value": "left center", "label": "Left"},
+        {"value": "right center", "label": "Right"},
+        {"value": "center top", "label": "Top"},
+        {"value": "70% center", "label": "Right-center"}
+      ], "default": "center center" },
+    { "type": "range", "id": "image_opacity", "label": "Image opacity", "min": 20, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "range", "id": "overlay_left_opacity", "label": "Overlay (left) opacity", "min": 40, "max": 98, "step": 2, "default": 88, "unit": "%" },
+    { "type": "range", "id": "overlay_center_opacity", "label": "Overlay (center) opacity", "min": 20, "max": 90, "step": 5, "default": 55, "unit": "%" },
+    { "type": "range", "id": "min_height", "label": "Min height (desktop)", "min": 500, "max": 900, "step": 20, "default": 700, "unit": "px" },
+    { "type": "range", "id": "min_height_mobile", "label": "Min height (mobile)", "min": 400, "max": 700, "step": 20, "default": 560, "unit": "px" },
+    { "type": "range", "id": "content_width", "label": "Content max width", "min": 400, "max": 800, "step": 20, "default": 620, "unit": "px" },
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow label", "default": "Now Available" },
+    { "type": "inline_richtext", "id": "heading", "label": "Headline", "default": "The Upgrade Your Car Deserves" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Cut the cord. Stream anything. Connect automatically — every single drive." },
+    { "type": "header", "content": "Primary CTA" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Shop AutoLinkr Pro™" },
+    { "type": "url", "id": "cta_link", "label": "Button link" },
+    { "type": "header", "content": "Ghost CTA" },
+    { "type": "text", "id": "ghost_label", "label": "Ghost button label", "default": "See All Products" },
+    { "type": "url", "id": "ghost_link", "label": "Ghost button link" },
+    { "type": "header", "content": "Stats Bar" },
+    { "type": "checkbox", "id": "show_stats", "label": "Show stats", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        { "type": "text", "id": "value", "label": "Value", "default": "50K+" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Happy Drivers" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "AL — Brand Hero",
+      "blocks": [
+        { "type": "stat", "settings": { "value": "50K+", "label": "Happy Drivers" } },
+        { "type": "stat", "settings": { "value": "4.8★", "label": "Average Rating" } },
+        { "type": "stat", "settings": { "value": "60 sec", "label": "Setup Time" } },
+        { "type": "stat", "settings": { "value": "30-Day", "label": "Guarantee" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

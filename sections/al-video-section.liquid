@@ -1,0 +1,197 @@
+{% comment %}
+  AutoLinkr Video Section
+  Dark-themed full-width video embed (CDN .mov/.mp4 or YouTube)
+  Supports: eyebrow label, heading, subheading, CTA button, video poster
+{% endcomment %}
+
+{%- liquid
+  assign bg = section.settings.background_style
+  assign vid_url = section.settings.video_url
+  assign yt_id = section.settings.youtube_id
+  assign poster = section.settings.poster_image
+-%}
+
+<section class="al-vid-section" style="
+  background: {% if bg == 'surface' %}#121215{% elsif bg == 'accent' %}linear-gradient(135deg, #0A1628 0%, #0D0D0F 100%){% else %}#0A0A0C{% endif %};
+  padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+">
+  <div class="al-vid-section__inner page-width">
+
+    {%- if section.settings.eyebrow != blank -%}
+      <div class="al-vid-section__eyebrow">
+        <span class="al-label">{{ section.settings.eyebrow }}</span>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <{{ section.settings.heading_tag }} class="al-vid-section__heading">
+        {{ section.settings.heading }}
+      </{{ section.settings.heading_tag }}>
+    {%- endif -%}
+
+    {%- if section.settings.subheading != blank -%}
+      <p class="al-vid-section__sub">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    <div class="al-vid-section__media">
+      {%- if yt_id != blank -%}
+        {%- comment %} YouTube embed {%- endcomment -%}
+        <div class="al-video-wrap al-yt-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/{{ yt_id }}?rel=0&modestbranding=1&color=white&autoplay=0"
+            title="{{ section.settings.heading | escape }}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+          ></iframe>
+        </div>
+      {%- elsif vid_url != blank -%}
+        {%- comment %} Native video file {%- endcomment -%}
+        <div class="al-video-wrap">
+          <video
+            src="{{ vid_url }}"
+            {%- if poster != blank %} poster="{{ poster | image_url: width: 1400 }}"{% endif %}
+            {%- if section.settings.autoplay %} autoplay muted playsinline loop{% endif %}
+            {%- unless section.settings.autoplay %} controls{% endunless %}
+            preload="metadata"
+          ></video>
+        </div>
+      {%- elsif poster != blank -%}
+        <div class="al-video-wrap">
+          <img src="{{ poster | image_url: width: 1400 }}" alt="{{ section.settings.heading | escape }}" style="width:100%;display:block;">
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
+      <div class="al-vid-section__cta">
+        <a href="{{ section.settings.cta_link }}" class="button button--primary al-btn-glow">
+          {{ section.settings.cta_label }} →
+        </a>
+        {%- if section.settings.ghost_label != blank and section.settings.ghost_link != blank -%}
+          <a href="{{ section.settings.ghost_link }}" class="button button--secondary">
+            {{ section.settings.ghost_label }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+  </div>
+</section>
+
+<style>
+  .al-vid-section__inner {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: {{ section.settings.text_align }};
+  }
+
+  .al-vid-section__eyebrow { margin-bottom: 16px; }
+
+  .al-vid-section__heading {
+    font-family: var(--al-font-display, 'General Sans', sans-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #F5F5F7;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin: 0 auto 16px;
+    max-width: 760px;
+  }
+
+  .al-vid-section__sub {
+    color: #ABABB3;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+
+  .al-vid-section__media {
+    margin: 0 auto;
+    max-width: {{ section.settings.media_max_width }}px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 32px 100px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255,255,255,0.06);
+  }
+
+  .al-yt-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .al-vid-section__cta {
+    display: flex;
+    gap: 16px;
+    {%- if section.settings.text_align == 'center' -%}
+    justify-content: center;
+    {%- else -%}
+    justify-content: flex-start;
+    {%- endif -%}
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 750px) {
+    .al-vid-section__cta { justify-content: center; }
+    .al-vid-section__cta a { width: 100%; text-align: center; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "AL — Video Section",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Layout" },
+    { "type": "select", "id": "background_style", "label": "Background", "options": [
+        {"value": "dark", "label": "Dark (#0A0A0C)"},
+        {"value": "surface", "label": "Surface (#121215)"},
+        {"value": "accent", "label": "Accent gradient (navy/dark)"}
+      ], "default": "surface" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 20, "max": 120, "step": 4, "default": 80, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 20, "max": 120, "step": 4, "default": 80, "unit": "px" },
+    { "type": "range", "id": "max_width", "label": "Content max width", "min": 600, "max": 1400, "step": 20, "default": 1200, "unit": "px" },
+    { "type": "range", "id": "media_max_width", "label": "Video max width", "min": 400, "max": 1200, "step": 20, "default": 960, "unit": "px" },
+    { "type": "select", "id": "text_align", "label": "Text alignment", "options": [
+        {"value": "center", "label": "Center"},
+        {"value": "left", "label": "Left"}
+      ], "default": "center" },
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow label", "default": "See It In Action" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Watch How It Works" },
+    { "type": "select", "id": "heading_tag", "label": "Heading tag", "options": [
+        {"value": "h2", "label": "H2"},
+        {"value": "h3", "label": "H3"}
+      ], "default": "h2" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading" },
+    { "type": "header", "content": "Video" },
+    { "type": "text", "id": "youtube_id", "label": "YouTube video ID", "info": "e.g. AxcmlF_3Tfs — takes priority over file URL if set" },
+    { "type": "text", "id": "video_url", "label": "Video file URL (CDN .mp4/.mov)", "info": "Direct URL to Shopify CDN video" },
+    { "type": "image_picker", "id": "poster_image", "label": "Poster / fallback image" },
+    { "type": "checkbox", "id": "autoplay", "label": "Autoplay (muted, looped)", "default": true },
+    { "type": "header", "content": "CTA Buttons" },
+    { "type": "text", "id": "cta_label", "label": "Primary button label" },
+    { "type": "url", "id": "cta_link", "label": "Primary button link" },
+    { "type": "text", "id": "ghost_label", "label": "Secondary button label" },
+    { "type": "url", "id": "ghost_link", "label": "Secondary button link" }
+  ],
+  "presets": [
+    {
+      "name": "AL — Video Section",
+      "settings": {
+        "eyebrow": "See It In Action",
+        "heading": "From Box to Wireless CarPlay in 60 Seconds",
+        "subheading": "Watch the full setup — no tools, no apps, no installation knowledge required.",
+        "youtube_id": "AxcmlF_3Tfs",
+        "autoplay": false,
+        "cta_label": "Shop AutoLinkr Pro™",
+        "cta_link": "/products/the-autolinkr-pro"
+      }
+    }
+  ]
+}
+{% endschema %}

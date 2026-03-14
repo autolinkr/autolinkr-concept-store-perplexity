@@ -68,7 +68,7 @@
     {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
       <div style="text-align:center;margin-top:56px;">
         <a href="{{ section.settings.cta_link }}" class="button button--primary al-btn-glow" style="font-size:1rem;padding:14px 32px;">
-          {{ section.settings.cta_label }} →
+          {{ section.settings.cta_label }} &rarr;
         </a>
       </div>
     {%- endif -%}
@@ -112,7 +112,7 @@
 
 {% schema %}
 {
-  "name": "AL — How It Works",
+  "name": "AL \u2014 How It Works",
   "tag": "section",
   "settings": [
     { "type": "range", "id": "padding_top", "label": "Padding top", "min": 20, "max": 120, "step": 4, "default": 80, "unit": "px" },
@@ -129,11 +129,12 @@
       "name": "Step",
       "settings": [
         { "type": "inline_richtext", "id": "heading", "label": "Step heading", "default": "Plug In the Adapter" },
-        { "type": "textarea", "id": "body", "label": "Step description", "default": "Connect the AutoLinkr adapter to your car's factory CarPlay USB port using the included cable. The adapter powers on automatically." },
-        { "type": "text", "id": "badge", "label": "Badge label (optional)", "info": "e.g. '60 sec' or 'One time only'" },
-        { "type": "text", "id": "image_url", "label": "Image CDN URL", "info": "Paste Shopify CDN URL directly (recommended)" },
+        { "type": "textarea", "id": "body", "label": "Step description", "default": "Connect the AutoLinkr adapter to your car's factory CarPlay USB port using the included cable." },
+        { "type": "text", "id": "badge", "label": "Badge label (optional)" },
+        { "type": "text", "id": "image_url", "label": "Image CDN URL" },
         { "type": "image_picker", "id": "image", "label": "Or pick image from theme assets" },
-        { "type": "select", "id": "image_ratio", "label": "Image aspect ratio", "options": [
+        { "type": "select", "id": "image_ratio", "label": "Image aspect ratio",
+          "options": [
             {"value": "4/3", "label": "4:3"},
             {"value": "16/9", "label": "16:9"},
             {"value": "1/1", "label": "Square"},
@@ -144,19 +145,19 @@
   ],
   "presets": [
     {
-      "name": "AL — How It Works",
+      "name": "AL \u2014 How It Works",
       "settings": {
         "eyebrow": "Setup Guide",
         "heading": "Up and Running in 60 Seconds",
         "subheading": "No tools. No apps. No installation knowledge required.",
-        "cta_label": "Shop AutoLinkr Pro™",
+        "cta_label": "Shop AutoLinkr Pro\u2122",
         "cta_link": "/products/the-autolinkr-pro"
       },
       "blocks": [
         {
           "type": "step",
           "settings": {
-            "heading": "Step 1 — Plug In",
+            "heading": "Step 1 \u2014 Plug In",
             "body": "Connect AutoLinkr to your car's factory CarPlay USB port using the included cable. The adapter powers on automatically when the car starts.",
             "badge": "30 seconds",
             "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Adapter17.png?v=1704950035",
@@ -166,7 +167,7 @@
         {
           "type": "step",
           "settings": {
-            "heading": "Step 2 — Pair Once",
+            "heading": "Step 2 \u2014 Pair Once",
             "body": "Connect your iPhone to Bluetooth 'HI-BOX:' and join the Wi-Fi hotspot shown on your screen. This one-time setup takes about 30 seconds.",
             "badge": "One time only",
             "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Wifi_Passcode_Image.webp?v=1718322092",
@@ -176,8 +177,8 @@
         {
           "type": "step",
           "settings": {
-            "heading": "Step 3 — Auto-Connect Forever",
-            "body": "Every future drive connects automatically the moment you start your car. No more cables. No more steps. Just wireless CarPlay and streaming, every drive.",
+            "heading": "Step 3 \u2014 Auto-Connect Forever",
+            "body": "Every future drive connects automatically the moment you start your car. No more cables. Just wireless CarPlay and streaming, every drive.",
             "badge": "Every drive, automatic",
             "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/WCPAA-Dual_cover-02.webp?v=1718169515",
             "image_ratio": "4/3"

@@ -2004,3 +2004,29 @@ magnet-element .btn-text,
   color: #FFFFFF !important;
   font-weight: 700 !important;
 }
+
+/* ── Marquee mode: kill black item/track backgrounds ─────────────────
+ * In marquee mode Concept wraps each announcement in an item container
+ * that can inherit dark bg from :root --color-background.
+ * Nuclear option: force transparent on ALL children of .announcement-bar.
+ */
+.announcement-bar *,
+.announcement-bar__item,
+.announcement-bar__item *,
+.announcement-bar .marquee,
+.announcement-bar .marquee *,
+.announcement-bar .marquee-track,
+.announcement-bar .marquee-track *,
+.announcement-bar [class*="marquee"],
+.announcement-bar [class*="marquee"] *,
+.announcement-bar [class*="scroller"],
+.announcement-bar [class*="scroller"] *,
+.announcement-bar [class*="announcement-bar__item"],
+.announcement-bar [class*="announcement-bar__content"],
+.topbar-section .announcement-bar *,
+.shopify-section-group-header-group .announcement-bar * {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  color: #FFFFFF !important;
+}

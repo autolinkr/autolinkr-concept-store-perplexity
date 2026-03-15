@@ -1,5 +1,5 @@
 /*
- * AutoLinkr Design System — v4.0
+ * AutoLinkr Design System — v5.1
  * Dark premium brand layer for ConceptThemePerplexity
  * Philosophy: World-class ecom dark aesthetic — think Apple.com dark mode, Rivian, Nothing Phone
  * Every element should feel intentional, airy, and high-end.
@@ -107,8 +107,21 @@ body,
 }
 
 /* All body text — enforce readable contrast */
-p, li, span, div {
+p, li {
   color: var(--al-text-2);
+}
+span, div {
+  color: inherit;
+}
+/* Product description, feature text — max readability */
+.product__description p,
+.product__description li,
+[class*="__text"] p,
+[class*="product-info"] p,
+.rte p, .rte li {
+  color: #D4D4DC !important;
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
 }
 h1, h2, h3, h4, h5, h6,
 .heading, .section-header__title,
@@ -174,20 +187,54 @@ a:hover { color: var(--al-accent-hover); }
   filter: brightness(0) invert(1) !important;
 }
 
-/* Nav links */
-.header__menu-item,
-.header__menu-item a,
-.header__menu-item span {
+
+/* ─── DESKTOP NAV — Concept theme real classes ──────────────────────────
+ * Concept renders nav as:
+ *   Direct link:  <a class="menu__item text-sm-lg flex items-center font-medium ...">
+ *   Dropdown:     <summary><magnet-element class="menu__item text-sm-lg flex items-center font-medium ...">
+ * Both use .menu__item — target that for pixel-identical styling.
+ * DO NOT target header__menu-item, header__inline-menu — those are wrong classes.
+ */
+
+/* Kill pill/box/magnet backgrounds on all nav items */
+header .menu__item,
+header nav summary,
+header magnet-element,
+header .btn-duplicate {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.btn-duplicate { display: none !important; }
+
+/* Uniform style on every nav item — same font, size, weight, color */
+header .menu__item {
   color: var(--al-text-1) !important;
   font-family: var(--al-font-display) !important;
   font-weight: 500 !important;
   font-size: 0.875rem !important;
   letter-spacing: 0.01em !important;
+  padding: 8px 10px !important;
+  border-radius: 6px !important;
+  transition: background var(--al-transition), color var(--al-transition) !important;
 }
-.header__menu-item:hover a,
-.header__menu-item:hover span {
+header .menu__item:hover,
+header nav summary:hover .menu__item {
+  background: rgba(59,142,248,0.08) !important;
   color: var(--al-accent) !important;
 }
+
+/* summary wrapper: must be transparent, no extra padding — menu__item handles it */
+header nav summary {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  cursor: pointer !important;
+  list-style: none !important;
+}
+header nav summary::marker,
+header nav summary::-webkit-details-marker { display: none !important; }
 
 /* Header icons */
 .header__icon svg,
@@ -196,17 +243,110 @@ a:hover { color: var(--al-accent-hover); }
   fill: none !important;
 }
 
-/* Announcement bar */
-.announcement-bar {
-  background-color: #0D0D10 !important;
-  border-bottom: 1px solid var(--al-border-subtle) !important;
+/* Announcement bar — brand accent blue, white bold text, sharp edges, marquee */
+/*
+ * Announcement bar — #3B8EF8 blue, edge-to-edge, flat, marquee
+ *
+ * HTML hierarchy:
+ *   .topbar-section (shopify-section wrapper) ← needs blue bg
+ *     .topbar (CSS grid: socials | announcement | localization)
+ *       .social-icons  ← needs blue bg (grid column, gets dark by default)
+ *       .announcement-bar  ← marquee container
+ *       .localization  ← needs blue bg (grid column, gets dark by default)
+ *
+ * The inline <style> from Liquid sets --color-background on #shopify-section-ID
+ * BUT our global :root override { --color-background: 8,8,9 } bleeds in for
+ * the social/localization columns which don't inherit the scoped variable.
+ * Fix: explicitly set background on .topbar-section and all its children.
+ */
+
+/* ── The entire topbar strip ────────────────────────────────── */
+.topbar-section {
+  background: #3B8EF8 !important;
+  background-color: #3B8EF8 !important;
+  border-radius: 0 !important;
 }
+/* All three grid columns: socials, announcement, localization */
+.topbar-section .topbar,
+.topbar-section .social-icons,
+.topbar-section .localization,
+.topbar-section .localization__item,
+.topbar-section .announcement-bar {
+  background: transparent !important; /* inherit #3B8EF8 from .topbar-section */
+  border-radius: 0 !important;
+}
+
+/* The .announcement-bar div itself — also blue, no rounded */
+.announcement-bar {
+  background: #3B8EF8 !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+.announcement-bar::before { display: none !important; }
+
+/* Marquee text — white bold, let scroll freely */
 .announcement-bar a,
-.announcement-bar__message {
-  color: var(--al-text-2) !important;
+.announcement-bar__message,
+.announcement-bar span,
+.announcement-bar p,
+.announcement-bar [class*="marquee"],
+.announcement-text {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 0.8125rem !important;
+  letter-spacing: 0.04em !important;
+  white-space: nowrap !important;
+  text-overflow: unset !important;
+  overflow: visible !important;
+}
+/* Localization text (language/country) — white on blue */
+.topbar-section .localization span,
+.topbar-section .localization button,
+.topbar-section .localization a,
+.topbar-section .social-icons a {
+  color: rgba(255,255,255,0.85) !important;
+}
+/* Icons in topbar — white */
+.topbar-section .icon,
+.topbar-section svg {
+  color: rgba(255,255,255,0.85) !important;
+  stroke: rgba(255,255,255,0.85) !important;
+}
+@media (max-width: 749px) {
+  .announcement-text,
+  .announcement-bar p {
+    font-size: 0.75rem !important;
+  }
 }
 
 /* ─── BUTTONS ────────────────────────────────────────────── */
+/*
+ * Concept theme button system:
+ *   .btn-fill  = absolutely-positioned span animated by JS (HoverButton.js)
+ *               slides from y:76% to y:0% on mouseenter — pure Motion.animate()
+ *               Default colors: primary=white, secondary=blue
+ *   .btn-text  = the visible label/icon span
+ *
+ * Strategy: kill the fill animation by making btn-fill transparent on ALL buttons.
+ * Our CSS handles all hover states (glow, translateY) — no fill animation needed.
+ */
+
+/* ── Neutralize btn-fill on ALL buttons globally ────────────────── */
+.button .btn-fill,
+.btn .btn-fill,
+button .btn-fill {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+/* Ensure btn-text sits on top and stays the right color */
+.button .btn-text {
+  position: relative !important;
+  z-index: 2 !important;
+  color: inherit !important;
+}
+
+/* ── Base button shell ───────────────────────────────────────── */
 .button,
 .btn,
 button[type="submit"],
@@ -214,40 +354,94 @@ button[type="submit"],
   font-family: var(--al-font-display) !important;
   font-weight: 600 !important;
   letter-spacing: 0.01em !important;
-  border-radius: var(--al-r-md) !important;
-  transition: all var(--al-transition) !important;
+  border-radius: 9999px !important;
+  transition: background var(--al-transition), box-shadow var(--al-transition), transform var(--al-transition), border-color var(--al-transition), color var(--al-transition) !important;
+  overflow: hidden !important;
+  position: relative !important;
 }
 
+/* ── Primary button — solid blue, neon glow on hover ───────────── */
 .button--primary,
 .btn-primary,
 .al-btn-primary {
   background: var(--al-accent) !important;
   color: #fff !important;
-  border: 1px solid transparent !important;
-  box-shadow: var(--al-shadow-accent) !important;
+  border: none !important;
+  box-shadow: 0 0 20px rgba(59,142,248,0.35), 0 4px 16px rgba(59,142,248,0.18) !important;
+  padding: 14px 32px !important;
+  font-size: 0.9375rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
 }
 .button--primary:hover,
 .al-btn-primary:hover {
   background: var(--al-accent-hover) !important;
-  box-shadow: 0 6px 32px rgba(59, 142, 248, 0.35) !important;
-  transform: translateY(-1px) !important;
+  box-shadow: 0 0 32px rgba(59,142,248,0.55), 0 6px 24px rgba(59,142,248,0.30) !important;
+  transform: translateY(-2px) !important;
+  color: #fff !important;
+}
+/* Force btn-text white on primary */
+.button--primary .btn-text {
+  color: #fff !important;
 }
 
+/* ── Secondary / outline button ────────────────────────────── */
 .button--secondary,
 .btn-secondary {
   background: transparent !important;
   color: var(--al-text-1) !important;
-  border: 1px solid var(--al-border-bright) !important;
+  border: 1.5px solid rgba(255,255,255,0.25) !important;
+  padding: 14px 28px !important;
+  font-size: 0.9375rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
 }
 .button--secondary:hover {
   border-color: var(--al-accent) !important;
   color: var(--al-accent) !important;
-  background: var(--al-accent-dim) !important;
+  background: rgba(59,142,248,0.08) !important;
+  box-shadow: 0 0 16px rgba(59,142,248,0.15) !important;
+  transform: translateY(-1px) !important;
+}
+.button--secondary .btn-text {
+  color: inherit !important;
 }
 
 /* Dynamic checkout (Shop Pay etc) */
 .shopify-payment-button__button--branded {
-  border-radius: var(--al-r-md) !important;
+  border-radius: 9999px !important;
+}
+
+/* ── Close (X) button in mega menu ────────────────────────────
+ * On dark background the default close button border/icon is near-invisible.
+ * Force white icon + subtle white border so it’s always visible.
+ */
+.button--close,
+.button.button--close,
+.button.button--secondary.button--close {
+  color: #F7F7F8 !important;
+  border-color: rgba(255,255,255,0.25) !important;
+  background: rgba(255,255,255,0.07) !important;
+}
+.button--close .icon,
+.button--close svg,
+.button--close .icon-close,
+.button.button--close svg {
+  stroke: #F7F7F8 !important;
+  color: #F7F7F8 !important;
+  fill: none !important;
+}
+.button--close:hover {
+  background: rgba(255,255,255,0.14) !important;
+  border-color: rgba(255,255,255,0.45) !important;
 }
 
 /* ─── FORMS & EMAIL INPUTS ───────────────────────────────── */
@@ -320,15 +514,28 @@ label {
  * Each tab = frosted glass surface with left accent border on open
  */
 .accordion,
-details {
+.collapsible {
   background: transparent !important;
   margin-bottom: 8px !important;
 }
+/* NEVER apply margin-bottom to bare `details` — bleeds into nav and drawer details elements */
+:not(.drawer__menu-group) > details {
+  margin-bottom: 8px !important;
+}
 
-/* The summary/trigger row */
+/*
+ * ACCORDION SUMMARY RULES — SCOPED to content accordions only
+ * CRITICAL: Do NOT use bare `details summary` here — that bleeds into
+ * the nav dropdowns (which are also <details><summary>) and breaks
+ * padding/alignment. Scope to .accordion, .collapsible, .product-section.
+ */
 .accordion__button,
-details summary,
-.accordion summary {
+.accordion summary,
+.collapsible summary,
+.collapsible__button,
+[class*="collapsible-tab"] summary,
+[class*="collapsible-content"] summary,
+.product-accordion summary {
   background: linear-gradient(135deg, var(--al-surface-2), var(--al-surface-3)) !important;
   border: 1px solid var(--al-border) !important;
   border-radius: var(--al-r-md) !important;
@@ -345,14 +552,17 @@ details summary,
   list-style: none !important;
 }
 .accordion__button:hover,
-details summary:hover {
+.accordion summary:hover,
+.collapsible summary:hover {
   background: linear-gradient(135deg, var(--al-surface-3), var(--al-surface-4)) !important;
   border-color: var(--al-accent-border) !important;
   color: var(--al-text-1) !important;
 }
 
 /* Open state — accent left border */
-details[open] summary,
+.accordion details[open] summary,
+.collapsible details[open] summary,
+[class*="collapsible-content"] details[open] summary,
 .accordion__button[aria-expanded="true"],
 .accordion--open .accordion__button {
   background: linear-gradient(135deg, var(--al-surface-3), var(--al-surface-4)) !important;
@@ -362,9 +572,12 @@ details[open] summary,
   border-radius: var(--al-r-md) var(--al-r-md) 0 0 !important;
 }
 
-/* Chevron/arrow indicator */
+/* Chevron/arrow indicator — scoped to content accordions only */
 .accordion__button::after,
-details summary::after {
+.accordion summary::after,
+.collapsible summary::after,
+[class*="collapsible-tab"] summary::after,
+[class*="collapsible-content"] summary::after {
   content: '';
   display: inline-block;
   width: 10px;
@@ -375,21 +588,56 @@ details summary::after {
   transition: transform var(--al-transition);
   flex-shrink: 0;
 }
-details[open] summary::after,
+.accordion details[open] summary::after,
+.collapsible details[open] summary::after,
+[class*="collapsible-content"] details[open] summary::after,
 .accordion--open .accordion__button::after {
   transform: rotate(-135deg);
   border-color: var(--al-accent);
 }
 
-/* Remove native marker */
+/* Remove native list marker */
 .accordion summary::marker,
 .accordion summary::-webkit-details-marker,
-details summary::marker,
-details summary::-webkit-details-marker {
+.collapsible summary::marker,
+.collapsible summary::-webkit-details-marker {
   display: none !important;
   content: '' !important;
   color: transparent !important;
 }
+/* Hide Concept's built-in toggle icon to prevent double icon — content accordions only */
+.accordion__button .icon,
+.accordion summary .icon,
+.collapsible summary .icon,
+.collapsible-tab__button .icon,
+.accordion summary > svg,
+.accordion__button > svg,
+[class*="collapsible"] summary svg,
+[class*="collapsible"] summary .icon-caret,
+[class*="accordion"] summary .icon,
+[class*="accordion"] button .icon-caret {
+  display: none !important;
+}
+
+/* ─── NAV DROPDOWN SUMMARY — Accordion bleed guard ─────────
+ * Accordion styles are already scoped to .accordion / .collapsible classes.
+ * This block is a safety reset in case any summary in the header nav
+ * gets accordion styles via specificity fights.
+ * Real nav styling is on .menu__item above.
+ */
+header nav summary {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  list-style: none !important;
+  cursor: pointer !important;
+}
+header nav summary::after { display: none !important; content: none !important; }
+header nav summary::marker,
+header nav summary::-webkit-details-marker { display: none !important; }
 
 /* Content panel */
 .accordion__content,
@@ -776,11 +1024,21 @@ details > div strong {
 }
 
 /* ─── CART DRAWER ─────────────────────────────────────────── */
-.cart-drawer,
+/*
+ * FIX: Style .drawer__inner (the actual panel), NOT .cart-drawer or .drawer
+ * Concept theme separates: outer wrapper (.drawer) = overlay/backdrop context
+ *                          inner panel (.drawer__inner) = visible sliding panel
+ * Styling the outer wrapper breaks the overlay blackout behavior on mobile.
+ */
 .drawer__inner {
   background-color: var(--al-surface) !important;
   border-left: 1px solid var(--al-border) !important;
   color: var(--al-text-1) !important;
+}
+/* cart-drawer is a cart-specific sibling to drawer__inner — keep for cart only */
+.cart-drawer .cart-drawer__form,
+.cart-notification {
+  background-color: var(--al-surface) !important;
 }
 .cart-drawer .cart-item__name,
 .drawer__inner .cart-item__name { color: var(--al-text-1) !important; }
@@ -789,53 +1047,226 @@ details > div strong {
 .cart-drawer .cart-item__details,
 .drawer__inner p { color: var(--al-text-2) !important; }
 
-/* ─── FOOTER — built-in Concept footer override ──────────── */
+/* ─── FOOTER — Premium dark layout, white logo ───────────── */
 .footer {
-  background: var(--al-surface) !important;
+  background: #080809 !important;
   border-top: 1px solid var(--al-border) !important;
+  padding-top: 56px !important;
+  padding-bottom: 0 !important;
 }
-.footer__content-top,
+.footer__content-top {
+  color: var(--al-text-3) !important;
+  padding-bottom: 48px !important;
+  gap: 48px !important;
+}
 .footer__content-bottom {
   color: var(--al-text-3) !important;
+  border-top: 1px solid var(--al-border-subtle) !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  margin-top: 8px !important;
 }
+/* FOOTER LOGO — force white */
+.footer__logo img,
+.footer .footer__heading-logo img,
+.footer [class*="logo"] img,
+footer img[class*="logo"] {
+  filter: brightness(0) invert(1) !important;
+  max-height: 36px !important;
+  width: auto !important;
+}
+/* Column headings */
 .footer .heading,
-.footer h2, .footer h3, .footer h4 {
+.footer h2, .footer h3, .footer h4,
+.footer__column .heading,
+[class*="footer__column"] h3 {
   color: var(--al-text-1) !important;
   font-family: var(--al-font-display) !important;
-  font-size: 0.875rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.06em !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
   text-transform: uppercase !important;
+  margin-bottom: 16px !important;
 }
+/* Links */
 .footer a,
-.footer__list a {
+.footer__list a,
+.footer__list li a {
   color: var(--al-text-3) !important;
   text-decoration: none !important;
-  font-size: var(--al-text-sm) !important;
+  font-size: 0.875rem !important;
+  line-height: 2 !important;
   transition: color var(--al-transition) !important;
+  display: inline-block !important;
 }
 .footer a:hover,
 .footer__list a:hover {
+  color: #F7F7F8 !important;
+}
+/* Newsletter section within footer */
+.footer .newsletter__heading,
+.footer .newsletter__heading-title {
   color: var(--al-text-1) !important;
+  font-family: var(--al-font-display) !important;
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  letter-spacing: -0.015em !important;
 }
-.footer__content-bottom {
-  border-top: 1px solid var(--al-border-subtle) !important;
+.footer .newsletter__form,
+.footer form[class*="newsletter"] {
+  margin-top: 16px !important;
 }
-.footer__copyright {
+/* ── Concept newsletter-form (self-submit-button pattern) ──────────
+ * Structure: .newsletter-form > .field.relative > input.input + .self-submit-button.absolute > button
+ * The button overlaps the right side of the input field.
+ * Fix: ensure input has right padding so text doesn't hide behind button,
+ *      style the button as a clean accent circle or pill.
+ */
+.newsletter-form .field {
+  position: relative !important;
+}
+/* Dark input */
+.newsletter-form .field .input,
+.newsletter-form input[type="email"],
+.footer .newsletter-form input {
+  background: var(--al-surface-2) !important;
+  border: 1px solid var(--al-border) !important;
+  border-radius: var(--al-r-md) !important;
+  color: var(--al-text-1) !important;
+  padding: 14px 56px 14px 16px !important; /* right pad leaves room for submit btn */
+  font-size: 0.875rem !important;
+  width: 100% !important;
+  transition: border-color var(--al-transition), box-shadow var(--al-transition) !important;
+}
+.newsletter-form .field .input::placeholder,
+.newsletter-form input[type="email"]::placeholder,
+.footer .newsletter-form input::placeholder {
+  color: var(--al-text-3) !important; /* readable muted placeholder */
+  opacity: 1 !important;
+}
+.newsletter-form .field .input:focus,
+.newsletter-form input[type="email"]:focus {
+  border-color: var(--al-accent) !important;
+  box-shadow: 0 0 0 3px var(--al-accent-dim) !important;
+  outline: none !important;
+}
+/* ── Kill ALL floating/inline labels inside newsletter form ─────────────
+ * Concept renders both a <label> (floating) AND a placeholder on the input.
+ * We want only the placeholder — hide every label variant possible.
+ * Uses max specificity + visibility:hidden fallback.
+ */
+.newsletter-form .field .label,
+.newsletter-form .field label,
+.newsletter-form .field [class*="label"],
+.newsletter-form label,
+.footer .newsletter-form .field .label,
+.footer .newsletter-form .field label,
+.footer .newsletter-form label,
+.footer .newsletter__form label,
+.shopify-section .newsletter-form label,
+.footer-section .newsletter-form label {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+/* Floating submit button — clean accent circle */
+.newsletter-form .self-submit-button {
+  position: absolute !important;
+  right: 6px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
+}
+.newsletter-form .self-submit-button .button,
+.newsletter-form .self-submit-button button {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: unset !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: var(--al-accent) !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 14px rgba(59,142,248,0.40) !important;
+  transition: all var(--al-transition) !important;
+  cursor: pointer !important;
+}
+.newsletter-form .self-submit-button button:hover {
+  background: var(--al-accent-hover) !important;
+  box-shadow: 0 0 22px rgba(59,142,248,0.60) !important;
+  transform: scale(1.08) !important;
+}
+.newsletter-form .self-submit-button .btn-fill {
+  display: none !important; /* no fill animation on icon-only button */
+}
+.newsletter-form .self-submit-button .btn-text {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+.newsletter-form .self-submit-button svg {
+  width: 14px !important;
+  height: 14px !important;
+  stroke: #fff !important;
+  stroke-width: 2px !important;
+}
+
+/* Legacy class pattern kept for compatibility */
+.footer .newsletter__form input,
+.footer input[type="email"] {
+  background: var(--al-surface-2) !important;
+  border: 1px solid var(--al-border) !important;
+  border-radius: var(--al-r-md) !important;
+  color: var(--al-text-1) !important;
+  padding: 14px 56px 14px 16px !important;
+  font-size: 0.875rem !important;
+}
+.footer .newsletter__form input::placeholder {
   color: var(--al-text-4) !important;
-  font-size: var(--al-text-xs) !important;
 }
-/* Social icons in footer */
+/* Footer copyright */
+.footer__copyright,
+.footer .copyright {
+  color: var(--al-text-4) !important;
+  font-size: 0.8125rem !important;
+}
+/* Social icons */
 .footer .social-icons a,
-.footer .list-social a {
+.footer .list-social a,
+.footer [class*="list-social"] a {
   color: var(--al-text-3) !important;
+  background: var(--al-surface-2) !important;
+  border: 1px solid var(--al-border) !important;
+  border-radius: 8px !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all var(--al-transition) !important;
 }
 .footer .social-icons a:hover,
-.footer .list-social a:hover {
-  color: var(--al-text-1) !important;
+.footer .list-social a:hover,
+.footer [class*="list-social"] a:hover {
+  color: var(--al-accent) !important;
+  border-color: var(--al-accent-border) !important;
+  background: var(--al-accent-dim) !important;
 }
 /* Payment badges */
-.footer .payment-icons { filter: brightness(0.7) !important; }
+.footer .payment-icons { filter: brightness(0.6) !important; }
+/* Footer list item spacing */
+.footer__list li,
+.footer ul li {
+  margin-bottom: 2px !important;
+  list-style: none !important;
+}
 
 /* ─── AL BRAND HERO SECTION ─────────────────────────────── */
 .al-brand-hero {
@@ -999,6 +1430,160 @@ details > div strong {
   letter-spacing: 0.04em !important;
 }
 
+
+/* ─── DESKTOP NAV — Redundant block removed — see .menu__item block above ──
+ * All desktop nav styling is now unified on header .menu__item.
+ * Keeping this comment as a placeholder to avoid reintroduction.
+ */
+
+
+/* ─── MOBILE MENU — Premium clean accordion ──────────────── */
+/*
+ * FIX: In Concept theme, .menu-drawer is the OUTER full-screen wrapper
+ * (controls overlay, positioning, click-away). Style .drawer__inner inside it
+ * for the panel background. Never set background on the outer wrapper.
+ * Reference: same pattern as cart drawer — outer = overlay, inner = panel.
+ */
+.menu-drawer .drawer__inner,
+.header__menu-drawer .drawer__inner {
+  background: #080809 !important;
+  border-right: 1px solid var(--al-border) !important;
+}
+/* Mobile drawer — style the actual Concept drawer classes
+ * Concept drawer HTML: .drawer__menu-item (direct links) and
+ * .drawer__menu-item inside <summary> (dropdown triggers)
+ * DO NOT use [class*="menu-drawer"] glob on <a>/<button> — too broad,
+ * bleeds into sub-panel which uses position:absolute and needs clean layout.
+ */
+
+/* Top-level nav items in the drawer */
+.drawer__menu-item {
+  background: transparent !important;
+  color: var(--al-text-1) !important;
+  font-family: var(--al-font-display) !important;
+  font-size: 1.5rem !important;     /* matches theme's text-2xl */
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+  transition: color var(--al-transition) !important;
+  padding: 16px 20px !important;
+  display: block !important;
+  width: 100% !important;
+  border-bottom: 1px solid var(--al-border-subtle) !important;
+}
+.drawer__menu-item:hover,
+.drawer__menu-item:focus {
+  color: var(--al-accent) !important;
+}
+
+/* Sub-panel back-button (the "< Adapters" button at top of sub-panel) */
+.drawer__submenu [data-close] {
+  background: var(--al-surface) !important;
+  color: var(--al-accent) !important;
+  font-family: var(--al-font-display) !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  padding: 14px 20px !important;
+  border-bottom: 1px solid var(--al-border) !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Sub-panel links */
+.drawer__submenu .drawer__menu-item {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  padding: 14px 20px !important;
+  border-bottom: 1px solid var(--al-border-subtle) !important;
+}
+
+/* Ensure the absolute sub-panel covers its parent fully — no bleed */
+.drawer__submenu {
+  background: #080809 !important;
+}
+
+/* CRITICAL: drawer nav <details> must have no margin/padding that breaks absolute sub-panel */
+.drawer__menu-group > details,
+.drawer__scrollable > .drawer__menu-group > details {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Remove any active-state pill/highlight */
+.drawer__menu .active .drawer__menu-item,
+.drawer__menu [aria-expanded="true"] .drawer__menu-item {
+  color: var(--al-accent) !important;
+  background: transparent !important;
+}
+
+
+/* ─── NEON GLOW EFFECTS ───────────────────────────────────── */
+.al-btn-glow,
+.button--primary,
+.btn-primary {
+  box-shadow: 0 0 20px rgba(59,142,248,0.35), 0 4px 16px rgba(59,142,248,0.20) !important;
+}
+.al-btn-glow:hover,
+.button--primary:hover {
+  box-shadow: 0 0 32px rgba(59,142,248,0.55), 0 6px 24px rgba(59,142,248,0.30) !important;
+  transform: translateY(-1px) !important;
+}
+/* Glow on key product CTA buttons */
+.product-form__submit,
+.shopify-payment-button__button {
+  box-shadow: 0 0 24px rgba(59,142,248,0.30) !important;
+}
+.product-form__submit:hover {
+  box-shadow: 0 0 40px rgba(59,142,248,0.50) !important;
+}
+/* Number counter glow items */
+.number-counter__item {
+  text-shadow: 0 0 20px rgba(59,142,248,0.20) !important;
+}
+/* Hero section CTA glow */
+.al-brand-hero .button--primary {
+  box-shadow: 0 0 40px rgba(59,142,248,0.45), 0 0 80px rgba(59,142,248,0.15) !important;
+}
+
+
+/* ─── SECTION HEADING SPACING — Premium breathing room ──── */
+.section-header,
+[class*="section-header"] {
+  margin-bottom: 48px !important;
+}
+.section-header .heading,
+.section-header h2 {
+  margin-bottom: 12px !important;
+  line-height: 1.1 !important;
+}
+.section-header p,
+.section-header__description,
+.section-header .subheading {
+  margin-top: 12px !important;
+  line-height: 1.65 !important;
+}
+/* FAQ / collapsible page header spacing */
+.page-width > h1,
+.page-width > .heading,
+.main-page-title {
+  margin-bottom: 32px !important;
+  padding-bottom: 16px !important;
+}
+/* Space between FAQ sections */
+.faq + .faq,
+[class*="faq"] + [class*="faq"] {
+  margin-top: 48px !important;
+}
+/* Space between accordion items — scoped to content, not drawer nav */
+.accordion,
+.collapsible {
+  margin-bottom: 10px !important;
+}
+
 /* ─── SECTION HEADERS ────────────────────────────────────── */
 .section-header__title,
 .section-header .heading {
@@ -1016,7 +1601,7 @@ details > div strong {
 }
 
 /* ─── ANNOUNCEMENT BAR LINKS ──────────────────────────────── */
-.announcement-bar a { color: var(--al-text-2) !important; }
+.announcement-bar a { color: #E8F0FF !important; }
 
 /* ─── HEADER FIX AFTER SCROLL ─────────────────────────────── */
 .header--border-bottom,
@@ -1125,4 +1710,297 @@ body::before {
 /* Consistent vertical rhythm */
 .shopify-section + .shopify-section {
   /* sections are self-contained, no extra margin */
+}
+/*
+ * STICKY HEADER GUARD:
+ * Never apply position:relative, overflow, transform, or z-index changes
+ * to the header section — these break sticky positioning.
+ * Any broad .shopify-section rule must exclude the header.
+ */
+.shopify-section + .shopify-section:not(.shopify-section--header) {
+  /* safe to apply layout rules here — header is excluded */
+}
+
+/* ─── DESKTOP NAV — Simple Dropdown (Help, etc.) ──────────── */
+/*
+ * Concept uses: .dropdown > .dropdown__container > ul.dropdown__nav
+ * Links use class: reversed-link text-sm-base
+ * Must set explicit background + text so items are visible on dark header.
+ */
+.dropdown__container {
+  background: #0F0F12 !important;
+  border: 1px solid var(--al-border) !important;
+  border-radius: var(--al-r-md) !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.75) !important;
+  padding: 8px !important;
+  min-width: 160px !important;
+}
+.dropdown__nav li {
+  padding: 0 !important;
+}
+.dropdown__nav a,
+.dropdown__nav .reversed-link {
+  display: block !important;
+  padding: 9px 14px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: #C8C8D0 !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  transition: background var(--al-transition), color var(--al-transition) !important;
+}
+.dropdown__nav a:hover,
+.dropdown__nav .reversed-link:hover {
+  background: rgba(59,142,248,0.10) !important;
+  color: #3B8EF8 !important;
+}
+
+/* ─── DESKTOP NAV — Mega Menu Panel ───────────────────────── */
+/*
+ * Concept mega menu HTML structure:
+ *   .mega-menu__container
+ *     ul.mega-menu__list
+ *       li.mega-menu__item.mega-menu__item--nav  (links column)
+ *       li.mega-menu__item  (promo image cards)
+ *         .media-card > .media-card__link > .media > img
+ *         .media-card__content > .media-card__text > .heading
+ *
+ * The panel background is set by Concept's own CSS. We enhance it.
+ * The card sizing issue: our old .card max-width was wrong class.
+ * Cards are mega-menu__item elements — let Concept control their grid width.
+ */
+
+/* Each promo card within mega menu — ensure proper sizing */
+.mega-menu__list {
+  gap: 12px !important;
+}
+
+.mega-menu__item .media-card {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+/* Card label text */
+.mega-menu__item .media-card__text .heading {
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #F7F7F8 !important;
+  letter-spacing: -0.01em !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+/* Card subtext — ensure it wraps and stays visible */
+.mega-menu__item .media-card__content p {
+  font-size: 0.75rem !important;
+  color: rgba(255,255,255,0.75) !important;
+  white-space: normal !important;
+  line-height: 1.3 !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
+/* Nav links column in mega menu */
+.mega-menu__item--nav .mega-menu__nav li a {
+  font-size: 0.875rem !important;
+  color: #C8C8D0 !important;
+  line-height: 1.5 !important;
+  white-space: normal !important;  /* allow wrap on long product names */
+}
+.mega-menu__item--nav .mega-menu__nav li a:hover {
+  color: #3B8EF8 !important;
+}
+
+/* Mega menu background panel — match brand dark surface */
+.mega-menu__container,
+.mega-menu {
+  background: #0A0A0C !important;
+}
+.mega-menu__list {
+  background: #0A0A0C !important;
+}
+/* Mega menu footer link */
+.mega-menu__footer .mega-menu__link,
+.mega-menu__footer a {
+  color: #3B8EF8 !important;
+  font-weight: 600 !important;
+  font-size: 0.9375rem !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+  padding-top: 16px !important;
+  margin-top: 8px !important;
+}
+.mega-menu__footer .mega-menu__link:hover,
+.mega-menu__footer a:hover {
+  color: #2478E8 !important;
+}
+
+/* ─── ULTRA-OVERRIDE: Desktop nav pill backgrounds REMOVED ──────────────── */
+/* Concept theme 2412 uses heavily scoped nav button styles — override here */
+.shopify-section--header .header__dropdown-toggle,
+.shopify-section--header button.header__dropdown-toggle,
+.header-wrapper .header__dropdown-toggle,
+html body .header__dropdown-toggle,
+html body .header__menu-item,
+html body .header__inline-menu li > a,
+html body .header__inline-menu li > button,
+html body header nav li > a,
+html body header nav li > button,
+html body .site-header nav li > a,
+html body .site-header nav li > button {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+}
+html body .header__dropdown-toggle:hover,
+html body .header__inline-menu li > a:hover,
+html body .header__inline-menu li > button:hover,
+html body header nav li > a:hover,
+html body header nav li > button:hover {
+  background-color: rgba(59,142,248,0.08) !important;
+  color: #3B8EF8 !important;
+}
+/* Remove any inlined background from Concept's nav component */
+[data-section-type="header"] nav [class*="dropdown"],
+[data-section-type="header"] nav [class*="menu-item"] {
+  --menu-item-bg: transparent !important;
+  background: transparent !important;
+}
+
+/* ─── CONCEPT THEME NAV — menu__item class override ──────────────────── */
+/* Targets the actual Concept menu__item and with-block list styles */
+.with-block .menu__item,
+.with-block summary,
+.menu__item,
+ul.with-block > li > summary,
+ul.with-block > li > a {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 8px !important;
+  border: none !important;
+}
+.with-block .menu__item:hover,
+ul.with-block > li > summary:hover,
+ul.with-block > li > a:hover {
+  background: rgba(59,142,248,0.08) !important;
+  color: var(--al-accent) !important;
+}
+/* bar style active indicator */
+.with-bar .menu__item::after,
+ul.with-bar > li > a::after {
+  background-color: var(--al-accent) !important;
+}
+
+/* ─── CONCEPT THEME SPECIFIC: menu__item pill removal ────── */
+/* These come from header-nav-desktop.liquid / Concept's nav component */
+.menu__item {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+/* The btn-duplicate creates the hover fill effect — override to use soft blue */
+.btn-duplicate {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 8px !important;
+  color: var(--al-accent) !important;
+}
+/* summary.rounded-full — in block mode, override the pill border/background */
+.header__menu summary.rounded-full,
+.header__navigation summary,
+details.rounded-full > summary {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+/* with-block list adds extra background to children */
+ul.with-block > li,
+ul.with-dot > li {
+  background: transparent !important;
+}
+ul.with-block > li summary,
+ul.with-dot > li summary,
+ul.with-block > li a,
+ul.with-dot > li a {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+ul.with-block > li summary:hover,
+ul.with-dot > li summary:hover,
+ul.with-block > li a:hover,
+ul.with-dot > li a:hover {
+  background: rgba(59,142,248,0.08) !important;
+}
+
+/* ─── MAGNET-ELEMENT (Concept web component) nav pill fix ── */
+magnet-element,
+magnet-element .btn-text,
+.header__menu magnet-element {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+/* The inner span that creates the sliding pill background */
+.header__menu .btn-duplicate,
+.header__navigation .btn-duplicate {
+  display: none !important;
+}
+/* Remove border from nav item containers */
+.header__menu details > summary,
+.header__menu li > summary,
+.header__navigation li > summary {
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  transition: background var(--al-transition), border-color var(--al-transition) !important;
+}
+.header__menu details > summary:hover,
+.header__navigation li > summary:hover {
+  background: rgba(59,142,248,0.08) !important;
+  border-color: rgba(59,142,248,0.15) !important;
+  color: var(--al-accent) !important;
+}
+
+/* ─── ANNOUNCEMENT BAR: High-specificity override of Concept inline style ── */
+/*
+ * Concept injects inline <style> scoped to #shopify-section-ID.
+ * Our :root { --color-background: 8,8,9 } bleeds into .social-icons and
+ * .localization grid columns because those don't pick up the scoped var.
+ * Solution: target .topbar-section directly AND use id wildcard selector.
+ */
+[id*="shopify-section"] .topbar-section,
+.shopify-section-group-header-group .topbar-section {
+  background: #3B8EF8 !important;
+  background-color: #3B8EF8 !important;
+  border-radius: 0 !important;
+}
+[id*="announcement-bar"] .announcement-bar,
+[id*="shopify-section"] .topbar-section .announcement-bar,
+.shopify-section-group-header-group .announcement-bar {
+  background: #3B8EF8 !important;
+  background-color: #3B8EF8 !important;
+  border-radius: 0 !important;
+}
+/* Force all topbar grid columns to inherit blue */
+[id*="shopify-section"] .topbar-section .social-icons,
+[id*="shopify-section"] .topbar-section .localization {
+  background: transparent !important;
+}
+/* Marquee text — white, no clipping */
+.announcement-bar .announcement-bar__message-link,
+.announcement-bar .announcement-bar__link,
+.announcement-bar [class*="announcement__text"],
+.announcement-bar p,
+.announcement-text {
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
 }

@@ -30,22 +30,35 @@
 }
 
 {%- liquid
-  assign oc = section.settings.overlay_color | default: '#0A0A0C'
-  assign oc_r = oc | color_extract: 'red'
-  assign oc_g = oc | color_extract: 'green'
-  assign oc_b = oc | color_extract: 'blue'
-  assign oa  = section.settings.overlay_opacity  | divided_by: 100.0
-  assign oa2 = section.settings.overlay_opacity_mid | divided_by: 100.0
-  assign oa3 = section.settings.overlay_opacity_edge | divided_by: 100.0
+  comment
+    Use color_to_rgb to get a reliable CSS rgb() string, then inject opacity separately.
+    Always default opacity values so nil settings don't collapse to 0.
+  endcomment
+
+  assign oc   = section.settings.overlay_color | default: '#0A0A0C'
+  assign oc_r = oc | color_extract: 'red'   | default: 10
+  assign oc_g = oc | color_extract: 'green' | default: 10
+  assign oc_b = oc | color_extract: 'blue'  | default: 12
+
+  assign oa_raw  = section.settings.overlay_opacity       | default: 90
+  assign oa2_raw = section.settings.overlay_opacity_mid   | default: 55
+  assign oa3_raw = section.settings.overlay_opacity_edge  | default: 10
+  assign oa  = oa_raw  | times: 1.0 | divided_by: 100
+  assign oa2 = oa2_raw | times: 1.0 | divided_by: 100
+  assign oa3 = oa3_raw | times: 1.0 | divided_by: 100
   assign odir = section.settings.overlay_direction | default: '105deg'
 
-  assign mc = section.settings.overlay_color_mobile | default: '#0A0A0C'
-  assign mc_r = mc | color_extract: 'red'
-  assign mc_g = mc | color_extract: 'green'
-  assign mc_b = mc | color_extract: 'blue'
-  assign ma  = section.settings.overlay_opacity_mobile  | divided_by: 100.0
-  assign ma2 = section.settings.overlay_opacity_mobile_mid | divided_by: 100.0
-  assign ma3 = section.settings.overlay_opacity_mobile_edge | divided_by: 100.0
+  assign mc   = section.settings.overlay_color_mobile | default: '#0A0A0C'
+  assign mc_r = mc | color_extract: 'red'   | default: 10
+  assign mc_g = mc | color_extract: 'green' | default: 10
+  assign mc_b = mc | color_extract: 'blue'  | default: 12
+
+  assign ma_raw  = section.settings.overlay_opacity_mobile      | default: 30
+  assign ma2_raw = section.settings.overlay_opacity_mobile_mid  | default: 70
+  assign ma3_raw = section.settings.overlay_opacity_mobile_edge | default: 95
+  assign ma  = ma_raw  | times: 1.0 | divided_by: 100
+  assign ma2 = ma2_raw | times: 1.0 | divided_by: 100
+  assign ma3 = ma3_raw | times: 1.0 | divided_by: 100
   assign mdir = section.settings.overlay_direction_mobile | default: '180deg'
 -%}
 
@@ -58,16 +71,6 @@
     rgba({{ oc_r }},{{ oc_g }},{{ oc_b }},{{ oa }}) 0%,
     rgba({{ oc_r }},{{ oc_g }},{{ oc_b }},{{ oa2 }}) 50%,
     rgba({{ oc_r }},{{ oc_g }},{{ oc_b }},{{ oa3 }}) 100%
-  );
-}
-
-/* Mobile overlay — overridden inside the media query below */
-.al-bh__overlay--mobile-override {
-  background: linear-gradient(
-    {{ mdir }},
-    rgba({{ mc_r }},{{ mc_g }},{{ mc_b }},{{ ma }}) 0%,
-    rgba({{ mc_r }},{{ mc_g }},{{ mc_b }},{{ ma2 }}) 50%,
-    rgba({{ mc_r }},{{ mc_g }},{{ mc_b }},{{ ma3 }}) 100%
   );
 }
 

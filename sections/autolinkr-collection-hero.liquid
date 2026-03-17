@@ -1,114 +1,118 @@
 {% comment %}
   autolinkr-collection-hero.liquid
-  AutoLinkr Collection Page — Hero + Product Grid
+  AutoLinkr Collection Page Hero Banner
   Phase C — ConceptThemePerplexity
 
   Renders:
-  - Collection headline + subhead
-  - Product grid (2-up mobile, 3-up desktop)
-  - Each card: image, title, price, quick-add
+  - Collection-specific hero headline + sub
+  - Product count / trust signal
+  - Pro → Elite upgrade nudge (Adapters collection only)
+  - Breadcrumb
 {% endcomment %}
 
 {{ 'autolinkr-collection.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign col = collection
-  assign sort_by = collection.sort_by | default: collection.default_sort_by
+  assign is_adapters = false
+  assign is_dash_cams = false
+  if collection.handle == 'adapters' or collection.handle == 'carplay-adapters' or collection.handle == 'wireless-carplay'
+    assign is_adapters = true
+  endif
+  if collection.handle == 'dash-cams' or collection.handle == 'dashcams'
+    assign is_dash_cams = true
+  endif
+  assign col_title = section.settings.hero_title | default: collection.title
+  assign col_sub   = section.settings.hero_sub   | default: collection.description
 -%}
 
 <section
   class="al-col-hero"
   data-section-id="{{ section.id }}"
   data-section-type="autolinkr-collection-hero"
+  data-collection="{{ collection.handle }}"
 >
-  <div class="al-container">
+  {%- comment %} Ambient glow {%- endcomment %}
+  <div class="al-col-hero__bg" aria-hidden="true">
+    <div class="al-col-hero__bg-glow{% if is_dash_cams %} al-col-hero__bg-glow--green{% else %} al-col-hero__bg-glow--blue{% endif %}"></div>
+  </div>
 
-    {%- comment %} ── HEADER ── {%- endcomment %}
-    <header class="al-col-hero__header">
-      <h1 class="al-col-hero__title">{{ col.title }}</h1>
-      {%- if col.description != blank -%}
-        <div class="al-col-hero__desc">{{ col.description }}</div>
+  <div class="al-container al-col-hero__inner">
+
+    {%- comment %} Breadcrumb {%- endcomment %}
+    <nav class="al-col-hero__breadcrumb" aria-label="Breadcrumb">
+      <a href="/" class="al-col-hero__breadcrumb-link">Home</a>
+      <span class="al-col-hero__breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="al-col-hero__breadcrumb-current">{{ col_title }}</span>
+    </nav>
+
+    {%- comment %} Eyebrow {%- endcomment %}
+    <div class="al-col-hero__eyebrow">
+      {%- if is_adapters -%}
+        <span class="al-badge al-badge--blue">Wireless CarPlay Adapters</span>
+      {%- elsif is_dash_cams -%}
+        <span class="al-badge al-badge--green">Dual 1080P Dashcams</span>
+      {%- else -%}
+        <span class="al-badge al-badge--blue">{{ col_title }}</span>
       {%- endif -%}
-      <p class="al-col-hero__count">
-        {{ col.products_count }}
-        {%- if col.products_count == 1 -%} product{%- else -%} products{%- endif -%}
-      </p>
-    </header>
+      <span class="al-col-hero__count">{{ collection.products_count }} products</span>
+    </div>
 
-    {%- comment %} ── PRODUCT GRID ── {%- endcomment %}
-    {%- if col.products.size > 0 -%}
-    <ul class="al-col-grid" role="list">
-      {%- for product in col.products -%}
-        {%- assign featured = product.featured_image -%}
-        {%- assign first_variant = product.first_available_variant -%}
-        <li class="al-col-grid__item">
-          <div class="al-col-card" data-product-id="{{ product.id }}">
+    {%- comment %} Headline {%- endcomment %}
+    <h1 class="al-col-hero__title">
+      {%- if section.settings.hero_title != blank -%}
+        {{ section.settings.hero_title }}
+      {%- elsif is_adapters -%}
+        Upgrade to Wireless CarPlay
+      {%- elsif is_dash_cams -%}
+        Dual-Camera Dashcams
+      {%- else -%}
+        {{ collection.title }}
+      {%- endif -%}
+    </h1>
 
-            {%- comment %} Card image {%- endcomment %}
-            <a href="{{ product.url }}" class="al-col-card__img-wrap" tabindex="-1" aria-hidden="true">
-              {%- if featured -%}
-                {{
-                  featured
-                  | image_url: width: 600
-                  | image_tag:
-                    class: 'al-col-card__img',
-                    widths: '300, 450, 600',
-                    sizes: '(max-width: 767px) 44vw, 30vw',
-                    loading: 'lazy',
-                    alt: featured.alt | default: product.title
-                }}
-              {%- else -%}
-                {{ 'product-1' | placeholder_svg_tag: 'al-col-card__img al-col-card__img--placeholder' }}
-              {%- endif -%}
-            </a>
+    {%- comment %} Sub {%- endcomment %}
+    <p class="al-col-hero__sub">
+      {%- if section.settings.hero_sub != blank -%}
+        {{ section.settings.hero_sub }}
+      {%- elsif is_adapters -%}
+        From wireless CarPlay to streaming Netflix and Google Play — find the right AutoLinkr for your car and your needs.
+      {%- elsif is_dash_cams -%}
+        Front and interior cabin recording in 1080P. IR night vision. G-sensor protection. Built for drivers who want proof.
+      {%- else -%}
+        {{ collection.description | strip_html | truncate: 160 }}
+      {%- endif -%}
+    </p>
 
-            {%- comment %} Badges {%- endcomment %}
-            {%- if product.compare_at_price > product.price -%}
-              {%- assign savings_pct = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price -%}
-              <span class="al-col-card__badge al-col-card__badge--sale">–{{ savings_pct }}%</span>
-            {%- endif -%}
-
-            {%- comment %} Card body {%- endcomment %}
-            <div class="al-col-card__body">
-              <a href="{{ product.url }}" class="al-col-card__title">{{ product.title }}</a>
-
-              <div class="al-col-card__price-row">
-                <span class="al-col-card__price">{{ product.price | money }}</span>
-                {%- if product.compare_at_price > product.price -%}
-                  <span class="al-col-card__compare">{{ product.compare_at_price | money }}</span>
-                {%- endif -%}
-              </div>
-
-              {%- comment %} Quick add (single-variant or first variant) {%- endcomment %}
-              {%- if first_variant -%}
-              <form
-                action="/cart/add"
-                method="post"
-                class="al-col-card__quick-add-form"
-                data-quick-add
-              >
-                <input type="hidden" name="id" value="{{ first_variant.id }}">
-                <input type="hidden" name="quantity" value="1">
-                <button
-                  type="submit"
-                  class="al-btn al-btn--primary al-btn--sm al-col-card__quick-add-btn"
-                  {%- unless first_variant.available %} disabled aria-disabled="true"{% endunless %}
-                >
-                  {%- if first_variant.available -%}
-                    Add to Cart
-                  {%- else -%}
-                    Sold Out
-                  {%- endif -%}
-                </button>
-              </form>
-              {%- endif -%}
-            </div>
-          </div>
-        </li>
-      {%- endfor -%}
-    </ul>
-    {%- else -%}
-      <p class="al-col-hero__empty">No products found in this collection.</p>
+    {%- comment %} Pro → Elite nudge (Adapters collection only) {%- endcomment %}
+    {%- if is_adapters -%}
+    <div class="al-col-hero__upgrade-nudge">
+      <div class="al-col-hero__upgrade-nudge-inner">
+        <div class="al-col-hero__upgrade-nudge-steps">
+          <span class="al-col-hero__upgrade-step al-col-hero__upgrade-step--base">
+            Base™ <span class="al-col-hero__upgrade-price">$69.99</span>
+            <span class="al-col-hero__upgrade-label">Wireless only</span>
+          </span>
+          <svg class="al-col-hero__upgrade-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M12 6l4 4-4 4" stroke="#A1A1A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="al-col-hero__upgrade-step al-col-hero__upgrade-step--pro">
+            Pro™ <span class="al-col-hero__upgrade-price">$79.99</span>
+            <span class="al-col-hero__upgrade-label">+ Streaming apps</span>
+          </span>
+          <svg class="al-col-hero__upgrade-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M12 6l4 4-4 4" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="al-col-hero__upgrade-step al-col-hero__upgrade-step--elite">
+            Elite™ <span class="al-col-hero__upgrade-price">$199.99</span>
+            <span class="al-col-hero__upgrade-label">+ Split-screen</span>
+          </span>
+        </div>
+        <p class="al-col-hero__upgrade-hint">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><circle cx="6.5" cy="6.5" r="5" stroke="#A1A1A6" stroke-width="1.25"/><path d="M6.5 5.5v3M6.5 4.5v.25" stroke="#A1A1A6" stroke-width="1.25" stroke-linecap="round"/></svg>
+          All adapters require existing factory CarPlay or Android Auto
+        </p>
+      </div>
+    </div>
     {%- endif -%}
 
   </div>
@@ -116,13 +120,24 @@
 
 {% schema %}
 {
-  "name": "AutoLinkr Collection Hero",
+  "name": "AL Collection Hero",
   "tag": "section",
-  "class": "section-autolinkr-collection-hero",
-  "settings": [],
+  "class": "al-col-hero-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title (overrides collection title)"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_sub",
+      "label": "Hero Sub (overrides collection description)"
+    }
+  ],
   "presets": [
     {
-      "name": "AutoLinkr Collection Hero"
+      "name": "AL Collection Hero"
     }
   ]
 }

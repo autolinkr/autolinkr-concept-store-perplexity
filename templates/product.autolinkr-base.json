@@ -1,21 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "al-product-hero": {
       "type": "autolinkr-product-hero",
       "settings": {
-        "show_dynamic_checkout": true
+        "short_description": "Converts your wired CarPlay or Android Auto to wireless. Plug in, pair once, and your phone connects automatically every drive. The clean, simple upgrade.",
+        "show_dynamic_checkout": false
       }
     },
     "al-product-features": {
       "type": "autolinkr-product-features",
-      "settings": {
-        "show_crosssell": true,
-        "crosssell_products": "the-autolinkr-pro,autolinkr-elite"
-      }
+      "settings": {}
+    },
+    "al-reviews": {
+      "type": "apps",
+      "settings": {}
     }
   },
   "order": [
     "al-product-hero",
-    "al-product-features"
+    "al-product-features",
+    "al-reviews"
   ]
 }

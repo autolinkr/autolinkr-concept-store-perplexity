@@ -4,8 +4,8 @@
     "theme_name": "Concept",
     "theme_author": "RoarTheme",
     "theme_version": "5.3.1",
-    "theme_documentation_url": "https:\/\/roartheme.co\/blogs\/concept",
-    "theme_support_url": "https:\/\/haloroar.ticksy.com"
+    "theme_documentation_url": "https://roartheme.co/blogs/concept",
+    "theme_support_url": "https://haloroar.ticksy.com"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -1192,7 +1192,7 @@
         "type": "richtext",
         "id": "gift_wrap_per_product_message",
         "label": "t:settings_schema.cart.settings.gift_wrap_per_product_message.label",
-        "default": "<p>Please verify that your gift settings are correct.<\/p>"
+        "default": "<p>Please verify that your gift settings are correct.</p>"
       }
     ]
   },
@@ -1271,7 +1271,7 @@
         "id": "customer_account_menu",
         "label": "t:settings_schema.customer-accounts.settings.customer_account_menu.label",
         "default": "customer-account-main-menu"
-      }
+        }
     ]
   },
   {

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
@@ -24,46 +33,95 @@
           "type": "question",
           "settings": {
             "title": "What's the difference between AutoLinkr Base, Pro, and Elite?",
-            "text": "<p><strong>AutoLinkr Base™ ($69.99):</strong> Wireless CarPlay only. No streaming apps.</p><p><strong>AutoLinkr Pro™ ($79.99):</strong> Wireless CarPlay + Netflix, YouTube, and Google Play Store. Best value.</p><p><strong>AutoLinkr Elite™ ($199.99):</strong> Everything in Pro + split-screen multitasking + faster CPU processor. Our most advanced model.</p><p>We recommend Pro for most drivers, and Elite for power users who want to run two apps simultaneously.</p>"
+            "text": "<p><strong>AutoLinkr Base™ ($69.99):</strong> Wireless CarPlay only. No streaming apps. Best for drivers who just want wireless convenience.</p><p><strong>AutoLinkr Pro™ ($79.99):</strong> Wireless CarPlay + Netflix, YouTube, and Google Play Store. Best value for most drivers.</p><p><strong>AutoLinkr Elite™ ($199.99):</strong> Everything in Pro + split-screen multitasking + faster CPU processor. Our most advanced model for power users.</p><p>We always recommend upgrading from Pro to Elite — the Elite handles two apps simultaneously and runs significantly faster.</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
             "title": "How do I set up my AutoLinkr adapter?",
-            "text": "<p>Setup takes under 60 seconds:</p><ol><li>Plug the AutoLinkr adapter into your factory CarPlay USB port.</li><li>Your car screen will prompt you to connect.</li><li>Enable Bluetooth and Wi-Fi on your iPhone and follow the pairing prompts.</li><li>Once paired, every future drive connects automatically.</li></ol><p>No apps required for initial setup.</p>"
+            "text": "<p>Setup takes under 60 seconds:</p><ol><li>Plug the AutoLinkr adapter into your factory CarPlay USB port.</li><li>Your car screen will prompt you to connect.</li><li>Enable Bluetooth and Wi-Fi on your iPhone and follow the on-screen pairing prompts.</li><li>Once paired, every future drive connects automatically — no repeat steps ever.</li></ol><p>No apps or accounts required for initial setup.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
             "title": "Will it work with my iPhone?",
-            "text": "<p>AutoLinkr adapters are compatible with iPhone 7 and newer running iOS 10 or above. This covers the vast majority of iPhones in use today.</p>"
+            "text": "<p>AutoLinkr adapters are compatible with iPhone 7 and newer running iOS 10 or above. This covers virtually all iPhones in use today.</p><p>We recommend keeping your iPhone's iOS up to date for the best wireless CarPlay performance.</p>"
           }
         },
         "q5": {
           "type": "question",
           "settings": {
             "title": "Does AutoLinkr work with Android phones?",
-            "text": "<p>AutoLinkr Pro™, Elite™, and Base™ are designed for Apple CarPlay (iPhone). For Android users, the AutoLinkr Tablet™ is our standalone portable CarPlay solution that works with any car and any phone setup.</p>"
+            "text": "<p>AutoLinkr Pro™, Elite™, and Base™ are designed for Apple CarPlay (iPhone only). Android Auto is not supported by these adapters.</p><p>For Android users — or anyone without factory CarPlay — the <a href='/products/autolinkr-dash'>AutoLinkr Tablet™</a> is our standalone portable CarPlay solution that works with any car and any phone setup.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
-            "title": "Do I need an internet connection to use streaming apps?",
-            "text": "<p>Yes, streaming apps like Netflix and YouTube require an active data connection. This can be your iPhone's cellular hotspot (using your iPhone's hotspot feature) or a Wi-Fi connection. Your iPhone's regular data plan works fine — streaming quality is typically SD to save data.</p>"
+            "title": "Can I stream Netflix and YouTube while driving?",
+            "text": "<p>Yes — AutoLinkr Pro™ and Elite™ unlock streaming apps including Netflix, YouTube, and the Google Play Store directly on your factory car screen.</p><p>Streaming is powered through your iPhone's cellular hotspot or a Wi-Fi connection. Video streaming is intended for use while parked or by passengers. As the driver, always keep your eyes on the road and follow local traffic laws.</p>"
           }
         },
         "q7": {
           "type": "question",
           "settings": {
-            "title": "Is it safe to stream while driving?",
-            "text": "<p>Streaming video is intended for use while parked or when a passenger is operating the app. As a driver, you should always keep your eyes on the road. AutoLinkr recommends following all local traffic laws and using streaming features responsibly.</p>"
+            "title": "What apps can I use with AutoLinkr Pro and Elite?",
+            "text": "<p>AutoLinkr Pro™ and Elite™ include access to the Google Play Store, giving you a wide range of apps beyond just streaming. Popular uses include:</p><ul><li><strong>Streaming:</strong> Netflix, YouTube, Disney+, Hulu, Spotify</li><li><strong>Navigation:</strong> Waze, Google Maps, HERE Maps</li><li><strong>Music:</strong> Spotify, Amazon Music, Tidal</li><li><strong>Communication:</strong> WhatsApp, messaging apps (for passengers)</li></ul><p>As a CarPlay device, the standard iOS apps (Apple Maps, Apple Music, Podcasts, Messages, etc.) continue to work as normal.</p>"
+          }
+        },
+        "q8": {
+          "type": "question",
+          "settings": {
+            "title": "What is split-screen and why does Elite have it?",
+            "text": "<p>Split-screen multitasking lets you run two apps side by side on your factory car screen at the same time. For example, you can have navigation on one half and music on the other — simultaneously.</p><p>The AutoLinkr Elite™ is the only model that supports split-screen. It also features a faster processor that makes everything run smoother when multitasking. If you want the full power experience, Elite is worth the upgrade.</p>"
+          }
+        },
+        "q9": {
+          "type": "question",
+          "settings": {
+            "title": "Do I need an internet connection to use streaming apps?",
+            "text": "<p>Yes, streaming apps like Netflix and YouTube require an active data connection. You can use:</p><ul><li>Your iPhone's mobile hotspot (Personal Hotspot)</li><li>A public or home Wi-Fi network if available</li></ul><p>Standard cellular data plans work fine. Most streaming apps offer a lower-quality SD mode that's lighter on data usage.</p>"
+          }
+        },
+        "q10": {
+          "type": "question",
+          "settings": {
+            "title": "Will my car's screen resolution look the same?",
+            "text": "<p>Yes. AutoLinkr adapters maintain the native resolution of your factory screen. There is no reduction in display quality compared to wired CarPlay.</p>"
+          }
+        },
+        "q11": {
+          "type": "question",
+          "settings": {
+            "title": "Does it drain my car battery?",
+            "text": "<p>No. The AutoLinkr adapter draws power from your car's USB port and only runs when the car is on. It powers off automatically when you shut the engine. There is no risk of battery drain from the adapter itself.</p>"
+          }
+        },
+        "q12": {
+          "type": "question",
+          "settings": {
+            "title": "Will it void my car's warranty?",
+            "text": "<p>No. AutoLinkr adapters plug into your car's existing USB port — there is no permanent modification, cutting of wires, or alteration to your vehicle. This is the equivalent of plugging in a USB device. It does not affect your car's warranty.</p>"
           }
         }
       },
-      "block_order": ["cat-adapters", "q1", "q2", "q3", "q4", "q5", "q6", "q7"],
+      "block_order": [
+        "cat-adapters",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ],
       "settings": {
         "style": "bordered",
         "heading": "Frequently Asked Questions",
@@ -85,39 +143,106 @@
           "type": "question",
           "settings": {
             "title": "Does the dash cam work with any car?",
-            "text": "<p>Yes. The AutoLinkr Dash™ is a universal dash cam that works with any vehicle that has a 12V power outlet (cigarette lighter). No special car compatibility required.</p>"
+            "text": "<p>Yes. The AutoLinkr Dash™ is a universal dash cam that works with any vehicle that has a 12V power outlet (cigarette lighter socket). No special car compatibility or existing CarPlay is required.</p>"
           }
         },
         "dq2": {
           "type": "question",
           "settings": {
             "title": "What SD card size should I get?",
-            "text": "<p>We offer 3 options: No SD Card (use your own Class 10 microSD), 32GB (~4-6 hours of 1080P footage), or 64GB (~8-10 hours). With loop recording, old footage is automatically overwritten when full, so even 32GB provides continuous protection.</p>"
+            "text": "<p>We offer three options:</p><ul><li><strong>No SD Card:</strong> Best if you already own a Class 10 microSD card (supports up to 128GB).</li><li><strong>32GB (included):</strong> Approximately 4–6 hours of dual 1080P footage. Perfect for daily driving and commuters.</li><li><strong>64GB (included):</strong> Approximately 8–10 hours of dual 1080P footage. Ideal for long road trips, rideshare drivers, or maximum coverage.</li></ul><p>With loop recording, old footage is automatically overwritten when the card is full, so continuous protection is always maintained.</p>"
           }
         },
         "dq3": {
           "type": "question",
           "settings": {
             "title": "Does the rear camera record in HD too?",
-            "text": "<p>Yes — both the front and rear cameras record in 1080P Full HD. The rear camera connects via the included cable and records simultaneously with the front camera.</p>"
+            "text": "<p>Yes — both the front and rear cameras record in Full 1080P HD simultaneously. The rear camera connects via the included cable routed along your headliner to the rear window.</p>"
           }
         },
         "dq4": {
           "type": "question",
           "settings": {
-            "title": "How do I access my footage?",
-            "text": "<p>Three options: (1) Use the free AutoLinkr WiFi app on your iOS or Android phone to connect and download clips wirelessly. (2) Remove the microSD card and use any card reader. (3) View footage directly on the camera's built-in display.</p>"
+            "title": "How do I access and download my footage?",
+            "text": "<p>You have three options:</p><ol><li><strong>WiFi App:</strong> Use the free AutoLinkr app (iOS & Android) to connect wirelessly and download clips to your phone.</li><li><strong>SD Card Reader:</strong> Remove the microSD card and use any USB card reader on your computer.</li><li><strong>Built-In Display:</strong> View footage directly on the camera's built-in LCD screen.</li></ol>"
           }
         },
         "dq5": {
           "type": "question",
           "settings": {
-            "title": "What is the G-sensor?",
-            "text": "<p>The G-sensor detects sudden impacts, sharp braking, or collisions. When triggered, it automatically locks the current footage file to prevent it from being overwritten by loop recording. This ensures incident footage is always preserved — even if you're not aware an incident occurred.</p>"
+            "title": "What is the G-sensor and what does it do?",
+            "text": "<p>The G-sensor detects sudden impacts, sharp braking, or collisions. When triggered, it automatically locks the current footage file so it cannot be overwritten by loop recording. This ensures critical evidence footage is always preserved — even if you're unaware an incident occurred.</p><p>Sensitivity can be adjusted in the app or directly on the camera settings menu.</p>"
+          }
+        },
+        "dq6": {
+          "type": "question",
+          "settings": {
+            "title": "Can the dash cam record while the car is parked?",
+            "text": "<p>Yes. With the included hardwire kit (connects directly to your fuse box), the AutoLinkr Dash™ enters a low-power parking mode that monitors for motion or impacts while your car is parked — even with the engine off. Any motion or collision triggers a recording automatically.</p><p>Using only the 12V cigarette lighter power, the camera records only while the engine is running.</p>"
+          }
+        },
+        "dq7": {
+          "type": "question",
+          "settings": {
+            "title": "How wide is the camera angle?",
+            "text": "<p>The front camera features a 170° ultra-wide angle lens, capturing everything in front of and beside your vehicle. The rear camera uses a 150° wide angle. Together they provide near-complete 360° coverage of your vehicle's surroundings.</p>"
           }
         }
       },
-      "block_order": ["cat-dash", "dq1", "dq2", "dq3", "dq4", "dq5"],
+      "block_order": [
+        "cat-dash",
+        "dq1",
+        "dq2",
+        "dq3",
+        "dq4",
+        "dq5",
+        "dq6",
+        "dq7"
+      ],
+      "settings": {
+        "style": "bordered",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "center"
+      }
+    },
+    "faq-compatibility": {
+      "type": "faq",
+      "blocks": {
+        "cat-compat": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "Compatibility"
+          }
+        },
+        "cq1": {
+          "type": "question",
+          "settings": {
+            "title": "How do I know if my car has factory CarPlay?",
+            "text": "<p>Most cars manufactured after 2016 include factory CarPlay. To check:</p><ol><li>Look in your car's infotainment settings for a 'CarPlay' option</li><li>Try plugging your iPhone into your car's USB port — if it asks to use CarPlay, you have it</li><li>Check your car's manual or visit our <a href='/pages/compatibility'>Compatibility Checker</a> for your specific make and model</li></ol><p>CarPlay is available on over 800 car models across all major brands including Honda, Toyota, Ford, BMW, Mercedes, and more.</p>"
+          }
+        },
+        "cq2": {
+          "type": "question",
+          "settings": {
+            "title": "Which car brands and models are compatible?",
+            "text": "<p>AutoLinkr Pro™, Elite™, and Base™ work with any car that has a factory-installed wired CarPlay port. This includes virtually all major car brands: Honda, Toyota, Ford, Chevrolet, BMW, Mercedes-Benz, Audi, Hyundai, Kia, Mazda, Subaru, Volkswagen, Nissan, and hundreds more.</p><p>Use our <a href='/pages/compatibility'>Compatibility Checker</a> to confirm your specific vehicle.</p>"
+          }
+        },
+        "cq3": {
+          "type": "question",
+          "settings": {
+            "title": "My car has CarPlay but the USB port is a USB-C. Will it work?",
+            "text": "<p>Yes — AutoLinkr includes both USB-A and USB-C connection cables to ensure compatibility with all factory port types. If your car uses USB-C for CarPlay, you are fully covered.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cat-compat",
+        "cq1",
+        "cq2",
+        "cq3"
+      ],
       "settings": {
         "style": "bordered",
         "heading": "",
@@ -131,32 +256,97 @@
         "cat-orders": {
           "type": "rich-text",
           "settings": {
-            "heading": "Orders & Shipping"
+            "heading": "Orders, Shipping & Returns"
           }
         },
         "oq1": {
           "type": "question",
           "settings": {
             "title": "How fast will I receive my order?",
-            "text": "<p>Standard orders ship within 1-2 business days. Shipping times vary by location — most US customers receive their order within 3-5 business days. Expedited shipping options are available at checkout.</p>"
+            "text": "<p>Orders ship within 1–2 business days. Most US customers receive their order within 3–5 business days after shipping. Expedited shipping options are available at checkout if you need it faster.</p>"
           }
         },
         "oq2": {
           "type": "question",
           "settings": {
-            "title": "What is your return policy?",
-            "text": "<p>We offer a 30-day money-back guarantee on all products. If you're not satisfied for any reason, contact us within 30 days of delivery and we'll process a full refund — no questions asked.</p>"
+            "title": "Is shipping really free?",
+            "text": "<p>Yes — free shipping on every order, every time. No minimum order required. We cover the full shipping cost so there are no surprises at checkout.</p>"
           }
         },
         "oq3": {
           "type": "question",
           "settings": {
+            "title": "What is your return policy?",
+            "text": "<p>We offer a <strong>30-day money-back guarantee</strong> on all products. If you're not 100% satisfied for any reason, contact our support team within 30 days of delivery and we'll process a full refund — no questions asked.</p><p>You don't need to explain why. We'll make it right.</p>"
+          }
+        },
+        "oq4": {
+          "type": "question",
+          "settings": {
             "title": "Does AutoLinkr offer a warranty?",
-            "text": "<p>Yes — all AutoLinkr products come with a 1-year limited warranty covering manufacturing defects. If your product develops a defect within 12 months of purchase, we'll replace it free of charge.</p>"
+            "text": "<p>Yes — all AutoLinkr products come with a <strong>1-year limited warranty</strong> covering manufacturing defects. If your product develops a defect within 12 months of purchase, we'll replace it free of charge.</p><p>Warranty does not cover physical damage, water damage, or misuse.</p>"
+          }
+        },
+        "oq5": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "text": "<p>Currently, we ship to the United States and Canada. International shipping options may be available depending on your location — check the checkout for available shipping zones.</p>"
+          }
+        },
+        "oq6": {
+          "type": "question",
+          "settings": {
+            "title": "Can I track my order?",
+            "text": "<p>Yes — once your order ships, you'll receive a tracking confirmation email with a link to follow your package in real time. You can also track your order directly through the carrier's website using the tracking number provided.</p>"
           }
         }
       },
-      "block_order": ["cat-orders", "oq1", "oq2", "oq3"],
+      "block_order": [
+        "cat-orders",
+        "oq1",
+        "oq2",
+        "oq3",
+        "oq4",
+        "oq5",
+        "oq6"
+      ],
+      "settings": {
+        "style": "bordered",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "center"
+      }
+    },
+    "faq-vip": {
+      "type": "faq",
+      "blocks": {
+        "cat-vip": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "AutoLinkr VIP Membership"
+          }
+        },
+        "vq1": {
+          "type": "question",
+          "settings": {
+            "title": "What is the AutoLinkr VIP Membership?",
+            "text": "<p>AutoLinkr VIP is our $9.99/month subscription that gives members exclusive benefits including priority support, early access to new products, member-only discounts, and free shipping on all future orders.</p>"
+          }
+        },
+        "vq2": {
+          "type": "question",
+          "settings": {
+            "title": "Can I cancel my VIP membership anytime?",
+            "text": "<p>Yes — your VIP membership can be cancelled at any time from your account dashboard. There are no cancellation fees and no long-term commitments. If you cancel, your benefits continue until the end of your current billing period.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cat-vip",
+        "vq1",
+        "vq2"
+      ],
       "settings": {
         "style": "bordered",
         "heading": "",
@@ -169,6 +359,8 @@
     "main-page",
     "faq-adapters",
     "faq-dash",
-    "faq-orders"
+    "faq-compatibility",
+    "faq-orders",
+    "faq-vip"
   ]
 }

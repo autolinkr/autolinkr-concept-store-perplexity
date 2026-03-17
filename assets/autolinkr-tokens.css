@@ -196,14 +196,17 @@ a:hover { color: var(--al-accent-hover); }
   fill: none !important;
 }
 
-/* Announcement bar */
+/* Announcement bar — full brand blue */
 .announcement-bar {
-  background-color: #0D0D10 !important;
-  border-bottom: 1px solid var(--al-border-subtle) !important;
+  background-color: var(--al-accent) !important;
+  border-bottom: none !important;
 }
 .announcement-bar a,
 .announcement-bar__message {
-  color: var(--al-text-2) !important;
+  color: #fff !important;
+}
+.js .shopify-section-group-header-group .section.section--first-rounded {
+  background-color: var(--al-accent) !important;
 }
 
 /* ─── BUTTONS ────────────────────────────────────────────── */
@@ -389,6 +392,13 @@ details summary::-webkit-details-marker {
   display: none !important;
   content: '' !important;
   color: transparent !important;
+}
+
+/* Hide the + icon from accordion rows (chevron ::after is kept) */
+.product__accordion summary > svg.shrink-0,
+details.product__accordion summary > svg,
+.product__accordion .details__summary > svg.shrink-0 {
+  display: none !important;
 }
 
 /* Content panel */
@@ -717,7 +727,7 @@ details > div strong {
 }
 
 /* ─── FEATURED PRODUCT SECTION ───────────────────────────── */
-.featured-product { padding: 60px 0 !important; }
+.featured-product { padding: 0 !important; }
 .featured-product__media-container {
   border-radius: var(--al-r-xl) !important;
   overflow: hidden !important;
@@ -1016,7 +1026,7 @@ details > div strong {
 }
 
 /* ─── ANNOUNCEMENT BAR LINKS ──────────────────────────────── */
-.announcement-bar a { color: var(--al-text-2) !important; }
+.announcement-bar a { color: #fff !important; }
 
 /* ─── HEADER FIX AFTER SCROLL ─────────────────────────────── */
 .header--border-bottom,
@@ -1051,6 +1061,22 @@ details > div strong {
 /* ─── PRICE HIGHLIGHT ────────────────────────────────────── */
 .price-item--sale { color: var(--al-red) !important; }
 .price-item--regular { color: var(--al-text-3) !important; text-decoration: line-through !important; }
+
+/* On-sale: regular price → brand blue */
+.price--on-sale .price__regular {
+  color: var(--al-accent) !important;
+}
+
+/* Unit price & sale meta — faded blue, readable on dark bg */
+.unit-price,
+.price__sale {
+  color: rgba(59, 142, 248, 0.6) !important;
+}
+
+/* Keep the red crossthrough on sale prices */
+.price__sale::before {
+  border-block-end: 1px solid var(--al-red) !important;
+}
 
 /* ─── STICKY BUY BAR ─────────────────────────────────────── */
 .sticky_buy_button,

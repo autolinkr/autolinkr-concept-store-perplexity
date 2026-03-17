@@ -1,0 +1,457 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true,
+            "show_product_title": true
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {
+            "show_sold_out": false,
+            "show_save_amount": true,
+            "save_type": "percent"
+          }
+        },
+        "text-aroma-badge": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "🌿 Smart Scent. Wireless Control. Made for Your Car.",
+            "text_size": "text-sm"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-lg",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h1",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "text-tagline": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "Smart aromatherapy for your car. App-controlled scent diffuser.",
+            "text_size": "text-base"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "enable_dynamic_variants": true,
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": true
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "icon_list": {
+          "type": "icon_list",
+          "settings": {
+            "heading": "",
+            "enable_carousel": false,
+            "show_below_media": true
+          }
+        },
+        "text-trust-1": {
+          "type": "text",
+          "settings": {
+            "icon": "phone",
+            "text": "App-controlled scent scheduling",
+            "text_size": "text-sm"
+          }
+        },
+        "text-trust-2": {
+          "type": "text",
+          "settings": {
+            "icon": "lightning",
+            "text": "USB powered — any car, any vent",
+            "text_size": "text-sm"
+          }
+        },
+        "text-trust-3": {
+          "type": "text",
+          "settings": {
+            "icon": "rocket",
+            "text": "Lasts 30+ days per refill",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-scents": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": true,
+            "style": "with-border",
+            "heading": "Available Scents",
+            "content": "<ul><li><strong>Ocean Breeze:</strong> Fresh, clean, and energizing — perfect for morning commutes</li><li><strong>Lavender Calm:</strong> Soothing floral aromatherapy to reduce road stress</li><li><strong>Black Ice (Fresh):</strong> Bold, masculine scent. Classic car fragrance, premium formula</li><li><strong>Citrus Uplift:</strong> Bright lemon and orange for an energized drive</li><li><strong>Cedarwood + Sandalwood:</strong> Warm, grounding wood tones — premium cabin feel</li><li><strong>Peppermint Focus:</strong> Invigorating mint to keep you alert on long drives</li></ul><p>Refill cartridges available separately. Each cartridge lasts approximately 30 days of normal use.</p>",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "heading": "Specifications",
+            "content": "<ul><li><strong>Power:</strong> USB-A powered (connects to car USB port or included USB-C adapter)</li><li><strong>Diffusion Method:</strong> Ultrasonic cold-air diffusion — no heat, no burning</li><li><strong>App Control:</strong> iOS & Android app — schedule scent timing, intensity, and on/off</li><li><strong>Intensity Levels:</strong> 3 settings — Subtle, Medium, and Intense</li><li><strong>Timer:</strong> 15 / 30 / 60 minute auto-shutoff modes</li><li><strong>Tank Capacity:</strong> 15ml water + 5–10 drops essential oil or AutoLinkr cartridge</li><li><strong>Dimensions:</strong> 68mm x 68mm x 115mm — compact dashboard fit</li><li><strong>Noise Level:</strong> < 25dB — near silent operation</li><li><strong>Compatibility:</strong> Works in any vehicle with a USB port</li></ul>",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-how": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "heading": "How to Use",
+            "content": "<p><strong>Getting started takes 2 minutes:</strong></p><ol><li>Insert an AutoLinkr scent cartridge or fill the tank with water + a few drops of your favorite essential oil</li><li>Plug the USB cable into any car USB port</li><li>Press the power button or use the AutoLinkr app to start</li><li>Set your preferred intensity (Subtle, Medium, Intense) and optional timer</li></ol><p>The ultrasonic diffuser converts liquid into a fine mist — completely safe for your car interior and passengers.</p>",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-shipping": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "heading": "Shipping & Returns",
+            "content": "<p>Shipping is <strong>FREE</strong> on every order. Ships within 1–2 business days, delivered in 3–5 business days for most US customers.</p><p><strong>30-Day Guarantee</strong> — You have 30 days from the date you receive your unit to return it. No questions asked.</p><p><strong>1-Year Warranty</strong> — Covered against manufacturing defects.</p>",
+            "text_size": "text-sm"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "areviews_reviews_importer_areviews_title_rating_PndRT9": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "breadcrumb",
+        "badges",
+        "text-aroma-badge",
+        "title",
+        "text-tagline",
+        "variant_picker",
+        "areviews_reviews_importer_areviews_title_rating_PndRT9",
+        "text-trust-1",
+        "text-trust-2",
+        "text-trust-3",
+        "buy_buttons",
+        "sticky_buy_button",
+        "icon_list",
+        "collapsible-scents",
+        "collapsible-specs",
+        "collapsible-how",
+        "collapsible-shipping",
+        "rating"
+      ],
+      "settings": {
+        "media_size": 50,
+        "gallery_layout": "stacked"
+      }
+    },
+    "scents-multicolumn": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "col-1": {
+          "type": "column",
+          "settings": {
+            "icon": "droplet",
+            "heading": "Ultrasonic Cold Mist",
+            "text": "<p>No heat, no burning, no risk. AutoLinkr Aroma uses ultrasonic vibration to convert liquid into a fine, safe mist — preserving the full therapeutic quality of your scent.</p>"
+          }
+        },
+        "col-2": {
+          "type": "column",
+          "settings": {
+            "icon": "zap",
+            "heading": "3 Intensity Levels",
+            "text": "<p>Choose between Subtle for light background scent, Medium for a full cabin fill, or Intense for immediate powerful aromatherapy. Adjustable via button or app.</p>"
+          }
+        },
+        "col-3": {
+          "type": "column",
+          "settings": {
+            "icon": "wind",
+            "heading": "Scent Cartridges or DIY",
+            "text": "<p>Use AutoLinkr's pre-made scent cartridges for convenience, or fill the tank yourself with any essential oil blend you love. Complete flexibility, your way.</p>"
+          }
+        },
+        "col-4": {
+          "type": "column",
+          "settings": {
+            "icon": "leaf",
+            "heading": "Natural Essential Oils",
+            "text": "<p>AutoLinkr scent cartridges are made with natural essential oil blends — no artificial fillers, no harsh chemicals. Safe for all passengers including kids and pets.</p>"
+          }
+        },
+        "col-5": {
+          "type": "column",
+          "settings": {
+            "icon": "wifi",
+            "heading": "Smart App Control",
+            "text": "<p>Schedule scent sessions, set timers, adjust intensity, and control power — all from your phone. Set it once and the AutoLinkr Aroma runs exactly the way you want.</p>"
+          }
+        },
+        "col-6": {
+          "type": "column",
+          "settings": {
+            "icon": "bolt",
+            "heading": "Universal USB Power",
+            "text": "<p>Plugs into any car USB port. No batteries, no charging, no hassle. Works with any vehicle — cars, trucks, SUVs, or even your desk or home space.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "col-1",
+        "col-2",
+        "col-3",
+        "col-4",
+        "col-5",
+        "col-6"
+      ],
+      "settings": {
+        "style": "with-border",
+        "columns": 3,
+        "text_alignment": "left",
+        "heading": "Intelligent Aromatherapy. Engineered for Your Commute.",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "Premium scent technology meets smart car accessories",
+        "color_text": "#F7F7F8",
+        "color_background": "#080809",
+        "gradient_background": "",
+        "color_highlight": "#3B8EF8",
+        "color_button_text": "#ffffff",
+        "color_button_background": "#3B8EF8"
+      }
+    },
+    "aroma-hiw": {
+      "type": "al-how-it-works",
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "heading": "Step 1 — Insert Your Scent",
+            "body": "Drop in an AutoLinkr scent cartridge or fill the mini tank with a few drops of your favorite essential oil. Cartridges snap in place in seconds.",
+            "badge": "2 seconds",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/AUTO-9518.jpg?v=1759000811",
+            "image_ratio": "4/3"
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "heading": "Step 2 — Plug Into USB",
+            "body": "Connect to any car USB port. The AutoLinkr Aroma powers on instantly. No setup, no Bluetooth pairing required for basic use.",
+            "badge": "Instant on",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Adapter17.png?v=1704950035",
+            "image_ratio": "4/3"
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "heading": "Step 3 — Set & Forget",
+            "body": "Choose your intensity and set a timer from the button or the AutoLinkr app. Your cabin fills with premium scent automatically — every single drive.",
+            "badge": "Full cabin scent",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/WCPAA-Dual_cover-02.webp?v=1718169515",
+            "image_ratio": "4/3"
+          }
+        }
+      },
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3"
+      ],
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "eyebrow": "Setup Guide",
+        "heading": "Perfect Scent in 3 Simple Steps",
+        "subheading": "No complicated setup. No refilling every week. Just a great-smelling car."
+      }
+    },
+    "scrolling-text": {
+      "type": "scrolling-text",
+      "blocks": {
+        "s1": {
+          "type": "text",
+          "settings": {
+            "text": "Premium Car Scent"
+          }
+        },
+        "s2": {
+          "type": "text",
+          "settings": {
+            "text": "App Controlled"
+          }
+        },
+        "s3": {
+          "type": "text",
+          "settings": {
+            "text": "Ultrasonic Diffusion"
+          }
+        },
+        "s4": {
+          "type": "text",
+          "settings": {
+            "text": "Natural Essential Oils"
+          }
+        },
+        "s5": {
+          "type": "text",
+          "settings": {
+            "text": "USB Powered"
+          }
+        },
+        "s6": {
+          "type": "text",
+          "settings": {
+            "text": "Free Shipping"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "settings": {
+        "speed": 20,
+        "color_text": "#F7F7F8",
+        "color_background": "#0F0F12",
+        "color_highlight": "#3B8EF8"
+      }
+    },
+    "faq-section": {
+      "type": "faq",
+      "blocks": {
+        "cat-faq": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "Aroma Diffuser FAQ"
+          }
+        },
+        "aq1": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use any essential oil with the AutoLinkr Aroma?",
+            "text": "<p>Yes — the AutoLinkr Aroma works with any standard essential oil or blend. You can use AutoLinkr scent cartridges for convenience, or fill the tank yourself with 5–10 drops of your preferred oil mixed with a small amount of water.</p>"
+          }
+        },
+        "aq2": {
+          "type": "question",
+          "settings": {
+            "title": "Is it safe to use while driving?",
+            "text": "<p>Yes. The AutoLinkr Aroma emits a fine, cool mist at low volume — there is no visible fog, no heat, and no risk of distraction. It operates silently (under 25dB) and disperses scent gradually throughout the cabin without releasing any harsh fumes.</p>"
+          }
+        },
+        "aq3": {
+          "type": "question",
+          "settings": {
+            "title": "How long do the scent cartridges last?",
+            "text": "<p>Each AutoLinkr scent cartridge lasts approximately 30 days of standard use (assuming 1–2 hours of driving per day). Usage time will vary depending on your intensity setting and session frequency.</p>"
+          }
+        },
+        "aq4": {
+          "type": "question",
+          "settings": {
+            "title": "Do I need to use the app to operate it?",
+            "text": "<p>No. The AutoLinkr Aroma has a physical button on the device for basic on/off and intensity control. The app is optional and adds smart features like scheduling, timers, and intensity control from your phone.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cat-faq",
+        "aq1",
+        "aq2",
+        "aq3",
+        "aq4"
+      ],
+      "settings": {
+        "style": "bordered",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "color_text": "#F7F7F8",
+        "color_background": "#080809",
+        "gradient_background": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Complete Your AutoLinkr Setup",
+        "heading_size": "h2",
+        "color_text": "#F7F7F8",
+        "color_background": "#0A0A0C",
+        "gradient_background": ""
+      }
+    },
+    "apps-reviews": {
+      "type": "apps",
+      "settings": {},
+      "blocks": {
+        "areviews_reviews_importer_areviews_display_reviews_BdHNbY": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_BdHNbY"
+      ]
+    }
+  },
+  "order": [
+    "main-product",
+    "scents-multicolumn",
+    "aroma-hiw",
+    "scrolling-text",
+    "faq-section",
+    "product-recommendations",
+    "apps-reviews"
+  ]
+}

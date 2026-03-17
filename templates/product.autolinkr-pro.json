@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-product": {
@@ -21,9 +30,9 @@
         "text-pro-badge": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "⭐ Best Seller — 50,000+ Happy Drivers",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "title": {
@@ -39,9 +48,9 @@
         "text-tagline": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "Converts your wired CarPlay to wireless — plus Netflix, YouTube & Google Play on your factory screen. No cables. No setup. Just drive.",
-            "text_size": "text-base",
-            "icon": "none"
+            "text_size": "text-base"
           }
         },
         "variant_picker": {
@@ -78,25 +87,25 @@
         "text-trust-1": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "✓ Free & Fast Shipping",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "text-trust-2": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "✓ 30-Day Money-Back Guarantee",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "text-trust-3": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "✓ 1-Year Warranty — 50,000+ Happy Drivers",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "collapsible-whats-included": {
@@ -165,16 +174,16 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "full_width": false,
         "gallery_layout": "stacked",
         "thumbnail_position": "bottom",
         "image_ratio": "square",
-        "image_ratio_mobile": "square",
         "image_zoom": "lightbox",
-        "mobile_layout": "columns",
         "hide_variants": false,
         "enable_video_autoplay": true,
-        "enable_video_looping": true
+        "enable_video_looping": true,
+        "mobile_layout": "columns",
+        "image_ratio_mobile": "square",
+        "full_width": false
       }
     },
     "feature-strip": {
@@ -218,7 +227,8 @@
         "f2",
         "f3",
         "f4"
-      ]
+      ],
+      "settings": {}
     },
     "video-demo": {
       "type": "al-video-section",
@@ -295,9 +305,7 @@
         "heading_tag": "h2",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
         "color_button_background": "#3B8EF8"
@@ -342,8 +350,8 @@
         "content_position": "middle",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
+        "color_background_2": "#0F0F12",
         "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
@@ -390,11 +398,11 @@
         "step-3"
       ],
       "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
         "eyebrow": "Setup Guide",
         "heading": "Up and Running in 60 Seconds",
-        "subheading": "No tools. No apps. No installation knowledge required.",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "subheading": "No tools. No apps. No installation knowledge required."
       }
     },
     "image-netflix": {
@@ -436,8 +444,8 @@
         "content_position": "middle",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
+        "color_background_2": "#0F0F12",
         "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
@@ -483,8 +491,8 @@
         "content_position": "middle",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
+        "color_background_2": "#0F0F12",
         "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
@@ -539,17 +547,13 @@
       ],
       "settings": {
         "columns": 4,
-        "columns_mobile": "2",
         "text_alignment": "center",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_highlight": "#3B8EF8"
       }
     },
     "scrolling-text": {
@@ -612,12 +616,8 @@
         "enable_twin": true,
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_highlight": "#3B8EF8"
       }
     },
     "product-comparison": {
@@ -686,8 +686,8 @@
       "settings": {
         "highlight_differences": true,
         "sticky_product_info": true,
-        "show_price": true,
         "show_vendor": false,
+        "show_price": true,
         "heading": "Compare All AutoLinkr Adapters",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
@@ -695,9 +695,7 @@
         "subheading": "Most Pro owners upgrade to Elite once they try split-screen — nav and streaming side by side",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
         "color_button_background": "#3B8EF8"
@@ -742,12 +740,8 @@
         "content_position": "md:items-center md:justify-center",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_highlight": "#3B8EF8"
       }
     },
     "youtube-review": {
@@ -788,9 +782,9 @@
         "text-upsell": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "Upgrade to Elite before checkout — add split-screen multitasking + a faster CPU for just $120 more. Run navigation and Netflix simultaneously.",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "badges": {
@@ -819,25 +813,15 @@
       "settings": {
         "product": "the-autolinkr-elite",
         "media_size": 50,
-        "gallery_layout": "stacked",
-        "color_text": "#F7F7F8",
-        "color_background": "#080809",
-        "color_background_2": "#0F0F12",
-        "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "gallery_layout": "stacked"
       }
     },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
+        "columns_mobile": "2",
         "heading": "Complete Your Setup",
-        "heading_size": "title-sm",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "columns_mobile": "2"
+        "heading_size": "title-sm"
       }
     },
     "apps-reviews": {

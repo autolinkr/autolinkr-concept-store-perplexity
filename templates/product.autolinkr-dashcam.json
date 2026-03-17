@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-product": {
@@ -21,9 +30,9 @@
         "text-dash-badge": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "📹 Dual-Channel 1080P + IR Night Vision — Always-On Protection",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "title": {
@@ -39,9 +48,9 @@
         "text-tagline": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "Dual 1080P front + rear recording with IR night vision, 170° wide-angle lens, and WiFi app control. Always-on protection, loop recording, and G-sensor collision detection.",
-            "text_size": "text-base",
-            "icon": "none"
+            "text_size": "text-base"
           }
         },
         "variant_picker": {
@@ -56,9 +65,9 @@
         "text-variant-note": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "Choose your storage: No SD Card (use your own Class 10 card), 32GB pre-installed, or 64GB pre-installed.",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "buy_buttons": {
@@ -86,25 +95,25 @@
         "text-trust-1": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "✓ Free & Fast Shipping",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "text-trust-2": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "✓ 30-Day Money-Back Guarantee",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "text-trust-3": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "✓ 1-Year Warranty — Plug-In & Record in Minutes",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "collapsible-specs": {
@@ -174,16 +183,16 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "full_width": false,
         "gallery_layout": "stacked",
         "thumbnail_position": "bottom",
         "image_ratio": "square",
-        "image_ratio_mobile": "square",
         "image_zoom": "lightbox",
-        "mobile_layout": "columns",
         "hide_variants": false,
         "enable_video_autoplay": true,
-        "enable_video_looping": true
+        "enable_video_looping": true,
+        "mobile_layout": "columns",
+        "image_ratio_mobile": "square",
+        "full_width": false
       }
     },
     "feature-strip": {
@@ -227,7 +236,8 @@
         "f2",
         "f3",
         "f4"
-      ]
+      ],
+      "settings": {}
     },
     "multicolumn-features": {
       "type": "multicolumn-with-icons",
@@ -300,9 +310,7 @@
         "subheading": "Everything you need to capture every moment on the road",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
         "color_button_background": "#3B8EF8"
@@ -345,12 +353,10 @@
         "layout": "text_first",
         "text_alignment": "left",
         "content_position": "middle",
-        "heading": "See Everything. Even at Night.",
-        "subtext": "Advanced IR night vision captures crystal-clear footage in complete darkness. Never miss a detail — day or night.",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
+        "color_background_2": "#0F0F12",
         "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
@@ -405,17 +411,13 @@
       ],
       "settings": {
         "columns": 4,
-        "columns_mobile": "2",
         "text_alignment": "center",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_highlight": "#3B8EF8"
       }
     },
     "scrolling-text": {
@@ -478,12 +480,8 @@
         "enable_twin": true,
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_highlight": "#3B8EF8"
       }
     },
     "faq-section": {
@@ -529,9 +527,7 @@
         "heading_tag": "h2",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
         "color_button_background": "#3B8EF8"
@@ -576,12 +572,8 @@
         "content_position": "md:items-center md:justify-center",
         "color_text": "#F7F7F8",
         "color_background": "#080809",
-        "color_background_2": "#0F0F12",
         "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_highlight": "#3B8EF8"
       }
     },
     "pro-crosssell": {
@@ -599,9 +591,9 @@
         "text-crosssell": {
           "type": "text",
           "settings": {
+            "icon": "none",
             "text": "Already have a dashcam? Upgrade your CarPlay to wireless and unlock Netflix, YouTube, and Google Play on your factory screen. AutoLinkr Pro™ takes 60 seconds to set up.",
-            "text_size": "text-sm",
-            "icon": "none"
+            "text_size": "text-sm"
           }
         },
         "badges": {
@@ -630,25 +622,15 @@
       "settings": {
         "product": "the-autolinkr-pro",
         "media_size": 50,
-        "gallery_layout": "stacked",
-        "color_text": "#F7F7F8",
-        "color_background": "#080809",
-        "color_background_2": "#0F0F12",
-        "gradient_background": "",
-        "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "gallery_layout": "stacked"
       }
     },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
+        "columns_mobile": "2",
         "heading": "Complete Your Setup",
-        "heading_size": "title-sm",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "columns_mobile": "2"
+        "heading_size": "title-sm"
       }
     },
     "apps-reviews": {

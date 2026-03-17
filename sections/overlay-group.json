@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.overlay-group.name",
   "type": "custom.overlay",
@@ -18,7 +27,7 @@
         "show_cart_recommendations_vendor": false,
         "show_cart_recommendations_price": true,
         "cart_recommendations_products": [],
-        "empty_cart_message": "<p>Not sure where to start?<br\/>Try these collections:<\/p>",
+        "empty_cart_message": "<p>Not sure where to start?<br/>Try these collections:</p>",
         "empty_cart_collections": [],
         "recent_products_enabled": true,
         "recent_products_heading": "Recently viewed",
@@ -37,7 +46,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>FIRST TIMER?<\/p>",
+            "text": "<p>FIRST TIMER?</p>",
             "text_size": "subtext-custom",
             "text_max_size": 12,
             "text_font": "body",
@@ -49,7 +58,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Sign up and get <em>20% off<\/em> your first order",
+            "heading": "Sign up and get <em>20% off</em> your first order",
             "heading_size": "text-2xl lg:text-3xl",
             "heading_tag": "h2",
             "highlighted_text": "scribble",
@@ -70,7 +79,7 @@
         "text-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Subscribe to our newsletter and be the first to hear about our new arrivals, special promotions and online exclusives.<\/p>",
+            "text": "<p>Subscribe to our newsletter and be the first to hear about our new arrivals, special promotions and online exclusives.</p>",
             "text_size": "text-sm",
             "text_max_size": 32,
             "text_font": "body",
@@ -148,7 +157,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Are you 18 years old or older?<\/p>",
+            "text": "<p>Are you 18 years old or older?</p>",
             "text_size": "text-base",
             "text_max_size": 32,
             "text_font": "body",
@@ -224,7 +233,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>This site uses cookies for better user experience and analytics.<\/p>",
+            "text": "<p>This site uses cookies for better user experience and analytics.</p>",
             "text_size": "text-base",
             "text_max_size": 32,
             "text_font": "body",
@@ -298,7 +307,7 @@
           "settings": {
             "custom_icon": "",
             "title": "Shop",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "external": false
           }
         },

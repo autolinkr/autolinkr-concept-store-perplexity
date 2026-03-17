@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "accessibility": {
@@ -212,7 +221,7 @@
     "quick_order_list": {
       "product_total": "Mezisoučet produktu",
       "view_cart": "Zobrazit košík",
-      "each": "{{ money }}\/ea",
+      "each": "{{ money }}/ea",
       "product": "Produkt",
       "variant": "Varianta",
       "variant_total": "Celkový počet variant",
@@ -549,7 +558,7 @@
       "title": "Cenová sleva na základě objemu",
       "note": "Dostupná cenová sleva na základě objemu",
       "minimum": "{{ quantity }}+",
-      "price_at_each": "za {{ price }}\/ea",
+      "price_at_each": "za {{ price }}/ea",
       "price_range": "{{ minimum }} - {{ maximum }}"
     },
     "inventory": {

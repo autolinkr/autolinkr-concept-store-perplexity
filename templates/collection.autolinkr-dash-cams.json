@@ -1,21 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "al-collection-hero": {
       "type": "autolinkr-collection-hero",
-      "settings": {}
-    },
-    "al-collection-featured-products": {
-      "type": "featured-collection",
       "settings": {
-        "title": "Pair With a Dash Cam",
-        "collection": "accessories",
-        "products_to_show": 4,
-        "show_view_all": false
+        "hero_title": "Dual-Camera Dashcams",
+        "hero_sub": "Front and interior cabin recording in 1080P. IR night vision, 170° wide angle, G-sensor, and WiFi app control."
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 8,
+        "columns_mobile": "2",
+        "enable_filtering": false,
+        "enable_sorting": true
       }
     }
   },
   "order": [
     "al-collection-hero",
-    "al-collection-featured-products"
+    "main-collection"
   ]
 }

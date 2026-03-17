@@ -1,22 +1,20 @@
 {% comment %}
   autolinkr-product-features.liquid
-  AutoLinkr Product Page — Features & Details Block
+  AutoLinkr Product Page — Features, Matrix & FAQ
   Phase B — ConceptThemePerplexity
 
-  Renders (all product-aware, handle-driven):
-  - Specs table
-  - Compatibility checker
-  - What's in the box
-  - FAQ accordion
-  - Cross-sell strip ("Pair it with")
+  Contains:
+  - Feature cards grid (streaming, wireless, plug-and-play, etc.)
+  - Feature matrix table (Base / Pro / Elite comparison)
+  - FAQ accordion (with objection-busting answers)
+  - Bottom CTA (back to ATC or compare)
 {% endcomment %}
 
 {%- liquid
-  assign product = product
-  assign is_pro    = false
-  assign is_elite  = false
-  assign is_base   = false
-  assign is_dash   = false
+  assign is_pro   = false
+  assign is_elite = false
+  assign is_base  = false
+  assign is_dash  = false
   assign is_tablet = false
   if product.handle == 'the-autolinkr-pro' or product.handle == 'shop-the-autolinkr-pro'
     assign is_pro = true
@@ -35,381 +33,412 @@
   endif
 -%}
 
-<section
-  class="al-pdp-features"
-  data-section-id="{{ section.id }}"
-  data-section-type="autolinkr-product-features"
->
+{%- comment %} ── FEATURES GRID ── {%- endcomment %}
+<section class="al-pdp-features" id="al-features">
   <div class="al-container">
+    <div class="al-pdp-features__header">
+      <div class="al-pdp-features__eyebrow">What You Get</div>
+      <h2 class="al-pdp-features__title">
+        {%- if is_dash -%}
+          Built to Record Everything
+        {%- elsif is_tablet -%}
+          CarPlay for Any Car
+        {%- else -%}
+          Your Car. Completely Transformed.
+        {%- endif -%}
+      </h2>
+      <p class="al-pdp-features__sub">
+        {%- if is_dash -%}
+          Front + cabin coverage, day and night.
+        {%- elsif is_tablet -%}
+          No dealer. No installation. No factory CarPlay needed.
+        {%- elsif is_elite -%}
+          Everything in Pro, plus the features power users demand.
+        {%- else -%}
+          From wired to wireless. From CarPlay to streaming. In seconds.
+        {%- endif -%}
+      </p>
+    </div>
 
-    {%- comment %} ── SPECS TABLE ── {%- endcomment %}
-    <div class="al-pdp-specs">
-      <h2 class="al-pdp-specs__title">Technical Specifications</h2>
-      <table class="al-pdp-specs__table" role="table">
+    <div class="al-pdp-features__grid">
+
+      {%- if is_pro or is_elite or is_base -%}
+        {%- comment %} Adapter features {%- endcomment %}
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--blue">📶</div>
+          <h3 class="al-pdp-feature-card__title">Wireless CarPlay & Android Auto</h3>
+          <p class="al-pdp-feature-card__desc">Plug in once, pair your phone — then it connects automatically every time you start the car. No more cables.</p>
+        </div>
+
+        {%- if is_pro or is_elite -%}
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--amber">▶</div>
+          <h3 class="al-pdp-feature-card__title">Netflix, YouTube & Google Play</h3>
+          <p class="al-pdp-feature-card__desc">Stream your favorite content directly on your factory screen. Google Play Store gives you access to thousands of apps.</p>
+        </div>
+        {%- endif -%}
+
+        {%- if is_elite -%}
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--purple">⊞</div>
+          <h3 class="al-pdp-feature-card__title">Split-Screen Multitasking</h3>
+          <p class="al-pdp-feature-card__desc">Run navigation and a streaming app side by side on your screen simultaneously. An Elite-exclusive capability.</p>
+        </div>
+        {%- endif -%}
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--green">⚡</div>
+          <h3 class="al-pdp-feature-card__title">Plug In & Play</h3>
+          <p class="al-pdp-feature-card__desc">No installation, no drilling, no wiring. Connect to your car's USB port and you're done in under 2 minutes.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--blue">🚗</div>
+          <h3 class="al-pdp-feature-card__title">Works With 200+ Car Models</h3>
+          <p class="al-pdp-feature-card__desc">Compatible with Toyota, Honda, Ford, Hyundai, Kia, Subaru, and 200+ other factory-CarPlay equipped vehicles.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--amber">🛡</div>
+          <h3 class="al-pdp-feature-card__title">30-Day Money-Back Guarantee</h3>
+          <p class="al-pdp-feature-card__desc">Try it for 30 days. If it doesn't transform your drive, return it for a full refund. Zero risk.</p>
+        </div>
+
+      {%- elsif is_dash -%}
+        {%- comment %} Dash cam features {%- endcomment %}
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--blue">📷</div>
+          <h3 class="al-pdp-feature-card__title">Dual 1080P Recording</h3>
+          <p class="al-pdp-feature-card__desc">Front-facing and interior cabin cameras both record in full 1080P — simultaneously. Front and back, inside and out.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--amber">🌙</div>
+          <h3 class="al-pdp-feature-card__title">IR Night Vision</h3>
+          <p class="al-pdp-feature-card__desc">Infrared cabin camera records clearly in complete darkness. Every ride is documented, day or night.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--green">📐</div>
+          <h3 class="al-pdp-feature-card__title">170° Wide Angle</h3>
+          <p class="al-pdp-feature-card__desc">Ultra-wide 170° field of view captures full lane coverage, side mirrors, and any incident in frame.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--blue">📡</div>
+          <h3 class="al-pdp-feature-card__title">WiFi App Control</h3>
+          <p class="al-pdp-feature-card__desc">Connect via WiFi to your phone app to review footage, adjust settings, and export clips — no cables needed.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--amber">⚠️</div>
+          <h3 class="al-pdp-feature-card__title">G-Sensor Collision Detection</h3>
+          <p class="al-pdp-feature-card__desc">Automatically locks and protects footage during a collision or sudden brake. Critical evidence is never overwritten.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--green">🔁</div>
+          <h3 class="al-pdp-feature-card__title">Loop Recording</h3>
+          <p class="al-pdp-feature-card__desc">Automatically overwrites the oldest footage when storage is full. You're always recording without managing files.</p>
+        </div>
+
+      {%- elsif is_tablet -%}
+        {%- comment %} Tablet features {%- endcomment %}
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--blue">📱</div>
+          <h3 class="al-pdp-feature-card__title">Works With Any Car</h3>
+          <p class="al-pdp-feature-card__desc">No factory CarPlay required. Works with any car that has an iPhone or Android phone. Truly universal.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--amber">🖥</div>
+          <h3 class="al-pdp-feature-card__title">7" HD Touchscreen</h3>
+          <p class="al-pdp-feature-card__desc">Large, bright 7-inch display that mounts on your dashboard. Clear visibility in direct sunlight.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--green">🔋</div>
+          <h3 class="al-pdp-feature-card__title">Portable & Removable</h3>
+          <p class="al-pdp-feature-card__desc">Take it between vehicles, lend it to family, or use it as a navigation device anywhere. No permanent installation.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--blue">📡</div>
+          <h3 class="al-pdp-feature-card__title">Wireless or Wired Connection</h3>
+          <p class="al-pdp-feature-card__desc">Pairs wirelessly via Bluetooth + WiFi or via USB cable. iPhone and Android both supported out of the box.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--amber">💰</div>
+          <h3 class="al-pdp-feature-card__title">Save $425–$1,425 vs. Dealer</h3>
+          <p class="al-pdp-feature-card__desc">Dealer head unit replacements cost $500–$1,500 installed. AutoLinkr Tablet™ delivers the same experience for $74.99.</p>
+        </div>
+
+        <div class="al-pdp-feature-card">
+          <div class="al-pdp-feature-card__icon al-pdp-feature-card__icon--green">🛡</div>
+          <h3 class="al-pdp-feature-card__title">30-Day Money-Back Guarantee</h3>
+          <p class="al-pdp-feature-card__desc">Try it for 30 days. Full refund if you're not completely happy with it. No questions asked.</p>
+        </div>
+      {%- endif -%}
+
+    </div><!-- /.al-pdp-features__grid -->
+  </div>
+</section>
+
+{%- comment %} ── FEATURE MATRIX (Adapters only) ── {%- endcomment %}
+{%- if is_pro or is_elite or is_base -%}
+<section class="al-feature-matrix" id="al-compare">
+  <div class="al-container" style="max-width: 880px;">
+    <div class="al-feature-matrix__header">
+      <h2 class="al-feature-matrix__title">Compare All Adapters</h2>
+      <p class="al-feature-matrix__sub">Find the right AutoLinkr for your needs.</p>
+    </div>
+
+    <div class="al-feature-matrix__wrap">
+      <table class="al-feature-matrix__table" role="table" aria-label="AutoLinkr adapter comparison">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align:left; padding:16px 20px; color:var(--al-text-secondary,#A1A1A6); font-weight:500; border-bottom:1px solid var(--al-border,#2A2A2E);">Feature</th>
+            <th scope="col" class="al-matrix-col--base" style="text-align:center; padding:16px 20px; border-bottom:1px solid var(--al-border,#2A2A2E);">
+              <a href="/products/autolinkr-base" style="color:var(--al-text-secondary,#A1A1A6); font-weight:600; text-decoration:none;">Base™<br><span style="font-weight:400; font-size:0.85em;">$69.99</span></a>
+            </th>
+            <th scope="col" class="al-matrix-col--pro" style="text-align:center; padding:16px 20px; border-bottom:1px solid var(--al-border,#2A2A2E);">
+              <a href="/products/the-autolinkr-pro" style="color:var(--al-blue,#2D7FF9); font-weight:600; text-decoration:none;">Pro™<br><span style="font-weight:400; font-size:0.85em;">$79.99</span></a>
+              <div style="font-size:0.6875rem; font-weight:600; color:#2D7FF9; opacity:0.7; margin-top:2px;">BEST SELLER</div>
+            </th>
+            <th scope="col" class="al-matrix-col--elite" style="text-align:center; padding:16px 20px; border-bottom:1px solid rgba(255,149,0,0.3);">
+              <a href="/products/autolinkr-elite" style="color:#FF9500; font-weight:600; text-decoration:none;">Elite™<br><span style="font-weight:400; font-size:0.85em;">$199.99</span></a>
+              <div style="font-size:0.6875rem; font-weight:600; color:#FF9500; opacity:0.7; margin-top:2px;">MOST CAPABLE</div>
+            </th>
+          </tr>
+        </thead>
         <tbody>
-
-          {%- if is_pro or is_elite or is_base -%}
-            <tr>
-              <th scope="row">Connectivity</th>
-              <td>Wi-Fi 5GHz + Bluetooth 5.0</td>
-            </tr>
-            <tr>
-              <th scope="row">Compatible With</th>
-              <td>Factory wired CarPlay{%- if is_base -%} or Android Auto{%- endif -%}</td>
-            </tr>
-            <tr>
-              <th scope="row">Wireless Standard</th>
-              <td>802.11ac (5 GHz)</td>
-            </tr>
-            {%- if is_pro or is_elite -%}
-            <tr>
-              <th scope="row">App Store</th>
-              <td>Google Play (Netflix, YouTube, Spotify, Chrome…)</td>
-            </tr>
-            {%- endif -%}
-            {%- if is_elite -%}
-            <tr>
-              <th scope="row">Split Screen</th>
-              <td>Yes — navigate + stream simultaneously</td>
-            </tr>
-            <tr>
-              <th scope="row">Processor</th>
-              <td>Octa-core 2.0 GHz (Elite exclusive)</td>
-            </tr>
-            {%- endif -%}
-            <tr>
-              <th scope="row">Setup Time</th>
-              <td>Under 3 minutes (plug in, pair once)</td>
-            </tr>
-            <tr>
-              <th scope="row">Power</th>
-              <td>USB-A port in vehicle (no additional power required)</td>
-            </tr>
-            <tr>
-              <th scope="row">Dimensions</th>
-              <td>85 × 55 × 12 mm</td>
-            </tr>
-            <tr>
-              <th scope="row">Warranty</th>
-              <td>1 Year (US)</td>
-            </tr>
-          {%- endif -%}
-
-          {%- if is_dash -%}
-            <tr>
-              <th scope="row">Resolution</th>
-              <td>Dual 1080P Full HD (front + cabin)</td>
-            </tr>
-            <tr>
-              <th scope="row">Night Vision</th>
-              <td>IR LEDs — cabin night vision</td>
-            </tr>
-            <tr>
-              <th scope="row">Field of View</th>
-              <td>170° ultra-wide front lens</td>
-            </tr>
-            <tr>
-              <th scope="row">Storage</th>
-              <td>microSD up to 256 GB (not included)</td>
-            </tr>
-            <tr>
-              <th scope="row">App</th>
-              <td>WiFi direct — iOS & Android</td>
-            </tr>
-            <tr>
-              <th scope="row">G-Sensor</th>
-              <td>Yes — auto event lock on impact</td>
-            </tr>
-            <tr>
-              <th scope="row">Loop Recording</th>
-              <td>Yes — overwrites oldest footage</td>
-            </tr>
-            <tr>
-              <th scope="row">Parking Mode</th>
-              <td>Yes (requires hardwire kit, sold separately)</td>
-            </tr>
-            <tr>
-              <th scope="row">Power</th>
-              <td>12V / 24V via included OBD / USB adapter</td>
-            </tr>
-          {%- endif -%}
-
-          {%- if is_tablet -%}
-            <tr>
-              <th scope="row">Screen Size</th>
-              <td>7" IPS touchscreen</td>
-            </tr>
-            <tr>
-              <th scope="row">Resolution</th>
-              <td>1024 × 600</td>
-            </tr>
-            <tr>
-              <th scope="row">Wireless Protocol</th>
-              <td>Bluetooth 5.0 + Wi-Fi 5 GHz</td>
-            </tr>
-            <tr>
-              <th scope="row">CarPlay</th>
-              <td>Wireless (iPhone only for CarPlay)</td>
-            </tr>
-            <tr>
-              <th scope="row">Android Auto</th>
-              <td>Wireless (Android phones)</td>
-            </tr>
-            <tr>
-              <th scope="row">Mount</th>
-              <td>Suction cup (included)</td>
-            </tr>
-            <tr>
-              <th scope="row">Power</th>
-              <td>12V cigarette lighter (included)</td>
-            </tr>
-            <tr>
-              <th scope="row">Battery</th>
-              <td>Built-in 2000 mAh (30 min unplugged)</td>
-            </tr>
-          {%- endif -%}
-
+          <tr>
+            <td>Wireless CarPlay &amp; Android Auto</td>
+            <td class="al-matrix-col--base"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--pro"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--elite"><span class="al-matrix-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Netflix &amp; YouTube</td>
+            <td class="al-matrix-col--base"><span class="al-matrix-no">—</span></td>
+            <td class="al-matrix-col--pro"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--elite"><span class="al-matrix-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Google Play Store</td>
+            <td class="al-matrix-col--base"><span class="al-matrix-no">—</span></td>
+            <td class="al-matrix-col--pro"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--elite"><span class="al-matrix-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Spotify &amp; Apple Music</td>
+            <td class="al-matrix-col--base"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--pro"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--elite"><span class="al-matrix-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Split-Screen Multitasking</td>
+            <td class="al-matrix-col--base"><span class="al-matrix-no">—</span></td>
+            <td class="al-matrix-col--pro"><span class="al-matrix-no">—</span></td>
+            <td class="al-matrix-col--elite"><span class="al-matrix-elite-only">Elite Only ★</span></td>
+          </tr>
+          <tr>
+            <td>Processor Speed</td>
+            <td class="al-matrix-col--base" style="color:var(--al-text-secondary,#A1A1A6);">Standard</td>
+            <td class="al-matrix-col--pro" style="color:var(--al-text-secondary,#A1A1A6);">Standard</td>
+            <td class="al-matrix-col--elite" style="color:#FF9500; font-weight:600;">Faster CPU</td>
+          </tr>
+          <tr>
+            <td>Plug-and-Play Setup</td>
+            <td class="al-matrix-col--base"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--pro"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--elite"><span class="al-matrix-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>30-Day Money-Back</td>
+            <td class="al-matrix-col--base"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--pro"><span class="al-matrix-yes">✓</span></td>
+            <td class="al-matrix-col--elite"><span class="al-matrix-yes">✓</span></td>
+          </tr>
         </tbody>
       </table>
-    </div><!-- /.al-pdp-specs -->
-
-    {%- comment %} ── COMPATIBILITY CHECKER ── {%- endcomment %}
-    {%- if is_pro or is_elite or is_base -%}
-    <div class="al-pdp-compat">
-      <h2 class="al-pdp-compat__title">Is My Car Compatible?</h2>
-      <p class="al-pdp-compat__desc">
-        AutoLinkr works with any vehicle that has a <strong>factory wired CarPlay{%- if is_base -%} or Android Auto{%- endif -%}</strong> port.
-        Check your car's infotainment below:
-      </p>
-
-      <div class="al-pdp-compat__grid">
-        {%- assign compat_makes = 'Toyota,Honda,Ford,Chevrolet,BMW,Mercedes-Benz,Volkswagen,Audi,Hyundai,Kia,Subaru,Mazda,Nissan,Ram,Jeep' | split: ',' -%}
-        {%- for make in compat_makes -%}
-          <div class="al-pdp-compat__chip">
-            {{ make }}
-          </div>
-        {%- endfor -%}
-        <div class="al-pdp-compat__chip al-pdp-compat__chip--more">+ 200 more makes</div>
-      </div>
-
-      <p class="al-pdp-compat__note">
-        Not sure? <a href="/pages/compatibility" class="al-link">Check the full compatibility list →</a>
-      </p>
     </div>
-    {%- endif -%}
 
-    {%- comment %} ── WHAT'S IN THE BOX ── {%- endcomment %}
-    <div class="al-pdp-box">
-      <h2 class="al-pdp-box__title">What's in the Box</h2>
-      <ul class="al-pdp-box__list" role="list">
-        {%- if is_pro or is_elite or is_base -%}
-          <li class="al-pdp-box__item">AutoLinkr {%- if is_pro -%} Pro{%- elsif is_elite -%} Elite{%- else -%} Base{%- endif -%} dongle</li>
-          <li class="al-pdp-box__item">USB-A cable (1 m)</li>
-          <li class="al-pdp-box__item">Quick-start guide</li>
-          {%- if is_elite -%}
-          <li class="al-pdp-box__item">USB-C power adapter</li>
-          {%- endif -%}
-        {%- endif -%}
-        {%- if is_dash -%}
-          <li class="al-pdp-box__item">Front camera unit</li>
-          <li class="al-pdp-box__item">Cabin camera unit + cable</li>
-          <li class="al-pdp-box__item">OBD power adapter</li>
-          <li class="al-pdp-box__item">3M adhesive mounts (×2)</li>
-          <li class="al-pdp-box__item">Quick-start guide</li>
-        {%- endif -%}
-        {%- if is_tablet -%}
-          <li class="al-pdp-box__item">7" wireless CarPlay/Android Auto screen</li>
-          <li class="al-pdp-box__item">Suction cup dash mount</li>
-          <li class="al-pdp-box__item">12V cigarette lighter power cable</li>
-          <li class="al-pdp-box__item">Quick-start guide</li>
-        {%- endif -%}
-      </ul>
-    </div><!-- /.al-pdp-box -->
-
-    {%- comment %} ── FAQ ACCORDION ── {%- endcomment %}
-    <div class="al-pdp-faq">
-      <h2 class="al-pdp-faq__title">Frequently Asked Questions</h2>
-
-      <div class="al-faq-list">
-
-        {%- if is_pro or is_elite or is_base -%}
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              Does it work with my car?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>AutoLinkr works with any vehicle that has a factory-installed wired CarPlay{%- if is_base -%} or Android Auto{%- endif -%} port. If your car came with a USB cable to connect your phone to CarPlay, AutoLinkr will work. Most 2017+ vehicles are supported.</p>
-            </div>
-          </div>
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              How long does setup take?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>Under 3 minutes. Plug AutoLinkr into your USB port, enable Bluetooth on your phone, and pair once. Every time you get in the car, it connects automatically.</p>
-            </div>
-          </div>
-
-          {%- if is_pro or is_elite -%}
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              Can I really watch Netflix on my car screen?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>Yes. AutoLinkr Pro{%- if is_elite -%}/Elite{%- endif -%} includes Google Play, so you can install and run Netflix, YouTube, Disney+, and thousands of other Android apps directly on your factory screen. We recommend only using streaming apps when parked or as a passenger.</p>
-            </div>
-          </div>
-          {%- endif -%}
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              Will it affect my warranty?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>No. AutoLinkr is a plug-in accessory — it makes no permanent modifications to your vehicle. Simply unplug it at any time with no trace left behind.</p>
-            </div>
-          </div>
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              What's your return policy?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>30-day free returns, no questions asked. If AutoLinkr doesn't work with your vehicle, contact support and we'll arrange a free pickup and full refund.</p>
-            </div>
-          </div>
-
-        {%- endif -%}
-
-        {%- if is_dash -%}
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              Does it record continuously?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>Yes. AutoLinkr Dash records in continuous loop mode — when the card is full, it overwrites the oldest footage automatically. Incident clips are locked by the G-sensor and won't be overwritten.</p>
-            </div>
-          </div>
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              What SD card do I need?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>Any Class 10 / U3 microSD card up to 256 GB. We recommend Samsung Endurance or SanDisk High Endurance cards for dashcam use. SD card is not included.</p>
-            </div>
-          </div>
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              How do I view footage?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>Connect to the camera's WiFi hotspot and use the free AutoLinkr app (iOS & Android) to browse and download clips. You can also remove the SD card and plug it into a computer.</p>
-            </div>
-          </div>
-
-        {%- endif -%}
-
-        {%- if is_tablet -%}
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              Does my car need built-in CarPlay?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>No. The AutoLinkr Tablet is a standalone 7" screen that brings CarPlay and Android Auto to any car — even older vehicles with no infotainment system at all. It runs independently via its own screen and power cable.</p>
-            </div>
-          </div>
-
-          <div class="al-faq-item">
-            <button class="al-faq-item__trigger" aria-expanded="false">
-              Is it easy to install?
-              <svg class="al-faq-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-            <div class="al-faq-item__body">
-              <p>Yes. Mount the suction cup to your windshield or dash, plug the power cable into your cigarette lighter, and connect your phone via Bluetooth. Setup takes under 5 minutes.</p>
-            </div>
-          </div>
-
-        {%- endif -%}
-
-      </div><!-- /.al-faq-list -->
-    </div><!-- /.al-pdp-faq -->
-
-    {%- comment %} ── CROSS-SELL STRIP ── {%- endcomment %}
-    {%- if section.settings.show_crosssell -%}
-    <div class="al-pdp-crosssell">
-      <h2 class="al-pdp-crosssell__title">Pair it With</h2>
-      <div class="al-pdp-crosssell__grid">
-        {%- assign crosssell_handles = section.settings.crosssell_products | split: ',' -%}
-        {%- for handle in crosssell_handles -%}
-          {%- assign cs_product = all_products[handle | strip] -%}
-          {%- if cs_product != empty -%}
-          <div class="al-pdp-crosssell__card">
-            {%- if cs_product.featured_image -%}
-              <a href="{{ cs_product.url }}" class="al-pdp-crosssell__img-wrap">
-                {{
-                  cs_product.featured_image
-                  | image_url: width: 300
-                  | image_tag:
-                    class: 'al-pdp-crosssell__img',
-                    widths: '200, 300',
-                    loading: 'lazy',
-                    alt: cs_product.title
-                }}
-              </a>
-            {%- endif -%}
-            <div class="al-pdp-crosssell__info">
-              <a href="{{ cs_product.url }}" class="al-pdp-crosssell__name">{{ cs_product.title }}</a>
-              <span class="al-pdp-crosssell__price">{{ cs_product.price | money }}</span>
-            </div>
-            <a href="{{ cs_product.url }}" class="al-btn al-btn--ghost al-btn--sm al-pdp-crosssell__btn">View →</a>
-          </div>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
+    <div class="al-feature-matrix__cta">
+      <a href="/products/the-autolinkr-pro" class="al-btn al-btn--primary">Shop Pro — $79.99</a>
+      <a href="/products/autolinkr-elite" class="al-btn al-btn--amber">Upgrade to Elite — $199.99</a>
     </div>
-    {%- endif -%}
 
-  </div><!-- /.al-container -->
+  </div>
 </section>
+{%- endif -%}
+
+{%- comment %} ── FAQ ACCORDION ── {%- endcomment %}
+<section class="al-pdp-faq" id="al-faq">
+  <div class="al-container">
+    <div class="al-pdp-faq__header">
+      <h2 class="al-pdp-faq__title">Common Questions</h2>
+    </div>
+
+    <div class="al-pdp-faq__list" id="al-faq-list">
+
+      {%- if is_pro or is_elite or is_base -%}
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            Does my car already have CarPlay?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            AutoLinkr requires factory-installed wired CarPlay or Android Auto. Most cars made after 2016 include it. To check: plug your iPhone into your car's USB port — if CarPlay launches, you're compatible. If you don't have factory CarPlay, the <a href="/products/autolinkr-tablet">AutoLinkr Tablet™</a> works with any car.
+          </div>
+        </div>
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            Does it work with Android phones too?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            Yes. AutoLinkr works with both iPhone (via wireless CarPlay) and Android phones (via wireless Android Auto). You pair your phone once, and it reconnects automatically on every drive.
+          </div>
+        </div>
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            How does the setup work?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            Plug AutoLinkr into your car's USB port. Follow the on-screen pairing steps to connect your phone via Bluetooth and WiFi — takes about 90 seconds. After that, your phone connects automatically every time you get in the car. <a href="/products/the-autolinkr-pro">Shop AutoLinkr Pro →</a>
+          </div>
+        </div>
+
+        {%- if is_pro or is_elite -%}
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            Can I actually watch Netflix while driving?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            Netflix, YouTube, and Google Play are available on the screen when the car is parked. Many customers use it for passengers, road trip entertainment, or while waiting. Check your local traffic laws regarding screen use while driving.
+          </div>
+        </div>
+        {%- endif -%}
+
+        {%- if is_pro -%}
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            What's the difference between Pro and Elite?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            Both Pro and Elite include wireless CarPlay, Netflix, YouTube, and Google Play. Elite adds split-screen multitasking (run two apps simultaneously) and a faster processor. If you want to navigate and stream at the same time, or want the absolute best performance, <a href="/products/autolinkr-elite">Elite is your upgrade</a>.
+          </div>
+        </div>
+        {%- endif -%}
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            What is your return policy?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            30 days, no questions asked. If AutoLinkr doesn't work perfectly in your car, contact us for a full refund or replacement. We also offer free shipping on all orders. <a href="/products/the-autolinkr-pro">Shop with confidence →</a>
+          </div>
+        </div>
+
+      {%- elsif is_dash -%}
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            Does it record inside the cabin at night?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            Yes. The cabin-facing camera has dedicated IR (infrared) LEDs for night vision. It records clearly in complete darkness without lighting up the interior. Both cameras record simultaneously in 1080P.
+          </div>
+        </div>
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            What happens when storage is full?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            AutoLinkr Dash uses loop recording — it automatically overwrites the oldest footage when the SD card fills up. Footage flagged by the G-sensor (during a collision or hard brake) is locked and protected from overwrite.
+          </div>
+        </div>
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            Which SD card size should I choose?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            For most daily drivers, 32GB holds approximately 4–6 hours of dual-camera footage before loop recording kicks in — plenty for any incident review. If you do ridesharing, delivery driving, or long road trips, the 64GB option gives you extra headroom.
+          </div>
+        </div>
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            How do I view the footage?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            Connect via the WiFi app on your phone to browse, download, and share clips wirelessly. You can also remove the SD card and read it directly on any computer.
+          </div>
+        </div>
+
+      {%- elsif is_tablet -%}
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            Does my car need factory CarPlay?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            No. The AutoLinkr Tablet™ is a standalone 7" portable screen — it doesn't require or interact with your factory head unit at all. It works with any car, any year, any make. Just mount it on your dash and connect your iPhone or Android phone.
+          </div>
+        </div>
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            How does it attach to my car?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            The Tablet comes with a dash-mount bracket that attaches without drilling or permanent installation. It can be repositioned or removed in seconds.
+          </div>
+        </div>
+
+        <div class="al-faq-item">
+          <button class="al-faq-item__trigger" aria-expanded="false">
+            What is it powered by?
+            <svg class="al-faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="al-faq-item__body">
+            Via USB (plugs into your car's USB port or a car charger). It draws minimal power and won't drain your car battery when the car is running.
+          </div>
+        </div>
+
+      {%- endif -%}
+
+    </div><!-- /.al-pdp-faq__list -->
+  </div>
+</section>
+
 
 {% schema %}
 {
-  "name": "AutoLinkr Product Features",
+  "name": "AL Product Features",
   "tag": "section",
-  "class": "section-autolinkr-product-features",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_crosssell",
-      "label": "Show cross-sell strip",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "crosssell_products",
-      "label": "Cross-sell product handles",
-      "info": "Comma-separated product handles. Example: autolinkr-dash,autolinkr-tablet",
-      "default": "autolinkr-dash,autolinkr-tablet"
-    }
-  ],
+  "class": "al-pdp-features-section",
+  "settings": [],
   "presets": [
     {
-      "name": "AutoLinkr Product Features"
+      "name": "AL Product Features"
     }
   ]
 }

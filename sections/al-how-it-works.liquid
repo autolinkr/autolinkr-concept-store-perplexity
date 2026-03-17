@@ -1,7 +1,7 @@
 {% comment %}
   AutoLinkr — How It Works (3-step with real images)
   Dark premium alternating layout: text left/img right, then flip
-  Uses real CDN image URLs embedded via custom-liquid or section settings
+  Step number appears at TOP of the text column — not redundant beside heading
 {% endcomment %}
 
 <section class="al-hiw" style="
@@ -16,7 +16,7 @@
           <span class="al-label">{{ section.settings.eyebrow }}</span>
         {%- endif -%}
         {%- if section.settings.heading != blank -%}
-          <h2 style="font-family:var(--al-font-display,'General Sans',sans-serif);font-size:clamp(1.875rem,3.5vw,2.75rem);font-weight:700;color:#F5F5F7;letter-spacing:-0.025em;line-height:1.1;margin:0 auto 16px;max-width:640px;">{{ section.settings.heading }}</h2>
+          <h2 style="font-family:var(--al-font-display,'General Sans',sans-serif);font-size:clamp(1.875rem,3.5vw,2.75rem);font-weight:700;color:#F5F5F7;letter-spacing:-0.025em;line-height:1.1;margin:8px auto 16px;max-width:640px;">{{ section.settings.heading }}</h2>
         {%- endif -%}
         {%- if section.settings.subheading != blank -%}
           <p style="color:#ABABB3;font-size:1.0625rem;line-height:1.65;max-width:520px;margin:0 auto;">{{ section.settings.subheading }}</p>
@@ -32,11 +32,10 @@
           <div class="al-step{% if is_even == 0 %} al-step--reverse{% endif %}" {{ block.shopify_attributes }}>
 
             <div class="al-step__text">
-              <div class="al-step__num">{{ step_num }}</div>
               <h3 class="al-step__heading">{{ block.settings.heading }}</h3>
               <p class="al-step__body">{{ block.settings.body }}</p>
               {%- if block.settings.badge != blank -%}
-                <span class="al-label" style="margin-top:12px;">{{ block.settings.badge }}</span>
+                <span class="al-label" style="margin-top:16px;display:inline-block;">{{ block.settings.badge }}</span>
               {%- endif -%}
             </div>
 
@@ -68,7 +67,7 @@
     {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
       <div style="text-align:center;margin-top:56px;">
         <a href="{{ section.settings.cta_link }}" class="button button--primary al-btn-glow" style="font-size:1rem;padding:14px 32px;">
-          {{ section.settings.cta_label }} &rarr;
+          {{ section.settings.cta_label }} →
         </a>
       </div>
     {%- endif -%}
@@ -95,6 +94,24 @@
 
   .al-step__text { padding: 8px 0; }
 
+  .al-step__heading {
+    font-family: var(--al-font-display, 'General Sans', sans-serif);
+    font-size: clamp(1.375rem, 2vw, 1.75rem);
+    font-weight: 700;
+    color: #F5F5F7;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin: 0 0 16px;
+  }
+
+  .al-step__body {
+    font-family: var(--al-font-body, 'Inter', sans-serif);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #C8C8D0;
+    margin: 0;
+  }
+
   .al-step__img {
     border-radius: 16px;
     overflow: hidden;
@@ -107,16 +124,17 @@
     .al-step { grid-template-columns: 1fr; gap: 28px; direction: ltr; padding: 40px 0; }
     .al-step--reverse { direction: ltr; }
     .al-step__img { order: -1; }
+    .al-step__heading { font-size: 1.375rem; }
   }
 </style>
 
 {% schema %}
 {
-  "name": "AL \u2014 How It Works",
+  "name": "AL — How It Works",
   "tag": "section",
   "settings": [
-    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 20, "max": 120, "step": 4, "default": 80, "unit": "px" },
-    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 20, "max": 120, "step": 4, "default": 80, "unit": "px" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 20, "max": 120, "step": 4, "default": 20, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 20, "max": 120, "step": 4, "default": 20, "unit": "px" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Setup Guide" },
     { "type": "inline_richtext", "id": "heading", "label": "Section heading", "default": "Up and Running in 60 Seconds" },
     { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "No tools. No apps. No installation knowledge required." },
@@ -129,12 +147,11 @@
       "name": "Step",
       "settings": [
         { "type": "inline_richtext", "id": "heading", "label": "Step heading", "default": "Plug In the Adapter" },
-        { "type": "textarea", "id": "body", "label": "Step description", "default": "Connect the AutoLinkr adapter to your car's factory CarPlay USB port using the included cable." },
-        { "type": "text", "id": "badge", "label": "Badge label (optional)" },
-        { "type": "text", "id": "image_url", "label": "Image CDN URL" },
+        { "type": "textarea", "id": "body", "label": "Step description", "default": "Connect the AutoLinkr adapter to your car's factory CarPlay USB port using the included cable. The adapter powers on automatically." },
+        { "type": "text", "id": "badge", "label": "Badge label (optional)", "info": "e.g. '60 sec' or 'One time only'" },
+        { "type": "text", "id": "image_url", "label": "Image CDN URL", "info": "Paste Shopify CDN URL directly (recommended)" },
         { "type": "image_picker", "id": "image", "label": "Or pick image from theme assets" },
-        { "type": "select", "id": "image_ratio", "label": "Image aspect ratio",
-          "options": [
+        { "type": "select", "id": "image_ratio", "label": "Image aspect ratio", "options": [
             {"value": "4/3", "label": "4:3"},
             {"value": "16/9", "label": "16:9"},
             {"value": "1/1", "label": "Square"},
@@ -145,46 +162,14 @@
   ],
   "presets": [
     {
-      "name": "AL \u2014 How It Works",
+      "name": "AL — How It Works",
       "settings": {
         "eyebrow": "Setup Guide",
         "heading": "Up and Running in 60 Seconds",
         "subheading": "No tools. No apps. No installation knowledge required.",
-        "cta_label": "Shop AutoLinkr Pro\u2122",
+        "cta_label": "Shop AutoLinkr Pro™",
         "cta_link": "/products/the-autolinkr-pro"
-      },
-      "blocks": [
-        {
-          "type": "step",
-          "settings": {
-            "heading": "Step 1 \u2014 Plug In",
-            "body": "Connect AutoLinkr to your car's factory CarPlay USB port using the included cable. The adapter powers on automatically when the car starts.",
-            "badge": "30 seconds",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Adapter17.png?v=1704950035",
-            "image_ratio": "4/3"
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "heading": "Step 2 \u2014 Pair Once",
-            "body": "Connect your iPhone to Bluetooth 'HI-BOX:' and join the Wi-Fi hotspot shown on your screen. This one-time setup takes about 30 seconds.",
-            "badge": "One time only",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Wifi_Passcode_Image.webp?v=1718322092",
-            "image_ratio": "4/3"
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "heading": "Step 3 \u2014 Auto-Connect Forever",
-            "body": "Every future drive connects automatically the moment you start your car. No more cables. Just wireless CarPlay and streaming, every drive.",
-            "badge": "Every drive, automatic",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/WCPAA-Dual_cover-02.webp?v=1718169515",
-            "image_ratio": "4/3"
-          }
-        }
-      ]
+      }
     }
   ]
 }

@@ -174,19 +174,24 @@ a:hover { color: var(--al-accent-hover); }
   filter: brightness(0) invert(1) !important;
 }
 
-/* Nav links */
-.header__menu-item,
-.header__menu-item a,
-.header__menu-item span {
+/* Nav links — target .menu__item (Concept's actual nav class) */
+.menu__item,
+.menu__item a,
+.menu__item span {
   color: var(--al-text-1) !important;
   font-family: var(--al-font-display) !important;
   font-weight: 500 !important;
   font-size: 0.875rem !important;
   letter-spacing: 0.01em !important;
+  padding: 8px 10px !important;
+  border-radius: 6px !important;
+  transition: all var(--al-transition) !important;
 }
-.header__menu-item:hover a,
-.header__menu-item:hover span {
+.menu__item:hover,
+.menu__item:hover a,
+.menu__item:hover span {
   color: var(--al-accent) !important;
+  background: rgba(59, 142, 248, 0.08) !important;
 }
 
 /* Header icons */
@@ -194,6 +199,41 @@ a:hover { color: var(--al-accent-hover); }
 .header__icon path {
   stroke: var(--al-text-1) !important;
   fill: none !important;
+}
+
+/* ─── DESKTOP DROPDOWNS ──────────────────────────────────── */
+/* Ensure header elements don't clip dropdown overflow */
+.header-wrapper,
+.header,
+.header__inline-menu,
+[class*="header"] nav {
+  overflow: visible !important;
+}
+
+/* Dropdown container — constrained width + positioning */
+.dropdown__container {
+  position: relative !important;
+  max-width: 280px !important;
+  background: var(--al-surface) !important;
+  border: 1px solid var(--al-border) !important;
+  border-radius: var(--al-r-md) !important;
+  box-shadow: var(--al-shadow-md) !important;
+  padding: 12px 0 !important;
+}
+
+/* Dropdown nav links */
+.dropdown__nav a,
+.dropdown__nav summary a {
+  color: var(--al-text-2) !important;
+  padding: 8px 20px !important;
+  font-size: var(--al-text-sm) !important;
+  transition: all var(--al-transition) !important;
+  display: block !important;
+}
+.dropdown__nav a:hover,
+.dropdown__nav summary a:hover {
+  color: var(--al-accent) !important;
+  background: rgba(59, 142, 248, 0.06) !important;
 }
 
 /* Announcement bar — full brand blue */
@@ -383,15 +423,18 @@ label {
  * Each tab = frosted glass surface with left accent border on open
  */
 .accordion,
-details {
+.product__accordion,
+details[is="accordion-details"] {
   background: transparent !important;
   margin-bottom: 8px !important;
 }
 
-/* The summary/trigger row */
+/* The summary/trigger row — scoped to accordion classes only (bare `details summary` bleeds into nav dropdowns) */
 .accordion__button,
-details summary,
-.accordion summary {
+.product__accordion summary,
+.accordion summary,
+.accordion details summary,
+details[is="accordion-details"] summary {
   background: linear-gradient(135deg, var(--al-surface-2), var(--al-surface-3)) !important;
   border: 1px solid var(--al-border) !important;
   border-radius: var(--al-r-md) !important;
@@ -408,14 +451,18 @@ details summary,
   list-style: none !important;
 }
 .accordion__button:hover,
-details summary:hover {
+.product__accordion summary:hover,
+.accordion summary:hover,
+details[is="accordion-details"] summary:hover {
   background: linear-gradient(135deg, var(--al-surface-3), var(--al-surface-4)) !important;
   border-color: var(--al-accent-border) !important;
   color: var(--al-text-1) !important;
 }
 
 /* Open state — accent left border */
-details[open] summary,
+.product__accordion[open] summary,
+.accordion details[open] summary,
+details[is="accordion-details"][open] summary,
 .accordion__button[aria-expanded="true"],
 .accordion--open .accordion__button {
   background: linear-gradient(135deg, var(--al-surface-3), var(--al-surface-4)) !important;
@@ -427,7 +474,9 @@ details[open] summary,
 
 /* Chevron/arrow indicator */
 .accordion__button::after,
-details summary::after {
+.product__accordion summary::after,
+.accordion details summary::after,
+details[is="accordion-details"] summary::after {
   content: '';
   display: inline-block;
   width: 10px;
@@ -438,17 +487,21 @@ details summary::after {
   transition: transform var(--al-transition);
   flex-shrink: 0;
 }
-details[open] summary::after,
+.product__accordion[open] summary::after,
+.accordion details[open] summary::after,
+details[is="accordion-details"][open] summary::after,
 .accordion--open .accordion__button::after {
   transform: rotate(-135deg);
   border-color: var(--al-accent);
 }
 
-/* Remove native marker */
+/* Remove native marker — scoped to accordion elements */
 .accordion summary::marker,
 .accordion summary::-webkit-details-marker,
-details summary::marker,
-details summary::-webkit-details-marker {
+.product__accordion summary::marker,
+.product__accordion summary::-webkit-details-marker,
+details[is="accordion-details"] summary::marker,
+details[is="accordion-details"] summary::-webkit-details-marker {
   display: none !important;
   content: '' !important;
   color: transparent !important;
@@ -461,9 +514,11 @@ details.product__accordion summary > svg,
   display: none !important;
 }
 
-/* Content panel */
+/* Content panel — scoped to accordion details, guarded against dropdown panels */
 .accordion__content,
-details > div,
+.product__accordion > div:not(.dropdown),
+.accordion details > div:not(.dropdown),
+details[is="accordion-details"] > div:not(.dropdown),
 details > .accordion__content {
   background: var(--al-surface-2) !important;
   border: 1px solid var(--al-border) !important;
@@ -477,19 +532,23 @@ details > .accordion__content {
 }
 .accordion__content ul,
 .accordion__content ol,
-details > div ul,
-details > div ol {
+.product__accordion > div:not(.dropdown) ul,
+.product__accordion > div:not(.dropdown) ol,
+details[is="accordion-details"] > div:not(.dropdown) ul,
+details[is="accordion-details"] > div:not(.dropdown) ol {
   padding-left: 1.25rem !important;
   margin: 0.5rem 0 !important;
 }
 .accordion__content li,
-details > div li {
+.product__accordion > div:not(.dropdown) li,
+details[is="accordion-details"] > div:not(.dropdown) li {
   color: var(--al-text-2) !important;
   margin-bottom: 6px !important;
   line-height: 1.65 !important;
 }
 .accordion__content strong,
-details > div strong {
+.product__accordion > div:not(.dropdown) strong,
+details[is="accordion-details"] > div:not(.dropdown) strong {
   color: var(--al-text-1) !important;
   font-weight: 600 !important;
 }
@@ -845,6 +904,35 @@ details > div strong {
   color: var(--al-text-1) !important;
 }
 
+/* ─── MOBILE NAV DRAWER ──────────────────────────────────── */
+/* Scope drawer styles to .drawer__menu-item only — prevents bleed into other components */
+.drawer__menu-item {
+  color: var(--al-text-1) !important;
+  font-family: var(--al-font-display) !important;
+  transition: color var(--al-transition) !important;
+}
+.drawer__menu-item:hover {
+  color: var(--al-accent) !important;
+}
+
+/* Submenu panels — dark background to prevent white/light bleed */
+.drawer__submenu {
+  background: var(--al-surface) !important;
+}
+.drawer__submenu button[data-close] {
+  color: var(--al-text-2) !important;
+}
+
+/* Drawer scrollable area */
+.drawer__scrollable {
+  background: var(--al-surface) !important;
+}
+
+/* Drawer menu groups — consistent dark surface */
+.drawer__menu-group {
+  border-bottom: 1px solid var(--al-border-subtle) !important;
+}
+
 /* ─── CART DRAWER ─────────────────────────────────────────── */
 .cart-drawer,
 .drawer__inner {
@@ -1176,8 +1264,8 @@ details > div strong {
   .number-counter__item { border-right: none !important; border-bottom: 1px solid var(--al-border) !important; }
   .number-counter__item:last-child { border-bottom: none !important; }
   [class*="multicolumn"] .card { padding: 20px 16px !important; }
-  .accordion__button, details summary { padding: 16px !important; font-size: 0.875rem !important; }
-  .accordion__content, details > div { padding: 16px !important; }
+  .accordion__button, .product__accordion summary, details[is="accordion-details"] summary { padding: 16px !important; font-size: 0.875rem !important; }
+  .accordion__content, .product__accordion > div:not(.dropdown), details[is="accordion-details"] > div:not(.dropdown) { padding: 16px !important; }
   .newsletter__form { flex-direction: column !important; }
   .newsletter__form .button { width: 100% !important; }
 }

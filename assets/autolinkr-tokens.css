@@ -200,13 +200,42 @@ a:hover { color: var(--al-accent-hover); }
 .announcement-bar {
   background-color: var(--al-accent) !important;
   border-bottom: none !important;
+  border-radius: 0 !important;
 }
 .announcement-bar a,
+.announcement-bar p,
+.announcement-bar span,
 .announcement-bar__message {
   color: #fff !important;
+  font-weight: 700 !important;
 }
 .js .shopify-section-group-header-group .section.section--first-rounded {
   background-color: var(--al-accent) !important;
+  border-radius: 0 !important;
+}
+
+/* Topbar section & all children — force blue, prevent dark bleed */
+.topbar-section,
+[id*="announcement-bar"] .announcement-bar {
+  background: #3B8EF8 !important;
+}
+.topbar-section > *,
+.topbar__end,
+.topbar__start,
+.topbar-section .social-icons,
+.topbar-section .localization,
+.topbar-section .localization__item,
+.topbar-section .localization-form,
+.topbar-section .localization-selector {
+  background: transparent !important;
+}
+
+/* All announcement bar descendants — transparent bg to prevent dark bleed in carousel/marquee items */
+.announcement-bar *,
+.announcement-bar-section *,
+[class*="announcement-bar"] * {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* ─── BUTTONS ────────────────────────────────────────────── */
@@ -1026,7 +1055,7 @@ details > div strong {
 }
 
 /* ─── ANNOUNCEMENT BAR LINKS ──────────────────────────────── */
-.announcement-bar a { color: #fff !important; }
+.announcement-bar a { color: #fff !important; font-weight: 700 !important; }
 
 /* ─── HEADER FIX AFTER SCROLL ─────────────────────────────── */
 .header--border-bottom,

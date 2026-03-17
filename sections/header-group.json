@@ -55,14 +55,14 @@
         "show_navigation": false,
         "direction": "left",
         "speed": 20,
-        "color_text": "#f5f5f7",
-        "color_background": "#0d0d0f",
+        "color_text": "#ffffff",
+        "color_background": "#3B8EF8",
         "gradient_background": "",
-        "color_highlight": "#ffddbf",
+        "color_highlight": "#ffffff",
         "gradient_highlight": "",
         "hide_homepage": false,
         "full_width": true,
-        "rounded": true
+        "rounded": false
       }
     },
     "header": {

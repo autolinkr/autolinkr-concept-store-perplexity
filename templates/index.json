@@ -47,7 +47,7 @@
         "eyebrow": "50,000+ Drivers Can't Be Wrong",
         "heading": "Stream Anything. Drive Wirelessly. Upgrade in 60 Seconds.",
         "subheading": "AutoLinkr transforms your factory CarPlay into a wireless streaming powerhouse \u2014 Netflix, YouTube, Google Play \u2014 all on your existing screen.",
-        "cta_label": "Shop AutoLinkr Pro\u2122 \u2014 $79.99",
+        "cta_label": "Get AutoLinkr Pro\u2122",
         "cta_link": "/products/the-autolinkr-pro",
         "ghost_label": "Check Compatibility",
         "ghost_link": "/pages/compatibility",
@@ -331,63 +331,6 @@
         "color_highlight": "#3B8EF8",
         "color_button_text": "#ffffff",
         "color_button_background": "#3B8EF8"
-      }
-    },
-    "number-counter": {
-      "type": "number-counter",
-      "blocks": {
-        "c1": {
-          "type": "counter",
-          "settings": {
-            "title": "Happy Drivers",
-            "number": "50K+",
-            "unit": "",
-            "duration": 2
-          }
-        },
-        "c2": {
-          "type": "counter",
-          "settings": {
-            "title": "Average Rating",
-            "number": "4.8",
-            "unit": "\u2605",
-            "duration": 2
-          }
-        },
-        "c3": {
-          "type": "counter",
-          "settings": {
-            "title": "Setup Time",
-            "number": "60",
-            "unit": "sec",
-            "duration": 2
-          }
-        },
-        "c4": {
-          "type": "counter",
-          "settings": {
-            "title": "Day Guarantee",
-            "number": "30",
-            "unit": "",
-            "duration": 2
-          }
-        }
-      },
-      "block_order": [
-        "c1",
-        "c2",
-        "c3",
-        "c4"
-      ],
-      "settings": {
-        "columns": 4,
-        "text_alignment": "center",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "color_text": "#F7F7F8",
-        "color_background": "#080809",
-        "gradient_background": "",
-        "color_highlight": "#3B8EF8"
       }
     },
     "product-comparison": {
@@ -690,7 +633,6 @@
     "lifestyle-gallery-home",
     "multicolumn-why",
     "collection-list",
-    "number-counter",
     "product-comparison",
     "testimonials-banner",
     "dash-intro-header",

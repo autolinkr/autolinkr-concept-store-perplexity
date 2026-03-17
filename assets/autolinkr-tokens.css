@@ -2030,3 +2030,909 @@ magnet-element .btn-text,
   border-radius: 0 !important;
   color: #FFFFFF !important;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   COMMIT 1 — CRITICAL MOBILE LAYOUT FIXES
+   • Marquee overflow fix (horizontal scroll prevention)
+   • Remove sticky newsletter popup on mobile
+   • Hide product image thumbnails on mobile
+   • ATC above fold: cap image height on mobile
+═══════════════════════════════════════════════════════════ */
+
+/* ── 1A. Marquee overflow fix — prevent horizontal body scroll ── */
+.scrolling-text,
+[class*="marquee"],
+.announcement-bar,
+.topbar-section,
+.scrolling-text__track,
+.marquee__content,
+[data-marquee],
+.scrolling-text .section,
+.shopify-section:has(.scrolling-text) {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+/* Belt-and-suspenders: prevent ANY section from expanding body width */
+.shopify-section {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* ── 1B. Remove sticky newsletter popup globally ── */
+newsletter-modal,
+#NewsletterModal,
+.newsletter-modal,
+[id*="newsletter-modal"],
+[id*="NewsletterModal"],
+.newsletter-section,
+#shopify-section-newsletter-popup,
+[id^="shopify-section-"][id*="newsletter"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* ── 1C. Mobile product page — hide image thumbnails, cap image height ── */
+@media (max-width: 749px) {
+  /* Hide thumbnail strip — Concept theme thumbnails */
+  .product__media-list--thumbnails,
+  .thumbnail-slider,
+  .thumbnail-list,
+  [class*="thumbnail"],
+  .product__media-gallery .media-list--thumbnails,
+  .product-media-container .thumbnail,
+  .product__modal-opener,
+  .product__media-toggle,
+  .product-gallery__thumbnails,
+  .product-single__thumbnails,
+  .al-pdp-gallery__thumbs,
+  .al-pdp-gallery__thumb {
+    display: none !important;
+  }
+
+  /* Cap product main image height so ATC is visible above/near fold */
+  .product__media,
+  .product__media-wrapper,
+  .product-media-container,
+  .product__column-images,
+  .product__photos,
+  .al-pdp-gallery,
+  .al-pdp-gallery__main,
+  .product__media-container {
+    max-height: 56vw !important; /* 56% viewport width = good portrait crop */
+    overflow: hidden !important;
+  }
+  .product__media img,
+  .product__media-wrapper img,
+  .al-pdp-gallery__img,
+  .product__media-container img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 56vw !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  /* Ensure product info column (title, price, ATC) comes right after image */
+  .product__column-sticky,
+  .product__info-container,
+  .product__info-wrapper,
+  .al-pdp-info {
+    padding-top: 12px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Make hero stats bar 2x2 grid on mobile */
+  .number-counter .multicolumn,
+  .number-counter .grid,
+  .counter-stats,
+  [class*="counter"] .grid,
+  .number-counter__items {
+    grid-template-columns: repeat(2, 1fr) !important;
+    display: grid !important;
+  }
+}
+
+/* ── 1D. Stronger mobile ATC above-fold fix (patch) ── */
+@media (max-width: 749px) {
+  /* Concept theme specific: hide all thumbnail/media-list wrappers */
+  .product__media-list,
+  .product__media-list--thumbnails,
+  .product-media-thumbs,
+  .thumbnail-list,
+  [class*="thumbnail-list"],
+  [class*="media-thumbs"],
+  .product-gallery__nav,
+  .product__gallery-thumbnails,
+  .product__media-icons,
+  .product__media-badges,
+  .product__xr-button,
+  .product__media-toggle {
+    display: none !important;
+  }
+
+  /* Concept theme: main image container — strict max height */
+  .product__column-images,
+  .product__column-images .product__media-container,
+  .product__media-gallery,
+  .product__media-wrapper .media,
+  .product__media-wrapper,
+  .product__primary-image,
+  .product-featured-media,
+  .product__featured-image,
+  .product__media,
+  .product-single__media-group {
+    max-height: 55vw !important;
+    min-height: unset !important;
+    overflow: hidden !important;
+  }
+
+  /* Force product layout columns to be single column with tight stacking */
+  .product__columns,
+  .product-page,
+  .product__column-images + .product__column-sticky,
+  .main-product .grid {
+    gap: 0 !important;
+  }
+
+  /* Concept main-product specific: collapse the media section top-padding */
+  .main-product {
+    padding-top: 0 !important;
+  }
+  .product__block-swatch,
+  .product-info__container,
+  .product__info-container {
+    margin-top: 0 !important;
+    padding-top: 8px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COMMIT 2 — COLOR & BUTTON FIXES
+   • Sold Out button → medium gray disabled style
+   • Ghost hero CTA → frosted-glass visible style  
+   • Sticky bar text/icon contrast
+   • Stats label opacity raised
+   • Strikethrough price readability
+   • Announcement bar slightly dimmed vs primary CTA
+   • Floating social sidebar removed desktop + mobile
+═══════════════════════════════════════════════════════════ */
+
+/* ── 2A. Sold Out button → gray disabled state ── */
+/* Concept theme: ATC button when disabled/sold-out */
+.button--primary[disabled],
+.button--primary:disabled,
+button[name="add"][disabled],
+button[name="add"]:disabled,
+.button.button--primary[disabled],
+.product-form__submit[disabled],
+.product-form__submit:disabled {
+  background: #4A4A55 !important;
+  background-color: #4A4A55 !important;
+  color: rgba(255, 255, 255, 0.70) !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important; /* override default 0.5 disabled opacity — we control it */
+  transform: none !important;
+}
+.button--primary[disabled] .btn-text,
+.button--primary:disabled .btn-text,
+button[name="add"][disabled] .btn-text,
+button[name="add"]:disabled .btn-text {
+  color: rgba(255, 255, 255, 0.70) !important;
+}
+.button--primary[disabled] .btn-fill,
+.button--primary:disabled .btn-fill {
+  background: transparent !important;
+}
+
+/* ── 2B. Ghost hero CTA — frosted-glass visible style ── */
+/* al-brand-hero ghost/secondary CTA */
+.al-bh__ghost,
+.al-hero__ghost,
+[class*="al-bh__cta--ghost"],
+[class*="al-hero__cta--ghost"],
+.al-bh__cta--secondary,
+.hero-ghost-btn,
+/* Also target generic secondary button inside hero sections */
+.al-brand-hero .button--secondary,
+.al-brand-hero a.button--secondary,
+[data-section-type="al-brand-hero"] .button--secondary {
+  border: 1.5px solid rgba(255, 255, 255, 0.50) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #F7F7F8 !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+.al-bh__ghost:hover,
+.al-hero__ghost:hover,
+.al-brand-hero .button--secondary:hover {
+  border-color: rgba(255, 255, 255, 0.75) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+}
+
+/* ── 2C. Sticky ATC bar — ensure text/icon are white on blue bg ── */
+/* The sticky buy bar at bottom of product page — text must be white */
+.facets-sticky,
+.facets-sticky__inner,
+[class*="sticky-atc"],
+[class*="sticky_atc"],
+[class*="sticky-buy"],
+.al-sticky-atc,
+.al-sticky-atc__inner,
+.product-sticky-form,
+/* Concept theme sticky element */
+sticky-product-form,
+sticky-product-form .button,
+sticky-product-form .button--primary {
+  color: #ffffff !important;
+}
+sticky-product-form .button--primary,
+sticky-product-form button.button--primary {
+  background: var(--al-accent) !important;
+  color: #ffffff !important;
+}
+sticky-product-form .button .btn-text,
+sticky-product-form button .btn-text {
+  color: #ffffff !important;
+}
+/* Force icon SVG strokes white inside sticky bar */
+sticky-product-form .icon,
+sticky-product-form svg,
+sticky-product-form svg path,
+sticky-product-form svg circle {
+  stroke: #ffffff !important;
+  fill: none !important;
+  color: #ffffff !important;
+}
+
+/* ── 2D. Stats labels — raise opacity from ~50% to 75%+ ── */
+.number-counter p,
+.number-counter__item p,
+.number-counter [class*="label"],
+.number-counter .text-sm,
+.number-counter .text-xs,
+/* Hero stats row labels */
+.al-bh__stat-label,
+.al-hero__stat-label,
+[class*="stat-label"],
+[class*="stats-label"],
+[class*="counter-label"] {
+  color: rgba(255, 255, 255, 0.78) !important;
+  opacity: 1 !important;
+}
+
+/* ── 2E. Strikethrough / compare price — 14px, 55% opacity ── */
+.price-item--regular,
+.price__regular .price-item,
+s.price-item,
+del.price-item,
+[class*="compare-at"],
+[class*="compare_at"],
+.price__compare-at,
+.compare-price,
+.was-price,
+span[data-compare-price],
+.price--on-sale .price__regular {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-decoration: line-through !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+}
+
+/* ── 2F. Announcement bar blue — slightly dimmer than CTA (#2E7FE8) ── */
+.topbar-section {
+  background: #2E7FE8 !important;
+  background-color: #2E7FE8 !important;
+}
+.announcement-bar {
+  background: #2E7FE8 !important;
+}
+
+/* ── 2G. Remove floating social media sidebar (desktop + mobile) ── */
+/* The autolinkr-header.liquid floating social sidebar */
+.al-social-float,
+.al-header__social-float,
+[class*="social-float"],
+[class*="floating-social"],
+.header-social-sidebar,
+.social-sidebar,
+/* Any fixed/absolute social icon container */
+.header .social-icons:not(.footer__socials .social-icons),
+.social-icons--floating,
+[class*="social"][class*="fixed"],
+[class*="social"][class*="absolute"] {
+  display: none !important;
+}
+
+/* ── 2H. Warm headline white for hero ── */
+.al-bh__heading,
+.al-brand-hero h1,
+.al-brand-hero h2,
+[class*="al-bh__head"],
+[class*="al-hero__head"] {
+  color: #F5F5F0 !important; /* warm white, reduces OLED harshness */
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COMMIT 3 — ICON SYSTEM + TOUCH TARGETS + ACCORDION +/-
+   • All carousel dots/arrows: min 44×44px tap area
+   • Accordion summary: replace chevron with +/- 
+   • Icon system: consistent sizing and color for product feature icons
+   • Touch targets for announcement bar prev/next
+═══════════════════════════════════════════════════════════ */
+
+/* ── 3A. Universal 44×44px touch target for small interactive elements ── */
+/* Carousel/slider dots */
+.splide__pagination__page,
+.slider__dot,
+[class*="slider-dot"],
+[class*="pagination__page"],
+[class*="swiper-pagination-bullet"],
+.slick-dots li button,
+.dot-nav__button,
+[class*="carousel"] [class*="dot"],
+[class*="slider"] [class*="dot"] {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+/* The visible dot itself — stays small, tap area is large via ::before */
+.splide__pagination__page::before,
+.slider__dot::before,
+[class*="pagination__page"]::before,
+[class*="swiper-pagination-bullet"]::before {
+  content: '' !important;
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  transition: background 200ms, transform 200ms !important;
+}
+.splide__pagination__page.is-active::before,
+.splide__pagination__page[aria-selected="true"]::before,
+[class*="pagination__page"].is-active::before,
+.slider__dot.active::before {
+  background: var(--al-accent) !important;
+  transform: scale(1.3) !important;
+}
+
+/* Announcement bar prev/next arrows — min 44×44 */
+.announcement-bar__prev,
+.announcement-bar__next,
+.marquee__prev,
+.marquee__next,
+[class*="marquee"] [class*="prev"],
+[class*="marquee"] [class*="next"],
+[class*="announcement"] [class*="prev"],
+[class*="announcement"] [class*="next"] {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+/* ── 3B. Accordion — replace chevron indicator with + / - ── */
+/*
+ * This overrides the chevron (rotate 45deg) approach we had before.
+ * Use +/- character approach which is more universally readable.
+ * Scoped only to content accordions (not nav dropdowns).
+ */
+
+/* Remove the old chevron pseudo-element */
+.accordion__button::after,
+.accordion summary::after,
+.collapsible summary::after,
+[class*="collapsible-tab"] summary::after,
+[class*="collapsible-content"] summary::after,
+.product-accordion summary::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Add + / - via dedicated pseudo-element with cleaner styling */
+.accordion__button::before,
+.accordion summary::before,
+.collapsible summary::before,
+[class*="collapsible-tab"] summary::before,
+[class*="collapsible-content"] summary::before,
+.product-accordion summary::before {
+  content: none !important; /* suppress ::before, use ::after below */
+}
+
+/* Inject +/- using a new approach — target the flex justify-between layout */
+/* We'll add an explicit icon that's always last in the summary */
+.accordion summary,
+.collapsible summary,
+[class*="collapsible-tab"] summary,
+[class*="collapsible-content"] summary,
+.product-accordion summary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+/* + icon on closed state */
+.accordion summary::after,
+.collapsible summary::after,
+[class*="collapsible-tab"] summary::after,
+[class*="collapsible-content"] summary::after,
+.product-accordion summary::after {
+  content: '+' !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid var(--al-border-bright) !important;
+  color: var(--al-text-3) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  font-family: var(--al-font-body) !important;
+  transition: all var(--al-transition) !important;
+  flex-shrink: 0 !important;
+}
+/* - icon on open state */
+.accordion details[open] summary::after,
+.collapsible details[open] summary::after,
+[class*="collapsible-content"] details[open] summary::after,
+.accordion--open .accordion__button::after,
+.accordion summary[aria-expanded="true"]::after,
+.collapsible summary[aria-expanded="true"]::after {
+  content: '−' !important; /* proper minus/en-dash, not hyphen */
+  border-color: var(--al-accent) !important;
+  color: var(--al-accent) !important;
+  background: var(--al-accent-dim) !important;
+}
+
+/* Guard nav — strip all pseudo-elements from nav summary */
+header nav summary::after,
+header nav summary::before,
+.al-nav summary::after,
+.al-nav summary::before,
+.header summary::after,
+.header summary::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* ── 3C. Icon system — consistent product feature icon sizing ── */
+/* Product text blocks with icons (feature bullets near ATC) */
+.product__text-inner .icon,
+.product__text-inner svg,
+.product__text-inner img,
+[class*="product__text"] .icon,
+[class*="product__text"] svg {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  color: var(--al-accent) !important;
+  stroke: var(--al-accent) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Multicolumn feature card icons — uniform 24px */
+.multicolumn-list__item .icon,
+.multicolumn-list__item svg,
+[class*="multicolumn"] .icon-wrapper svg,
+[class*="multicolumn"] .column-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--al-accent) !important;
+  stroke: var(--al-accent) !important;
+}
+
+/* Emoji in product feature blocks — consistent sizing */
+.product__text-inner .icon-emoji,
+[class*="product__text"] [class*="emoji"] {
+  font-size: 18px !important;
+  line-height: 1 !important;
+  min-width: 22px !important;
+  text-align: center !important;
+}
+
+/* Ensure feature text content proper color */
+.product__text .product__text-inner span:last-child,
+.product__text .product__text-inner p {
+  color: var(--al-text-2) !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.5 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COMMIT 4 — TYPOGRAPHY UPGRADE + FOOTER FLAT COLUMNS
+   • Typography: General Sans as display, refined type scale
+   • Footer: remove card/box wrappers from link columns
+   • Footer: flat link columns with clean spacing
+   • Footer accordion: remove border/bg on mobile summary
+═══════════════════════════════════════════════════════════ */
+
+/* ── 4A. Typography system upgrade ── */
+/* Hero / H1 — display with tight tracking, warm white */
+h1,
+.h1,
+[class*="__heading"],
+.section-header__title,
+.al-bh__heading,
+.al-brand-hero h1,
+.main-product .product__title,
+.product__title {
+  font-family: var(--al-font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.1 !important;
+}
+
+/* H2 — section headings */
+h2, .h2 {
+  font-family: var(--al-font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.15 !important;
+}
+
+/* H3 — subheadings */
+h3, .h3 {
+  font-family: var(--al-font-display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.2 !important;
+}
+
+/* Body — Inter for readability at small sizes */
+body,
+p,
+li,
+.rte,
+.rte p {
+  font-family: var(--al-font-body) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Eyebrow labels — all caps, tracked, accent color */
+.eyebrow,
+[class*="eyebrow"],
+.label--tag,
+[class*="__label"],
+.section-label,
+[class*="section-label"] {
+  font-family: var(--al-font-display) !important;
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: var(--al-accent) !important;
+}
+
+/* Numbers in stats / counters — tabular numerals, display font */
+.number-counter .heading,
+.counter-heading,
+[class*="counter"] .number,
+[class*="stat"] .number,
+[class*="stat"] strong {
+  font-family: var(--al-font-display) !important;
+  font-variant-numeric: tabular-nums !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+/* Product price — display font, tight tracking */
+.price__current,
+.price-item--sale,
+.price-item,
+.price__sale,
+.al-pdp-info__price,
+.product__price .price,
+.price--on-sale .price__current {
+  font-family: var(--al-font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Nav items already styled but ensure font consistency */
+header .menu__item,
+.al-nav__trigger,
+.al-nav__link {
+  font-family: var(--al-font-display) !important;
+}
+
+/* ── 4B. Footer — remove card/box wrappers on link columns ── */
+/*
+ * The Concept theme wraps each footer link group in a <details> element
+ * with a styled summary. On desktop, these show as bordered card-like boxes.
+ * We want flat link columns — no background, no border card, just clean lists.
+ */
+
+/* Remove card/box styling from footer column wrappers */
+.footer .details,
+.footer details,
+.footer__accordions .details,
+.footer__accordions details,
+.footer__item--[id] details,
+[class*="footer__item"] details,
+[class*="footer__item"],
+.footer__accordions [class*="footer__item"] {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Footer column summary — heading style ONLY, no interactive box */
+.footer .details__summary,
+.footer details > summary,
+.footer__accordions summary,
+[class*="footer__item"] summary,
+[class*="footer__item"] .details__summary {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-bottom: 16px !important;
+  cursor: default !important;
+}
+.footer .details__summary .heading,
+.footer details summary .heading,
+.footer__accordions summary .heading,
+[class*="footer__item"] summary .heading {
+  color: var(--al-text-1) !important;
+  font-family: var(--al-font-display) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+/* Remove expand/collapse chevron from footer (not accordions here) */
+.footer .details__summary .icon,
+.footer details summary .icon,
+.footer__accordions summary .icon,
+.footer__accordions summary svg,
+[class*="footer__item"] summary .icon,
+[class*="footer__item"] summary svg {
+  display: none !important;
+}
+/* On desktop: always show the details content (not collapsed) */
+@media (min-width: 750px) {
+  .footer details,
+  .footer .details,
+  .footer__accordions details {
+    display: block !important;
+  }
+  .footer details .details__content,
+  .footer .details .details__content,
+  .footer__accordions details .details__content {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* Footer link list — clean flat list, adequate tap area on mobile */
+.footer .details__content ul,
+.footer .details__content li,
+.footer details .details__content ul,
+.footer details .details__content li {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+.footer .details__content li {
+  padding-bottom: 2px !important;
+}
+.footer .details__content a,
+.footer details .details__content a {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-size: 0.875rem !important;
+  line-height: 2.4 !important; /* ~38px tap height — close to 44px */
+  display: block !important;
+  text-decoration: none !important;
+  transition: color 200ms !important;
+}
+.footer .details__content a:hover,
+.footer details .details__content a:hover {
+  color: #F7F7F8 !important;
+}
+
+/* On mobile: keep accordion behavior but strip the box look */
+@media (max-width: 749px) {
+  .footer details summary {
+    cursor: pointer !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid var(--al-border-subtle) !important;
+    margin-bottom: 0 !important;
+  }
+  /* Add a simple +/- to footer accordions on mobile */
+  .footer details summary::after {
+    content: '+' !important;
+    display: inline-block !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    color: var(--al-text-3) !important;
+    margin-left: auto !important;
+    line-height: 1 !important;
+  }
+  .footer details[open] summary::after {
+    content: '−' !important;
+    color: var(--al-accent) !important;
+  }
+  .footer details .details__content {
+    padding: 12px 0 16px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COMMIT 5 — COMPARISON TABLE MOBILE + TRUST BADGE FIX
+   • Comparison table: max 2 products on mobile, horizontal scroll
+   • Trust badge copy already fixed in footer-group.json
+   • Social links already fixed in settings_data.json
+═══════════════════════════════════════════════════════════ */
+
+/* ── 5A. Comparison table — mobile horizontal scroll + 2-column ── */
+@media (max-width: 749px) {
+  /* Make comparison table section scrollable on mobile */
+  .product-comparison,
+  .comparison-table,
+  [class*="product-comparison"],
+  [class*="comparison-table"],
+  .product-comparison .page-width {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    /* Scroll hint shadow on right edge */
+    background-image: linear-gradient(to right, var(--al-bg), var(--al-bg)),
+                      linear-gradient(to right, rgba(0,0,0,0), rgba(59,142,248,0.15));
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+    background-color: var(--al-bg) !important;
+    background-attachment: local, scroll;
+    background-size: 30px 100%, 30px 100%;
+  }
+
+  /* Comparison grid — limit to 2 columns max on mobile */
+  .comparison-table.grid,
+  .product-comparison .grid,
+  comparison-table.grid,
+  [is="comparison-table"] {
+    grid-template-columns: 180px 1fr 1fr !important; /* label + 2 products */
+    min-width: 480px !important; /* scroll kicks in below this */
+  }
+
+  /* Comparison column — min width so content isn't squished */
+  .comparison-table__column,
+  .product-comparison__column {
+    min-width: 140px !important;
+  }
+
+  /* Add "Swipe to compare →" hint below the table */
+  .product-comparison::after,
+  [class*="product-comparison"]::after {
+    content: 'Swipe to compare →' !important;
+    display: block !important;
+    text-align: center !important;
+    font-size: 0.75rem !important;
+    color: var(--al-text-3) !important;
+    padding: 8px 0 !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  /* Comparison table view-product buttons — full width on mobile */
+  .comparison-table .button,
+  .product-comparison .button {
+    width: 100% !important;
+    font-size: 0.8125rem !important;
+    padding: 10px 12px !important;
+  }
+}
+
+/* ── 5B. Comparison table — desktop: keep 2-product max for Pro/Elite ── */
+/* For the product page comparison (Pro vs Elite only — no Tablet) 
+   This is already handled by templates having only 2 products,
+   but add a safeguard for any 3-column comparison to be scrollable */
+@media (max-width: 1023px) {
+  .comparison-table.grid,
+  [is="comparison-table"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* ── 5C. Unify shipping claim in announcement bar ── */
+/* The announcement bar text "Free Shipping on All Orders" is set in Shopify admin.
+   CSS cannot change Liquid text, but we ensure the styling is consistent:
+   Any shipping-related text in trust badges uses our brand font */
+[class*="shipping"] p,
+[class*="trust"] p,
+.al-trust-item p {
+  font-family: var(--al-font-body) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  color: var(--al-text-2) !important;
+  margin: 0 !important;
+}
+
+/* ── 5D. Remove the multicolumn-with-icons trust strip from footer-group 
+    (the noisy Customer Service / Shipping / Refer section) 
+    This section is in footer-group.json — we hide it via CSS since 
+    it's baked into the footer group alongside real footer content ── */
+.footer-group .multicolumn-with-icons,
+#shopify-section-sections--multicolumn-with-icons,
+.footer-group > .shopify-section:first-child .multicolumn-with-icons,
+/* More specific: hide any multicolumn section inside the footer group */
+.footer-group .section:has(.multicolumn-list) {
+  display: none !important;
+}
+
+/* But preserve the actual footer (second section in footer group) */
+.footer-group .footer,
+.footer-group .section:has(.footer) {
+  display: block !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PATCH — SOLD OUT NOTIFY BUTTON GRAY (HIGH SPECIFICITY FIX)
+   • .product-form__alert is the "Sold Out - Notify me" button
+   • Must override button--primary blue with medium gray
+═══════════════════════════════════════════════════════════ */
+
+/* Sold Out / Back In Stock notify button — gray disabled style */
+.product-form__alert,
+.product-form__alert.button,
+.product-form__alert.button--primary,
+button.product-form__alert,
+a.product-form__alert,
+.buy-buttons .product-form__alert,
+.product-form__buttons .product-form__alert,
+.product-form .product-form__alert {
+  background: #4A4A55 !important;
+  background-color: #4A4A55 !important;
+  color: rgba(255, 255, 255, 0.70) !important;
+  box-shadow: none !important;
+  border: none !important;
+  cursor: default !important;
+  pointer-events: none !important; /* non-interactive when product unavailable */
+  transform: none !important;
+  opacity: 1 !important;
+}
+.product-form__alert .btn-text,
+.product-form__alert.button .btn-text,
+.product-form__alert.button--primary .btn-text {
+  color: rgba(255, 255, 255, 0.70) !important;
+}
+.product-form__alert .btn-fill,
+.product-form__alert.button .btn-fill {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+/* Also target the main submit button when in disabled/sold-out state */
+.product-form__submit[disabled],
+.product-form__submit:disabled,
+button.product-form__submit[disabled] {
+  background: #4A4A55 !important;
+  background-color: #4A4A55 !important;
+  color: rgba(255, 255, 255, 0.70) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  cursor: not-allowed !important;
+}

@@ -246,8 +246,17 @@ button[type="submit"],
   font-family: var(--al-font-display) !important;
   font-weight: 600 !important;
   letter-spacing: 0.01em !important;
-  border-radius: var(--al-r-md) !important;
+  border-radius: 9999px !important;
   transition: all var(--al-transition) !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* Neutralize Concept's btn-fill animation span (prevents white bloom on hover) */
+.button .btn-fill,
+.btn .btn-fill,
+button .btn-fill {
+  background: transparent !important;
 }
 
 .button--primary,
@@ -255,31 +264,53 @@ button[type="submit"],
 .al-btn-primary {
   background: var(--al-accent) !important;
   color: #fff !important;
-  border: 1px solid transparent !important;
-  box-shadow: var(--al-shadow-accent) !important;
+  border: none !important;
+  box-shadow: 0 0 20px rgba(59, 142, 248, 0.35), 0 4px 16px rgba(59, 142, 248, 0.18) !important;
+  padding: 14px 32px !important;
+  font-size: 0.9375rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
 }
 .button--primary:hover,
 .al-btn-primary:hover {
   background: var(--al-accent-hover) !important;
-  box-shadow: 0 6px 32px rgba(59, 142, 248, 0.35) !important;
-  transform: translateY(-1px) !important;
+  box-shadow: 0 0 32px rgba(59, 142, 248, 0.55), 0 6px 24px rgba(59, 142, 248, 0.30) !important;
+  transform: translateY(-2px) !important;
 }
 
 .button--secondary,
 .btn-secondary {
   background: transparent !important;
   color: var(--al-text-1) !important;
-  border: 1px solid var(--al-border-bright) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  padding: 14px 28px !important;
 }
 .button--secondary:hover {
   border-color: var(--al-accent) !important;
   color: var(--al-accent) !important;
-  background: var(--al-accent-dim) !important;
+  background: rgba(59, 142, 248, 0.08) !important;
+}
+
+/* Close (X) button — visible on dark backgrounds */
+.button--close {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+.button--close svg {
+  color: #F7F7F8 !important;
 }
 
 /* Dynamic checkout (Shop Pay etc) */
 .shopify-payment-button__button--branded {
-  border-radius: var(--al-r-md) !important;
+  border-radius: 9999px !important;
+}
+
+/* Product form buy buttons — neon glow */
+.product-form__submit,
+.shopify-payment-button__button {
+  box-shadow: 0 0 24px rgba(59, 142, 248, 0.30) !important;
 }
 
 /* ─── FORMS & EMAIL INPUTS ───────────────────────────────── */

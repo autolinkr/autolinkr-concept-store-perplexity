@@ -29,48 +29,15 @@
   opacity: {{ section.settings.image_opacity | divided_by: 100.0 }};
 }
 
-{%- liquid
-  comment
-    Use color_to_rgb to get a reliable CSS rgb() string, then inject opacity separately.
-    Always default opacity values so nil settings don't collapse to 0.
-  endcomment
-
-  assign oc   = section.settings.overlay_color | default: '#0A0A0C'
-  assign oc_r = oc | color_extract: 'red'   | default: 10
-  assign oc_g = oc | color_extract: 'green' | default: 10
-  assign oc_b = oc | color_extract: 'blue'  | default: 12
-
-  assign oa_raw  = section.settings.overlay_opacity       | default: 90
-  assign oa2_raw = section.settings.overlay_opacity_mid   | default: 55
-  assign oa3_raw = section.settings.overlay_opacity_edge  | default: 10
-  assign oa  = oa_raw  | times: 1.0 | divided_by: 100
-  assign oa2 = oa2_raw | times: 1.0 | divided_by: 100
-  assign oa3 = oa3_raw | times: 1.0 | divided_by: 100
-  assign odir = section.settings.overlay_direction | default: '105deg'
-
-  assign mc   = section.settings.overlay_color_mobile | default: '#0A0A0C'
-  assign mc_r = mc | color_extract: 'red'   | default: 10
-  assign mc_g = mc | color_extract: 'green' | default: 10
-  assign mc_b = mc | color_extract: 'blue'  | default: 12
-
-  assign ma_raw  = section.settings.overlay_opacity_mobile      | default: 30
-  assign ma2_raw = section.settings.overlay_opacity_mobile_mid  | default: 70
-  assign ma3_raw = section.settings.overlay_opacity_mobile_edge | default: 95
-  assign ma  = ma_raw  | times: 1.0 | divided_by: 100
-  assign ma2 = ma2_raw | times: 1.0 | divided_by: 100
-  assign ma3 = ma3_raw | times: 1.0 | divided_by: 100
-  assign mdir = section.settings.overlay_direction_mobile | default: '180deg'
--%}
-
 .al-bh__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(
-    {{ odir }},
-    rgba({{ oc_r }},{{ oc_g }},{{ oc_b }},{{ oa }}) 0%,
-    rgba({{ oc_r }},{{ oc_g }},{{ oc_b }},{{ oa2 }}) 50%,
-    rgba({{ oc_r }},{{ oc_g }},{{ oc_b }},{{ oa3 }}) 100%
+    105deg,
+    rgba(10,10,12,{{ section.settings.overlay_left_opacity | divided_by: 100.0 }}) 0%,
+    rgba(10,10,12,{{ section.settings.overlay_center_opacity | divided_by: 100.0 }}) 50%,
+    rgba(10,10,12,0.1) 100%
   );
 }
 
@@ -241,54 +208,23 @@
   .al-bh { min-height: {{ section.settings.min_height_mobile }}px; }
   .al-bh__overlay {
     background: linear-gradient(
-      {{ mdir }},
-      rgba({{ mc_r }},{{ mc_g }},{{ mc_b }},{{ ma }}) 0%,
-      rgba({{ mc_r }},{{ mc_g }},{{ mc_b }},{{ ma2 }}) 50%,
-      rgba({{ mc_r }},{{ mc_g }},{{ mc_b }},{{ ma3 }}) 100%
+      180deg,
+      rgba(10,10,12,0.3) 0%,
+      rgba(10,10,12,0.7) 60%,
+      rgba(10,10,12,0.95) 100%
     );
   }
   .al-bh__content { padding: var(--al-sp-16) var(--al-sp-4) var(--al-sp-12); }
   .al-bh__stat-divider { display: none; }
   .al-bh__stats { gap: 16px; }
-  /* Mobile image swap */
-  .al-bh__bg-desktop { display: none; }
-  .al-bh__bg-mobile  { display: block; }
-}
-@media (min-width: 769px) {
-  .al-bh__bg-desktop { display: block; }
-  .al-bh__bg-mobile  { display: none; }
 }
 {%- endstyle -%}
 
 <section class="al-bh">
   <div class="al-bh__bg">
-    {%- if section.settings.bg_video_url != blank -%}
-      <video autoplay muted loop playsinline class="al-bh__bg-video" style="width:100%;height:100%;object-fit:cover;opacity:{{ section.settings.image_opacity | divided_by: 100.0 }};">
-        <source src="{{ section.settings.bg_video_url }}" type="video/mp4">
-      </video>
-    {%- else -%}
-      {%- comment %} Desktop image {%- endcomment -%}
-      {%- if section.settings.bg_image_url != blank -%}
-        <img src="{{ section.settings.bg_image_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-desktop" style="width:100%;height:100%;object-fit:cover;object-position:{{ section.settings.focal_point }};opacity:{{ section.settings.image_opacity | divided_by: 100.0 }};position:absolute;inset:0;">
-      {%- elsif section.settings.background_image != blank -%}
-        {%- assign bg_url = section.settings.background_image | image_url: width: 2400 -%}
-        <img src="{{ bg_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-desktop" style="width:100%;height:100%;object-fit:cover;object-position:{{ section.settings.focal_point }};opacity:{{ section.settings.image_opacity | divided_by: 100.0 }};position:absolute;inset:0;">
-      {%- endif -%}
-      {%- comment %} Mobile image — falls back to desktop if not set {%- endcomment -%}
-      {%- if section.settings.bg_image_url_mobile != blank -%}
-        <img src="{{ section.settings.bg_image_url_mobile }}" alt="{{ section.settings.heading | escape }}" loading="eager" class="al-bh__bg-mobile" style="width:100%;height:100%;object-fit:cover;object-position:{{ section.settings.focal_point_mobile }};opacity:{{ section.settings.image_opacity | divided_by: 100.0 }};position:absolute;inset:0;">
-      {%- elsif section.settings.bg_image_mobile != blank -%}
-        {%- assign bg_mobile_url = section.settings.bg_image_mobile | image_url: width: 1200 -%}
-        <img src="{{ bg_mobile_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" class="al-bh__bg-mobile" style="width:100%;height:100%;object-fit:cover;object-position:{{ section.settings.focal_point_mobile }};opacity:{{ section.settings.image_opacity | divided_by: 100.0 }};position:absolute;inset:0;">
-      {%- else -%}
-        {%- comment %} No mobile image set — show desktop image on mobile too {%- endcomment -%}
-        {%- if section.settings.bg_image_url != blank -%}
-          <img src="{{ section.settings.bg_image_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" class="al-bh__bg-mobile" style="width:100%;height:100%;object-fit:cover;object-position:center center;opacity:{{ section.settings.image_opacity | divided_by: 100.0 }};position:absolute;inset:0;">
-        {%- elsif section.settings.background_image != blank -%}
-          {%- assign bg_url_m = section.settings.background_image | image_url: width: 1200 -%}
-          <img src="{{ bg_url_m }}" alt="{{ section.settings.heading | escape }}" loading="eager" class="al-bh__bg-mobile" style="width:100%;height:100%;object-fit:cover;object-position:center center;opacity:{{ section.settings.image_opacity | divided_by: 100.0 }};position:absolute;inset:0;">
-        {%- endif -%}
-      {%- endif -%}
+    {%- if section.settings.background_image != blank -%}
+      {%- assign bg_url = section.settings.background_image | image_url: width: 2400 -%}
+      <img src="{{ bg_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-img">
     {%- endif -%}
   </div>
   <div class="al-bh__overlay"></div>
@@ -347,59 +283,17 @@
   "name": "AL — Brand Hero",
   "tag": "section",
   "settings": [
-    { "type": "header", "content": "Desktop Background" },
-    { "type": "url", "id": "bg_image_url", "label": "Desktop image URL (CDN)" },
-    { "type": "image_picker", "id": "background_image", "label": "Desktop image (Shopify upload)" },
-    { "type": "select", "id": "focal_point", "label": "Desktop focal point", "options": [
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "select", "id": "focal_point", "label": "Image focal point", "options": [
         {"value": "center center", "label": "Center"},
         {"value": "left center", "label": "Left"},
         {"value": "right center", "label": "Right"},
         {"value": "center top", "label": "Top"},
         {"value": "70% center", "label": "Right-center"}
       ], "default": "center center" },
-    { "type": "header", "content": "Mobile Background" },
-    { "type": "paragraph", "content": "Leave blank to use the desktop image on mobile." },
-    { "type": "url", "id": "bg_image_url_mobile", "label": "Mobile image URL (CDN)" },
-    { "type": "image_picker", "id": "bg_image_mobile", "label": "Mobile image (Shopify upload)" },
-    { "type": "select", "id": "focal_point_mobile", "label": "Mobile focal point", "options": [
-        {"value": "center center", "label": "Center"},
-        {"value": "left center", "label": "Left"},
-        {"value": "right center", "label": "Right"},
-        {"value": "center top", "label": "Top"},
-        {"value": "50% 30%", "label": "Upper-center"}
-      ], "default": "center center" },
-    { "type": "header", "content": "Video Background" },
-    { "type": "url", "id": "bg_video_url", "label": "Background video URL (CDN/mp4)" },
     { "type": "range", "id": "image_opacity", "label": "Image opacity", "min": 20, "max": 100, "step": 5, "default": 80, "unit": "%" },
-
-    { "type": "header", "content": "Desktop Overlay" },
-    { "type": "paragraph", "content": "Gradient fades from Start → Mid → End across the chosen direction." },
-    { "type": "color", "id": "overlay_color", "label": "Overlay color", "default": "#0A0A0C" },
-    { "type": "select", "id": "overlay_direction", "label": "Direction", "options": [
-        {"value": "105deg", "label": "Diagonal (left → right)"},
-        {"value": "90deg",  "label": "Left → Right"},
-        {"value": "270deg", "label": "Right → Left"},
-        {"value": "180deg", "label": "Top → Bottom"},
-        {"value": "0deg",   "label": "Bottom → Top"}
-      ], "default": "105deg" },
-    { "type": "range", "id": "overlay_opacity", "label": "Start opacity", "min": 0, "max": 100, "step": 5, "default": 90, "unit": "%" },
-    { "type": "range", "id": "overlay_opacity_mid", "label": "Mid opacity", "min": 0, "max": 100, "step": 5, "default": 55, "unit": "%" },
-    { "type": "range", "id": "overlay_opacity_edge", "label": "End opacity", "min": 0, "max": 100, "step": 5, "default": 10, "unit": "%" },
-
-    { "type": "header", "content": "Mobile Overlay" },
-    { "type": "paragraph", "content": "Defaults to a bottom-fade if not customized. Tune separately for portrait crops." },
-    { "type": "color", "id": "overlay_color_mobile", "label": "Mobile overlay color", "default": "#0A0A0C" },
-    { "type": "select", "id": "overlay_direction_mobile", "label": "Mobile direction", "options": [
-        {"value": "180deg", "label": "Top → Bottom (fade down)"},
-        {"value": "0deg",   "label": "Bottom → Top (fade up)"},
-        {"value": "90deg",  "label": "Left → Right"},
-        {"value": "270deg", "label": "Right → Left"},
-        {"value": "105deg", "label": "Diagonal"}
-      ], "default": "180deg" },
-    { "type": "range", "id": "overlay_opacity_mobile", "label": "Mobile start opacity", "min": 0, "max": 100, "step": 5, "default": 30, "unit": "%" },
-    { "type": "range", "id": "overlay_opacity_mobile_mid", "label": "Mobile mid opacity", "min": 0, "max": 100, "step": 5, "default": 70, "unit": "%" },
-    { "type": "range", "id": "overlay_opacity_mobile_edge", "label": "Mobile end opacity", "min": 0, "max": 100, "step": 5, "default": 95, "unit": "%" },
-
+    { "type": "range", "id": "overlay_left_opacity", "label": "Overlay (left) opacity", "min": 40, "max": 98, "step": 2, "default": 88, "unit": "%" },
+    { "type": "range", "id": "overlay_center_opacity", "label": "Overlay (center) opacity", "min": 20, "max": 90, "step": 5, "default": 55, "unit": "%" },
     { "type": "range", "id": "min_height", "label": "Min height (desktop)", "min": 500, "max": 900, "step": 20, "default": 700, "unit": "px" },
     { "type": "range", "id": "min_height_mobile", "label": "Min height (mobile)", "min": 400, "max": 700, "step": 20, "default": 560, "unit": "px" },
     { "type": "range", "id": "content_width", "label": "Content max width", "min": 400, "max": 800, "step": 20, "default": 620, "unit": "px" },

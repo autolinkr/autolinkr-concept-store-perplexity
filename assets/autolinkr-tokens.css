@@ -184,15 +184,14 @@ a:hover { color: var(--al-accent-hover); }
   font-weight: 500 !important;
   font-size: 0.875rem !important;
   letter-spacing: 0.01em !important;
-  padding: 8px 10px !important;
-  border-radius: 6px !important;
-  transition: all var(--al-transition) !important;
+  background: transparent !important;
+  transition: color var(--al-transition) !important;
 }
 .menu__item:hover,
 .menu__item:hover a,
 .menu__item:hover span {
   color: var(--al-accent) !important;
-  background: rgba(59, 142, 248, 0.08) !important;
+  background: transparent !important;
 }
 
 /* Header icons */
@@ -239,7 +238,7 @@ a:hover { color: var(--al-accent-hover); }
 .dropdown__nav a:hover,
 .dropdown__nav summary a:hover {
   color: var(--al-accent) !important;
-  background: rgba(59, 142, 248, 0.06) !important;
+  background: transparent !important;
 }
 
 /* Announcement bar — full brand blue */
@@ -277,11 +276,17 @@ a:hover { color: var(--al-accent-hover); }
 }
 
 /* All announcement bar descendants — transparent bg to prevent dark bleed in carousel/marquee items */
-.announcement-bar *,
-.announcement-bar-section *,
-[class*="announcement-bar"] * {
+.announcement-bar *:not(.fader):not(.fader *),
+.announcement-bar-section *:not(.fader):not(.fader *),
+[class*="announcement-bar"] *:not(.fader):not(.fader *) {
   background: transparent !important;
   background-color: transparent !important;
+}
+
+/* Announcement bar — inset slides so text clears the fader arrows */
+.announcement-bar .announcement__slides,
+.announcement-bar announcement-bar {
+  padding-inline: 48px !important;
 }
 
 /* ─── BUTTONS ────────────────────────────────────────────── */
@@ -906,6 +911,27 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .rich-text .section-header__title { color: var(--al-text-1) !important; }
 .rich-text p { color: var(--al-text-2) !important; line-height: 1.75 !important; }
 
+/* ─── PRODUCT CARDS (collection grid) ────────────────────── */
+.product-card__content {
+  background: var(--al-accent) !important;
+  padding: 12px 14px !important;
+}
+.product-card__title,
+.product-card__title a,
+.product-card__details,
+.product-card__content .price,
+.product-card__content .price *,
+.product-card__content .vendor,
+.product-card__content span,
+.product-card__bottom,
+.product-card__bottom * {
+  color: #fff !important;
+}
+.product-card__content .price--on-sale .price__regular,
+.product-card__content .price__compare {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
 /* ─── COLLECTION LIST ────────────────────────────────────── */
 .collection-list .card,
 .collection-list-item {
@@ -990,9 +1016,14 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .drawer__inner p { color: var(--al-text-2) !important; }
 
 /* ─── FOOTER — built-in Concept footer override ──────────── */
+[id^="shopify-section-sections"] .footer-wrapper,
+[class*="shopify-section"] .footer-wrapper {
+  padding: 0 !important;
+}
 .footer {
   background: var(--al-surface) !important;
   border-top: 1px solid var(--al-border) !important;
+  padding: 48px 40px !important;
 }
 .footer__content-top,
 .footer__content-bottom {

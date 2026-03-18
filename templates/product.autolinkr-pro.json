@@ -31,6 +31,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "⭐ Best Seller — 50,000+ Happy Drivers",
             "text_size": "text-sm"
           }
@@ -49,6 +51,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "Converts your wired CarPlay to wireless — plus Netflix, YouTube & Google Play on your factory screen. No cables. No setup. Just drive.",
             "text_size": "text-base"
           }
@@ -59,7 +63,9 @@
             "enable_dynamic_variants": true,
             "show_variant_labels": true,
             "picker_type": "button",
-            "enable_color_swatches": false
+            "enable_color_swatches": false,
+            "color_swatch_type": "color",
+            "size_chart": ""
           }
         },
         "buy_buttons": {
@@ -69,7 +75,9 @@
             "show_price": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false,
-            "enable_back_in_stock": true
+            "enable_back_in_stock": true,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
           }
         },
         "sticky_buy_button": {
@@ -88,6 +96,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "✓ Free & Fast Shipping",
             "text_size": "text-sm"
           }
@@ -96,6 +106,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "✓ 30-Day Money-Back Guarantee",
             "text_size": "text-sm"
           }
@@ -104,6 +116,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "✓ 1-Year Warranty — 50,000+ Happy Drivers",
             "text_size": "text-sm"
           }
@@ -113,8 +127,11 @@
           "settings": {
             "opened": true,
             "style": "with-border",
+            "icon": "none",
             "heading": "What's Included",
             "content": "<ul><li>AutoLinkr Pro™ Adapter</li><li>USB-A to USB-C Cable</li><li>USB-C to USB-C Cable</li><li>Quick-Start Guide</li></ul>",
+            "page": "",
+            "liquid": "",
             "text_size": "text-sm"
           }
         },
@@ -123,8 +140,11 @@
           "settings": {
             "opened": false,
             "style": "with-border",
+            "icon": "none",
             "heading": "Will This Work With My Car?",
             "content": "<p><strong>Works with 97%+ of vehicles that have factory wired CarPlay.</strong></p><p>Requirements:</p><ul><li>✔ Model year 2016 or newer</li><li>✔ Factory-installed wired Apple CarPlay (not added aftermarket)</li><li>✔ iPhone 7 or newer (iOS 10+)</li></ul><p>Compatible with BMW, Mercedes, Honda, Toyota, Ford, Chevy, Audi, VW, Hyundai, Kia, and 100+ other makes.</p><p><em>AutoLinkr Pro™ enhances your existing CarPlay — it does NOT add CarPlay to vehicles that don't have it factory-installed.</em></p>",
+            "page": "",
+            "liquid": "",
             "text_size": "text-sm"
           }
         },
@@ -133,8 +153,11 @@
           "settings": {
             "opened": false,
             "style": "with-border",
+            "icon": "none",
             "heading": "Streaming Apps Unlocked",
             "content": "<p>AutoLinkr Pro™ gives your factory CarPlay screen full streaming access:</p><ul><li>Netflix</li><li>YouTube</li><li>Google Play Store (download any app)</li><li>Hulu, Disney+, Amazon Prime Video</li><li>Spotify, Apple Music, Pandora</li><li>Waze, Google Maps</li><li>TikTok, ESPN, and more</li></ul><p><em>An internet/data connection is required for streaming apps.</em></p>",
+            "page": "",
+            "liquid": "",
             "text_size": "text-sm"
           }
         },
@@ -143,8 +166,11 @@
           "settings": {
             "opened": false,
             "style": "with-border",
+            "icon": "none",
             "heading": "Shipping, Returns & Guarantee",
             "content": "<p>Shipping is <strong>FREE</strong> on every order. Orders ship within 1–2 business days. Most US customers receive delivery within 3–5 business days.</p><p><strong>30-Day Guarantee</strong> — You have 30 days from the date you receive your unit to return it. No questions asked, no hassle.</p><p><strong>1-Year Warranty</strong> — Covered against all manufacturing defects for a full year from purchase.</p>",
+            "page": "",
+            "liquid": "",
             "text_size": "text-sm"
           }
         },
@@ -174,6 +200,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "media_size": 66,
         "gallery_layout": "stacked",
         "thumbnail_position": "bottom",
         "image_ratio": "square",
@@ -183,7 +210,12 @@
         "enable_video_looping": true,
         "mobile_layout": "columns",
         "image_ratio_mobile": "square",
-        "full_width": false
+        "mobile_thumbnail": false,
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     },
     "feature-strip": {
@@ -245,7 +277,6 @@
         "subheading": "Netflix, YouTube, and Google Play — live on your factory CarPlay screen",
         "youtube_id": "",
         "video_url": "https://cdn.shopify.com/videos/c/o/v/2a9b3c1f04034a5bbbb7d5074334392c.mp4",
-        "poster_image": "",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",
@@ -260,32 +291,44 @@
           "type": "column",
           "settings": {
             "icon": "bolt",
+            "custom_icon": "",
             "heading": "Instant Wireless Freedom",
-            "text": "<p>Pair once — every drive connects automatically in seconds. No more fumbling with cables, no more USB ports taken over.</p>"
+            "text": "<p>Pair once — every drive connects automatically in seconds. No more fumbling with cables, no more USB ports taken over.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "col-2": {
           "type": "column",
           "settings": {
             "icon": "play-button",
+            "custom_icon": "",
             "heading": "Netflix & YouTube On Screen",
-            "text": "<p>Stream full HD video directly on your factory display. Google Play Store unlocks every app your phone can run — not just CarPlay-approved apps.</p>"
+            "text": "<p>Stream full HD video directly on your factory display. Google Play Store unlocks every app your phone can run — not just CarPlay-approved apps.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "col-3": {
           "type": "column",
           "settings": {
             "icon": "wifi",
+            "custom_icon": "",
             "heading": "5GHz — Zero Lag",
-            "text": "<p>Dual-band 5GHz Wi-Fi delivers the speed to keep navigation, music, and streaming running flawlessly on every drive.</p>"
+            "text": "<p>Dual-band 5GHz Wi-Fi delivers the speed to keep navigation, music, and streaming running flawlessly on every drive.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "col-4": {
           "type": "column",
           "settings": {
             "icon": "shield",
+            "custom_icon": "",
             "heading": "Works With Your Car",
-            "text": "<p>Compatible with 97%+ of vehicles that have factory wired CarPlay. No modifications needed — just plug in and pair once.</p>"
+            "text": "<p>Compatible with 97%+ of vehicles that have factory wired CarPlay. No modifications needed — just plug in and pair once.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -303,12 +346,28 @@
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
-        "color_text": "#F7F7F8",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "#f7f7f8",
         "color_background": "#080809",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
         "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": "#3b8ef8",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     },
     "image-feature-list": {
@@ -318,14 +377,26 @@
           "type": "heading",
           "settings": {
             "heading": "Everything Unlocked. All On Your Factory Screen.",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>AutoLinkr Pro™ turns your existing factory display into a full smart screen. Wireless CarPlay, streaming apps, Google Play Store — all accessed directly without touching your phone.</p><p>Netflix downloads. Offline playlists. Any app from the Google Play Store. The upgrade your car was always capable of.</p>",
-            "text_size": "text-base"
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "button": {
@@ -333,7 +404,10 @@
           "settings": {
             "button_label": "Shop AutoLinkr Pro™ — $79.99",
             "button_link": "/products/the-autolinkr-pro",
-            "button_style": "primary"
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
           }
         }
       },
@@ -345,17 +419,29 @@
       "settings": {
         "image": "shopify://shop_images/Thumbnail.png",
         "image_height": "medium",
+        "image_width": "medium",
         "layout": "image_first",
         "text_alignment": "left",
         "content_position": "middle",
-        "color_text": "#F7F7F8",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "#f7f7f8",
         "color_background": "#080809",
         "gradient_background": "",
-        "color_background_2": "#0F0F12",
+        "color_background_2": "#0f0f12",
         "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
         "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": "#3b8ef8",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
       }
     },
     "how-it-works": {
@@ -402,7 +488,9 @@
         "padding_bottom": 80,
         "eyebrow": "Setup Guide",
         "heading": "Up and Running in 60 Seconds",
-        "subheading": "No tools. No apps. No installation knowledge required."
+        "subheading": "No tools. No apps. No installation knowledge required.",
+        "cta_label": "",
+        "cta_link": ""
       }
     },
     "image-netflix": {
@@ -412,14 +500,26 @@
           "type": "heading",
           "settings": {
             "heading": "Netflix. YouTube. Google Play. All on your factory screen.",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>AutoLinkr Pro™ unlocks the full streaming universe on your car's existing display. The Google Play Store lets you install virtually any Android app — not just what Apple pre-approves for CarPlay.</p><p>Download Netflix content for offline viewing. Run Hulu, Disney+, Prime Video, SiriusXM, live sports — all while your CarPlay navigation stays active.</p>",
-            "text_size": "text-base"
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "button": {
@@ -427,7 +527,10 @@
           "settings": {
             "button_label": "Shop AutoLinkr Pro™ — $79.99",
             "button_link": "/products/the-autolinkr-pro",
-            "button_style": "primary"
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
           }
         }
       },
@@ -437,19 +540,30 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/al-netflix-screen.png",
         "image_height": "medium",
+        "image_width": "medium",
         "layout": "text_first",
         "text_alignment": "left",
         "content_position": "middle",
-        "color_text": "#F7F7F8",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "#f7f7f8",
         "color_background": "#080809",
         "gradient_background": "",
-        "color_background_2": "#0F0F12",
+        "color_background_2": "#0f0f12",
         "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
         "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": "#3b8ef8",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
       }
     },
     "image-compatibility": {
@@ -459,14 +573,26 @@
           "type": "heading",
           "settings": {
             "heading": "Works With 97%+ of Cars That Have Factory CarPlay",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>BMW, Mercedes, Toyota, Honda, Ford, Chevy, Audi, VW, Hyundai, Kia — if it has factory wired Apple CarPlay, AutoLinkr Pro™ works with it.</p><p>Model year 2016 or newer. iPhone 7 or newer (iOS 10+). Not sure? Use our compatibility checker to confirm in 30 seconds.</p>",
-            "text_size": "text-base"
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "button": {
@@ -474,7 +600,10 @@
           "settings": {
             "button_label": "Check My Car's Compatibility",
             "button_link": "/pages/compatibility",
-            "button_style": "secondary"
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
           }
         }
       },
@@ -486,17 +615,29 @@
       "settings": {
         "image": "shopify://shop_images/AUTO-9518.jpg",
         "image_height": "medium",
+        "image_width": "medium",
         "layout": "image_first",
         "text_alignment": "left",
         "content_position": "middle",
-        "color_text": "#F7F7F8",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "#f7f7f8",
         "color_background": "#080809",
         "gradient_background": "",
-        "color_background_2": "#0F0F12",
+        "color_background_2": "#0f0f12",
         "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
         "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": "#3b8ef8",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
       }
     },
     "number-counter": {
@@ -546,14 +687,22 @@
         "c4"
       ],
       "settings": {
+        "gap": "large",
         "columns": 4,
         "text_alignment": "center",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "color_text": "#F7F7F8",
+        "text_alignment_mobile": "center",
+        "color_text": "#f7f7f8",
         "color_background": "#080809",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     },
     "scrolling-text": {
@@ -563,42 +712,60 @@
           "type": "text",
           "settings": {
             "text": "Wireless CarPlay",
-            "text_size": 100
+            "text_size": 100,
+            "text_font": "body",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "s2": {
           "type": "text",
           "settings": {
             "text": "Netflix On Screen",
-            "text_size": 100
+            "text_size": 100,
+            "text_font": "body",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "s3": {
           "type": "text",
           "settings": {
             "text": "YouTube In-Car",
-            "text_size": 100
+            "text_size": 100,
+            "text_font": "body",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "s4": {
           "type": "text",
           "settings": {
             "text": "Google Play Store",
-            "text_size": 100
+            "text_size": 100,
+            "text_font": "body",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "s5": {
           "type": "text",
           "settings": {
             "text": "60-Second Setup",
-            "text_size": 100
+            "text_size": 100,
+            "text_font": "body",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "s6": {
           "type": "text",
           "settings": {
             "text": "No More Cables",
-            "text_size": 100
+            "text_size": 100,
+            "text_font": "body",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -613,11 +780,113 @@
       "settings": {
         "direction": "left",
         "speed": 20,
+        "grid_horizontal": 70,
         "enable_twin": true,
-        "color_text": "#F7F7F8",
+        "enable_parallax": true,
+        "color_text": "#f7f7f8",
         "color_background": "#080809",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "testimonials-banner": {
+      "type": "testimonials-banner",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"The AutoLinkr Pro makes me look forward to my commute! Netflix on my lunch break in the car is life-changing.\"</p>",
+            "author": "Michael T.",
+            "author_info": "2022 Honda Pilot — Verified Buyer",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"Finally got the AutoLinkr Pro and now all my friends want one too. They couldn't believe I can stream Netflix and YouTube on my factory screen wirelessly.\"</p>",
+            "author": "Sarah K.",
+            "author_info": "2021 Toyota Camry — Verified Buyer",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"Setup was super easy and it connects to my phone every time without me thinking about it. Still get all my CarPlay features but now fully wireless.\"</p>",
+            "author": "James R.",
+            "author_info": "2020 Ford F-150 — Verified Buyer",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image_height": "650px",
+        "content_position": "md:items-center md:justify-center",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-center justify-center",
+        "color_text": "#f7f7f8",
+        "color_background": "#080809",
+        "gradient_background": "",
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 70,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "youtube-review": {
+      "type": "al-video-section",
+      "settings": {
+        "background_style": "dark",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "max_width": 1200,
+        "media_max_width": 900,
+        "text_align": "center",
+        "eyebrow": "Customer Review",
+        "heading": "Verified by 50,000+ Drivers",
+        "heading_tag": "h2",
+        "subheading": "Real customers. Real results.",
+        "youtube_id": "AxcmlF_3Tfs",
+        "video_url": "",
+        "autoplay": false,
+        "cta_label": "",
+        "cta_link": "",
+        "ghost_label": "",
+        "ghost_link": ""
       }
     },
     "product-comparison": {
@@ -638,7 +907,46 @@
             "heading_5": "Faster CPU",
             "value_5": "<p>✗</p>",
             "heading_6": "Price",
-            "value_6": "<p>$79.99</p>"
+            "value_6": "<p>$79.99</p>",
+            "heading_7": "",
+            "value_7": "",
+            "heading_8": "",
+            "value_8": "",
+            "heading_9": "",
+            "value_9": "",
+            "heading_10": "",
+            "value_10": "",
+            "heading_11": "",
+            "value_11": "",
+            "heading_12": "",
+            "value_12": "",
+            "heading_13": "",
+            "value_13": "",
+            "heading_14": "",
+            "value_14": "",
+            "heading_15": "",
+            "value_15": "",
+            "heading_16": "",
+            "value_16": "",
+            "heading_17": "",
+            "value_17": "",
+            "heading_18": "",
+            "value_18": "",
+            "heading_19": "",
+            "value_19": "",
+            "heading_20": "",
+            "value_20": "",
+            "heading_21": "",
+            "value_21": "",
+            "heading_22": "",
+            "value_22": "",
+            "heading_23": "",
+            "value_23": "",
+            "heading_24": "",
+            "value_24": "",
+            "heading_25": "",
+            "value_25": "",
+            "text_size": "text-sm"
           }
         },
         "p-elite": {
@@ -656,36 +964,57 @@
             "heading_5": "Faster CPU",
             "value_5": "<p>✓</p>",
             "heading_6": "Price",
-            "value_6": "<p>$199.99</p>"
+            "value_6": "<p>$199.99</p>",
+            "heading_7": "",
+            "value_7": "",
+            "heading_8": "",
+            "value_8": "",
+            "heading_9": "",
+            "value_9": "",
+            "heading_10": "",
+            "value_10": "",
+            "heading_11": "",
+            "value_11": "",
+            "heading_12": "",
+            "value_12": "",
+            "heading_13": "",
+            "value_13": "",
+            "heading_14": "",
+            "value_14": "",
+            "heading_15": "",
+            "value_15": "",
+            "heading_16": "",
+            "value_16": "",
+            "heading_17": "",
+            "value_17": "",
+            "heading_18": "",
+            "value_18": "",
+            "heading_19": "",
+            "value_19": "",
+            "heading_20": "",
+            "value_20": "",
+            "heading_21": "",
+            "value_21": "",
+            "heading_22": "",
+            "value_22": "",
+            "heading_23": "",
+            "value_23": "",
+            "heading_24": "",
+            "value_24": "",
+            "heading_25": "",
+            "value_25": "",
+            "text_size": "text-sm"
           }
         },
-        "p-tablet": {
-          "type": "product",
-          "settings": {
-            "product": "autolinkr-dash",
-            "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
-            "heading_2": "Netflix & YouTube",
-            "value_2": "<p>✓</p>",
-            "heading_3": "Google Play Store",
-            "value_3": "<p>✓</p>",
-            "heading_4": "Split-Screen",
-            "value_4": "<p>✓</p>",
-            "heading_5": "Works Any Car",
-            "value_5": "<p>✓</p>",
-            "heading_6": "Price",
-            "value_6": "<p>$129.99</p>"
-          }
-        }
       },
       "block_order": [
         "p-pro",
-        "p-elite",
-        "p-tablet"
+        "p-elite"
       ],
       "settings": {
         "highlight_differences": true,
         "sticky_product_info": true,
+        "first_available_variant": true,
         "show_vendor": false,
         "show_price": true,
         "heading": "Compare All AutoLinkr Adapters",
@@ -693,78 +1022,27 @@
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
         "subheading": "Most Pro owners upgrade to Elite once they try split-screen — nav and streaming side by side",
-        "color_text": "#F7F7F8",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "#f7f7f8",
         "color_background": "#080809",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "#3b8ef8",
+        "gradient_highlight": "",
         "color_button_text": "#ffffff",
-        "color_button_background": "#3B8EF8"
-      }
-    },
-    "testimonials-banner": {
-      "type": "testimonials-banner",
-      "blocks": {
-        "t1": {
-          "type": "testimonial",
-          "settings": {
-            "text": "<p>\"The AutoLinkr Pro makes me look forward to my commute! Netflix on my lunch break in the car is life-changing.\"</p>",
-            "author": "Michael T.",
-            "author_info": "2022 Honda Pilot — Verified Buyer"
-          }
-        },
-        "t2": {
-          "type": "testimonial",
-          "settings": {
-            "text": "<p>\"Finally got the AutoLinkr Pro and now all my friends want one too. They couldn't believe I can stream Netflix and YouTube on my factory screen wirelessly.\"</p>",
-            "author": "Sarah K.",
-            "author_info": "2021 Toyota Camry — Verified Buyer"
-          }
-        },
-        "t3": {
-          "type": "testimonial",
-          "settings": {
-            "text": "<p>\"Setup was super easy and it connects to my phone every time without me thinking about it. Still get all my CarPlay features but now fully wireless.\"</p>",
-            "author": "James R.",
-            "author_info": "2020 Ford F-150 — Verified Buyer"
-          }
-        }
-      },
-      "block_order": [
-        "t1",
-        "t2",
-        "t3"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/al-hero-pro.png",
-        "image_height": "650px",
-        "content_position": "md:items-center md:justify-center",
-        "color_text": "#F7F7F8",
-        "color_background": "#080809",
-        "gradient_background": "",
-        "color_highlight": "#3B8EF8"
-      }
-    },
-    "youtube-review": {
-      "type": "al-video-section",
-      "settings": {
-        "background_style": "dark",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "max_width": 1200,
-        "media_max_width": 900,
-        "text_align": "center",
-        "eyebrow": "Customer Review",
-        "heading": "Verified by 50,000+ Drivers",
-        "heading_tag": "h2",
-        "subheading": "Real customers. Real results.",
-        "youtube_id": "AxcmlF_3Tfs",
-        "video_url": "",
-        "poster_image": "",
-        "autoplay": false,
-        "cta_label": "",
-        "cta_link": "",
-        "ghost_label": "",
-        "ghost_link": ""
+        "color_button_background": "#3b8ef8",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
       }
     },
     "elite-upsell": {
@@ -774,6 +1052,7 @@
           "type": "title",
           "settings": {
             "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
             "title_tag": "h3",
             "show_price": true,
             "show_rating": true
@@ -783,6 +1062,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "Upgrade to Elite before checkout — add split-screen multitasking + a faster CPU for just $120 more. Run navigation and Netflix simultaneously.",
             "text_size": "text-sm"
           }
@@ -791,7 +1072,8 @@
           "type": "badges",
           "settings": {
             "show_sold_out": false,
-            "show_save_amount": false
+            "show_save_amount": false,
+            "save_type": "percent"
           }
         },
         "buy_buttons": {
@@ -800,7 +1082,10 @@
             "show_quantity_selector": false,
             "show_price": true,
             "show_dynamic_checkout": true,
-            "enable_back_in_stock": false
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
           }
         }
       },
@@ -812,21 +1097,74 @@
       ],
       "settings": {
         "product": "the-autolinkr-elite",
+        "enable_sticky_info": true,
         "media_size": 50,
-        "gallery_layout": "stacked"
+        "gallery_layout": "stacked",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "mobile_layout": "partial",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
         "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "heading": "Complete Your Setup",
-        "heading_size": "title-sm"
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     },
     "apps-reviews": {
       "type": "apps",
-      "settings": {}
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [

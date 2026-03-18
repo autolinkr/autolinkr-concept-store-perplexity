@@ -505,36 +505,17 @@
             "value_6": "<p>$199.99</p>"
           }
         },
-        "p-tablet": {
-          "type": "product",
-          "settings": {
-            "product": "autolinkr-dash",
-            "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
-            "heading_2": "Netflix & YouTube",
-            "value_2": "<p>✓</p>",
-            "heading_3": "Google Play Store",
-            "value_3": "<p>✓</p>",
-            "heading_4": "Split-Screen",
-            "value_4": "<p>✓</p>",
-            "heading_5": "Works Any Car",
-            "value_5": "<p>✓</p>",
-            "heading_6": "Price",
-            "value_6": "<p>$129.99</p>"
-          }
-        }
       },
       "block_order": [
         "p-pro",
-        "p-elite",
-        "p-tablet"
+        "p-elite"
       ],
       "settings": {
         "highlight_differences": true,
         "sticky_product_info": true,
         "show_vendor": false,
         "show_price": true,
-        "heading": "Elite vs Pro vs Tablet™ — Full Comparison",
+        "heading": "Elite vs Pro — Full Comparison",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",

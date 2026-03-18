@@ -93,6 +93,7 @@
   --color-border: 42, 42, 48;
   --color-button-text: 255, 255, 255;
   --color-button-background: 59, 142, 248;
+  --color-sale-price: 59, 142, 248;
 }
 
 /* ─── GLOBAL BASE ────────────────────────────────────────── */
@@ -199,6 +200,11 @@ a:hover { color: var(--al-accent-hover); }
 .header__icon path {
   stroke: var(--al-text-1) !important;
   fill: none !important;
+}
+
+/* Hide search drawer button */
+.search-drawer-button {
+  display: none !important;
 }
 
 /* ─── DESKTOP DROPDOWNS ──────────────────────────────────── */
@@ -415,6 +421,42 @@ label {
   font-weight: 500 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
+}
+
+/* Newsletter form — hide label, placeholder-only pattern */
+.newsletter-form label {
+  display: none !important;
+}
+
+/* Newsletter self-submit-button — 36px blue circle inside input */
+.newsletter-form .field {
+  position: relative !important;
+}
+.newsletter-form .field input {
+  padding-right: 56px !important;
+}
+.newsletter-form .self-submit-button {
+  position: absolute !important;
+  right: 6px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+.newsletter-form .self-submit-button button,
+.newsletter-form .self-submit-button .button {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: var(--al-accent) !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+}
+.newsletter-form .self-submit-button button .btn-fill {
+  background: transparent !important;
 }
 
 /* ─── COLLAPSIBLE TABS — Premium Redesign ────────────────── */
@@ -1235,6 +1277,14 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   backdrop-filter: var(--al-glass-blur) !important;
 }
 
+/* ─── PAGE TITLE ─────────────────────────────────────────── */
+.page-width > h1,
+.page-width > .heading,
+.main-page-title {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 /* ─── BREADCRUMB ─────────────────────────────────────────── */
 .breadcrumb,
 .breadcrumbs {
@@ -1260,7 +1310,31 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 
 /* ─── MOBILE RESPONSIVE ──────────────────────────────────── */
 @media (max-width: 768px) {
+  /* Mobile logo centered — 3-column grid */
+  .header {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+  }
+  .header__heading {
+    justify-self: center !important;
+  }
+  .header__icons--end {
+    justify-self: end !important;
+  }
+
   .al-brand-hero { min-height: 540px !important; }
+
+  /* Hero mobile overlay — ensures text readability over image */
+  .al-bh__content {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 12, 0.30) 0%,
+      rgba(10, 10, 12, 0.70) 50%,
+      rgba(10, 10, 12, 0.95) 100%
+    ) !important;
+  }
+
   .number-counter__item { border-right: none !important; border-bottom: 1px solid var(--al-border) !important; }
   .number-counter__item:last-child { border-bottom: none !important; }
   [class*="multicolumn"] .card { padding: 20px 16px !important; }
@@ -1295,8 +1369,24 @@ body::before {
   border-radius: var(--al-r-sm) !important;
 }
 
+/* ─── CAROUSEL ARROWS ────────────────────────────────────── */
+.fader.left {
+  position: absolute !important;
+  left: 0 !important;
+}
+.fader.right {
+  position: absolute !important;
+  right: 0 !important;
+}
+
+/* ─── HERO CONTENT PADDING ───────────────────────────────── */
+.al-bh__content {
+  padding: var(--al-sp-10) var(--al-sp-4) var(--al-sp-10) !important;
+}
+
 /* ─── SECTION SPACING ─────────────────────────────────────── */
-/* Consistent vertical rhythm */
-.shopify-section + .shopify-section {
-  /* sections are self-contained, no extra margin */
+/* Sticky header guard — prevent non-header sections from inheriting sticky styles */
+.shopify-section + .shopify-section:not(.shopify-section--header) {
+  z-index: auto !important;
+  position: relative !important;
 }

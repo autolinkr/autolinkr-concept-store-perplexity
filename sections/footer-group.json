@@ -100,8 +100,8 @@
         "link_list-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer",
+            "heading": "Quick Links",
+            "menu": "support",
             "container_width": 50
           }
         },
@@ -109,7 +109,7 @@
           "type": "link_list",
           "settings": {
             "heading": "Information",
-            "menu": "footer",
+            "menu": "policies",
             "container_width": 50
           }
         },
@@ -117,10 +117,10 @@
           "type": "brand_information",
           "settings": {
             "heading": "",
-            "button_label_1": "",
+            "button_label_1": "M–F 9–5 CT",
             "button_link_1": "",
-            "button_label_2": "hello@domain.com",
-            "button_link_2": "mailto:hello@domain.com",
+            "button_label_2": "support@theautolinkr.com",
+            "button_link_2": "mailto:support@theautolinkr.com",
             "button_label_3": "",
             "button_link_3": "",
             "button_label_4": "",
@@ -146,7 +146,7 @@
         "show_social": true,
         "enable_follow_on_shop": false,
         "color_text": "#ffffff",
-        "color_background": "#1f1f1f",
+        "color_background": "#080809",
         "gradient_background": "",
         "color_button_text": "#000000",
         "color_button_background": "#ffffff",

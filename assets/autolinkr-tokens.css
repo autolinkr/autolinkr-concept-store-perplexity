@@ -86,30 +86,22 @@
   --al-glass-blur:   blur(20px);
 }
 
-/* ─── CONCEPT THEME OVERRIDES ────────────────────────────── */
+/* ─── CONCEPT NATIVE VAR ALIASES ─────────────────────────── */
+/* These map our al- tokens to Concept's native vars for components
+   that use --color-base-* directly. Settings are controlled via
+   Shopify Theme Editor → Colors (settings_data.json seeds the values). */
 :root {
-  --color-background: 8, 8, 9;
-  --color-foreground: 247, 247, 248;
-  --color-border: 42, 42, 48;
-  --color-button-text: 255, 255, 255;
-  --color-button-background: 59, 142, 248;
-  --color-sale-price: 59, 142, 248;
+  /* AutoLinkr brand tokens re-expressed as Concept-compatible RGB triplets */
+  /* DO NOT override --color-base-* here — let css-variables.liquid handle them */
+  /* Only add aliases needed for custom sections/components below */
 }
 
 /* ─── GLOBAL BASE ────────────────────────────────────────── */
-body,
-.shopify-section,
-.section {
-  background-color: var(--al-bg);
-  color: var(--al-text-1);
+/* Font rendering — not color overrides (colors come from Shopify editor) */
+body {
   font-family: var(--al-font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* All body text — enforce readable contrast */
-p, li, span, div {
-  color: var(--al-text-2);
 }
 h1, h2, h3, h4, h5, h6,
 .heading, .section-header__title,
@@ -122,15 +114,11 @@ a { color: var(--al-accent); transition: color var(--al-transition); }
 a:hover { color: var(--al-accent-hover); }
 
 /* ─── SECTION BACKGROUNDS ────────────────────────────────── */
-.section,
-.shopify-section > div,
-[class*="section--"] {
+/* Backgrounds are now controlled by Shopify editor settings.
+   Only custom sections (al-*) get hardcoded dark backgrounds. */
+[class^="al-"],
+[class*=" al-"] {
   background-color: var(--al-bg);
-}
-
-/* Subtle alternating lift */
-.shopify-section:nth-child(even) .section {
-  background-color: var(--al-surface);
 }
 
 /* Section dividers */
@@ -163,7 +151,7 @@ a:hover { color: var(--al-accent-hover); }
 .header-wrapper,
 .header--has-transparent,
 .header {
-  background-color: #080809 !important;
+  background-color: rgb(var(--color-base-background)) !important;
   border-bottom: 1px solid var(--al-border) !important;
 }
 

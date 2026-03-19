@@ -6,7 +6,7 @@
 
 {%- style -%}
 .al-lg {
-  background: var(--al-bg);
+  background: rgb(var(--color-base-background));
   padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
   overflow: hidden;
 }
@@ -91,7 +91,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background: var(--al-surface);
+  background: rgba(var(--color-base-text), 0.04);
   aspect-ratio: unset;
 }
 
@@ -130,7 +130,7 @@
   z-index: 2;
   align-items: center;
   gap: 8px;
-  background: rgba(8,8,9,0.75);
+  background: rgba(0,0,0,0.65);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(59,142,248,0.25);
   border-radius: 8px;

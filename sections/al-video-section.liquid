@@ -5,14 +5,13 @@
 {% endcomment %}
 
 {%- liquid
-  assign bg = section.settings.background_style
   assign vid_url = section.settings.video_url
   assign yt_id = section.settings.youtube_id
   assign poster = section.settings.poster_image
 -%}
 
 <section class="al-vid-section" style="
-  background: {% if bg == 'surface' %}var(--al-surface){% elsif bg == 'accent' %}linear-gradient(135deg, rgba(59,142,248,0.15) 0%, var(--al-bg) 100%){% else %}var(--al-bg){% endif %};
+  background: rgb(var(--color-base-background));
   padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
 ">
   <div class="al-vid-section__inner page-width">
@@ -147,11 +146,6 @@
   "tag": "section",
   "settings": [
     { "type": "header", "content": "Layout" },
-    { "type": "select", "id": "background_style", "label": "Background", "options": [
-        {"value": "dark", "label": "Dark (var(--al-bg))"},
-        {"value": "surface", "label": "Surface (var(--al-surface))"},
-        {"value": "accent", "label": "Accent gradient (navy/dark)"}
-      ], "default": "surface" },
     { "type": "range", "id": "padding_top", "label": "Padding top", "min": 20, "max": 120, "step": 4, "default": 80, "unit": "px" },
     { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 20, "max": 120, "step": 4, "default": 80, "unit": "px" },
     { "type": "range", "id": "max_width", "label": "Content max width", "min": 600, "max": 1400, "step": 20, "default": 1200, "unit": "px" },

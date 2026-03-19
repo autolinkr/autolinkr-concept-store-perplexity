@@ -1307,19 +1307,20 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .announcement-bar a { color: rgb(var(--color-base-background)) !important; font-weight: 700 !important; }
 
 /* ─── HEADER FIX AFTER SCROLL ─────────────────────────────── */
+/* Force header opaque even in transparent-header mode — use editor Background color */
 .header--border-bottom,
 .header-wrapper,
 .header--has-transparent {
-  background-color: #080809 !important;
+  background-color: rgb(var(--color-base-background)) !important;
   border-bottom-color: var(--al-border) !important;
 }
-/* Invert any light logos in header */
+/* Invert any light/white inline backgrounds to match editor Background color */
 [style*="background-color: white"],
 [style*="background-color: #fff"],
 [style*="background-color: #ffffff"],
 [style*="background: white"],
 [style*="background: #fff"] {
-  background-color: #080809 !important;
+  background-color: rgb(var(--color-base-background)) !important;
 }
 
 /* ─── PRODUCT BADGE TAGS ─────────────────────────────────── */

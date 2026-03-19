@@ -15,6 +15,7 @@
   background-color: rgb(var(--color-base-background));
 }
 
+/* Background image layer */
 .al-bh__bg {
   position: absolute;
   inset: 0;
@@ -29,17 +30,19 @@
   opacity: {{ section.settings.image_opacity | divided_by: 100.0 }};
 }
 
-/* Desktop overlay — direction + per-stop opacity from editor */
-.al-bh__overlay {
+/* Desktop mobile image — hidden by default, shown on mobile */
+.al-bh__bg-mobile {
+  display: none;
+}
+
+/* Overlay — black scrim via ::before pseudo-element */
+.al-bh::before {
+  content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    {{ section.settings.overlay_direction }},
-    rgba(var(--color-base-background), {{ section.settings.overlay_start_opacity | divided_by: 100.0 }}) 0%,
-    rgba(var(--color-base-background), {{ section.settings.overlay_mid_opacity | divided_by: 100.0 }}) 50%,
-    rgba(var(--color-base-background), {{ section.settings.overlay_end_opacity | divided_by: 100.0 }}) 100%
-  );
+  background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+  pointer-events: none;
 }
 
 .al-bh__content {
@@ -207,15 +210,18 @@
 
 @media (max-width: 768px) {
   .al-bh { min-height: {{ section.settings.min_height_mobile }}px; }
-  /* Mobile overlay — independent editor-controlled stops */
-  .al-bh__overlay {
-    background: linear-gradient(
-      {{ section.settings.overlay_direction_mobile }},
-      rgba(var(--color-base-background), {{ section.settings.overlay_start_opacity_mobile | divided_by: 100.0 }}) 0%,
-      rgba(var(--color-base-background), {{ section.settings.overlay_mid_opacity_mobile | divided_by: 100.0 }}) 50%,
-      rgba(var(--color-base-background), {{ section.settings.overlay_end_opacity_mobile | divided_by: 100.0 }}) 100%
-    );
+
+  /* Swap to mobile image if one is set */
+  {%- if section.settings.background_image_mobile != blank -%}
+  .al-bh__bg-desktop { display: none; }
+  .al-bh__bg-mobile { display: block; }
+  {%- endif -%}
+
+  /* Mobile overlay opacity */
+  .al-bh::before {
+    background: rgba(0, 0, 0, {{ section.settings.overlay_opacity_mobile | divided_by: 100.0 }});
   }
+
   .al-bh__content { padding: var(--al-sp-16) var(--al-sp-4) var(--al-sp-12); }
   .al-bh__stat-divider { display: none; }
   .al-bh__stats { gap: 16px; }
@@ -226,10 +232,13 @@
   <div class="al-bh__bg">
     {%- if section.settings.background_image != blank -%}
       {%- assign bg_url = section.settings.background_image | image_url: width: 2400 -%}
-      <img src="{{ bg_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-img">
+      <img src="{{ bg_url }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-desktop">
+    {%- endif -%}
+    {%- if section.settings.background_image_mobile != blank -%}
+      {%- assign bg_url_mobile = section.settings.background_image_mobile | image_url: width: 1200 -%}
+      <img src="{{ bg_url_mobile }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-mobile">
     {%- endif -%}
   </div>
-  <div class="al-bh__overlay"></div>
 
   <div class="al-bh__content">
     <div class="al-bh__inner">
@@ -285,7 +294,9 @@
   "name": "AL — Brand Hero",
   "tag": "section",
   "settings": [
-    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "header", "content": "Background Images" },
+    { "type": "image_picker", "id": "background_image", "label": "Desktop background image" },
+    { "type": "image_picker", "id": "background_image_mobile", "label": "Mobile background image", "info": "If set, replaces the desktop image on screens ≤ 768px" },
     { "type": "select", "id": "focal_point", "label": "Image focal point", "options": [
         {"value": "center center", "label": "Center"},
         {"value": "left center", "label": "Left"},
@@ -294,28 +305,10 @@
         {"value": "70% center", "label": "Right-center"}
       ], "default": "center center" },
     { "type": "range", "id": "image_opacity", "label": "Image opacity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
-    { "type": "header", "content": "Desktop Overlay" },
-    { "type": "paragraph", "content": "Gradient from left/top → right/bottom. Set all 3 stops to the same value for a flat overlay." },
-    { "type": "select", "id": "overlay_direction", "label": "Overlay direction", "options": [
-        {"value": "105deg", "label": "Left → Right (diagonal)"},
-        {"value": "90deg", "label": "Top → Bottom"},
-        {"value": "270deg", "label": "Bottom → Top"},
-        {"value": "0deg", "label": "Flat (no direction)"}
-      ], "default": "105deg" },
-    { "type": "range", "id": "overlay_start_opacity", "label": "Overlay start (0%)", "min": 0, "max": 100, "step": 5, "default": 85, "unit": "%" },
-    { "type": "range", "id": "overlay_mid_opacity", "label": "Overlay middle (50%)", "min": 0, "max": 100, "step": 5, "default": 55, "unit": "%" },
-    { "type": "range", "id": "overlay_end_opacity", "label": "Overlay end (100%)", "min": 0, "max": 100, "step": 5, "default": 10, "unit": "%" },
-    { "type": "header", "content": "Mobile Overlay" },
-    { "type": "paragraph", "content": "Independent overlay controls for mobile screens." },
-    { "type": "select", "id": "overlay_direction_mobile", "label": "Mobile overlay direction", "options": [
-        {"value": "180deg", "label": "Top → Bottom"},
-        {"value": "0deg", "label": "Bottom → Top"},
-        {"value": "105deg", "label": "Left → Right (diagonal)"},
-        {"value": "90deg", "label": "Flat (no direction)"}
-      ], "default": "180deg" },
-    { "type": "range", "id": "overlay_start_opacity_mobile", "label": "Mobile overlay top", "min": 0, "max": 100, "step": 5, "default": 30, "unit": "%" },
-    { "type": "range", "id": "overlay_mid_opacity_mobile", "label": "Mobile overlay middle", "min": 0, "max": 100, "step": 5, "default": 70, "unit": "%" },
-    { "type": "range", "id": "overlay_end_opacity_mobile", "label": "Mobile overlay bottom", "min": 0, "max": 100, "step": 5, "default": 95, "unit": "%" },
+    { "type": "header", "content": "Overlay" },
+    { "type": "paragraph", "content": "Black scrim over the image. 0 = no overlay, 100 = fully black." },
+    { "type": "range", "id": "overlay_opacity", "label": "Desktop overlay opacity", "min": 0, "max": 100, "step": 5, "default": 40, "unit": "%" },
+    { "type": "range", "id": "overlay_opacity_mobile", "label": "Mobile overlay opacity", "min": 0, "max": 100, "step": 5, "default": 55, "unit": "%" },
     { "type": "header", "content": "Layout" },
     { "type": "range", "id": "min_height", "label": "Min height (desktop)", "min": 500, "max": 900, "step": 20, "default": 700, "unit": "px" },
     { "type": "range", "id": "min_height_mobile", "label": "Min height (mobile)", "min": 400, "max": 700, "step": 20, "default": 560, "unit": "px" },

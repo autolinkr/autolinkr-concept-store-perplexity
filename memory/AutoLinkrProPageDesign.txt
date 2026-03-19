@@ -1,0 +1,671 @@
+================================================================================
+  AUTOLINKR PRO™ — PRODUCT PAGE MASTER TEMPLATE
+  The High-Converting Section-by-Section Blueprint
+
+  How to use: Each section has its PURPOSE (why it exists in the funnel),
+  WHAT GOES HERE (exact elements), COPY (suggested text — edit freely),
+  and [FILL IN] placeholders where you supply assets/content.
+
+  Flow: AIDA — Attention → Interest → Desire → Action at every scroll depth.
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 0: ANNOUNCEMENT BAR (Persistent — always visible at top)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Instant trust + value reinforcement before the user even sees the page.
+Reduces shipping anxiety (the #1 cart abandonment cause) before it starts.
+
+COPY (pick one — rotate for A/B testing):
+  • "FREE SHIPPING · 30-DAY MONEY-BACK GUARANTEE · 50,000+ HAPPY CUSTOMERS"
+  • "FREE SHIPPING ON ALL ORDERS · NO-RISK 30-DAY GUARANTEE"
+  • "FREE SHIPPING + 30-DAY GUARANTEE — JOIN 50,000+ DRIVERS"
+
+NOTES:
+  - This stays on ALL pages, not just product.
+  - Keep to one line on mobile — no wrapping.
+  - Can be a scrolling ticker if you want to show multiple messages.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: PRODUCT HERO (Above the Fold — the make-or-break 5 seconds)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Answer three questions in under 5 seconds:
+  1. "What is this?"
+  2. "Why should I care?"
+  3. "What do I do next?"
+If the first 5 seconds fail, the 40-second average session is over.
+
+LAYOUT: Two-column on desktop (gallery left, info right). Stacked on mobile
+(gallery on top, info below).
+
+─── LEFT / TOP: Image Gallery ───
+
+IMAGES (order matters — first image is the hero):
+  1. [FILL IN] Hero product shot — clean background, studio lighting, shows the
+     device clearly. This is the thumbnail for social sharing too.
+     Current: AutoLinkr_Pro_Main_1_Shadow.png ✓
+
+  2. [FILL IN] SHORT DEMO VIDEO (~10 seconds, 1:1 aspect ratio)
+     Autoplay, muted, looping. Shows the product plugging in and the car screen
+     lighting up with CarPlay/streaming. This is the most persuasive asset in
+     the gallery — "seeing it work" sells more than any photo.
+     Format: MP4, square crop, under 5MB for fast mobile load.
+
+  3. [FILL IN] Close-up detail shot — texture, build quality, premium feel.
+     Communicates "this is not a cheap gadget."
+     Suggested: AUTO-9462.jpg (close-up device leaning on box) ✓
+
+  4. [FILL IN] In-car lifestyle shot — device installed in a real car dashboard.
+     Shows what "using it" actually looks like. Creates mental ownership.
+     Current: 7.jpg ✓
+
+  5. [FILL IN] Screen interface shot — the car's display showing CarPlay or a
+     streaming app. Proves the product works. "Seeing is believing."
+     Current: TacomaUI_3.png ✓
+
+  6. [FILL IN] Box contents / unboxing shot — everything laid out neatly.
+     Sets expectations and communicates completeness ("everything included").
+     Current: ProductPic2_Sq_1.png ✓
+
+  7. [FILL IN] Second angle / scale reference — product held in hand or next
+     to a coin. Shows how compact it is. Fights "is it bulky?" anxiety.
+     Current: AutoLinkr_Pro_Product_Pic_square_1.png ✓
+
+  8. [FILL IN] 3D spinning video — premium product showcase
+     Asset: https://cdn.shopify.com/videos/c/o/v/f710c015c61142c997c93fa5dd13c01d.mov
+
+  9. [FILL IN] Video review thumbnail — YouTube review embed or click-to-play.
+     Third-party validation is more credible than anything you write.
+     Current: YouTube thumbnail (AxcmlF_3Tfs) ✓
+
+GALLERY RULES:
+  - Swipeable on mobile with dot indicators
+  - 1:1 aspect ratio for consistency
+  - First image loads eagerly (not lazy)
+  - All others lazy-load
+  - Include at least ONE video in the gallery
+
+
+─── RIGHT / BOTTOM: Product Info (the conversion column) ───
+
+ORDER OF ELEMENTS (top to bottom — every element earns its position):
+
+  a) BADGE: "⭐ Best Seller"
+
+  b) PRODUCT TITLE: "AutoLinkr Pro™"
+
+  c) SUBTITLE: "Wireless CarPlay & Streaming Adapter"
+
+  d) KEY SELLING FEATURES (3-4 bullet icons right under title):
+     • ✅ Wireless CarPlay & Android Auto
+     • ✅ Netflix, YouTube & 1000+ Apps
+     • ✅ 60-Second Plug & Play Setup
+     • ✅ Works With 500+ Vehicles
+
+  e) STAR RATING: ★★★★★ 4.7 · 916 reviews (clickable → scrolls to reviews)
+
+  f) PRICE BLOCK:
+     $79.99
+     About $2.67/month over a year
+     ✅ In stock — ships within 24 hours
+
+  g) QUANTITY SELECTOR:
+     [−] 1 [+]
+     Below it: "Buy 2, save $19.99"
+
+  h) ADD TO CART BUTTON:
+     🛒  Add to Cart — $79.99
+     Full-width.
+
+  i) TRUST ROW (immediately under button):
+     🚚 Free Shipping  🛡 30-Day  🔒 Secure
+
+  j) PAYMENT ICONS:
+     [Visa] [MC] [Amex] [PayPal] [Shop Pay] [Apple Pay] [G Pay]
+
+  k) DELIVERY ESTIMATE:
+     📦 Get it by [DYNAMIC DATE — Thursday, Mar 12]
+     ↩️ Easy 30-Day Returns
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: COLLAPSIBLE ROWS (Accordion — immediately below hero)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Keep the page clean while giving detail-seekers everything they need
+WITHOUT leaving the product page. These replace long scrolling text blocks.
+
+BEHAVIOR: Tap to expand. One open at a time.
+
+─── Row 1: Description ───
+  HEADING: "Description"
+  CONTENT:
+    "AutoLinkr Pro™ transforms any compatible car into a wireless entertainment
+    hub. No more fumbling with cables every drive, no more watching your
+    passengers stare at their phones on road trips.
+
+    Just plug it into your USB port once, pair your phone, and you're done —
+    wireless CarPlay or Android Auto activates automatically every time you
+    start your car.
+
+    With the built-in Google Play Store, you get Netflix, YouTube, Disney+,
+    Hulu, and thousands of apps right on your car's factory screen.
+
+    Whether it's hands-free navigation on your commute or streaming movies
+    for your kids on a road trip, AutoLinkr Pro™ is the single upgrade that
+    makes your car feel brand new — in about a minute."
+
+─── Row 2: Compatibility ───
+  HEADING: "Compatibility"
+  CONTENT:
+    "Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto.
+
+    Compatible with 500+ models from Toyota, Honda, Ford, Chevrolet, BMW,
+    Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and
+    30+ more manufacturers.
+
+    Not compatible with: Tesla, Rivian, Lucid, NIO.
+
+    [Check Your Car →] link
+
+    Not sure? Contact us and we'll confirm in minutes."
+
+─── Row 3: Tech Specs ───
+  HEADING: "Tech Specs"
+  CONTENT:
+    • Connectivity: Wireless CarPlay + Android Auto
+    • Streaming: Netflix, YouTube, Disney+, Hulu, Prime Video + more
+    • App Store: Full Google Play Store access
+    • Setup: Plug-and-play, under 60 seconds
+    • Connection: Bluetooth 5.0 + WiFi
+    • Internet: Via phone hotspot or vehicle WiFi
+    • Cables Included: USB-C to USB-A + USB-C to USB-C
+    • Firmware: OTA (over-the-air) updates
+    • Compatibility: 500+ vehicle models (2016+)
+    • RAM: 2GB
+    • Storage: 16GB built-in + Micro SD expandable
+
+─── Row 4: Shipping & Returns ───
+  HEADING: "Shipping & Returns"
+  CONTENT:
+    "FREE standard shipping on all orders (6-10 business days).
+    Most orders placed before 2pm ET ship the same day.
+
+    30-day money-back guarantee — if AutoLinkr doesn't work with your
+    car or you're not satisfied, return it for full in-store credit. We cover
+    return shipping.
+
+    Lifetime customer support: support@theautolinkr.com"
+
+─── Safety Disclaimer (below accordion, small print) ───
+  ICON: ⚠️ warning triangle
+  COPY: "Always operate your vehicle safely and in compliance with all
+  applicable traffic and distracted-driving laws. AutoLinkr products are
+  consumer electronic accessories and do not control or affect vehicle
+  operation. Video playback is not intended for driver viewing while the
+  vehicle is in motion and should only be used by passengers or when the
+  vehicle is parked. The driver is solely responsible for safe and lawful
+  vehicle operation at all times."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: FROM BOX TO STREAMING (Visual storytelling hero)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Show the complete journey in one visual moment. Eliminates "is this
+complicated?" anxiety by proving the transformation is real and fast.
+
+LAYOUT: Rich text + video pairing. Full-width on mobile.
+
+LEFT/TOP (Text):
+  SUBTITLE: "From box to streaming"
+  HEADING: "60 Seconds to a Smarter Car"
+  BODY: "Open the box. Plug it in. Start streaming. That's it. No tools,
+  no mechanic, no wiring diagrams. AutoLinkr Pro™ is the simplest upgrade
+  you'll ever make to your car."
+  CTA: "See How It Works ↓"
+
+RIGHT/BOTTOM (Video):
+  Video: https://cdn.shopify.com/videos/c/o/v/2a9b3c1f04034a5bbbb7d5074334392c.mp4
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: AS FEATURED IN (Press Credibility)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Most visitors arrive from Facebook/Instagram ads directly to this PDP —
+they never see the homepage. This single row of press logos adds instant
+third-party credibility with zero clutter. Takes <1 second to process visually.
+
+LAYOUT: Single row of logo marks, horizontally centered, evenly spaced.
+On mobile: scrollable row or 2x2 grid if too tight.
+
+SUBTITLE: "As Featured In"
+LOGOS (grayscale):
+  [FILL IN] Business Insider logo
+  [FILL IN] TechCrunch logo
+  [FILL IN] Motor Trend logo
+  [FILL IN] CarWow logo
+  [FILL IN] Add any other relevant press logos
+
+NOTES:
+  - Only include publications that have actually featured AutoLinkr
+  - If you don't have 4+ logos yet, skip this section until you do
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: FULL FEATURE LIST (What you get — comprehensive)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: For the detail-oriented researcher. Converts people who need to see
+everything before buying.
+
+LAYOUT: Rich text + image pairing (image on one side, list on the other).
+
+IMAGE:
+  https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Thumbnail.png?v=1766790433
+
+CONTENT:
+  SUBTITLE: "What you get"
+  HEADING: "Everything, Built In"
+
+  ✅ Wireless CarPlay & Android Auto
+     No cables. Connects automatically every drive.
+
+  ✅ Netflix, YouTube & Disney+
+     Stream directly on your car's built-in screen.
+
+  ✅ Google Play Store Access
+     Download apps, games, and tools for your car.
+
+  ✅ 60-Second Plug-and-Play Setup
+     No tools, no mechanic, no wiring.
+
+  ✅ Auto-Connects on Start
+     Get in your car and it just works.
+
+  ✅ Works With 500+ Vehicles
+     Toyota, Honda, Ford, BMW, and 30+ more brands.
+
+  ✅ Micro SD Card Support
+     Expand storage for offline content.
+
+  ✅ Offline Content Downloads
+     Download shows before your trip — no data needed.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: COMPATIBILITY (Rich text + image — links to full page)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Address the #1 purchase objection: "Will it work with MY car?"
+
+LAYOUT: Rich text + image pairing (image on one side, text on other).
+
+IMAGE:
+  https://cdn.shopify.com/s/files/1/0706/8971/8306/files/AUTO-9518.jpg?v=1759000811
+
+CONTENT:
+  HEADING: "Works With Your Car"
+  SUBHEADING: "Compatible with any 2016+ vehicle with factory CarPlay or
+  Android Auto — that's 500+ models from 30+ brands."
+
+  BRAND GRID:
+    Toyota · Honda · Ford · Chevrolet · BMW · Mercedes · Hyundai · Kia
+    Nissan · Subaru · Mazda · Volkswagen · Audi · Lexus · Jeep · 30+ more
+
+  CTA BUTTON: "Check Your Car's Compatibility →"
+    Links to: /pages/supported-cars
+
+  FALLBACK: "Not sure? Contact us — we'll confirm in minutes."
+  GUARANTEE: "If it doesn't work with your car, full refund. No questions."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7: HOW IT WORKS (3 Steps)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Eliminate installation anxiety. 64% of prospects worry about setup
+complexity. Show them it's literally three steps.
+
+LAYOUT: 3-column grid on desktop, stacked on mobile.
+
+SUBTITLE: "Plug and play"
+HEADING: "Set Up in 60 Seconds"
+
+  Step 1: "Plug In" — Insert into your car's USB port
+    Image: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Adapter17.png?v=1704950035
+
+  Step 2: "Connect" — Pair your phone via Bluetooth
+    Image: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Wifi_Passcode_Image.webp?v=1718322092
+
+  Step 3: "Enjoy" — Wireless CarPlay + streaming
+    Image: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/WCPAA-Dual_cover-02.webp?v=1718169515
+
+OPTIONAL: "▶ Watch Setup Video"
+  https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx (customer review video)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8: TESTIMONIALS + SOCIAL PROOF (Validation with data)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Peer validation BEFORE the upsell sections. Reviews are the #1
+conversion driver for AutoLinkr. Placing them here builds maximum confidence
+before we ask them to consider the Elite or bundles.
+
+LAYOUT: Summary stats at top, then 3 review cards (swipeable on mobile,
+3-column grid on desktop), then "See All" link.
+
+HEADING: "What Customers Are Saying"
+
+─── Social Proof Stat Bars (above reviews) ───
+
+  BAR 1:
+    Label: "Units Sold"
+    Number: "50,000+"
+
+  BAR 2:
+    Label: "Customer Compatibility Rate"
+    Number: "98%"
+
+  OPTIONAL ANIMATION: Bars fill from 0 to final value on scroll-into-view.
+
+─── Review Summary Block ───
+  4.7
+  ★★★★★
+  "Based on 916 reviews"
+
+  Star distribution bars:
+    5 ★ 74%  |  4 ★ 18%  |  3 ★ 5%  |  2 ★ 2%  |  1 ★ 1%
+
+─── Review Cards (3 featured) ───
+
+  CARD 1: ★★★★★
+    [FILL IN] Review mentioning car model + easy setup + streaming
+    EXAMPLE: "Game changer for my commute. Setup took 30 seconds and now I
+    never plug in my phone. Netflix on road trips is incredible."
+    — [FILL IN] Name, City, State · [FILL IN] Car model
+    ✓ Verified Purchase
+
+  CARD 2: ★★★★☆ (intentionally 4-star — shows authenticity)
+    [FILL IN] Honest review that's still positive overall.
+    EXAMPLE: "Really solid product. Wireless CarPlay works great. Took a
+    minute to figure out the initial setup but once it clicked, flawless."
+    — [FILL IN] Name, City, State · [FILL IN] Car model
+    ✓ Verified Purchase
+
+  CARD 3: ★★★★★
+    [FILL IN] Review mentioning value/price.
+    EXAMPLE: "Best car purchase I've made in years. My 2019 Civic feels
+    brand new. Worth every penny."
+    — [FILL IN] Name, City, State · [FILL IN] Car model
+    ✓ Verified Purchase
+
+  LINK: "See All 916 Reviews →"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 9: PRO vs ELITE COMPARISON (Promote the Elite)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Show the customer exactly what they get with the Pro and what they'd
+gain by upgrading to the Elite. This both validates the Pro purchase ("you're
+getting a ton") and plants the seed for the Elite upsell that follows.
+
+LAYOUT: Side-by-side comparison with product images at top. Two columns —
+Pro on left, Elite on right.
+
+HEADING: "Pro vs Elite — Which Is Right for You?"
+SUBHEADING: "Both are packed with features. Elite adds power for those
+who want the maximum."
+
+  ┌─────────────────────────┬─────────────────────────┐
+  │   [Pro product image]   │  [Elite product image]  │
+  │   AutoLinkr Pro™        │  AutoLinkr Elite™       │
+  │   $79.99                │  $199.99                │
+  ├─────────────────────────┼─────────────────────────┤
+  │  ✅ Wireless CarPlay    │  ✅ Wireless CarPlay    │
+  │  ✅ Wireless Android    │  ✅ Wireless Android    │
+  │     Auto                │     Auto                │
+  │  ✅ Netflix             │  ✅ Netflix             │
+  │  ✅ YouTube             │  ✅ YouTube             │
+  │  ✅ Disney+             │  ✅ Disney+             │
+  │  ✅ Hulu                │  ✅ Hulu                │
+  │  ✅ Google Play         │  ✅ Google Play         │
+  │  ✅ MicroSD Slot        │  ✅ MicroSD Slot        │
+  │                         │                         │
+  │  2GB RAM                │  8GB RAM ← 4x more     │
+  │  16GB Storage           │  64GB Storage ← 4x more│
+  │                         │  ✅ Enhanced UI         │
+  │                         │  ✅ Split Screen        │
+  └─────────────────────────┴─────────────────────────┘
+
+  BELOW TABLE:
+    "Most drivers love the Pro. Power users upgrade to Elite."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 10: ELITE UPSELL (Immediate upgrade opportunity)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Strike while the iron is hot. The customer just saw everything the
+Elite offers — now make it easy to upgrade. This is a simple, focused upsell
+card. Not a full product page — just enough to convert the curious.
+
+LAYOUT: Centered card or rich text + image pairing. Clean, not cluttered.
+
+  ┌───────────────────────────────────────┐
+  │  [Elite product image]                │
+  │                                       │
+  │  "Want Split Screen & 4x the Power?" │
+  │                                       │
+  │  AutoLinkr Elite™                     │
+  │  $199.99                              │
+  │                                       │
+  │  Everything in Pro, plus:             │
+  │  • 8GB RAM (4x Pro)                  │
+  │  • 64GB Storage (4x Pro)             │
+  │  • Split-screen multitasking         │
+  │  • Enhanced UI                        │
+  │                                       │
+  │  [Upgrade to Elite™]                  │
+  │  [View Elite Details →]              │
+  └───────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 11: FAQ ACCORDION (Merged — hesitation-focused)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: One clean FAQ section that covers the real hesitations keeping people
+from buying. Merged from the old Community Q&A + FAQ sections to avoid
+redundancy. Every question addresses a genuine purchase blocker.
+
+BEHAVIOR: Accordion — tap to expand. One open at a time.
+
+HEADING: "Common Questions"
+
+  Q1: "Will this work with my car?"
+  A: Works with any 2016+ vehicle with factory CarPlay or Android Auto —
+     that's 500+ models from Toyota, Honda, Ford, BMW, and 30+ brands.
+     Not compatible with Tesla, Rivian, or Lucid.
+     → Check your car
+
+  Q2: "Does it work with both iPhone and Android?"
+  A: Yes. AutoLinkr Pro™ supports both wireless Apple CarPlay and wireless
+     Android Auto. It detects your phone automatically on first connection.
+
+  Q3: "Do I need WiFi for streaming?"
+  A: Streaming uses your phone's mobile hotspot — just turn it on and
+     AutoLinkr connects automatically. Most plans include hotspot data.
+     Many apps also support offline downloads for when you're out of range.
+
+  Q4: "Can I watch Netflix while the car is moving?"
+  A: Streaming apps remain active while driving — designed for passenger
+     use. AutoLinkr does not restrict playback, but the driver should never
+     watch video while operating the vehicle.
+
+  Q5: "What if it doesn't work with my car?"
+  A: 30-day money-back guarantee. Return it for full in-store credit.
+     We cover return shipping. No questions asked.
+
+  Q6: "Can I move it between cars?"
+  A: Absolutely. It's completely portable — unplug from one car's USB port
+     and plug into another. Works instantly in any compatible vehicle.
+
+  Q7: "How long does shipping take?"
+  A: Free standard shipping on all orders, 6-10 business days. Most orders
+     placed before 2pm ET ship the same day.
+
+  Q8: "What's the difference between Pro and Elite?"
+  A: Both include wireless CarPlay/Android Auto and full streaming. Elite
+     adds 4x the RAM (8GB), 4x the storage (64GB), split-screen
+     multitasking, and an enhanced UI. For most drivers, the Pro is perfect.
+     → Compare Pro vs Elite above
+
+RULES:
+  - Written in the customer's voice ("my car", not "your vehicle")
+  - Answers are 2-3 sentences max
+  - Answers that can end with a CTA, do
+  - Ordered by frequency of hesitation (compatibility first, then streaming,
+    then returns, then logistics)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 12: BUNDLE OFFER (Pro + Mount)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Drive AOV with a simple, compelling 2-product bundle. The MagSafe Mount
+is the #1 cross-sell (2,543 units sold) and a natural pairing. Low price jump
+from $79.99 to ~$99.99 feels like an easy upgrade, not a commitment.
+
+LAYOUT: Centered card with both products shown + combined pricing + single CTA.
+
+  ┌───────────────────────────────────────────────┐
+  │         🔥 COMPLETE YOUR SETUP               │
+  │                                               │
+  │     [Pro image]    +    [Mount image]         │
+  │                                               │
+  │  AutoLinkr Pro™                               │
+  │  + MagSafe Car Mount                          │
+  │                                               │
+  │  Separately: $109.98 (strikethrough)          │
+  │  Bundle: $99.99                               │
+  │  You Save $9.99                               │
+  │                                               │
+  │  [Add Bundle to Cart]                         │
+  │                                               │
+  │  "Stream wirelessly. Mount magnetically."     │
+  └───────────────────────────────────────────────┘
+
+  [FILL IN] Confirm bundle pricing — $99.99 is a suggestion.
+  Actual bundle discount needs to be set up in Shopify.
+
+  PRODUCT IMAGES:
+    [FILL IN] Pro product image (small thumbnail)
+    [FILL IN] MagSafe Mount product image (small thumbnail)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 13: FINAL CTA (The Closer)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Last chance conversion push. Full value stack in one place.
+
+LAYOUT: Centered text on accent background. Strong headline + CTA.
+
+  HEADING: "Ready to Upgrade Your Drive?"
+
+  VALUE STACK:
+    "Wireless CarPlay, streaming apps, and a 30-day guarantee —
+    all for $79.99 with free shipping."
+
+  CTA: [Add AutoLinkr Pro™ to Cart]
+  SECONDARY: "Check Your Car's Compatibility →"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PERSISTENT ELEMENT: STICKY ADD TO CART BAR (Mobile Only)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Once the user scrolls past the hero, the Add to Cart button disappears.
+This bar keeps the purchase action always within thumb reach.
+
+TRIGGER: Appears when product info section scrolls out of view.
+POSITION: Fixed to bottom of screen. Hidden on desktop (desktop has sticky sidebar).
+
+  ┌──────────────────────────────────────────────┐
+  │  AutoLinkr Pro™     $79.99    [Add to Cart]  │
+  └──────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PERSISTENT ELEMENT: REVIEWS WIDGET (Dynamic — app-powered)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: The full dynamic review feed from the reviews app. Loads all 916
+reviews with filtering, sorting, customer photos. This lives at the very
+bottom of the page as a deep-dive resource for research-heavy shoppers who
+want to read every review.
+
+PLACEMENT: After the Final CTA, before the footer.
+NOTE: This is app-generated, not manually built. Just ensure the app section
+is placed here in the Shopify customizer.
+
+
+================================================================================
+  SECTION ORDER SUMMARY (The Complete Scroll Sequence)
+================================================================================
+
+  0.  Announcement Bar ............ Trust + value (persistent, 50K+ customers)
+  1.  Product Hero ................ Gallery (w/ 10s demo video) + info + CTA
+  2.  Collapsible Rows ............ Description, compatibility, specs, shipping
+  3.  From Box to Streaming ....... Visual transformation story + video
+  4.  As Featured In .............. Press logos (credibility for ad traffic)
+  5.  Full Feature List ........... Benefit-first checklist + image
+  6.  Compatibility ............... #1 objection handler + image + CTA
+  7.  How It Works ................ 3 steps (kills setup anxiety)
+  8.  Testimonials + Social Proof . Stat bars (50K sold, 98%) + 3 review cards
+  9.  Pro vs Elite Comparison ..... Side-by-side feature/spec comparison
+  10. Elite Upsell ................ Focused upgrade card
+  11. FAQ ......................... Merged Q&A + FAQ (hesitation-focused)
+  12. Bundle Offer ................ Pro + Mount deal ($99.99, save $9.99)
+  13. Final CTA ................... Value stack, last push
+  ──  Sticky Bar .................. Always-visible mobile Add to Cart
+  ──  Reviews Widget .............. Full dynamic review feed (app-powered)
+
+  TOTAL: 13 sections + 2 persistent elements + 1 dynamic widget
+  TARGET SESSION: Convert within 40 seconds (hero must do the heavy lifting)
+
+
+================================================================================
+  ASSETS CHECKLIST — What You Need to Supply
+================================================================================
+
+  [FILL IN] Gallery images (7 product photos + 2 videos)
+  [FILL IN] 10-SECOND DEMO VIDEO — square (1:1), MP4, <5MB, autoplay/muted/loop
+            Shows plug-in → screen lights up → streaming. THE key conversion asset.
+  [HAVE] 3D spinning video: f710c015c61142c997c93fa5dd13c01d.mov
+  [HAVE] From Box to Streaming video: https://cdn.shopify.com/videos/c/o/v/2a9b3c1f04034a5bbbb7d5074334392c.mp4
+  [HAVE] Feature list image: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Thumbnail.png?v=1766790433
+  [HAVE] Compatibility image: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/AUTO-9518.jpg?v=1759000811
+  [HAVE] How It Works images:
+    Plug: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Adapter17.png?v=1704950035
+    Connect: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Wifi_Passcode_Image.webp?v=1718322092
+    Enjoy: https://cdn.shopify.com/s/files/1/0706/8971/8306/files/WCPAA-Dual_cover-02.webp?v=1718169515
+  [HAVE] Setup video: https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx
+  [FILL IN] Press logos for "As Featured In" section (need 4+ publication logos)
+  [FILL IN] 3 real customer reviews with name, city, car model
+  [FILL IN] Elite product image for comparison section
+  [FILL IN] Bundle product thumbnails (Pro, Mount)
+  [FILL IN] Bundle pricing — confirm Pro + Mount discount amount
+
+  FUTURE (not in initial build):
+  [LATER] AI chat widget (will add once product is live)
+  [LATER] Klaviyo exit-intent popup (10% off first order)
+  [LATER] Real-time purchase notifications / "X people viewing" (post-launch)
+
+================================================================================

@@ -554,10 +554,14 @@ details[is="accordion-details"] summary::-webkit-details-marker {
   color: transparent !important;
 }
 
-/* Hide the + icon from accordion rows (chevron ::after is kept) */
+/* Hide the + icon from accordion rows globally (chevron ::after is kept) */
 .product__accordion summary > svg.shrink-0,
 details.product__accordion summary > svg,
-.product__accordion .details__summary > svg.shrink-0 {
+.product__accordion .details__summary > svg.shrink-0,
+details[is="accordion-details"] summary > svg.shrink-0,
+details[is="accordion-details"] .details__summary > svg.shrink-0,
+.details summary > svg.shrink-0,
+.product-details details summary > svg.shrink-0 {
   display: none !important;
 }
 
@@ -620,6 +624,16 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .product__column-sticky,
 .product__info-container {
   padding-top: 8px !important;
+}
+
+/* Tighten product info block spacing — bring buy buttons up */
+.main-product .product__info-wrapper > * {
+  margin-bottom: 4px !important;
+}
+.main-product .product__info-wrapper .product-form,
+.main-product .product__info-wrapper .product-form__buttons {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 /* ─── MULTICOLUMN WITH ICONS ─────────────────────────────── */
@@ -830,6 +844,34 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   font-family: var(--al-font-display) !important;
 }
 .scrolling-text__icon { color: var(--al-accent) !important; }
+
+/* ─── PRODUCT TEXT BLOCKS — remove excess padding ─────────── */
+.product__text-inner {
+  padding: 0 !important;
+}
+.product__text+.product__text .product__text-inner,
+.product__text:has(+.product__text) .product__text-inner {
+  padding-top: var(--sp-4) !important;
+  padding-bottom: var(--sp-4) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.product__text:has(+.product__text) {
+  padding: 0 !important;
+}
+
+/* ─── IMAGE WITH TEXT — force image visible on mobile ─────── */
+@media (max-width: 768px) {
+  .image-with-text .image-with-text__media,
+  .image-with-text .image-with-text__media-item,
+  .image-with-text img,
+  .image-with-text .media {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+  }
+}
 
 /* ─── IMAGE WITH TEXT SECTIONS ───────────────────────────── */
 .image-with-text__content h2,

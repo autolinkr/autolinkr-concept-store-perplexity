@@ -14,6 +14,7 @@
   /* Core Brand Colors */
   --al-bg:            #080809;
   --al-surface:       #0F0F12;
+  --al-surface-alt:   #131317;  /* Subtle card lift — used in dropdown product cards */
   --al-surface-2:     #161619;
   --al-surface-3:     #1E1E22;
   --al-surface-4:     #26262B;
@@ -47,6 +48,18 @@
   /* Typography */
   --al-font-display: 'General Sans', -apple-system, 'Segoe UI', sans-serif;
   --al-font-body:    'Inter', -apple-system, 'Segoe UI', sans-serif;
+
+  /* Alias tokens — used in autolinkr-header.css */
+  --al-blue:           #3B8EF8;   /* = --al-accent */
+  --al-nav-height:     64px;      /* = --al-nav-h */
+  --al-nav-height-mob: 56px;
+  --al-radius-sm:      6px;       /* = --al-r-sm */
+  --al-radius-md:      12px;      /* = --al-r-md */
+  --al-radius-lg:      18px;      /* = --al-r-lg */
+  --al-text-primary:   #F7F7F8;   /* = --al-text-1 */
+  --al-text-secondary: #C8C8D0;   /* = --al-text-2 */
+  --al-text-tertiary:  #8A8A94;   /* = --al-text-3 */
+  --al-text-base:      1rem;      /* = --al-text-body */
 
   /* Type Scale — fluid */
   --al-text-hero:  clamp(2.75rem, 6.5vw, 5rem);

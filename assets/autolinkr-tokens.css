@@ -116,10 +116,7 @@ a:hover { color: var(--al-accent-hover); }
 /* ─── SECTION BACKGROUNDS ────────────────────────────────── */
 /* Backgrounds are now controlled by Shopify editor settings.
    Only custom sections (al-*) get hardcoded dark backgrounds. */
-[class^="al-"],
-[class*=" al-"] {
-  background-color: var(--al-bg);
-}
+/* al-* section backgrounds are set per-section in liquid files */
 
 /* Section dividers */
 .section--divider::before {
@@ -229,9 +226,9 @@ a:hover { color: var(--al-accent-hover); }
   background: transparent !important;
 }
 
-/* Announcement bar — full brand blue */
+/* Announcement bar — editor-controlled colors */
 .announcement-bar {
-  background-color: var(--al-accent) !important;
+  background-color: rgb(var(--color-base-highlight)) !important;
   border-bottom: none !important;
   border-radius: 0 !important;
 }
@@ -239,18 +236,18 @@ a:hover { color: var(--al-accent-hover); }
 .announcement-bar p,
 .announcement-bar span,
 .announcement-bar__message {
-  color: #fff !important;
+  color: rgb(var(--color-base-background)) !important;
   font-weight: 700 !important;
 }
 .js .shopify-section-group-header-group .section.section--first-rounded {
-  background-color: var(--al-accent) !important;
+  background-color: rgb(var(--color-base-highlight)) !important;
   border-radius: 0 !important;
 }
 
-/* Topbar section & all children — force blue, prevent dark bleed */
+/* Topbar section & all children — use editor highlight */
 .topbar-section,
 [id*="announcement-bar"] .announcement-bar {
-  background: #3B8EF8 !important;
+  background: rgb(var(--color-base-highlight)) !important;
 }
 .topbar-section > *,
 .topbar__end,
@@ -301,10 +298,10 @@ button .btn-fill {
 .button--primary,
 .btn-primary,
 .al-btn-primary {
-  background: var(--al-accent) !important;
-  color: #fff !important;
+  background: rgb(var(--color-base-button)) !important;
+  color: rgb(var(--color-base-button-text)) !important;
   border: none !important;
-  box-shadow: 0 0 20px rgba(59, 142, 248, 0.35), 0 4px 16px rgba(59, 142, 248, 0.18) !important;
+  box-shadow: 0 0 20px rgba(var(--color-base-button)/ 0.35), 0 4px 16px rgba(var(--color-base-button)/ 0.18) !important;
   padding: 14px 32px !important;
   font-size: 0.9375rem !important;
   display: inline-flex !important;
@@ -314,8 +311,8 @@ button .btn-fill {
 }
 .button--primary:hover,
 .al-btn-primary:hover {
-  background: var(--al-accent-hover) !important;
-  box-shadow: 0 0 32px rgba(59, 142, 248, 0.55), 0 6px 24px rgba(59, 142, 248, 0.30) !important;
+  background: rgba(var(--color-base-button)/ 0.85) !important;
+  box-shadow: 0 0 32px rgba(var(--color-base-button)/ 0.55), 0 6px 24px rgba(var(--color-base-button)/ 0.30) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -470,10 +467,10 @@ details[is="accordion-details"] {
 .accordion summary,
 .accordion details summary,
 details[is="accordion-details"] summary {
-  background: linear-gradient(135deg, var(--al-surface-2), var(--al-surface-3)) !important;
-  border: 1px solid var(--al-border) !important;
+  background: rgba(var(--color-base-text)/ 0.04) !important;
+  border: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
   border-radius: var(--al-r-md) !important;
-  color: var(--al-text-1) !important;
+  color: rgb(var(--color-base-text)) !important;
   font-family: var(--al-font-display) !important;
   font-weight: 600 !important;
   font-size: 0.9375rem !important;
@@ -489,9 +486,9 @@ details[is="accordion-details"] summary {
 .product__accordion summary:hover,
 .accordion summary:hover,
 details[is="accordion-details"] summary:hover {
-  background: linear-gradient(135deg, var(--al-surface-3), var(--al-surface-4)) !important;
-  border-color: var(--al-accent-border) !important;
-  color: var(--al-text-1) !important;
+  background: rgba(var(--color-base-text)/ 0.07) !important;
+  border-color: rgba(var(--color-base-highlight)/ 0.35) !important;
+  color: rgb(var(--color-base-text)) !important;
 }
 
 /* Open state — accent left border */
@@ -500,10 +497,10 @@ details[is="accordion-details"] summary:hover {
 details[is="accordion-details"][open] summary,
 .accordion__button[aria-expanded="true"],
 .accordion--open .accordion__button {
-  background: linear-gradient(135deg, var(--al-surface-3), var(--al-surface-4)) !important;
-  border-color: var(--al-accent) !important;
-  border-left: 3px solid var(--al-accent) !important;
-  color: var(--al-text-1) !important;
+  background: rgba(var(--color-base-text)/ 0.07) !important;
+  border-color: rgb(var(--color-base-highlight)) !important;
+  border-left: 3px solid rgb(var(--color-base-highlight)) !important;
+  color: rgb(var(--color-base-text)) !important;
   border-radius: var(--al-r-md) var(--al-r-md) 0 0 !important;
 }
 
@@ -559,8 +556,8 @@ details[is="accordion-details"] .details__summary > svg.shrink-0,
 .accordion details > div:not(.dropdown),
 details[is="accordion-details"] > div:not(.dropdown),
 details > .accordion__content {
-  background: var(--al-surface-2) !important;
-  border: 1px solid var(--al-border) !important;
+  background: rgba(var(--color-base-text)/ 0.05) !important;
+  border: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
   border-top: none !important;
   border-radius: 0 0 var(--al-r-md) var(--al-r-md) !important;
   padding: 20px 20px 24px !important;
@@ -629,8 +626,8 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .multicolumn-with-icons .column,
 .multicolumn-list__item,
 [class*="multicolumn"] .card {
-  background: var(--al-surface) !important;
-  border: 1px solid var(--al-border) !important;
+  background: rgba(var(--color-base-text)/ 0.04) !important;
+  border: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
   border-radius: var(--al-r-lg) !important;
   padding: 28px 24px !important;
   transition: all var(--al-transition) !important;
@@ -653,8 +650,8 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 }
 [class*="multicolumn"] .card:hover,
 .multicolumn-list__item:hover {
-  border-color: var(--al-accent-border) !important;
-  background: var(--al-surface-2) !important;
+  border-color: rgba(var(--color-base-highlight)/ 0.3) !important;
+  background: rgba(var(--color-base-text)/ 0.07) !important;
   transform: translateY(-3px) !important;
   box-shadow: var(--al-shadow-accent) !important;
 }
@@ -695,7 +692,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 
 /* ─── FEATURE STRIP (al-feature-strip) ───────────────────── */
 .al-feature-strip {
-  background: var(--al-surface) !important;
+  background: rgba(var(--color-base-text)/ 0.04) !important;
   border-top: 1px solid var(--al-border-subtle) !important;
   border-bottom: 1px solid var(--al-border-subtle) !important;
   padding: 20px 0 !important;
@@ -721,40 +718,40 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 
 /* ─── PRODUCT COMPARISON TABLE ───────────────────────────── */
 .product-comparison {
-  background: var(--al-surface) !important;
+  background: rgba(var(--color-base-text)/ 0.03) !important;
   border-radius: var(--al-r-xl) !important;
   overflow: hidden !important;
-  border: 1px solid var(--al-border) !important;
+  border: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
 }
 .product-comparison__header,
 .product-comparison [class*="header"],
 .comparison-table th {
-  background: var(--al-surface-2) !important;
-  color: var(--al-text-1) !important;
+  background: rgba(var(--color-base-text)/ 0.06) !important;
+  color: rgb(var(--color-base-text)) !important;
   font-family: var(--al-font-display) !important;
   font-weight: 700 !important;
   padding: 20px 16px !important;
-  border-bottom: 1px solid var(--al-border) !important;
+  border-bottom: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
 }
 .product-comparison__row,
 .comparison-table tr {
-  border-bottom: 1px solid var(--al-border-subtle) !important;
+  border-bottom: 1px solid rgba(var(--color-base-text)/ 0.06) !important;
   transition: background var(--al-transition) !important;
 }
 .product-comparison__row:hover,
 .comparison-table tr:hover {
-  background: var(--al-surface-2) !important;
+  background: rgba(var(--color-base-text)/ 0.05) !important;
 }
 .product-comparison__label,
 .comparison-table td:first-child {
-  color: var(--al-text-2) !important;
+  color: rgba(var(--color-base-text)/ 0.75) !important;
   font-weight: 500 !important;
   font-size: var(--al-text-sm) !important;
   padding: 16px !important;
 }
 .product-comparison__value,
 .comparison-table td {
-  color: var(--al-text-2) !important;
+  color: rgba(var(--color-base-text)/ 0.75) !important;
   padding: 16px !important;
   text-align: center !important;
 }
@@ -796,35 +793,35 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 
 /* ─── NUMBER COUNTER STATS ────────────────────────────────── */
 .number-counter {
-  background: linear-gradient(135deg, var(--al-surface), var(--al-surface-2)) !important;
-  border-top: 1px solid var(--al-border) !important;
-  border-bottom: 1px solid var(--al-border) !important;
+  background: rgba(var(--color-base-text)/ 0.04) !important;
+  border-top: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
+  border-bottom: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
 }
 .number-counter .heading {
-  color: var(--al-accent) !important;
+  color: rgb(var(--color-base-highlight)) !important;
   font-size: clamp(2.25rem, 4.5vw, 3.75rem) !important;
   font-weight: 700 !important;
   letter-spacing: -0.03em !important;
   font-family: var(--al-font-display) !important;
 }
 .number-counter p {
-  color: var(--al-text-3) !important;
+  color: rgba(var(--color-base-text)/ 0.55) !important;
   font-size: 0.85rem !important;
   font-weight: 500 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
 }
 .number-counter__item {
-  border-right: 1px solid var(--al-border) !important;
+  border-right: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
   padding: 40px 0 !important;
 }
 .number-counter__item:last-child { border-right: none !important; }
 
 /* ─── SCROLLING TRUST BAR ─────────────────────────────────── */
 .scrolling-text {
-  background: var(--al-surface) !important;
-  border-top: 1px solid var(--al-border) !important;
-  border-bottom: 1px solid var(--al-border) !important;
+  background: rgba(var(--color-base-text)/ 0.04) !important;
+  border-top: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
+  border-bottom: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
 }
 .scrolling-text__item {
   color: var(--al-text-2) !important;
@@ -985,7 +982,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 
 /* ─── PRODUCT RECOMMENDATIONS ───────────────────────────── */
 .product-recommendations .card {
-  background: var(--al-surface) !important;
+  background: rgba(var(--color-base-text)/ 0.04) !important;
   border: 1px solid var(--al-border) !important;
   border-radius: var(--al-r-lg) !important;
   transition: all var(--al-transition) !important;
@@ -1051,17 +1048,17 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   padding: 0 !important;
 }
 .footer {
-  background: var(--al-surface) !important;
-  border-top: 1px solid var(--al-border) !important;
+  background: rgb(var(--color-base-background)) !important;
+  border-top: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
   padding: 48px 40px !important;
 }
 .footer__content-top,
 .footer__content-bottom {
-  color: var(--al-text-3) !important;
+  color: rgba(var(--color-base-text)/ 0.55) !important;
 }
 .footer .heading,
 .footer h2, .footer h3, .footer h4 {
-  color: var(--al-text-1) !important;
+  color: rgb(var(--color-base-text)) !important;
   font-family: var(--al-font-display) !important;
   font-size: 0.875rem !important;
   font-weight: 600 !important;
@@ -1070,30 +1067,30 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 }
 .footer a,
 .footer__list a {
-  color: var(--al-text-3) !important;
+  color: rgba(var(--color-base-text)/ 0.55) !important;
   text-decoration: none !important;
   font-size: var(--al-text-sm) !important;
   transition: color var(--al-transition) !important;
 }
 .footer a:hover,
 .footer__list a:hover {
-  color: var(--al-text-1) !important;
+  color: rgb(var(--color-base-text)) !important;
 }
 .footer__content-bottom {
-  border-top: 1px solid var(--al-border-subtle) !important;
+  border-top: 1px solid rgba(var(--color-base-text)/ 0.06) !important;
 }
 .footer__copyright {
-  color: var(--al-text-4) !important;
+  color: rgba(var(--color-base-text)/ 0.3) !important;
   font-size: var(--al-text-xs) !important;
 }
 /* Social icons in footer */
 .footer .social-icons a,
 .footer .list-social a {
-  color: var(--al-text-3) !important;
+  color: rgba(var(--color-base-text)/ 0.55) !important;
 }
 .footer .social-icons a:hover,
 .footer .list-social a:hover {
-  color: var(--al-text-1) !important;
+  color: rgb(var(--color-base-text)) !important;
 }
 /* Payment badges */
 .footer .payment-icons { filter: brightness(0.7) !important; }
@@ -1102,7 +1099,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .al-brand-hero {
   position: relative;
   overflow: hidden;
-  background: var(--al-bg);
+  background: rgb(var(--color-base-background));
   min-height: 700px;
   display: flex;
   align-items: center;
@@ -1178,17 +1175,15 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   height: auto;
   display: block;
 }
-.al-video-section {
-  background: var(--al-bg) !important;
-}
+/* al-video-section: background comes from liquid rgb(var(--color-base-background)) */
 .al-video-section .al-eyebrow {
-  color: var(--al-accent) !important;
+  color: rgb(var(--color-base-highlight)) !important;
 }
 .al-video-section .al-heading {
-  color: var(--al-text-1) !important;
+  color: rgb(var(--color-base-text)) !important;
 }
 .al-video-section .al-sub {
-  color: var(--al-text-2) !important;
+  color: rgba(var(--color-base-text)/ 0.7) !important;
 }
 
 /* ─── AL HOW IT WORKS ─────────────────────────────────────── */
@@ -1198,8 +1193,8 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   gap: 20px;
   align-items: start;
   padding: 28px 24px;
-  background: var(--al-surface) !important;
-  border: 1px solid var(--al-border) !important;
+  background: rgba(var(--color-base-text)/ 0.04) !important;
+  border: 1px solid rgba(var(--color-base-text)/ 0.1) !important;
   border-radius: var(--al-r-xl) !important;
   transition: all var(--al-transition) !important;
   position: relative;
@@ -1216,8 +1211,8 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 }
 .al-step:hover::before { opacity: 1; }
 .al-step:hover {
-  border-color: var(--al-accent-border) !important;
-  background: var(--al-surface-2) !important;
+  border-color: rgba(var(--color-base-highlight)/ 0.3) !important;
+  background: rgba(var(--color-base-text)/ 0.07) !important;
   transform: translateY(-3px) !important;
   box-shadow: var(--al-shadow-accent) !important;
 }
@@ -1277,7 +1272,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 }
 
 /* ─── ANNOUNCEMENT BAR LINKS ──────────────────────────────── */
-.announcement-bar a { color: #fff !important; font-weight: 700 !important; }
+.announcement-bar a { color: rgb(var(--color-base-background)) !important; font-weight: 700 !important; }
 
 /* ─── HEADER FIX AFTER SCROLL ─────────────────────────────── */
 .header--border-bottom,

@@ -109,11 +109,19 @@
   /* Only add aliases needed for custom sections/components below */
 }
 
-/* ─── TEXT COLOR BRIDGE — editor → al-text tokens ────────── */
-/* Remap --al-text-* to derive from Shopify editor "Text" color.
-   --color-base-text stores the RGB triplet (e.g. "247, 247, 248").
-   Opacity variants create the hierarchy (1 = full, 2 = 70%, 3 = 45%, 4 = 25%). */
+/* ─── EDITOR COLOR BRIDGE ─────────────────────────────────── */
+/* 1. Re-expose --color-background (Concept internal var used by mega-menu,
+      breadcrumbs, pswp etc.) pointing to the editor-driven base value.
+   2. Remap --al-text-* to derive from Shopify editor "Text" color so all
+      copy inherits live when the editor color changes. */
 :root {
+  /* Concept uses rgb(var(--color-background)) for mega-menu panel bg.
+     theme.css sets this but it can be blown away by section-level overrides.
+     Re-anchor it here so it always tracks the editor Background color. */
+  --color-background:   var(--color-base-background);
+  --color-foreground:   var(--color-base-text);
+
+  /* al-text-* hierarchy — all derive from editor Text color */
   --al-text-1: rgb(var(--color-base-text));           /* Full — headlines */
   --al-text-2: rgba(var(--color-base-text)/ 0.72);   /* Body copy */
   --al-text-3: rgba(var(--color-base-text)/ 0.48);   /* Muted / captions */

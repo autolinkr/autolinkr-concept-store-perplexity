@@ -6,7 +6,7 @@
 
 {%- style -%}
 .al-lg {
-  background: var(--al-bg, #080809);
+  background: var(--al-bg);
   padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #3B8EF8;
+  color: var(--al-accent);
   margin-bottom: 12px;
 }
 
@@ -33,14 +33,14 @@
   font-size: clamp(1.875rem, 3.8vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: #F7F7F8;
+  color: var(--al-text-1);
   margin: 0 0 16px;
   line-height: 1.1;
 }
 
 .al-lg__sub {
   font-size: 1.0625rem;
-  color: #8A8A94;
+  color: var(--al-text-3);
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.6;
@@ -91,7 +91,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background: #0F0F12;
+  background: var(--al-surface);
   aspect-ratio: unset;
 }
 
@@ -140,7 +140,7 @@
 .al-lg__caption-text {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #F7F7F8;
+  color: var(--al-text-1);
   letter-spacing: 0.01em;
 }
 
@@ -148,7 +148,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #3B8EF8;
+  background: var(--al-accent);
   flex-shrink: 0;
   animation: al-lg-pulse 2s infinite;
 }
@@ -175,7 +175,7 @@
   font-weight: 600;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(135deg, #2D7FF9, #1A6AE0);
+  background: linear-gradient(135deg, var(--al-accent), var(--al-accent-hover));
   padding: 14px 32px;
   border-radius: 10px;
   box-shadow: 0 4px 24px rgba(45,127,249,0.4);

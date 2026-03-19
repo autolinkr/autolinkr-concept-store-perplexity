@@ -29,15 +29,16 @@
   opacity: {{ section.settings.image_opacity | divided_by: 100.0 }};
 }
 
+/* Desktop overlay — direction + per-stop opacity from editor */
 .al-bh__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(
-    105deg,
-    rgba(10,10,12,{{ section.settings.overlay_left_opacity | divided_by: 100.0 }}) 0%,
-    rgba(10,10,12,{{ section.settings.overlay_center_opacity | divided_by: 100.0 }}) 50%,
-    rgba(10,10,12,0.1) 100%
+    {{ section.settings.overlay_direction }},
+    rgba(var(--color-base-background), {{ section.settings.overlay_start_opacity | divided_by: 100.0 }}) 0%,
+    rgba(var(--color-base-background), {{ section.settings.overlay_mid_opacity | divided_by: 100.0 }}) 50%,
+    rgba(var(--color-base-background), {{ section.settings.overlay_end_opacity | divided_by: 100.0 }}) 100%
   );
 }
 
@@ -206,12 +207,13 @@
 
 @media (max-width: 768px) {
   .al-bh { min-height: {{ section.settings.min_height_mobile }}px; }
+  /* Mobile overlay — independent editor-controlled stops */
   .al-bh__overlay {
     background: linear-gradient(
-      180deg,
-      rgba(10,10,12,0.3) 0%,
-      rgba(10,10,12,0.7) 60%,
-      rgba(10,10,12,0.95) 100%
+      {{ section.settings.overlay_direction_mobile }},
+      rgba(var(--color-base-background), {{ section.settings.overlay_start_opacity_mobile | divided_by: 100.0 }}) 0%,
+      rgba(var(--color-base-background), {{ section.settings.overlay_mid_opacity_mobile | divided_by: 100.0 }}) 50%,
+      rgba(var(--color-base-background), {{ section.settings.overlay_end_opacity_mobile | divided_by: 100.0 }}) 100%
     );
   }
   .al-bh__content { padding: var(--al-sp-16) var(--al-sp-4) var(--al-sp-12); }
@@ -291,9 +293,30 @@
         {"value": "center top", "label": "Top"},
         {"value": "70% center", "label": "Right-center"}
       ], "default": "center center" },
-    { "type": "range", "id": "image_opacity", "label": "Image opacity", "min": 20, "max": 100, "step": 5, "default": 80, "unit": "%" },
-    { "type": "range", "id": "overlay_left_opacity", "label": "Overlay (left) opacity", "min": 40, "max": 98, "step": 2, "default": 88, "unit": "%" },
-    { "type": "range", "id": "overlay_center_opacity", "label": "Overlay (center) opacity", "min": 20, "max": 90, "step": 5, "default": 55, "unit": "%" },
+    { "type": "range", "id": "image_opacity", "label": "Image opacity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Desktop Overlay" },
+    { "type": "paragraph", "content": "Gradient from left/top → right/bottom. Set all 3 stops to the same value for a flat overlay." },
+    { "type": "select", "id": "overlay_direction", "label": "Overlay direction", "options": [
+        {"value": "105deg", "label": "Left → Right (diagonal)"},
+        {"value": "90deg", "label": "Top → Bottom"},
+        {"value": "270deg", "label": "Bottom → Top"},
+        {"value": "0deg", "label": "Flat (no direction)"}
+      ], "default": "105deg" },
+    { "type": "range", "id": "overlay_start_opacity", "label": "Overlay start (0%)", "min": 0, "max": 100, "step": 5, "default": 85, "unit": "%" },
+    { "type": "range", "id": "overlay_mid_opacity", "label": "Overlay middle (50%)", "min": 0, "max": 100, "step": 5, "default": 55, "unit": "%" },
+    { "type": "range", "id": "overlay_end_opacity", "label": "Overlay end (100%)", "min": 0, "max": 100, "step": 5, "default": 10, "unit": "%" },
+    { "type": "header", "content": "Mobile Overlay" },
+    { "type": "paragraph", "content": "Independent overlay controls for mobile screens." },
+    { "type": "select", "id": "overlay_direction_mobile", "label": "Mobile overlay direction", "options": [
+        {"value": "180deg", "label": "Top → Bottom"},
+        {"value": "0deg", "label": "Bottom → Top"},
+        {"value": "105deg", "label": "Left → Right (diagonal)"},
+        {"value": "90deg", "label": "Flat (no direction)"}
+      ], "default": "180deg" },
+    { "type": "range", "id": "overlay_start_opacity_mobile", "label": "Mobile overlay top", "min": 0, "max": 100, "step": 5, "default": 30, "unit": "%" },
+    { "type": "range", "id": "overlay_mid_opacity_mobile", "label": "Mobile overlay middle", "min": 0, "max": 100, "step": 5, "default": 70, "unit": "%" },
+    { "type": "range", "id": "overlay_end_opacity_mobile", "label": "Mobile overlay bottom", "min": 0, "max": 100, "step": 5, "default": 95, "unit": "%" },
+    { "type": "header", "content": "Layout" },
     { "type": "range", "id": "min_height", "label": "Min height (desktop)", "min": 500, "max": 900, "step": 20, "default": 700, "unit": "px" },
     { "type": "range", "id": "min_height_mobile", "label": "Min height (mobile)", "min": 400, "max": 700, "step": 20, "default": 560, "unit": "px" },
     { "type": "range", "id": "content_width", "label": "Content max width", "min": 400, "max": 800, "step": 20, "default": 620, "unit": "px" },

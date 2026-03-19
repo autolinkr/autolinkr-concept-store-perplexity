@@ -184,6 +184,13 @@ a:hover { color: var(--al-accent-hover); }
   border-bottom: 1px solid var(--al-border) !important;
 }
 
+/* Mega-menu panel — section-variables.liquid can blank out --color-background
+   on ancestor elements via scoped CSS vars. Override directly on the container
+   using --color-base-background which is always set by css-variables.liquid. */
+.mega-menu__container {
+  background-color: rgb(var(--color-base-background)) !important;
+}
+
 /* Logo — force white on dark backgrounds */
 .header__heading-logo img,
 .header__heading-logo svg,

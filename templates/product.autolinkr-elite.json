@@ -284,9 +284,9 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "image-splitscreen": {
@@ -331,9 +331,9 @@
         "gradient_background": "",
         "color_background_2": "",
         "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "number-counter": {
@@ -390,7 +390,7 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": ""
       }
     },
     "scrolling-text": {
@@ -454,7 +454,7 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": ""
       }
     },
     "product-comparison": {
@@ -514,9 +514,9 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "testimonials-banner": {
@@ -559,7 +559,7 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": ""
       }
     },
     "how-it-works": {
@@ -616,9 +616,9 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "product-recommendations": {

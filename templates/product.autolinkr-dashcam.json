@@ -302,9 +302,9 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "image-nightvision": {
@@ -349,9 +349,9 @@
         "gradient_background": "",
         "color_background_2": "",
         "gradient_background_2": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "number-counter": {
@@ -408,7 +408,7 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": ""
       }
     },
     "scrolling-text": {
@@ -472,7 +472,7 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": ""
       }
     },
     "faq-section": {
@@ -519,9 +519,9 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "testimonials-banner": {
@@ -564,7 +564,7 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": ""
       }
     },
     "pro-crosssell": {

@@ -245,9 +245,9 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "#3B8EF8",
+        "color_highlight": "",
         "color_button_text": "",
-        "color_button_background": "#3B8EF8"
+        "color_button_background": ""
       }
     },
     "aroma-hiw": {
@@ -349,7 +349,7 @@
         "speed": 20,
         "color_text": "",
         "color_background": "",
-        "color_highlight": "#3B8EF8"
+        "color_highlight": ""
       }
     },
     "faq-section": {

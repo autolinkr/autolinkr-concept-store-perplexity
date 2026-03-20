@@ -1486,3 +1486,36 @@ body::before {
   z-index: auto !important;
   position: relative !important;
 }
+
+/* ─── PRODUCT PAGE BULLETS ────────────────────────────────── */
+/* Blue icons + clean row layout for bullet-1/2/3 text blocks */
+
+/* Target icon wrapper inside the product form text blocks */
+.product__info-container [id*="bullet"] .icon-wrapper,
+.product__info-container .product-block-list__item:has([data-block-id*="bullet"]) .icon-wrapper {
+  color: var(--al-accent) !important;
+}
+
+/* Broader: any icon.liquid render inside the main-product text blocks */
+.product-block-list .product-block-list__item--text .icon {
+  color: rgb(59, 142, 248) !important;
+  flex-shrink: 0;
+}
+
+/* Force every SVG inside text blocks on this page to be blue */
+.main-product .product-block-list__item--text svg,
+.product__info-container .product-block-list__item--text svg {
+  color: rgb(59, 142, 248) !important;
+  fill: none;
+}
+
+/* Make the text rows sit nicely with gap */
+.product__info-container .product-block-list__item--text {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Tighter top gap after title, before variant picker */
+.product-block-list__item--text + .product-block-list__item--text {
+  margin-top: 2px !important;
+}

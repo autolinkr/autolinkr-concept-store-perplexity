@@ -25,56 +25,6 @@
             "show_rating": false
           }
         },
-        "text-pro-badge": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "iwidth": "custom",
-            "icon_width": 24,
-            "text": "Watch your favorite shows, movies, live sports and more!",
-            "text_size": "text-base"
-          }
-        },
-        "text-tagline": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "iwidth": "custom",
-            "icon_width": 24,
-            "text": "Wireless CarPlay & Streaming Adapter",
-            "text_size": "text-base"
-          }
-        },
-        "text-feature-1": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "iwidth": "custom",
-            "icon_width": 24,
-            "text": "🎬 Upgrade your car screen — get Netflix, Hulu, Disney+, YouTube & More",
-            "text_size": "text-base"
-          }
-        },
-        "text-feature-2": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "iwidth": "custom",
-            "icon_width": 24,
-            "text": "📱 Install unlimited apps with The Google Play Store",
-            "text_size": "text-base"
-          }
-        },
-        "text-feature-3": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "iwidth": "custom",
-            "icon_width": 24,
-            "text": "⚡ Automatic Wireless CarPlay & Android Auto Connection",
-            "text_size": "text-base"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -177,17 +127,45 @@
             "text": "⚠️ Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
             "text_size": "text-xs"
           }
+        },
+        "bullet-1": {
+          "type": "text",
+          "settings": {
+            "icon": "lightning",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "Plug in once. Wireless CarPlay & Android Auto activates automatically — every drive.",
+            "text_size": "text-base"
+          }
+        },
+        "bullet-2": {
+          "type": "text",
+          "settings": {
+            "icon": "devices",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "Stream Netflix, YouTube, Disney+ & more directly on your factory screen.",
+            "text_size": "text-base"
+          }
+        },
+        "bullet-3": {
+          "type": "text",
+          "settings": {
+            "icon": "check_mark",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "Works with 500+ vehicles. No wiring, no tools, no installation — under 60 seconds.",
+            "text_size": "text-base"
+          }
         }
       },
       "block_order": [
         "breadcrumb",
         "areviews_reviews_importer_areviews_title_rating_zV3Mzm",
         "title",
-        "text-pro-badge",
-        "text-tagline",
-        "text-feature-1",
-        "text-feature-2",
-        "text-feature-3",
+        "bullet-1",
+        "bullet-2",
+        "bullet-3",
         "variant_picker",
         "moon_bundles_app_block_LN6Nw4",
         "buy_buttons",
@@ -320,6 +298,16 @@
         "divider": false
       }
     },
+    "image-compatibility": {
+      "type": "al-compatibility",
+      "settings": {
+        "image": "shopify://shop_images/2M2A9277.jpg",
+        "button_label": "Check Your Car's Compatibility →",
+        "button_link": "/pages/supported-cars",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "how-it-works": {
       "type": "al-how-it-works",
       "blocks": {
@@ -395,14 +383,6 @@
     },
     "multicolumn-features": {
       "type": "al-multicolumn-icons",
-      "block_order": [
-        "feat-1",
-        "feat-2",
-        "feat-3",
-        "feat-4",
-        "feat-5",
-        "feat-6"
-      ],
       "blocks": {
         "feat-1": {
           "type": "feature",
@@ -464,24 +444,20 @@
           }
         }
       },
+      "block_order": [
+        "feat-1",
+        "feat-2",
+        "feat-3",
+        "feat-4",
+        "feat-5",
+        "feat-6"
+      ],
       "settings": {
         "eyebrow": "Why AutoLinkr Pro",
         "heading": "Everything You Need. Nothing You Don’t.",
         "subheading": "Six reasons tens of thousands of drivers upgraded their drive.",
         "padding_top": 96,
         "padding_bottom": 96
-      }
-    },
-    "image-compatibility": {
-      "type": "al-compatibility",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "image": "shopify://shop_images/2M2A9277.jpg",
-        "button_label": "Check Your Car's Compatibility →",
-        "button_link": "/pages/supported-cars",
-        "padding_top": 72,
-        "padding_bottom": 72
       }
     },
     "youtube-review": {
@@ -557,7 +533,8 @@
         "t3"
       ],
       "settings": {
-        "transparent_header": false,
+        "transparent_header": true,
+        "image": "shopify://shop_images/ProductPic2_5422be18-2ee1-4126-997a-2f54169d6e9e.png",
         "image_height": "650px",
         "content_position": "md:items-center md:justify-center",
         "image_height_mobile": "auto",

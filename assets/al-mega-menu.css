@@ -5,17 +5,29 @@
  * Each card: image (full bleed) → title → subtitle
  */
 
-/* ─── Panel inner wrapper ─────────────────────────────────── */
+/* ─── Panel container — override Concept's full-height push ── */
 
 .al-mm__container {
   background-color: rgb(var(--color-base-background)) !important;
   border-bottom: 1px solid var(--al-border) !important;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55) !important;
+  /*
+   * Concept's .mega-menu__container has `padding-block-start: var(--header-height)`
+   * which pushes content down the full header height, making the panel enormous.
+   * We zero it out and control spacing entirely from .al-mm__inner.
+   */
+  padding-block-start: 0 !important;
+  padding-block-end: 0 !important;
 }
 
+/* ─── Panel inner wrapper ─────────────────────────────────── */
+
 .al-mm__inner {
-  padding-top: 24px;
-  padding-bottom: 28px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  /* Configurable max-height via --al-mm-max-height CSS custom property */
+  max-height: var(--al-mm-max-height, auto);
+  overflow: hidden;
 }
 
 /* ─── Header row (category label + view all) ─────────────── */
@@ -24,20 +36,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .al-mm__category {
-  font-family: var(--al-font-display);
+  font-family: var(--al-font-display, 'General Sans', sans-serif);
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--al-accent);
+  color: var(--al-accent, #3B8EF8);
 }
 
 .al-mm__view-all {
-  font-family: var(--al-font-body);
+  font-family: var(--al-font-body, 'Inter', sans-serif);
   font-size: 0.8125rem;
   font-weight: 500;
   color: rgba(var(--color-base-text), 0.55);
@@ -58,6 +70,8 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  /* Configurable number of columns: default auto (fills all slots) */
+  flex-wrap: nowrap;
 }
 
 /* ─── Individual card ─────────────────────────────────────── */
@@ -65,32 +79,42 @@
 .al-mm__card {
   flex: 1;
   min-width: 0;
+  /* Configurable max column count via --al-mm-columns (limits card width) */
+  max-width: calc((100% - 12px * (var(--al-mm-columns, 5) - 1)) / var(--al-mm-columns, 5));
   display: flex;
   flex-direction: column;
   text-decoration: none;
   border-radius: 10px;
   overflow: hidden;
-  background-color: var(--al-surface);
-  border: 1px solid var(--al-border);
+  background-color: var(--al-surface, #0F0F12);
+  border: 1px solid var(--al-border, #2A2A30);
   transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
   cursor: pointer;
 }
 
 .al-mm__card:hover {
   border-color: rgba(255, 255, 255, 0.14);
-  background-color: var(--al-surface-alt);
+  background-color: var(--al-surface-alt, #131317);
   transform: translateY(-2px);
 }
 
-/* ─── Image area ──────────────────────────────────────────── */
+/* ─── Image area — shape variants ────────────────────────── */
 
 .al-mm__card-img {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: var(--al-surface-2);
+  /* Default: square. Overridden per-block via data-shape attribute. */
+  aspect-ratio: var(--al-mm-img-ratio, 1 / 1);
+  background-color: var(--al-surface-2, #161619);
   overflow: hidden;
 }
+
+/* Shape modifier classes applied by snippet */
+.al-mm__card-img--square    { aspect-ratio: 1 / 1; }
+.al-mm__card-img--portrait  { aspect-ratio: 4 / 5; }
+.al-mm__card-img--landscape { aspect-ratio: 4 / 3; }
+.al-mm__card-img--wide      { aspect-ratio: 16 / 9; }
+.al-mm__card-img--adapt     { aspect-ratio: auto; }
 
 .al-mm__card-img img {
   width: 100%;
@@ -101,6 +125,11 @@
   transition: transform 250ms ease;
 }
 
+/* adapt: let image drive its natural height */
+.al-mm__card-img--adapt img {
+  height: auto;
+}
+
 .al-mm__card:hover .al-mm__card-img img {
   transform: scale(1.04);
 }
@@ -109,7 +138,8 @@
 .al-mm__card-img-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--al-surface-3) 0%, var(--al-surface-2) 100%);
+  background: linear-gradient(135deg, var(--al-surface-3, #1E1E22) 0%, var(--al-surface-2, #161619) 100%);
+  min-height: 120px;
 }
 
 /* ─── Badge overlaid on image ─────────────────────────────── */
@@ -141,7 +171,7 @@
 }
 
 .al-mm__card-title {
-  font-family: var(--al-font-display);
+  font-family: var(--al-font-display, 'General Sans', sans-serif);
   font-size: 0.9375rem;
   font-weight: 600;
   color: rgb(var(--color-base-text));
@@ -150,7 +180,7 @@
 }
 
 .al-mm__card-sub {
-  font-family: var(--al-font-body);
+  font-family: var(--al-font-body, 'Inter', sans-serif);
   font-size: 0.8125rem;
   color: rgba(var(--color-base-text), 0.55);
   line-height: 1.4;
@@ -160,19 +190,19 @@
 /* ─── Footer link (e.g. "Compare All Adapters →") ─────────── */
 
 .al-mm__footer {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--al-border);
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--al-border, #2A2A30);
 }
 
 .al-mm__footer-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-family: var(--al-font-display);
+  font-family: var(--al-font-display, 'General Sans', sans-serif);
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--al-accent);
+  color: var(--al-accent, #3B8EF8);
   text-decoration: none;
   transition: color 180ms ease;
 }
@@ -185,12 +215,13 @@
 
 .al-mm__card--skeleton {
   aspect-ratio: 1 / 1;
-  background: linear-gradient(90deg, var(--al-surface) 25%, var(--al-surface-alt) 50%, var(--al-surface) 75%);
+  background: linear-gradient(90deg, var(--al-surface, #0F0F12) 25%, var(--al-surface-alt, #131317) 50%, var(--al-surface, #0F0F12) 75%);
   background-size: 200% 100%;
   animation: al-mm-shimmer 1.4s infinite;
-  border: 1px solid var(--al-border);
+  border: 1px solid var(--al-border, #2A2A30);
   border-radius: 10px;
   pointer-events: none;
+  max-height: 200px;
 }
 
 @keyframes al-mm-shimmer {

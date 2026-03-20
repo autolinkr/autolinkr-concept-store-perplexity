@@ -138,20 +138,19 @@
   </div>
 
 {%- elsif block.type == 'al_mega_menu' -%}
-  {%- comment %} AL — Mega Menu: pure image card row, no text nav links {%- endcomment %}
-  <div class="mega-menu__container al-mm__container invisible">
-    {%- unless section_rendering_api -%}
-      {%- comment %} Placeholder skeleton while loading {%- endcomment %}
+  {%- comment %} AL — Mega Menu: pure image card row — image + title + subtitle {%- endcomment %}
+  {%- liquid
+    assign al_shape   = block.settings.image_shape | default: 'square'
+    assign al_columns = block.settings.columns     | default: 4
+  -%}
+  <div
+    class="mega-menu__container al-mm__container invisible"
+    style="--al-mm-columns: {{ al_columns }};"
+  >
+    {%- if section_rendering_api -%}
+      {%- comment %} Storefront / section rendering API — show real cards {%- endcomment %}
       <div class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
-        <div class="al-mm__grid">
-          {%- for i in (1..5) -%}
-            <div class="al-mm__card al-mm__card--skeleton"></div>
-          {%- endfor -%}
-        </div>
-      </div>
-    {%- else -%}
-      <div class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
-        {%- comment %} Optional category label + view-all link {%- endcomment %}
+
         {%- if block.settings.menu_label != blank or block.settings.view_all_link != blank -%}
           <div class="al-mm__header">
             {%- if block.settings.menu_label != blank -%}
@@ -181,7 +180,7 @@
                 class="al-mm__card"
                 aria-label="{{ block.settings[title_key] | escape }}"
               >
-                <div class="al-mm__card-img">
+                <div class="al-mm__card-img al-mm__card-img--{{ al_shape }}">
                   {%- if block.settings[badge_key] != blank -%}
                     <span class="al-mm__badge">{{ block.settings[badge_key] | escape }}</span>
                   {%- endif -%}
@@ -217,8 +216,18 @@
             </a>
           </div>
         {%- endif -%}
+
       </div>
-    {%- endunless -%}
+    {%- else -%}
+      {%- comment %} Editor / design mode — show skeleton so the panel has some size {%- endcomment %}
+      <div class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
+        <div class="al-mm__grid">
+          {%- for i in (1..4) -%}
+            <div class="al-mm__card al-mm__card--skeleton"></div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
   </div>
 
 {%- else -%}

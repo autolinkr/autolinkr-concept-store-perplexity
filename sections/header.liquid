@@ -1664,6 +1664,10 @@
       "name": "AL \u2014 Mega Menu",
       "settings": [
         {
+          "type": "header",
+          "content": "Navigation"
+        },
+        {
           "type": "text",
           "id": "menu_title",
           "label": "Nav trigger label",
@@ -1673,7 +1677,7 @@
           "type": "text",
           "id": "menu_label",
           "label": "Category label",
-          "info": "Small uppercase label shown above the cards (e.g. Adapters)"
+          "info": "Small uppercase label shown above the cards (e.g. ADAPTERS)"
         },
         {
           "type": "text",
@@ -1696,6 +1700,34 @@
           "type": "url",
           "id": "footer_link",
           "label": "Footer link URL"
+        },
+        {
+          "type": "header",
+          "content": "Layout & Appearance"
+        },
+        {
+          "type": "select",
+          "id": "image_shape",
+          "label": "Image shape",
+          "default": "square",
+          "options": [
+            { "value": "square",    "label": "Square (1:1)" },
+            { "value": "portrait",  "label": "Portrait (4:5)" },
+            { "value": "landscape", "label": "Landscape (4:3)" },
+            { "value": "wide",      "label": "Wide (16:9)" },
+            { "value": "adapt",     "label": "Adapt to image" }
+          ],
+          "info": "Applies to all card images in this menu"
+        },
+        {
+          "type": "range",
+          "id": "columns",
+          "label": "Number of cards visible",
+          "min": 2,
+          "max": 5,
+          "step": 1,
+          "default": 4,
+          "info": "Controls max card width. Unused card slots are hidden automatically."
         },
         { "type": "header", "content": "Card 1" },
         { "type": "image_picker", "id": "card_image_1", "label": "Image" },

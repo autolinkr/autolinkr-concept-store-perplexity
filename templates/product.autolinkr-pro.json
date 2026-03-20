@@ -293,74 +293,95 @@
       }
     },
     "as-seen-in": {
-      "type": "logo-list",
+      "type": "al-press-logos",
       "blocks": {
-        "logo-1": {
+        "logo-the-verge": {
           "type": "logo",
           "settings": {
+            "name": "The Verge",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-the-verge.png?v=1773977577",
             "height": 28,
-            "link": ""
+            "link": "https://www.theverge.com"
           }
         },
-        "logo-2": {
+        "logo-wired": {
           "type": "logo",
           "settings": {
-            "height": 28,
-            "link": ""
+            "name": "Wired",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-wired.png?v=1773977601",
+            "height": 30,
+            "link": "https://www.wired.com"
           }
         },
-        "logo-3": {
+        "logo-techradar": {
           "type": "logo",
           "settings": {
-            "height": 28,
-            "link": ""
+            "name": "TechRadar",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-techradar.png?v=1773977602",
+            "height": 26,
+            "link": "https://www.techradar.com"
           }
         },
-        "logo-4": {
+        "logo-car-and-driver": {
           "type": "logo",
           "settings": {
-            "height": 28,
-            "link": ""
+            "name": "Car and Driver",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-car-and-driver.png?v=1773977603",
+            "height": 22,
+            "link": "https://www.caranddriver.com"
+          }
+        },
+        "logo-motor-trend": {
+          "type": "logo",
+          "settings": {
+            "name": "Motor Trend",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-motor-trend.png?v=1773977605",
+            "height": 26,
+            "link": "https://www.motortrend.com"
+          }
+        },
+        "logo-forbes": {
+          "type": "logo",
+          "settings": {
+            "name": "Forbes",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-forbes.png?v=1773977606",
+            "height": 30,
+            "link": "https://www.forbes.com"
+          }
+        },
+        "logo-road-and-track": {
+          "type": "logo",
+          "settings": {
+            "name": "Road & Track",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-road-and-track.png?v=1773977608",
+            "height": 24,
+            "link": "https://www.roadandtrack.com"
+          }
+        },
+        "logo-business-insider": {
+          "type": "logo",
+          "settings": {
+            "name": "Business Insider",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-business-insider.png?v=1773977609",
+            "height": 24,
+            "link": "https://www.businessinsider.com"
           }
         }
       },
       "block_order": [
-        "logo-1",
-        "logo-2",
-        "logo-3",
-        "logo-4"
+        "logo-the-verge",
+        "logo-wired",
+        "logo-techradar",
+        "logo-car-and-driver",
+        "logo-motor-trend",
+        "logo-forbes",
+        "logo-road-and-track",
+        "logo-business-insider"
       ],
       "settings": {
-        "layout": "default",
-        "grid_horizontal": 60,
-        "direction": "left",
-        "speed": 5,
-        "heading": "",
-        "heading_size": "title-sm",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "p",
-        "subheading": "As Seen In",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
         "padding_top": 40,
         "padding_bottom": 40,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
+        "eyebrow": "As Featured In"
       }
     },
     "video-3d": {

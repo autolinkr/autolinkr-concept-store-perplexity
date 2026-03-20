@@ -54,7 +54,60 @@
       <div id="DrawerSubMenu-{{ section.id }}-{{ position }}" class="drawer__scrollable flex flex-col h-full"></div>
     {%- else -%}
       <ul id="DrawerSubMenu-{{ section.id }}-{{ position }}" class="drawer__scrollable flex flex-col h-full">
-        {%- if block.type == 'mega_menu_tab' -%}
+        {%- if block.type == 'al_mega_menu' -%}
+          {%- comment %} AL — Mega Menu: 2-column image card grid in mobile drawer {%- endcomment %}
+          <li class="drawer__menu-group">
+            <div class="al-mm__drawer-grid">
+              {%- for i in (1..5) -%}
+                {%- liquid
+                  assign img_key   = 'card_image_'   | append: i
+                  assign title_key = 'card_title_'   | append: i
+                  assign sub_key   = 'card_sub_'     | append: i
+                  assign link_key  = 'card_link_'    | append: i
+                  assign badge_key = 'card_badge_'   | append: i
+                  assign al_shape  = block.settings.image_shape | default: 'square'
+                -%}
+                {%- if block.settings[title_key] != blank -%}
+                  <a
+                    href="{% if block.settings[link_key] != blank %}{{ block.settings[link_key] }}{% else %}#{% endif %}"
+                    class="al-mm__card"
+                    aria-label="{{ block.settings[title_key] | escape }}"
+                  >
+                    <div class="al-mm__card-img al-mm__card-img--{{ al_shape }}">
+                      {%- if block.settings[badge_key] != blank -%}
+                        <span class="al-mm__badge">{{ block.settings[badge_key] | escape }}</span>
+                      {%- endif -%}
+                      {%- if block.settings[img_key] != blank -%}
+                        <img
+                          src="{{ block.settings[img_key] | image_url: width: 360 }}"
+                          alt="{{ block.settings[title_key] | escape }}"
+                          loading="lazy"
+                          width="360"
+                        >
+                      {%- else -%}
+                        <div class="al-mm__card-img-placeholder"></div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mm__card-body">
+                      <p class="al-mm__card-title">{{ block.settings[title_key] | escape }}</p>
+                      {%- if block.settings[sub_key] != blank -%}
+                        <p class="al-mm__card-sub">{{ block.settings[sub_key] | escape }}</p>
+                      {%- endif -%}
+                    </div>
+                  </a>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </li>
+          {%- if block.settings.footer_label != blank and block.settings.footer_link != blank -%}
+            <li class="drawer__menu-group al-mm__drawer-footer">
+              <a href="{{ block.settings.footer_link }}" class="al-mm__drawer-cta">
+                {{ block.settings.footer_label | escape }}
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+          {%- endif -%}
+        {%- elsif block.type == 'mega_menu_tab' -%}
           {%- for i in (1..5) -%}
             {%- assign tab_target_link = 'tab_target_link_' | append: i -%}
             {%- if block.settings[tab_target_link] != blank -%}

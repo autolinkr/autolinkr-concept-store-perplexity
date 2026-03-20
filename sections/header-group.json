@@ -198,11 +198,12 @@
             "promo_color_text_5": "#ffffff",
             "promo_color_overlay_5": "#000000",
             "promo_overlay_opacity_5": 40
-          }
+          },
+          "disabled": false
         },
         "mega_menu_dashcams": {
           "type": "mega_menu",
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "menu_title": "Dash Cams",
             "menu_width": "small",
@@ -258,7 +259,7 @@
         },
         "mega_menu_accessories": {
           "type": "mega_menu",
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "menu_title": "Accessories",
             "menu_width": "small",

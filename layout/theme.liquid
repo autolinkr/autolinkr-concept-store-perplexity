@@ -42,6 +42,7 @@
       render 'css-variables'
       echo 'theme.css' | asset_url | stylesheet_tag: preload: true
       echo 'autolinkr-tokens.css' | asset_url | stylesheet_tag: preload: true
+      echo 'al-mega-menu.css' | asset_url | stylesheet_tag: preload: true
 
       if direction == 'rtl'
         echo 'rtl.css' | asset_url | stylesheet_tag: preload: true

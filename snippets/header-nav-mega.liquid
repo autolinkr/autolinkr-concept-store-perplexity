@@ -136,6 +136,91 @@
       </ul>
     {%- endunless -%}
   </div>
+
+{%- elsif block.type == 'al_mega_menu' -%}
+  {%- comment %} AL — Mega Menu: pure image card row, no text nav links {%- endcomment %}
+  <div class="mega-menu__container al-mm__container invisible">
+    {%- unless section_rendering_api -%}
+      {%- comment %} Placeholder skeleton while loading {%- endcomment %}
+      <div class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
+        <div class="al-mm__grid">
+          {%- for i in (1..5) -%}
+            <div class="al-mm__card al-mm__card--skeleton"></div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- else -%}
+      <div class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
+        {%- comment %} Optional category label + view-all link {%- endcomment %}
+        {%- if block.settings.menu_label != blank or block.settings.view_all_link != blank -%}
+          <div class="al-mm__header">
+            {%- if block.settings.menu_label != blank -%}
+              <span class="al-mm__category">{{ block.settings.menu_label }}</span>
+            {%- endif -%}
+            {%- if block.settings.view_all_label != blank and block.settings.view_all_link != blank -%}
+              <a href="{{ block.settings.view_all_link }}" class="al-mm__view-all">
+                {{ block.settings.view_all_label }}
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <div class="al-mm__grid">
+          {%- for i in (1..5) -%}
+            {%- liquid
+              assign img_key   = 'card_image_'   | append: i
+              assign title_key = 'card_title_'   | append: i
+              assign sub_key   = 'card_sub_'     | append: i
+              assign link_key  = 'card_link_'    | append: i
+              assign badge_key = 'card_badge_'   | append: i
+            -%}
+            {%- if block.settings[img_key] != blank or block.settings[title_key] != blank -%}
+              <a
+                href="{% if block.settings[link_key] != blank %}{{ block.settings[link_key] }}{% else %}#{% endif %}"
+                class="al-mm__card"
+                aria-label="{{ block.settings[title_key] | escape }}"
+              >
+                <div class="al-mm__card-img">
+                  {%- if block.settings[badge_key] != blank -%}
+                    <span class="al-mm__badge">{{ block.settings[badge_key] | escape }}</span>
+                  {%- endif -%}
+                  {%- if block.settings[img_key] != blank -%}
+                    <img
+                      src="{{ block.settings[img_key] | image_url: width: 480 }}"
+                      alt="{{ block.settings[title_key] | escape }}"
+                      loading="lazy"
+                      width="480"
+                    >
+                  {%- else -%}
+                    <div class="al-mm__card-img-placeholder"></div>
+                  {%- endif -%}
+                </div>
+                <div class="al-mm__card-body">
+                  {%- if block.settings[title_key] != blank -%}
+                    <p class="al-mm__card-title">{{ block.settings[title_key] | escape }}</p>
+                  {%- endif -%}
+                  {%- if block.settings[sub_key] != blank -%}
+                    <p class="al-mm__card-sub">{{ block.settings[sub_key] | escape }}</p>
+                  {%- endif -%}
+                </div>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        {%- if block.settings.footer_label != blank and block.settings.footer_link != blank -%}
+          <div class="al-mm__footer">
+            <a href="{{ block.settings.footer_link }}" class="al-mm__footer-link">
+              {{ block.settings.footer_label | escape }}
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+  </div>
+
 {%- else -%}
   <div class="mega-menu__container invisible">
     {%- unless section_rendering_api -%}

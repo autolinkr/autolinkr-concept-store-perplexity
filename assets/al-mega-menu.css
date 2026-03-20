@@ -103,6 +103,12 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1; /* default square */
+  /*
+   * Cap image height so all panels are the same height regardless of
+   * how many cards are shown (2-card panel won't be 2x taller than 4-card panel).
+   * Cards with fewer items would otherwise be very wide → very tall via aspect-ratio.
+   */
+  max-height: 180px;
   background-color: var(--al-surface-2, #161619);
   overflow: hidden;
   /* Rounded top corners match card radius */

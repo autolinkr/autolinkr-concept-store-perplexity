@@ -406,13 +406,12 @@
       }
     },
     "logo_list_KH4Hb9": {
-      "type": "logo-list",
+      "type": "al-logo-marquee",
       "blocks": {
         "logo_BNQjrK": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-forbes.png",
-            "height": 32,
             "link": ""
           }
         },
@@ -420,7 +419,6 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-the-verge.png",
-            "height": 32,
             "link": ""
           }
         },
@@ -428,7 +426,6 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-wired.png",
-            "height": 32,
             "link": ""
           }
         },
@@ -436,7 +433,6 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-techradar.png",
-            "height": 32,
             "link": ""
           }
         },
@@ -444,7 +440,6 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-car-and-driver.png",
-            "height": 32,
             "link": ""
           }
         },
@@ -452,7 +447,6 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-motor-trend.png",
-            "height": 32,
             "link": ""
           }
         },
@@ -460,7 +454,6 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-road-and-track.png",
-            "height": 32,
             "link": ""
           }
         },
@@ -468,7 +461,6 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/press-logo-business-insider.png",
-            "height": 32,
             "link": ""
           }
         }
@@ -483,38 +475,14 @@
         "logo_8s019s",
         "logo_9L6U6Z"
       ],
-      "name": "t:sections.logo-list.name",
       "settings": {
-        "layout": "default",
-        "grid_horizontal": 70,
-        "direction": "left",
-        "speed": 5,
-        "heading": "",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "As Featured In",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
+        "eyebrow": "As Featured In",
+        "logo_height": 100,
+        "gap": 64,
+        "speed": 24,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "divider": false
       }
     },
     "multicolumn-features": {

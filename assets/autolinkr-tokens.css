@@ -869,25 +869,26 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 }
 .scrolling-text__icon { color: var(--al-accent) !important; }
 
-/* ─── PRODUCT TEXT BLOCKS — remove excess padding ─────────── */
+/* ─── PRODUCT TEXT BLOCKS — remove excess padding + alt backgrounds ─── */
 .product__text-inner {
   padding: 0 !important;
 }
-.product__text+.product__text .product__text-inner,
-.product__text:has(+.product__text) .product__text-inner {
-  padding-top: var(--sp-4) !important;
-  padding-bottom: var(--sp-4) !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-.product__text:has(+.product__text) {
+/* Zero out the between-block padding the theme adds */
+.product__text + .product__text,
+.product__text:has(+ .product__text) {
   padding: 0 !important;
 }
-.product__text:last-child .product__text-inner,
-.product__text:last-of-type .product__text-inner {
-  padding-bottom: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+/* Kill alternating background colours */
+.product__text,
+.product__text-inner {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+/* All icons in these text blocks — brand blue */
+.product__text svg,
+.product__text .icon {
+  color: rgb(59, 142, 248) !important;
+  fill: none !important;
 }
 
 /* ─── IMAGE WITH TEXT — force image visible on mobile ─────── */

@@ -1735,10 +1735,11 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 }
 
 /* Feature lines — blue checkmark prefix, readable text */
-[data-block-id="upsell-1"] .product__text-inner,
-[data-block-id="upsell-2"] .product__text-inner,
-[data-block-id="upsell-3"] .product__text-inner,
-[data-block-id="upsell-4"] .product__text-inner {
+/* Shopify renders block.shopify_attributes as id="shopify-block-BLOCKID" */
+#shopify-block-upsell-1 .product__text-inner,
+#shopify-block-upsell-2 .product__text-inner,
+#shopify-block-upsell-3 .product__text-inner,
+#shopify-block-upsell-4 .product__text-inner {
   display: flex !important;
   align-items: flex-start !important;
   gap: 10px !important;
@@ -1747,10 +1748,10 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   line-height: 1.55 !important;
 }
 
-[data-block-id="upsell-1"] .product__text-inner::before,
-[data-block-id="upsell-2"] .product__text-inner::before,
-[data-block-id="upsell-3"] .product__text-inner::before,
-[data-block-id="upsell-4"] .product__text-inner::before {
+#shopify-block-upsell-1 .product__text-inner::before,
+#shopify-block-upsell-2 .product__text-inner::before,
+#shopify-block-upsell-3 .product__text-inner::before,
+#shopify-block-upsell-4 .product__text-inner::before {
   content: '✓' !important;
   color: rgb(59,142,248) !important;
   font-weight: 800 !important;
@@ -1760,13 +1761,13 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 }
 
 /* Tighten spacing between upsell lines */
-[data-block-id="upsell-1"],
-[data-block-id="upsell-2"],
-[data-block-id="upsell-3"],
-[data-block-id="upsell-4"] {
+#shopify-block-upsell-1,
+#shopify-block-upsell-2,
+#shopify-block-upsell-3,
+#shopify-block-upsell-4 {
   margin-bottom: 4px !important;
 }
-[data-block-id="upsell-4"] { margin-bottom: 0 !important; }
+#shopify-block-upsell-4 { margin-bottom: 0 !important; }
 
 /* ══════════════════════════════════════════════════════════════
    AL — MULTI-SECTION POLISH PASS
@@ -1803,23 +1804,30 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   padding: 5px 14px !important;
 }
 
-/* ── 3. FAQ / Collapsible — border only on question tab + expanded panel ── */
-/* Remove outer wrapper border — summary + content panels carry their own borders */
+/* ── 3. FAQ / Collapsible — clean borders ── */
+/* Kill ALL borders on outer wrappers: .faq, .accordion, .details */
+.faq,
 .accordion,
 .details {
   border: none !important;
   background: transparent !important;
   overflow: visible !important;
 }
+/* Each question row: stretch full width of .faq container */
+.faq .accordion {
+  width: 100% !important;
+  display: block !important;
+}
 .accordion + .accordion,
 .details + .details {
   margin-top: 8px !important;
 }
-/* Summary (question tab) — blue border */
-.details > summary,
+/* Summary (question tab) — blue border, full width */
 .details__summary {
   border: 1px solid rgba(59,142,248,0.35) !important;
   border-radius: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 /* Remove blue from faq text — stay white/muted */
 .details__summary,
@@ -1828,19 +1836,18 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 .details__content * {
   color: inherit !important;
 }
-/* Open state — summary transitions to connected card top */
-.details[open] > summary,
+/* Open state — top rounded, bottom flat to connect with content */
 .details[open] .details__summary {
   border-color: rgba(59,142,248,0.65) !important;
   border-radius: 10px 10px 0 0 !important;
-  box-shadow: none !important;
 }
-/* Content panel inherits the blue border sides + bottom when open */
-.details[open] .details__content,
-.details[open] > div:not(.details__summary) {
+/* Expanded content panel — blue sides + bottom, seamless with summary */
+.details[open] .details__content {
   border: 1px solid rgba(59,142,248,0.65) !important;
   border-top: none !important;
   border-radius: 0 0 10px 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* ── 4. Pro vs Elite comparison — blue value text + mobile fix ── */

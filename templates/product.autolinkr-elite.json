@@ -568,9 +568,9 @@
         "step-1": {
           "type": "step",
           "settings": {
-            "heading": "1. Plug In",
-            "body": "Connect AutoLinkr Elite\u2122 to your car's factory CarPlay USB port using the included cable. Fits in under 30 seconds.",
-            "badge": "Under 30 sec",
+            "heading": "Plug In",
+            "body": "Insert into your car's factory USB port. No tools, no drilling.",
+            "badge": "30 sec",
             "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Elite_Plugged.png?v=1772338923",
             "image_ratio": "4/3"
           }
@@ -578,9 +578,9 @@
         "step-2": {
           "type": "step",
           "settings": {
-            "heading": "2. Connect",
-            "body": "Pair your iPhone via Bluetooth and join the AutoLinkr Wi-Fi hotspot. One-time setup \u2014 your car remembers everything after that.",
-            "badge": "One-time only",
+            "heading": "Connect",
+            "body": "Pair via Bluetooth once. Your car remembers it forever.",
+            "badge": "One time",
             "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/2M2A9259.jpg?v=1773548940",
             "image_ratio": "16/9"
           }
@@ -588,9 +588,9 @@
         "step-3": {
           "type": "step",
           "settings": {
-            "heading": "3. Enjoy",
-            "body": "Wireless CarPlay launches automatically every time you start your car. No cables, no steps \u2014 just wireless freedom on every drive.",
-            "badge": "Automatic every drive",
+            "heading": "Enjoy",
+            "body": "Wireless CarPlay + streaming fires up automatically every drive.",
+            "badge": "Every drive, automatic",
             "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/TacomaUI_3.png?v=1773554015",
             "image_ratio": "16/9"
           }
@@ -598,8 +598,8 @@
         "step-4": {
           "type": "step",
           "settings": {
-            "heading": "4. Go Elite \u2014 Split & Stream",
-            "body": "Enable split-screen mode and run navigation side-by-side with Netflix, YouTube, or any streaming app. Welcome to Elite.",
+            "heading": "Go Elite",
+            "body": "Split-screen navigation + streaming simultaneously. The ceiling.",
             "badge": "Elite exclusive",
             "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Elite_Main_2_Adnan.png?v=1772338923",
             "image_ratio": "4/3"
@@ -617,7 +617,7 @@
         "padding_bottom": 80,
         "eyebrow": "How It Works",
         "heading": "Plug In. Connect. Enjoy.",
-        "subheading": "No tools. No apps. No installation knowledge required. Up and running in 60 seconds.",
+        "subheading": "No tools. No mechanic. 60 seconds.",
         "cta_label": "\u25b6 Watch Setup Video",
         "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
       }
@@ -637,7 +637,6 @@
     "video-demo": {
       "type": "al-video-section",
       "settings": {
-        "background_style": "dark",
         "padding_top": 80,
         "padding_bottom": 80,
         "max_width": 1200,
@@ -660,7 +659,6 @@
     "youtube-review": {
       "type": "al-video-section",
       "settings": {
-        "background_style": "dark",
         "padding_top": 80,
         "padding_bottom": 80,
         "max_width": 1200,

@@ -45,17 +45,17 @@
                   src="{{ block.settings.image_url }}"
                   alt="{{ block.settings.heading | escape }}"
                   loading="lazy"
-                  style="width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:{{ block.settings.image_ratio }};"
+                  style="width:100%;height:100%;display:block;object-fit:cover;min-height:320px;"
                 >
               {%- elsif block.settings.image != blank -%}
                 <img
                   src="{{ block.settings.image | image_url: width: 800 }}"
                   alt="{{ block.settings.heading | escape }}"
                   loading="lazy"
-                  style="width:100%;height:auto;display:block;"
+                  style="width:100%;height:100%;display:block;object-fit:cover;min-height:320px;"
                 >
               {%- else -%}
-                <div style="aspect-ratio:4/3;background:var(--al-surface);display:flex;align-items:center;justify-content:center;color:#404046;font-size:0.875rem;font-family:var(--al-font-display);">Add image in theme editor</div>
+                <div style="min-height:320px;background:var(--al-surface);display:flex;align-items:center;justify-content:center;color:#404046;font-size:0.875rem;font-family:var(--al-font-display);">Add image in theme editor</div>
               {%- endif -%}
             </div>
 
@@ -76,54 +76,81 @@
 </section>
 
 <style>
-  .al-hiw__steps { display: flex; flex-direction: column; gap: 0; }
+  .al-hiw__steps { display: flex; flex-direction: column; gap: 16px; }
 
   .al-step {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
-    padding: 64px 0;
-    border-bottom: 1px solid var(--al-border-subtle);
+    gap: 0;
+    align-items: stretch;
+    background: var(--al-surface);
+    border: 1px solid rgba(59, 142, 248, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(59, 142, 248, 0.08), 0 24px 64px rgba(0,0,0,0.45);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .al-step:last-child { border-bottom: none; }
+  .al-step:hover {
+    border-color: rgba(59, 142, 248, 0.55);
+    box-shadow: 0 0 0 1px rgba(59, 142, 248, 0.18), 0 0 32px rgba(59, 142, 248, 0.12), 0 24px 64px rgba(0,0,0,0.5);
+  }
 
-  .al-step--reverse { direction: rtl; }
-  .al-step--reverse > * { direction: ltr; }
+  .al-step--reverse .al-step__text { order: 2; }
+  .al-step--reverse .al-step__img  { order: 1; }
 
-  .al-step__text { padding: 8px 0; }
+  .al-step__text {
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .al-step__heading {
     font-family: var(--al-font-display, 'General Sans', sans-serif);
-    font-size: clamp(1.375rem, 2vw, 1.75rem);
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
     font-weight: 700;
     color: var(--al-text-1);
-    letter-spacing: -0.025em;
-    line-height: 1.15;
-    margin: 0 0 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0 0 14px;
   }
 
   .al-step__body {
     font-family: var(--al-font-body, 'Inter', sans-serif);
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.0625rem;
+    line-height: 1.65;
     color: var(--al-text-2);
     margin: 0;
   }
 
   .al-step__img {
-    border-radius: 16px;
     overflow: hidden;
-    background: rgba(var(--color-base-text), 0.04);
-    border: 1px solid var(--al-border);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    background: var(--al-surface-2);
+    border-left: 1px solid rgba(59, 142, 248, 0.15);
+  }
+
+  .al-step--reverse .al-step__img {
+    border-left: none;
+    border-right: 1px solid rgba(59, 142, 248, 0.15);
+  }
+
+  .al-step__img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
   }
 
   @media (max-width: 768px) {
-    .al-step { grid-template-columns: 1fr; gap: 28px; direction: ltr; padding: 40px 0; }
-    .al-step--reverse { direction: ltr; }
-    .al-step__img { order: -1; }
+    .al-step {
+      grid-template-columns: 1fr;
+      border-radius: 16px;
+    }
+    .al-step--reverse .al-step__text { order: 2; }
+    .al-step--reverse .al-step__img  { order: 1; }
+    .al-step__text { padding: 32px 28px; }
+    .al-step__img { min-height: 220px; border-left: none; border-right: none; border-top: 1px solid rgba(59, 142, 248, 0.15); }
     .al-step__heading { font-size: 1.375rem; }
   }
 </style>

@@ -73,7 +73,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Pro™ transforms any compatible car into a wireless entertainment hub. No more fumbling with cables every drive, no more watching your passengers stare at their phones on road trips.</p><p>Just plug it into your USB port once, pair your phone, and you're done — wireless CarPlay or Android Auto activates automatically every time you start your car.</p><p>With the built-in Google Play Store, you get Netflix, YouTube, Disney+, Hulu, and thousands of apps right on your car's factory screen.</p><p>Whether it's hands-free navigation on your commute or streaming movies for your kids on a road trip, AutoLinkr Pro™ is the single upgrade that makes your car feel brand new — in about a minute.</p>",
+            "content": "<p>AutoLinkr Pro\u2122 transforms any compatible car into a wireless entertainment hub. No more fumbling with cables every drive, no more watching your passengers stare at their phones on road trips.</p><p>Just plug it into your USB port once, pair your phone, and you're done \u2014 wireless CarPlay or Android Auto activates automatically every time you start your car.</p><p>With the built-in Google Play Store, you get Netflix, YouTube, Disney+, Hulu, and thousands of apps right on your car's factory screen.</p><p>Whether it's hands-free navigation on your commute or streaming movies for your kids on a road trip, AutoLinkr Pro\u2122 is the single upgrade that makes your car feel brand new \u2014 in about a minute.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -86,7 +86,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto.</p><p>Compatible with 500+ models from Toyota, Honda, Ford, Chevrolet, BMW, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.</p><p><a href=\"/pages/supported-cars\">Check Your Car →</a></p><p>Not sure? Contact us and we'll confirm in minutes.</p>",
+            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto.</p><p>Compatible with 500+ models from Toyota, Honda, Ford, Chevrolet, BMW, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.</p><p><a href=\"/pages/supported-cars\">Check Your Car \u2192</a></p><p>Not sure? Contact us and we'll confirm in minutes.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -112,7 +112,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping & Returns",
-            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee — if AutoLinkr doesn't work with your car or you're not satisfied, return it for full in-store credit. We cover return shipping.</p><p>Lifetime customer support: support@theautolinkr.com</p>",
+            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee \u2014 if AutoLinkr doesn't work with your car or you're not satisfied, return it for full in-store credit. We cover return shipping.</p><p>Lifetime customer support: support@theautolinkr.com</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -124,7 +124,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "⚠️ Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
+            "text": "\u26a0\ufe0f Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
             "text_size": "text-xs"
           }
         },
@@ -134,7 +134,7 @@
             "icon": "lightning",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Plug in once. Wireless CarPlay & Android Auto activates automatically — every drive.",
+            "text": "Plug in once. Wireless CarPlay & Android Auto activates automatically \u2014 every drive.",
             "text_size": "text-base"
           }
         },
@@ -154,7 +154,7 @@
             "icon": "check_mark",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Works with 500+ vehicles. No wiring, no tools, no installation — under 60 seconds.",
+            "text": "Works with 500+ vehicles. No wiring, no tools, no installation \u2014 under 60 seconds.",
             "text_size": "text-base"
           }
         }
@@ -302,7 +302,7 @@
       "type": "al-compatibility",
       "settings": {
         "image": "shopify://shop_images/2M2A9277.jpg",
-        "button_label": "Check Your Car's Compatibility →",
+        "button_label": "Check Your Car's Compatibility \u2192",
         "button_link": "/pages/supported-cars",
         "padding_top": 72,
         "padding_bottom": 72
@@ -356,7 +356,7 @@
         "eyebrow": "",
         "heading": "Plug In. Connect. Enjoy.",
         "subheading": "No tools. No mechanic. 60 seconds.",
-        "cta_label": "▶ Watch Setup Video",
+        "cta_label": "\u25b6 Watch Setup Video",
         "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
       }
     },
@@ -397,8 +397,8 @@
           "type": "feature",
           "settings": {
             "icon": "play",
-            "heading": "Netflix, YouTube & Disney+",
-            "text": "Stream any app on your factory screen via the Google Play Store.",
+            "heading": "Stream Any App",
+            "text": "Netflix, Hulu, YouTube, Disney+, Live TV \u2014 all on your factory screen via Google Play.",
             "show_app_icons": true,
             "app_icon_1": "shopify://shop_images/NetflixIcon.png",
             "app_icon_2": "shopify://shop_images/YoutubeIcon.png",
@@ -412,7 +412,7 @@
           "settings": {
             "icon": "bolt",
             "heading": "60-Second Setup",
-            "text": "No tools, no mechanic, no wiring. Plug in once — auto-connects every drive after.",
+            "text": "No tools, no mechanic, no wiring. Plug in once \u2014 auto-connects every drive after.",
             "show_app_icons": false
           }
         },
@@ -430,7 +430,7 @@
           "settings": {
             "icon": "connect",
             "heading": "Auto-Connects on Start",
-            "text": "Get in your car and it just works. No buttons, no pairing — every single drive.",
+            "text": "Get in your car and it just works. No buttons, no pairing \u2014 every single drive.",
             "show_app_icons": false
           }
         },
@@ -439,7 +439,7 @@
           "settings": {
             "icon": "download",
             "heading": "Offline Downloads",
-            "text": "Download shows before your trip. Micro SD expandable storage — no data needed.",
+            "text": "Download shows before your trip. Micro SD expandable storage \u2014 no data needed.",
             "show_app_icons": false
           }
         }
@@ -454,7 +454,7 @@
       ],
       "settings": {
         "eyebrow": "Why AutoLinkr Pro",
-        "heading": "Everything You Need. Nothing You Don’t.",
+        "heading": "Everything You Need. Nothing You Don\u2019t.",
         "subheading": "Six reasons tens of thousands of drivers upgraded their drive.",
         "padding_top": 96,
         "padding_bottom": 96
@@ -490,7 +490,7 @@
             "icon": "quote",
             "text": "<p>\"Game changer for my commute. Setup took 30 seconds and now I never plug in my phone. Netflix on road trips are great for my family.\"</p>",
             "author": "Michael T.",
-            "author_info": "2022 Honda Pilot — Verified Buyer",
+            "author_info": "2022 Honda Pilot \u2014 Verified Buyer",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -504,7 +504,7 @@
             "icon": "quote",
             "text": "<p>\"Really solid product. Wireless CarPlay works great. Took a minute to figure out the initial setup but once it clicked, flawless.\"</p>",
             "author": "Sarah K.",
-            "author_info": "2021 Toyota Camry — Verified Buyer",
+            "author_info": "2021 Toyota Camry \u2014 Verified Buyer",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -518,7 +518,7 @@
             "icon": "quote",
             "text": "<p>\"Best car purchase I've made in years. My 2019 Civic feels brand new. Worth every penny.\"</p>",
             "author": "James R.",
-            "author_info": "2020 Ford F-150 — Verified Buyer",
+            "author_info": "2020 Ford F-150 \u2014 Verified Buyer",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -563,23 +563,23 @@
           "settings": {
             "product": "the-autolinkr-pro",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
+            "value_1": "<p>\u2713</p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>✓</p>",
+            "value_2": "<p>\u2713</p>",
             "heading_3": "Netflix & YouTube",
-            "value_3": "<p>✓</p>",
+            "value_3": "<p>\u2713</p>",
             "heading_4": "Google Play Store",
-            "value_4": "<p>✓</p>",
+            "value_4": "<p>\u2713</p>",
             "heading_5": "MicroSD Slot",
-            "value_5": "<p>✓</p>",
+            "value_5": "<p>\u2713</p>",
             "heading_6": "RAM",
             "value_6": "<p>2GB</p>",
             "heading_7": "Storage",
             "value_7": "<p>16GB</p>",
             "heading_8": "Enhanced UI",
-            "value_8": "<p>✗</p>",
+            "value_8": "<p>\u2717</p>",
             "heading_9": "Split Screen",
-            "value_9": "<p>✗</p>",
+            "value_9": "<p>\u2717</p>",
             "heading_10": "Price",
             "value_10": "<p>$79.99</p>",
             "heading_11": "",
@@ -620,23 +620,23 @@
           "settings": {
             "product": "the-autolinkr-elite",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
+            "value_1": "<p>\u2713</p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>✓</p>",
+            "value_2": "<p>\u2713</p>",
             "heading_3": "Netflix & YouTube",
-            "value_3": "<p>✓</p>",
+            "value_3": "<p>\u2713</p>",
             "heading_4": "Google Play Store",
-            "value_4": "<p>✓</p>",
+            "value_4": "<p>\u2713</p>",
             "heading_5": "MicroSD Slot",
-            "value_5": "<p>✓</p>",
+            "value_5": "<p>\u2713</p>",
             "heading_6": "RAM",
-            "value_6": "<p>8GB — 4x more</p>",
+            "value_6": "<p>8GB \u2014 4x more</p>",
             "heading_7": "Storage",
-            "value_7": "<p>64GB — 4x more</p>",
+            "value_7": "<p>64GB \u2014 4x more</p>",
             "heading_8": "Enhanced UI",
-            "value_8": "<p>✓</p>",
+            "value_8": "<p>\u2713</p>",
             "heading_9": "Split Screen",
-            "value_9": "<p>✓</p>",
+            "value_9": "<p>\u2713</p>",
             "heading_10": "Price",
             "value_10": "<p>$199.99</p>",
             "heading_11": "",
@@ -683,7 +683,7 @@
         "first_available_variant": true,
         "show_vendor": false,
         "show_price": true,
-        "heading": "Pro vs Elite — Which Is Right for You?",
+        "heading": "Pro vs Elite \u2014 Which Is Right for You?",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
@@ -760,7 +760,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "8GB RAM — 4× more power for smooth multitasking",
+            "text": "8GB RAM \u2014 4\u00d7 more power for smooth multitasking",
             "text_size": "text-sm"
           }
         },
@@ -770,7 +770,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "64GB Storage — 4× more room for downloads & apps",
+            "text": "64GB Storage \u2014 4\u00d7 more room for downloads & apps",
             "text_size": "text-sm"
           }
         },
@@ -780,7 +780,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Split-Screen Multitasking — run two apps side by side",
+            "text": "Split-Screen Multitasking \u2014 run two apps side by side",
             "text_size": "text-sm"
           }
         },
@@ -790,7 +790,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Enhanced UI — premium interface built for drivers",
+            "text": "Enhanced UI \u2014 premium interface built for drivers",
             "text_size": "text-sm"
           }
         }
@@ -833,7 +833,7 @@
           "type": "question",
           "settings": {
             "title": "Will this work with my car?",
-            "text": "<p>Works with any 2016+ vehicle with factory CarPlay or Android Auto — that's 500+ models from Toyota, Honda, Ford, BMW, and 30+ brands. Not compatible with Tesla, Rivian, or Lucid.</p><p><a href=\"/pages/supported-cars\">Check your car →</a></p>",
+            "text": "<p>Works with any 2016+ vehicle with factory CarPlay or Android Auto \u2014 that's 500+ models from Toyota, Honda, Ford, BMW, and 30+ brands. Not compatible with Tesla, Rivian, or Lucid.</p><p><a href=\"/pages/supported-cars\">Check your car \u2192</a></p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -842,7 +842,7 @@
           "type": "question",
           "settings": {
             "title": "Does it work with both iPhone and Android?",
-            "text": "<p>Yes. AutoLinkr Pro™ supports both wireless Apple CarPlay and wireless Android Auto. It detects your phone automatically on first connection.</p>",
+            "text": "<p>Yes. AutoLinkr Pro\u2122 supports both wireless Apple CarPlay and wireless Android Auto. It detects your phone automatically on first connection.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -851,7 +851,7 @@
           "type": "question",
           "settings": {
             "title": "Do I need WiFi for streaming?",
-            "text": "<p>Streaming uses your phone's mobile hotspot — just turn it on and AutoLinkr connects automatically. Most plans include hotspot data. Many apps also support offline downloads for when you're out of range.</p>",
+            "text": "<p>Streaming uses your phone's mobile hotspot \u2014 just turn it on and AutoLinkr connects automatically. Most plans include hotspot data. Many apps also support offline downloads for when you're out of range.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -860,7 +860,7 @@
           "type": "question",
           "settings": {
             "title": "Can I watch Netflix while the car is moving?",
-            "text": "<p>Streaming apps remain active while driving — designed for passenger use. AutoLinkr does not restrict playback, but the driver should never watch video while operating the vehicle.</p>",
+            "text": "<p>Streaming apps remain active while driving \u2014 designed for passenger use. AutoLinkr does not restrict playback, but the driver should never watch video while operating the vehicle.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -878,7 +878,7 @@
           "type": "question",
           "settings": {
             "title": "Can I move it between cars?",
-            "text": "<p>Absolutely. It's completely portable — unplug from one car's USB port and plug into another. Works instantly in any compatible vehicle.</p>",
+            "text": "<p>Absolutely. It's completely portable \u2014 unplug from one car's USB port and plug into another. Works instantly in any compatible vehicle.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -993,7 +993,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Wireless CarPlay, streaming apps, and a 30-day guarantee — all for $79.99 with free shipping.</p>",
+            "text": "<p>Wireless CarPlay, streaming apps, and a 30-day guarantee \u2014 all for $79.99 with free shipping.</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -1008,7 +1008,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "Add AutoLinkr Pro™ to Cart",
+            "button_label": "Add AutoLinkr Pro\u2122 to Cart",
             "button_link": "/products/the-autolinkr-pro",
             "button_style": "primary",
             "button_size": "lg",
@@ -1019,7 +1019,7 @@
         "button-secondary": {
           "type": "button",
           "settings": {
-            "button_label": "Check Your Car's Compatibility →",
+            "button_label": "Check Your Car's Compatibility \u2192",
             "button_link": "/pages/supported-cars",
             "button_style": "link",
             "button_size": "md",

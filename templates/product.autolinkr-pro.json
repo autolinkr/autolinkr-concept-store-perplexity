@@ -240,171 +240,6 @@
         "ghost_link": ""
       }
     },
-    "how-it-works": {
-      "type": "al-how-it-works",
-      "blocks": {
-        "step-1": {
-          "type": "step",
-          "settings": {
-            "heading": "Plug In",
-            "body": "Insert into your car's factory USB port. No tools, no drilling.",
-            "badge": "30 sec",
-            "image_url": "",
-            "image": "shopify://shop_images/AutoLinkr_Flat_White_Zoom_1.png",
-            "image_ratio": "4/3"
-          }
-        },
-        "step-2": {
-          "type": "step",
-          "settings": {
-            "heading": "Connect",
-            "body": "Pair via Bluetooth once. Your car remembers it forever.",
-            "badge": "One time",
-            "image_url": "",
-            "image": "shopify://shop_images/2M2A9259.jpg",
-            "image_ratio": "16/9"
-          }
-        },
-        "step-3": {
-          "type": "step",
-          "settings": {
-            "heading": "Enjoy",
-            "body": "Wireless CarPlay + streaming fires up automatically every drive.",
-            "badge": "Every drive, automatic",
-            "image_url": "",
-            "image": "shopify://shop_images/IMG_2863.heic",
-            "image_ratio": "1/1"
-          }
-        }
-      },
-      "block_order": [
-        "step-1",
-        "step-2",
-        "step-3"
-      ],
-      "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "eyebrow": "",
-        "heading": "Plug In. Connect. Enjoy.",
-        "subheading": "No tools. No mechanic. 60 seconds.",
-        "cta_label": "\u25b6 Watch Setup Video",
-        "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
-      }
-    },
-    "as-seen-in": {
-      "type": "al-press-logos",
-      "blocks": {
-        "logo-the-verge": {
-          "type": "logo",
-          "settings": {
-            "name": "The Verge",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-the-verge.png?v=1773977577",
-            "height": 28,
-            "link": "https://www.theverge.com"
-          }
-        },
-        "logo-wired": {
-          "type": "logo",
-          "settings": {
-            "name": "Wired",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-wired.png?v=1773977601",
-            "height": 30,
-            "link": "https://www.wired.com"
-          }
-        },
-        "logo-techradar": {
-          "type": "logo",
-          "settings": {
-            "name": "TechRadar",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-techradar.png?v=1773977602",
-            "height": 26,
-            "link": "https://www.techradar.com"
-          }
-        },
-        "logo-car-and-driver": {
-          "type": "logo",
-          "settings": {
-            "name": "Car and Driver",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-car-and-driver.png?v=1773977603",
-            "height": 22,
-            "link": "https://www.caranddriver.com"
-          }
-        },
-        "logo-motor-trend": {
-          "type": "logo",
-          "settings": {
-            "name": "Motor Trend",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-motor-trend.png?v=1773977605",
-            "height": 26,
-            "link": "https://www.motortrend.com"
-          }
-        },
-        "logo-forbes": {
-          "type": "logo",
-          "settings": {
-            "name": "Forbes",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-forbes.png?v=1773977606",
-            "height": 30,
-            "link": "https://www.forbes.com"
-          }
-        },
-        "logo-road-and-track": {
-          "type": "logo",
-          "settings": {
-            "name": "Road & Track",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-road-and-track.png?v=1773977608",
-            "height": 24,
-            "link": "https://www.roadandtrack.com"
-          }
-        },
-        "logo-business-insider": {
-          "type": "logo",
-          "settings": {
-            "name": "Business Insider",
-            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/press-logo-business-insider.png?v=1773977609",
-            "height": 24,
-            "link": "https://www.businessinsider.com"
-          }
-        }
-      },
-      "block_order": [
-        "logo-the-verge",
-        "logo-wired",
-        "logo-techradar",
-        "logo-car-and-driver",
-        "logo-motor-trend",
-        "logo-forbes",
-        "logo-road-and-track",
-        "logo-business-insider"
-      ],
-      "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "eyebrow": "As Featured In"
-      }
-    },
-    "video-3d": {
-      "type": "al-video-section",
-      "settings": {
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "max_width": 1200,
-        "media_max_width": 800,
-        "text_align": "center",
-        "eyebrow": "",
-        "heading": "Designed to Disappear",
-        "heading_tag": "h2",
-        "subheading": "Compact enough to hide behind your dash \u2014 powerful enough to transform your drive.",
-        "youtube_id": "",
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/f710c015c61142c997c93fa5dd13c01d.mov",
-        "autoplay": true,
-        "cta_label": "",
-        "cta_link": "",
-        "ghost_label": "",
-        "ghost_link": ""
-      }
-    },
     "logo_list_KH4Hb9": {
       "type": "al-logo-marquee",
       "blocks": {
@@ -483,6 +318,79 @@
         "padding_top": 48,
         "padding_bottom": 48,
         "divider": false
+      }
+    },
+    "how-it-works": {
+      "type": "al-how-it-works",
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "heading": "Plug In",
+            "body": "Insert into your car's factory USB port. No tools, no drilling.",
+            "badge": "30 sec",
+            "image_url": "",
+            "image": "shopify://shop_images/AutoLinkr_Flat_White_Zoom_1.png",
+            "image_ratio": "4/3"
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "heading": "Connect",
+            "body": "Pair via Bluetooth once. Your car remembers it forever.",
+            "badge": "One time",
+            "image_url": "",
+            "image": "shopify://shop_images/2M2A9259.jpg",
+            "image_ratio": "16/9"
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "heading": "Enjoy",
+            "body": "Wireless CarPlay + streaming fires up automatically every drive.",
+            "badge": "Every drive, automatic",
+            "image_url": "",
+            "image": "shopify://shop_images/IMG_2863.heic",
+            "image_ratio": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3"
+      ],
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "eyebrow": "",
+        "heading": "Plug In. Connect. Enjoy.",
+        "subheading": "No tools. No mechanic. 60 seconds.",
+        "cta_label": "\u25b6 Watch Setup Video",
+        "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
+      }
+    },
+    "video-3d": {
+      "type": "al-video-section",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "max_width": 1200,
+        "media_max_width": 800,
+        "text_align": "center",
+        "eyebrow": "",
+        "heading": "Designed to Disappear",
+        "heading_tag": "h2",
+        "subheading": "Compact enough to hide behind your dash \u2014 powerful enough to transform your drive.",
+        "youtube_id": "",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/f710c015c61142c997c93fa5dd13c01d.mov",
+        "autoplay": true,
+        "cta_label": "",
+        "cta_link": "",
+        "ghost_label": "",
+        "ghost_link": ""
       }
     },
     "multicolumn-features": {
@@ -596,77 +504,15 @@
       }
     },
     "image-compatibility": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Works With Your Car",
-            "heading_size": "h2",
-            "heading_tag": "h2",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Compatible with any 2016+ vehicle with factory CarPlay or Android Auto \u2014 that's 500+ models from 30+ brands.</p><p>Toyota \u00b7 Honda \u00b7 Ford \u00b7 Chevrolet \u00b7 BMW \u00b7 Mercedes \u00b7 Hyundai \u00b7 Kia \u00b7 Nissan \u00b7 Subaru \u00b7 Mazda \u00b7 Volkswagen \u00b7 Audi \u00b7 Lexus \u00b7 Jeep \u00b7 30+ more</p><p>Not sure? <a href=\"mailto:support@theautolinkr.com\">Contact us</a> \u2014 we'll confirm in minutes.</p><p><strong>If it doesn't work with your car, full refund. No questions.</strong></p>",
-            "text_font": "body",
-            "text_size": "text-base",
-            "text_max_size": 32,
-            "text_line_height": 1.6,
-            "text_letter_spacing": 0,
-            "text_capitalize": false,
-            "secondary_color": false,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Check Your Car's Compatibility \u2192",
-            "button_link": "/pages/supported-cars",
-            "button_style": "primary",
-            "button_size": "md",
-            "button_external": false,
-            "button_icon": true
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+      "type": "al-compatibility",
+      "blocks": {},
+      "block_order": [],
       "settings": {
-        "image": "shopify://shop_images/AUTO-9518.jpg",
-        "image_height": "medium",
-        "image_width": "medium",
-        "layout": "image_first",
-        "text_alignment": "left",
-        "content_position": "middle",
-        "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_background_2": "",
-        "gradient_background_2": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
+        "image": "shopify://shop_images/2M2A9277.jpg",
+        "button_label": "Check Your Car's Compatibility \u2192",
+        "button_link": "/pages/supported-cars",
         "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false,
-        "enable_parallax": true,
-        "parallax_direction": "vertical"
+        "padding_bottom": 72
       }
     },
     "youtube-review": {
@@ -1252,12 +1098,11 @@
   "order": [
     "main-product",
     "video-demo",
-    "how-it-works",
-    "as-seen-in",
-    "video-3d",
     "logo_list_KH4Hb9",
-    "multicolumn-features",
     "image-compatibility",
+    "how-it-works",
+    "video-3d",
+    "multicolumn-features",
     "youtube-review",
     "testimonials-banner",
     "product-comparison",

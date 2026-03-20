@@ -394,113 +394,82 @@
       }
     },
     "multicolumn-features": {
-      "type": "multicolumn-with-icons",
+      "type": "al-multicolumn-icons",
+      "block_order": [
+        "feat-1",
+        "feat-2",
+        "feat-3",
+        "feat-4",
+        "feat-5",
+        "feat-6"
+      ],
       "blocks": {
-        "col-1": {
-          "type": "column",
+        "feat-1": {
+          "type": "feature",
           "settings": {
-            "icon": "devices",
-            "custom_icon": "",
+            "icon": "wireless",
             "heading": "Wireless CarPlay & Android Auto",
-            "text": "<p>No cables. Connects automatically every drive. Just get in and go.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "text": "No cables. Connects automatically every drive. Just get in and go.",
+            "show_app_icons": false
           }
         },
-        "col-2": {
-          "type": "column",
+        "feat-2": {
+          "type": "feature",
           "settings": {
-            "icon": "headphone",
-            "custom_icon": "",
+            "icon": "play",
             "heading": "Netflix, YouTube & Disney+",
-            "text": "<p>Stream directly on your car's built-in screen via the Google Play Store.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "text": "Stream any app on your factory screen via the Google Play Store.",
+            "show_app_icons": true,
+            "app_icon_1": "shopify://shop_images/NetflixIcon.png",
+            "app_icon_2": "shopify://shop_images/YoutubeIcon.png",
+            "app_icon_3": "shopify://shop_images/Disney_Icon2.png",
+            "app_icon_4": "shopify://shop_images/HuluIcon.png",
+            "app_icon_5": "shopify://shop_images/SpotifyAppIcon.png"
           }
         },
-        "col-3": {
-          "type": "column",
+        "feat-3": {
+          "type": "feature",
           "settings": {
-            "icon": "lightning",
-            "custom_icon": "",
-            "heading": "60-Second Plug-and-Play",
-            "text": "<p>No tools, no mechanic, no wiring. Plug in once and it auto-connects every drive.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "icon": "bolt",
+            "heading": "60-Second Setup",
+            "text": "No tools, no mechanic, no wiring. Plug in once — auto-connects every drive after.",
+            "show_app_icons": false
           }
         },
-        "col-4": {
-          "type": "column",
+        "feat-4": {
+          "type": "feature",
           "settings": {
             "icon": "shield",
-            "custom_icon": "",
-            "heading": "Works With 500+ Vehicles",
-            "text": "<p>Toyota, Honda, Ford, BMW, and 30+ more brands. 2016+ with factory CarPlay.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "heading": "500+ Compatible Vehicles",
+            "text": "Toyota, Honda, Ford, BMW, and 30+ more brands. 2016+ with factory CarPlay.",
+            "show_app_icons": false
           }
         },
-        "col-5": {
-          "type": "column",
+        "feat-5": {
+          "type": "feature",
           "settings": {
-            "icon": "heart",
-            "custom_icon": "",
+            "icon": "connect",
             "heading": "Auto-Connects on Start",
-            "text": "<p>Get in your car and it just works. No buttons, no pairing — every single drive.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "text": "Get in your car and it just works. No buttons, no pairing — every single drive.",
+            "show_app_icons": false
           }
         },
-        "col-6": {
-          "type": "column",
+        "feat-6": {
+          "type": "feature",
           "settings": {
-            "icon": "box",
-            "custom_icon": "",
-            "heading": "Offline Content Downloads",
-            "text": "<p>Download shows before your trip. Micro SD expandable storage — no data needed.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "icon": "download",
+            "heading": "Offline Downloads",
+            "text": "Download shows before your trip. Micro SD expandable storage — no data needed.",
+            "show_app_icons": false
           }
         }
       },
-      "block_order": [
-        "col-1",
-        "col-2",
-        "col-3",
-        "col-4",
-        "col-5",
-        "col-6"
-      ],
       "settings": {
-        "style": "with-border",
-        "columns": 3,
-        "text_alignment": "left",
-        "heading": "Everything, Built In",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "What you get",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
+        "eyebrow": "Why AutoLinkr Pro",
+        "heading": "Everything You Need. Nothing You Don’t.",
+        "subheading": "Six reasons tens of thousands of drivers upgraded their drive.",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     },
     "image-compatibility": {

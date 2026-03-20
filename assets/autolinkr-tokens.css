@@ -1620,7 +1620,7 @@ comparison-table.comparison-table {
   font-weight: 600 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
-  color: rgba(255,255,255,0.35) !important;
+  color: rgba(255,255,255,0.9) !important;
   margin-bottom: 4px !important;
 }
 
@@ -1803,16 +1803,23 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   padding: 5px 14px !important;
 }
 
-/* ── 3. FAQ / Collapsible — ONLY border blue, text stays white ── */
+/* ── 3. FAQ / Collapsible — border only on question tab + expanded panel ── */
+/* Remove outer wrapper border — summary + content panels carry their own borders */
 .accordion,
 .details {
-  border: 1px solid rgba(59,142,248,0.3) !important;
-  border-radius: 12px !important;
-  overflow: hidden !important;
+  border: none !important;
+  background: transparent !important;
+  overflow: visible !important;
 }
 .accordion + .accordion,
 .details + .details {
   margin-top: 8px !important;
+}
+/* Summary (question tab) — blue border */
+.details > summary,
+.details__summary {
+  border: 1px solid rgba(59,142,248,0.35) !important;
+  border-radius: 10px !important;
 }
 /* Remove blue from faq text — stay white/muted */
 .details__summary,
@@ -1821,10 +1828,19 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 .details__content * {
   color: inherit !important;
 }
-/* Accent the open state border */
-.details[open] {
-  border-color: rgba(59,142,248,0.6) !important;
-  box-shadow: 0 0 20px rgba(59,142,248,0.06) !important;
+/* Open state — summary transitions to connected card top */
+.details[open] > summary,
+.details[open] .details__summary {
+  border-color: rgba(59,142,248,0.65) !important;
+  border-radius: 10px 10px 0 0 !important;
+  box-shadow: none !important;
+}
+/* Content panel inherits the blue border sides + bottom when open */
+.details[open] .details__content,
+.details[open] > div:not(.details__summary) {
+  border: 1px solid rgba(59,142,248,0.65) !important;
+  border-top: none !important;
+  border-radius: 0 0 10px 10px !important;
 }
 
 /* ── 4. Pro vs Elite comparison — blue value text + mobile fix ── */
@@ -1851,20 +1867,11 @@ comparison-table.comparison-table {
 .comparison-table__row {
   min-width: 0 !important;
 }
+/* Mobile: keep all 3 columns — horizontal scroll handles overflow */
 @media (max-width: 600px) {
   .comparison-table__row.grid-cols-3 {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1.2fr 1fr 1fr !important;
     gap: 0 !important;
-  }
-  /* Hide the first (label) column on mobile — shown inside each cell already */
-  .comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column:first-child {
-    display: none !important;
-  }
-  .comparison-table__row.thead .comparison-table__column:first-child {
-    display: none !important;
-  }
-  .comparison-table__row.tfoot .comparison-table__column:first-child {
-    display: none !important;
   }
 }
 

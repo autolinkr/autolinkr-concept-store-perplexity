@@ -878,11 +878,26 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .product__text:has(+ .product__text) {
   padding: 0 !important;
 }
+/* Small gap between each bullet for legibility */
+.product__text {
+  margin-bottom: 8px !important;
+}
+.product__text:last-child,
+.product__text:last-of-type {
+  margin-bottom: 0 !important;
+}
 /* Kill alternating background colours */
 .product__text,
 .product__text-inner {
   background: transparent !important;
   background-color: transparent !important;
+}
+/* Text — bright white, readable */
+.product__text .product__text-inner,
+.product__text p,
+.product__text span,
+.product__text .rte {
+  color: rgba(255,255,255,0.92) !important;
 }
 /* All icons in these text blocks — brand blue */
 .product__text svg,
@@ -1526,3 +1541,229 @@ body::before {
 .product-block-list__item--text + .product-block-list__item--text {
   margin-top: 2px !important;
 }
+
+/* ─── PRODUCT COMPARISON TABLE — AL Premium Overrides ─────── */
+
+/* Outer wrapper — blue border, dark surface, rounded */
+comparison-table.comparison-table {
+  border: 1.5px solid rgba(59,142,248,0.4) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background: #0F0F12 !important;
+}
+
+/* Product header row */
+.comparison-table__row.thead {
+  background: #131318 !important;
+  border-bottom: 1px solid rgba(59,142,248,0.15) !important;
+  padding: 24px 20px !important;
+  gap: 0 !important;
+}
+
+/* Sticky header row matches */
+.comparison-table__row.sticky {
+  background: #131318 !important;
+  border-bottom: 1px solid rgba(59,142,248,0.15) !important;
+}
+
+/* Product image — force square, consistent size, dark bg */
+.comparison-table__row.thead .horizontal-product__media,
+.comparison-table__row.sticky .horizontal-product__media {
+  width: 72px !important;
+  height: 72px !important;
+  min-width: 72px !important;
+  border-radius: 12px !important;
+  background: #1E1E22 !important;
+  border: 1px solid rgba(59,142,248,0.2) !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.comparison-table__row.thead .horizontal-product__media img,
+.comparison-table__row.sticky .horizontal-product__media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Product title */
+.comparison-table .horizontal-product__title {
+  font-family: var(--al-font-display,'General Sans',sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #fff !important;
+}
+
+/* Alternating rows — remove theme colours, use dark surfaces */
+.comparison-table__row.odd,
+.comparison-table__row.even {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+  gap: 0 !important;
+}
+
+.comparison-table__row.odd { background: rgba(255,255,255,0.015) !important; }
+.comparison-table__row.even { background: transparent !important; }
+
+/* Column cells */
+.comparison-table__column {
+  padding: 14px 20px !important;
+  border-right: 1px solid rgba(255,255,255,0.05) !important;
+  font-size: 0.875rem !important;
+  color: rgba(255,255,255,0.65) !important;
+}
+.comparison-table__column:last-child { border-right: none !important; }
+
+/* Row label (heading inside cell) */
+.comparison-table__column .h6 {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.35) !important;
+  margin-bottom: 4px !important;
+}
+
+/* TRUE checkmark — blue */
+.comparison-table__column .icon--check-circle-filled,
+.comparison-table__column svg[class*="check"] {
+  color: rgb(59,142,248) !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* FALSE cross — muted red */
+.comparison-table__column .icon--close-circle-filled,
+.comparison-table__column svg[class*="close"] {
+  color: rgba(255,77,64,0.6) !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Value text — white when it's actual data (not icon) */
+.comparison-table__column p:not(.h6) {
+  color: rgba(255,255,255,0.75) !important;
+  font-weight: 500 !important;
+}
+
+/* Highlighted differences — blue row highlight */
+comparison-table[data-highlight] .comparison-table__row.odd .comparison-table__column[data-highlight],
+comparison-table[data-highlight] .comparison-table__row.even .comparison-table__column[data-highlight] {
+  background: rgba(59,142,248,0.12) !important;
+  color: #fff !important;
+}
+
+/* Section heading group */
+.comparison-table__head {
+  background: rgba(59,142,248,0.06) !important;
+  border-top: 1px solid rgba(59,142,248,0.15) !important;
+  border-bottom: 1px solid rgba(59,142,248,0.15) !important;
+  padding: 10px 20px !important;
+}
+.comparison-table__head .comparison-table__column {
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: rgba(59,142,248,0.8) !important;
+  padding: 0 !important;
+  border-right: none !important;
+}
+
+/* Footer row (CTA buttons) */
+.comparison-table__row.tfoot {
+  background: #131318 !important;
+  border-top: 1px solid rgba(59,142,248,0.15) !important;
+  gap: 0 !important;
+  padding: 20px !important;
+}
+.comparison-table__row.tfoot .comparison-table__column {
+  border-right: none !important;
+  padding: 0 8px !important;
+}
+
+/* Price text */
+.comparison-table .price {
+  color: rgb(59,142,248) !important;
+  font-weight: 700 !important;
+}
+.comparison-table .price--compare {
+  color: rgba(255,255,255,0.3) !important;
+}
+
+/* ── Mobile ── */
+@media (max-width: 749px) {
+  comparison-table.comparison-table {
+    border-radius: 14px !important;
+  }
+  .comparison-table__row.thead,
+  .comparison-table__row.sticky,
+  .comparison-table__row.tfoot {
+    padding: 16px 14px !important;
+  }
+  .comparison-table__column {
+    padding: 12px 14px !important;
+    font-size: 0.8125rem !important;
+  }
+  .comparison-table__row.thead .horizontal-product__media,
+  .comparison-table__row.sticky .horizontal-product__media {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+  }
+  .comparison-table .horizontal-product__title {
+    font-size: 0.875rem !important;
+  }
+  /* Stack product cards vertically on very small screens */
+  .comparison-table__row.thead .comparison-table__column {
+    padding: 12px 10px !important;
+  }
+}
+
+/* ─── ELITE UPSELL — Premium list styling ────────────────── */
+
+/* Eyebrow label */
+[data-block-id="upsell-eyebrow"] .product__text-inner,
+[data-block-id="upsell-eyebrow"] p,
+[data-block-id="upsell-eyebrow"] span {
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: rgba(59,142,248,0.85) !important;
+  margin-bottom: 2px !important;
+}
+
+/* Feature lines — blue checkmark prefix, readable text */
+[data-block-id="upsell-1"] .product__text-inner,
+[data-block-id="upsell-2"] .product__text-inner,
+[data-block-id="upsell-3"] .product__text-inner,
+[data-block-id="upsell-4"] .product__text-inner {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  color: rgba(255,255,255,0.88) !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.55 !important;
+}
+
+[data-block-id="upsell-1"] .product__text-inner::before,
+[data-block-id="upsell-2"] .product__text-inner::before,
+[data-block-id="upsell-3"] .product__text-inner::before,
+[data-block-id="upsell-4"] .product__text-inner::before {
+  content: '✓' !important;
+  color: rgb(59,142,248) !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+  flex-shrink: 0 !important;
+}
+
+/* Tighten spacing between upsell lines */
+[data-block-id="upsell-1"],
+[data-block-id="upsell-2"],
+[data-block-id="upsell-3"],
+[data-block-id="upsell-4"] {
+  margin-bottom: 4px !important;
+}
+[data-block-id="upsell-4"] { margin-bottom: 0 !important; }

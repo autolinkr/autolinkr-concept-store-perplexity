@@ -147,9 +147,26 @@
     class="mega-menu__container al-mm__container invisible"
     style="--al-mm-columns: {{ al_columns }};"
   >
-    {%- if section_rendering_api -%}
-      {%- comment %} Storefront / section rendering API — show real cards {%- endcomment %}
-      <div class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
+    {%- unless section_rendering_api -%}
+      {%- comment %}
+        Initial page load (storefront) — render skeleton with the target id.
+        Concept's JS fires a Section Rendering API request on hover and replaces
+        this element by its id with the fully-rendered card content.
+      {%- endcomment %}
+      <div id="HeaderNavMega-{{ section.id }}-{{ position }}-{{ context }}" class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
+        <api-button class="api-only" data-id="HeaderNavMega-{{ section.id }}-{{ position }}-{{ context }}" data-section-id="{{ section.id }}"></api-button>
+        <div class="al-mm__grid">
+          {%- for i in (1..al_columns) -%}
+            <div class="al-mm__card al-mm__card--skeleton"></div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- else -%}
+      {%- comment %}
+        Section Rendering API re-render (after hover) — return real card content.
+        This replaces the skeleton element matched by the id above.
+      {%- endcomment %}
+      <div id="HeaderNavMega-{{ section.id }}-{{ position }}-{{ context }}" class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
 
         {%- if block.settings.menu_label != blank or block.settings.view_all_link != blank -%}
           <div class="al-mm__header">
@@ -218,16 +235,7 @@
         {%- endif -%}
 
       </div>
-    {%- else -%}
-      {%- comment %} Editor / design mode — show skeleton so the panel has some size {%- endcomment %}
-      <div class="al-mm__inner page-width{% if full_width %} page-width--full{% endif %}">
-        <div class="al-mm__grid">
-          {%- for i in (1..4) -%}
-            <div class="al-mm__card al-mm__card--skeleton"></div>
-          {%- endfor -%}
-        </div>
-      </div>
-    {%- endif -%}
+    {%- endunless -%}
   </div>
 
 {%- else -%}

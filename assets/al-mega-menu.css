@@ -20,6 +20,20 @@
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55) !important;
 }
 
+/*
+ * The .mega-menu wrapper (parent of .al-mm__container) is position:absolute top:0
+ * and Concept's DetailsMega.transitionIn() animates it via translateY(-105% → 0).
+ * That makes the dark panel background sweep in from the very top of the page.
+ *
+ * Clip the .mega-menu wrapper so nothing above var(--header-height) is painted.
+ * The content is already offset by padding-block-start: var(--header-height)
+ * (on .mega-menu__container), so the clip aligns precisely with the nav divider.
+ * Result: the menu visually opens from the bottom edge of the header, not the top.
+ */
+.mega-menu:has(.al-mm__container) {
+  clip-path: inset(var(--header-height) 0 0 0);
+}
+
 /* ─── Panel inner wrapper — compact vertical padding ─────── */
 
 .al-mm__inner {

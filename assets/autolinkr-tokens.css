@@ -1822,9 +1822,9 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 .accordion + .accordion {
   margin-top: 8px !important;
 }
-/* Summary (question tab) — blue border, full width */
+/* Summary (question tab) — consistent blue border, full width */
 .details__summary {
-  border: 1px solid rgba(59,142,248,0.35) !important;
+  border: 1px solid rgba(59,142,248,0.5) !important;
   border-radius: 10px !important;
   width: 100% !important;
   box-sizing: border-box !important;
@@ -1839,20 +1839,27 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 .details__content * {
   color: inherit !important;
 }
-/* Open state — flat bottom to connect seamlessly with content panel */
+/* Open state — same border color, flat bottom to connect with panel */
 .details[open] .details__summary {
-  border-color: rgba(59,142,248,0.65) !important;
+  border-color: rgba(59,142,248,0.5) !important;
   border-bottom-color: transparent !important;
   border-radius: 10px 10px 0 0 !important;
 }
-/* Expanded content panel — flush with summary, same exact width */
+/* Expanded content panel — flush with summary, same border, full width */
 .details[open] .details__content {
-  border: 1px solid rgba(59,142,248,0.65) !important;
+  border: 1px solid rgba(59,142,248,0.5) !important;
   border-top: none !important;
   border-radius: 0 0 10px 10px !important;
   width: 100% !important;
+  max-width: 100% !important;
   box-sizing: border-box !important;
   margin-top: 0 !important;
+}
+/* Override theme's 80% max-width on desktop */
+@media screen and (min-width: 1024px) {
+  .accordion .details__content {
+    max-width: 100% !important;
+  }
 }
 
 /* ── 4. Pro vs Elite comparison — 2-col, blue values, highlight border ── */

@@ -883,6 +883,12 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .product__text:has(+.product__text) {
   padding: 0 !important;
 }
+.product__text:last-child .product__text-inner,
+.product__text:last-of-type .product__text-inner {
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
 /* ─── IMAGE WITH TEXT — force image visible on mobile ─────── */
 @media (max-width: 768px) {

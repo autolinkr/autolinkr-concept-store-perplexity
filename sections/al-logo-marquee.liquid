@@ -50,7 +50,7 @@
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    opacity: 0.5;
+    opacity: 0.75;
     transition: opacity 0.25s ease;
     padding: 0 {{ section.settings.gap | divided_by: 2 }}px;
   }
@@ -63,7 +63,6 @@
     height: {{ section.settings.logo_height }}px;
     width: auto;
     display: block;
-    filter: brightness(0) invert(1);
     object-fit: contain;
   }
 
@@ -95,11 +94,12 @@
 </style>
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}">
-  <div class="page-width">
 
-    {%- if section.settings.eyebrow != blank -%}
-      <p class="al-marquee-eyebrow">{{ section.settings.eyebrow }}</p>
-    {%- endif -%}
+  {%- if section.settings.eyebrow != blank -%}
+    <p class="al-marquee-eyebrow">{{ section.settings.eyebrow }}</p>
+  {%- endif -%}
+
+  <div class="page-width">
 
     {%- if section.blocks.size > 0 -%}
       <div class="al-marquee-outer">

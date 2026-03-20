@@ -730,8 +730,8 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "Everything in Pro, plus: 8GB RAM (4x Pro) · 64GB Storage (4x Pro) · Split-screen multitasking · Enhanced UI",
-            "text_size": "text-sm"
+            "text": "<p style=\"font-size:0.8125rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(59,142,248,0.85);margin:0 0 12px;\">Everything in Pro, plus:</p><ul style=\"list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;\"><li style=\"display:flex;align-items:center;gap:10px;font-size:0.9375rem;color:rgba(255,255,255,0.9);\"><span style=\"color:rgb(59,142,248);font-weight:700;font-size:1rem;\">&#x2713;</span><span><strong style=\"color:#fff;\">8GB RAM</strong> — 4× more power for smooth multitasking</span></li><li style=\"display:flex;align-items:center;gap:10px;font-size:0.9375rem;color:rgba(255,255,255,0.9);\"><span style=\"color:rgb(59,142,248);font-weight:700;font-size:1rem;\">&#x2713;</span><span><strong style=\"color:#fff;\">64GB Storage</strong> — 4× more room for downloads & apps</span></li><li style=\"display:flex;align-items:center;gap:10px;font-size:0.9375rem;color:rgba(255,255,255,0.9);\"><span style=\"color:rgb(59,142,248);font-weight:700;font-size:1rem;\">&#x2713;</span><span><strong style=\"color:#fff;\">Split-Screen Multitasking</strong> — run two apps side by side</span></li><li style=\"display:flex;align-items:center;gap:10px;font-size:0.9375rem;color:rgba(255,255,255,0.9);\"><span style=\"color:rgb(59,142,248);font-weight:700;font-size:1rem;\">&#x2713;</span><span><strong style=\"color:#fff;\">Enhanced UI</strong> — premium interface built for drivers</span></li></ul>",
+            "text_size": "text-base"
           }
         },
         "badges": {

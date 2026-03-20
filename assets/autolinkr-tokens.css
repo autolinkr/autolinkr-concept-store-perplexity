@@ -953,8 +953,20 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   line-height: 1.7 !important;
 }
 .price-item { color: var(--al-text-1) !important; font-weight: 600 !important; }
-.price-item--sale { color: var(--al-red) !important; }
-.price-item--regular { color: var(--al-text-3) !important; text-decoration: line-through !important; }
+/* Sale price — larger, bold */
+.price-item--sale {
+  color: var(--al-red) !important;
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+}
+/* Strikethrough (compare) price — larger, bold, more visible */
+.price-item--regular {
+  color: rgba(255,255,255,0.45) !important;
+  text-decoration: line-through !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
 
 /* Variant selector buttons */
 .variant-input__label,

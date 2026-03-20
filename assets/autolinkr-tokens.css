@@ -275,7 +275,7 @@ a:hover { color: var(--al-accent-hover); }
 .announcement-bar p,
 .announcement-bar span,
 .announcement-bar__message {
-  color: rgb(var(--color-base-background)) !important;
+  color: rgb(var(--color-base-text)) !important;
   font-weight: 700 !important;
 }
 .js .shopify-section-group-header-group .section.section--first-rounded {

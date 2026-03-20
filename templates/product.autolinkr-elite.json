@@ -563,62 +563,63 @@
       }
     },
     "how-it-works": {
-      "type": "multicolumn-with-icons",
+      "type": "al-how-it-works",
       "blocks": {
-        "step1": {
-          "type": "column",
+        "step-1": {
+          "type": "step",
           "settings": {
-            "icon": "plug",
-            "heading": "1 \u2014 Plug In",
-            "text": "<p>Connect AutoLinkr Elite\u2122 to your car's factory CarPlay USB port using the included cable.</p>"
+            "heading": "1. Plug In",
+            "body": "Connect AutoLinkr Elite\u2122 to your car's factory CarPlay USB port using the included cable. Fits in under 30 seconds.",
+            "badge": "Under 30 sec",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Elite_Plugged.png?v=1772338923",
+            "image_ratio": "4/3"
           }
         },
-        "step2": {
-          "type": "column",
+        "step-2": {
+          "type": "step",
           "settings": {
-            "icon": "bluetooth",
-            "heading": "2 \u2014 Pair Once",
-            "text": "<p>Connect your iPhone via Bluetooth and join the Wi-Fi hotspot. One-time setup under 60 seconds total.</p>"
+            "heading": "2. Connect",
+            "body": "Pair your iPhone via Bluetooth and join the AutoLinkr Wi-Fi hotspot. One-time setup \u2014 your car remembers everything after that.",
+            "badge": "One-time only",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/2M2A9259.jpg?v=1773548940",
+            "image_ratio": "16/9"
           }
         },
-        "step3": {
-          "type": "column",
+        "step-3": {
+          "type": "step",
           "settings": {
-            "icon": "wifi",
-            "heading": "3 \u2014 Auto-Connect",
-            "text": "<p>Every future drive connects automatically when you start your car. No cables, no steps.</p>"
+            "heading": "3. Enjoy",
+            "body": "Wireless CarPlay launches automatically every time you start your car. No cables, no steps \u2014 just wireless freedom on every drive.",
+            "badge": "Automatic every drive",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/TacomaUI_3.png?v=1773554015",
+            "image_ratio": "16/9"
           }
         },
-        "step4": {
-          "type": "column",
+        "step-4": {
+          "type": "step",
           "settings": {
-            "icon": "layout",
-            "heading": "4 \u2014 Split & Stream",
-            "text": "<p>Enable split-screen mode and run navigation side-by-side with any streaming app. Welcome to Elite.</p>"
+            "heading": "4. Go Elite \u2014 Split & Stream",
+            "body": "Enable split-screen mode and run navigation side-by-side with Netflix, YouTube, or any streaming app. Welcome to Elite.",
+            "badge": "Elite exclusive",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/Elite_Main_2_Adnan.png?v=1772338923",
+            "image_ratio": "4/3"
           }
         }
       },
       "block_order": [
-        "step1",
-        "step2",
-        "step3",
-        "step4"
+        "step-1",
+        "step-2",
+        "step-3",
+        "step-4"
       ],
       "settings": {
-        "style": "icons-top",
-        "columns": 4,
-        "text_alignment": "center",
-        "heading": "Setup in Under 60 Seconds",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "No tools, no apps, no installation knowledge required",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "color_button_text": "",
-        "color_button_background": ""
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "eyebrow": "How It Works",
+        "heading": "Plug In. Connect. Enjoy.",
+        "subheading": "No tools. No apps. No installation knowledge required. Up and running in 60 seconds.",
+        "cta_label": "\u25b6 Watch Setup Video",
+        "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
       }
     },
     "product-recommendations": {

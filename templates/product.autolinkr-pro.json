@@ -242,39 +242,36 @@
       }
     },
     "how-it-works": {
-      "type": "multicolumn-with-icons",
+      "type": "al-how-it-works",
       "blocks": {
         "step-1": {
-          "type": "column",
+          "type": "step",
           "settings": {
-            "icon": "lightning",
-            "custom_icon": "",
             "heading": "1. Plug In",
-            "text": "<p>Insert into your car's USB port. No tools, no drilling, no mechanic. Under 30 seconds.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "body": "Insert the AutoLinkr adapter into your car's factory CarPlay USB port. No tools, no drilling, no mechanic. Done in under 30 seconds.",
+            "badge": "Under 30 sec",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/AutoLinkr_Flat_Blue_Zoom.png?v=1773554015",
+            "image_ratio": "4/3"
           }
         },
         "step-2": {
-          "type": "column",
+          "type": "step",
           "settings": {
-            "icon": "devices",
-            "custom_icon": "",
             "heading": "2. Connect",
-            "text": "<p>Pair your phone via Bluetooth. One-time setup \u2014 never needs repeating.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "body": "Pair your phone via Bluetooth \u2014 one time only. AutoLinkr remembers your device and connects automatically on every drive after that.",
+            "badge": "One-time setup",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/2M2A9259.jpg?v=1773548940",
+            "image_ratio": "16/9"
           }
         },
         "step-3": {
-          "type": "column",
+          "type": "step",
           "settings": {
-            "icon": "heart",
-            "custom_icon": "",
             "heading": "3. Enjoy",
-            "text": "<p>Wireless CarPlay + streaming activates automatically every time you start your car.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "body": "Wireless CarPlay launches automatically every time you start your car. Stream Netflix, YouTube, and more \u2014 all on your factory screen.",
+            "badge": "Automatic every drive",
+            "image_url": "https://cdn.shopify.com/s/files/1/0706/8971/8306/files/TacomaUI_3.png?v=1773554015",
+            "image_ratio": "16/9"
           }
         }
       },
@@ -284,35 +281,13 @@
         "step-3"
       ],
       "settings": {
-        "style": "with-border",
-        "columns": 3,
-        "text_alignment": "center",
-        "heading": "How It Works",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "Plug and play",
-        "description": "",
-        "button_label": "\u25b6 Watch Setup Video",
-        "button_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx",
-        "button_external": true,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "eyebrow": "How It Works",
+        "heading": "Plug In. Connect. Enjoy.",
+        "subheading": "No tools. No apps. No installation knowledge required. Up and running in 60 seconds.",
+        "cta_label": "\u25b6 Watch Setup Video",
+        "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
       }
     },
     "as-seen-in": {

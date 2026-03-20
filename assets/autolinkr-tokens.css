@@ -538,7 +538,6 @@ details[is="accordion-details"][open] summary,
 .accordion--open .accordion__button {
   background: rgba(var(--color-base-text)/ 0.07) !important;
   border-color: rgb(var(--color-base-highlight)) !important;
-  border-left: 3px solid rgb(var(--color-base-highlight)) !important;
   color: rgb(var(--color-base-text)) !important;
   border-radius: var(--al-r-md) var(--al-r-md) 0 0 !important;
 }

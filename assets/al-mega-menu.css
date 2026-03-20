@@ -73,13 +73,15 @@
 /* ─── Individual card ─────────────────────────────────────── */
 
 .al-mm__card {
-  flex: 1;
-  min-width: 0;
   /*
-   * Max width derived from column count CSS var (set inline per-block).
-   * Default 4 columns with 10px gaps between them.
+   * Cards are sized to exactly 1/4 of the available panel width (4-slot baseline).
+   * Using flex: 0 0 auto + explicit width means 2-card panels don't stretch to
+   * fill the panel — cards stay the same size as 4-card panels, so the
+   * aspect-ratio image height is identical across all menus.
    */
-  max-width: calc((100% - 10px * (var(--al-mm-columns, 4) - 1)) / var(--al-mm-columns, 4));
+  flex: 0 0 auto;
+  width: calc((100% - 10px * 3) / 4);
+  min-width: 0;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -103,12 +105,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1; /* default square */
-  /*
-   * Cap image height so all panels are the same height regardless of
-   * how many cards are shown (2-card panel won't be 2x taller than 4-card panel).
-   * Cards with fewer items would otherwise be very wide → very tall via aspect-ratio.
-   */
-  max-height: 180px;
   background-color: var(--al-surface-2, #161619);
   overflow: hidden;
   /* Rounded top corners match card radius */

@@ -80,23 +80,25 @@
     100% { transform: translateX(-50%); }
   }
 
-  /* Eyebrow label */
-  #shopify-section-{{ section.id }} .al-marquee-eyebrow {
+  /* Section heading */
+  #shopify-section-{{ section.id }} .al-marquee-heading {
     text-align: center;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
-    margin-bottom: 28px;
+    color: rgb(var(--color-base-text));
+    opacity: 0.5;
+    margin-bottom: 32px;
     font-family: var(--al-font-body, 'Inter', sans-serif);
+    padding: 0 24px;
   }
 </style>
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}">
 
   {%- if section.settings.eyebrow != blank -%}
-    <p class="al-marquee-eyebrow">{{ section.settings.eyebrow }}</p>
+    <p class="al-marquee-heading">{{ section.settings.eyebrow }}</p>
   {%- endif -%}
 
   <div class="page-width">

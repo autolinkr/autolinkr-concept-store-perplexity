@@ -1855,36 +1855,53 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   margin-top: 0 !important;
 }
 
-/* ── 4. Pro vs Elite comparison — blue value text + mobile fix ── */
-/* Blue checkmarks */
-.comparison-table__column svg {
-  display: inline-block !important;
+/* ── 4. Pro vs Elite comparison — 2-col, blue values, highlight border ── */
+
+/* Force ALL rows to exactly 2 equal columns — kills the empty 3rd col */
+.comparison-table__row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0 !important;
 }
-/* Value data cells — blue accent on positive values */
-.comparison-table__column p:not(.h6) {
-  color: rgba(255,255,255,0.85) !important;
+
+/* Ensure the outer container never overflows */
+comparison-table.comparison-table {
+  width: 100% !important;
+  overflow: hidden !important;
 }
-/* Numeric/spec values (RAM, Storage, Price) — blue */
-.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column:nth-child(2) p:not(.h6),
-.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column:nth-child(3) p:not(.h6) {
+
+/* Headers (h6 labels inside cells) — white */
+.comparison-table__column .h6 {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+/* ALL value text in data rows — blue (both col1=Pro and col2=Elite) */
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6),
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column .col-span-full {
   color: rgb(59,142,248) !important;
   font-weight: 600 !important;
 }
-/* Mobile: prevent overflow, allow horizontal scroll within container */
-comparison-table.comparison-table {
-  width: 100% !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important;
+
+/* Center content in every cell */
+.comparison-table__column {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
 }
-.comparison-table__row {
-  min-width: 0 !important;
+.comparison-table__row.thead .comparison-table__column {
+  align-items: center !important;
 }
-/* Mobile: keep all 3 columns — horizontal scroll handles overflow */
-@media (max-width: 600px) {
-  .comparison-table__row.grid-cols-3 {
-    grid-template-columns: 1.2fr 1fr 1fr !important;
-    gap: 0 !important;
-  }
+
+/* Highlight Differences — override theme info background with blue border */
+.comparison-table__row.info .comparison-table__column {
+  background-color: transparent !important;
+}
+.comparison-table__row.info {
+  border: 1px solid rgba(59,142,248,0.55) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 12px rgba(59,142,248,0.08) !important;
 }
 
 /* ── 5. Complete Your Setup — larger cards ── */

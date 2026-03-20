@@ -1767,3 +1767,151 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   margin-bottom: 4px !important;
 }
 [data-block-id="upsell-4"] { margin-bottom: 0 !important; }
+
+/* ══════════════════════════════════════════════════════════════
+   AL — MULTI-SECTION POLISH PASS
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── 1. "50,000+" blue italic highlight in video-section heading ── */
+.shopify-section [id*="youtube-review"] .al-vid-section__heading strong,
+.shopify-section [id*="youtube-review"] .al-vid-section__heading em,
+.shopify-section [id*="youtube-review"] .al-vid-section__heading b {
+  color: rgb(59,142,248) !important;
+  font-style: italic !important;
+}
+
+/* ── 2. How It Works — blue border + number badge accent ── */
+.al-step {
+  border: 2px solid rgba(59,142,248,0.45) !important;
+}
+.al-step:hover {
+  border-color: rgba(59,142,248,0.9) !important;
+  box-shadow: 0 0 32px rgba(59,142,248,0.12) !important;
+}
+.al-step__heading {
+  color: #fff !important;
+}
+.al-label {
+  background: rgba(59,142,248,0.12) !important;
+  border: 1px solid rgba(59,142,248,0.35) !important;
+  color: rgba(59,142,248,0.95) !important;
+  border-radius: 100px !important;
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding: 5px 14px !important;
+}
+
+/* ── 3. FAQ / Collapsible — ONLY border blue, text stays white ── */
+.accordion,
+.details {
+  border: 1px solid rgba(59,142,248,0.3) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+.accordion + .accordion,
+.details + .details {
+  margin-top: 8px !important;
+}
+/* Remove blue from faq text — stay white/muted */
+.details__summary,
+.details__summary *,
+.details__content,
+.details__content * {
+  color: inherit !important;
+}
+/* Accent the open state border */
+.details[open] {
+  border-color: rgba(59,142,248,0.6) !important;
+  box-shadow: 0 0 20px rgba(59,142,248,0.06) !important;
+}
+
+/* ── 4. Pro vs Elite comparison — blue value text + mobile fix ── */
+/* Blue checkmarks */
+.comparison-table__column svg {
+  display: inline-block !important;
+}
+/* Value data cells — blue accent on positive values */
+.comparison-table__column p:not(.h6) {
+  color: rgba(255,255,255,0.85) !important;
+}
+/* Numeric/spec values (RAM, Storage, Price) — blue */
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column:nth-child(2) p:not(.h6),
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column:nth-child(3) p:not(.h6) {
+  color: rgb(59,142,248) !important;
+  font-weight: 600 !important;
+}
+/* Mobile: prevent overflow, allow horizontal scroll within container */
+comparison-table.comparison-table {
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.comparison-table__row {
+  min-width: 0 !important;
+}
+@media (max-width: 600px) {
+  .comparison-table__row.grid-cols-3 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+  }
+  /* Hide the first (label) column on mobile — shown inside each cell already */
+  .comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column:first-child {
+    display: none !important;
+  }
+  .comparison-table__row.thead .comparison-table__column:first-child {
+    display: none !important;
+  }
+  .comparison-table__row.tfoot .comparison-table__column:first-child {
+    display: none !important;
+  }
+}
+
+/* ── 5. Complete Your Setup — larger cards ── */
+.shopify-section [id*="product-recommendations"] .card-grid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+}
+/* Remove save badge + rating from these cards */
+.shopify-section [id*="product-recommendations"] .badge--sale,
+.shopify-section [id*="product-recommendations"] .badge--percent,
+.shopify-section [id*="product-recommendations"] .card__badge,
+.shopify-section [id*="product-recommendations"] .rating {
+  display: none !important;
+}
+/* Card polish — dark surface, blue border, rounded */
+.shopify-section [id*="product-recommendations"] .card {
+  border: 1px solid rgba(59,142,248,0.2) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background: #0F0F12 !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+.shopify-section [id*="product-recommendations"] .card:hover {
+  border-color: rgba(59,142,248,0.55) !important;
+  box-shadow: 0 0 24px rgba(59,142,248,0.1) !important;
+}
+/* Card image area */
+.shopify-section [id*="product-recommendations"] .card__media {
+  background: #131318 !important;
+}
+/* Card info area */
+.shopify-section [id*="product-recommendations"] .card__content,
+.shopify-section [id*="product-recommendations"] .card__information {
+  background: #0F0F12 !important;
+  padding: 14px 16px !important;
+  border-top: 1px solid rgba(59,142,248,0.1) !important;
+}
+/* Card title */
+.shopify-section [id*="product-recommendations"] .card__heading a {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+/* Card price */
+.shopify-section [id*="product-recommendations"] .price__regular .price-item {
+  color: rgb(59,142,248) !important;
+  font-weight: 700 !important;
+}
+.shopify-section [id*="product-recommendations"] .price__compare .price-item {
+  color: rgba(255,255,255,0.3) !important;
+}

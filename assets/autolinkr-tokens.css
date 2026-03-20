@@ -1805,7 +1805,7 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 }
 
 /* ── 3. FAQ / Collapsible — clean borders ── */
-/* Kill ALL borders on outer wrappers: .faq, .accordion, .details */
+/* Kill ALL borders/bg on outer wrappers */
 .faq,
 .accordion,
 .details {
@@ -1813,13 +1813,13 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   background: transparent !important;
   overflow: visible !important;
 }
-/* Each question row: stretch full width of .faq container */
-.faq .accordion {
+/* Each question row fills full width */
+.faq .accordion,
+.faq .details {
   width: 100% !important;
   display: block !important;
 }
-.accordion + .accordion,
-.details + .details {
+.accordion + .accordion {
   margin-top: 8px !important;
 }
 /* Summary (question tab) — blue border, full width */
@@ -1828,6 +1828,9 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   border-radius: 10px !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
 }
 /* Remove blue from faq text — stay white/muted */
 .details__summary,
@@ -1836,18 +1839,20 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 .details__content * {
   color: inherit !important;
 }
-/* Open state — top rounded, bottom flat to connect with content */
+/* Open state — flat bottom to connect seamlessly with content panel */
 .details[open] .details__summary {
   border-color: rgba(59,142,248,0.65) !important;
+  border-bottom-color: transparent !important;
   border-radius: 10px 10px 0 0 !important;
 }
-/* Expanded content panel — blue sides + bottom, seamless with summary */
+/* Expanded content panel — flush with summary, same exact width */
 .details[open] .details__content {
   border: 1px solid rgba(59,142,248,0.65) !important;
   border-top: none !important;
   border-radius: 0 0 10px 10px !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  margin-top: 0 !important;
 }
 
 /* ── 4. Pro vs Elite comparison — blue value text + mobile fix ── */

@@ -1,12 +1,13 @@
 {% comment %}
   AutoLinkr Header — Sticky Nav
-  Implementation Plan v1.4 — Section 4.1
+  Implementation Plan v2.0 — Mega Menu Edition
   Nav: [Logo] Adapters▾ | Dash Cams▾ | Accessories▾ | Shop All | Help▾ | [Cart]
   Mobile: Hamburger + sticky bottom dock
 {% endcomment %}
 
 <link rel="stylesheet" href="{{ 'autolinkr-tokens.css' | asset_url }}" media="all">
 <link rel="stylesheet" href="{{ 'autolinkr-header.css' | asset_url }}" media="all">
+<link rel="stylesheet" href="{{ 'al-mega-menu.css' | asset_url }}" media="all">
 
 <header class="al-header" id="ALHeader" role="banner">
   <div class="al-header__inner al-container">
@@ -30,147 +31,315 @@
     <nav class="al-nav" aria-label="Main navigation">
       <ul class="al-nav__list" role="list">
 
-        {%- comment %} Adapters ▾ {%- endcomment %}
-        <li class="al-nav__item al-nav__item--has-dropdown">
-          <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-adapters">
+        {%- comment %} ═══════════════════════════════
+          ADAPTERS — Mega Menu
+        ═══════════════════════════════ {%- endcomment %}
+        <li class="al-nav__item al-nav__item--has-mega" id="nav-adapters">
+          <button class="al-nav__trigger" aria-expanded="false" aria-controls="mega-adapters">
             Adapters
             <svg class="al-nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
               <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
 
-          <div class="al-dropdown al-dropdown--adapters" id="dropdown-adapters" role="region" aria-label="Adapters menu">
-            <div class="al-dropdown__inner">
+          <div class="al-mega-wrap" id="mega-adapters" role="region" aria-label="Adapters mega menu">
+            <div class="al-mega al-mega--adapters">
+              <div class="al-mega__inner">
 
-              {%- comment %} Product cards row {%- endcomment %}
-              <div class="al-dropdown__products">
+                <div class="al-mega__header">
+                  <span class="al-mega__category">Adapters</span>
+                  <a href="/collections/adapters" class="al-mega__view-all">
+                    View all adapters
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
 
-                <a href="/products/autolinkr-base" class="al-dropdown__product al-dropdown__product--secondary">
-                  <div class="al-dropdown__product-name">AutoLinkr™ Base</div>
-                  <div class="al-dropdown__product-price">$69.99</div>
-                  <div class="al-dropdown__product-desc">Wireless CarPlay only</div>
-                  <div class="al-dropdown__product-upgrade">Upgrade to Pro for $10 more →</div>
-                </a>
+                <div class="al-mega__grid">
 
-                <a href="/products/the-autolinkr-pro" class="al-dropdown__product al-dropdown__product--primary">
-                  <div class="al-dropdown__product-badge al-badge al-badge-blue">⭐ Best Seller</div>
-                  <div class="al-dropdown__product-name">AutoLinkr Pro™</div>
-                  <div class="al-dropdown__product-price">$79.99</div>
-                  <div class="al-dropdown__product-desc">Wireless + Streaming</div>
-                </a>
+                  {%- comment %} AutoLinkr Base {%- endcomment %}
+                  <a href="/products/autolinkr-base" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      {%- if section.settings.img_base != blank -%}
+                        <img src="{{ section.settings.img_base | image_url: width: 400 }}" alt="AutoLinkr Base" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 7V5M18 7V5"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">AutoLinkr™ Base</div>
+                      <div class="al-mega__card-sub">Wireless CarPlay only</div>
+                      <div class="al-mega__card-price">$69.99</div>
+                    </div>
+                  </a>
 
-                <a href="/products/autolinkr-elite" class="al-dropdown__product al-dropdown__product--secondary">
-                  <div class="al-dropdown__product-name">AutoLinkr Elite™</div>
-                  <div class="al-dropdown__product-price">$199.99</div>
-                  <div class="al-dropdown__product-desc">Split-screen + fastest CPU</div>
-                  <div class="al-dropdown__product-diff">vs. Pro: adds split-screen</div>
-                </a>
+                  {%- comment %} AutoLinkr Pro — featured {%- endcomment %}
+                  <a href="/products/the-autolinkr-pro" class="al-mega__card al-mega__card--featured">
+                    <div class="al-mega__card-img">
+                      <span class="al-mega__card-badge al-mega__card-badge--blue">⭐ Best Seller</span>
+                      {%- if section.settings.img_pro != blank -%}
+                        <img src="{{ section.settings.img_pro | image_url: width: 400 }}" alt="AutoLinkr Pro" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 7V5M18 7V5"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">AutoLinkr Pro™</div>
+                      <div class="al-mega__card-sub">Wireless CarPlay + Streaming</div>
+                      <div class="al-mega__card-price">$79.99</div>
+                    </div>
+                  </a>
 
-              </div>{%- comment %} /.al-dropdown__products {%- endcomment %}
+                  {%- comment %} AutoLinkr Elite {%- endcomment %}
+                  <a href="/products/autolinkr-elite" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      {%- if section.settings.img_elite != blank -%}
+                        <img src="{{ section.settings.img_elite | image_url: width: 400 }}" alt="AutoLinkr Elite" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 7V5M18 7V5"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">AutoLinkr Elite™</div>
+                      <div class="al-mega__card-sub">Split-screen · Fastest CPU</div>
+                      <div class="al-mega__card-price">$199.99</div>
+                    </div>
+                  </a>
 
-              {%- comment %} Tablet callout {%- endcomment %}
-              <div class="al-dropdown__divider"></div>
-              <a href="/products/autolinkr-tablet" class="al-dropdown__tablet-callout">
-                <span class="al-dropdown__tablet-label">Don't have factory CarPlay?</span>
-                <span class="al-dropdown__tablet-link">
-                  AutoLinkr Tablet™ — $74.99 · Works in any car · Portable →
-                </span>
-              </a>
+                  {%- comment %} AutoLinkr Tablet {%- endcomment %}
+                  <a href="/products/autolinkr-tablet" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      {%- if section.settings.img_tablet != blank -%}
+                        <img src="{{ section.settings.img_tablet | image_url: width: 400 }}" alt="AutoLinkr Tablet" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">AutoLinkr Tablet™</div>
+                      <div class="al-mega__card-sub">Portable CarPlay · Any car</div>
+                      <div class="al-mega__card-price">$74.99</div>
+                    </div>
+                  </a>
 
-              {%- comment %} Compare link {%- endcomment %}
-              <a href="/products/the-autolinkr-pro#comparison" class="al-dropdown__compare">
-                Compare All Adapters →
-              </a>
+                </div>{%- comment %} /.al-mega__grid {%- endcomment %}
 
+                <div class="al-mega__footer">
+                  <a href="/products/autolinkr-tablet" class="al-mega__callout">
+                    <div>
+                      <div class="al-mega__callout-label">Don't have factory CarPlay?</div>
+                      <div class="al-mega__callout-sub">AutoLinkr Tablet™ works in any car — no factory CarPlay needed</div>
+                    </div>
+                  </a>
+                  <a href="/products/the-autolinkr-pro#comparison" class="al-mega__compare">
+                    Compare all adapters
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+
+              </div>
             </div>
           </div>
         </li>
 
-        {%- comment %} Dash Cams ▾ {%- endcomment %}
-        <li class="al-nav__item al-nav__item--has-dropdown">
-          <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-dash">
+        {%- comment %} ═══════════════════════════════
+          DASH CAMS — Mega Menu
+        ═══════════════════════════════ {%- endcomment %}
+        <li class="al-nav__item al-nav__item--has-mega" id="nav-dashcams">
+          <button class="al-nav__trigger" aria-expanded="false" aria-controls="mega-dashcams">
             Dash Cams
             <svg class="al-nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
               <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
 
-          <div class="al-dropdown al-dropdown--dash" id="dropdown-dash" role="region" aria-label="Dash Cams menu">
-            <div class="al-dropdown__inner al-dropdown__inner--simple">
+          <div class="al-mega-wrap" id="mega-dashcams" role="region" aria-label="Dash Cams mega menu">
+            <div class="al-mega al-mega--dashcams">
+              <div class="al-mega__inner">
 
-              <a href="/products/autolinkr-dash" class="al-dropdown__simple-link">
-                <div>
-                  <div class="al-dropdown__simple-name">AutoLinkr Dash™</div>
-                  <div class="al-dropdown__simple-desc">Dual 1080P · IR Night Vision · $69.99–$89.99</div>
+                <div class="al-mega__header">
+                  <span class="al-mega__category">Dash Cams</span>
+                  <a href="/collections/safety" class="al-mega__view-all">
+                    View all dash cams
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
                 </div>
-                <span class="al-badge al-badge-green">In Stock</span>
-              </a>
 
-              <a href="/pages/dash-pro" class="al-dropdown__simple-link al-dropdown__simple-link--muted">
-                <div>
-                  <div class="al-dropdown__simple-name">Dash Pro™</div>
-                  <div class="al-dropdown__simple-desc">Professional-grade · Coming soon</div>
+                <div class="al-mega__grid">
+
+                  {%- comment %} AutoLinkr Dash {%- endcomment %}
+                  <a href="/products/autolinkr-dash" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      <span class="al-mega__card-badge al-mega__card-badge--green">In Stock</span>
+                      {%- if section.settings.img_dash != blank -%}
+                        <img src="{{ section.settings.img_dash | image_url: width: 400 }}" alt="AutoLinkr Dash" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="8" width="20" height="11" rx="1.5"/><circle cx="7" cy="13" r="2"/><path d="M12 13h6M2 8l2-3h16l2 3"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">AutoLinkr Dash™</div>
+                      <div class="al-mega__card-sub">Dual 1080P · IR Night Vision</div>
+                      <div class="al-mega__card-price">$69.99 – $89.99</div>
+                    </div>
+                  </a>
+
+                  {%- comment %} Dash Pro — coming soon {%- endcomment %}
+                  <a href="/pages/dash-pro" class="al-mega__card" style="opacity:0.7;">
+                    <div class="al-mega__card-img">
+                      <span class="al-mega__card-badge al-mega__card-badge--amber">Waitlist</span>
+                      {%- if section.settings.img_dash_pro != blank -%}
+                        <img src="{{ section.settings.img_dash_pro | image_url: width: 400 }}" alt="Dash Pro" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="8" width="20" height="11" rx="1.5"/><circle cx="7" cy="13" r="2"/><path d="M12 13h6M2 8l2-3h16l2 3"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">Dash Pro™</div>
+                      <div class="al-mega__card-sub">Professional-grade · Coming soon</div>
+                    </div>
+                  </a>
+
+                  {%- comment %} Placeholder — future product {%- endcomment %}
+                  <div class="al-mega__card" style="opacity:0.3;pointer-events:none;cursor:default;">
+                    <div class="al-mega__card-img al-mega__card-img--placeholder">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="8" width="20" height="11" rx="1.5"/><circle cx="7" cy="13" r="2"/><path d="M12 13h6M2 8l2-3h16l2 3"/></svg>
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">More Coming Soon</div>
+                      <div class="al-mega__card-sub">Stay tuned</div>
+                    </div>
+                  </div>
+
                 </div>
-                <span class="al-badge al-badge-amber">Waitlist</span>
-              </a>
 
+              </div>
             </div>
           </div>
         </li>
 
-        {%- comment %} Accessories ▾ {%- endcomment %}
-        <li class="al-nav__item al-nav__item--has-dropdown">
-          <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-accessories">
+        {%- comment %} ═══════════════════════════════
+          ACCESSORIES — Mega Menu
+        ═══════════════════════════════ {%- endcomment %}
+        <li class="al-nav__item al-nav__item--has-mega" id="nav-accessories">
+          <button class="al-nav__trigger" aria-expanded="false" aria-controls="mega-accessories">
             Accessories
             <svg class="al-nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
               <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
 
-          <div class="al-dropdown al-dropdown--accessories" id="dropdown-accessories" role="region" aria-label="Accessories menu">
-            <div class="al-dropdown__inner al-dropdown__inner--simple">
+          <div class="al-mega-wrap" id="mega-accessories" role="region" aria-label="Accessories mega menu">
+            <div class="al-mega al-mega--accessories">
+              <div class="al-mega__inner">
 
-              <a href="/products/magsafe-mount" class="al-dropdown__simple-link">
-                <div>
-                  <div class="al-dropdown__simple-name">MagSafe Phone Mount™</div>
-                  <div class="al-dropdown__simple-desc">Magnetic · Wireless charging · $29.99</div>
+                <div class="al-mega__header">
+                  <span class="al-mega__category">Accessories</span>
+                  <a href="/collections/accessories" class="al-mega__view-all">
+                    View all accessories
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
                 </div>
-              </a>
 
-              <a href="/products/gapguard" class="al-dropdown__simple-link">
-                <div>
-                  <div class="al-dropdown__simple-name">GapGuard™</div>
-                  <div class="al-dropdown__simple-desc">Seat gap filler · $19.99–$29.99</div>
+                <div class="al-mega__grid">
+
+                  {%- comment %} MagSafe Mount {%- endcomment %}
+                  <a href="/products/magsafe-mount" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      {%- if section.settings.img_magsafe != blank -%}
+                        <img src="{{ section.settings.img_magsafe | image_url: width: 400 }}" alt="MagSafe Phone Mount" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="7" y="2" width="10" height="17" rx="2"/><circle cx="12" cy="16" r="1" fill="currentColor"/><path d="M12 6v4"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">MagSafe Phone Mount™</div>
+                      <div class="al-mega__card-sub">Magnetic · Wireless charging</div>
+                      <div class="al-mega__card-price">$29.99</div>
+                    </div>
+                  </a>
+
+                  {%- comment %} GapGuard {%- endcomment %}
+                  <a href="/products/gapguard" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      {%- if section.settings.img_gapguard != blank -%}
+                        <img src="{{ section.settings.img_gapguard | image_url: width: 400 }}" alt="GapGuard" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 20V8l9-5 9 5v12H3z"/><path d="M9 20v-6h6v6"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">GapGuard™</div>
+                      <div class="al-mega__card-sub">Seat gap filler · No more lost items</div>
+                      <div class="al-mega__card-price">$19.99 – $29.99</div>
+                    </div>
+                  </a>
+
+                  {%- comment %} Car Aroma Diffuser {%- endcomment %}
+                  <a href="/products/aroma-diffuser" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      {%- if section.settings.img_aroma != blank -%}
+                        <img src="{{ section.settings.img_aroma | image_url: width: 400 }}" alt="Car Aroma Diffuser" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2c-2 4-4 6-4 10a4 4 0 008 0c0-4-2-6-4-10z"/><path d="M8 20h8"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">Car Aroma Diffuser™</div>
+                      <div class="al-mega__card-sub">Cedar Woods · 3 oils included</div>
+                      <div class="al-mega__card-price">$39.99</div>
+                    </div>
+                  </a>
+
+                  {%- comment %} VIP Membership {%- endcomment %}
+                  <a href="/products/vip-membership" class="al-mega__card">
+                    <div class="al-mega__card-img">
+                      <span class="al-mega__card-badge al-mega__card-badge--amber">Members Save 15%</span>
+                      {%- if section.settings.img_vip != blank -%}
+                        <img src="{{ section.settings.img_vip | image_url: width: 400 }}" alt="VIP Membership" loading="lazy">
+                      {%- else -%}
+                        <div class="al-mega__card-img--placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <div class="al-mega__card-body">
+                      <div class="al-mega__card-title">VIP Membership</div>
+                      <div class="al-mega__card-sub">15% off every order</div>
+                      <div class="al-mega__card-price">$9.99/mo</div>
+                    </div>
+                  </a>
+
                 </div>
-              </a>
 
-              <a href="/products/aroma-diffuser" class="al-dropdown__simple-link">
-                <div>
-                  <div class="al-dropdown__simple-name">Car Aroma Diffuser™</div>
-                  <div class="al-dropdown__simple-desc">Cedar Woods · 3 oils included · $39.99</div>
-                </div>
-              </a>
-
-              <div class="al-dropdown__divider"></div>
-
-              <a href="/products/vip-membership" class="al-dropdown__simple-link al-dropdown__vip-link">
-                <div>
-                  <div class="al-dropdown__simple-name">VIP Membership</div>
-                  <div class="al-dropdown__simple-desc">15% off every order · $9.99/mo</div>
-                </div>
-                <span class="al-badge al-badge-amber">Members Save 15%</span>
-              </a>
-
+              </div>
             </div>
           </div>
         </li>
 
-        {%- comment %} Shop All (direct link, no dropdown) {%- endcomment %}
+        {%- comment %} Shop All (direct link) {%- endcomment %}
         <li class="al-nav__item">
           <a href="/collections/all" class="al-nav__link">Shop All</a>
         </li>
 
-        {%- comment %} Help ▾ {%- endcomment %}
+        {%- comment %} Help ▾ — keep original simple dropdown {%- endcomment %}
         <li class="al-nav__item al-nav__item--has-dropdown">
           <button class="al-nav__trigger" aria-expanded="false" aria-controls="dropdown-help">
             Help
@@ -235,6 +404,9 @@
 
   </div>{%- comment %} /.al-header__inner {%- endcomment %}
 </header>
+
+{%- comment %} ─── MEGA BACKDROP (click-outside close) ─── {%- endcomment %}
+<div class="al-mega-backdrop" id="ALMegaBackdrop" aria-hidden="true"></div>
 
 {%- comment %} ─── MOBILE MENU ───────────────────────────── {%- endcomment %}
 <div class="al-mobile-menu" id="al-mobile-menu" aria-hidden="true" role="dialog" aria-label="Navigation menu">
@@ -371,6 +543,68 @@
       "default": 140,
       "unit": "px",
       "label": "Logo width"
+    },
+    {
+      "type": "header",
+      "content": "Adapters Menu Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_base",
+      "label": "AutoLinkr Base image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_pro",
+      "label": "AutoLinkr Pro image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elite",
+      "label": "AutoLinkr Elite image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_tablet",
+      "label": "AutoLinkr Tablet image"
+    },
+    {
+      "type": "header",
+      "content": "Dash Cams Menu Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_dash",
+      "label": "AutoLinkr Dash image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_dash_pro",
+      "label": "Dash Pro image"
+    },
+    {
+      "type": "header",
+      "content": "Accessories Menu Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_magsafe",
+      "label": "MagSafe Mount image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_gapguard",
+      "label": "GapGuard image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_aroma",
+      "label": "Car Aroma Diffuser image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_vip",
+      "label": "VIP Membership image"
     }
   ],
   "presets": [

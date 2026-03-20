@@ -1,0 +1,306 @@
+/*
+ * AL Mega Menu
+ * Full-width image-card mega menu for Adapters, Dash Cams, Accessories
+ * Style: dark panel, product image + title + subtitle per card
+ */
+
+/* ─────────────────────────────────────────────
+   MEGA MENU PANEL
+   ───────────────────────────────────────────── */
+
+/* Wrapper anchored to header */
+.al-mega-wrap {
+  position: fixed;
+  top: var(--al-nav-height);
+  left: 0;
+  right: 0;
+  z-index: 299;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+  pointer-events: none;
+}
+
+/* Show when nav item is open */
+.al-nav__item.is-open .al-mega-wrap {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.al-mega {
+  background-color: rgb(var(--color-base-background));
+  border-bottom: 1px solid var(--al-border);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+
+.al-mega__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 40px 32px;
+}
+
+/* ─────────────────────────────────────────────
+   MEGA HEADER ROW (category label + view all)
+   ───────────────────────────────────────────── */
+
+.al-mega__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.al-mega__category {
+  font-family: var(--al-font-display);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--al-accent);
+}
+
+.al-mega__view-all {
+  font-family: var(--al-font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--al-text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 180ms ease;
+}
+
+.al-mega__view-all:hover { color: var(--al-text-primary); }
+
+.al-mega__view-all svg {
+  transition: transform 180ms ease;
+}
+
+.al-mega__view-all:hover svg { transform: translateX(3px); }
+
+/* ─────────────────────────────────────────────
+   PRODUCT CARD GRID
+   ───────────────────────────────────────────── */
+
+.al-mega__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--mega-cols, 4), 1fr);
+  gap: 12px;
+}
+
+/* Override col count per menu */
+.al-mega--adapters   { --mega-cols: 4; }
+.al-mega--dashcams   { --mega-cols: 3; }
+.al-mega--accessories { --mega-cols: 4; }
+
+/* ─────────────────────────────────────────────
+   PRODUCT CARD
+   ───────────────────────────────────────────── */
+
+.al-mega__card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid var(--al-border);
+  background-color: var(--al-surface);
+  overflow: hidden;
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+  position: relative;
+}
+
+.al-mega__card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  background-color: var(--al-surface-alt);
+  transform: translateY(-2px);
+}
+
+/* Highlight featured/bestseller card */
+.al-mega__card--featured {
+  border-color: var(--al-accent);
+  background-color: rgba(59, 142, 248, 0.05);
+}
+
+.al-mega__card--featured:hover {
+  background-color: rgba(59, 142, 248, 0.09);
+  border-color: var(--al-accent);
+}
+
+/* ─── Image area ─── */
+.al-mega__card-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--al-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.al-mega__card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 250ms ease;
+  padding: 12px;
+}
+
+.al-mega__card:hover .al-mega__card-img img {
+  transform: scale(1.04);
+}
+
+/* ─── Badge overlaid on image ─── */
+.al-mega__card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 9px;
+  border-radius: 100px;
+  line-height: 1.4;
+  z-index: 1;
+}
+
+.al-mega__card-badge--blue {
+  background: rgba(59, 142, 248, 0.18);
+  color: #60B2FF;
+  border: 1px solid rgba(59, 142, 248, 0.35);
+}
+
+.al-mega__card-badge--green {
+  background: rgba(52, 208, 106, 0.15);
+  color: #34D06A;
+  border: 1px solid rgba(52, 208, 106, 0.3);
+}
+
+.al-mega__card-badge--amber {
+  background: rgba(240, 168, 64, 0.15);
+  color: #F0A840;
+  border: 1px solid rgba(240, 168, 64, 0.3);
+}
+
+/* ─── Text area ─── */
+.al-mega__card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.al-mega__card-title {
+  font-family: var(--al-font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--al-text-primary);
+  line-height: 1.25;
+}
+
+.al-mega__card-sub {
+  font-family: var(--al-font-body);
+  font-size: 0.8125rem;
+  color: var(--al-text-secondary);
+  line-height: 1.4;
+}
+
+.al-mega__card-price {
+  font-family: var(--al-font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--al-text-primary);
+  margin-top: 6px;
+}
+
+/* ─────────────────────────────────────────────
+   FOOTER ROW (divider + callout / compare link)
+   ───────────────────────────────────────────── */
+
+.al-mega__footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--al-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.al-mega__callout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: rgba(240, 168, 64, 0.06);
+  border: 1px solid rgba(240, 168, 64, 0.2);
+  transition: background-color 180ms ease;
+}
+
+.al-mega__callout:hover { background-color: rgba(240, 168, 64, 0.10); }
+
+.al-mega__callout-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--al-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.al-mega__callout-sub {
+  font-size: 0.8125rem;
+  color: var(--al-text-secondary);
+}
+
+.al-mega__compare {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--al-accent);
+  text-decoration: none;
+  transition: color 180ms ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.al-mega__compare:hover { color: var(--al-text-primary); }
+
+/* ─────────────────────────────────────────────
+   NO-IMAGE FALLBACK (placeholder)
+   ───────────────────────────────────────────── */
+
+.al-mega__card-img--placeholder {
+  background: linear-gradient(135deg, var(--al-surface-3) 0%, var(--al-surface-2) 100%);
+}
+
+.al-mega__card-img--placeholder svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.2;
+}
+
+/* ─────────────────────────────────────────────
+   OVERLAY BACKDROP (closes menu on click outside)
+   ───────────────────────────────────────────── */
+
+.al-mega-backdrop {
+  position: fixed;
+  inset: 0;
+  top: var(--al-nav-height);
+  z-index: 298;
+  background: transparent;
+  display: none;
+}
+
+.al-mega-backdrop.is-visible { display: block; }

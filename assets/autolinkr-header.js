@@ -1,7 +1,7 @@
 /**
  * autolinkr-header.js
- * AutoLinkr Sticky Nav — Dropdown, Mobile Menu, Scroll Behavior, Keyboard Nav
- * Phase A — ConceptThemePerplexity
+ * AutoLinkr Sticky Nav — Dropdown + Mega Menu, Mobile Menu, Scroll Behavior, Keyboard Nav
+ * Phase B — Mega Menu Edition
  */
 
 (function () {
@@ -10,34 +10,30 @@
   /* ─────────────────────────────────────────────
      CONFIG
   ───────────────────────────────────────────── */
-  const SCROLL_THRESHOLD  = 20;       // px before header gets scrolled class
-  const DROPDOWN_DELAY    = 120;      // ms delay before closing dropdown on mouse leave
-  const FOCUS_TRAP_KEYS   = ['Tab'];
+  const SCROLL_THRESHOLD  = 20;
+  const DROPDOWN_DELAY    = 120;
   const CLOSE_KEYS        = ['Escape'];
 
   /* ─────────────────────────────────────────────
      DOM REFERENCES
   ───────────────────────────────────────────── */
-  const header       = document.querySelector('.al-header');
-  const navItems     = document.querySelectorAll('.al-nav__item');
-  const dropdowns    = document.querySelectorAll('.al-dropdown');
-  const triggers     = document.querySelectorAll('.al-nav__trigger');
-  const mobileToggle = document.querySelector('.al-mobile-toggle');
-  const mobileMenu   = document.querySelector('.al-mobile-menu');
-  const mobileOverlay= document.querySelector('.al-mobile-overlay');
-  const mobileBack   = document.querySelectorAll('.al-mobile-back');
-  const mobileItems  = document.querySelectorAll('.al-mobile-nav__item');
-  const body         = document.body;
+  const header        = document.querySelector('.al-header');
+  const body          = document.body;
 
-  if (!header) return; // Guard: bail if header not present on page
+  // Both regular dropdowns AND mega menu items
+  const allNavItems   = document.querySelectorAll('.al-nav__item--has-dropdown, .al-nav__item--has-mega');
+  const triggers      = document.querySelectorAll('.al-nav__trigger');
+  const backdrop      = document.getElementById('ALMegaBackdrop');
+
+  if (!header) return;
 
   /* ─────────────────────────────────────────────
-     SCROLL BEHAVIOR — add .is-scrolled class
+     SCROLL BEHAVIOR
   ───────────────────────────────────────────── */
-  let lastScrollY   = window.scrollY;
-  let ticking       = false;
+  let lastScrollY = window.scrollY;
+  let ticking = false;
 
-  function onScroll () {
+  function onScroll() {
     lastScrollY = window.scrollY;
     if (!ticking) {
       window.requestAnimationFrame(updateScrollState);
@@ -45,51 +41,72 @@
     }
   }
 
-  function updateScrollState () {
+  function updateScrollState() {
     if (lastScrollY > SCROLL_THRESHOLD) {
-      header.classList.add('is-scrolled');
+      header.classList.add('al-header--scrolled');
     } else {
-      header.classList.remove('is-scrolled');
+      header.classList.remove('al-header--scrolled');
     }
     ticking = false;
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  updateScrollState(); // Run once on load
+  updateScrollState();
 
   /* ─────────────────────────────────────────────
-     DROPDOWN — hover (desktop) + click (touch/keyboard)
+     DROPDOWN / MEGA OPEN & CLOSE
+     Works for both .al-nav__item--has-dropdown
+     and .al-nav__item--has-mega via shared .is-open
   ───────────────────────────────────────────── */
   let closeTimers = new Map();
 
-  function openDropdown (navItem) {
-    // Close all other dropdowns first
-    navItems.forEach(item => {
-      if (item !== navItem) closeDropdown(item, true);
+  function openNavItem(navItem) {
+    // Close all other items first
+    allNavItems.forEach(item => {
+      if (item !== navItem) closeNavItem(item, true);
     });
-    const dropdown = navItem.querySelector('.al-dropdown');
-    const trigger  = navItem.querySelector('.al-nav__trigger');
-    if (!dropdown) return;
+
+    // Find the panel — either .al-dropdown or .al-mega-wrap
+    const panel   = navItem.querySelector('.al-dropdown, .al-mega-wrap');
+    const trigger = navItem.querySelector('.al-nav__trigger');
+
+    if (!panel) return;
+
     navItem.classList.add('is-open');
-    dropdown.setAttribute('aria-hidden', 'false');
+    panel.setAttribute('aria-hidden', 'false');
     if (trigger) trigger.setAttribute('aria-expanded', 'true');
-    // Clear any pending close timer
+
+    // Show backdrop for mega menus
+    if (navItem.classList.contains('al-nav__item--has-mega') && backdrop) {
+      backdrop.classList.add('is-visible');
+    }
+
+    // Cancel any pending close
     if (closeTimers.has(navItem)) {
       clearTimeout(closeTimers.get(navItem));
       closeTimers.delete(navItem);
     }
   }
 
-  function closeDropdown (navItem, immediate) {
-    const dropdown = navItem.querySelector('.al-dropdown');
-    const trigger  = navItem.querySelector('.al-nav__trigger');
-    if (!dropdown) return;
+  function closeNavItem(navItem, immediate) {
+    const panel   = navItem.querySelector('.al-dropdown, .al-mega-wrap');
+    const trigger = navItem.querySelector('.al-nav__trigger');
+    if (!panel) return;
+
     const run = () => {
       navItem.classList.remove('is-open');
-      dropdown.setAttribute('aria-hidden', 'true');
+      panel.setAttribute('aria-hidden', 'true');
       if (trigger) trigger.setAttribute('aria-expanded', 'false');
       closeTimers.delete(navItem);
+      // Hide backdrop if no mega items are open
+      const anyMegaOpen = Array.from(
+        document.querySelectorAll('.al-nav__item--has-mega.is-open')
+      ).length > 0;
+      if (!anyMegaOpen && backdrop) {
+        backdrop.classList.remove('is-visible');
+      }
     };
+
     if (immediate) {
       run();
     } else {
@@ -98,83 +115,87 @@
     }
   }
 
-  function toggleDropdown (navItem) {
+  function toggleNavItem(navItem) {
     if (navItem.classList.contains('is-open')) {
-      closeDropdown(navItem, true);
+      closeNavItem(navItem, true);
     } else {
-      openDropdown(navItem);
+      openNavItem(navItem);
     }
   }
 
-  // Attach hover listeners (desktop)
-  navItems.forEach(item => {
-    const dropdown = item.querySelector('.al-dropdown');
-    if (!dropdown) return;
+  function closeAll(immediate) {
+    allNavItems.forEach(item => closeNavItem(item, immediate));
+  }
+
+  /* ─── Hover (desktop ≥1024px) ─── */
+  allNavItems.forEach(item => {
+    const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
+    if (!panel) return;
 
     item.addEventListener('mouseenter', () => {
-      if (window.innerWidth >= 1024) openDropdown(item);
+      if (window.innerWidth >= 1024) openNavItem(item);
     });
 
     item.addEventListener('mouseleave', () => {
-      if (window.innerWidth >= 1024) closeDropdown(item, false);
+      if (window.innerWidth >= 1024) closeNavItem(item, false);
     });
 
-    // Prevent close when hovering the dropdown itself
-    dropdown.addEventListener('mouseenter', () => {
+    panel.addEventListener('mouseenter', () => {
       if (closeTimers.has(item)) {
         clearTimeout(closeTimers.get(item));
         closeTimers.delete(item);
       }
     });
 
-    dropdown.addEventListener('mouseleave', () => {
-      if (window.innerWidth >= 1024) closeDropdown(item, false);
+    panel.addEventListener('mouseleave', () => {
+      if (window.innerWidth >= 1024) closeNavItem(item, false);
     });
   });
 
-  // Attach click listeners on triggers (touch + keyboard users)
+  /* ─── Click (touch + keyboard) ─── */
   triggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       const navItem = trigger.closest('.al-nav__item');
-      if (navItem) toggleDropdown(navItem);
+      if (navItem) toggleNavItem(navItem);
     });
   });
 
-  // Close dropdowns when clicking outside
+  /* ─── Click outside ─── */
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.al-nav__item')) {
-      navItems.forEach(item => closeDropdown(item, true));
+    if (!e.target.closest('.al-nav__item') && !e.target.closest('.al-mega')) {
+      closeAll(true);
     }
   });
+
+  /* ─── Backdrop click ─── */
+  if (backdrop) {
+    backdrop.addEventListener('click', () => closeAll(true));
+  }
 
   /* ─────────────────────────────────────────────
      KEYBOARD NAVIGATION
   ───────────────────────────────────────────── */
   header.addEventListener('keydown', (e) => {
-    // Escape closes open dropdown
     if (CLOSE_KEYS.includes(e.key)) {
-      navItems.forEach(item => {
+      allNavItems.forEach(item => {
         if (item.classList.contains('is-open')) {
-          closeDropdown(item, true);
+          closeNavItem(item, true);
           const trigger = item.querySelector('.al-nav__trigger');
           if (trigger) trigger.focus();
         }
       });
-      // Also close mobile menu
       closeMobileMenu();
     }
 
-    // Arrow Down opens dropdown when trigger is focused
     if (e.key === 'ArrowDown') {
       const trigger = e.target.closest('.al-nav__trigger');
       if (trigger) {
         e.preventDefault();
         const navItem = trigger.closest('.al-nav__item');
-        openDropdown(navItem);
-        // Focus first focusable item in dropdown
-        const firstLink = navItem.querySelector('.al-dropdown a, .al-dropdown button');
+        openNavItem(navItem);
+        const firstLink = navItem.querySelector('.al-dropdown a, .al-dropdown button, .al-mega-wrap a, .al-mega-wrap button');
         if (firstLink) firstLink.focus();
       }
     }
@@ -183,81 +204,90 @@
   /* ─────────────────────────────────────────────
      MOBILE MENU
   ───────────────────────────────────────────── */
-  function openMobileMenu () {
+  const mobileMenu    = document.getElementById('al-mobile-menu');
+  const menuOverlay   = document.getElementById('ALMenuOverlay');
+  const menuClose     = document.getElementById('ALMenuClose');
+  const hamburger     = document.getElementById('ALHamburger');
+
+  function openMobileMenu() {
+    if (!mobileMenu) return;
     mobileMenu.classList.add('is-open');
-    mobileOverlay && mobileOverlay.classList.add('is-visible');
-    mobileToggle && mobileToggle.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    hamburger && hamburger.setAttribute('aria-expanded', 'true');
     body.style.overflow = 'hidden';
-    // Focus first item in mobile menu
     const firstItem = mobileMenu.querySelector('a, button');
     if (firstItem) setTimeout(() => firstItem.focus(), 50);
   }
 
-  function closeMobileMenu () {
-    mobileMenu && mobileMenu.classList.remove('is-open');
-    mobileOverlay && mobileOverlay.classList.remove('is-visible');
-    mobileToggle && mobileToggle.setAttribute('aria-expanded', 'false');
+  function closeMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    hamburger && hamburger.setAttribute('aria-expanded', 'false');
     body.style.overflow = '';
-    // Close any open mobile sub-menus
-    mobileItems.forEach(item => item.classList.remove('is-expanded'));
-  }
-
-  if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('is-open');
-      isOpen ? closeMobileMenu() : openMobileMenu();
+    document.querySelectorAll('.al-mob-group').forEach(g => {
+      g.classList.remove('is-open');
+      const btn = g.querySelector('.al-mob-group__trigger');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      const list = g.querySelector('.al-mob-group__list');
+      if (list) list.classList.remove('is-open');
     });
   }
 
-  if (mobileOverlay) {
-    mobileOverlay.addEventListener('click', closeMobileMenu);
-  }
-
-  // Mobile accordion sub-menus
-  mobileItems.forEach(item => {
-    const subTrigger = item.querySelector('.al-mobile-nav__toggle');
-    if (!subTrigger) return;
-    subTrigger.addEventListener('click', () => {
-      const isExpanded = item.classList.contains('is-expanded');
-      // Collapse all other items
-      mobileItems.forEach(i => i.classList.remove('is-expanded'));
-      if (!isExpanded) item.classList.add('is-expanded');
-    });
+  hamburger && hamburger.addEventListener('click', () => {
+    mobileMenu && mobileMenu.classList.contains('is-open')
+      ? closeMobileMenu()
+      : openMobileMenu();
   });
 
-  // Mobile back buttons (nested sub-menu navigation)
-  mobileBack.forEach(btn => {
+  menuOverlay && menuOverlay.addEventListener('click', closeMobileMenu);
+  menuClose   && menuClose.addEventListener('click', closeMobileMenu);
+
+  /* Mobile accordion groups */
+  document.querySelectorAll('.al-mob-group__trigger').forEach(btn => {
     btn.addEventListener('click', () => {
-      const subPanel = btn.closest('.al-mobile-sub');
-      if (subPanel) subPanel.classList.remove('is-active');
+      const group = btn.closest('.al-mob-group');
+      if (!group) return;
+      const isOpen = group.classList.contains('is-open');
+      // Collapse all
+      document.querySelectorAll('.al-mob-group').forEach(g => {
+        g.classList.remove('is-open');
+        const b = g.querySelector('.al-mob-group__trigger');
+        if (b) b.setAttribute('aria-expanded', 'false');
+        const l = g.querySelector('.al-mob-group__list');
+        if (l) l.classList.remove('is-open');
+      });
+      // Toggle current
+      if (!isOpen) {
+        group.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        const list = group.querySelector('.al-mob-group__list');
+        if (list) list.classList.add('is-open');
+      }
     });
   });
 
   /* ─────────────────────────────────────────────
-     FOCUS TRAP — mobile menu only
+     FOCUS TRAP — mobile menu
   ───────────────────────────────────────────── */
-  function trapFocus (e) {
+  document.addEventListener('keydown', (e) => {
     if (!mobileMenu || !mobileMenu.classList.contains('is-open')) return;
-    if (!FOCUS_TRAP_KEYS.includes(e.key)) return;
+    if (e.key !== 'Tab') return;
     const focusable = Array.from(
-      mobileMenu.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])')
+      mobileMenu.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
     ).filter(el => !el.closest('[hidden]'));
     if (!focusable.length) return;
     const first = focusable[0];
     const last  = focusable[focusable.length - 1];
     if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault();
-      last.focus();
+      e.preventDefault(); last.focus();
     } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault();
-      first.focus();
+      e.preventDefault(); first.focus();
     }
-  }
-
-  document.addEventListener('keydown', trapFocus);
+  });
 
   /* ─────────────────────────────────────────────
-     RESIZE — close mobile menu when breakpoint crossed
+     RESIZE
   ───────────────────────────────────────────── */
   let resizeTimer;
   window.addEventListener('resize', () => {
@@ -265,24 +295,9 @@
     resizeTimer = setTimeout(() => {
       if (window.innerWidth >= 1024) {
         closeMobileMenu();
-        navItems.forEach(item => closeDropdown(item, true));
+        closeAll(true);
       }
     }, 150);
-  });
-
-  /* ─────────────────────────────────────────────
-     MOBILE BOTTOM DOCK — active state
-  ───────────────────────────────────────────── */
-  const dockLinks = document.querySelectorAll('.al-dock__link');
-  const currentPath = window.location.pathname;
-
-  dockLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href) return;
-    // Exact match for root, prefix match for others
-    const isActive = (href === '/' && currentPath === '/') ||
-                     (href !== '/' && currentPath.startsWith(href));
-    if (isActive) link.classList.add('is-active');
   });
 
   /* ─────────────────────────────────────────────
@@ -302,7 +317,6 @@
       });
       try { sessionStorage.setItem('al_announcement_dismissed', '1'); } catch(e) {}
     });
-    // Restore dismissed state
     try {
       if (sessionStorage.getItem('al_announcement_dismissed') === '1') {
         announcementBar.style.display = 'none';
@@ -311,15 +325,12 @@
   }
 
   /* ─────────────────────────────────────────────
-     CART ICON — badge update via Shopify section rendering
-     (Rebuy/Shopify AJAX cart will trigger this event)
+     CART BADGE UPDATE
   ───────────────────────────────────────────── */
   document.addEventListener('cart:updated', (e) => {
     const badge = document.querySelector('.al-cart-count');
     if (!badge) return;
-    const count = e.detail && e.detail.cartCount !== undefined
-      ? e.detail.cartCount
-      : 0;
+    const count = e.detail && e.detail.cartCount !== undefined ? e.detail.cartCount : 0;
     badge.textContent = count;
     badge.style.display = count > 0 ? 'flex' : 'none';
   });

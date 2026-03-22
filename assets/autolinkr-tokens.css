@@ -905,6 +905,45 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   fill: none !important;
 }
 
+/* Icon size consistency fix:
+   The theme uses flex items-center on .product__text-inner, which stretches
+   the icon container when text wraps to multiple lines.
+   Fix: top-align the row, pin the icon/figure to a fixed square cell. */
+.product__text-inner {
+  align-items: flex-start !important;
+}
+/* Icon container — fixed square, never grows or shrinks */
+.product__text-inner figure,
+.product__text-inner .icon,
+.product__text-inner svg {
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  align-self: flex-start !important;
+}
+/* Figure (image icon) — fixed 24×24 cell, image fills it */
+.product__text-inner figure {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.product__text-inner figure img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+/* SVG icon — same fixed 24×24 */
+.product__text-inner svg {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+}
+
 /* ─── IMAGE WITH TEXT — force image visible on mobile ─────── */
 @media (max-width: 768px) {
   .image-with-text .image-with-text__media,

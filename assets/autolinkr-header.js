@@ -11,7 +11,8 @@
      CONFIG
   ───────────────────────────────────────────── */
   const SCROLL_THRESHOLD  = 20;
-  const DROPDOWN_DELAY    = 120;
+  const DROPDOWN_DELAY    = 100; // close delay
+  const OPEN_DELAY        = 100; // open delay (0.1s intent check)
   const CLOSE_KEYS        = ['Escape'];
 
   /* ─────────────────────────────────────────────
@@ -132,9 +133,14 @@
     const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
     if (!panel) return;
 
-    // Open on entering the nav item
+    // Open on entering the nav item — 100ms intent delay before opening
+    let openTimer = null;
     item.addEventListener('mouseenter', () => {
-      if (window.innerWidth >= 1024) openNavItem(item);
+      if (window.innerWidth < 1024) return;
+      openTimer = setTimeout(() => openNavItem(item), OPEN_DELAY);
+    });
+    item.addEventListener('mouseleave', () => {
+      clearTimeout(openTimer);
     });
 
     // Close only when leaving BOTH the nav item AND its panel.

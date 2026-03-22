@@ -652,3 +652,16 @@
   pointer-events: auto; /* captures hover so mouseleave doesn't fire */
   z-index: 1;
 }
+
+/* ─────────────────────────────────────────────
+   CURSOR FIX — Concept theme sets pointer-events: none
+   on .btn-text (the inner span of nav triggers), which
+   causes the cursor to flip from pointer to arrow when
+   hovering over the text/chevron inside a nav button.
+   Force pointer cursor on all nav trigger children.
+   ───────────────────────────────────────────── */
+.al-nav__item .btn-text,
+.al-nav__item .btn-text * {
+  pointer-events: auto;
+  cursor: pointer;
+}

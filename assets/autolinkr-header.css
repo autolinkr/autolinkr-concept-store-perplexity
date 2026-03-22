@@ -125,7 +125,8 @@
   z-index: 300;
   visibility: hidden;
   opacity: 0;
-  transition: none;
+  transform: translateY(-8px);
+  transition: opacity 300ms ease, transform 300ms ease, visibility 300ms ease;
   pointer-events: none;
 }
 
@@ -133,6 +134,7 @@
 .al-nav__trigger[aria-expanded="true"] + .al-dropdown {
   visibility: visible;
   opacity: 1;
+  transform: translateY(0);
   pointer-events: auto;
 }
 

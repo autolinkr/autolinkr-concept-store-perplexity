@@ -634,34 +634,3 @@
 @media (max-width: 768px) {
   .al-header { height: var(--al-nav-height-mob); }
 }
-
-/* ─────────────────────────────────────────────
-   HOVER BRIDGE — fills the gap between nav trigger
-   and dropdown/mega panel so mouseleave never fires
-   while the cursor is transitioning between them.
-   ───────────────────────────────────────────── */
-.al-dropdown::before,
-.al-mega-wrap::before {
-  content: '';
-  position: absolute;
-  top: -16px;       /* covers the 8px gap + 8px safety margin */
-  left: 0;
-  right: 0;
-  height: 16px;
-  background: transparent;
-  pointer-events: auto; /* captures hover so mouseleave doesn't fire */
-  z-index: 1;
-}
-
-/* ─────────────────────────────────────────────
-   CURSOR FIX — Concept theme sets pointer-events: none
-   on .btn-text (the inner span of nav triggers), which
-   causes the cursor to flip from pointer to arrow when
-   hovering over the text/chevron inside a nav button.
-   Force pointer cursor on all nav trigger children.
-   ───────────────────────────────────────────── */
-.al-nav__item .btn-text,
-.al-nav__item .btn-text * {
-  pointer-events: auto;
-  cursor: pointer;
-}

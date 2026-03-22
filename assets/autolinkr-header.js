@@ -11,7 +11,7 @@
      CONFIG
   ───────────────────────────────────────────── */
   const SCROLL_THRESHOLD  = 20;
-  const DROPDOWN_DELAY    = 120;
+  const DROPDOWN_DELAY    = 200;
   const CLOSE_KEYS        = ['Escape'];
 
   /* ─────────────────────────────────────────────

@@ -3364,17 +3364,15 @@ class DetailsMega extends DetailsDropdown {
 
   async transitionIn() {
     this.contentElement.querySelector('tabs-element')?.unload();
-    setTimeout(() => {
-      this.contentElement.querySelector('tabs-element')?.load();
-    }, theme.config.motionReduced ? 0 : 450);
+    this.contentElement.querySelector('tabs-element')?.load();
 
     document.body.classList.add('with-mega');
-    return Motion.animate(this.contentElement.firstElementChild, { visibility: 'visible', transform: ['translateY(-105%)', 'translateY(0)'] }, { duration: theme.config.motionReduced ? 0 : 0.6, easing: [.7, 0, .2, 1] }).finished;
+    return Motion.animate(this.contentElement.firstElementChild, { visibility: 'visible', transform: 'translateY(0)' }, { duration: 0 }).finished;
   }
 
   async transitionOut() {
     document.body.classList.remove('with-mega');
-    return Motion.animate(this.contentElement.firstElementChild, { visibility: 'hidden', transform: 'translateY(-105%)' }, { duration: theme.config.motionReduced ? 0 : 0.6, easing: [.7, 0, .2, 1] }).finished;
+    return Motion.animate(this.contentElement.firstElementChild, { visibility: 'hidden', transform: 'translateY(-105%)' }, { duration: 0 }).finished;
   }
 }
 customElements.define('details-mega', DetailsMega, { extends: 'details' });

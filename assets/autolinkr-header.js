@@ -129,62 +129,78 @@
 
   /* ─── Hover (desktop ≥1024px) ─── */
 
-  // Safe-zone elements — cursor inside any of these = do NOT close.
-  // 1. The full .al-header bar (covers nav items, triggers, logo, cart, etc.)
-  // 2. The Shopify section wrapper above the header (covers any padding-bottom
-  //    dead zone between the header bar and the mega panel)
-  const headerSection = header.closest('.shopify-section') || header.parentElement;
+  // ARCHITECTURE NOTE:
+  // .al-nav__item <li> height = trigger button height only.
+  // .al-mega-wrap is position:absolute inside the <li>, so it does NOT
+  // extend the <li>'s hit-box. Moving the cursor down into the panel
+  // physically exits the <li> and fires mouseleave immediately — always.
+  // mouseleave on the <li> is therefore useless for detecting "left the menu".
+  //
+  // SOLUTION: Use a document-level mousemove to track cursor position.
+  // When a menu is open, check if the cursor is inside the bounding rect
+  // of the header bar OR the open panel. Close only when outside both.
+  // This fires on every mouse move, so we throttle with rAF.
 
+  let moveRafId = null;
+  let moveCloseTimer = null;
+
+  function cursorInRect(rect, x, y) {
+    return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+  }
+
+  function onMouseMove(e) {
+    if (moveRafId) return;
+    moveRafId = requestAnimationFrame(() => {
+      moveRafId = null;
+
+      const x = e.clientX;
+      const y = e.clientY;
+      const headerRect = header.getBoundingClientRect();
+      const inHeader   = cursorInRect(headerRect, x, y);
+
+      // Check each open item
+      allNavItems.forEach(item => {
+        if (!item.classList.contains('is-open')) return;
+
+        const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
+        if (!panel) return;
+
+        const panelRect = panel.getBoundingClientRect();
+        const inPanel   = cursorInRect(panelRect, x, y);
+
+        if (inHeader || inPanel) {
+          // Cursor still in safe zone — cancel any pending close
+          if (moveCloseTimer) { clearTimeout(moveCloseTimer); moveCloseTimer = null; }
+          // Also cancel event-based close timers
+          if (closeTimers.has(item)) { clearTimeout(closeTimers.get(item)); closeTimers.delete(item); }
+        } else {
+          // Cursor outside header AND panel — schedule close
+          if (!moveCloseTimer) {
+            moveCloseTimer = setTimeout(() => {
+              moveCloseTimer = null;
+              closeAll(false);
+            }, DROPDOWN_DELAY);
+          }
+        }
+      });
+    });
+  }
+
+  // Open on mouseenter — immediately set pointer-events so panel is
+  // interactive from frame 1, before CSS transition completes.
   allNavItems.forEach(item => {
     const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
     if (!panel) return;
 
-    // Open on entering the nav item — immediately make panel interactive
-    // so pointer-events are live before the CSS animation completes.
     item.addEventListener('mouseenter', () => {
       if (window.innerWidth < 1024) return;
       panel.style.pointerEvents = 'auto';
       openNavItem(item);
     });
-
-    // shouldClose — return true only when cursor has genuinely left:
-    //   • the nav <li> item itself
-    //   • the panel (.al-dropdown / .al-mega-wrap and all descendants)
-    //   • the full .al-header bar
-    //   • the Shopify section wrapper (covers padding-bottom dead zone)
-    const shouldClose = (relatedTarget) => {
-      if (!relatedTarget) return true;
-      if (item.contains(relatedTarget))          return false;
-      if (panel.contains(relatedTarget))         return false;
-      if (header.contains(relatedTarget))        return false;
-      if (headerSection && headerSection.contains(relatedTarget)) return false;
-      return true;
-    };
-
-    item.addEventListener('mouseleave', (e) => {
-      if (window.innerWidth < 1024) return;
-      if (shouldClose(e.relatedTarget)) {
-        panel.style.pointerEvents = '';
-        closeNavItem(item, false);
-      }
-    });
-
-    panel.addEventListener('mouseenter', () => {
-      // Cursor entered the panel — cancel any pending close
-      if (closeTimers.has(item)) {
-        clearTimeout(closeTimers.get(item));
-        closeTimers.delete(item);
-      }
-    });
-
-    panel.addEventListener('mouseleave', (e) => {
-      if (window.innerWidth < 1024) return;
-      if (shouldClose(e.relatedTarget)) {
-        panel.style.pointerEvents = '';
-        closeNavItem(item, false);
-      }
-    });
   });
+
+  // Single document mousemove drives all close logic
+  document.addEventListener('mousemove', onMouseMove, { passive: true });
 
   /* ─── Click (touch + keyboard) ─── */
   triggers.forEach(trigger => {

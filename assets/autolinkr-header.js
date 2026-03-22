@@ -128,14 +128,6 @@
   }
 
   /* ─── Hover (desktop ≥1024px) ─── */
-
-  // The Shopify section wrapper has --section-padding-bottom which adds space
-  // below the nav bar. The cursor passes through this zone (inside the header
-  // section but outside any nav item or panel) and falsely triggers close.
-  // We treat the entire header section as a safe zone — any relatedTarget
-  // inside it should NOT trigger close.
-  const headerSection = header.closest('.shopify-section') || header.parentElement;
-
   allNavItems.forEach(item => {
     const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
     if (!panel) return;
@@ -145,14 +137,12 @@
       if (window.innerWidth >= 1024) openNavItem(item);
     });
 
-    // Close only when the cursor has truly left the header section entirely.
-    // Safe zones: the nav item, its panel, and the full header section wrapper.
+    // Close only when leaving BOTH the nav item AND its panel.
+    // Check relatedTarget — if the cursor moved into a descendant of item
+    // or panel (including the panel itself), cancel the close.
     const shouldClose = (relatedTarget) => {
       if (!relatedTarget) return true;
-      if (item.contains(relatedTarget)) return false;
-      if (panel.contains(relatedTarget)) return false;
-      if (headerSection && headerSection.contains(relatedTarget)) return false;
-      return true;
+      return !item.contains(relatedTarget) && !panel.contains(relatedTarget);
     };
 
     item.addEventListener('mouseleave', (e) => {
@@ -170,6 +160,7 @@
 
     panel.addEventListener('mouseleave', (e) => {
       if (window.innerWidth < 1024) return;
+      // Only close if cursor left to somewhere outside the nav item entirely
       if (shouldClose(e.relatedTarget)) closeNavItem(item, false);
     });
   });

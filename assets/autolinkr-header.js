@@ -132,23 +132,36 @@
     const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
     if (!panel) return;
 
+    // Open on entering the nav item
     item.addEventListener('mouseenter', () => {
       if (window.innerWidth >= 1024) openNavItem(item);
     });
 
-    item.addEventListener('mouseleave', () => {
-      if (window.innerWidth >= 1024) closeNavItem(item, false);
+    // Close only when leaving BOTH the nav item AND its panel.
+    // Check relatedTarget — if the cursor moved into a descendant of item
+    // or panel (including the panel itself), cancel the close.
+    const shouldClose = (relatedTarget) => {
+      if (!relatedTarget) return true;
+      return !item.contains(relatedTarget) && !panel.contains(relatedTarget);
+    };
+
+    item.addEventListener('mouseleave', (e) => {
+      if (window.innerWidth < 1024) return;
+      if (shouldClose(e.relatedTarget)) closeNavItem(item, false);
     });
 
     panel.addEventListener('mouseenter', () => {
+      // Cursor entered the panel — cancel any pending close
       if (closeTimers.has(item)) {
         clearTimeout(closeTimers.get(item));
         closeTimers.delete(item);
       }
     });
 
-    panel.addEventListener('mouseleave', () => {
-      if (window.innerWidth >= 1024) closeNavItem(item, false);
+    panel.addEventListener('mouseleave', (e) => {
+      if (window.innerWidth < 1024) return;
+      // Only close if cursor left to somewhere outside the nav item entirely
+      if (shouldClose(e.relatedTarget)) closeNavItem(item, false);
     });
   });
 

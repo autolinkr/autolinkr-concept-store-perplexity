@@ -128,26 +128,45 @@
   }
 
   /* ─── Hover (desktop ≥1024px) ─── */
+
+  // Safe-zone elements — cursor inside any of these = do NOT close.
+  // 1. The full .al-header bar (covers nav items, triggers, logo, cart, etc.)
+  // 2. The Shopify section wrapper above the header (covers any padding-bottom
+  //    dead zone between the header bar and the mega panel)
+  const headerSection = header.closest('.shopify-section') || header.parentElement;
+
   allNavItems.forEach(item => {
     const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
     if (!panel) return;
 
-    // Open on entering the nav item
+    // Open on entering the nav item — immediately make panel interactive
+    // so pointer-events are live before the CSS animation completes.
     item.addEventListener('mouseenter', () => {
-      if (window.innerWidth >= 1024) openNavItem(item);
+      if (window.innerWidth < 1024) return;
+      panel.style.pointerEvents = 'auto';
+      openNavItem(item);
     });
 
-    // Close only when leaving BOTH the nav item AND its panel.
-    // Check relatedTarget — if the cursor moved into a descendant of item
-    // or panel (including the panel itself), cancel the close.
+    // shouldClose — return true only when cursor has genuinely left:
+    //   • the nav <li> item itself
+    //   • the panel (.al-dropdown / .al-mega-wrap and all descendants)
+    //   • the full .al-header bar
+    //   • the Shopify section wrapper (covers padding-bottom dead zone)
     const shouldClose = (relatedTarget) => {
       if (!relatedTarget) return true;
-      return !item.contains(relatedTarget) && !panel.contains(relatedTarget);
+      if (item.contains(relatedTarget))          return false;
+      if (panel.contains(relatedTarget))         return false;
+      if (header.contains(relatedTarget))        return false;
+      if (headerSection && headerSection.contains(relatedTarget)) return false;
+      return true;
     };
 
     item.addEventListener('mouseleave', (e) => {
       if (window.innerWidth < 1024) return;
-      if (shouldClose(e.relatedTarget)) closeNavItem(item, false);
+      if (shouldClose(e.relatedTarget)) {
+        panel.style.pointerEvents = '';
+        closeNavItem(item, false);
+      }
     });
 
     panel.addEventListener('mouseenter', () => {
@@ -160,8 +179,10 @@
 
     panel.addEventListener('mouseleave', (e) => {
       if (window.innerWidth < 1024) return;
-      // Only close if cursor left to somewhere outside the nav item entirely
-      if (shouldClose(e.relatedTarget)) closeNavItem(item, false);
+      if (shouldClose(e.relatedTarget)) {
+        panel.style.pointerEvents = '';
+        closeNavItem(item, false);
+      }
     });
   });
 

@@ -1,0 +1,326 @@
+================================================================================
+  AUTOLINKR™ — HOMEPAGE MASTER TEMPLATE
+  Brand-First Storefront Blueprint
+
+  PRINCIPLE: The homepage is NOT a product page. It's a brand storefront.
+  Its job is to (1) establish who AutoLinkr is, (2) build trust fast,
+  (3) tease the hero product enough to drive clicks, (4) surface the
+  full product line, and (5) route visitors to the right product page.
+
+  Everything detailed (features, specs, how-it-works, comparisons, FAQs)
+  lives on the PRODUCT pages. The homepage should make visitors want to
+  click through — not give them everything so they never need to.
+
+  RULE: If it already exists on the Pro page, it doesn't belong here
+  unless it serves a distinctly different purpose on the homepage.
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: BRAND HERO (Above the Fold — 5-second brand pitch)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Communicate what AutoLinkr IS as a brand. Not what one product does.
+This is the storefront window. It answers: "What does this company make and
+why should I care?" Most visitors decide to scroll or leave in 3–5 seconds.
+
+STATUS: EXISTS — `al-brand-hero` ✓
+
+KEEP AS-IS — this hero is strong, don't change it:
+  - Eyebrow: "50,000+ Drivers Can't Be Wrong"
+  - Heading: "Stream Anything. Drive Wirelessly. Upgrade in 60 Seconds."
+  - Subheading: "AutoLinkr transforms your factory CarPlay into a wireless
+    streaming powerhouse — Netflix, YouTube, Google Play — all on your
+    existing screen."
+  - Primary CTA: "Shop AutoLinkr Pro™ — $79.99" → /products/the-autolinkr-pro
+  - Ghost CTA: "Check Compatibility" → /pages/compatibility
+  - Stat bar: 50K+ Happy Drivers | 4.8★ Average Rating | 60 sec Setup Time
+    | 30-Day Guarantee
+
+NOTES:
+  - The Pro emphasis in the CTA is intentional — it's the volume driver
+    and the hero product. Leading with Pro on the homepage is correct.
+  - The stat bar does the trust work — no need to repeat these numbers
+    anywhere else on the page
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: FEATURE STRIP (Trust badges — instant scan)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Eliminate the top 5 anxieties in under 2 seconds. This strip is the
+"fine print made visible" — shipping, returns, quality, trust, setup.
+
+STATUS: EXISTS — `al-feature-strip` ✓ — NO CHANGES
+
+  ⚡ 60-Second Setup · 🚚 Free Shipping · 🛡 30-Day Guarantee
+  ⭐ 4.8★ Reviews · 🔒 1-Year Warranty
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: 3D PRODUCT VIDEO (Visual wow — brand premium feel)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Pattern interrupt. The spinning product stops the scroll and
+communicates "this is premium" without words. On the homepage this is about
+brand perception, not product education.
+
+STATUS: EXISTS — `al-hero-video` ✓
+
+UPDATE:
+  - Heading: "Engineered to Disappear. Built to Transform."
+  - Subheading: "Compact enough to hide behind your dash. Powerful enough
+    to turn your factory screen into a streaming hub."
+  - Remove eyebrow (too product-page-specific)
+  - Keep autoplay, muted, looping
+
+WHY THIS ISN'T REDUNDANT WITH PRO PAGE:
+  The Pro page uses this video as a detailed product showcase with specs
+  context. Here it's purely atmospheric — brand premium positioning.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: FEATURED PRODUCT — AutoLinkr Pro (Hero product teaser)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: This is the "star product" spotlight — NOT a duplicate of the Pro
+product page. The goal is a streamlined buy path for visitors who already
+know what they want, and a "learn more" path for those who don't.
+
+STATUS: EXISTS — `featured-pro` ✓
+
+KEEP:
+  - Product: the-autolinkr-pro
+  - Buy buttons with dynamic checkout
+  - Gallery with thumbnail layout
+
+UPDATE:
+  - Description (short, punchy — not the full Pro page copy):
+      "Our most popular adapter. Wireless CarPlay, Android Auto, Netflix,
+      YouTube & 1000+ apps — all on your factory screen. Starting at $79.99."
+  - REMOVE trust line ("✓ Free Shipping...") — already in feature strip
+  - REMOVE quantity selector (this is a teaser, not a product page)
+
+NOTES:
+  - This section should feel like a preview that makes you want to click
+    "View Full Details" — not a self-contained product page
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: SHOP BY CATEGORY (Product line navigation)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Show the full product universe. This is the "department store
+directory" — visitors see that AutoLinkr is more than one product.
+Positioned early (right after the hero product) because homepage visitors
+need routing, not convincing. They came to browse.
+
+STATUS: EXISTS — `collection-list` ✓
+
+KEEP:
+  - Collections: Wireless CarPlay Adapters, Dash Cams
+  - Landscape image ratio
+
+UPDATE:
+  - Heading: "Explore Our Product Lines"
+  - Subheading: "Smart upgrades for every driver"
+  - 2-column layout on desktop (not carousel — only 2 items)
+  - Ensure collection images are high-quality lifestyle shots
+  - CONSIDER adding Accessories as a third collection when ready
+
+WHY HERE (not lower):
+  Homepage visitors are often in browse mode. Give them category routing
+  early so they don't bounce looking for what they want. The product page
+  does the selling — the homepage does the routing.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: FEATURED PRODUCT — AutoLinkr Dash (Secondary line spotlight)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Introduce the dash cam line as a natural brand extension. Position it
+as "AutoLinkr also keeps your car safe" — not a random pivot. This is about
+growing the dash cam category by giving it prominent homepage real estate.
+
+STATUS: EXISTS — `dash-intro-header` + `featured-dash` ✓
+
+MERGE into a single `featured-dash` section (remove standalone intro header):
+
+  - Description:
+      "Introducing AutoLinkr Dash™ — dual 1080P front + rear cameras, IR
+      night vision, WiFi app control, and 24/7 parking mode. Always watching,
+      even when you're not."
+  - KEEP buy buttons with dynamic checkout
+  - KEEP gallery with thumbnails
+
+TRANSITION: The Shop by Category section above already establishes that
+AutoLinkr has multiple product lines. No separate intro header needed.
+
+NOTES:
+  - Don't over-explain the dash cam here — that's what the product page
+    is for. Just enough to generate a click.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7: TESTIMONIALS (Social proof — the trust closer)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: Peer validation from real customers. On the homepage this serves a
+different purpose than on the Pro page — here it validates the BRAND, not
+just one product. Positioned after both product spotlights so it
+reinforces everything the visitor just saw.
+
+STATUS: EXISTS — `testimonials-banner` ✓
+
+KEEP:
+  - 3 testimonials (Michael T., Sarah K., James R.)
+  - Car model + "Verified Buyer" context
+  - Parallax background
+
+CONSIDER:
+  - Swapping one adapter testimonial for a dash cam testimonial to validate
+    both product lines from the homepage
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8: BRAND MISSION (Emotional close + identity)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: For visitors who scrolled to the bottom — they're engaged but maybe
+not ready to buy today. The mission creates an emotional connection and
+positions AutoLinkr as a real brand with values, not a generic store.
+
+STATUS: EXISTS — `rich-text-mission` ✓
+
+UPDATE:
+  - Heading: "Smarter Cars Start Here."
+  - Body: "At AutoLinkr™, we believe every car deserves to be smarter. From
+    wireless streaming on your factory screen to 24/7 dash cam protection —
+    we build the upgrades that transform your daily drive. No dealer visits.
+    No modifications. Just plug in and go."
+  - CTA: "Shop All Products" → /collections/all
+  - Secondary: "Check Compatibility" → /pages/compatibility
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 9: FINAL CTA (The closer — last conversion push)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PURPOSE: One final, clear action. Blue accent background for visual contrast.
+Anyone who reached the bottom is highly engaged — give them the push.
+
+STATUS: NEW — use `rich-text` section
+
+HEADING: "Ready to Upgrade Your Drive?"
+BODY: "Wireless CarPlay, streaming apps, and a 30-day guarantee — all
+for $79.99 with free shipping."
+CTA: "Shop AutoLinkr Pro™ — $79.99" → /products/the-autolinkr-pro
+SECONDARY: "Check Your Car's Compatibility →" → /pages/compatibility
+
+
+================================================================================
+  SECTIONS TO REMOVE
+================================================================================
+
+  ✗ scrolling-text-trust — REMOVE
+    Stats already in hero stat bar + feature strip. Third repetition adds
+    noise, not value.
+
+  ✗ number-counter — REMOVE
+    Fourth repetition of the same numbers. Diminishing returns.
+
+  ✗ dash-intro-header — MERGE INTO featured-dash
+    Standalone header wastes vertical space. Copy moves into the product
+    section's text block.
+
+  ✗ multicolumn-why ("Why AutoLinkr?") — REMOVE
+    This is a feature breakdown — that belongs on the product page. The
+    Pro page already has a full "Everything, Built In" multicolumn section.
+    Repeating it here with slightly different wording is redundant. The
+    feature strip + hero already communicate the value props at homepage
+    level.
+
+  ✗ product-comparison (Pro vs Elite) — REMOVE FROM HOMEPAGE
+    This is a product-level decision tool. It belongs on the Pro page
+    (where it already exists) and the Elite page. Homepage visitors
+    haven't decided they want an adapter yet — showing them a spec
+    comparison is premature. Let the product pages handle this.
+
+
+================================================================================
+  SECTION ORDER — Final Homepage Scroll Sequence
+================================================================================
+
+  Current Homepage (13 sections):
+  ─────────────────────────────────
+  1.  al-brand-hero ............... Brand hero with stats
+  2.  feature-strip ............... Trust badges
+  3.  al-hero-video ............... 3D product video
+  4.  scrolling-text-trust ........ Scrolling ticker ← REMOVE
+  5.  featured-pro ................ Featured Pro
+  6.  multicolumn-why ............. Feature breakdown ← REMOVE (on Pro page)
+  7.  collection-list ............. Shop by Category
+  8.  number-counter .............. Stats counter ← REMOVE
+  9.  product-comparison .......... Pro vs Elite ← REMOVE (on Pro page)
+  10. testimonials-banner ......... Testimonials
+  11. dash-intro-header ........... Rich text intro ← MERGE
+  12. featured-dash ............... Featured Dash
+  13. rich-text-mission ........... Mission
+
+  Proposed Homepage (9 sections):
+  ─────────────────────────────────
+  1.  al-brand-hero ............... Brand identity + CTA to collection
+  2.  feature-strip ............... Trust badges (unchanged)
+  3.  al-hero-video ............... 3D video (brand-level copy)
+  4.  featured-pro ................ Pro spotlight + buy (streamlined)
+  5.  collection-list ............. Product line navigation (moved up)
+  6.  featured-dash ............... Dash spotlight + buy (merged intro)
+  7.  testimonials-banner ......... Social proof
+  8.  rich-text-mission ........... Brand mission
+  9.  final-cta ................... Closing CTA (NEW)
+
+  NET CHANGE: 13 → 9 sections (removed 5 redundant, added 1 new)
+
+
+================================================================================
+  WHY THIS IS BETTER
+================================================================================
+
+  WHAT WE CUT:
+    - 3 sections that repeated the same stats (scrolling text, number counter)
+    - 1 feature breakdown that duplicates Pro page content (multicolumn-why)
+    - 1 comparison table that duplicates Pro page content (product-comparison)
+    - 1 standalone header that should be merged (dash-intro-header)
+
+  WHAT WE GAIN:
+    - Tighter scroll — visitors reach the bottom faster
+    - No redundant content with product pages
+    - Clear routing: Hero → Pro spotlight → Browse categories → Dash → Trust → Go
+    - Each section has ONE unique job that no other section does
+    - Product pages get to do what they do best (sell with detail)
+    - Homepage gets to do what IT does best (build brand, route traffic)
+
+  THE HOMEPAGE FUNNEL:
+    "What is AutoLinkr?" (hero + feature strip + video) →
+    "Show me the star product" (featured Pro) →
+    "What else do they make?" (collection list + featured Dash) →
+    "Can I trust them?" (testimonials + mission) →
+    "I'm ready" (final CTA)
+
+  EVERY CLICK FROM THE HOMEPAGE SHOULD LAND ON A PRODUCT PAGE.
+  That's where the detailed selling happens — features, comparisons,
+  FAQs, specs, reviews. The homepage is the appetizer, not the meal.
+
+
+================================================================================
+  FUTURE ADDITIONS (when ready)
+================================================================================
+
+  - As Seen In (press logos) — add when you have 4+ real publication logos
+  - YouTube review video — add when you have a strong third-party review
+    worth featuring at the brand level (not just product level)
+  - Featured collection carousel — when you have 6+ products, a "Best
+    Sellers" carousel can replace or supplement the collection list
+  - Email capture / popup — Klaviyo exit-intent for first-time visitors
+
+================================================================================

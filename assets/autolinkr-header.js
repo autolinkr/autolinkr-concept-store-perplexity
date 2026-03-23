@@ -11,8 +11,9 @@
      CONFIG
   ───────────────────────────────────────────── */
   const SCROLL_THRESHOLD  = 20;
-  const DROPDOWN_DELAY    = 100; // close delay
-  const OPEN_DELAY        = 100; // open delay (0.1s intent check)
+  const DROPDOWN_DELAY    = 120; // close delay for simple dropdowns
+  const MEGA_CLOSE_DELAY  = 350; // longer close delay for mega menus (time to reach panel)
+  const OPEN_DELAY        = 80;  // open delay (intent check)
   const CLOSE_KEYS        = ['Escape'];
 
   /* ─────────────────────────────────────────────
@@ -99,7 +100,6 @@
       panel.setAttribute('aria-hidden', 'true');
       if (trigger) trigger.setAttribute('aria-expanded', 'false');
       closeTimers.delete(navItem);
-      // Hide backdrop if no mega items are open
       const anyMegaOpen = Array.from(
         document.querySelectorAll('.al-nav__item--has-mega.is-open')
       ).length > 0;
@@ -111,7 +111,9 @@
     if (immediate) {
       run();
     } else {
-      const t = setTimeout(run, DROPDOWN_DELAY);
+      const isMega = navItem.classList.contains('al-nav__item--has-mega');
+      const delay = isMega ? MEGA_CLOSE_DELAY : DROPDOWN_DELAY;
+      const t = setTimeout(run, delay);
       closeTimers.set(navItem, t);
     }
   }
@@ -132,32 +134,37 @@
   allNavItems.forEach(item => {
     const panel = item.querySelector('.al-dropdown, .al-mega-wrap');
     if (!panel) return;
+    const isMega = item.classList.contains('al-nav__item--has-mega');
 
-    // Open on entering the nav item — 100ms intent delay before opening
     let openTimer = null;
+
     item.addEventListener('mouseenter', () => {
       if (window.innerWidth < 1024) return;
+      // Cancel any pending close immediately
+      if (closeTimers.has(item)) {
+        clearTimeout(closeTimers.get(item));
+        closeTimers.delete(item);
+      }
       openTimer = setTimeout(() => openNavItem(item), OPEN_DELAY);
     });
-    item.addEventListener('mouseleave', () => {
-      clearTimeout(openTimer);
-    });
-
-    // Close only when leaving BOTH the nav item AND its panel.
-    // Check relatedTarget — if the cursor moved into a descendant of item
-    // or panel (including the panel itself), cancel the close.
-    const shouldClose = (relatedTarget) => {
-      if (!relatedTarget) return true;
-      return !item.contains(relatedTarget) && !panel.contains(relatedTarget);
-    };
 
     item.addEventListener('mouseleave', (e) => {
       if (window.innerWidth < 1024) return;
-      if (shouldClose(e.relatedTarget)) closeNavItem(item, false);
+      clearTimeout(openTimer);
+
+      if (!item.classList.contains('is-open')) return;
+
+      // For mega menus, check if the cursor is moving toward the panel
+      // by testing if relatedTarget is inside the panel or item
+      const rt = e.relatedTarget;
+      if (rt && (item.contains(rt) || panel.contains(rt))) return;
+
+      // For mega menus, also check if cursor moved into the backdrop
+      // (which sits between header and content) — still schedule close
+      closeNavItem(item, false);
     });
 
     panel.addEventListener('mouseenter', () => {
-      // Cursor entered the panel — cancel any pending close
       if (closeTimers.has(item)) {
         clearTimeout(closeTimers.get(item));
         closeTimers.delete(item);
@@ -166,9 +173,31 @@
 
     panel.addEventListener('mouseleave', (e) => {
       if (window.innerWidth < 1024) return;
-      // Only close if cursor left to somewhere outside the nav item entirely
-      if (shouldClose(e.relatedTarget)) closeNavItem(item, false);
+      const rt = e.relatedTarget;
+      if (rt && (item.contains(rt) || panel.contains(rt))) return;
+      closeNavItem(item, false);
     });
+
+    // For mega menus, track mouse movement in the gap zone between
+    // trigger and panel — if cursor is heading toward the panel, don't close
+    if (isMega) {
+      document.addEventListener('mousemove', (e) => {
+        if (!closeTimers.has(item) || !item.classList.contains('is-open')) return;
+        const panelRect = panel.getBoundingClientRect();
+        const itemRect  = item.getBoundingClientRect();
+        // If cursor is in the vertical zone between trigger bottom and panel bottom,
+        // and horizontally within panel bounds, cancel the close
+        if (
+          e.clientY >= itemRect.bottom - 4 &&
+          e.clientY <= panelRect.bottom + 20 &&
+          e.clientX >= panelRect.left - 20 &&
+          e.clientX <= panelRect.right + 20
+        ) {
+          clearTimeout(closeTimers.get(item));
+          closeTimers.delete(item);
+        }
+      });
+    }
   });
 
   /* ─── Click (touch + keyboard) ─── */

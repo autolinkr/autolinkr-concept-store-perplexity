@@ -51,7 +51,7 @@
 
   /* Alias tokens — used in autolinkr-header.css */
   --al-blue:           #3B8EF8;   /* = --al-accent */
-  --al-nav-height:     64px;      /* = --al-nav-h */
+  --al-nav-height:     70px;      /* = --al-nav-h */
   --al-nav-height-mob: 56px;
   --al-radius-sm:      6px;       /* = --al-r-sm */
   --al-radius-md:      12px;      /* = --al-r-md */

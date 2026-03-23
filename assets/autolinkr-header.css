@@ -83,7 +83,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--al-sp-1);
-  padding: var(--al-sp-2) var(--al-sp-3);
+  padding: 0 var(--al-sp-3);
   font-family: var(--al-font-body);
   font-size: var(--al-text-sm);
   font-weight: 500;
@@ -91,11 +91,11 @@
   text-decoration: none;
   background: none;
   border: none;
-  border-radius: var(--al-radius-sm);
+  border-radius: 0;
   cursor: pointer;
   transition: color var(--al-transition), background-color var(--al-transition);
   white-space: nowrap;
-  height: 36px;
+  height: 70px;
 }
 
 .al-nav__link:hover,

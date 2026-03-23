@@ -200,6 +200,10 @@ a:hover { color: var(--al-accent-hover); }
 }
 
 /* Nav links — target .menu__item (Concept's actual nav class) */
+.header__menu > ul .menu__item {
+  height: var(--sp-20) !important;
+}
+
 .menu__item,
 .menu__item a,
 .menu__item span {

@@ -2012,3 +2012,20 @@ comparison-table.comparison-table {
 .shopify-section [id*="product-recommendations"] .price__compare .price-item {
   color: rgba(255,255,255,0.3) !important;
 }
+
+/* ─── MOBILE HEADER — height + logo scale ──────────────────── */
+@media screen and (max-width: 767px) {
+  .header-sticky .header {
+    height: 52px !important;
+  }
+
+  .header__heading-logo img,
+  .header__heading-logo svg,
+  .site-header__logo img,
+  .header__logo img {
+    /* 80% of 52px header = ~42px tall, proportional width */
+    max-height: 42px !important;
+    width: auto !important;
+    max-width: 120px !important;
+  }
+}

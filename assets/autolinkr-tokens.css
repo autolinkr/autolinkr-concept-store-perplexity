@@ -1158,6 +1158,13 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .drawer__inner p { color: var(--al-text-2) !important; }
 
 /* ─── FOOTER — built-in Concept footer override ──────────── */
+/* Remove border on footer accordion columns at desktop — keep mobile borders */
+@media screen and (min-width: 768px) {
+  .footer__accordions .details {
+    border: none !important;
+    padding-inline: 0 !important;
+  }
+}
 [id^="shopify-section-sections"] .footer-wrapper,
 [class*="shopify-section"] .footer-wrapper {
   padding: 0 !important;

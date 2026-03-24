@@ -13,7 +13,7 @@
         "stat-2": {
           "type": "stat",
           "settings": {
-            "value": "4.8\u2605",
+            "value": "4.8★",
             "label": "Average Rating"
           }
         },
@@ -41,18 +41,16 @@
       "settings": {
         "focal_point": "center center",
         "image_opacity": 80,
-        "overlay_left_opacity": 88,
-        "overlay_center_opacity": 55,
         "min_height": 700,
         "min_height_mobile": 560,
         "content_width": 620,
         "eyebrow": "50,000+ Drivers Can't Be Wrong",
         "heading": "Stream Anything. Drive Wirelessly. Upgrade in 60 Seconds.",
-        "subheading": "AutoLinkr transforms your factory CarPlay into a wireless streaming powerhouse \u2014 Netflix, YouTube, Google Play \u2014 all on your existing screen.",
-        "cta_label": "Shop AutoLinkr Pro\u2122 \u2014 $79.99",
-        "cta_link": "/products/the-autolinkr-pro",
+        "subheading": "AutoLinkr transforms your factory CarPlay into a wireless streaming powerhouse — Netflix, YouTube, Google Play — all on your existing screen.",
+        "cta_label": "Shop AutoLinkr Pro™ — $79.99",
+        "cta_link": "\/products\/the-autolinkr-pro",
         "ghost_label": "Check Compatibility",
-        "ghost_link": "/pages/compatibility",
+        "ghost_link": "\/pages\/compatibility",
         "show_stats": true
       }
     },
@@ -87,7 +85,7 @@
           "type": "item",
           "settings": {
             "icon": "star",
-            "title": "4.8\u2605 Reviews",
+            "title": "4.8★ Reviews",
             "subtitle": "50,000+ verified buyers"
           }
         },
@@ -112,7 +110,6 @@
     "al-hero-video": {
       "type": "al-video-section",
       "settings": {
-        "background_style": "dark",
         "padding_top": 80,
         "padding_bottom": 80,
         "max_width": 1200,
@@ -123,7 +120,7 @@
         "heading_tag": "h2",
         "subheading": "Watch how AutoLinkr transforms your factory CarPlay into a streaming powerhouse",
         "youtube_id": "",
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/f710c015c61142c997c93fa5dd13c01d.mov",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f710c015c61142c997c93fa5dd13c01d.mov",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",
@@ -147,7 +144,7 @@
         "st-2": {
           "type": "text",
           "settings": {
-            "text": "4.8\u2605 Average Rating",
+            "text": "4.8★ Average Rating",
             "text_size": 120,
             "text_font": "body",
             "highlighted_text": "none",
@@ -239,7 +236,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "The most popular wireless CarPlay adapter \u2014 now with Netflix, YouTube, and Google Play on your factory screen. Set it up once. Auto-connects on every drive.",
+            "text": "The most popular wireless CarPlay adapter — now with Netflix, YouTube, and Google Play on your factory screen. Set it up once. Auto-connects on every drive.",
             "text_size": "text-base"
           }
         },
@@ -249,7 +246,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "\u2713 Free Shipping  \u2713 30-Day Guarantee  \u2713 1-Year Warranty",
+            "text": "✓ Free Shipping  ✓ 30-Day Guarantee  ✓ 1-Year Warranty",
             "text_size": "text-sm"
           }
         },
@@ -311,7 +308,7 @@
             "icon": "wifi",
             "custom_icon": "",
             "heading": "Truly Wireless CarPlay",
-            "text": "<p>Cut the cord permanently. AutoLinkr converts your factory wired CarPlay to wireless \u2014 pair once and every future drive auto-connects in seconds. No cables, ever again.</p>",
+            "text": "<p>Cut the cord permanently. AutoLinkr converts your factory wired CarPlay to wireless — pair once and every future drive auto-connects in seconds. No cables, ever again.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -322,7 +319,7 @@
             "icon": "play-button",
             "custom_icon": "",
             "heading": "Netflix, YouTube & More",
-            "text": "<p>Stream full HD on your car's own display. The Google Play Store unlocks every app your phone already runs \u2014 no sideloading, no hacks.</p>",
+            "text": "<p>Stream full HD on your car's own display. The Google Play Store unlocks every app your phone already runs — no sideloading, no hacks.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -333,7 +330,7 @@
             "icon": "bolt",
             "custom_icon": "",
             "heading": "Works With Your Car",
-            "text": "<p>Compatible with 97%+ of vehicles with factory wired CarPlay. BMW, Mercedes, Toyota, Ford, Honda, and 100+ other makes. No modifications needed.</p>",
+            "text": "<p>Compatible with 97%+ of vehicles with factory wired CarPlay. BMW, Mercedes, Toyota, Ford, Honda, and 100+ other makes. No modifications needed.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -344,7 +341,7 @@
             "icon": "truck",
             "custom_icon": "",
             "heading": "Free Shipping on All Orders",
-            "text": "<p>Every AutoLinkr order ships free, no minimums. Most US customers receive delivery within 3\u20135 business days after a 1\u20132 day processing window.</p>",
+            "text": "<p>Every AutoLinkr order ships free, no minimums. Most US customers receive delivery within 3–5 business days after a 1–2 day processing window.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -364,7 +361,7 @@
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
-        "subheading": "No car modifications, no dealer visits \u2014 just plug in, pair once, and drive",
+        "subheading": "No car modifications, no dealer visits — just plug in, pair once, and drive",
         "description": "",
         "button_label": "",
         "button_link": "",
@@ -471,7 +468,7 @@
           "settings": {
             "title": "Average Rating",
             "number": "4.8",
-            "unit": "\u2605",
+            "unit": "★",
             "duration": 2
           }
         },
@@ -527,17 +524,17 @@
           "settings": {
             "product": "the-autolinkr-pro",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>\u2713</p>",
+            "value_1": "<p>✓<\/p>",
             "heading_2": "Netflix & YouTube",
-            "value_2": "<p>\u2713</p>",
+            "value_2": "<p>✓<\/p>",
             "heading_3": "Google Play Store",
-            "value_3": "<p>\u2713</p>",
+            "value_3": "<p>✓<\/p>",
             "heading_4": "Split-Screen",
-            "value_4": "<p>\u2717</p>",
+            "value_4": "<p>✗<\/p>",
             "heading_5": "Faster CPU",
-            "value_5": "<p>\u2717</p>",
+            "value_5": "<p>✗<\/p>",
             "heading_6": "Price",
-            "value_6": "<p>$79.99</p>",
+            "value_6": "<p>$79.99<\/p>",
             "heading_7": "",
             "value_7": "",
             "heading_8": "",
@@ -584,17 +581,17 @@
           "settings": {
             "product": "the-autolinkr-elite",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>\u2713</p>",
+            "value_1": "<p>✓<\/p>",
             "heading_2": "Netflix & YouTube",
-            "value_2": "<p>\u2713</p>",
+            "value_2": "<p>✓<\/p>",
             "heading_3": "Google Play Store",
-            "value_3": "<p>\u2713</p>",
+            "value_3": "<p>✓<\/p>",
             "heading_4": "Split-Screen",
-            "value_4": "<p>\u2713</p>",
+            "value_4": "<p>✓<\/p>",
             "heading_5": "Faster CPU",
-            "value_5": "<p>\u2713</p>",
+            "value_5": "<p>✓<\/p>",
             "heading_6": "Price",
-            "value_6": "<p>$199.99</p>",
+            "value_6": "<p>$199.99<\/p>",
             "heading_7": "",
             "value_7": "",
             "heading_8": "",
@@ -651,7 +648,7 @@
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
-        "subheading": "All three work with existing factory CarPlay \u2014 choose the features that fit your drive",
+        "subheading": "All three work with existing factory CarPlay — choose the features that fit your drive",
         "description": "",
         "button_label": "",
         "button_link": "",
@@ -682,9 +679,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"The AutoLinkr Pro makes me look forward to my commute to work! Netflix on my lunch break in the car is life-changing.\"</p>",
+            "text": "<p>\"The AutoLinkr Pro makes me look forward to my commute to work! Netflix on my lunch break in the car is life-changing.\"<\/p>",
             "author": "Michael T.",
-            "author_info": "2022 Honda Pilot \u2014 Verified Buyer",
+            "author_info": "2022 Honda Pilot — Verified Buyer",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -696,9 +693,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Finally got the AutoLinkr Pro and now all my friends want one. They couldn't believe I can stream Netflix and YouTube on my factory screen wirelessly.\"</p>",
+            "text": "<p>\"Finally got the AutoLinkr Pro and now all my friends want one. They couldn't believe I can stream Netflix and YouTube on my factory screen wirelessly.\"<\/p>",
             "author": "Sarah K.",
-            "author_info": "2021 Toyota Camry \u2014 Verified Buyer",
+            "author_info": "2021 Toyota Camry — Verified Buyer",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -710,9 +707,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Setup was super easy and it connects to my phone every time. Still get all my CarPlay features but now fully wireless. Worth every penny.\"</p>",
+            "text": "<p>\"Setup was super easy and it connects to my phone every time. Still get all my CarPlay features but now fully wireless. Worth every penny.\"<\/p>",
             "author": "James R.",
-            "author_info": "2020 Ford F-150 \u2014 Verified Buyer",
+            "author_info": "2020 Ford F-150 — Verified Buyer",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -765,7 +762,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Introducing AutoLinkr Dash\u2122 \u2014 dual 1080P front and rear dashcam with IR night vision, WiFi app control, and 24/7 parking mode. The protection your car deserves.</p>",
+            "text": "<p>Introducing AutoLinkr Dash™ — dual 1080P front and rear dashcam with IR night vision, WiFi app control, and 24\/7 parking mode. The protection your car deserves.<\/p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -833,7 +830,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "Dual 1080P front + rear dashcam with IR night vision, WiFi app control, and 24/7 parking mode. Always watching \u2014 even when you're not.",
+            "text": "Dual 1080P front + rear dashcam with IR night vision, WiFi app control, and 24\/7 parking mode. Always watching — even when you're not.",
             "text_size": "text-base"
           }
         },
@@ -902,7 +899,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At AutoLinkr\u2122, we believe every drive should feel effortless, connected, and entertaining. We build the technology that makes your factory screen smarter \u2014 without replacing it, without dealership installs, and without complexity.</p><p>Plug in. Pair once. Drive forever.</p>",
+            "text": "<p>At AutoLinkr™, we believe every drive should feel effortless, connected, and entertaining. We build the technology that makes your factory screen smarter — without replacing it, without dealership installs, and without complexity.<\/p><p>Plug in. Pair once. Drive forever.<\/p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -918,7 +915,7 @@
           "type": "button",
           "settings": {
             "button_label": "Check Compatibility",
-            "button_link": "/pages/compatibility",
+            "button_link": "\/pages\/compatibility",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": false,

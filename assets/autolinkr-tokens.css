@@ -1883,8 +1883,9 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 .accordion + .accordion {
   margin-top: 8px !important;
 }
-/* Summary (question tab) — consistent blue border, full width */
-.details__summary {
+/* Summary (question tab) — scoped to FAQ/accordion only, consistent blue border */
+.faq .details__summary,
+.accordion .details__summary {
   border: 1px solid rgba(59,142,248,0.5) !important;
   border-radius: 10px !important;
   width: 100% !important;
@@ -1901,13 +1902,15 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   color: inherit !important;
 }
 /* Open state — same border color, flat bottom to connect with panel */
-.details[open] .details__summary {
+.faq .details[open] .details__summary,
+.accordion .details[open] .details__summary {
   border-color: rgba(59,142,248,0.5) !important;
   border-bottom-color: transparent !important;
   border-radius: 10px 10px 0 0 !important;
 }
 /* Expanded content panel — flush with summary, same border, full width */
-.details[open] .details__content {
+.faq .details[open] .details__content,
+.accordion .details[open] .details__content {
   border: 1px solid rgba(59,142,248,0.5) !important;
   border-top: none !important;
   border-radius: 0 0 10px 10px !important;
@@ -1920,6 +1923,15 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 @media screen and (min-width: 1024px) {
   .accordion .details__content {
     max-width: 100% !important;
+  }
+}
+/* Footer — no borders on summary or open content at desktop */
+@media screen and (min-width: 768px) {
+  .footer__accordions .details .details__summary {
+    border: none !important;
+  }
+  .footer__accordions .details[open] .details__content {
+    border: none !important;
   }
 }
 

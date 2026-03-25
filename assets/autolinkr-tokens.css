@@ -1874,6 +1874,17 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
   background: transparent !important;
   overflow: visible !important;
 }
+/* Restore footer accordion mobile borders (killed above) */
+@media screen and (max-width: 767px) {
+  .footer__accordions .details {
+    border: 0 solid rgb(var(--color-foreground)/ 0.115) !important;
+    border-block-start-width: 1px !important;
+    border-inline-end-width: 1px !important;
+    border-inline-start-width: 1px !important;
+    padding-inline: var(--sp-5) !important;
+    background: transparent !important;
+  }
+}
 /* Each question row fills full width */
 .faq .accordion,
 .faq .details {

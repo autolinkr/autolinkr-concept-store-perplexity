@@ -39,20 +39,20 @@
         "stat-4"
       ],
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/2M2A9230-HDR.jpg",
-        "background_image_mobile": "shopify:\/\/shop_images\/2M2A9265.jpg",
-        "focal_point": "center center",
+        "background_image": "shopify:\/\/shop_images\/IMG_2863_4fbc7eb3-69f1-409b-8112-7f5586ae64de.heic",
+        "background_image_mobile": "shopify:\/\/shop_images\/2M2A9275.jpg",
+        "focal_point": "70% center",
         "image_opacity": 100,
-        "overlay_opacity": 50,
+        "overlay_opacity": 0,
         "overlay_opacity_mobile": 0,
         "min_height": 700,
-        "min_height_mobile": 560,
+        "min_height_mobile": 700,
         "content_width": 620,
         "eyebrow": "50,000+ Drivers Can't Be Wrong",
-        "heading": "Stream Anything. Drive Wirelessly. Upgrade in 60 Seconds.",
-        "subheading": "AutoLinkr transforms your factory CarPlay into a wireless streaming powerhouse — Netflix, YouTube, Google Play — all on your existing screen.",
-        "cta_label": "Shop AutoLinkr Pro™ — $79.99",
-        "cta_link": "\/products\/the-autolinkr-pro",
+        "heading": "Upgrade Your Ride Today",
+        "subheading": "",
+        "cta_label": "Shop AutoLinkr Pro™",
+        "cta_link": "shopify:\/\/products\/the-autolinkr-pro",
         "ghost_label": "Check Compatibility",
         "ghost_link": "\/pages\/compatibility",
         "show_stats": true
@@ -111,6 +111,139 @@
       ],
       "disabled": true,
       "settings": {}
+    },
+    "reveal_image_with_text_overlay_9WUrPj": {
+      "type": "reveal-image-with-text-overlay",
+      "blocks": {
+        "subheading_bzgzdj": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_FiM76H": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stream Anything. Drive Wirelessly. Upgrade in 60 Seconds.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_M7Q94N": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_bzgzdj",
+        "heading_FiM76H",
+        "text_M7Q94N"
+      ],
+      "name": "t:sections.reveal-image-with-text-overlay.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/2M2A9251-HDR.jpg",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify:\/\/shop_images\/AutoLinkr_Pro_Product_Pic.png",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 12,
+        "enable_parallax": false
+      }
+    },
+    "reveal_video_with_text_overlay_iWMn4w": {
+      "type": "reveal-video-with-text-overlay",
+      "blocks": {
+        "subheading_6m9Nt4": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_EwMCMa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text overlay",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_YR8hJd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_6m9Nt4",
+        "heading_EwMCMa",
+        "text_YR8hJd"
+      ],
+      "disabled": true,
+      "name": "t:sections.reveal-video-with-text-overlay.name",
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/2ND.759.mov",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 20,
+        "enable_parallax": false
+      }
     },
     "al-hero-video": {
       "type": "al-video-section",
@@ -799,70 +932,6 @@
         "color_button_gradient": ""
       }
     },
-    "reveal_image_with_text_overlay_9WUrPj": {
-      "type": "reveal-image-with-text-overlay",
-      "blocks": {
-        "subheading_bzgzdj": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Add a tagline",
-            "subheading_size": "subtitle-md",
-            "secondary_color": true
-          }
-        },
-        "heading_FiM76H": {
-          "type": "heading",
-          "settings": {
-            "heading": "Every Drive Should Feel This Good",
-            "heading_size": "title-lg tracking-heading",
-            "heading_tag": "h2",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        },
-        "text_M7Q94N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_font": "body",
-            "text_size": "subtext-md",
-            "text_max_size": 32,
-            "text_line_height": 1.6,
-            "text_letter_spacing": 0,
-            "text_capitalize": false,
-            "secondary_color": false,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_bzgzdj",
-        "heading_FiM76H",
-        "text_M7Q94N"
-      ],
-      "name": "t:sections.reveal-image-with-text-overlay.name",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/DrivingNiceView.jpg",
-        "content_width": "small",
-        "content_position": "md:items-end md:justify-start",
-        "text_alignment": "left",
-        "content_position_mobile": "items-end justify-start",
-        "text_alignment_mobile": "left",
-        "color_text": "#ffffff",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "color_overlay": "#171717",
-        "overlay_opacity": 70,
-        "enable_parallax": false
-      }
-    },
     "rich-text-mission": {
       "type": "rich-text",
       "blocks": {
@@ -946,6 +1015,8 @@
   "order": [
     "al-brand-hero",
     "feature-strip",
+    "reveal_image_with_text_overlay_9WUrPj",
+    "reveal_video_with_text_overlay_iWMn4w",
     "al-hero-video",
     "al_video_section_h4Q3bA",
     "scrolling-text-trust",
@@ -956,7 +1027,6 @@
     "featured-dash",
     "testimonials-banner",
     "reveal_image_with_text_eeMxpy",
-    "reveal_image_with_text_overlay_9WUrPj",
     "rich-text-mission"
   ]
 }

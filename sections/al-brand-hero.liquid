@@ -35,9 +35,10 @@
   display: none;
 }
 
-/* Overlay — black scrim via ::before pseudo-element */
-.al-bh::before {
-  content: '';
+/* Overlay — scrim lives INSIDE .al-bh__bg so it only covers the image layer,
+   not the full section height. This prevents a visible overlay patch below
+   the image when the mobile image is shorter than the section min-height. */
+.al-bh__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -64,13 +65,15 @@
   gap: 8px;
   font-family: var(--al-font-display);
   font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--al-accent);
-  background: rgba(45, 127, 249, 0.1);
-  border: 1px solid rgba(45, 127, 249, 0.25);
-  padding: 6px 14px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 7px 16px;
   border-radius: 100px;
   margin-bottom: 24px;
   animation: al-fade-up 0.5s 0.1s both;
@@ -81,7 +84,8 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--al-accent);
+  background: #ffffff;
+  opacity: 0.9;
   animation: pulse 2s infinite;
 }
 
@@ -218,7 +222,7 @@
   {%- endif -%}
 
   /* Mobile overlay opacity */
-  .al-bh::before {
+  .al-bh__overlay {
     background: rgba(0, 0, 0, {{ section.settings.overlay_opacity_mobile | divided_by: 100.0 }});
   }
 
@@ -238,6 +242,7 @@
       {%- assign bg_url_mobile = section.settings.background_image_mobile | image_url: width: 1200 -%}
       <img src="{{ bg_url_mobile }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-mobile">
     {%- endif -%}
+    <div class="al-bh__overlay"></div>
   </div>
 
   <div class="al-bh__content">

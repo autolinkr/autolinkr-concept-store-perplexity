@@ -196,12 +196,14 @@
   width: 100% !important;
 }
 
-/* Image itself — sits inset with breathing room */
+/* Image — fills full card frame edge-to-edge */
 .product-card__media .media img,
 .product-card__media .media--height img,
 .product-card__media img {
-  object-fit: contain !important;
-  padding: 10% !important;
+  object-fit: cover !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   transition: transform 0.3s ease, opacity 0.2s ease !important;
 }
 

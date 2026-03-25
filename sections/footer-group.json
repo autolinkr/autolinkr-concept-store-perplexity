@@ -56,6 +56,7 @@
         "column-3",
         "column-4"
       ],
+      "disabled": true,
       "settings": {
         "style": "with-border",
         "columns": 4,
@@ -120,6 +121,7 @@
         },
         "brand_information": {
           "type": "brand_information",
+          "disabled": true,
           "settings": {
             "heading": "",
             "button_label_1": "M–F 9–5 CT",
@@ -156,7 +158,7 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
+        "padding_top": 0,
         "padding_bottom": 0,
         "divider": false,
         "full_width": false,

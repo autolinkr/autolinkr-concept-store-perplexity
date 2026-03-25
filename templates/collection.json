@@ -52,6 +52,34 @@
         "parallax_direction": "vertical"
       }
     },
+    "al-product-grid": {
+      "type": "al-product-grid",
+      "settings": {
+        "products_per_page": 11,
+        "columns": 4,
+        "columns_mobile": "2",
+        "pagination": "paginated",
+        "image_fill": true,
+        "show_price": false,
+        "show_compare_price": true,
+        "show_save_amount": false,
+        "show_rating": false,
+        "show_color_swatches": true,
+        "show_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "drawer",
+        "filter_collapsed": false,
+        "filter_color_swatches": true,
+        "enable_sorting": true,
+        "show_on_model": false,
+        "buttons_style": "secondary",
+        "padding_top": 0,
+        "padding_bottom": 16,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
     "images-with-text-overlay": {
       "type": "images-with-text-overlay",
       "blocks": {
@@ -92,7 +120,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.</p>",
+            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -112,6 +140,7 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "transparent_header": false,
         "image_height": "650px",
@@ -169,34 +198,6 @@
         "divider": false,
         "full_width": false,
         "rounded": true
-      }
-    },
-    "al-product-grid": {
-      "type": "al-product-grid",
-      "settings": {
-        "products_per_page": 11,
-        "columns": 4,
-        "columns_mobile": "2",
-        "pagination": "paginated",
-        "enable_filtering": true,
-        "filter_type": "drawer",
-        "filter_collapsed": false,
-        "filter_color_swatches": true,
-        "enable_sorting": true,
-        "show_on_model": false,
-        "buttons_style": "secondary",
-        "padding_top": 0,
-        "padding_bottom": 100,
-        "divider": false,
-        "full_width": false,
-        "rounded": true,
-        "show_rating": true,
-        "show_save_amount": true,
-        "show_price": true,
-        "show_compare_price": true,
-        "image_fill": true,
-        "show_quick_add": false,
-        "show_color_swatches": true
       }
     }
   },

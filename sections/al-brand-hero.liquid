@@ -46,6 +46,35 @@
   pointer-events: none;
 }
 
+/* Mobile gradient scrim — bottom-weighted so text is always readable.
+   Sits on top of the image, inside __bg. Hidden on desktop. */
+.al-bh__gradient {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .al-bh__gradient {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    {%- assign mob_op = section.settings.overlay_opacity_mobile | divided_by: 100.0 -%}
+    {%- assign mob_op_mid = mob_op | times: 0.7 -%}
+    {%- assign mob_op_top = mob_op | times: 0.2 -%}
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 12, {{ mob_op_top }}) 0%,
+      rgba(10, 10, 12, {{ mob_op_mid }}) 40%,
+      rgba(10, 10, 12, {{ mob_op }}) 100%
+    );
+  }
+  /* When mobile gradient is active, reduce flat overlay to avoid double-darkening */
+  .al-bh__overlay {
+    background: rgba(0, 0, 0, {{ section.settings.overlay_opacity_mobile | divided_by: 100.0 | times: 0.25 }});
+  }
+}
+
 .al-bh__content {
   position: relative;
   z-index: 2;
@@ -243,6 +272,7 @@
       <img src="{{ bg_url_mobile }}" alt="{{ section.settings.heading | escape }}" loading="eager" fetchpriority="high" class="al-bh__bg-mobile">
     {%- endif -%}
     <div class="al-bh__overlay"></div>
+    <div class="al-bh__gradient"></div>
   </div>
 
   <div class="al-bh__content">

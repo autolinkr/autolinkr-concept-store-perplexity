@@ -1504,15 +1504,8 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 
   .al-brand-hero { min-height: 540px !important; }
 
-  /* Hero mobile overlay — ensures text readability over image */
-  .al-bh__content {
-    background: linear-gradient(
-      180deg,
-      rgba(10, 10, 12, 0.30) 0%,
-      rgba(10, 10, 12, 0.70) 50%,
-      rgba(10, 10, 12, 0.95) 100%
-    ) !important;
-  }
+  /* Hero mobile overlay — removed. Gradient is now handled by .al-bh__gradient
+     inside the section itself and is configurable via Shopify editor. */
 
   .number-counter__item { border-right: none !important; border-bottom: 1px solid var(--al-border) !important; }
   .number-counter__item:last-child { border-bottom: none !important; }

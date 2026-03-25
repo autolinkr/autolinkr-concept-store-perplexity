@@ -919,7 +919,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/DrivingNiceView.jpg",
         "content_width": "medium",
-        "heading": "Every Drive Should Feel This Good",
+        "heading": "The Future of Driving Is Already Here",
         "heading_size": "title-md",
         "heading_alignment": "text-center",
         "heading_tag": "h2",
@@ -935,13 +935,77 @@
         "color_button_gradient": ""
       }
     },
+    "reveal_image_with_text_overlay_qRiQCi": {
+      "type": "reveal-image-with-text-overlay",
+      "blocks": {
+        "subheading_czeDMU": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Mission",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_WhHQ4a": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Future of Driving Is Already Here",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_b7X3mk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're on a mission to modernize the in-car experience for every driver on the road — not just those who can afford a new vehicle. Cars are getting smarter, but millions of people are still stuck with outdated factory screens that don't keep up with how they live.<\/p><p>AutoLinkr is changing that. We build technology that bridges the gap between the car you drive and the connected world you live in — wireless CarPlay, seamless streaming, instant setup. Clean. Simple. No dealer visit required.<\/p><p>We exist at the forefront of in-car technology because we believe every driver deserves a modern experience, without complexity, without compromise, and without buying a new car to get it.<\/p><p><strong>Smarter driving starts here.<\/strong><\/p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_czeDMU",
+        "heading_WhHQ4a",
+        "text_b7X3mk"
+      ],
+      "name": "t:sections.reveal-image-with-text-overlay.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/DrivingNiceView.jpg",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "content_position_mobile": "items-center justify-center",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 70,
+        "enable_parallax": false
+      }
+    },
     "rich-text-mission": {
       "type": "rich-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Every Drive Should Feel This Good.",
+            "heading": "The Future of Driving Is Already Here",
             "heading_size": "h2",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -952,7 +1016,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At AutoLinkr™, we believe every drive should feel effortless, connected, and entertaining. We build the technology that makes your factory screen smarter — without replacing it, without dealership installs, and without complexity.<\/p><p>Plug in. Pair once. Drive forever.<\/p>",
+            "text": "<p>We're on a mission to modernize the in-car experience for every driver on the road — not just those who can afford a new vehicle. Cars are getting smarter, but millions of people are still stuck with outdated factory screens that don't keep up with how they live.<\/p><p>AutoLinkr is changing that. We build technology that bridges the gap between the car you drive and the connected world you live in — wireless CarPlay, seamless streaming, instant setup. Clean. Simple. No dealer visit required.<\/p><p>We exist at the forefront of in-car technology because we believe every driver deserves a modern experience, without complexity, without compromise, and without buying a new car to get it.<\/p><p><strong>Smarter driving starts here.<\/strong><\/p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -982,6 +1046,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "text_alignment": "center",
         "text_alignment_mobile": "left",
@@ -1030,6 +1095,7 @@
     "featured-dash",
     "testimonials-banner",
     "reveal_image_with_text_eeMxpy",
+    "reveal_image_with_text_overlay_qRiQCi",
     "rich-text-mission"
   ]
 }

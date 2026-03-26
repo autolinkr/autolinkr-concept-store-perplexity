@@ -243,11 +243,6 @@ a:hover { color: var(--al-accent-hover); }
   overflow: visible !important;
 }
 
-/* Dropdown — background uses global highlight color (set in Shopify theme editor) */
-.dropdown {
-  background: rgb(var(--color-highlight)) !important;
-}
-
 /* Dropdown container — constrained width + positioning */
 .dropdown__container {
   position: relative !important;

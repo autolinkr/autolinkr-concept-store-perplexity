@@ -243,12 +243,12 @@ a:hover { color: var(--al-accent-hover); }
   overflow: visible !important;
 }
 
-/* Dropdown container — constrained width + positioning */
+/* Dropdown container — uses global highlight color (set in Shopify theme editor) */
 .dropdown__container {
   position: relative !important;
   max-width: 280px !important;
-  background: var(--al-surface) !important;
-  border: 1px solid var(--al-border) !important;
+  background: rgb(var(--color-highlight)) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
   border-radius: var(--al-r-md) !important;
   box-shadow: var(--al-shadow-md) !important;
   padding: 12px 0 !important;

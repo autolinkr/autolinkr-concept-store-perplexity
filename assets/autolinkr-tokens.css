@@ -1680,18 +1680,18 @@ comparison-table.comparison-table {
   margin-bottom: 4px !important;
 }
 
-/* TRUE checkmark — blue */
+/* TRUE checkmark — global highlight color */
 .comparison-table__column .icon--check-circle-filled,
 .comparison-table__column svg[class*="check"] {
-  color: rgb(59,142,248) !important;
+  color: rgb(var(--color-highlight)) !important;
   width: 20px !important;
   height: 20px !important;
 }
 
-/* FALSE cross — muted red */
+/* FALSE cross — global error color */
 .comparison-table__column .icon--close-circle-filled,
 .comparison-table__column svg[class*="close"] {
-  color: rgba(255,77,64,0.6) !important;
+  color: rgb(var(--color-error-text, 176 0 32)) !important;
   width: 20px !important;
   height: 20px !important;
 }
@@ -1961,11 +1961,25 @@ comparison-table.comparison-table {
   color: rgba(255,255,255,0.9) !important;
 }
 
-/* ALL value text in data rows — blue (both col1=Pro and col2=Elite) */
+/* ALL value text in data rows — uses global highlight color */
 .comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6),
 .comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column .col-span-full {
-  color: rgb(59,142,248) !important;
+  color: rgb(var(--color-highlight)) !important;
   font-weight: 600 !important;
+}
+
+/* X mark — red using global error color.
+   Targets cells whose text is an X variant: ✕ ✗ × x X */
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6)[data-value="✕"],
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6)[data-value="✗"],
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6)[data-value="x"],
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6)[data-value="X"] {
+  color: rgb(var(--color-error-text, 176 0 32)) !important;
+}
+
+/* Broader catch — any p in a data cell whose only content is an X glyph */
+.comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column .al-x {
+  color: rgb(var(--color-error-text, 176 0 32)) !important;
 }
 
 /* Center content in every cell */

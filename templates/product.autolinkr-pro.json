@@ -453,8 +453,8 @@
         "feat-6"
       ],
       "settings": {
-        "eyebrow": "Why AutoLinkr Pro",
-        "heading": "Everything You Need. Nothing You Don’t.",
+        "eyebrow": "",
+        "heading": "<strong>Packed With Purpose.<\/strong>",
         "subheading": "Six reasons tens of thousands of drivers upgraded their drive.",
         "padding_top": 96,
         "padding_bottom": 96
@@ -468,10 +468,10 @@
         "max_width": 1200,
         "media_max_width": 900,
         "text_align": "center",
-        "eyebrow": "Customer Review",
+        "eyebrow": "Real customers. Real results.",
         "heading": "Verified by <strong>50,000+<\/strong> Drivers",
         "heading_tag": "h2",
-        "subheading": "Real customers. Real results.",
+        "subheading": "",
         "youtube_id": "AxcmlF_3Tfs",
         "video_url": "",
         "autoplay": false,
@@ -687,7 +687,7 @@
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
-        "subheading": "Both are packed with features. Elite adds power for those who want the maximum.",
+        "subheading": "",
         "description": "",
         "button_label": "",
         "button_link": "",
@@ -730,12 +730,13 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Everything in Pro, plus:",
+            "text": "The most advanced CarPlay adapter.",
             "text_size": "text-sm"
           }
         },
         "upsell-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "iwidth": "custom",
@@ -746,6 +747,7 @@
         },
         "upsell-2": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "iwidth": "custom",
@@ -756,6 +758,7 @@
         },
         "upsell-3": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "iwidth": "custom",
@@ -766,6 +769,7 @@
         },
         "upsell-4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "iwidth": "custom",

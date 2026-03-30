@@ -227,7 +227,7 @@
   padding: 12px 4px 0 !important;
   gap: 4px !important;
   background: transparent !important;
-  border-top: 1px solid rgb(var(--color-highlight)) !important;
+  border-top: none !important;
   margin-top: 0 !important;
 }
 

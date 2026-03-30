@@ -243,6 +243,10 @@ a:hover { color: var(--al-accent-hover); }
   overflow: visible !important;
 }
 
+.dropdown {
+  color: rgb(var(--color-highlight)) !important;
+}
+
 /* Dropdown container — constrained width + positioning */
 .dropdown__container {
   position: relative !important;

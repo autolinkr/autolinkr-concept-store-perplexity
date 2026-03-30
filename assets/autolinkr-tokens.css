@@ -1961,10 +1961,10 @@ comparison-table.comparison-table {
   color: rgba(255,255,255,0.9) !important;
 }
 
-/* ALL value text in data rows — uses global highlight color */
+/* ALL value text in data rows — uses per-column custom color or falls back to global highlight */
 .comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6),
 .comparison-table__row:not(.thead):not(.tfoot) .comparison-table__column .col-span-full {
-  color: rgb(var(--color-highlight)) !important;
+  color: var(--al-col-value-color, rgb(var(--color-highlight))) !important;
   font-weight: 600 !important;
 }
 

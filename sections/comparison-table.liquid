@@ -161,7 +161,8 @@
           {%- capture row_content -%}
             {%- for block in values_blocks -%}
               {%- if block.settings[value_key] != blank -%}
-                <div class="comparison-table__column {{ block.settings.text_size }} rte">
+                {%- assign al_value_color = block.settings.value_color | default: '' -%}
+                <div class="comparison-table__column {{ block.settings.text_size }} rte"{% if al_value_color != '' %} style="--al-col-value-color: {{ al_value_color }};"{% endif %}>
                   {%- liquid
                     assign metafield_content = block.settings[value_key]
                     assign stripped_value = block.settings[value_key] | strip_html | strip | upcase
@@ -818,6 +819,19 @@
           "type": "richtext",
           "id": "value_25",
           "label": "t:sections.comparison-table.blocks.values.settings.value_25.label"
+        },
+        {
+          "type": "header",
+          "content": "Value Color"
+        },
+        {
+          "type": "paragraph",
+          "content": "Override the color of value text in this column. Leave blank to use the global highlight color."
+        },
+        {
+          "type": "color",
+          "id": "value_color",
+          "label": "Value text color"
         },
         {
           "type": "select",

@@ -45,7 +45,7 @@
         "image_opacity": 80,
         "overlay_opacity": 0,
         "overlay_opacity_mobile": 0,
-        "min_height": 700,
+        "min_height": 860,
         "min_height_mobile": 700,
         "content_width": 620,
         "eyebrow": "GET 50% OFF ON SELECT ADAPTERS",
@@ -618,85 +618,6 @@
         "rounded": false
       }
     },
-    "collection-list": {
-      "type": "collection-list",
-      "blocks": {
-        "col-adapters": {
-          "type": "collection",
-          "settings": {
-            "collection": "wireless-carplay-adapters",
-            "title": "",
-            "description": "",
-            "overlay_content": false,
-            "color_text": "",
-            "color_overlay": "",
-            "overlay_opacity": 30
-          }
-        },
-        "col-dashcams": {
-          "type": "collection",
-          "settings": {
-            "collection": "dash-cams",
-            "title": "",
-            "description": "",
-            "overlay_content": false,
-            "color_text": "",
-            "color_overlay": "",
-            "overlay_opacity": 30
-          }
-        },
-        "collection_XWpDaK": {
-          "type": "collection",
-          "settings": {
-            "collection": "screens",
-            "title": "",
-            "description": "",
-            "overlay_content": false,
-            "color_text": "#ffffff",
-            "color_overlay": "#000000",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "col-adapters",
-        "col-dashcams",
-        "collection_XWpDaK"
-      ],
-      "settings": {
-        "card_style": "card",
-        "image_type": "collection",
-        "image_ratio": "landscape",
-        "show_products_count": true,
-        "show_view_all": false,
-        "columns": 4,
-        "carousel_on_desktop": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "heading": "Shop by Category",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
     "dash-intro-header": {
       "type": "rich-text",
       "blocks": {
@@ -896,6 +817,85 @@
         "mobile_layout": "full_width",
         "image_ratio_mobile": "adapt_first",
         "mobile_thumbnail": true,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "col-adapters": {
+          "type": "collection",
+          "settings": {
+            "collection": "wireless-carplay-adapters",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "",
+            "color_overlay": "",
+            "overlay_opacity": 30
+          }
+        },
+        "col-dashcams": {
+          "type": "collection",
+          "settings": {
+            "collection": "dash-cams",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "",
+            "color_overlay": "",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_XWpDaK": {
+          "type": "collection",
+          "settings": {
+            "collection": "screens",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "col-adapters",
+        "col-dashcams",
+        "collection_XWpDaK"
+      ],
+      "settings": {
+        "card_style": "card",
+        "image_type": "collection",
+        "image_ratio": "landscape",
+        "show_products_count": true,
+        "show_view_all": false,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Shop by Category",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 72,
         "padding_bottom": 72,
         "divider": false,

@@ -116,7 +116,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto.<\/p><p>Compatible with 500+ models from Toyota, Honda, Ford, Chevrolet, BMW, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.<\/p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.<\/p><p><a href=\"\/pages\/supported-cars\">Check Your Car →<\/a><\/p><p>Not sure? Contact us and we'll confirm in minutes.<\/p>",
+            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto.<\/p><p>Compatible with 500+ models from Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.<\/p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.<\/p><p><a href=\"\/pages\/supported-cars\">Check Your Car →<\/a><\/p><p>Not sure? Contact us and we'll confirm in minutes.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -128,8 +128,8 @@
             "opened": false,
             "style": "with-border",
             "icon": "none",
-            "heading": "Tech Specs",
-            "content": "<ul><li>Connectivity: Wireless CarPlay + Android Auto<\/li><li>Streaming: Netflix, YouTube, Disney+, Hulu, Prime Video + more<\/li><li>App Store: Full Google Play Store access<\/li><li>Setup: Plug-and-play, under 60 seconds<\/li><li>Connection: Bluetooth 5.0 + WiFi<\/li><li>Internet: Via phone hotspot or vehicle WiFi<\/li><li>Cables Included: USB-C to USB-A + USB-C to USB-C<\/li><li>Firmware: OTA (over-the-air) updates<\/li><li>Compatibility: 500+ vehicle models (2016+)<\/li><li>RAM: 2GB<\/li><li>Storage: 16GB built-in + Micro SD expandable<\/li><\/ul>",
+            "heading": "What's Included",
+            "content": "<p>✔ AutoLinkr Pro™<br\/>✔ USB-C to USB-A Cable<br\/>✔ USB-C to USB-C Cable<br\/>✔ User Manual<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"

@@ -606,7 +606,9 @@ details > .accordion__content {
   color: var(--al-text-2) !important;
   font-size: var(--al-text-sm) !important;
   line-height: 1.7 !important;
-  border-left: 3px solid var(--al-accent) !important;
+  border-left: 1px solid var(--al-accent) !important;
+  border-right: 1px solid var(--al-accent) !important;
+  border-bottom: 1px solid var(--al-accent) !important;
 }
 .accordion__content ul,
 .accordion__content ol,

@@ -21,7 +21,7 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "📱 Wireless CarPlay & Android Auto — works in ANY car, no factory CarPlay needed.",
+            "text": "🔋 MagSafe wireless charging — snap your phone on, charging starts instantly.",
             "text_size": "text-base"
           }
         },
@@ -29,7 +29,7 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "🎬 Stream Netflix, YouTube, Hulu, Disney+ on a 7\" HD touchscreen — no installation.",
+            "text": "🔄 360° rotation — portrait or landscape, one-hand adjustment while driving.",
             "text_size": "text-base"
           }
         },
@@ -37,7 +37,7 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "⚡ Portable & universal — mount it, connect your phone, start driving in 60 seconds.",
+            "text": "🧲 Powerful magnetic hold — stays locked even on bumpy roads and sharp turns.",
             "text_size": "text-base"
           }
         },
@@ -78,7 +78,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Tablet™ is the portable wireless CarPlay and Android Auto screen that works in any car — no factory CarPlay required. Just mount it on your dashboard or windshield, connect your phone, and you're streaming and navigating in under 60 seconds.</p><p>The 7\" HD touchscreen supports Netflix, YouTube, Hulu, Disney+, Google Maps, Waze, Spotify, and the full Google Play Store. It works with both iPhone and Android out of the box.</p><p>Unlike other CarPlay adapters that require your car to already have CarPlay built in, AutoLinkr Tablet™ brings the full connected experience to any vehicle — from a 2005 Toyota to a 2024 pickup truck.</p>",
+            "content": "<p>The AutoLinkr MagSafe Phone Mount™ clips onto any car air vent and delivers effortless fast wireless charging the moment your phone snaps into place. No cables to fumble with — just mount and go.</p><p>Powerful magnetic adsorption keeps your phone locked in place even on rough roads. The 360° rotation arm lets you switch between portrait and landscape with one hand, so your navigation or streaming is always at the right angle.</p><p>Compatible with MagSafe-enabled iPhones and any Qi-compatible device with a case or adapter. Designed to pair perfectly with AutoLinkr Pro™ or Elite™ for the ultimate wireless in-car setup.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -91,7 +91,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p><strong>Works in any car</strong> — no factory CarPlay required.</p><ul><li>iPhone 7+ (iOS 10 or later) for Apple CarPlay</li><li>Android 11+ for Android Auto</li><li>Connects via Bluetooth + USB-C or USB-A</li><li>Universal air vent or dashboard mount included</li></ul><p>Unlike standard CarPlay adapters, AutoLinkr Tablet™ is a standalone device — it doesn't need to plug into your car's infotainment system.</p>",
+            "content": "<p><strong>MagSafe wireless charging:</strong> iPhone 12 and newer with native MagSafe</p><p><strong>Qi wireless charging:</strong> Any Qi-compatible Android or iPhone with a Qi case</p><p><strong>Mount:</strong> Universal air vent clip — fits standard horizontal and vertical vent slats</p><p><strong>Charging output:</strong> Up to 15W MagSafe, 10W Qi</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -104,7 +104,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Tech Specs",
-            "content": "<ul><li>Screen: 7\" IPS HD touchscreen (1024×600)</li><li>Wireless: Bluetooth 5.0, WiFi 2.4GHz/5GHz dual-band</li><li>OS: Android-based</li><li>Connections: USB-C power, FM transmitter, Bluetooth audio</li><li>Compatible: Apple CarPlay (wireless), Android Auto (wireless)</li><li>Mount: Universal air vent mount included</li><li>Power: Powered via car USB port or included adapter</li></ul>",
+            "content": "<ul><li>Charging: MagSafe up to 15W, Qi up to 10W</li><li>Rotation: 360° adjustable arm</li><li>Mount: Universal air vent clip</li><li>Input: USB-C (cable included)</li><li>Magnetic hold: 1500g pull force</li><li>Material: Aerospace-grade aluminum + premium silicone grip</li></ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -122,14 +122,6 @@
             "liquid": "",
             "text_size": "text-sm"
           }
-        },
-        "safety-disclaimer": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "text": "⚠️ Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
-            "text_size": "text-xs"
-          }
         }
       },
       "block_order": [
@@ -145,8 +137,7 @@
         "tab-description",
         "tab-compatibility",
         "tab-specs",
-        "tab-shipping",
-        "safety-disclaimer"
+        "tab-shipping"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -175,7 +166,7 @@
         "carousel_on_desktop": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Complete Your Setup",
+        "heading": "Pair It With",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

@@ -21,7 +21,7 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "📱 Wireless CarPlay & Android Auto — works in ANY car, no factory CarPlay needed.",
+            "text": "🚫 Stop losing things — blocks the gap between your seat and center console instantly.",
             "text_size": "text-base"
           }
         },
@@ -29,7 +29,7 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "🎬 Stream Netflix, YouTube, Hulu, Disney+ on a 7\" HD touchscreen — no installation.",
+            "text": "📱 Keeps your phone, keys, cards, and coins exactly where you put them.",
             "text_size": "text-base"
           }
         },
@@ -37,7 +37,7 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "⚡ Portable & universal — mount it, connect your phone, start driving in 60 seconds.",
+            "text": "🔧 Universal fit — installs in 10 seconds, no tools, works in any car.",
             "text_size": "text-base"
           }
         },
@@ -78,7 +78,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Tablet™ is the portable wireless CarPlay and Android Auto screen that works in any car — no factory CarPlay required. Just mount it on your dashboard or windshield, connect your phone, and you're streaming and navigating in under 60 seconds.</p><p>The 7\" HD touchscreen supports Netflix, YouTube, Hulu, Disney+, Google Maps, Waze, Spotify, and the full Google Play Store. It works with both iPhone and Android out of the box.</p><p>Unlike other CarPlay adapters that require your car to already have CarPlay built in, AutoLinkr Tablet™ brings the full connected experience to any vehicle — from a 2005 Toyota to a 2024 pickup truck.</p>",
+            "content": "<p>The AutoLinkr GapGuard™ is a sleek, universal seat gap filler that blocks the space between your car seat and center console — preventing phones, keys, coins, cards, and anything else from disappearing into that impossible-to-reach gap.</p><p>It slides into place in under 10 seconds with zero tools and fits virtually any car. The non-slip material keeps it locked in position so it never shifts while you drive.</p><p>Clean, minimal design that blends into any interior. Stop fishing around under your seat — GapGuard just solves the problem permanently.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -91,7 +91,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p><strong>Works in any car</strong> — no factory CarPlay required.</p><ul><li>iPhone 7+ (iOS 10 or later) for Apple CarPlay</li><li>Android 11+ for Android Auto</li><li>Connects via Bluetooth + USB-C or USB-A</li><li>Universal air vent or dashboard mount included</li></ul><p>Unlike standard CarPlay adapters, AutoLinkr Tablet™ is a standalone device — it doesn't need to plug into your car's infotainment system.</p>",
+            "content": "<p>Universal fit — designed to work with the vast majority of cars, trucks, and SUVs.</p><ul><li>Fits standard seat-to-console gaps (1–3 inches)</li><li>No tools or installation required</li><li>Flexible material conforms to most gap shapes</li><li>Works with heated seats and seat adjustment mechanisms</li></ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -104,7 +104,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Tech Specs",
-            "content": "<ul><li>Screen: 7\" IPS HD touchscreen (1024×600)</li><li>Wireless: Bluetooth 5.0, WiFi 2.4GHz/5GHz dual-band</li><li>OS: Android-based</li><li>Connections: USB-C power, FM transmitter, Bluetooth audio</li><li>Compatible: Apple CarPlay (wireless), Android Auto (wireless)</li><li>Mount: Universal air vent mount included</li><li>Power: Powered via car USB port or included adapter</li></ul>",
+            "content": "<ul><li>Material: Premium leatherette + non-slip base</li><li>Gap coverage: 1–3 inch seat-to-console gaps</li><li>Installation: Slide-in, no tools, under 10 seconds</li><li>Pack includes: 2× GapGuard filler strips (driver + passenger side)</li><li>Colors: Black</li></ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -122,14 +122,6 @@
             "liquid": "",
             "text_size": "text-sm"
           }
-        },
-        "safety-disclaimer": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "text": "⚠️ Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
-            "text_size": "text-xs"
-          }
         }
       },
       "block_order": [
@@ -145,8 +137,7 @@
         "tab-description",
         "tab-compatibility",
         "tab-specs",
-        "tab-shipping",
-        "safety-disclaimer"
+        "tab-shipping"
       ],
       "settings": {
         "enable_sticky_info": true,

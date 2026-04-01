@@ -429,6 +429,15 @@ input::placeholder {
   color: var(--al-text-4) !important;
 }
 
+/* Floating label pattern — hide placeholder text so only the floating
+   label is visible. Placeholder is still set in HTML (required for the
+   CSS :placeholder-shown trick to detect empty state) but made invisible.
+   Textarea already uses placeholder=" " correctly; text inputs do not. */
+.input.is-floating::placeholder,
+.field .input.is-floating::placeholder {
+  color: transparent !important;
+}
+
 /* Email newsletter form row — fix button alignment */
 .newsletter__form,
 .email-form,

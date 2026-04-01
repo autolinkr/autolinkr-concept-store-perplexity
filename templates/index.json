@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "al-brand-hero": {
@@ -39,8 +48,8 @@
         "stat-4"
       ],
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/2M2A9277_1.png",
-        "background_image_mobile": "shopify:\/\/shop_images\/ProductPic2_5422be18-2ee1-4126-997a-2f54169d6e9e.png",
+        "background_image": "shopify://shop_images/2M2A9277_1.png",
+        "background_image_mobile": "shopify://shop_images/ProductPic2_5422be18-2ee1-4126-997a-2f54169d6e9e.png",
         "focal_point": "left center",
         "image_opacity": 80,
         "overlay_opacity": 0,
@@ -52,9 +61,9 @@
         "heading": "Upgrade Your Ride Today",
         "subheading": "Experience high performance, feature packed CarPlay Adapters that turn your car into a movie theater.",
         "cta_label": "Shop All Adapters",
-        "cta_link": "shopify:\/\/collections\/wireless-carplay-adapters",
+        "cta_link": "shopify://collections/wireless-carplay-adapters",
         "ghost_label": "",
-        "ghost_link": "\/pages\/compatibility",
+        "ghost_link": "/pages/compatibility",
         "show_stats": true
       }
     },
@@ -157,11 +166,11 @@
       ],
       "name": "t:sections.reveal-image-with-text-overlay.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/2M2A9251-HDR.jpg",
+        "image": "shopify://shop_images/2M2A9251-HDR.jpg",
         "content_width": "small",
         "content_position": "md:items-center md:justify-start",
         "text_alignment": "left",
-        "image_mobile": "shopify:\/\/shop_images\/2M2A9251-HDR_785f8e42-23a8-4ca1-9228-14905bfa29dd.png",
+        "image_mobile": "shopify://shop_images/2M2A9251-HDR_785f8e42-23a8-4ca1-9228-14905bfa29dd.png",
         "content_position_mobile": "items-start justify-center",
         "text_alignment_mobile": "center",
         "color_text": "#ffffff",
@@ -202,7 +211,7 @@
         "text_YR8hJd": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -223,8 +232,8 @@
       "disabled": true,
       "name": "t:sections.reveal-video-with-text-overlay.name",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/2ND.759.mov",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video": "shopify://files/videos/2ND.759.mov",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
@@ -258,7 +267,7 @@
         "heading_tag": "h2",
         "subheading": "",
         "youtube_id": "",
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2a9b3c1f04034a5bbbb7d5074334392c.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/2a9b3c1f04034a5bbbb7d5074334392c.mp4",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",
@@ -280,10 +289,10 @@
         "heading_tag": "h2",
         "subheading": "",
         "youtube_id": "",
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f710c015c61142c997c93fa5dd13c01d.mov",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/f710c015c61142c997c93fa5dd13c01d.mov",
         "autoplay": true,
         "cta_label": "Get AutoLinkr Pro™",
-        "cta_link": "\/products\/the-autolinkr-pro",
+        "cta_link": "/products/the-autolinkr-pro",
         "ghost_label": "",
         "ghost_link": ""
       }
@@ -470,17 +479,17 @@
           "settings": {
             "product": "the-autolinkr-pro",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓<\/p>",
+            "value_1": "<p>✓</p>",
             "heading_2": "Netflix & YouTube",
-            "value_2": "<p>✓<\/p>",
+            "value_2": "<p>✓</p>",
             "heading_3": "Google Play Store",
-            "value_3": "<p>✓<\/p>",
+            "value_3": "<p>✓</p>",
             "heading_4": "Split-Screen",
-            "value_4": "<p>✗<\/p>",
+            "value_4": "<p>✗</p>",
             "heading_5": "Faster CPU",
-            "value_5": "<p>✗<\/p>",
+            "value_5": "<p>✗</p>",
             "heading_6": "Price",
-            "value_6": "<p>$79.99<\/p>",
+            "value_6": "<p>$79.99</p>",
             "heading_7": "",
             "value_7": "",
             "heading_8": "",
@@ -527,17 +536,17 @@
           "settings": {
             "product": "the-autolinkr-elite",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓<\/p>",
+            "value_1": "<p>✓</p>",
             "heading_2": "Netflix & YouTube",
-            "value_2": "<p>✓<\/p>",
+            "value_2": "<p>✓</p>",
             "heading_3": "Google Play Store",
-            "value_3": "<p>✓<\/p>",
+            "value_3": "<p>✓</p>",
             "heading_4": "Split-Screen",
-            "value_4": "<p>✓<\/p>",
+            "value_4": "<p>✓</p>",
             "heading_5": "Faster CPU",
-            "value_5": "<p>✓<\/p>",
+            "value_5": "<p>✓</p>",
             "heading_6": "Price",
-            "value_6": "<p>$199.99<\/p>",
+            "value_6": "<p>$199.99</p>",
             "heading_7": "",
             "value_7": "",
             "heading_8": "",
@@ -636,7 +645,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Introducing AutoLinkr Dash™ — dual 1080P front and rear dashcam with IR night vision, WiFi app control, and 24\/7 parking mode. The protection your car deserves.<\/p>",
+            "text": "<p>Introducing AutoLinkr Dash™ — dual 1080P front and rear dashcam with IR night vision, WiFi app control, and 24/7 parking mode. The protection your car deserves.</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -663,7 +672,7 @@
         "heading_width": "small",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Introducing <strong>AutoLinkr Dash™<\/strong> — a premium dual-camera dashcam system built for total vehicle protection.<\/p><p>✔ <strong>Dual 1080P Front & Rear Recording<br\/><\/strong>✔ <strong>IR Night Vision<br\/><\/strong>✔ <strong>WiFi App Control<br\/><\/strong>✔ <strong>Loop Recording<br\/><\/strong>✔ <strong>Wide-Angle Coverage<\/strong><\/p>",
+        "description": "<p>Introducing <strong>AutoLinkr Dash™</strong> — a premium dual-camera dashcam system built for total vehicle protection.</p><p>✔ <strong>Dual 1080P Front & Rear Recording<br/></strong>✔ <strong>IR Night Vision<br/></strong>✔ <strong>WiFi App Control<br/></strong>✔ <strong>Loop Recording<br/></strong>✔ <strong>Wide-Angle Coverage</strong></p>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
@@ -711,7 +720,7 @@
         "text_qn9xmB": {
           "type": "text",
           "settings": {
-            "text": "<p>Introducing <strong>AutoLinkr Dash™<\/strong> — a premium dual-camera dashcam system built for total vehicle protection.<\/p><p>✔ <strong>Dual 1080P Front & Rear Recording<br\/><\/strong>✔ <strong>IR Night Vision<br\/><\/strong>✔ <strong>WiFi App Control<br\/><\/strong>✔ <strong>Loop Recording<br\/><\/strong>✔ <strong>Wide-Angle Coverage<\/strong><\/p>",
+            "text": "<p>Introducing <strong>AutoLinkr Dash™</strong> — a premium dual-camera dashcam system built for total vehicle protection.</p><p>✔ <strong>Dual 1080P Front & Rear Recording<br/></strong>✔ <strong>IR Night Vision<br/></strong>✔ <strong>WiFi App Control<br/></strong>✔ <strong>Loop Recording<br/></strong>✔ <strong>Wide-Angle Coverage</strong></p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -731,11 +740,11 @@
       ],
       "name": "t:sections.reveal-image-with-text-overlay.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/AutoDash_Mounted.png",
+        "image": "shopify://shop_images/AutoDash_Mounted.png",
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
         "text_alignment": "left",
-        "image_mobile": "shopify:\/\/shop_images\/Gemini_Generated_Image_cvuaiycvuaiycvua_c9a4c276-75c6-4830-9392-8930e98a9cb6.png",
+        "image_mobile": "shopify://shop_images/Gemini_Generated_Image_cvuaiycvuaiycvua_c9a4c276-75c6-4830-9392-8930e98a9cb6.png",
         "content_position_mobile": "items-end justify-center",
         "text_alignment_mobile": "left",
         "color_text": "#ffffff",
@@ -910,7 +919,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"The AutoLinkr Pro makes me look forward to my commute to work! Netflix on my lunch break in the car is life-changing.\"<\/p>",
+            "text": "<p>\"The AutoLinkr Pro makes me look forward to my commute to work! Netflix on my lunch break in the car is life-changing.\"</p>",
             "author": "Michael T.",
             "author_info": "2022 Honda Pilot — Verified Buyer",
             "author_url": "",
@@ -924,7 +933,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Finally got the AutoLinkr Pro and now all my friends want one. They couldn't believe I can stream Netflix and YouTube on my factory screen wirelessly.\"<\/p>",
+            "text": "<p>\"Finally got the AutoLinkr Pro and now all my friends want one. They couldn't believe I can stream Netflix and YouTube on my factory screen wirelessly.\"</p>",
             "author": "Sarah K.",
             "author_info": "2021 Toyota Camry — Verified Buyer",
             "author_url": "",
@@ -938,7 +947,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Setup was super easy and it connects to my phone every time. Still get all my CarPlay features but now fully wireless. Worth every penny.\"<\/p>",
+            "text": "<p>\"Setup was super easy and it connects to my phone every time. Still get all my CarPlay features but now fully wireless. Worth every penny.\"</p>",
             "author": "James R.",
             "author_info": "2020 Ford F-150 — Verified Buyer",
             "author_url": "",
@@ -957,7 +966,7 @@
       "disabled": true,
       "settings": {
         "transparent_header": false,
-        "image": "shopify:\/\/shop_images\/ProductPic2_Sq_1.png",
+        "image": "shopify://shop_images/ProductPic2_Sq_1.png",
         "image_height": "650px",
         "content_position": "md:items-center md:justify-center",
         "image_height_mobile": "auto",
@@ -983,7 +992,7 @@
       "disabled": true,
       "name": "t:sections.reveal-image-with-text.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/DrivingNiceView.jpg",
+        "image": "shopify://shop_images/DrivingNiceView.jpg",
         "content_width": "medium",
         "heading": "The Future of Driving Is Already Here",
         "heading_size": "title-md",
@@ -1026,7 +1035,7 @@
         "text_b7X3mk": {
           "type": "text",
           "settings": {
-            "text": "<p>We're on a mission to modernize the in-car experience for every driver on the road — not just those who can afford a new vehicle. Cars are getting smarter, but millions of people are still stuck with outdated factory screens that don't keep up with how they live.<\/p><p>AutoLinkr is changing that. We build technology that bridges the gap between the car you drive and the connected world you live in — wireless CarPlay, seamless streaming, instant setup. Clean. Simple. No dealer visit required.<\/p><p>We exist at the forefront of in-car technology because we believe every driver deserves a modern experience, without complexity, without compromise, and without buying a new car to get it.<\/p><p><strong>Smarter driving starts here.<\/strong><\/p>",
+            "text": "<p>We're on a mission to modernize the in-car experience for every driver on the road — not just those who can afford a new vehicle. Cars are getting smarter, but millions of people are still stuck with outdated factory screens that don't keep up with how they live.</p><p>AutoLinkr is changing that. We build technology that bridges the gap between the car you drive and the connected world you live in — wireless CarPlay, seamless streaming, instant setup. Clean. Simple. No dealer visit required.</p><p>We exist at the forefront of in-car technology because we believe every driver deserves a modern experience, without complexity, without compromise, and without buying a new car to get it.</p><p><strong>Smarter driving starts here.</strong></p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -1046,7 +1055,7 @@
       ],
       "name": "t:sections.reveal-image-with-text-overlay.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/DrivingNiceView.jpg",
+        "image": "shopify://shop_images/DrivingNiceView.jpg",
         "content_width": "small",
         "content_position": "md:items-center md:justify-start",
         "text_alignment": "left",
@@ -1082,7 +1091,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We're on a mission to modernize the in-car experience for every driver on the road — not just those who can afford a new vehicle. Cars are getting smarter, but millions of people are still stuck with outdated factory screens that don't keep up with how they live.<\/p><p>AutoLinkr is changing that. We build technology that bridges the gap between the car you drive and the connected world you live in — wireless CarPlay, seamless streaming, instant setup. Clean. Simple. No dealer visit required.<\/p><p>We exist at the forefront of in-car technology because we believe every driver deserves a modern experience, without complexity, without compromise, and without buying a new car to get it.<\/p><p><strong>Smarter driving starts here.<\/strong><\/p>",
+            "text": "<p>We're on a mission to modernize the in-car experience for every driver on the road — not just those who can afford a new vehicle. Cars are getting smarter, but millions of people are still stuck with outdated factory screens that don't keep up with how they live.</p><p>AutoLinkr is changing that. We build technology that bridges the gap between the car you drive and the connected world you live in — wireless CarPlay, seamless streaming, instant setup. Clean. Simple. No dealer visit required.</p><p>We exist at the forefront of in-car technology because we believe every driver deserves a modern experience, without complexity, without compromise, and without buying a new car to get it.</p><p><strong>Smarter driving starts here.</strong></p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -1099,7 +1108,7 @@
           "disabled": true,
           "settings": {
             "button_label": "Check Compatibility",
-            "button_link": "\/pages\/compatibility",
+            "button_link": "/pages/compatibility",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": false,

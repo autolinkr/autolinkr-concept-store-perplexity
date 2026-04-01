@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "{{ shop.brand.logo }}",
@@ -8,11 +17,11 @@
     "logo_width_mobile": 150,
     "favicon": "",
     "color_text": "#F7F7F8",
-    "color_background": "#080809",
+    "color_background": "#0a0c10",
     "color_highlight": "#3B8EF8",
     "color_keyboard_focus": "#3B8EF8",
-    "color_shadow": "#080809",
-    "color_image_background": "#0F0F12",
+    "color_shadow": "#0a0c10",
+    "color_image_background": "#0a0c10",
     "color_price": "#F7F7F8",
     "color_sale_price": "#3B8EF8",
     "color_sale_tag": "#3B8EF8",
@@ -26,7 +35,7 @@
     "color_drawer_button_text": "#FFFFFF",
     "color_drawer_button_background": "#3B8EF8",
     "color_drawer_button_gradient": "",
-    "color_drawer_overlay": "#080809",
+    "color_drawer_overlay": "#0a0c10",
     "color_success_text": "#34D06A",
     "color_success_background": "#0F1A12",
     "color_error_text": "#FF4D40",

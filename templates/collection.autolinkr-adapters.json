@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "al-collection-hero": {
@@ -15,10 +24,10 @@
           "settings": {
             "position": 4,
             "column_size": "2",
-            "heading": "Already have Pro? Upgrade to Elite™",
-            "content": "<p>Elite adds split-screen multitasking and a faster processor. The ultimate upgrade.<\/p>",
-            "button_label": "Shop Elite — $199.99",
-            "button_link": "\/products\/autolinkr-elite",
+            "heading": "Already have Pro? Upgrade to Elite\u2122",
+            "content": "<p>Elite adds split-screen multitasking and a faster processor. The ultimate upgrade.</p>",
+            "button_label": "Shop Elite \u2014 $199.99",
+            "button_link": "/products/autolinkr-elite",
             "button_style": "primary",
             "button_external": false,
             "button_icon": true,

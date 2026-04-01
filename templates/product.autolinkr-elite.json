@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main-product": {
@@ -21,7 +12,7 @@
           }
         },
         "areviews_reviews_importer_areviews_title_rating_zV3Mzm": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {}
         },
         "title": {
@@ -76,7 +67,7 @@
           }
         },
         "moon_bundles_app_block_LN6Nw4": {
-          "type": "shopify://apps/moon-bundles/blocks/app-block/aaf4cd95-8b9b-4a14-b929-0f7fc8fced27",
+          "type": "shopify:\/\/apps\/moon-bundles\/blocks\/app-block\/aaf4cd95-8b9b-4a14-b929-0f7fc8fced27",
           "settings": {
             "moonbundle_selected_product": "{{product}}"
           }
@@ -112,7 +103,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Elite™ is our most powerful CarPlay adapter ever built. Everything in Pro—wireless CarPlay, Android Auto, and full Google Play streaming—plus split-screen multitasking that no other adapter can do.</p><p>Navigate with Waze on one half of your screen while Netflix runs on the other. 8GB of RAM and a faster processor mean smooth performance, no lag, and zero dropped connections—even with multiple apps running.</p><p>64GB of onboard storage means your downloaded shows, playlists, and offline maps are always there. Plug in once. It auto-connects every drive after. This is the last car upgrade you'll ever need.</p>",
+            "content": "<p>AutoLinkr Elite™ is our most powerful CarPlay adapter ever built. Everything in Pro—wireless CarPlay, Android Auto, and full Google Play streaming—plus split-screen multitasking that no other adapter can do.<\/p><p>Navigate with Waze on one half of your screen while Netflix runs on the other. 8GB of RAM and a faster processor mean smooth performance, no lag, and zero dropped connections—even with multiple apps running.<\/p><p>64GB of onboard storage means your downloaded shows, playlists, and offline maps are always there. Plug in once. It auto-connects every drive after. This is the last car upgrade you'll ever need.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -125,7 +116,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto.</p><p>Compatible with 500+ models from Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.</p><p><a href=\"/pages/supported-cars\">Check Your Car →</a></p><p>Not sure? Contact us and we'll confirm in minutes.</p>",
+            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto.<\/p><p>Compatible with 500+ models from Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.<\/p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.<\/p><p><a href=\"\/pages\/supported-cars\">Check Your Car →<\/a><\/p><p>Not sure? Contact us and we'll confirm in minutes.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -138,7 +129,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "What's Included",
-            "content": "<p>✔ AutoLinkr Elite™<br/>✔ USB-C to USB-A Cable<br/>✔ USB-C to USB-C Cable<br/>✔ User Manual</p>",
+            "content": "<p>✔ AutoLinkr Elite™<br\/>✔ USB-C to USB-A Cable<br\/>✔ USB-C to USB-C Cable<br\/>✔ User Manual<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -151,7 +142,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping & Returns",
-            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee — if AutoLinkr doesn't work with your car or you're not satisfied, return it for full in-store credit. We cover return shipping.</p><p>Lifetime customer support: support@theautolinkr.com</p>",
+            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.<\/p><p>30-day money-back guarantee — if AutoLinkr doesn't work with your car or you're not satisfied, return it for full in-store credit. We cover return shipping.<\/p><p>Lifetime customer support: support@theautolinkr.com<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -220,7 +211,7 @@
         "heading": "The Most Powerful CarPlay Adapter. Period.",
         "heading_tag": "h2",
         "subheading": "Drag to rotate. See every angle of the device that changes how you drive.",
-        "glb_url": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb",
+        "glb_url": "https:\/\/cdn.shopify.com\/3d\/models\/5d8d79bbe28535d5\/AutoLinkr_With_Light.glb",
         "ios_ar_url": "",
         "alt_text": "AutoLinkr Elite™ 3D model — drag to rotate",
         "auto_rotate": true,
@@ -228,7 +219,7 @@
         "rotation_speed": 20,
         "ar": false,
         "cta_label": "",
-        "cta_link": "/products/autolinkr-elite",
+        "cta_link": "\/products\/autolinkr-elite",
         "ghost_label": "",
         "ghost_link": ""
       }
@@ -239,56 +230,56 @@
         "logo_BNQjrK": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-forbes.png",
+            "image": "shopify:\/\/shop_images\/press-logo-forbes.png",
             "link": ""
           }
         },
         "logo_HpAwFD": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-the-verge.png",
+            "image": "shopify:\/\/shop_images\/press-logo-the-verge.png",
             "link": ""
           }
         },
         "logo_fDRtAr": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-wired.png",
+            "image": "shopify:\/\/shop_images\/press-logo-wired.png",
             "link": ""
           }
         },
         "logo_m8YU6M": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-techradar.png",
+            "image": "shopify:\/\/shop_images\/press-logo-techradar.png",
             "link": ""
           }
         },
         "logo_k3PTcY": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-car-and-driver.png",
+            "image": "shopify:\/\/shop_images\/press-logo-car-and-driver.png",
             "link": ""
           }
         },
         "logo_EiBcYz": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-motor-trend.png",
+            "image": "shopify:\/\/shop_images\/press-logo-motor-trend.png",
             "link": ""
           }
         },
         "logo_8s019s": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-road-and-track.png",
+            "image": "shopify:\/\/shop_images\/press-logo-road-and-track.png",
             "link": ""
           }
         },
         "logo_9L6U6Z": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/press-logo-business-insider.png",
+            "image": "shopify:\/\/shop_images\/press-logo-business-insider.png",
             "link": ""
           }
         }
@@ -322,12 +313,12 @@
         "media_max_width": 900,
         "text_align": "center",
         "eyebrow": "Real customers. Real results.",
-        "heading": "Verified by <strong>50,000+</strong> Drivers",
+        "heading": "Verified by <strong>50,000+<\/strong> Drivers",
         "heading_tag": "h2",
         "subheading": "",
         "youtube_id": "8B6vj1-NabM",
         "video_url": "",
-        "poster_image": "shopify://shop_images/ElevenLabs_image_nano-banana-2_Create_a_cle..._2026-02-27T21_51_25_1.png",
+        "poster_image": "shopify:\/\/shop_images\/ElevenLabs_image_nano-banana-2_Create_a_cle..._2026-02-27T21_51_25_1.png",
         "autoplay": false,
         "cta_label": "",
         "cta_link": "",
@@ -338,9 +329,9 @@
     "image-compatibility": {
       "type": "al-compatibility",
       "settings": {
-        "image": "shopify://shop_images/2M2A9277.jpg",
+        "image": "shopify:\/\/shop_images\/2M2A9277.jpg",
         "button_label": "Check Your Car's Compatibility →",
-        "button_link": "/pages/supported-cars",
+        "button_link": "\/pages\/supported-cars",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -362,7 +353,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Only AutoLinkr Elite™ delivers true split-screen on your factory CarPlay display. Waze runs on one half, Netflix on the other — both live, both full-resolution, at the same time. No other adapter does this.</p>",
+            "text": "<p>Only AutoLinkr Elite™ delivers true split-screen on your factory CarPlay display. Waze runs on one half, Netflix on the other — both live, both full-resolution, at the same time. No other adapter does this.<\/p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 40,
@@ -392,13 +383,13 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/IMG_5795.jpg",
+        "image": "shopify:\/\/shop_images\/IMG_5795.jpg",
         "image_height": "adapt",
         "image_width": "medium",
         "layout": "image_first",
         "text_alignment": "left",
         "content_position": "md:items-center",
-        "image_mobile": "shopify://shop_images/IMG_5795.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/IMG_5795.jpg",
         "image_height_mobile": "auto",
         "text_alignment_mobile": "left",
         "color_text": "",
@@ -430,8 +421,8 @@
             "body": "Insert into your car's factory USB port. No tools, no drilling.",
             "badge": "30 sec",
             "image_url": "",
-            "image": "shopify://shop_images/IMG_6758.jpg",
-            "image_ratio": "4/3"
+            "image": "shopify:\/\/shop_images\/IMG_6758.jpg",
+            "image_ratio": "4\/3"
           }
         },
         "step-2": {
@@ -441,8 +432,8 @@
             "body": "Pair via Bluetooth once. Your car remembers it forever.",
             "badge": "One time",
             "image_url": "",
-            "image": "shopify://shop_images/IMG_6761_2.jpg",
-            "image_ratio": "16/9"
+            "image": "shopify:\/\/shop_images\/IMG_6761_2.jpg",
+            "image_ratio": "16\/9"
           }
         },
         "step-3": {
@@ -452,8 +443,8 @@
             "body": "Wireless CarPlay + split-screen streaming fires up automatically every drive.",
             "badge": "Every drive, automatic",
             "image_url": "",
-            "image": "shopify://shop_images/IMG_2863.heic",
-            "image_ratio": "1/1"
+            "image": "shopify:\/\/shop_images\/IMG_2863.heic",
+            "image_ratio": "1\/1"
           }
         }
       },
@@ -469,7 +460,7 @@
         "heading": "Plug In. Connect. Enjoy.",
         "subheading": "No tools. No mechanic. 60 seconds.",
         "cta_label": "▶ Watch Setup Video",
-        "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
+        "cta_link": "https:\/\/youtu.be\/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
       }
     },
     "video-built-to-perform": {
@@ -487,7 +478,7 @@
         "heading": "Built to Last. Built to Perform.",
         "heading_tag": "h2",
         "subheading": "Premium aircraft-grade materials. Engineered to run cool, stay connected, and outlast every drive.",
-        "glb_url": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb",
+        "glb_url": "https:\/\/cdn.shopify.com\/3d\/models\/5d8d79bbe28535d5\/AutoLinkr_With_Light.glb",
         "ios_ar_url": "",
         "alt_text": "AutoLinkr Elite™ build quality — drag to rotate",
         "auto_rotate": true,
@@ -519,11 +510,11 @@
             "heading": "Full Streaming — Netflix, YouTube & More",
             "text": "Stream any app on your factory screen via the Google Play Store — simultaneously with navigation.",
             "show_app_icons": true,
-            "app_icon_1": "shopify://shop_images/NetflixIcon.png",
-            "app_icon_2": "shopify://shop_images/YoutubeIcon.png",
-            "app_icon_3": "shopify://shop_images/Disney_Icon2.png",
-            "app_icon_4": "shopify://shop_images/HuluIcon.png",
-            "app_icon_5": "shopify://shop_images/SpotifyAppIcon.png"
+            "app_icon_1": "shopify:\/\/shop_images\/NetflixIcon.png",
+            "app_icon_2": "shopify:\/\/shop_images\/YoutubeIcon.png",
+            "app_icon_3": "shopify:\/\/shop_images\/Disney_Icon2.png",
+            "app_icon_4": "shopify:\/\/shop_images\/HuluIcon.png",
+            "app_icon_5": "shopify:\/\/shop_images\/SpotifyAppIcon.png"
           }
         },
         "feat-3": {
@@ -573,7 +564,7 @@
       ],
       "settings": {
         "eyebrow": "",
-        "heading": "<strong>Packed With Purpose.</strong>",
+        "heading": "<strong>Packed With Purpose.<\/strong>",
         "subheading": "Six features that make Elite the most capable CarPlay adapter ever built.",
         "padding_top": 96,
         "padding_bottom": 96
@@ -586,7 +577,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"I've had the Pro for a year and finally upgraded to Elite. The split-screen alone is worth it — I run Waze on one side and Spotify on the other. It's a completely different experience.\"</p>",
+            "text": "<p>\"I've had the Pro for a year and finally upgraded to Elite. The split-screen alone is worth it — I run Waze on one side and Spotify on the other. It's a completely different experience.\"<\/p>",
             "author": "Daniel M.",
             "author_info": "2022 Toyota RAV4 — Verified Buyer",
             "author_url": "",
@@ -600,7 +591,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"My kids watch Netflix while I use Google Maps. No sharing the screen, no switching apps. Elite just handles everything at once. My whole family uses this car differently now.\"</p>",
+            "text": "<p>\"My kids watch Netflix while I use Google Maps. No sharing the screen, no switching apps. Elite just handles everything at once. My whole family uses this car differently now.\"<\/p>",
             "author": "Rachel T.",
             "author_info": "2021 Honda Pilot — Verified Buyer",
             "author_url": "",
@@ -614,7 +605,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Spent a week comparing Pro vs Elite. The 8GB RAM makes a real difference — apps open faster, never lag, never crash. If you're going to buy one, skip the Pro and get Elite.\"</p>",
+            "text": "<p>\"Spent a week comparing Pro vs Elite. The 8GB RAM makes a real difference — apps open faster, never lag, never crash. If you're going to buy one, skip the Pro and get Elite.\"<\/p>",
             "author": "Kevin A.",
             "author_info": "2020 BMW 3 Series — Verified Buyer",
             "author_url": "",
@@ -632,7 +623,7 @@
       ],
       "settings": {
         "transparent_header": false,
-        "image": "shopify://shop_images/IMG_6789_1.jpg",
+        "image": "shopify:\/\/shop_images\/IMG_6789_1.jpg",
         "image_height": "650px",
         "content_position": "md:items-center md:justify-center",
         "image_height_mobile": "auto",
@@ -660,7 +651,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"The 64GB storage is huge for road trips. I downloaded 3 seasons of a show before a drive from LA to Vegas. Kids didn't ask once if we were there yet.\"</p>",
+            "text": "<p>\"The 64GB storage is huge for road trips. I downloaded 3 seasons of a show before a drive from LA to Vegas. Kids didn't ask once if we were there yet.\"<\/p>",
             "author": "Marcus H.",
             "author_info": "2023 Ford Explorer — Verified Buyer",
             "author_url": "",
@@ -674,7 +665,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"I was skeptical about the price difference over Pro but after two weeks with Elite I get it. Faster, smoother, and split-screen is genuinely useful every single day.\"</p>",
+            "text": "<p>\"I was skeptical about the price difference over Pro but after two weeks with Elite I get it. Faster, smoother, and split-screen is genuinely useful every single day.\"<\/p>",
             "author": "Stephanie L.",
             "author_info": "2022 Hyundai Tucson — Verified Buyer",
             "author_url": "",
@@ -688,7 +679,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"The enhanced UI actually looks premium. My car screen looks like something from a $100k vehicle. Everyone who gets in asks what I did to my car. Best $200 I've ever spent.\"</p>",
+            "text": "<p>\"The enhanced UI actually looks premium. My car screen looks like something from a $100k vehicle. Everyone who gets in asks what I did to my car. Best $200 I've ever spent.\"<\/p>",
             "author": "Brian W.",
             "author_info": "2019 Kia Telluride — Verified Buyer",
             "author_url": "",
@@ -735,25 +726,25 @@
           "settings": {
             "product": "the-autolinkr-pro",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
+            "value_1": "<p>✓<\/p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>✓</p>",
+            "value_2": "<p>✓<\/p>",
             "heading_3": "Netflix & YouTube",
-            "value_3": "<p>✓</p>",
+            "value_3": "<p>✓<\/p>",
             "heading_4": "Google Play Store",
-            "value_4": "<p>✓</p>",
+            "value_4": "<p>✓<\/p>",
             "heading_5": "MicroSD Slot",
-            "value_5": "<p>✓</p>",
+            "value_5": "<p>✓<\/p>",
             "heading_6": "RAM",
-            "value_6": "<p>2GB</p>",
+            "value_6": "<p>2GB<\/p>",
             "heading_7": "Storage",
-            "value_7": "<p>16GB</p>",
+            "value_7": "<p>16GB<\/p>",
             "heading_8": "Enhanced UI",
-            "value_8": "<p>✗</p>",
+            "value_8": "<p>✗<\/p>",
             "heading_9": "Split Screen",
-            "value_9": "<p>✗</p>",
+            "value_9": "<p>✗<\/p>",
             "heading_10": "Price",
-            "value_10": "<p>$79.99</p>",
+            "value_10": "<p>$79.99<\/p>",
             "heading_11": "",
             "value_11": "",
             "heading_12": "",
@@ -792,25 +783,25 @@
           "settings": {
             "product": "the-autolinkr-elite",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
+            "value_1": "<p>✓<\/p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>✓</p>",
+            "value_2": "<p>✓<\/p>",
             "heading_3": "Netflix & YouTube",
-            "value_3": "<p>✓</p>",
+            "value_3": "<p>✓<\/p>",
             "heading_4": "Google Play Store",
-            "value_4": "<p>✓</p>",
+            "value_4": "<p>✓<\/p>",
             "heading_5": "MicroSD Slot",
-            "value_5": "<p>✓</p>",
+            "value_5": "<p>✓<\/p>",
             "heading_6": "RAM",
-            "value_6": "<p>8GB — 4x more</p>",
+            "value_6": "<p>8GB — 4x more<\/p>",
             "heading_7": "Storage",
-            "value_7": "<p>64GB — 4x more</p>",
+            "value_7": "<p>64GB — 4x more<\/p>",
             "heading_8": "Enhanced UI",
-            "value_8": "<p>✓</p>",
+            "value_8": "<p>✓<\/p>",
             "heading_9": "Split Screen",
-            "value_9": "<p>✓</p>",
+            "value_9": "<p>✓<\/p>",
             "heading_10": "Price",
-            "value_10": "<p>$199.99</p>",
+            "value_10": "<p>$199.99<\/p>",
             "heading_11": "",
             "value_11": "",
             "heading_12": "",
@@ -890,7 +881,7 @@
           "type": "question",
           "settings": {
             "title": "Will this work with my car?",
-            "text": "<p>Works with any 2016+ vehicle with factory CarPlay or Android Auto — that's 500+ models from Toyota, Honda, Ford, BMW, and 30+ brands. Not compatible with Tesla, Rivian, or Lucid.</p><p><a href=\"/pages/supported-cars\">Check your car →</a></p>",
+            "text": "<p>Works with any 2016+ vehicle with factory CarPlay or Android Auto — that's 500+ models from Toyota, Honda, Ford, BMW, and 30+ brands. Not compatible with Tesla, Rivian, or Lucid.<\/p><p><a href=\"\/pages\/supported-cars\">Check your car →<\/a><\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -899,7 +890,7 @@
           "type": "question",
           "settings": {
             "title": "What's the difference between Elite and Pro?",
-            "text": "<p>Both include wireless CarPlay, Android Auto, and full streaming. Elite adds:</p><ul><li><strong>Split-screen:</strong> Navigate and stream simultaneously — Pro cannot do this</li><li><strong>8GB RAM</strong> vs 2GB in Pro — 4x the processing power, no lag</li><li><strong>64GB storage</strong> vs 16GB in Pro — more downloaded content, more apps</li><li><strong>Enhanced UI</strong> — premium interface designed for Elite</li><li><strong>Faster CPU</strong> — apps open instantly, no waiting</li></ul>",
+            "text": "<p>Both include wireless CarPlay, Android Auto, and full streaming. Elite adds:<\/p><ul><li><strong>Split-screen:<\/strong> Navigate and stream simultaneously — Pro cannot do this<\/li><li><strong>8GB RAM<\/strong> vs 2GB in Pro — 4x the processing power, no lag<\/li><li><strong>64GB storage<\/strong> vs 16GB in Pro — more downloaded content, more apps<\/li><li><strong>Enhanced UI<\/strong> — premium interface designed for Elite<\/li><li><strong>Faster CPU<\/strong> — apps open instantly, no waiting<\/li><\/ul>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -908,7 +899,7 @@
           "type": "question",
           "settings": {
             "title": "Does the split-screen actually work while driving?",
-            "text": "<p>Yes — Elite's split-screen runs live while the car is in motion. You can have Waze directions on one half and a streaming app on the other. Video playback is intended for passengers. The driver should always focus on the road.</p>",
+            "text": "<p>Yes — Elite's split-screen runs live while the car is in motion. You can have Waze directions on one half and a streaming app on the other. Video playback is intended for passengers. The driver should always focus on the road.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -917,7 +908,7 @@
           "type": "question",
           "settings": {
             "title": "Do I need WiFi for streaming?",
-            "text": "<p>Streaming uses your phone's mobile hotspot — just turn it on and AutoLinkr connects automatically. Most plans include hotspot data. Many apps also support offline downloads so you can watch without any data connection at all.</p>",
+            "text": "<p>Streaming uses your phone's mobile hotspot — just turn it on and AutoLinkr connects automatically. Most plans include hotspot data. Many apps also support offline downloads so you can watch without any data connection at all.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -926,7 +917,7 @@
           "type": "question",
           "settings": {
             "title": "Is Elite worth the extra $120 over Pro?",
-            "text": "<p>If split-screen multitasking, significantly faster performance, or more storage matters to you — yes. Elite is built for power users who want the absolute best. If you primarily want wireless CarPlay and basic streaming, Pro handles that perfectly.</p>",
+            "text": "<p>If split-screen multitasking, significantly faster performance, or more storage matters to you — yes. Elite is built for power users who want the absolute best. If you primarily want wireless CarPlay and basic streaming, Pro handles that perfectly.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -935,7 +926,7 @@
           "type": "question",
           "settings": {
             "title": "Can I move it between cars?",
-            "text": "<p>Absolutely. It's completely portable — unplug from one car's USB port and plug into another. Works instantly in any compatible vehicle.</p>",
+            "text": "<p>Absolutely. It's completely portable — unplug from one car's USB port and plug into another. Works instantly in any compatible vehicle.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -944,7 +935,7 @@
           "type": "question",
           "settings": {
             "title": "What if it doesn't work with my car?",
-            "text": "<p>30-day money-back guarantee. Return it for full in-store credit. We cover return shipping. No questions asked.</p>",
+            "text": "<p>30-day money-back guarantee. Return it for full in-store credit. We cover return shipping. No questions asked.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -953,7 +944,7 @@
           "type": "question",
           "settings": {
             "title": "How long does shipping take?",
-            "text": "<p>Free standard shipping on all orders, 6-10 business days. Most orders placed before 2pm ET ship the same day.</p>",
+            "text": "<p>Free standard shipping on all orders, 6-10 business days. Most orders placed before 2pm ET ship the same day.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -1050,7 +1041,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Split-screen multitasking, 8GB RAM, 64GB storage, wireless CarPlay, and full streaming — all for $199.99 with free shipping and a 30-day guarantee.</p>",
+            "text": "<p>Split-screen multitasking, 8GB RAM, 64GB storage, wireless CarPlay, and full streaming — all for $199.99 with free shipping and a 30-day guarantee.<\/p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 40,
@@ -1133,7 +1124,7 @@
       "type": "apps",
       "blocks": {
         "areviews_reviews_importer_areviews_display_reviews_ptYpcf": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
             "hide_areviews_title_rating": false,
             "areviews_theme_font": "inherit",

@@ -31,7 +31,7 @@
             "icon": "lightning",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Wireless CarPlay & Android Auto — no cables, auto-connects every drive.",
+            "text": "Wireless CarPlay & Android Auto \u2014 no cables, auto-connects every drive.",
             "text_size": "text-base"
           }
         },
@@ -41,7 +41,7 @@
             "icon": "devices",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Stream Netflix, YouTube, Hulu, Disney+, Live TV and more — simultaneously with navigation.",
+            "text": "Stream Netflix, YouTube, Hulu, Disney+, Live TV and more \u2014 simultaneously with navigation.",
             "text_size": "text-base"
           }
         },
@@ -197,30 +197,30 @@
         "rounded": false
       }
     },
-
     "video-3d-elite": {
-      "type": "al-video-section",
+      "type": "al-model-viewer",
       "settings": {
         "padding_top": 80,
         "padding_bottom": 80,
         "max_width": 1200,
         "media_max_width": 900,
+        "viewer_height": 500,
+        "viewer_height_mobile": 360,
         "text_align": "center",
         "eyebrow": "AutoLinkr Elite\u2122 in 3D",
         "heading": "The Most Powerful CarPlay Adapter. Period.",
         "heading_tag": "h2",
-        "subheading": "See every angle of the device that changes how you drive.",
-        "youtube_id": "",
-        "video_url": "",
-        "custom_liquid": "<script type=\"module\" src=\"https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js\"></script><div style=\"padding: 0 40px;\"><model-viewer src=\"https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb\" camera-controls auto-rotate style=\"width: 100%; height: 500px;\"></model-viewer></div>",
-        "autoplay": false,
+        "subheading": "Drag to rotate. See every angle of the device that changes how you drive.",
+        "glb_url": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb",
+        "alt_text": "AutoLinkr Elite\u2122 3D model \u2014 drag to rotate",
+        "auto_rotate": true,
+        "auto_rotate_delay": 0,
+        "rotation_speed": 20,
+        "ar": false,
         "cta_label": "Shop AutoLinkr Elite\u2122",
-        "cta_link": "#",
-        "ghost_label": "",
-        "ghost_link": ""
+        "cta_link": "/products/autolinkr-elite"
       }
     },
-
     "logo-marquee": {
       "type": "al-logo-marquee",
       "blocks": {
@@ -301,7 +301,6 @@
         "divider": false
       }
     },
-
     "image-compatibility": {
       "type": "al-compatibility",
       "settings": {
@@ -312,7 +311,6 @@
         "padding_bottom": 72
       }
     },
-
     "image-splitscreen": {
       "type": "image-with-text",
       "blocks": {
@@ -354,7 +352,11 @@
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
         "image_position": "right",
         "image_width": "medium",
@@ -370,7 +372,6 @@
         "rounded": false
       }
     },
-
     "how-it-works": {
       "type": "al-how-it-works",
       "blocks": {
@@ -408,7 +409,11 @@
           }
         }
       },
-      "block_order": ["step-1", "step-2", "step-3"],
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3"
+      ],
       "settings": {
         "padding_top": 80,
         "padding_bottom": 80,
@@ -419,30 +424,30 @@
         "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
       }
     },
-
     "video-built-to-perform": {
-      "type": "al-video-section",
+      "type": "al-model-viewer",
       "settings": {
         "padding_top": 60,
         "padding_bottom": 60,
         "max_width": 1200,
         "media_max_width": 800,
+        "viewer_height": 420,
+        "viewer_height_mobile": 300,
         "text_align": "center",
         "eyebrow": "",
         "heading": "Built to Last. Built to Perform.",
         "heading_tag": "h2",
         "subheading": "Premium aircraft-grade materials. Engineered to run cool, stay connected, and outlast every drive.",
-        "youtube_id": "",
-        "video_url": "",
-        "custom_liquid": "<script type=\"module\" src=\"https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js\"></script><div style=\"padding: 0 40px;\"><model-viewer src=\"https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb\" camera-controls auto-rotate style=\"width: 100%; height: 400px;\"></model-viewer></div>",
-        "autoplay": false,
+        "glb_url": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb",
+        "alt_text": "AutoLinkr Elite\u2122 build quality \u2014 drag to rotate",
+        "auto_rotate": true,
+        "auto_rotate_delay": 500,
+        "rotation_speed": 15,
+        "ar": false,
         "cta_label": "",
-        "cta_link": "",
-        "ghost_label": "",
-        "ghost_link": ""
+        "cta_link": ""
       }
     },
-
     "multicolumn-features": {
       "type": "al-multicolumn-icons",
       "blocks": {
@@ -459,8 +464,8 @@
           "type": "feature",
           "settings": {
             "icon": "play",
-            "heading": "Full Streaming — Netflix, YouTube & More",
-            "text": "Stream any app on your factory screen via the Google Play Store — simultaneously with navigation.",
+            "heading": "Full Streaming \u2014 Netflix, YouTube & More",
+            "text": "Stream any app on your factory screen via the Google Play Store \u2014 simultaneously with navigation.",
             "show_app_icons": true,
             "app_icon_1": "shopify://shop_images/NetflixIcon.png",
             "app_icon_2": "shopify://shop_images/YoutubeIcon.png",
@@ -482,7 +487,7 @@
           "type": "feature",
           "settings": {
             "icon": "shield",
-            "heading": "8GB RAM — 4\u00d7 More Power",
+            "heading": "8GB RAM \u2014 4\u00d7 More Power",
             "text": "Handles multiple apps without lag. Faster CPU, smoother performance, zero dropped connections.",
             "show_app_icons": false
           }
@@ -491,7 +496,7 @@
           "type": "feature",
           "settings": {
             "icon": "download",
-            "heading": "64GB Storage — Always Ready",
+            "heading": "64GB Storage \u2014 Always Ready",
             "text": "Download shows, music, and maps before your trip. Never run out of space.",
             "show_app_icons": false
           }
@@ -506,7 +511,14 @@
           }
         }
       },
-      "block_order": ["feat-1", "feat-2", "feat-3", "feat-4", "feat-5", "feat-6"],
+      "block_order": [
+        "feat-1",
+        "feat-2",
+        "feat-3",
+        "feat-4",
+        "feat-5",
+        "feat-6"
+      ],
       "settings": {
         "eyebrow": "",
         "heading": "<strong>Packed With Purpose.</strong>",
@@ -515,7 +527,6 @@
         "padding_bottom": 96
       }
     },
-
     "testimonials-1": {
       "type": "testimonials-banner",
       "blocks": {
@@ -562,14 +573,17 @@
           }
         }
       },
-      "block_order": ["t1", "t2", "t3"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
       "settings": {
         "heading": "",
         "padding_top": 72,
         "padding_bottom": 72
       }
     },
-
     "video-review": {
       "type": "al-video-section",
       "settings": {
@@ -591,7 +605,6 @@
         "ghost_link": ""
       }
     },
-
     "testimonials-2": {
       "type": "testimonials-banner",
       "blocks": {
@@ -638,14 +651,17 @@
           }
         }
       },
-      "block_order": ["t4", "t5", "t6"],
+      "block_order": [
+        "t4",
+        "t5",
+        "t6"
+      ],
       "settings": {
         "heading": "",
         "padding_top": 72,
         "padding_bottom": 72
       }
     },
-
     "product-comparison": {
       "type": "product-comparison",
       "blocks": {
@@ -662,7 +678,10 @@
           }
         }
       },
-      "block_order": ["p-pro", "p-elite"],
+      "block_order": [
+        "p-pro",
+        "p-elite"
+      ],
       "settings": {
         "highlight_differences": true,
         "sticky_product_info": true,
@@ -697,7 +716,6 @@
         "rounded": false
       }
     },
-
     "faq": {
       "type": "faq",
       "blocks": {
@@ -774,7 +792,16 @@
           }
         }
       },
-      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ],
       "settings": {
         "style": "with-border",
         "heading": "Common Questions",
@@ -807,7 +834,6 @@
         "rounded": false
       }
     },
-
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -840,7 +866,6 @@
         "rounded": false
       }
     },
-
     "final-cta": {
       "type": "rich-text",
       "blocks": {
@@ -882,7 +907,11 @@
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
         "text_alignment": "center",
         "text_alignment_mobile": "center",
@@ -901,7 +930,6 @@
         "rounded": false
       }
     },
-
     "apps-reviews": {
       "type": "apps",
       "blocks": {},
@@ -912,7 +940,6 @@
       }
     }
   },
-
   "order": [
     "main-product",
     "video-3d-elite",

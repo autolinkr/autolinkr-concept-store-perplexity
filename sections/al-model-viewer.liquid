@@ -1,0 +1,173 @@
+{% comment %}
+  AL — Model Viewer Section
+  Interactive 3D model viewer using Google's <model-viewer> web component.
+  Matches al-video-section visual language: dark bg, eyebrow, heading, sub, CTA.
+{% endcomment %}
+
+<section class="al-mv-section" style="
+  background: rgb(var(--color-base-background));
+  padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+">
+  <div class="al-mv-section__inner page-width">
+
+    {%- if section.settings.eyebrow != blank -%}
+      <div class="al-mv-section__eyebrow">
+        <span class="al-label">{{ section.settings.eyebrow }}</span>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <{{ section.settings.heading_tag }} class="al-mv-section__heading">
+        {{ section.settings.heading }}
+      </{{ section.settings.heading_tag }}>
+    {%- endif -%}
+
+    {%- if section.settings.subheading != blank -%}
+      <p class="al-mv-section__sub">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    <div class="al-mv-section__viewer">
+      <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+      <model-viewer
+        src="{{ section.settings.glb_url }}"
+        {%- if section.settings.ios_ar_url != blank %} ios-src="{{ section.settings.ios_ar_url }}"{% endif %}
+        {%- if section.settings.alt_text != blank %} alt="{{ section.settings.alt_text | escape }}"{% else %} alt="{{ section.settings.heading | strip_html | escape }}"{% endif %}
+        camera-controls
+        {%- if section.settings.auto_rotate %} auto-rotate{% endif %}
+        {%- if section.settings.ar %} ar{% endif %}
+        auto-rotate-delay="{{ section.settings.auto_rotate_delay }}"
+        rotation-per-second="{{ section.settings.rotation_speed }}deg"
+        style="width: 100%; height: {{ section.settings.viewer_height }}px; background: transparent;"
+        loading="eager"
+        reveal="auto"
+      ></model-viewer>
+    </div>
+
+    {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
+      <div class="al-mv-section__cta">
+        <a href="{{ section.settings.cta_link }}" class="button button--primary al-btn-glow">
+          {{ section.settings.cta_label }} →
+        </a>
+        {%- if section.settings.ghost_label != blank and section.settings.ghost_link != blank -%}
+          <a href="{{ section.settings.ghost_link }}" class="button button--secondary">
+            {{ section.settings.ghost_label }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+  </div>
+</section>
+
+<style>
+  .al-mv-section__inner {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: {{ section.settings.text_align }};
+  }
+
+  .al-mv-section__eyebrow { margin-bottom: 16px; }
+
+  .al-mv-section__heading {
+    font-family: var(--al-font-display, 'General Sans', sans-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--al-text-1);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin: 0 auto 16px;
+    max-width: 760px;
+  }
+
+  .al-mv-section__sub {
+    color: var(--al-text-3);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+
+  .al-mv-section__viewer {
+    margin: 0 auto;
+    max-width: {{ section.settings.media_max_width }}px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0F0F12;
+    box-shadow: 0 32px 100px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255,255,255,0.06);
+  }
+
+  .al-mv-section__cta {
+    display: flex;
+    gap: 16px;
+    {%- if section.settings.text_align == 'center' -%}
+    justify-content: center;
+    {%- else -%}
+    justify-content: flex-start;
+    {%- endif -%}
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 750px) {
+    .al-mv-section__viewer model-viewer {
+      height: {{ section.settings.viewer_height_mobile }}px !important;
+    }
+    .al-mv-section__cta { justify-content: center; }
+    .al-mv-section__cta a { width: 100%; text-align: center; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "AL — Model Viewer",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top",    "label": "Padding top",        "min": 20, "max": 120, "step": 4, "default": 80,   "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom",     "min": 20, "max": 120, "step": 4, "default": 80,   "unit": "px" },
+    { "type": "range", "id": "max_width",      "label": "Content max width",  "min": 600, "max": 1400, "step": 20, "default": 1200, "unit": "px" },
+    { "type": "range", "id": "media_max_width","label": "Viewer max width",   "min": 400, "max": 1200, "step": 20, "default": 900,  "unit": "px" },
+    { "type": "range", "id": "viewer_height",        "label": "Viewer height (desktop)", "min": 200, "max": 800, "step": 20, "default": 500, "unit": "px" },
+    { "type": "range", "id": "viewer_height_mobile", "label": "Viewer height (mobile)",  "min": 200, "max": 600, "step": 20, "default": 360, "unit": "px" },
+    { "type": "select", "id": "text_align", "label": "Text alignment", "options": [
+        {"value": "center", "label": "Center"},
+        {"value": "left",   "label": "Left"}
+      ], "default": "center" },
+    { "type": "header", "content": "Content" },
+    { "type": "text",          "id": "eyebrow",    "label": "Eyebrow label" },
+    { "type": "inline_richtext","id": "heading",   "label": "Heading",    "default": "See It From Every Angle" },
+    { "type": "select", "id": "heading_tag", "label": "Heading tag", "options": [
+        {"value": "h2", "label": "H2"},
+        {"value": "h3", "label": "H3"}
+      ], "default": "h2" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading" },
+    { "type": "header", "content": "3D Model" },
+    { "type": "text", "id": "glb_url",    "label": "GLB model URL", "info": "Full URL to the .glb file. e.g. https://cdn.shopify.com/3d/models/.../model.glb", "default": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb" },
+    { "type": "text", "id": "ios_ar_url", "label": "USDZ URL (iOS AR, optional)", "info": "Optional .usdz file for iOS AR Quick Look" },
+    { "type": "text", "id": "alt_text",   "label": "Alt text", "default": "AutoLinkr Elite 3D model — drag to rotate" },
+    { "type": "checkbox", "id": "auto_rotate", "label": "Auto-rotate",  "default": true },
+    { "type": "range", "id": "auto_rotate_delay", "label": "Auto-rotate delay (ms)", "min": 0, "max": 5000, "step": 500, "default": 0 },
+    { "type": "range", "id": "rotation_speed",    "label": "Rotation speed (deg/sec)", "min": 5, "max": 60, "step": 5, "default": 20 },
+    { "type": "checkbox", "id": "ar", "label": "Enable AR (mobile AR Quick Look)", "default": false },
+    { "type": "header", "content": "CTA Buttons" },
+    { "type": "text", "id": "cta_label",   "label": "Primary button label" },
+    { "type": "url",  "id": "cta_link",    "label": "Primary button link" },
+    { "type": "text", "id": "ghost_label", "label": "Secondary button label" },
+    { "type": "url",  "id": "ghost_link",  "label": "Secondary button link" }
+  ],
+  "presets": [
+    {
+      "name": "AL — Model Viewer",
+      "settings": {
+        "eyebrow": "AutoLinkr Elite™ in 3D",
+        "heading": "The Most Powerful CarPlay Adapter. Period.",
+        "subheading": "Drag to rotate. See every angle of the device that changes how you drive.",
+        "glb_url": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb",
+        "auto_rotate": true,
+        "rotation_speed": 20
+      }
+    }
+  ]
+}
+{% endschema %}

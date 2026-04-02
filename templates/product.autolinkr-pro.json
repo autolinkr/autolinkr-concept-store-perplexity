@@ -40,14 +40,15 @@
             "icon": "lightning",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Wireless CarPlay & Android Auto",
+            "text": "Instant Wireless CarPlay & Android Auto",
             "text_size": "text-base"
           }
         },
         "bullet-2": {
           "type": "text",
           "settings": {
-            "icon": "devices",
+            "icon": "rocket",
+            "icon_image": "shopify://shop_images/6612880.png",
             "iwidth": "custom",
             "icon_width": 36,
             "text": "Stream Netflix, YouTube, Hulu, Disney+, Live TV and more!",

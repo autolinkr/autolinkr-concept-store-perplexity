@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-product": {
@@ -23,7 +32,7 @@
             "icon": "lightning",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "\ud83d\udce1 Wireless CarPlay & Android Auto \u2014 cut the cable, connect automatically every drive.",
+            "text": "📡 Wireless CarPlay & Android Auto — cut the cable, connect automatically every drive.",
             "text_size": "text-base"
           }
         },
@@ -33,7 +42,7 @@
             "icon": "devices",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "\u26a1 60-second setup \u2014 plug in once, pairs via Bluetooth, auto-connects every time you start your car.",
+            "text": "⚡ 60-second setup — plug in once, pairs via Bluetooth, auto-connects every time you start your car.",
             "text_size": "text-base"
           }
         },
@@ -43,7 +52,7 @@
             "icon": "check_mark",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "\ud83d\ude97 Works with 600+ car models \u2014 compatible with any factory wired CarPlay system from 2016+.",
+            "text": "🚗 Works with 600+ car models — compatible with any factory wired CarPlay system from 2016+.",
             "text_size": "text-base"
           }
         },
@@ -53,7 +62,9 @@
             "enable_dynamic_variants": true,
             "show_variant_labels": true,
             "picker_type": "button",
-            "enable_color_swatches": false
+            "enable_color_swatches": true,
+            "color_swatch_type": "variant",
+            "size_chart": ""
           }
         },
         "buy_buttons": {
@@ -87,7 +98,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Lite\u2122 does one thing exceptionally well: it converts your existing wired CarPlay system to fully wireless. No more plugging in your phone every time you get in the car.</p><p>Plug the adapter into your car\u2019s USB port, pair your iPhone once via Bluetooth, and from that point on CarPlay connects automatically the moment your car starts. Navigate with Apple Maps or Google Maps, take hands-free calls, use Siri, and play music through your factory speakers \u2014 all wirelessly.</p><p>Simple, reliable, and built for drivers who just want wireless CarPlay without complexity or a high price tag.</p>",
+            "content": "<p>AutoLinkr Lite™ does one thing exceptionally well: it converts your existing wired CarPlay system to fully wireless. No more plugging in your phone every time you get in the car.</p><p>Plug the adapter into your car’s USB port, pair your iPhone once via Bluetooth, and from that point on CarPlay connects automatically the moment your car starts. Navigate with Apple Maps or Google Maps, take hands-free calls, use Siri, and play music through your factory speakers — all wirelessly.</p><p>Simple, reliable, and built for drivers who just want wireless CarPlay without complexity or a high price tag.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -100,7 +111,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p>Requires a factory <strong>wired CarPlay</strong> system \u2014 your car must already support CarPlay via cable for this adapter to work.</p><p>Compatible with 600+ car models from 2016+: Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>iPhone 7 or later required. Android Auto also supported on compatible Android devices.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO, or vehicles without factory wired CarPlay.</p><p><a href=\"/pages/supported-cars\">Check Your Car \u2192</a></p>",
+            "content": "<p>Requires a factory <strong>wired CarPlay</strong> system — your car must already support CarPlay via cable for this adapter to work.</p><p>Compatible with 600+ car models from 2016+: Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>iPhone 7 or later required. Android Auto also supported on compatible Android devices.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO, or vehicles without factory wired CarPlay.</p><p><a href=\"/pages/supported-cars\">Check Your Car →</a></p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -113,7 +124,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "What's Included",
-            "content": "<ul><li>Wireless: 5GHz WiFi + Bluetooth 5.0</li><li>Supports: Apple CarPlay (wireless), Android Auto (wireless)</li><li>Connector: USB-A plug (fits factory USB port)</li><li>Auto-connect: Yes \u2014 no phone interaction required after initial pairing</li><li>Streaming: Not supported (CarPlay &amp; navigation only)</li></ul><p>Note: AutoLinkr Lite\u2122 does not support Google Play, Netflix, or third-party app streaming. For full streaming, see <a href=\"/products/the-autolinkr-pro\">AutoLinkr Pro\u2122</a>.</p>",
+            "content": "<ul><li>Wireless: 5GHz WiFi + Bluetooth 5.0</li><li>Supports: Apple CarPlay (wireless), Android Auto (wireless)</li><li>Connector: USB-A plug (fits factory USB port)</li><li>Auto-connect: Yes — no phone interaction required after initial pairing</li><li>Streaming: Not supported (CarPlay &amp; navigation only)</li></ul><p>Note: AutoLinkr Lite™ does not support Google Play, Netflix, or third-party app streaming. For full streaming, see <a href=\"/products/the-autolinkr-pro\">AutoLinkr Pro™</a>.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -126,7 +137,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping & Returns",
-            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee \u2014 return for full in-store credit. We cover return shipping.</p><p>1-Year Warranty \u2014 covered against manufacturing defects.</p><p><a href=\"mailto:support@theautolinkr.com\">support@theautolinkr.com</a></p>",
+            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee — return for full in-store credit. We cover return shipping.</p><p>1-Year Warranty — covered against manufacturing defects.</p><p><a href=\"mailto:support@theautolinkr.com\">support@theautolinkr.com</a></p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -134,11 +145,12 @@
         },
         "text-safety": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "\u26a0\ufe0f Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
+            "text": "⚠️ Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
             "text_size": "text-xs"
           }
         }
@@ -185,25 +197,25 @@
         "p-lite": {
           "type": "product",
           "settings": {
-            "product": "autolinkr-base",
+            "product": "the-autolinkr",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>\u2713</p>",
+            "value_1": "<p>✓</p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>\u2713</p>",
+            "value_2": "<p>✓</p>",
             "heading_3": "Netflix & YouTube",
-            "value_3": "<p>\u2717</p>",
+            "value_3": "<p>✗</p>",
             "heading_4": "Google Play Store",
-            "value_4": "<p>\u2717</p>",
+            "value_4": "<p>✗</p>",
             "heading_5": "MicroSD Slot",
-            "value_5": "<p>\u2717</p>",
+            "value_5": "<p>✗</p>",
             "heading_6": "RAM",
             "value_6": "<p>1GB</p>",
             "heading_7": "Storage",
             "value_7": "<p>8GB</p>",
             "heading_8": "Enhanced UI",
-            "value_8": "<p>\u2717</p>",
+            "value_8": "<p>✗</p>",
             "heading_9": "Split Screen",
-            "value_9": "<p>\u2717</p>",
+            "value_9": "<p>✗</p>",
             "heading_10": "Price",
             "value_10": "<p>$49.99</p>",
             "heading_11": "",
@@ -244,23 +256,23 @@
           "settings": {
             "product": "the-autolinkr-pro",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>\u2713</p>",
+            "value_1": "<p>✓</p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>\u2713</p>",
+            "value_2": "<p>✓</p>",
             "heading_3": "Netflix & YouTube",
-            "value_3": "<p>\u2713</p>",
+            "value_3": "<p>✓</p>",
             "heading_4": "Google Play Store",
-            "value_4": "<p>\u2713</p>",
+            "value_4": "<p>✓</p>",
             "heading_5": "MicroSD Slot",
-            "value_5": "<p>\u2713</p>",
+            "value_5": "<p>✓</p>",
             "heading_6": "RAM",
-            "value_6": "<p>2GB \u2014 2\u00d7 more</p>",
+            "value_6": "<p>2GB — 2× more</p>",
             "heading_7": "Storage",
-            "value_7": "<p>16GB \u2014 2\u00d7 more</p>",
+            "value_7": "<p>16GB — 2× more</p>",
             "heading_8": "Enhanced UI",
-            "value_8": "<p>\u2717</p>",
+            "value_8": "<p>✗</p>",
             "heading_9": "Split Screen",
-            "value_9": "<p>\u2717</p>",
+            "value_9": "<p>✗</p>",
             "heading_10": "Price",
             "value_10": "<p>$79.99</p>",
             "heading_11": "",
@@ -307,7 +319,7 @@
         "first_available_variant": true,
         "show_vendor": false,
         "show_price": true,
-        "heading": "Lite vs Pro \u2014 Which Is Right for You?",
+        "heading": "Lite vs Pro — Which Is Right for You?",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
@@ -364,7 +376,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Netflix, YouTube, Hulu & more \u2014 full Google Play streaming on your factory screen",
+            "text": "Netflix, YouTube, Hulu & more — full Google Play streaming on your factory screen",
             "text_size": "text-sm"
           }
         },
@@ -374,7 +386,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "2GB RAM \u2014 2\u00d7 more power for smooth multitasking",
+            "text": "2GB RAM — 2× more power for smooth multitasking",
             "text_size": "text-sm"
           }
         },
@@ -384,7 +396,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "16GB Storage \u2014 download shows, maps & apps",
+            "text": "16GB Storage — download shows, maps & apps",
             "text_size": "text-sm"
           }
         },
@@ -462,6 +474,19 @@
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 72,
         "padding_bottom": 72,
         "divider": false,
@@ -472,20 +497,34 @@
     "apps-reviews": {
       "type": "apps",
       "blocks": {
-        "areviews": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/display-reviews/a3c030e5-0c03-48e1-b0a5-5767609fedef",
+        "areviews_reviews_importer_areviews_display_reviews_iqJ9JP": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
-            "hide_title_rating": false,
-            "theme_font": "inherit",
-            "stars_color": "#f3c621",
-            "write_reviews_button_color": "#373737"
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
           }
         }
       },
       "block_order": [
-        "areviews"
+        "areviews_reviews_importer_areviews_display_reviews_iqJ9JP"
       ],
-      "settings": {}
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [

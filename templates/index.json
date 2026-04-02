@@ -121,29 +121,6 @@
       "disabled": true,
       "settings": {}
     },
-    "177510014462df714b": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_d39d6b7_T7QJPD": {
-          "type": "ai_gen_block_d39d6b7",
-          "settings": {
-            "shape_style": "waves",
-            "divider_color": "#3B8EF8",
-            "divider_height": 80,
-            "divider_height_mobile": 50,
-            "flip_horizontal": false,
-            "flip_vertical": false,
-            "spacing_top": 0,
-            "spacing_bottom": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_d39d6b7_T7QJPD"
-      ],
-      "settings": {}
-    },
     "image_with_text_overlay_H8g34U": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -1331,11 +1308,10 @@
   "order": [
     "al-brand-hero",
     "feature-strip",
-    "177510014462df714b",
-    "image_with_text_overlay_H8g34U",
     "reveal_image_with_text_overlay_9WUrPj",
     "reveal_video_with_text_overlay_iWMn4w",
     "al-hero-video",
+    "image_with_text_overlay_H8g34U",
     "al_video_section_h4Q3bA",
     "scrolling-text-trust",
     "featured-pro",

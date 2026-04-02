@@ -11,7 +11,18 @@
   "sections": {
     "main-page": {
       "type": "main-page",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
     },
     "compat-hero": {
       "type": "rich-text",
@@ -19,22 +30,42 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>\ud83d\udd0d COMPATIBILITY CHECKER</p>",
-            "text_size": "text-sm"
+            "text": "<p>🔍 COMPATIBILITY CHECKER</p>",
+            "text_font": "body",
+            "text_size": "text-sm",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "headline": {
           "type": "heading",
           "settings": {
             "heading": "Will AutoLinkr Work in Your Car?",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "subhead": {
           "type": "text",
           "settings": {
-            "text": "<p>Answer 3 questions and we'll tell you exactly which AutoLinkr is right for you \u2014 or browse the quick-match guide below.</p>",
-            "text_size": "text-base"
+            "text": "<p>Answer 3 questions and we'll tell you exactly which AutoLinkr is right for you — or browse the quick-match guide below.</p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -43,95 +74,53 @@
         "headline",
         "subhead"
       ],
+      "disabled": true,
       "settings": {
         "text_alignment": "center",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 64,
         "padding_bottom": 24,
         "divider": false,
+        "narrow": true,
         "rounded": false
       }
     },
     "quiz-placeholder": {
       "type": "custom-liquid",
       "settings": {
-        "liquid": "<div class=\"al-quiz-placeholder\" style=\"max-width:780px;margin:0 auto 0;padding:0 20px 56px;\">\n  <div style=\"background:linear-gradient(135deg,#0F0F12,#161619);border:1px dashed rgba(59,142,248,0.4);border-radius:20px;padding:56px 48px;text-align:center;position:relative;overflow:hidden;\">\n    <!-- glow accent -->\n    <div style=\"position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:200px;background:radial-gradient(ellipse,rgba(59,142,248,0.18),transparent 70%);pointer-events:none;\"></div>\n    <div style=\"font-size:48px;margin-bottom:20px;\">\ud83c\udfaf</div>\n    <p style=\"font-size:1.4rem;font-weight:700;color:#F7F7F8;margin:0 0 10px;font-family:'General Sans',sans-serif;letter-spacing:-0.02em;\">Compatibility Quiz</p>\n    <p style=\"color:#8A8A94;font-size:0.9375rem;margin:0 0 28px;line-height:1.65;\">3 quick questions \u2192 instant product match.<br>Quiz embed coming soon \u2014 use the guide below in the meantime.</p>\n    <div style=\"display:inline-flex;align-items:center;gap:8px;background:rgba(59,142,248,0.12);border:1px solid rgba(59,142,248,0.3);border-radius:9999px;padding:8px 20px;\">\n      <span style=\"width:8px;height:8px;border-radius:50%;background:#3B8EF8;display:inline-block;animation:pulse 1.8s ease-in-out infinite;\"></span>\n      <span style=\"color:#3B8EF8;font-size:0.8125rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;\">Quiz Coming Soon</span>\n    </div>\n    <p style=\"color:#4A4A52;font-size:0.75rem;margin:24px 0 0;\">To embed: Paste your Jebbit / Typeform / custom quiz iframe code here via the theme editor \u2192 Custom Liquid section</p>\n  </div>\n  <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}</style>\n</div>"
-      }
-    },
-    "scrolling-marquee": {
-      "type": "scrolling-text",
-      "blocks": {
-        "m1": {
-          "type": "text",
-          "settings": {
-            "text": "Works With 500+ Car Models",
-            "text_size": 80,
-            "text_font": "body",
-            "highlighted_text": "none"
-          }
-        },
-        "m2": {
-          "type": "text",
-          "settings": {
-            "text": "60-Second Setup",
-            "text_size": 80,
-            "text_font": "body",
-            "highlighted_text": "none"
-          }
-        },
-        "m3": {
-          "type": "text",
-          "settings": {
-            "text": "No Factory CarPlay? No Problem",
-            "text_size": 80,
-            "text_font": "body",
-            "highlighted_text": "none"
-          }
-        },
-        "m4": {
-          "type": "text",
-          "settings": {
-            "text": "iPhone & Android",
-            "text_size": 80,
-            "text_font": "body",
-            "highlighted_text": "none"
-          }
-        },
-        "m5": {
-          "type": "text",
-          "settings": {
-            "text": "Wireless. Plug In. Drive.",
-            "text_size": 80,
-            "text_font": "body",
-            "highlighted_text": "none"
-          }
-        }
-      },
-      "block_order": [
-        "m1",
-        "m2",
-        "m3",
-        "m4",
-        "m5"
-      ],
-      "settings": {
-        "direction": "left",
-        "speed": 25,
-        "grid_horizontal": 70,
-        "enable_twin": true,
-        "enable_parallax": false,
+        "liquid": "<div class=\"al-quiz-placeholder\" style=\"max-width:780px;margin:0 auto 0;padding:0 20px 56px;\">\n  <div style=\"background:linear-gradient(135deg,#0F0F12,#161619);border:1px dashed rgba(59,142,248,0.4);border-radius:20px;padding:56px 48px;text-align:center;position:relative;overflow:hidden;\">\n    <div style=\"position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:200px;background:radial-gradient(ellipse,rgba(59,142,248,0.18),transparent 70%);pointer-events:none;\"></div>\n    <p style=\"font-size:0.8125rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#3B8EF8;margin:0 0 14px;\">Takes 30 seconds</p>\n    <p style=\"font-size:1.5rem;font-weight:700;color:#F7F7F8;margin:0 0 12px;font-family:'General Sans',sans-serif;letter-spacing:-0.02em;line-height:1.25;\">Does the AutoLinkr<br>work with your car?</p>\n    <p style=\"color:#8A8A94;font-size:0.9375rem;margin:0 0 6px;line-height:1.65;\">Tell us your make, model, and year — we'll confirm<br>compatibility across all four AutoLinkr devices instantly.</p>\n    <p style=\"color:#F7F7F8;font-size:0.9375rem;font-weight:600;margin:0 0 28px;\">Find out in 30 seconds.</p>\n    <div style=\"display:inline-flex;align-items:center;gap:8px;background:rgba(59,142,248,0.12);border:1px solid rgba(59,142,248,0.3);border-radius:9999px;padding:8px 20px;margin-bottom:28px;\">\n      <span style=\"width:8px;height:8px;border-radius:50%;background:#3B8EF8;display:inline-block;animation:pulse 1.8s ease-in-out infinite;\"></span>\n      <span style=\"color:#3B8EF8;font-size:0.8125rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;\">Check My Car</span>\n    </div>\n    <div style=\"display:flex;justify-content:center;gap:24px;flex-wrap:wrap;\">\n      <span style=\"color:#8A8A94;font-size:0.8125rem;display:flex;align-items:center;gap:6px;\"><span style=\"color:#3B8EF8;font-size:16px;\">✓</span> No account needed</span>\n      <span style=\"color:#8A8A94;font-size:0.8125rem;display:flex;align-items:center;gap:6px;\"><span style=\"color:#3B8EF8;font-size:16px;\">✓</span> Instant result</span>\n      <span style=\"color:#8A8A94;font-size:0.8125rem;display:flex;align-items:center;gap:6px;\"><span style=\"color:#3B8EF8;font-size:16px;\">✓</span> 500+ vehicles supported</span>\n    </div>\n    <p style=\"color:#4A4A52;font-size:0.75rem;margin:28px 0 0;\">To embed: Paste your Jebbit / Typeform / custom quiz iframe code here via the theme editor → Custom Liquid section</p>\n  </div>\n  <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}</style>\n</div>",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "padding_top": 28,
-        "padding_bottom": 28,
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
         "divider": false,
+        "narrow": false,
         "rounded": false
       }
     },
@@ -142,14 +131,26 @@
           "type": "heading",
           "settings": {
             "heading": "Find Your AutoLinkr in 10 Seconds",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "h2": {
           "type": "text",
           "settings": {
-            "text": "<p>Match your car situation to the right product \u2014 it's that simple.</p>",
-            "text_size": "text-base"
+            "text": "<p>Match your car situation to the right product — it's that simple.</p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -157,16 +158,36 @@
         "h1",
         "h2"
       ],
+      "disabled": true,
       "settings": {
         "text_alignment": "center",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 56,
         "padding_bottom": 8,
         "divider": false,
+        "narrow": true,
         "rounded": false
       }
     },
@@ -177,32 +198,44 @@
           "type": "column",
           "settings": {
             "icon": "devices",
+            "custom_icon": "",
             "heading": "I have factory CarPlay",
-            "text": "<p><strong>AutoLinkr Pro\u2122 \u2014 $79.99</strong><br>Cut the wire. Get wireless CarPlay + Netflix, YouTube, and Google Play on your factory screen. Best value.</p><p><a href=\"/products/the-autolinkr-pro\">Shop Pro \u2192</a></p>"
+            "text": "<p><strong>AutoLinkr Pro™ — $79.99</strong><br>Cut the wire. Get wireless CarPlay + Netflix, YouTube, and Google Play on your factory screen. Best value.</p><p><a href=\"/products/the-autolinkr-pro\">Shop Pro →</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "col-2": {
           "type": "column",
           "settings": {
             "icon": "lightning",
+            "custom_icon": "",
             "heading": "I want split-screen multitasking",
-            "text": "<p><strong>AutoLinkr Elite\u2122 \u2014 $199.99</strong><br>The only adapter with true split-screen \u2014 run navigation and Netflix side-by-side. Faster CPU, more powerful.</p><p><a href=\"/products/the-autolinkr-elite\">Shop Elite \u2192</a></p>"
+            "text": "<p><strong>AutoLinkr Elite™ — $199.99</strong><br>The only adapter with true split-screen — run navigation and Netflix side-by-side. Faster CPU, more powerful.</p><p><a href=\"/products/the-autolinkr-elite\">Shop Elite →</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "col-3": {
           "type": "column",
           "settings": {
             "icon": "phone",
+            "custom_icon": "",
             "heading": "My car has no factory CarPlay",
-            "text": "<p><strong>AutoLinkr Tablet\u2122</strong><br>A portable wireless CarPlay screen that works in any car \u2014 no factory screen needed. Works with iPhone and Android.</p><p><a href=\"/products/autolinkr-tablet\">Shop Tablet \u2192</a></p>"
+            "text": "<p><strong>AutoLinkr Tablet™</strong><br>A portable wireless CarPlay screen that works in any car — no factory screen needed. Works with iPhone and Android.</p><p><a href=\"/products/autolinkr-tablet\">Shop Tablet →</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "col-4": {
           "type": "column",
           "settings": {
             "icon": "eye",
+            "custom_icon": "",
             "heading": "I want dashcam protection",
-            "text": "<p><strong>AutoLinkr Dash\u2122 \u2014 $69.99</strong><br>Dual 1080P front + rear, IR night vision, 170\u00b0 wide-angle. Works in any car with a 12V outlet.</p><p><a href=\"/products/autolinkr-dashcam\">Shop Dash \u2192</a></p>"
+            "text": "<p><strong>AutoLinkr Dash™ — $69.99</strong><br>Dual 1080P front + rear, IR night vision, 170° wide-angle. Works in any car with a 12V outlet.</p><p><a href=\"/products/autolinkr-dashcam\">Shop Dash →</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -212,6 +245,7 @@
         "col-3",
         "col-4"
       ],
+      "disabled": true,
       "settings": {
         "style": "icons-top",
         "columns": 2,
@@ -219,12 +253,24 @@
         "heading": "",
         "heading_size": "h3",
         "heading_alignment": "center",
+        "heading_tag": "h2",
         "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 16,
         "padding_bottom": 64,
         "divider": false,
@@ -238,22 +284,42 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>\u2139\ufe0f IMPORTANT TO KNOW</p>",
-            "text_size": "text-sm"
+            "text": "<p>ℹ️ IMPORTANT TO KNOW</p>",
+            "text_font": "body",
+            "text_size": "text-sm",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
             "heading": "Pro & Elite require existing factory CarPlay",
-            "heading_size": "h3"
+            "heading_size": "h3",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>AutoLinkr Pro and Elite are wireless adapters \u2014 they upgrade your existing wired factory CarPlay to wireless. They do not add CarPlay to cars that do not have it. If your car did not come with CarPlay from the factory, the AutoLinkr Tablet\u2122 is the right solution.</p>",
-            "text_size": "text-base"
+            "text": "<p>AutoLinkr Pro and Elite are wireless adapters — they upgrade your existing wired factory CarPlay to wireless. They do not add CarPlay to cars that do not have it. If your car did not come with CarPlay from the factory, the AutoLinkr Tablet™ is the right solution.</p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -262,16 +328,36 @@
         "heading",
         "body"
       ],
+      "disabled": true,
       "settings": {
         "text_alignment": "center",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 48,
         "padding_bottom": 48,
         "divider": false,
+        "narrow": true,
         "rounded": false
       }
     },
@@ -282,24 +368,33 @@
           "type": "column",
           "settings": {
             "icon": "clipboard",
+            "custom_icon": "",
             "heading": "Check Your Car Manual",
-            "text": "<p>Look for 'Apple CarPlay' in your vehicle's feature list or infotainment section of the owner's manual.</p>"
+            "text": "<p>Look for 'Apple CarPlay' in your vehicle's feature list or infotainment section of the owner's manual.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "step-2": {
           "type": "column",
           "settings": {
             "icon": "phone",
+            "custom_icon": "",
             "heading": "Plug In Your iPhone",
-            "text": "<p>Connect your iPhone via USB to your car. If a CarPlay icon appears on your screen, you have factory CarPlay.</p>"
+            "text": "<p>Connect your iPhone via USB to your car. If a CarPlay icon appears on your screen, you have factory CarPlay.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "step-3": {
           "type": "column",
           "settings": {
             "icon": "devices",
+            "custom_icon": "",
             "heading": "Check Your Screen",
-            "text": "<p>If you see a CarPlay interface when plugged in \u2014 you're compatible with Pro or Elite. No interface? Try the Tablet.</p>"
+            "text": "<p>If you see a CarPlay interface when plugged in — you're compatible with Pro or Elite. No interface? Try the Tablet.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -308,6 +403,7 @@
         "step-2",
         "step-3"
       ],
+      "disabled": true,
       "settings": {
         "style": "icons-top",
         "columns": 3,
@@ -315,12 +411,24 @@
         "heading": "Not Sure If You Have Factory CarPlay?",
         "heading_size": "h3",
         "heading_alignment": "center",
+        "heading_tag": "h2",
         "subheading": "Here's how to check in 30 seconds",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 0,
         "padding_bottom": 64,
         "divider": false,
@@ -335,14 +443,26 @@
           "type": "heading",
           "settings": {
             "heading": "Still Not Sure? We'll Help.",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Message us your car make, model, and year \u2014 we'll tell you exactly which AutoLinkr fits.</p>",
-            "text_size": "text-base"
+            "text": "<p>Message us your car make, model, and year — we'll tell you exactly which AutoLinkr fits.</p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
         "btn": {
@@ -351,7 +471,9 @@
             "button_label": "Contact Us",
             "button_link": "/pages/contact",
             "button_style": "primary",
-            "button_size": "large"
+            "button_size": "large",
+            "button_external": false,
+            "button_icon": true
           }
         }
       },
@@ -360,16 +482,36 @@
         "body",
         "btn"
       ],
+      "disabled": true,
       "settings": {
         "text_alignment": "center",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 64,
         "padding_bottom": 80,
         "divider": false,
+        "narrow": true,
         "rounded": false
       }
     }
@@ -378,7 +520,6 @@
     "main-page",
     "compat-hero",
     "quiz-placeholder",
-    "scrolling-marquee",
     "quick-match-heading",
     "quick-match-grid",
     "carplay-explainer",

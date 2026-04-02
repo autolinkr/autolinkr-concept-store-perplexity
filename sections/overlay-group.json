@@ -13,21 +13,28 @@
   "sections": {
     "cart-drawer": {
       "type": "cart-drawer",
+      "custom_css": [],
       "settings": {
         "show_vendor": false,
-        "show_cart_note": true,
-        "show_shipping_calculator": true,
+        "show_cart_note": false,
+        "show_shipping_calculator": false,
         "add_discount_code": true,
         "show_view_cart_button": false,
         "show_checkout_button": true,
         "show_free_shipping_bar": true,
-        "free_shipping_minimum_amount": "1000",
+        "free_shipping_minimum_amount": "100",
         "cart_recommendations_enabled": true,
-        "cart_recommendations_heading": "You may also like",
+        "cart_recommendations_heading": "Often Bundled With",
         "cart_recommendations_limit": 5,
         "show_cart_recommendations_vendor": false,
         "show_cart_recommendations_price": true,
-        "cart_recommendations_products": [],
+        "cart_recommendations_products": [
+          "the-autolinkr-elite",
+          "autodash",
+          "autolinkr-charging-mount",
+          "autolinkr-smart-aroma-diffuser-1",
+          "autolinkr-gapguard™-universal-car-seat-gap-filler"
+        ],
         "empty_cart_message": "<p>Not sure where to start?<br/>Try these collections:</p>",
         "empty_cart_collections": [],
         "recent_products_enabled": true,

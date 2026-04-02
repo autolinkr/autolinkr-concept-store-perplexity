@@ -1157,19 +1157,190 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   border-bottom: 1px solid var(--al-border-subtle) !important;
 }
 
-/* ─── CART DRAWER ─────────────────────────────────────────── */
-.cart-drawer,
-.drawer__inner {
+/* ─── CART DRAWER ────────────────────────────────────────── */
+/* Style only .drawer__inner (the sliding panel) — NEVER #CartDrawer directly,
+   which is the full-screen overlay wrapper and causes a blackout if given a bg. */
+
+/* Panel — dark brand surface */
+#CartDrawer > .drawer__inner {
+  --color-foreground: var(--color-base-text);
+  --color-background: var(--color-base-background);
   background-color: var(--al-surface) !important;
   border-left: 1px solid var(--al-border) !important;
   color: var(--al-text-1) !important;
 }
-.cart-drawer .cart-item__name,
-.drawer__inner .cart-item__name { color: var(--al-text-1) !important; }
-.cart-drawer .price,
-.drawer__inner .price { color: var(--al-text-1) !important; }
-.cart-drawer .cart-item__details,
-.drawer__inner p { color: var(--al-text-2) !important; }
+
+/* Text */
+#CartDrawer .drawer__inner .heading,
+#CartDrawer .drawer__inner .drawer__title {
+  color: var(--al-text-1) !important;
+}
+#CartDrawer .drawer__inner .horizontal-product__title {
+  color: var(--al-text-1) !important;
+}
+#CartDrawer .drawer__inner .price {
+  color: var(--al-text-1) !important;
+}
+#CartDrawer .drawer__inner .text-opacity,
+#CartDrawer .drawer__inner .cart-item__details,
+#CartDrawer .drawer__inner .tax-note,
+#CartDrawer .drawer__inner .unit-price {
+  color: var(--al-text-3) !important;
+}
+#CartDrawer .drawer__inner .link {
+  color: var(--al-accent) !important;
+}
+
+/* Close button — plain X, no circle border */
+#CartDrawer .drawer__close {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+#CartDrawer .drawer__close .btn-fill {
+  display: none !important;
+}
+#CartDrawer .drawer__close .btn-text,
+#CartDrawer .drawer__close svg,
+#CartDrawer .drawer__close .icon {
+  color: var(--al-text-1) !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+#CartDrawer .drawer__close:hover svg {
+  color: var(--al-accent) !important;
+}
+
+/* Product cards */
+#CartDrawer .horizontal-product {
+  border: 1px solid var(--al-border) !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+}
+#CartDrawer .horizontal-product__media {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+/* Quantity selector */
+#CartDrawer .cart-quantity {
+  border: 1px solid var(--al-border) !important;
+  border-radius: 8px !important;
+}
+#CartDrawer .quantity__input {
+  background: transparent !important;
+  border: none !important;
+  color: var(--al-text-1) !important;
+}
+#CartDrawer .quantity__button {
+  color: var(--al-text-1) !important;
+}
+#CartDrawer .quantity__button svg {
+  color: var(--al-text-1) !important;
+}
+
+/* Inputs inside cart */
+#CartDrawer .drawer__inner input,
+#CartDrawer .drawer__inner textarea,
+#CartDrawer .drawer__inner select {
+  background-color: var(--al-surface-2) !important;
+  border: 1px solid var(--al-border) !important;
+  color: var(--al-text-1) !important;
+}
+
+/* Footer area */
+#CartDrawer .drawer__footer {
+  border-top: 1px solid var(--al-border) !important;
+}
+#CartDrawer .drawer__footer-top {
+  border-bottom: 1px solid var(--al-border) !important;
+}
+#CartDrawer .drawer__footer-top button {
+  color: var(--al-text-1) !important;
+}
+#CartDrawer .drawer__footer-top svg,
+#CartDrawer .drawer__footer-top .icon {
+  color: var(--al-text-1) !important;
+}
+#CartDrawer .totals__subtotal {
+  color: var(--al-text-3) !important;
+}
+#CartDrawer .totals__subtotal-value {
+  color: var(--al-text-1) !important;
+}
+
+/* Checkout button — brand primary */
+#CartDrawer .button--primary {
+  background: rgb(var(--color-base-button)) !important;
+  color: rgb(var(--color-base-button-text)) !important;
+  border: none !important;
+}
+#CartDrawer .button--primary .btn-fill {
+  background: transparent !important;
+}
+#CartDrawer .button--primary:hover {
+  background: rgba(var(--color-base-button)/ 0.85) !important;
+}
+
+/* Secondary button inside cart */
+#CartDrawer .button--secondary {
+  border-color: var(--al-border) !important;
+  color: var(--al-text-1) !important;
+  background: transparent !important;
+}
+#CartDrawer .button--secondary .btn-fill {
+  background: transparent !important;
+}
+
+/* "Often Bundled With" — hide arrow nav, show dot pagination */
+#CartDrawer .indicators {
+  display: none !important;
+}
+#CartDrawer .complementary-products .flickity-page-dots {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 12px !important;
+  gap: 6px !important;
+}
+#CartDrawer .flickity-page-dot::before {
+  background-color: var(--al-surface-4) !important;
+  box-shadow: none !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+}
+#CartDrawer .flickity-page-dot.is-selected::before,
+#CartDrawer .flickity-page-dot[aria-current=true]::before {
+  background-color: var(--al-accent) !important;
+}
+
+/* Recommendations heading */
+#CartDrawer .recommend__title {
+  color: var(--al-text-1) !important;
+}
+
+/* Badges */
+#CartDrawer .badge {
+  background: var(--al-accent-dim) !important;
+  border-color: var(--al-accent-border) !important;
+  color: var(--al-accent) !important;
+}
+
+/* Scrollbar — subtle */
+#CartDrawer .drawer__scrollable::-webkit-scrollbar { width: 4px; }
+#CartDrawer .drawer__scrollable::-webkit-scrollbar-track { background: transparent; }
+#CartDrawer .drawer__scrollable::-webkit-scrollbar-thumb { background: var(--al-surface-4); border-radius: 4px; }
+
+/* Modal containers inside cart (note, discount, shipping) */
+#CartDrawer .modal__container {
+  background: var(--al-surface) !important;
+  border-top: 1px solid var(--al-border) !important;
+}
+#CartDrawer .modal__header { color: var(--al-text-1) !important; }
+#CartDrawer .modal__header .close svg { color: var(--al-text-1) !important; }
 
 /* ─── FOOTER — built-in Concept footer override ──────────── */
 /* Remove border on footer accordion columns at desktop — keep mobile borders */

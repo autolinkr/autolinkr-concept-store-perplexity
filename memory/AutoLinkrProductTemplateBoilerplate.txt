@@ -1,0 +1,158 @@
+================================================================================
+  AUTOLINKR™ — STANDARD PRODUCT PAGE TEMPLATE
+  The Essential Blueprint for Any New Product
+
+  HOW TO USE: Copy this file, rename it for your product
+  (e.g., AutoLinkrDashPageDesign.txt), and fill in every [FILL IN].
+  This gives you a complete, conversion-ready product page with 3 sections.
+
+  THIS IS NOT A LANDING PAGE. For flagship landing pages (Pro, Elite),
+  see AutoLinkrProPageDesign.txt — those add video sections, feature
+  breakdowns, comparisons, testimonial banners, and final CTAs on top
+  of this foundation.
+
+  EVERY product page starts here. Flagship pages build on top.
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: PRODUCT HERO (main-product)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This section IS the product page. Everything the customer needs to
+understand the product and buy it lives here.
+
+
+─── IMAGE GALLERY ───
+
+  1. [FILL IN] Hero shot — clean background, studio-lit, product clearly visible
+  2. [FILL IN] In-use / lifestyle shot — product in its real environment
+  3. [FILL IN] Close-up detail — build quality, texture, premium feel
+  4. [FILL IN] What's in the box — everything laid out
+  5. [FILL IN] Scale reference — product in hand or next to familiar object
+  [OPTIONAL] Demo video (10s, 1:1, MP4, autoplay/muted/loop)
+
+  RULES:
+    - 1:1 aspect ratio, first image loads eagerly, rest lazy-load
+    - Minimum 4 images. Video strongly recommended for tech products.
+
+
+─── PRODUCT INFO BLOCKS (top to bottom) ───
+
+  a) BADGE (optional)
+     [FILL IN] One-liner: "⭐ Best Seller" / "🔥 New" / "🏆 Top Rated" / etc.
+
+  b) TITLE
+     [FILL IN] _______________
+     Format: "AutoLinkr [Product]™"
+
+  c) KEY BENEFITS (3 bullets — problems solved, not features listed)
+     [FILL IN] _______________
+     [FILL IN] _______________
+     [FILL IN] _______________
+     Rule: Emoji prefix, 15 words max, answer "what does this do FOR ME?"
+
+  d) VARIANT PICKER
+     Only if the product has variants. Button-style, not dropdowns.
+
+  e) APP BLOCKS (optional)
+     Moon Bundles, Areviews star display — only if configured for this product.
+
+  f) BUY BUTTONS
+     "Add to Cart — $[price]" full width + dynamic checkout (Shop Pay, etc.)
+
+  g) STICKY BUY BUTTON
+     Mobile only. Shows product name + price + Add to Cart when hero scrolls away.
+
+  h) ICON LIST
+     🚚 Free Shipping · 🛡 30-Day Guarantee · 🔒 Secure Checkout
+
+  i) COLLAPSIBLE TABS (4 rows)
+
+     Tab 1 — Description
+       [FILL IN] 2-3 short paragraphs. Conversational. Answer:
+       What is it? Who is it for? Why is it better?
+
+     Tab 2 — [FILL IN label: "Compatibility" / "What's Included" / "Sizing" / etc.]
+       [FILL IN] Whatever is most relevant to this product type.
+
+     Tab 3 — Tech Specs
+       [FILL IN] Bullet list: Label: Value (one per line)
+
+     Tab 4 — Shipping & Returns
+       "FREE standard shipping on all orders (6-10 business days).
+       Most orders placed before 2pm ET ship the same day.
+       30-day money-back guarantee — return for full in-store credit.
+       We cover return shipping. support@theautolinkr.com"
+
+  j) SAFETY DISCLAIMER (only for electronics / streaming products)
+     [FILL IN if needed] _______________
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: PRODUCT RECOMMENDATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Shopify's native algorithmic recommendations. No manual setup needed.
+
+  HEADING: [FILL IN] "You Might Also Like" / "Complete Your Setup" /
+           "Customers Also Bought"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: REVIEWS WIDGET (apps — Areviews)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Full review feed with filtering, sorting, and customer photos.
+App-generated — just place the Areviews app block in the template.
+
+
+================================================================================
+  SECTION ORDER
+================================================================================
+
+  1. main-product ......... Gallery + info + buy + tabs (the whole page)
+  2. recommendations ...... "You Might Also Like"
+  3. apps ................. Full review widget
+
+  That's it. Three sections. Ship it.
+
+
+================================================================================
+  ASSETS CHECKLIST
+================================================================================
+
+  [FILL IN] Hero product shot (1:1, studio-lit)
+  [FILL IN] Lifestyle / in-use shot
+  [FILL IN] Close-up detail shot
+  [FILL IN] What's in the box shot
+  [FILL IN] Scale reference shot
+  [FILL IN] Product description (2-3 paragraphs)
+  [FILL IN] 3 key benefit bullets
+  [FILL IN] Tab 2 content (compatibility / what's included / sizing)
+  [FILL IN] Tech specs bullet list
+  [OPTIONAL] Demo video (10s, 1:1, MP4)
+
+
+================================================================================
+  UPGRADING TO A LANDING PAGE
+================================================================================
+
+  When a product becomes a flagship and needs a full landing page experience,
+  add sections ON TOP of this foundation. Pick from:
+
+    • Feature strip ........... Trust badges (setup, shipping, warranty)
+    • Product video ........... Demo or 3D showcase
+    • Press logos .............. "As Featured In" credibility strip
+    • Feature breakdown ........ Icon grid or image-with-text deep dive
+    • Compatibility section .... Dedicated objection handler with CTA
+    • How it works ............. 3-step visual walkthrough
+    • Testimonials banner ...... 3 review cards with parallax
+    • Product comparison ....... Side-by-side vs other products in the line
+    • Cross-sell ............... Featured companion product
+    • FAQ ...................... Hesitation-focused accordion (5-10 Qs)
+    • Final CTA ............... Value stack + last push
+
+  See AutoLinkrProPageDesign.txt for a complete example of this.
+
+================================================================================

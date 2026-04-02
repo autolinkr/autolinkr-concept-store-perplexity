@@ -121,6 +121,104 @@
       "disabled": true,
       "settings": {}
     },
+    "177510014462df714b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_d39d6b7_T7QJPD": {
+          "type": "ai_gen_block_d39d6b7",
+          "settings": {
+            "shape_style": "waves",
+            "divider_color": "#3B8EF8",
+            "divider_height": 80,
+            "divider_height_mobile": 50,
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_d39d6b7_T7QJPD"
+      ],
+      "settings": {}
+    },
+    "image_with_text_overlay_H8g34U": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_FfJJ6L": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_d4rmDw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stream Anything. Drive Wirelessly.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h1",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_WUkpE6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Introducing <strong>AutoLinkr Dash™</strong> — a premium dual-camera dashcam system built for total vehicle protection.</p><p>✔ <strong>Dual 1080P Front & Rear Recording<br/></strong>✔ <strong>IR Night Vision<br/></strong>✔ <strong>WiFi App Control<br/></strong>✔ <strong>Loop Recording<br/></strong>✔ <strong>Wide-Angle Coverage</strong></p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_FfJJ6L",
+        "heading_d4rmDw",
+        "text_WUkpE6"
+      ],
+      "name": "t:sections.image-with-text-overlay.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/2M2A9251-HDR.jpg",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/2M2A9251-HDR_785f8e42-23a8-4ca1-9228-14905bfa29dd.png",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 25,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
     "reveal_image_with_text_overlay_9WUrPj": {
       "type": "reveal-image-with-text-overlay",
       "blocks": {
@@ -164,6 +262,7 @@
         "heading_FiM76H",
         "text_M7Q94N"
       ],
+      "disabled": true,
       "name": "t:sections.reveal-image-with-text-overlay.name",
       "settings": {
         "image": "shopify://shop_images/2M2A9251-HDR.jpg",
@@ -182,7 +281,7 @@
         "color_button_background": "",
         "color_button_gradient": "",
         "color_overlay": "#171717",
-        "overlay_opacity": 12,
+        "overlay_opacity": 50,
         "enable_parallax": false
       }
     },
@@ -695,6 +794,80 @@
         "rounded": false
       }
     },
+    "image_with_text_overlay_hWKw98": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_nUUYAE": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_3EYcrJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Introducing AutoLinkr Dash™",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_jVdGJG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing <strong>AutoLinkr Dash™</strong> — a premium dual-camera dashcam system built for total vehicle protection.</p><p>✔ <strong>Dual 1080P Front & Rear Recording<br/></strong>✔ <strong>IR Night Vision<br/></strong>✔ <strong>WiFi App Control<br/></strong>✔ <strong>Loop Recording<br/></strong>✔ <strong>Wide-Angle Coverage</strong></p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_nUUYAE",
+        "heading_3EYcrJ",
+        "text_jVdGJG"
+      ],
+      "name": "t:sections.image-with-text-overlay.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Gemini_Generated_Image_7zn81w7zn81w7zn8.png",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/Gemini_Generated_Image_cvuaiycvuaiycvua_c9a4c276-75c6-4830-9392-8930e98a9cb6.png",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 50,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
     "reveal_image_with_text_overlay_VeiR6G": {
       "type": "reveal-image-with-text-overlay",
       "blocks": {
@@ -738,6 +911,7 @@
         "heading_qH8Wbb",
         "text_qn9xmB"
       ],
+      "disabled": true,
       "name": "t:sections.reveal-image-with-text-overlay.name",
       "settings": {
         "image": "shopify://shop_images/AutoDash_Mounted.png",
@@ -765,7 +939,6 @@
       "blocks": {
         "title": {
           "type": "title",
-          "disabled": true,
           "settings": {
             "title_size": "product-title-md",
             "title_size_mobile": "product-title-md",
@@ -1158,6 +1331,8 @@
   "order": [
     "al-brand-hero",
     "feature-strip",
+    "177510014462df714b",
+    "image_with_text_overlay_H8g34U",
     "reveal_image_with_text_overlay_9WUrPj",
     "reveal_video_with_text_overlay_iWMn4w",
     "al-hero-video",
@@ -1166,6 +1341,7 @@
     "featured-pro",
     "product-comparison",
     "dash-intro-header",
+    "image_with_text_overlay_hWKw98",
     "reveal_image_with_text_overlay_VeiR6G",
     "featured-dash",
     "collection-list",

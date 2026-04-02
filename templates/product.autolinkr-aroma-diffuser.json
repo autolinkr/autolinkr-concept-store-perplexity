@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-product": {
@@ -21,6 +30,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "🌿 Premium scent — Cedar Woods fragrance, 30+ days per refill.",
             "text_size": "text-base"
           }
@@ -29,6 +40,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "🚗 Clip-on vent mount — installs in seconds, works in any car.",
             "text_size": "text-base"
           }
@@ -37,6 +50,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
             "text": "⚡ USB-powered — no batteries, no mess, always-on freshness every drive.",
             "text_size": "text-base"
           }
@@ -47,16 +62,21 @@
             "enable_dynamic_variants": true,
             "show_variant_labels": true,
             "picker_type": "button",
-            "enable_color_swatches": false
+            "enable_color_swatches": false,
+            "color_swatch_type": "color",
+            "size_chart": ""
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_quantity_selector": true,
+            "show_price": false,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false,
-            "enable_back_in_stock": true
+            "enable_back_in_stock": true,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
           }
         },
         "sticky_buy_button": {
@@ -146,6 +166,7 @@
         "thumbnail_position": "below",
         "image_ratio": "square",
         "image_zoom": "lightbox",
+        "hide_variants": false,
         "enable_video_autoplay": true,
         "enable_video_looping": true,
         "mobile_layout": "full_width",
@@ -170,6 +191,19 @@
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 72,
         "padding_bottom": 72,
         "divider": false,
@@ -180,19 +214,39 @@
     "apps-reviews": {
       "type": "apps",
       "blocks": {
-        "areviews": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/display-reviews/a3c030e5-0c03-48e1-b0a5-5767609fedef",
+        "areviews_reviews_importer_areviews_display_reviews_JDdD9k": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
-            "hide_title_rating": false,
-            "theme_font": "inherit",
-            "stars_color": "#f3c621",
-            "write_reviews_button_color": "#373737"
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
           }
         }
       },
-      "block_order": ["areviews"],
-      "settings": {}
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_JDdD9k"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
-  "order": ["main-product", "product-recommendations", "apps-reviews"]
+  "order": [
+    "main-product",
+    "product-recommendations",
+    "apps-reviews"
+  ]
 }

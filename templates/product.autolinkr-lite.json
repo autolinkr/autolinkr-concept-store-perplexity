@@ -1,0 +1,498 @@
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "areviews_title_rating": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-lg",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h1",
+            "show_price": true,
+            "show_rating": false
+          }
+        },
+        "benefit-1": {
+          "type": "text",
+          "settings": {
+            "icon": "lightning",
+            "iwidth": "custom",
+            "icon_width": 36,
+            "text": "Wireless CarPlay & Android Auto — plug in once, connects automatically every drive.",
+            "text_size": "text-base"
+          }
+        },
+        "benefit-2": {
+          "type": "text",
+          "settings": {
+            "icon": "devices",
+            "iwidth": "custom",
+            "icon_width": 36,
+            "text": "Stream Netflix, YouTube, Hulu & more on your factory screen via Google Play.",
+            "text_size": "text-base"
+          }
+        },
+        "benefit-3": {
+          "type": "text",
+          "settings": {
+            "icon": "check_mark",
+            "iwidth": "custom",
+            "icon_width": 36,
+            "text": "60-second setup — no tools, no installation, works with 500+ car models.",
+            "text_size": "text-base"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "enable_dynamic_variants": true,
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": true,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "icon_list": {
+          "type": "icon_list",
+          "settings": {
+            "heading": "",
+            "enable_carousel": false,
+            "show_below_media": true
+          }
+        },
+        "tab-description": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Description",
+            "content": "<p>AutoLinkr Lite\u2122 brings wireless CarPlay and Android Auto to your factory screen \u2014 no cables, no appointments, no hassle. Plug it into your car's USB port once, pair via Bluetooth, and it auto-connects every drive.</p><p>The full Google Play Store means Netflix, YouTube, Hulu, Disney+, Spotify, and thousands more apps run natively on your factory display. AutoLinkr Lite\u2122 is the essential wireless CarPlay upgrade for drivers who want streaming without the premium price tag.</p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "tab-compatibility": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Compatibility",
+            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto \u2014 500+ models from Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.</p><p><a href=\"/pages/supported-cars\">Check Your Car \u2192</a></p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "tab-specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "What's Included",
+            "content": "<p>\u2714 AutoLinkr Lite\u2122<br/>\u2714 USB-C to USB-A Cable<br/>\u2714 USB-C to USB-C Cable<br/>\u2714 User Manual</p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "tab-shipping": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Shipping & Returns",
+            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee \u2014 return for full in-store credit. We cover return shipping.</p><p>1-Year Warranty \u2014 covered against manufacturing defects.</p><p><a href=\"mailto:support@theautolinkr.com\">support@theautolinkr.com</a></p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "text-safety": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "\u26a0\ufe0f Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.",
+            "text_size": "text-xs"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_title_rating",
+        "title",
+        "benefit-1",
+        "benefit-2",
+        "benefit-3",
+        "variant_picker",
+        "buy_buttons",
+        "sticky_buy_button",
+        "icon_list",
+        "tab-description",
+        "tab-compatibility",
+        "tab-specs",
+        "tab-shipping",
+        "text-safety"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": 55,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "below",
+        "image_ratio": "square",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": true,
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+
+    "product-comparison": {
+      "type": "product-comparison",
+      "blocks": {
+        "p-lite": {
+          "type": "product",
+          "settings": {
+            "product": "autolinkr-base",
+            "heading_1": "Wireless CarPlay",
+            "value_1": "<p>\u2713</p>",
+            "heading_2": "Wireless Android Auto",
+            "value_2": "<p>\u2713</p>",
+            "heading_3": "Netflix & YouTube",
+            "value_3": "<p>\u2713</p>",
+            "heading_4": "Google Play Store",
+            "value_4": "<p>\u2713</p>",
+            "heading_5": "MicroSD Slot",
+            "value_5": "<p>\u2713</p>",
+            "heading_6": "RAM",
+            "value_6": "<p>1GB</p>",
+            "heading_7": "Storage",
+            "value_7": "<p>8GB</p>",
+            "heading_8": "Enhanced UI",
+            "value_8": "<p>\u2717</p>",
+            "heading_9": "Split Screen",
+            "value_9": "<p>\u2717</p>",
+            "heading_10": "Price",
+            "value_10": "<p>$49.99</p>",
+            "heading_11": "",
+            "value_11": "",
+            "heading_12": "",
+            "value_12": "",
+            "heading_13": "",
+            "value_13": "",
+            "heading_14": "",
+            "value_14": "",
+            "heading_15": "",
+            "value_15": "",
+            "heading_16": "",
+            "value_16": "",
+            "heading_17": "",
+            "value_17": "",
+            "heading_18": "",
+            "value_18": "",
+            "heading_19": "",
+            "value_19": "",
+            "heading_20": "",
+            "value_20": "",
+            "heading_21": "",
+            "value_21": "",
+            "heading_22": "",
+            "value_22": "",
+            "heading_23": "",
+            "value_23": "",
+            "heading_24": "",
+            "value_24": "",
+            "heading_25": "",
+            "value_25": "",
+            "text_size": "text-sm"
+          }
+        },
+        "p-pro": {
+          "type": "product",
+          "settings": {
+            "product": "the-autolinkr-pro",
+            "heading_1": "Wireless CarPlay",
+            "value_1": "<p>\u2713</p>",
+            "heading_2": "Wireless Android Auto",
+            "value_2": "<p>\u2713</p>",
+            "heading_3": "Netflix & YouTube",
+            "value_3": "<p>\u2713</p>",
+            "heading_4": "Google Play Store",
+            "value_4": "<p>\u2713</p>",
+            "heading_5": "MicroSD Slot",
+            "value_5": "<p>\u2713</p>",
+            "heading_6": "RAM",
+            "value_6": "<p>2GB \u2014 2\u00d7 more</p>",
+            "heading_7": "Storage",
+            "value_7": "<p>16GB \u2014 2\u00d7 more</p>",
+            "heading_8": "Enhanced UI",
+            "value_8": "<p>\u2717</p>",
+            "heading_9": "Split Screen",
+            "value_9": "<p>\u2717</p>",
+            "heading_10": "Price",
+            "value_10": "<p>$79.99</p>",
+            "heading_11": "",
+            "value_11": "",
+            "heading_12": "",
+            "value_12": "",
+            "heading_13": "",
+            "value_13": "",
+            "heading_14": "",
+            "value_14": "",
+            "heading_15": "",
+            "value_15": "",
+            "heading_16": "",
+            "value_16": "",
+            "heading_17": "",
+            "value_17": "",
+            "heading_18": "",
+            "value_18": "",
+            "heading_19": "",
+            "value_19": "",
+            "heading_20": "",
+            "value_20": "",
+            "heading_21": "",
+            "value_21": "",
+            "heading_22": "",
+            "value_22": "",
+            "heading_23": "",
+            "value_23": "",
+            "heading_24": "",
+            "value_24": "",
+            "heading_25": "",
+            "value_25": "",
+            "text_size": "text-sm"
+          }
+        }
+      },
+      "block_order": ["p-lite", "p-pro"],
+      "settings": {
+        "highlight_differences": true,
+        "sticky_product_info": true,
+        "first_available_variant": true,
+        "show_vendor": false,
+        "show_price": true,
+        "heading": "Lite vs Pro \u2014 Which Is Right for You?",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "rgba(0,0,0,0)",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+
+    "pro-upsell": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h3",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "upsell-eyebrow": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "The most popular CarPlay upgrade.",
+            "text_size": "text-sm"
+          }
+        },
+        "upsell-1": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "2GB RAM \u2014 2\u00d7 more power for smoother streaming & multitasking",
+            "text_size": "text-sm"
+          }
+        },
+        "upsell-2": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "16GB Storage \u2014 2\u00d7 more room for downloaded shows, maps & apps",
+            "text_size": "text-sm"
+          }
+        },
+        "upsell-3": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "Faster CPU \u2014 apps open quicker, fewer dropped connections",
+            "text_size": "text-sm"
+          }
+        },
+        "upsell-4": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "Trusted by 50,000+ drivers \u2014 our most-reviewed product",
+            "text_size": "text-sm"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {
+            "show_sold_out": false,
+            "show_save_amount": false,
+            "save_type": "percent"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "upsell-eyebrow",
+        "upsell-1",
+        "upsell-2",
+        "upsell-3",
+        "upsell-4",
+        "badges",
+        "buy_buttons"
+      ],
+      "settings": {
+        "product": "the-autolinkr-pro",
+        "enable_sticky_info": true,
+        "media_size": 50,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_limit": 4,
+        "columns": 4,
+        "carousel_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Complete Your Setup",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+
+    "apps-reviews": {
+      "type": "apps",
+      "blocks": {
+        "areviews": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/display-reviews/a3c030e5-0c03-48e1-b0a5-5767609fedef",
+          "settings": {
+            "hide_title_rating": false,
+            "theme_font": "inherit",
+            "stars_color": "#f3c621",
+            "write_reviews_button_color": "#373737"
+          }
+        }
+      },
+      "block_order": ["areviews"],
+      "settings": {}
+    }
+  },
+
+  "order": [
+    "main-product",
+    "product-comparison",
+    "pro-upsell",
+    "product-recommendations",
+    "apps-reviews"
+  ]
+}

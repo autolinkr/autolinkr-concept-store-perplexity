@@ -23,7 +23,7 @@
             "icon": "lightning",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Wireless CarPlay & Android Auto — plug in once, connects automatically every drive.",
+            "text": "\ud83d\udce1 Wireless CarPlay & Android Auto \u2014 cut the cable, connect automatically every drive.",
             "text_size": "text-base"
           }
         },
@@ -33,7 +33,7 @@
             "icon": "devices",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Stream Netflix, YouTube, Hulu & more on your factory screen via Google Play.",
+            "text": "\u26a1 60-second setup \u2014 plug in once, pairs via Bluetooth, auto-connects every time you start your car.",
             "text_size": "text-base"
           }
         },
@@ -43,7 +43,7 @@
             "icon": "check_mark",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "60-second setup — no tools, no installation, works with 500+ car models.",
+            "text": "\ud83d\ude97 Works with 600+ car models \u2014 compatible with any factory wired CarPlay system from 2016+.",
             "text_size": "text-base"
           }
         },
@@ -87,7 +87,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Lite\u2122 brings wireless CarPlay and Android Auto to your factory screen \u2014 no cables, no appointments, no hassle. Plug it into your car's USB port once, pair via Bluetooth, and it auto-connects every drive.</p><p>The full Google Play Store means Netflix, YouTube, Hulu, Disney+, Spotify, and thousands more apps run natively on your factory display. AutoLinkr Lite\u2122 is the essential wireless CarPlay upgrade for drivers who want streaming without the premium price tag.</p>",
+            "content": "<p>AutoLinkr Lite\u2122 does one thing exceptionally well: it converts your existing wired CarPlay system to fully wireless. No more plugging in your phone every time you get in the car.</p><p>Plug the adapter into your car\u2019s USB port, pair your iPhone once via Bluetooth, and from that point on CarPlay connects automatically the moment your car starts. Navigate with Apple Maps or Google Maps, take hands-free calls, use Siri, and play music through your factory speakers \u2014 all wirelessly.</p><p>Simple, reliable, and built for drivers who just want wireless CarPlay without complexity or a high price tag.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -100,7 +100,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p>Works with any 2016+ vehicle with factory Apple CarPlay or Android Auto \u2014 500+ models from Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO.</p><p><a href=\"/pages/supported-cars\">Check Your Car \u2192</a></p>",
+            "content": "<p>Requires a factory <strong>wired CarPlay</strong> system \u2014 your car must already support CarPlay via cable for this adapter to work.</p><p>Compatible with 600+ car models from 2016+: Toyota, Honda, Ford, Chevrolet, Mercedes, Hyundai, Kia, Nissan, Subaru, Mazda, Volkswagen, Audi, and 30+ more manufacturers.</p><p>iPhone 7 or later required. Android Auto also supported on compatible Android devices.</p><p>Not compatible with: Tesla, Rivian, Lucid, NIO, or vehicles without factory wired CarPlay.</p><p><a href=\"/pages/supported-cars\">Check Your Car \u2192</a></p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -113,7 +113,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "What's Included",
-            "content": "<p>\u2714 AutoLinkr Lite\u2122<br/>\u2714 USB-C to USB-A Cable<br/>\u2714 USB-C to USB-C Cable<br/>\u2714 User Manual</p>",
+            "content": "<ul><li>Wireless: 5GHz WiFi + Bluetooth 5.0</li><li>Supports: Apple CarPlay (wireless), Android Auto (wireless)</li><li>Connector: USB-A plug (fits factory USB port)</li><li>Auto-connect: Yes \u2014 no phone interaction required after initial pairing</li><li>Streaming: Not supported (CarPlay &amp; navigation only)</li></ul><p>Note: AutoLinkr Lite\u2122 does not support Google Play, Netflix, or third-party app streaming. For full streaming, see <a href=\"/products/the-autolinkr-pro\">AutoLinkr Pro\u2122</a>.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -179,7 +179,6 @@
         "rounded": false
       }
     },
-
     "product-comparison": {
       "type": "product-comparison",
       "blocks": {
@@ -192,11 +191,11 @@
             "heading_2": "Wireless Android Auto",
             "value_2": "<p>\u2713</p>",
             "heading_3": "Netflix & YouTube",
-            "value_3": "<p>\u2713</p>",
+            "value_3": "<p>\u2717</p>",
             "heading_4": "Google Play Store",
-            "value_4": "<p>\u2713</p>",
+            "value_4": "<p>\u2717</p>",
             "heading_5": "MicroSD Slot",
-            "value_5": "<p>\u2713</p>",
+            "value_5": "<p>\u2717</p>",
             "heading_6": "RAM",
             "value_6": "<p>1GB</p>",
             "heading_7": "Storage",
@@ -298,7 +297,10 @@
           }
         }
       },
-      "block_order": ["p-lite", "p-pro"],
+      "block_order": [
+        "p-lite",
+        "p-pro"
+      ],
       "settings": {
         "highlight_differences": true,
         "sticky_product_info": true,
@@ -333,7 +335,6 @@
         "rounded": false
       }
     },
-
     "pro-upsell": {
       "type": "featured-product",
       "blocks": {
@@ -353,7 +354,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "The most popular CarPlay upgrade.",
+            "text": "Want streaming too? Step up to Pro.",
             "text_size": "text-sm"
           }
         },
@@ -363,7 +364,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "2GB RAM \u2014 2\u00d7 more power for smoother streaming & multitasking",
+            "text": "Netflix, YouTube, Hulu & more \u2014 full Google Play streaming on your factory screen",
             "text_size": "text-sm"
           }
         },
@@ -373,7 +374,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "16GB Storage \u2014 2\u00d7 more room for downloaded shows, maps & apps",
+            "text": "2GB RAM \u2014 2\u00d7 more power for smooth multitasking",
             "text_size": "text-sm"
           }
         },
@@ -383,7 +384,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Faster CPU \u2014 apps open quicker, fewer dropped connections",
+            "text": "16GB Storage \u2014 download shows, maps & apps",
             "text_size": "text-sm"
           }
         },
@@ -393,7 +394,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
-            "text": "Trusted by 50,000+ drivers \u2014 our most-reviewed product",
+            "text": "Everything in Lite, plus the full streaming experience",
             "text_size": "text-sm"
           }
         },
@@ -449,7 +450,6 @@
         "rounded": false
       }
     },
-
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -469,7 +469,6 @@
         "rounded": false
       }
     },
-
     "apps-reviews": {
       "type": "apps",
       "blocks": {
@@ -483,11 +482,12 @@
           }
         }
       },
-      "block_order": ["areviews"],
+      "block_order": [
+        "areviews"
+      ],
       "settings": {}
     }
   },
-
   "order": [
     "main-product",
     "product-comparison",

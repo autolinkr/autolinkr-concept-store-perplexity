@@ -1144,17 +1144,22 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   color: var(--al-accent) !important;
 }
 
-/* Submenu panels — dark background to prevent white/light bleed */
+/* Submenu panels — match global drawer background */
 .drawer__submenu {
-  background: var(--al-surface) !important;
+  background: rgb(var(--color-drawer-background)) !important;
 }
 .drawer__submenu button[data-close] {
   color: var(--al-text-2) !important;
 }
 
-/* Drawer scrollable area */
-.drawer__scrollable {
-  background: var(--al-surface) !important;
+/* Drawer panels — all areas inherit from global Menu & Drawers background */
+.drawer__scrollable,
+.drawer__content,
+.drawer__header,
+.drawer__footer,
+.drawer__footer-top,
+.drawer__footer-bottom {
+  background: rgb(var(--color-drawer-background)) !important;
 }
 
 /* Drawer menu groups — consistent dark surface */
@@ -1341,7 +1346,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 
 /* Modal containers inside cart (note, discount, shipping) */
 #CartDrawer .modal__container {
-  background: var(--al-surface) !important;
+  background: rgb(var(--color-drawer-background)) !important;
   border-top: 1px solid var(--al-border) !important;
 }
 #CartDrawer .modal__header { color: var(--al-text-1) !important; }

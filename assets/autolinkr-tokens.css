@@ -6,8 +6,10 @@
  */
 
 /* ─── FONTS ─────────────────────────────────────────────── */
-@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+/* Font loading is handled by Concept's css-variables.liquid snippet.
+   Fonts are set in Shopify theme editor → Customize → Typography.
+   Do not import fonts here — css-variables.liquid injects the correct
+   @font-face / Google Fonts link based on the editor selection. */
 
 /* ─── DESIGN TOKENS ──────────────────────────────────────── */
 :root {
@@ -46,8 +48,11 @@
   --al-amber:        #FFAA0A;
 
   /* Typography */
-  --al-font-display: 'General Sans', -apple-system, 'Segoe UI', sans-serif;
-  --al-font-body:    'Inter', -apple-system, 'Segoe UI', sans-serif;
+  /* Wire AL font tokens to Concept's global font variables.
+     These resolve from settings.type_header_font / type_body_font
+     set in Shopify theme editor — changing fonts there now works everywhere. */
+  --al-font-display: var(--font-heading-family);
+  --al-font-body:    var(--font-body-family);
   /* Alias tokens — used in autolinkr-header.css */
   --al-blue:           #3B8EF8;   /* = --al-accent */
   --al-nav-height:     70px;      /* = --al-nav-h */

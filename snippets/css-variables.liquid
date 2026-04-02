@@ -21,7 +21,9 @@
     echo body_font_bold | font_face: font_display: 'swap'
     echo body_font_italic | font_face: font_display: 'swap'
     echo body_font_bold_italic | font_face: font_display: 'swap'
+  -%}
 
+  {%- liquid
     assign rounded_button = '0.375rem'
     if settings.rounded_button == 'round'
       assign rounded_button = '3.75rem'

@@ -48,7 +48,6 @@
   /* Typography */
   --al-font-display: 'General Sans', -apple-system, 'Segoe UI', sans-serif;
   --al-font-body:    'Inter', -apple-system, 'Segoe UI', sans-serif;
-
   /* Alias tokens — used in autolinkr-header.css */
   --al-blue:           #3B8EF8;   /* = --al-accent */
   --al-nav-height:     70px;      /* = --al-nav-h */

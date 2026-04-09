@@ -446,7 +446,6 @@ input::placeholder {
 .newsletter__form,
 .email-form,
 [class*="newsletter"] form {
-  display: flex !important;
   gap: 8px !important;
   align-items: stretch !important;
   flex-wrap: wrap !important;
@@ -1136,7 +1135,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 /* ─── MOBILE NAV DRAWER ──────────────────────────────────── */
 /* Scope drawer styles to .drawer__menu-item only — prevents bleed into other components */
 .drawer__menu-item {
-  color: var(--al-text-1) !important;
+  color: rgb(var(--color-base-text)) !important;
   font-family: var(--al-font-display) !important;
   transition: color var(--al-transition) !important;
 }
@@ -1162,9 +1161,15 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   background: rgb(var(--color-drawer-background)) !important;
 }
 
-/* Drawer menu groups — consistent dark surface */
+/* Drawer menu groups — no dividers */
 .drawer__menu-group {
-  border-bottom: 1px solid var(--al-border-subtle) !important;
+  border: none !important;
+}
+
+@media screen and (max-width: 639px) {
+  .js .drawer__header::before {
+    background-color: rgb(var(--color-base-text));
+  }
 }
 
 /* ─── CART DRAWER ────────────────────────────────────────── */
@@ -2071,6 +2076,10 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
     border-inline-start-width: 1px !important;
     padding-inline: var(--sp-5) !important;
     background: transparent !important;
+  }
+  /* Shorthand border:0 !important zeros bottom; restore for last row + rounded corners */
+  [data-rounded-block=round] .footer__accordions .details:last-of-type {
+    border-bottom: 1px solid rgb(var(--color-foreground)/ 0.115) !important;
   }
 }
 /* Each question row fills full width */

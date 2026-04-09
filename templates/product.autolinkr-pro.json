@@ -34,34 +34,36 @@
             "show_rating": false
           }
         },
-        "bullet-1": {
-          "type": "text",
-          "settings": {
-            "icon": "lightning",
-            "iwidth": "custom",
-            "icon_width": 36,
-            "text": "Instant Wireless CarPlay & Android Auto",
-            "text_size": "text-base"
-          }
-        },
         "bullet-2": {
           "type": "text",
           "settings": {
             "icon": "rocket",
-            "icon_image": "shopify://shop_images/6612880.png",
+            "icon_image": "shopify://shop_images/icons8-circled-play-button-32.png",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Stream Netflix, YouTube, Hulu, Disney+, Live TV and more!",
+            "text": "Watch Netflix, YouTube, Hulu, Disney+",
+            "text_size": "text-base"
+          }
+        },
+        "bullet-1": {
+          "type": "text",
+          "settings": {
+            "icon": "lightning",
+            "icon_image": "shopify://shop_images/icons8-iphone-50.png",
+            "iwidth": "custom",
+            "icon_width": 36,
+            "text": "Wireless CarPlay & Android Auto",
             "text_size": "text-base"
           }
         },
         "bullet-3": {
           "type": "text",
           "settings": {
-            "icon": "check_mark",
+            "icon": "lightning",
+            "icon_image": "shopify://shop_images/icons8-apps-50.png",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Works with 98% of vehicles after 2016. No wiring, no tools, no installation.",
+            "text": "Unlimited Apps via Google Play Store",
             "text_size": "text-base"
           }
         },
@@ -158,8 +160,22 @@
             "text_size": "text-sm"
           }
         },
+        "collapsible_tab_Qi4XTK": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Safety Disclaimer",
+            "content": "<p>⚠️ Always operate your vehicle safely and in compliance with all applicable traffic and distracted-driving laws. Video playback is intended for passengers or when the vehicle is parked. The driver is solely responsible for safe and lawful vehicle operation at all times.</p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
         "text-safety": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "iwidth": "custom",
@@ -173,8 +189,8 @@
         "breadcrumb",
         "areviews_reviews_importer_areviews_title_rating_zV3Mzm",
         "title",
-        "bullet-1",
         "bullet-2",
+        "bullet-1",
         "bullet-3",
         "variant_picker",
         "moon_bundles_app_block_LN6Nw4",
@@ -185,6 +201,7 @@
         "collapsible-compatibility",
         "collapsible-specs",
         "collapsible-shipping",
+        "collapsible_tab_Qi4XTK",
         "text-safety"
       ],
       "settings": {
@@ -200,7 +217,7 @@
         "mobile_layout": "full_width",
         "image_ratio_mobile": "adapt_first",
         "mobile_thumbnail": true,
-        "padding_top": 16,
+        "padding_top": 8,
         "padding_bottom": 0,
         "divider": false,
         "full_width": false,
@@ -210,8 +227,8 @@
     "video-demo": {
       "type": "al-video-section",
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "max_width": 1200,
         "media_max_width": 900,
         "text_align": "center",
@@ -303,8 +320,8 @@
         "logo_height": 100,
         "gap": 64,
         "speed": 24,
-        "padding_top": 48,
-        "padding_bottom": 48,
+        "padding_top": 24,
+        "padding_bottom": 24,
         "divider": false
       }
     },
@@ -314,8 +331,8 @@
         "image": "shopify://shop_images/2M2A9277.jpg",
         "button_label": "Check Your Car's Compatibility →",
         "button_link": "/pages/supported-cars",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "how-it-works": {
@@ -361,8 +378,8 @@
         "step-3"
       ],
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "eyebrow": "",
         "heading": "Plug In. Connect. Enjoy.",
         "subheading": "No tools. No mechanic. 60 seconds.",
@@ -373,8 +390,8 @@
     "video-3d": {
       "type": "al-video-section",
       "settings": {
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 28,
+        "padding_bottom": 28,
         "max_width": 1200,
         "media_max_width": 800,
         "text_align": "center",
@@ -466,15 +483,15 @@
         "eyebrow": "",
         "heading": "<strong>Packed With Purpose.</strong>",
         "subheading": "Six reasons tens of thousands of drivers upgraded their drive.",
-        "padding_top": 96,
-        "padding_bottom": 96
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "youtube-review": {
       "type": "al-video-section",
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "max_width": 1200,
         "media_max_width": 900,
         "text_align": "center",
@@ -714,8 +731,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 28,
+        "padding_bottom": 28,
         "divider": false,
         "full_width": true,
         "rounded": false
@@ -833,8 +850,8 @@
         "mobile_layout": "full_width",
         "image_ratio_mobile": "adapt_first",
         "mobile_thumbnail": false,
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": false,
         "rounded": false
@@ -951,8 +968,8 @@
         "color_button_gradient": "",
         "color_overlay": "",
         "overlay_opacity": 4,
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "narrow": true,
         "rounded": false
@@ -983,8 +1000,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": false,
         "rounded": false
@@ -1073,8 +1090,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "narrow": true,
         "rounded": false
@@ -1123,8 +1140,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": false,
         "rounded": false

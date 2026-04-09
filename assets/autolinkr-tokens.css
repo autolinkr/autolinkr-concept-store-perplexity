@@ -23,6 +23,7 @@
   --al-border:        #2A2A30;
   --al-border-subtle: #1A1A1F;
   --al-border-bright: #3A3A42;
+  --al-border-med:    rgba(255, 255, 255, 0.08);
 
   /* Text Scale — improved contrast */
   --al-text-1: #F7F7F8;      /* Headlines — near white */
@@ -679,6 +680,18 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .main-product .product__info-wrapper .product-form__buttons {
   margin-top: 0 !important;
   padding-top: 0 !important;
+}
+
+/* ─── PRODUCT GALLERY — media chrome (matches original autolinkr-custom) ─ */
+.product-media-gallery .media {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--al-surface);
+}
+
+.product-media-gallery .thumbnail {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* ─── MULTICOLUMN WITH ICONS ─────────────────────────────── */
@@ -1756,11 +1769,22 @@ body::before {
   padding: var(--al-sp-10) var(--al-sp-4) var(--al-sp-10) !important;
 }
 
-/* ─── SECTION SPACING ─────────────────────────────────────── */
-/* Sticky header guard — prevent non-header sections from inheriting sticky styles */
-.shopify-section + .shopify-section:not(.shopify-section--header) {
-  z-index: auto !important;
-  position: relative !important;
+/* ─── SECTION SPACING — match original (header uses .header-section) ─ */
+.shopify-section + .shopify-section:not(.header-section) {
+  position: relative;
+}
+
+.shopify-section + .shopify-section:not(.header-section)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--al-border-med), transparent);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ─── PRODUCT PAGE BULLETS ────────────────────────────────── */

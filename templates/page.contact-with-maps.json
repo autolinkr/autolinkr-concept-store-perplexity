@@ -17,8 +17,8 @@
         "heading_alignment": "text-left",
         "heading_tag": "h1",
         "text_size": "text-lg md:text-2xl",
-        "padding_top": 72,
-        "padding_bottom": 120,
+        "padding_top": 36,
+        "padding_bottom": 60,
         "divider": false,
         "narrow": false,
         "rounded": false
@@ -78,7 +78,7 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
+        "padding_top": 36,
         "padding_bottom": 0,
         "divider": false,
         "narrow": false,
@@ -196,14 +196,14 @@
           "type": "contact",
           "settings": {
             "heading": "Email",
-            "text": "<p><a href=\"#\" title=\"mailto:contact@yourstore.com\">contact@yourstore.com</a><br\/><a href=\"#\" title=\"mailto:sales@yourstore.com\">sales@yourstore.com</a></p>"
+            "text": "<p><a href=\"#\" title=\"mailto:contact@yourstore.com\">contact@yourstore.com</a><br/><a href=\"#\" title=\"mailto:sales@yourstore.com\">sales@yourstore.com</a></p>"
           }
         },
         "contact-3": {
           "type": "contact",
           "settings": {
             "heading": "Phone",
-            "text": "<p><a href=\"#\" title=\"tel:+33 (0) 31-305-210\">+33 (0) 31-305-210<br\/></a>mo – fri: 09:00 – 17:00</p>"
+            "text": "<p><a href=\"#\" title=\"tel:+33 (0) 31-305-210\">+33 (0) 31-305-210<br/></a>mo – fri: 09:00 – 17:00</p>"
           }
         },
         "media": {
@@ -268,8 +268,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 84,
-        "padding_bottom": 120,
+        "padding_top": 44,
+        "padding_bottom": 60,
         "divider": false,
         "narrow": false,
         "rounded": true

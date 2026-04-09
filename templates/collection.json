@@ -83,7 +83,7 @@
         "show_on_model": false,
         "buttons_style": "secondary",
         "padding_top": 0,
-        "padding_bottom": 16,
+        "padding_bottom": 8,
         "divider": false,
         "full_width": false,
         "rounded": true
@@ -202,8 +202,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 80,
+        "padding_top": 36,
+        "padding_bottom": 40,
         "divider": false,
         "full_width": false,
         "rounded": true

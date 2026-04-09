@@ -639,8 +639,8 @@
     "video-demo": {
       "type": "al-video-section",
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "max_width": 1200,
         "media_max_width": 900,
         "text_align": "center",

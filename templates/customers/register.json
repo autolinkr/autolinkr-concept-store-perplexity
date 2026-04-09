@@ -15,8 +15,8 @@
         "heading_size": "title-xl tracking-heading",
         "heading_tag": "h1",
         "show_email_consent": true,
-        "padding_top": 72,
-        "padding_bottom": 100,
+        "padding_top": 36,
+        "padding_bottom": 52,
         "divider": false,
         "rounded": false
       }

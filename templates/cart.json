@@ -20,8 +20,7 @@
         },
         "subtotal": {
           "type": "subtotal",
-          "settings": {
-          }
+          "settings": {}
         },
         "cart_note": {
           "type": "cart_note",
@@ -31,8 +30,7 @@
         },
         "buttons": {
           "type": "buttons",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -47,8 +45,8 @@
         "heading_tag": "h1",
         "show_vendor": false,
         "show_shipping_calculator": true,
-        "padding_top": 72,
-        "padding_bottom": 60,
+        "padding_top": 36,
+        "padding_bottom": 32,
         "divider": false,
         "full_width": false,
         "rounded": false
@@ -78,8 +76,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 60,
-        "padding_bottom": 100,
+        "padding_top": 32,
+        "padding_bottom": 52,
         "divider": false,
         "full_width": false,
         "rounded": false

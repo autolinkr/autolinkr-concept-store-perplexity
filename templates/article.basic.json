@@ -50,8 +50,8 @@
         "image_height": "750px",
         "enable_parallax": true,
         "parallax_direction": "vertical",
-        "padding_top": 72,
-        "padding_bottom": 120,
+        "padding_top": 36,
+        "padding_bottom": 60,
         "divider": false,
         "narrow": true,
         "rounded": true
@@ -89,8 +89,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": false,
         "rounded": true

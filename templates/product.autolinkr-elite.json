@@ -199,7 +199,7 @@
         "mobile_layout": "full_width",
         "image_ratio_mobile": "adapt_first",
         "mobile_thumbnail": true,
-        "padding_top": 16,
+        "padding_top": 8,
         "padding_bottom": 0,
         "divider": false,
         "full_width": false,
@@ -209,8 +209,8 @@
     "video-3d-elite": {
       "type": "al-model-viewer",
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "max_width": 1200,
         "media_max_width": 900,
         "viewer_height": 500,
@@ -308,16 +308,16 @@
         "logo_height": 100,
         "gap": 64,
         "speed": 24,
-        "padding_top": 48,
-        "padding_bottom": 48,
+        "padding_top": 24,
+        "padding_bottom": 24,
         "divider": false
       }
     },
     "video-review": {
       "type": "al-video-section",
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "max_width": 1200,
         "media_max_width": 900,
         "text_align": "center",
@@ -400,8 +400,8 @@
         "gradient_highlight": "",
         "color_overlay": "#171717",
         "overlay_opacity": 70,
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": true,
         "rounded": false,
@@ -415,8 +415,8 @@
         "image": "shopify://shop_images/2M2A9277.jpg",
         "button_label": "Check Your Car's Compatibility →",
         "button_link": "/pages/supported-cars",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image-splitscreen": {
@@ -485,8 +485,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "divider": false,
         "full_width": false,
         "rounded": false,
@@ -537,8 +537,8 @@
         "step-3"
       ],
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "eyebrow": "",
         "heading": "Plug In. Connect. Enjoy.",
         "subheading": "No tools. No mechanic. 60 seconds.",
@@ -550,8 +550,8 @@
       "type": "al-model-viewer",
       "disabled": true,
       "settings": {
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 32,
+        "padding_bottom": 32,
         "max_width": 1200,
         "media_max_width": 800,
         "viewer_height": 420,
@@ -649,8 +649,8 @@
         "eyebrow": "",
         "heading": "<strong>Packed With Purpose.</strong>",
         "subheading": "Six features that make Elite the most capable CarPlay adapter ever built.",
-        "padding_top": 96,
-        "padding_bottom": 96
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "testimonials-2": {
@@ -718,8 +718,8 @@
         "gradient_highlight": "",
         "color_overlay": "#171717",
         "overlay_opacity": 70,
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": true,
         "rounded": false,
@@ -876,8 +876,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 32,
+        "padding_bottom": 32,
         "divider": false,
         "full_width": true,
         "rounded": false
@@ -994,8 +994,8 @@
         "color_button_gradient": "",
         "color_overlay": "",
         "overlay_opacity": 4,
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "narrow": true,
         "rounded": false
@@ -1026,8 +1026,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": false,
         "rounded": false
@@ -1104,8 +1104,8 @@
         "color_button_text": "#000000",
         "color_button_background": "#f0a840",
         "color_button_gradient": "",
-        "padding_top": 96,
-        "padding_bottom": 96,
+        "padding_top": 48,
+        "padding_bottom": 48,
         "divider": false,
         "narrow": true,
         "rounded": false
@@ -1122,8 +1122,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "divider": false,
         "full_width": false,
         "rounded": false

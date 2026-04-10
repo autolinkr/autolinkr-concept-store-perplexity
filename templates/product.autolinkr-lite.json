@@ -136,8 +136,8 @@
             "opened": false,
             "style": "with-border",
             "icon": "none",
-            "heading": "Shipping & Returns",
-            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee — return for full in-store credit. We cover return shipping.</p><p>1-Year Warranty — covered against manufacturing defects.</p><p><a href=\"mailto:support@theautolinkr.com\">support@theautolinkr.com</a></p>",
+            "heading": "Shipping",
+            "content": "<p>You can expect your <strong>AutoLinkr Pro™</strong> within 5-10 business days from your order date.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"

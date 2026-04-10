@@ -41,7 +41,7 @@
             "icon_image": "shopify://shop_images/icons8-circled-play-button-32.png",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Watch Netflix, YouTube, Hulu, Disney+",
+            "text": "Stream Movies, Live TV and More",
             "text_size": "text-base"
           }
         },
@@ -80,8 +80,9 @@
         },
         "moon_bundles_app_block_LN6Nw4": {
           "type": "shopify://apps/moon-bundles/blocks/app-block/aaf4cd95-8b9b-4a14-b929-0f7fc8fced27",
+          "disabled": true,
           "settings": {
-            "moonbundle_selected_product": "{{product}}"
+            "moonbundle_selected_product": "shop-the-autolinkr-pro"
           }
         },
         "buy_buttons": {
@@ -153,8 +154,8 @@
             "opened": false,
             "style": "with-border",
             "icon": "none",
-            "heading": "Shipping & Returns",
-            "content": "<p>FREE standard shipping on all orders (6-10 business days). Most orders placed before 2pm ET ship the same day.</p><p>30-day money-back guarantee — if AutoLinkr doesn't work with your car or you're not satisfied, return it for full in-store credit. We cover return shipping.</p><p>Lifetime customer support: support@theautolinkr.com</p>",
+            "heading": "Shipping",
+            "content": "<p>You can expect your <strong>AutoLinkr Pro™</strong> within 5-10 business days from your order date.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -329,7 +330,7 @@
       "type": "al-compatibility",
       "settings": {
         "image": "shopify://shop_images/2M2A9277.jpg",
-        "button_label": "Check Your Car's Compatibility →",
+        "button_label": "Check Compatibility →",
         "button_link": "/pages/supported-cars",
         "padding_top": 36,
         "padding_bottom": 36
@@ -378,7 +379,7 @@
         "step-3"
       ],
       "settings": {
-        "padding_top": 40,
+        "padding_top": 20,
         "padding_bottom": 40,
         "eyebrow": "",
         "heading": "Plug In. Connect. Enjoy.",
@@ -424,7 +425,7 @@
           "type": "feature",
           "settings": {
             "icon": "play",
-            "heading": "Netflix, YouTube & Disney+",
+            "heading": "Unlimited Access to Any App",
             "text": "Stream any app on your factory screen via the Google Play Store.",
             "show_app_icons": true,
             "app_icon_1": "shopify://shop_images/NetflixIcon.png",
@@ -447,7 +448,7 @@
           "type": "feature",
           "settings": {
             "icon": "shield",
-            "heading": "500+ Compatible Vehicles",
+            "heading": "Compatible With 97% of Cars",
             "text": "Toyota, Honda, Ford, BMW, and 30+ more brands. 2016+ with factory CarPlay.",
             "show_app_icons": false
           }
@@ -860,6 +861,15 @@
     "faq": {
       "type": "faq",
       "blocks": {
+        "q8": {
+          "type": "question",
+          "settings": {
+            "title": "What's the difference between Pro and Elite?",
+            "text": "<p>Both include wireless CarPlay/Android Auto and full streaming. Elite adds 4x the RAM (8GB), 4x the storage (64GB), split-screen multitasking, and an enhanced UI.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
         "q1": {
           "type": "question",
           "settings": {
@@ -918,30 +928,21 @@
           "type": "question",
           "settings": {
             "title": "How long does shipping take?",
-            "text": "<p>Free standard shipping on all orders, 6-10 business days. Most orders placed before 2pm ET ship the same day.</p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "q8": {
-          "type": "question",
-          "settings": {
-            "title": "What's the difference between Pro and Elite?",
-            "text": "<p>Both include wireless CarPlay/Android Auto and full streaming. Elite adds 4x the RAM (8GB), 4x the storage (64GB), split-screen multitasking, and an enhanced UI. For most drivers, the Pro is perfect.</p>",
+            "text": "<p>5-10 business days. Most orders placed before 2pm ET ship the same day.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
         }
       },
       "block_order": [
+        "q8",
         "q1",
         "q2",
         "q3",
         "q4",
         "q5",
         "q6",
-        "q7",
-        "q8"
+        "q7"
       ],
       "settings": {
         "style": "with-border",

@@ -13,6 +13,7 @@
   @param {boolean} [show_price] - Show product pricing
   @param {object} [recommendations] - Pre-loaded recommendations object
   @param {object} [recommendations_products] - Override product collection
+  @param {boolean} [bundle_feature_bullets] - Pass through to horizontal cards (e.g. cart)
 
   @example
   {% render 'product-complementary',
@@ -63,7 +64,7 @@
               assign accessibility = false
             endunless
           endif
-          render 'product-card-horizontal', product: recommendation, product_id: recommendation.id, section_id: section_id, image_ratio: image_ratio, image_fill: image_fill, show_vendor: show_vendor, show_price: show_price, show_quick_add: settings.product_quick_add, show_quick_view: settings.product_quick_view, accessibility: accessibility
+          render 'product-card-horizontal', product: recommendation, product_id: recommendation.id, section_id: section_id, image_ratio: image_ratio, image_fill: image_fill, show_vendor: show_vendor, show_price: show_price, show_quick_add: settings.product_quick_add, show_quick_view: settings.product_quick_view, accessibility: accessibility, bundle_feature_bullets: bundle_feature_bullets
         endfor
       -%}
     </product-complementary>

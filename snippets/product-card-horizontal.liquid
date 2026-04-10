@@ -14,6 +14,7 @@
   @param {boolean} [show_quick_add] - Enable quick add functionality
   @param {boolean} [show_quick_view] - Enable quick view modal
   @param {boolean} [accessibility] - Enable accessibility
+  @param {boolean} [bundle_feature_bullets] - Show bundle feature list (cart complementary)
 
   @example
   {% render 'product-card-horizontal',
@@ -48,6 +49,14 @@
         <a href="{{ product.url }}" class="horizontal-product__title reversed-link font-medium text-base leading-tight"{% unless accessibility %} tabindex="-1"{% endunless %}>{{ product.title | escape }}</a>
       </div>
     </div>
+
+    {%- if bundle_feature_bullets -%}
+      <ul class="horizontal-product__bundle-features" role="list">
+        <li>Faster Performance</li>
+        <li>4K Streaming</li>
+        <li>More Storage</li>
+      </ul>
+    {%- endif -%}
     
     <div class="flex flex-col gap-1">
       {%- liquid

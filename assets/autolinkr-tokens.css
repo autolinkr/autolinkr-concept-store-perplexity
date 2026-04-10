@@ -2294,3 +2294,58 @@ comparison-table.comparison-table {
     max-width: 120px !important;
   }
 }
+
+/* ─── MOBILE MENU DRAWER — ~20% tighter vertical rhythm ───── */
+#MenuDrawer.menu-drawer .drawer__header {
+  padding: calc(var(--sp-8) * 0.8) calc(var(--sp-5) * 0.8) calc(var(--sp-4) * 0.8);
+}
+
+#MenuDrawer.menu-drawer .drawer__scrollable {
+  padding-block: calc(var(--sp-3) * 0.8) calc(var(--sp-10) * 0.8);
+}
+
+#MenuDrawer .drawer__sticky {
+  padding-inline: calc(var(--sp-5) * 0.8);
+}
+
+#MenuDrawer .drawer__menu-item {
+  padding-block: calc(var(--sp-2d5) * 0.8);
+}
+
+#MenuDrawer .drawer__menu-item.text-2xl,
+#MenuDrawer .drawer__menu-item .text-2xl {
+  font-size: calc(var(--text-2xl) * 0.8);
+}
+
+#MenuDrawer .drawer__submenu > button {
+  height: calc(50px * 0.8);
+  padding-inline-start: calc(var(--sp-5) * 0.8);
+  font-size: calc(var(--text-base) * 0.8);
+}
+
+@media screen and (min-width: 768px) {
+  #MenuDrawer .drawer__menu {
+    padding-block-start: calc(var(--sp-6) * 0.8);
+  }
+}
+
+/* ─── CART — complementary row bundle bullets (Often Bundled) ─ */
+.horizontal-product__bundle-features {
+  list-style: disc;
+  list-style-position: outside;
+  margin: 0.125rem 0 0;
+  padding-inline-start: 1.15em;
+  color: #fff;
+  font-size: var(--text-xs);
+  line-height: 1.35;
+}
+
+.horizontal-product__bundle-features li {
+  padding-inline-start: 0.15em;
+}
+
+/* ─── CART — free-shipping progress uses theme highlight ───── */
+#CartDrawer .free-shipping-bar progress-bar::before,
+.cart__sidebar .free-shipping-bar progress-bar::before {
+  background-color: rgb(var(--color-base-highlight));
+}

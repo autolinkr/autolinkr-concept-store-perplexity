@@ -720,10 +720,10 @@
       ],
       "settings": {
         "highlight_differences": true,
-        "sticky_product_info": true,
-        "first_available_variant": true,
+        "sticky_product_info": false,
+        "first_available_variant": false,
         "show_vendor": false,
-        "show_price": true,
+        "show_price": false,
         "heading": "Pro vs Elite — Which Is Right for You?",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",

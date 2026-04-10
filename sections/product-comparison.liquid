@@ -5,6 +5,19 @@
     {%- render 'section-variables', section: section -%}
     --values-columns-count: {{ section.blocks.size | at_most: 3 }};
   }
+
+  /* Space below “Highlight differences”; theme .comparison-table adds --sp-10 / --sp-6 top padding — remove for this section */
+  #shopify-section-{{ section.id }} .product-comparison-highlight-wrap {
+    margin-block-end: var(--sp-8);
+  }
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .product-comparison-highlight-wrap {
+      margin-block-end: var(--sp-10);
+    }
+  }
+  #shopify-section-{{ section.id }} comparison-table.comparison-table.product-comparison {
+    padding-block-start: 0;
+  }
 </style>
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}"{% if section.settings.transparent_header %} allow-transparent-header{% endif %}>
@@ -12,7 +25,7 @@
     {%- render 'section-heading', section: section -%}
 
     {%- if section.settings.highlight_differences -%}
-      <div class="text-center">
+      <div class="text-center product-comparison-highlight-wrap">
         <label class="comparison-highlight button icon-with-text" for="ComparisonHighlight-{{ section.id }}" aria-label="{{ 'sections.comparison-table.highlight_differences' | t | escape }}">
           <span class="btn-text">
             {{- 'sections.comparison-table.highlight_differences' | t -}}

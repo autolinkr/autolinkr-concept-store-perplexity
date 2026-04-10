@@ -1480,19 +1480,6 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   display: flex;
   align-items: center;
 }
-.al-brand-hero::before {
-  content: '';
-  position: absolute;
-  top: -40%;
-  left: -20%;
-  width: 70%;
-  height: 140%;
-  background: radial-gradient(ellipse at center,
-    rgba(59, 142, 248, 0.08) 0%,
-    transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-}
 .al-brand-hero__eyebrow {
   color: var(--al-accent) !important;
   font-size: 0.75rem !important;
@@ -1543,7 +1530,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   background: #000;
   border-radius: var(--al-r-xl);
   overflow: hidden;
-  box-shadow: var(--al-shadow-xl), var(--al-accent-glow);
+  box-shadow: none;
   border: 1px solid var(--al-border);
 }
 .al-video-wrap video {
@@ -1590,7 +1577,7 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   border-color: rgba(var(--color-base-highlight)/ 0.3) !important;
   background: rgba(var(--color-base-text)/ 0.07) !important;
   transform: translateY(-3px) !important;
-  box-shadow: var(--al-shadow-accent) !important;
+  box-shadow: none !important;
 }
 .al-step__num {
   width: 44px;
@@ -2131,7 +2118,7 @@ comparison-table.comparison-table {
 }
 .al-step:hover {
   border-color: rgba(59,142,248,0.9) !important;
-  box-shadow: 0 0 32px rgba(59,142,248,0.12) !important;
+  box-shadow: none !important;
 }
 .al-step__heading {
   color: #fff !important;

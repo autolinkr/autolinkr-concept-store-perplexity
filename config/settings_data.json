@@ -178,7 +178,66 @@
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "17151115064775110295": {
+        "type": "shopify://apps/recharge-subscriptions/blocks/recharge-theme/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": false,
+        "settings": {
+          "color_brand": "#1773B0",
+          "contrast_color": "#FFFFFF",
+          "color_brand_secondary": "#1773B0",
+          "corners": "8px",
+          "app_background": "#f7f7f7",
+          "app_container": 1200,
+          "app_vertical_padding": 32,
+          "images_aspect_ratio": "1",
+          "cards_background": "#FFFFFF",
+          "cards_border_color": "rgba(0,0,0,0)"
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "6159598353363395418": {
+        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
+        "disabled": false,
+        "settings": {
+          "widget_position": "LEFT_BOTTOM",
+          "side_margin": 36,
+          "bottom_margin": 36,
+          "mobile_side_margin": 16,
+          "mobile_bottom_margin": 46
+        }
+      },
+      "16798170927650018749": {
+        "type": "shopify://apps/recharge-subscriptions/blocks/storefront-experiences/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": true,
+        "settings": {}
+      },
+      "7054877461618660028": {
+        "type": "shopify://apps/moon-bundles/blocks/app-embed/aaf4cd95-8b9b-4a14-b929-0f7fc8fced27",
+        "disabled": false,
+        "settings": {}
+      },
+      "17676059084223943535": {
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": false,
+        "settings": {}
+      },
+      "573254258818049612": {
+        "type": "shopify://apps/crazy-egg/blocks/app-embed/7ea73823-6ad9-4252-a63e-088397d54aed",
+        "disabled": false,
+        "settings": {}
+      },
+      "17198465164502963513": {
+        "type": "shopify://apps/parcelwill-parcel-panel/blocks/app.embed/fc785c3f-90e0-4c98-a20c-7cde9ba5e4b5",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "Concept": {

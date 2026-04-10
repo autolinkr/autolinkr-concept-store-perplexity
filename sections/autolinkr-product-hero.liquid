@@ -287,6 +287,9 @@
           {%- endif -%}
         </div>
 
+        {%- comment -%} Ultimate Trust Badges: custom mount — enable custom location in app settings. {%- endcomment -%}
+        <div class="ultimate-badges"></div>
+
         {%- comment %} Klaviyo back-in-stock form (sold out variants) {%- endcomment %}
         {%- unless current_variant.available -%}
           <div class="al-pdp-info__bis" id="al-bis-form">

@@ -366,6 +366,33 @@ button .btn-fill {
   background: rgba(var(--color-base-button)/ 0.85) !important;
   box-shadow: 0 0 32px rgba(var(--color-base-button)/ 0.55), 0 6px 24px rgba(var(--color-base-button)/ 0.30) !important;
   transform: translateY(-2px) !important;
+  /* Keep label + SVG on readable color (we neutralized .btn-fill; Concept hover expects ripple inversion). */
+  color: rgb(var(--color-base-button-text)) !important;
+}
+
+/* Same as above when Concept applies its higher-specificity hover (pointer: fine + data-button-hover=standard). */
+.js [data-button-hover=standard] .button--primary:hover:not([disabled], .self-button) {
+  color: rgb(var(--color-base-button-text)) !important;
+}
+
+/* Sticky PDP bar: mobile icon-only — hardcoded cart SVG (scoped so md:hidden still wins) */
+@media screen and (max-width: 767px) {
+  .product-sticky-form__cart-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgb(var(--color-base-button-text)) !important;
+  }
+  .product-sticky-form__cart-icon svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    flex-shrink: 0 !important;
+    stroke: currentColor !important;
+  }
+}
+.product-sticky-form .button--primary .icon {
+  color: rgb(var(--color-base-button-text)) !important;
+  stroke: currentColor !important;
 }
 
 .button--secondary,
@@ -1063,6 +1090,16 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
 .product__trust-badges p {
   color: var(--al-text-3) !important;
   font-size: var(--al-text-xs) !important;
+}
+
+/* Ultimate Trust Badges — app mounts into .ultimate-badges (see buy-buttons.liquid + autolinkr-product-hero) */
+.product-form-wrapper .ultimate-badges,
+.al-pdp-info__form .ultimate-badges {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+#ultimateTrustBadgeswidgetDiv {
+  width: 100%;
 }
 
 /* ─── FEATURED PRODUCT SECTION ───────────────────────────── */
@@ -2295,10 +2332,24 @@ comparison-table.comparison-table {
   }
 }
 
-/* ─── MOBILE MENU DRAWER — shorter panel only (inner shell height, not nav type) ─ */
+/* ─── MOBILE MENU DRAWER — inner shell height: midpoint of full (100vh) vs previous 80vh cap ─ */
 #MenuDrawer.menu-drawer > .drawer__inner {
-  height: 80vh !important;
-  max-height: 80vh !important;
+  height: 90vh !important;
+  max-height: 90vh !important;
+}
+
+/* ─── DRAWERS (menu + cart): faster motion (~10%) + no extra content fade delay — */
+@media (prefers-reduced-motion: no-preference) {
+  body.loaded .drawer .overlay {
+    transition-duration: 0.72s !important;
+  }
+  body.loaded .drawer__inner {
+    transition: transform 0.54s cubic-bezier(0.7, 0, 0.2, 1) !important;
+  }
+  body.loaded .drawer[active] > .drawer__inner > :is(.drawer__content, .drawer__header) {
+    transition: opacity 0.45s cubic-bezier(0.3, 1, 0.3, 1), visibility 0.45s cubic-bezier(0.3, 1, 0.3, 1) !important;
+    transition-delay: 0s !important;
+  }
 }
 
 /* ─── CART — complementary row bundle bullets (Often Bundled) ─ */

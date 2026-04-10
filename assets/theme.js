@@ -990,6 +990,7 @@ console.log(theme.settings.themeName + ' theme (' + theme.settings.themeVersion 
     document.body.classList.add('loaded');
     document.dispatchEvent(new CustomEvent('page:loaded'));
   });
+
   window.addEventListener('pageshow', (event) => {
     // Removes unload class when returning to page via history
     if (event.persisted) {
@@ -2009,9 +2010,9 @@ class ModalElement extends HTMLElement {
   }
 
   showTransition() {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       this.setAttribute('active', '');
-    }, 75);
+    });
     return new Promise((resolve) => {
       const computedStyle = window.getComputedStyle(this.overlay);
       const hasTransition = computedStyle.transitionProperty !== 'none' && parseFloat(computedStyle.transitionDuration) > 0;
@@ -2182,11 +2183,11 @@ class MenuDrawer extends DrawerElement {
 
   beforeShow() {
     super.beforeShow();
-    setTimeout(() => {
-      Motion.animate(this.menuItems, { transform: ['translateX(-20px)', 'translateX(0)'], opacity: [0, 1] }, { duration: 0.6, easing: [.075, .82, .165, 1], delay: Motion.stagger(0.1) }).finished.then(() => {
+    requestAnimationFrame(() => {
+      Motion.animate(this.menuItems, { transform: ['translateX(-20px)', 'translateX(0)'], opacity: [0, 1] }, { duration: 0.54, easing: [.075, .82, .165, 1], delay: Motion.stagger(0.09) }).finished.then(() => {
         this.menuItems.forEach((item) => item.removeAttribute('style'));
       });
-    }, 300);
+    });
   }
 
   beforeHide() {
@@ -5745,17 +5746,21 @@ class ProductStickyForm extends HTMLElement {
     if (!this.submitButton) return;
 
     const submitButtonText = this.submitButton.querySelector('.btn-text');
-    const submitButtonTextChild = this.submitButton.querySelector('.btn-text>span');
+    const labelEl = this.submitButton.querySelector('[data-sticky-submit-label]');
+    const setLabel = (value) => {
+      if (labelEl) labelEl.textContent = value;
+      else if (submitButtonText) submitButtonText.textContent = value;
+    };
 
     if (disable) {
       this.submitButton.setAttribute('disabled', '');
       if (text) {
-        (submitButtonTextChild || submitButtonText).textContent = text;
+        setLabel(text);
       }
     }
     else {
       this.submitButton.removeAttribute('disabled');
-      (submitButtonTextChild || submitButtonText).textContent = this.submitButton.hasAttribute('data-pre-order') ? theme.variantStrings.preOrder : theme.variantStrings.addToCart;
+      setLabel(this.submitButton.hasAttribute('data-pre-order') ? theme.variantStrings.preOrder : theme.variantStrings.addToCart);
     }
   }
 

@@ -386,6 +386,17 @@
         "eyebrow": "",
         "heading": "Plug In. Connect. Enjoy.",
         "subheading": "No tools. No mechanic. 60 seconds.",
+        "cta_label": "",
+        "cta_link": ""
+      }
+    },
+    "watch-setup-video": {
+      "type": "al-setup-video-cta",
+      "settings": {
+        "padding_top": 16,
+        "padding_bottom": 20,
+        "heading": "",
+        "subheading": "",
         "cta_label": "▶ Watch Setup Video",
         "cta_link": "https://youtu.be/AxcmlF_3Tfs?si=K56YXw7P2Q4DS_Vx"
       }
@@ -1157,6 +1168,7 @@
     "logo_list_KH4Hb9",
     "image-compatibility",
     "how-it-works",
+    "watch-setup-video",
     "video-3d",
     "multicolumn-features",
     "youtube-review",

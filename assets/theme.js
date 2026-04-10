@@ -2177,6 +2177,11 @@ class MenuDrawer extends DrawerElement {
     super();
   }
 
+  /** Same as cart-drawer: stay in original DOM (header). Reparenting to body can worsen mobile scroll/touch. */
+  get shouldAppendToBody() {
+    return false;
+  }
+
   get menuItems() {
     return this._menuItems = this._menuItems || this.querySelectorAll('.drawer__menu:not(.active)>li');
   }

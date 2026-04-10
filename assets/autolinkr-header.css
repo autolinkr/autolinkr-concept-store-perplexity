@@ -666,6 +666,7 @@
   opacity: 0;
   transition: opacity 300ms ease;
   cursor: pointer;
+  touch-action: none;
 }
 
 .al-mobile-menu.is-open .al-mobile-menu__overlay { opacity: 1; }

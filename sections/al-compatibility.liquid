@@ -54,18 +54,9 @@
         Alpine, Pioneer &amp; Kenwood head units with CarPlay? You're covered.
       </div>
 
-      <div class="al-compat__guarantee">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 1L11.09 6.26L17 7.27L13 11.14L14.18 17L9 14.27L3.82 17L5 11.14L1 7.27L6.91 6.26L9 1Z" fill="rgba(59,142,248,0.9)" stroke="rgba(59,142,248,0.9)" stroke-width="1" stroke-linejoin="round"/>
-        </svg>
-        If it doesn't work — <strong>full refund, no questions.</strong>
-      </div>
-
       <a href="{{ section.settings.button_link | default: '/pages/supported-cars' }}" class="al-compat__btn">
         {{ section.settings.button_label | default: 'Check Your Car →' }}
       </a>
-
-      <p class="al-compat__sub">Not sure? <a href="mailto:support@theautolinkr.com">Email us</a> — we confirm in minutes.</p>
 
     </div>
 
@@ -83,6 +74,8 @@
     gap: 0;
     align-items: stretch;
     border: 2px solid rgba(59,142,248,0.45);
+    border-top-width: 5px;
+    border-top-color: rgba(59,142,248,0.85);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 48px rgba(59,142,248,0.08), 0 24px 64px rgba(0,0,0,0.5);
@@ -200,21 +193,6 @@
     font-family: var(--al-font-body,'Inter',sans-serif);
   }
 
-  .al-compat__guarantee {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9375rem;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 32px;
-    padding: 14px 18px;
-    background: rgba(59,142,248,0.07);
-    border: 1px solid rgba(59,142,248,0.2);
-    border-radius: 10px;
-  }
-
-  .al-compat__guarantee strong { color: #fff; }
-
   /* CTA button */
   .al-compat__btn {
     display: inline-flex;
@@ -231,7 +209,7 @@
     transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
     box-shadow: 0 0 24px rgba(59,142,248,0.35);
     align-self: flex-start;
-    margin-bottom: 16px;
+    margin-bottom: 0;
   }
 
   .al-compat__btn:hover {
@@ -239,19 +217,6 @@
     box-shadow: 0 0 40px rgba(59,142,248,0.5);
     transform: translateY(-1px);
   }
-
-  .al-compat__sub {
-    font-size: 0.8125rem;
-    color: rgba(255,255,255,0.35);
-    margin: 0;
-  }
-
-  .al-compat__sub a {
-    color: rgba(59,142,248,0.8);
-    text-decoration: none;
-  }
-
-  .al-compat__sub a:hover { text-decoration: underline; }
 
   /* Mobile */
   @media (max-width: 768px) {

@@ -57,7 +57,7 @@
                   endif
                   assign featured_media = first_available_variant.featured_media | default: card_product.featured_media
                 -%}
-                <div class="horizontal-product flex items-start flex-col gap-4 md:flex-row md:gap-6" data-product="{{ forloop.index }}">
+                <div class="horizontal-product flex flex-col items-center text-center gap-3" data-product="{{ forloop.index }}">
                   <a class="horizontal-product__media media media--{{ settings.product_image_ratio }}{% unless settings.product_image_fill %} media--contain{% endunless %} relative overflow-hidden shrink-0" href="{{ card_product.url }}">
                     {%- if featured_media -%}
                       {%- assign max_width = featured_media.width -%}
@@ -68,8 +68,8 @@
                       {{- 'product-1' | placeholder_svg_tag -}}
                     {%- endif -%}
                   </a>
-                  <div class="horizontal-product__details grow flex flex-col justify-start align-self-center gap-1d5 w-full">
-                    <div class="flex flex-col gap-1">
+                  <div class="horizontal-product__details flex flex-col items-center justify-start gap-1d5 w-full">
+                    <div class="flex flex-col gap-1 items-center">
                       <div class="block">
                         {%- if section.settings.show_vendor -%}
                           <p class="horizontal-product__vendor text-xs text-opacity">{{ card_product.vendor }}</p>
@@ -80,13 +80,13 @@
                         <p class="text-xs text-opacity leading-tight">{{ first_available_variant.title }}</p>
                       {%- endif -%}
                     </div>
-                    <div class="flex flex-col gap-1">
+                    <div class="flex flex-col gap-1 items-center">
                       {%- liquid
                         if section.settings.show_price
                           if first_available_variant != blank
-                            render 'product-price', product: card_product, variant: first_available_variant, use_variant: true, class: 'flex flex-wrap items-end gap-2 text-sm'
+                            render 'product-price', product: card_product, variant: first_available_variant, use_variant: true, class: 'flex flex-wrap items-end justify-center gap-2 text-sm'
                           else
-                            render 'product-price', product: card_product, class: 'flex flex-wrap items-end gap-2 text-sm'
+                            render 'product-price', product: card_product, class: 'flex flex-wrap items-end justify-center gap-2 text-sm'
                           endif
                         endif
                       -%}
@@ -134,12 +134,12 @@
                   </div>
                 {%- endcapture -%}
               {%- else -%}
-                <div class="horizontal-product flex items-start flex-col gap-4 md:flex-row md:gap-6" data-product="{{ forloop.index }}">
+                <div class="horizontal-product flex flex-col items-center text-center gap-3" data-product="{{ forloop.index }}">
                   <div class="horizontal-product__media media media--{{ settings.product_image_ratio }}{% unless settings.product_image_fill %} media--contain{% endunless %} relative overflow-hidden shrink-0" href="{{ card_product.url }}">
                     {{- 'product-1' | placeholder_svg_tag -}}
                   </div>
-                  <div class="horizontal-product__details grow flex flex-col justify-start align-self-center gap-1d5 w-full">
-                    <div class="flex flex-col gap-1">
+                  <div class="horizontal-product__details flex flex-col items-center justify-start gap-1d5 w-full">
+                    <div class="flex flex-col gap-1 items-center">
                       <div class="block">
                         {%- if section.settings.show_vendor -%}
                           <p class="horizontal-product__vendor text-xs text-opacity">{{ 'products.product.vendor' | t }}</p>
@@ -147,10 +147,10 @@
                         <a href="#" class="horizontal-product__title reversed-link font-medium text-base leading-tight">{{ 'onboarding.product_title' | t }}</a>
                       </div>
                     </div>
-                    <div class="flex flex-col gap-1">
+                    <div class="flex flex-col gap-1 items-center">
                       {%- liquid
                         if section.settings.show_price
-                          render 'product-price', product: blank, class: 'flex flex-wrap items-end gap-2 text-sm'
+                          render 'product-price', product: blank, class: 'flex flex-wrap items-end justify-center gap-2 text-sm'
                         endif
                       -%}
                     </div>
@@ -305,7 +305,7 @@
                   endif
                   assign featured_media = first_available_variant.featured_media | default: card_product.featured_media
                 -%}
-                <div class="horizontal-product flex items-start flex-col gap-4 md:flex-row md:gap-6">
+                <div class="horizontal-product flex flex-col items-center text-center gap-3">
                   <a class="horizontal-product__media media media--{{ settings.product_image_ratio }}{% unless settings.product_image_fill %} media--contain{% endunless %} relative overflow-hidden shrink-0" href="{{ card_product.url }}">
                     {%- if featured_media -%}
                       {%- assign max_width = featured_media.width -%}
@@ -316,8 +316,8 @@
                       {{- 'product-1' | placeholder_svg_tag -}}
                     {%- endif -%}
                   </a>
-                  <div class="horizontal-product__details grow flex flex-col justify-start align-self-center gap-1d5 w-full">
-                    <div class="flex flex-col gap-1">
+                  <div class="horizontal-product__details flex flex-col items-center justify-start gap-1d5 w-full">
+                    <div class="flex flex-col gap-1 items-center">
                       <div class="block">
                         {%- if section.settings.show_vendor -%}
                           <p class="horizontal-product__vendor text-xs text-opacity">{{ card_product.vendor }}</p>
@@ -328,13 +328,13 @@
                         <p class="text-xs text-opacity leading-tight">{{ first_available_variant.title }}</p>
                       {%- endif -%}
                     </div>
-                    <div class="flex flex-col gap-1">
+                    <div class="flex flex-col gap-1 items-center">
                       {%- liquid
                         if section.settings.show_price
                           if first_available_variant != blank
-                            render 'product-price', product: card_product, variant: first_available_variant, use_variant: true, class: 'flex flex-wrap items-end gap-2 text-sm'
+                            render 'product-price', product: card_product, variant: first_available_variant, use_variant: true, class: 'flex flex-wrap items-end justify-center gap-2 text-sm'
                           else
-                            render 'product-price', product: card_product, class: 'flex flex-wrap items-end gap-2 text-sm'
+                            render 'product-price', product: card_product, class: 'flex flex-wrap items-end justify-center gap-2 text-sm'
                           endif
                         endif
                       -%}

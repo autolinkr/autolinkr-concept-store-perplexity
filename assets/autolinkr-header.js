@@ -262,7 +262,11 @@
     mobileMenu.classList.add('is-open');
     mobileMenu.setAttribute('aria-hidden', 'false');
     hamburger && hamburger.setAttribute('aria-expanded', 'true');
-    body.style.overflow = 'hidden';
+    if (window.AutoLinkrScrollLock) {
+      window.AutoLinkrScrollLock.acquire();
+    } else {
+      body.style.overflow = 'hidden';
+    }
     const firstItem = mobileMenu.querySelector('a, button');
     if (firstItem) setTimeout(() => firstItem.focus(), 50);
   }
@@ -272,7 +276,11 @@
     mobileMenu.classList.remove('is-open');
     mobileMenu.setAttribute('aria-hidden', 'true');
     hamburger && hamburger.setAttribute('aria-expanded', 'false');
-    body.style.overflow = '';
+    if (window.AutoLinkrScrollLock) {
+      window.AutoLinkrScrollLock.release();
+    } else {
+      body.style.overflow = '';
+    }
     document.querySelectorAll('.al-mob-group').forEach(g => {
       g.classList.remove('is-open');
       const btn = g.querySelector('.al-mob-group__trigger');

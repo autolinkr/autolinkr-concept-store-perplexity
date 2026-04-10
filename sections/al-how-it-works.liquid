@@ -11,7 +11,7 @@
   <div class="page-width" style="max-width:1200px;margin:0 auto;padding:0 24px;">
 
     {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
-      <div class="al-hiw__header" style="text-align:center;margin-bottom:64px;">
+      <div class="al-hiw__header" style="text-align:center;margin-bottom:36px;">
         {%- if section.settings.eyebrow != blank -%}
           <span class="al-label">{{ section.settings.eyebrow }}</span>
         {%- endif -%}
@@ -35,7 +35,7 @@
               <h3 class="al-step__heading">{{ block.settings.heading }}</h3>
               <p class="al-step__body">{{ block.settings.body }}</p>
               {%- if block.settings.badge != blank -%}
-                <span class="al-label" style="margin-top:16px;display:inline-block;">{{ block.settings.badge }}</span>
+                <span class="al-label al-step__badge">{{ block.settings.badge }}</span>
               {%- endif -%}
             </div>
 
@@ -102,10 +102,16 @@
   .al-step--reverse .al-step__img  { order: 1; }
 
   .al-step__text {
-    padding: 52px 48px;
+    padding: 40px 48px 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  /* Match badge → bottom edge spacing to title → body (14px) */
+  .al-step__badge {
+    margin-top: 8px;
+    display: inline-block;
   }
 
   .al-step__heading {
@@ -159,7 +165,7 @@
     .al-step__img  { order: 1 !important; }
     .al-step__text { order: 2 !important; }
 
-    .al-step__text { padding: 28px 24px; }
+    .al-step__text { padding: 24px 24px 14px; }
 
     .al-step__img {
       height: 240px;

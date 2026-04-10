@@ -2,6 +2,9 @@
 .shopify/
 shopify.theme.toml.bak
 
+# Local reference clone (not part of this theme; do not commit or deploy)
+_reference-autolinkr-concept-store/
+
 # Node
 node_modules/
 .npm/

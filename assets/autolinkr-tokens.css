@@ -155,9 +155,13 @@ a:hover { color: var(--al-accent-hover); }
    Only custom sections (al-*) get hardcoded dark backgrounds. */
 /* al-* section backgrounds are set per-section in liquid files */
 
-/* Section dividers */
-.section--divider::before {
-  border-color: var(--al-border-subtle) !important;
+/* Section dividers — off site-wide (no hairline above sections; theme uses ::after) */
+.section--divider::before,
+.section--divider::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 /* ─── TYPOGRAPHY UTILITY ─────────────────────────────────── */
@@ -1806,23 +1810,7 @@ body::before {
   padding: var(--al-sp-10) var(--al-sp-4) var(--al-sp-10) !important;
 }
 
-/* ─── SECTION SPACING — match original (header uses .header-section) ─ */
-.shopify-section + .shopify-section:not(.header-section) {
-  position: relative;
-}
-
-.shopify-section + .shopify-section:not(.header-section)::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--al-border-med), transparent);
-  z-index: 1;
-  pointer-events: none;
-}
+/* Adjacent section gradient hairlines removed (were on .shopify-section + .shopify-section::before) */
 
 /* ─── PRODUCT PAGE BULLETS ────────────────────────────────── */
 /* Blue icons + clean row layout for bullet-1/2/3 text blocks */
@@ -1879,6 +1867,20 @@ comparison-table.comparison-table {
 .comparison-table__row.sticky {
   background: #131318 !important;
   border-bottom: 1px solid rgba(59,142,248,0.15) !important;
+}
+
+/* Thead / sticky: stack image above title + price, centered in column */
+.comparison-table__row.thead .horizontal-product,
+.comparison-table__row.sticky .horizontal-product {
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+.comparison-table__row.thead .horizontal-product__details,
+.comparison-table__row.sticky .horizontal-product__details {
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 /* Product image — force square, consistent size, dark bg */
@@ -1961,11 +1963,29 @@ comparison-table.comparison-table {
   font-weight: 500 !important;
 }
 
-/* Highlighted differences — blue row highlight */
-comparison-table[data-highlight] .comparison-table__row.odd .comparison-table__column[data-highlight],
-comparison-table[data-highlight] .comparison-table__row.even .comparison-table__column[data-highlight] {
-  background: rgba(59,142,248,0.12) !important;
-  color: #fff !important;
+/* Highlight differences — theme adds .info to differing rows; light blue cells + dark spec text */
+.comparison-table__row.info:not(.thead):not(.tfoot) {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column {
+  background: rgba(219, 234, 254, 0.55) !important;
+}
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column p:not(.h6),
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column .col-span-full {
+  color: #0d0d0d !important;
+}
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column .h6 {
+  color: #141414 !important;
+}
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column .icon--check-circle-filled,
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column svg[class*='check'] {
+  color: rgb(var(--color-highlight)) !important;
+}
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column .icon--close-circle-filled,
+.comparison-table__row.info:not(.thead):not(.tfoot) .comparison-table__column svg[class*='close'] {
+  color: rgb(var(--color-error-text, 176 0 32)) !important;
 }
 
 /* Section heading group */
@@ -1995,6 +2015,15 @@ comparison-table[data-highlight] .comparison-table__row.even .comparison-table__
 .comparison-table__row.tfoot .comparison-table__column {
   border-right: none !important;
   padding: 0 8px !important;
+}
+
+/* Comparison footer — no primary-button glow */
+.comparison-table__row.tfoot .button--primary {
+  box-shadow: none !important;
+}
+.js [data-button-hover='standard'] .comparison-table__row.tfoot .button--primary:hover:not([disabled], .self-button) {
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 /* Price text */
@@ -2257,15 +2286,7 @@ comparison-table.comparison-table {
   align-items: center !important;
 }
 
-/* Highlight Differences — override theme info background with blue border */
-.comparison-table__row.info .comparison-table__column {
-  background-color: transparent !important;
-}
-.comparison-table__row.info {
-  border: 1px solid rgba(59,142,248,0.55) !important;
-  border-radius: 6px !important;
-  box-shadow: 0 0 12px rgba(59,142,248,0.08) !important;
-}
+/* .info row fills are set above (light blue cells); no extra row chrome here */
 
 /* ── 5. Complete Your Setup — larger cards ── */
 .shopify-section [id*="product-recommendations"] .card-grid {
@@ -2332,10 +2353,27 @@ comparison-table.comparison-table {
   }
 }
 
-/* ─── MOBILE MENU DRAWER — inner shell height: midpoint of full (100vh) vs previous 80vh cap ─ */
-#MenuDrawer.menu-drawer > .drawer__inner {
-  height: 90vh !important;
-  max-height: 90vh !important;
+/* ─── MODAL DRAWERS — lock html when body is modal-locked (iOS background scroll) ─ */
+html:has(body.has-modal-open),
+html:has(body.has-modal-opening) {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+#MenuDrawer.menu-drawer .drawer__scrollable {
+  overscroll-behavior: contain;
+}
+
+/* Full-bleed overlay + no touch scroll passthrough (iOS) */
+@media screen and (max-width: 639px) {
+  #MenuDrawer.menu-drawer.drawer[active] > .overlay {
+    inset: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    min-height: 100dvh;
+    touch-action: none;
+  }
 }
 
 /* ─── DRAWERS (menu + cart): faster motion (~10%) + no extra content fade delay — */

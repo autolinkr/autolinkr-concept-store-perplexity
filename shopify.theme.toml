@@ -6,9 +6,14 @@
 theme = "184215470114"
 store = "aa3954.myshopify.com"
 ignore = [
-  "config/settings_data.json"
+  "config/settings_data.json",
+  "_reference-autolinkr-concept-store/**"
 ]
 
 [environments.production]
 theme = "184215470114"
 store = "aa3954.myshopify.com"
+ignore = [
+  "config/settings_data.json",
+  "_reference-autolinkr-concept-store/**"
+]

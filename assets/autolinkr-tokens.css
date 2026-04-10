@@ -2295,38 +2295,10 @@ comparison-table.comparison-table {
   }
 }
 
-/* ─── MOBILE MENU DRAWER — ~20% tighter vertical rhythm ───── */
-#MenuDrawer.menu-drawer .drawer__header {
-  padding: calc(var(--sp-8) * 0.8) calc(var(--sp-5) * 0.8) calc(var(--sp-4) * 0.8);
-}
-
-#MenuDrawer.menu-drawer .drawer__scrollable {
-  padding-block: calc(var(--sp-3) * 0.8) calc(var(--sp-10) * 0.8);
-}
-
-#MenuDrawer .drawer__sticky {
-  padding-inline: calc(var(--sp-5) * 0.8);
-}
-
-#MenuDrawer .drawer__menu-item {
-  padding-block: calc(var(--sp-2d5) * 0.8);
-}
-
-#MenuDrawer .drawer__menu-item.text-2xl,
-#MenuDrawer .drawer__menu-item .text-2xl {
-  font-size: calc(var(--text-2xl) * 0.8);
-}
-
-#MenuDrawer .drawer__submenu > button {
-  height: calc(50px * 0.8);
-  padding-inline-start: calc(var(--sp-5) * 0.8);
-  font-size: calc(var(--text-base) * 0.8);
-}
-
-@media screen and (min-width: 768px) {
-  #MenuDrawer .drawer__menu {
-    padding-block-start: calc(var(--sp-6) * 0.8);
-  }
+/* ─── MOBILE MENU DRAWER — shorter panel only (inner shell height, not nav type) ─ */
+#MenuDrawer.menu-drawer > .drawer__inner {
+  height: 80vh !important;
+  max-height: 80vh !important;
 }
 
 /* ─── CART — complementary row bundle bullets (Often Bundled) ─ */

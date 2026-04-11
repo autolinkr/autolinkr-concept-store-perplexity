@@ -106,7 +106,6 @@
         },
         "moon_bundles_app_block_LN6Nw4": {
           "type": "shopify://apps/moon-bundles/blocks/app-block/aaf4cd95-8b9b-4a14-b929-0f7fc8fced27",
-          "disabled": true,
           "settings": {
             "moonbundle_selected_product": "shop-the-autolinkr-pro"
           }

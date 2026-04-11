@@ -78,16 +78,6 @@
             "text_size": "text-base"
           }
         },
-        "text_mYYTUf": {
-          "type": "text",
-          "settings": {
-            "icon": "eye",
-            "iwidth": "custom",
-            "icon_width": 24,
-            "text": "IR Night Vision",
-            "text_size": "text-base"
-          }
-        },
         "text_twwTrj": {
           "type": "text",
           "settings": {
@@ -105,6 +95,16 @@
             "iwidth": "fit",
             "icon_width": 24,
             "text": "WiFi App Access on Your Phone",
+            "text_size": "text-base"
+          }
+        },
+        "text_mYYTUf": {
+          "type": "text",
+          "settings": {
+            "icon": "eye",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "IR Night Vision",
             "text_size": "text-base"
           }
         },
@@ -132,11 +132,11 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_quantity_selector": true,
-            "show_price": true,
+            "show_quantity_selector": false,
+            "show_price": false,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false,
-            "enable_back_in_stock": true,
+            "enable_back_in_stock": false,
             "show_back_in_stock_name": false,
             "show_back_in_stock_phone": false
           }
@@ -252,9 +252,9 @@
         "description_RtHtrP",
         "liquid_rigPKB",
         "text-tagline",
-        "text_mYYTUf",
         "text_twwTrj",
         "text_94MYt7",
+        "text_mYYTUf",
         "variant_picker",
         "text-variant-note",
         "buy_buttons",

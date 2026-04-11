@@ -192,6 +192,27 @@
                     endif
   
                     assign modulo = block_index | modulo: 2
+                    # Moon Bundles: last benefit row before variant/cart; skip app/liquid/sticky (no loader mid-list).
+                    assign moon_scan_idx = next_index
+                    assign moon_show_loader = false
+                    if moon_scan_idx < section.blocks.size
+                      for _m in (1..24)
+                        if moon_scan_idx >= section.blocks.size
+                          break
+                        endif
+                        assign moon_cand = section.blocks[moon_scan_idx]
+                        if moon_cand.type == 'sticky_buy_button' or moon_cand.type == '@app' or moon_cand.type == 'liquid'
+                          assign moon_scan_idx = moon_scan_idx | plus: 1
+                        elsif moon_cand.type == 'variant_picker' or moon_cand.type == 'buy_buttons'
+                          assign moon_show_loader = true
+                          break
+                        elsif moon_cand.type == 'text' and moon_cand.settings.text != blank
+                          break
+                        else
+                          assign moon_scan_idx = moon_scan_idx | plus: 1
+                        endif
+                      endfor
+                    endif
                   -%}
                   <div class="product__text{% if modulo == 0 %} even{% endif %}{% if prev_block.type != 'text' %} first{% endif %}{% if next_block.type != 'text' %} last{% endif %}" {{ block.shopify_attributes }}>
                     <div class="product__text-inner flex items-center gap-2d5">
@@ -223,8 +244,7 @@
                       <p class="rte {{ block.settings.text_size }} leading-tight">{{ block.settings.text }}</p>
                     </div>
                   </div>
-                  {%- comment -%} Moon Bundles: mount point after the third consecutive product info text row (emoji benefits). {%- endcomment -%}
-                  {%- if block_index == 3 -%}
+                  {%- if moon_show_loader -%}
                     <div class="moonbundleCustomLoader"></div>
                   {%- endif -%}
                 {%- else -%}

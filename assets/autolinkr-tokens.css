@@ -1010,6 +1010,12 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   min-height: 24px !important;
 }
 
+/* Moon Bundles mount — same 8px rhythm as .product__text rows (loader sits after last benefit line) */
+.moonbundleCustomLoader {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
 /* ─── IMAGE WITH TEXT — force image visible on mobile ─────── */
 @media (max-width: 768px) {
   .image-with-text .image-with-text__media,

@@ -327,10 +327,10 @@
           "settings": {
             "menu_title": "Adapters",
             "menu_label": "ADAPTERS",
-            "view_all_label": "Shop All Adapters",
+            "view_all_label": "",
             "view_all_link": "shopify://collections/all",
-            "footer_label": "Compare All Adapters →",
-            "footer_link": "shopify://products/the-autolinkr-pro",
+            "footer_label": "",
+            "footer_link": "shopify://collections/wireless-carplay-adapters",
             "image_shape": "square",
             "columns": 4,
             "card_image_1": "shopify://shop_images/AutoLinkr_Lite_Blue_Background_cf65fc5d-2472-4f19-8be7-b8cc1f374298.png",

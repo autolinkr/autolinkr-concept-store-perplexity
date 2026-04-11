@@ -105,11 +105,11 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_quantity_selector": true,
-            "show_price": true,
+            "show_quantity_selector": false,
+            "show_price": false,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false,
-            "enable_back_in_stock": true,
+            "enable_back_in_stock": false,
             "show_back_in_stock_name": false,
             "show_back_in_stock_phone": false
           }
@@ -173,7 +173,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping",
-            "content": "<p>You can expect your <strong>AutoLinkr Aroma Scent Diffuser™</strong> within 5-10 business days from your order date.</p>",
+            "content": "<p>You can expect your <strong>AutoLinkr Aroma Diffuser™</strong> within 5-10 business days from your order date.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"

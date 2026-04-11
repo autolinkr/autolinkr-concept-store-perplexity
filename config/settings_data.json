@@ -12,9 +12,9 @@
     "logo": "{{ shop.brand.logo }}",
     "white_logo": "",
     "logo_width": 80,
-    "logo_mobile": "",
+    "logo_mobile": "shopify://shop_images/AutoLinkrOfficialLogo4K_White_Trans.png",
     "white_logo_mobile": "",
-    "logo_width_mobile": 150,
+    "logo_width_mobile": 170,
     "favicon": "",
     "color_text": "#e8edf5",
     "color_background": "#080d1a",
@@ -119,10 +119,10 @@
     "predictive_search_show_price": true,
     "typewriter_effect_enabled": false,
     "typewriter_starter_text": "",
-    "social_facebook_link": "https://www.facebook.com/shopify",
-    "social_twitter_link": "https://twitter.com/shopify",
-    "social_instagram_link": "https://instagram.com/shopify",
-    "social_youtube_link": "https://www.youtube.com/user/shopify",
+    "social_facebook_link": "https://www.facebook.com/profile.php?id=61555863540375",
+    "social_twitter_link": "",
+    "social_instagram_link": "https://www.instagram.com/autolinkr/",
+    "social_youtube_link": "https://www.youtube.com/@AutoLinkr",
     "social_tiktok_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -201,17 +201,6 @@
         "disabled": false,
         "settings": {}
       },
-      "6159598353363395418": {
-        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
-        "disabled": false,
-        "settings": {
-          "widget_position": "LEFT_BOTTOM",
-          "side_margin": 36,
-          "bottom_margin": 36,
-          "mobile_side_margin": 16,
-          "mobile_bottom_margin": 46
-        }
-      },
       "16798170927650018749": {
         "type": "shopify://apps/recharge-subscriptions/blocks/storefront-experiences/371eed76-0b44-4869-9813-730372ea378e",
         "disabled": true,
@@ -236,6 +225,17 @@
         "type": "shopify://apps/parcelwill-parcel-panel/blocks/app.embed/fc785c3f-90e0-4c98-a20c-7cde9ba5e4b5",
         "disabled": false,
         "settings": {}
+      },
+      "6159598353363395418": {
+        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
+        "disabled": true,
+        "settings": {
+          "widget_position": "LEFT_BOTTOM",
+          "side_margin": 36,
+          "bottom_margin": 36,
+          "mobile_side_margin": 16,
+          "mobile_bottom_margin": 46
+        }
       }
     }
   },

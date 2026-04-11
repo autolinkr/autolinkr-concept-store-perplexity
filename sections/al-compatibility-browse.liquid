@@ -1,0 +1,163 @@
+{% comment %}
+  AutoLinkr — Browse supported vehicles by manufacturer (SEO-friendly, server-rendered).
+  Snippets `al-compatibility-browse-nav.liquid` and `al-compatibility-browse-list.liquid` are generated from memory/vehicle-compatibility-master-list.md.
+  This stylesheet also styles `al-compatibility-quiz-placeholder.liquid` on the compatibility page (theme editor colors).
+{% endcomment %}
+
+{{ 'al-compatibility-browse.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'al-compatibility-browse.js' | asset_url }}" defer></script>
+
+{%- liquid
+  if section.settings.heading != blank
+    assign browse_title = section.settings.heading
+  else
+    assign browse_title = page.title
+  endif
+  assign browse_desc = section.settings.seo_description | default: section.settings.subheading | strip_html | strip | truncate: 280
+-%}
+
+<section
+  class="al-compat-browse"
+  data-al-compat-browse
+  style="padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;"
+>
+  <div class="al-compat-browse__inner page-width">
+    <header class="al-compat-browse__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="al-label">{{ section.settings.eyebrow }}</span>
+      {%- endif -%}
+      {%- if browse_title != blank -%}
+        <h1 class="al-compat-browse__title">{{ browse_title }}</h1>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <div class="al-compat-browse__intro rte">{{ section.settings.subheading }}</div>
+      {%- endif -%}
+    </header>
+
+    <div class="al-compat-browse__toolbar{% unless section.settings.show_search %} al-compat-browse__toolbar--nav-only{% endunless %}">
+      {%- if section.settings.show_search -%}
+        <div class="al-compat-browse__search-wrap">
+          <label class="al-compat-browse__search-label" for="al-compat-search-{{ section.id }}">
+            {{ section.settings.search_label }}
+          </label>
+          <input
+            type="search"
+            id="al-compat-search-{{ section.id }}"
+            class="al-compat-browse__search"
+            data-al-compat-search
+            placeholder="{{ section.settings.search_placeholder | escape }}"
+            autocomplete="off"
+            spellcheck="false"
+          >
+        </div>
+      {%- endif -%}
+      {% render 'al-compatibility-browse-nav' %}
+    </div>
+
+    <p
+      class="al-compat-browse__empty"
+      data-al-compat-empty
+      role="status"
+      aria-live="polite"
+    >
+      {{ section.settings.empty_message }}
+    </p>
+
+    {% render 'al-compatibility-browse-list' %}
+  </div>
+</section>
+
+{%- if browse_title != blank and browse_desc != blank -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": {{ browse_title | json }},
+      "description": {{ browse_desc | json }},
+      "url": {{ request.origin | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "AL — Browse by make",
+  "tag": "section",
+  "class": "al-compat-browse-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Vehicle compatibility"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Leave blank to use the page title."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Introduction",
+      "default": "<p>Browse by manufacturer to see supported models and model years. This list is for vehicles that already have <strong>factory wired Apple CarPlay or Android Auto</strong> and a <strong>USB port that supports data</strong>—trim and packages vary, so always confirm in your car.</p><p><strong>Which products this applies to:</strong> AutoLinkr <strong>adapters</strong> that work with a compatible factory screen—<strong>AutoLinkr</strong>, <strong>AutoLinkr Lite</strong>, <strong>AutoLinkr Pro™</strong>, and <strong>AutoLinkr Elite™</strong>. If your vehicle has <em>no</em> factory CarPlay/Android Auto, use a screen-based product such as <strong>AutoLinkr Tablet™</strong>; this manufacturer list is not for that setup.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "seo_description",
+      "label": "SEO description (meta / JSON-LD)",
+      "default": "Vehicle list for AutoLinkr adapters (AutoLinkr, Lite, Pro, Elite): factory wired CarPlay or Android Auto required. Not for Tablet or cars without factory integration."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show search filter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_label",
+      "label": "Search label",
+      "default": "Filter makes & models"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search placeholder",
+      "default": "e.g. Civic, F-150, BMW…"
+    },
+    {
+      "type": "text",
+      "id": "empty_message",
+      "label": "No results message",
+      "default": "No matching make or model. Try another term or scroll the full list below."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 56
+    }
+  ],
+  "presets": [
+    {
+      "name": "AL — Browse by make"
+    }
+  ]
+}
+{% endschema %}

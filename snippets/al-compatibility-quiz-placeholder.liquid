@@ -1,0 +1,33 @@
+{% comment %}
+  Compatibility page — “Check my car” promo block. Shares assets/al-compatibility-browse.css with the browse section (theme editor colors).
+{% endcomment %}
+{{ 'al-compatibility-browse.css' | asset_url | stylesheet_tag }}
+<div class="al-quiz-placeholder">
+  <div class="al-quiz-placeholder__card">
+    <div class="al-quiz-placeholder__glow" aria-hidden="true"></div>
+    <p class="al-quiz-placeholder__eyebrow">Takes 30 seconds</p>
+    <p class="al-quiz-placeholder__title">Does the AutoLinkr<br>work with your car?</p>
+    <p class="al-quiz-placeholder__lede">
+      Tell us your make, model, and year — we'll confirm<br>compatibility across all four AutoLinkr devices instantly.
+    </p>
+    <p class="al-quiz-placeholder__strong">Find out in 30 seconds.</p>
+    <div class="al-quiz-placeholder__cta">
+      <span class="al-quiz-placeholder__cta-dot" aria-hidden="true"></span>
+      <span class="al-quiz-placeholder__cta-label">Check My Car</span>
+    </div>
+    <div class="al-quiz-placeholder__checks">
+      <span class="al-quiz-placeholder__check">
+        <span class="al-quiz-placeholder__check-mark" aria-hidden="true">✓</span> No account needed
+      </span>
+      <span class="al-quiz-placeholder__check">
+        <span class="al-quiz-placeholder__check-mark" aria-hidden="true">✓</span> Instant result
+      </span>
+      <span class="al-quiz-placeholder__check">
+        <span class="al-quiz-placeholder__check-mark" aria-hidden="true">✓</span> 500+ vehicles supported
+      </span>
+    </div>
+    <p class="al-quiz-placeholder__hint">
+      To embed: Paste your Jebbit / Typeform / custom quiz iframe code here via the theme editor → Custom Liquid section
+    </p>
+  </div>
+</div>

@@ -24,6 +24,21 @@
         "rounded": false
       }
     },
+    "compat-browse": {
+      "type": "al-compatibility-browse",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "subheading": "<p>Browse by make for supported models and years. For cars with factory wired CarPlay or Android Autoand adata USB port—confirm in your vehicle. Applies to AutoLinkr adapters: <strong>AutoLinkr, AutoLinkr Lite, AutoLinkr Pro™, AutoLinrk Elite™ </strong>on a compatible factory screen.</p>",
+        "seo_description": "Vehicle list for AutoLinkr adapters (AutoLinkr, Lite, Pro, Elite): factory wired CarPlay or Android Auto required. Not for Tablet or cars without factory integration.",
+        "show_search": true,
+        "search_label": "Filter makes & models",
+        "search_placeholder": "e.g. Civic, F-150, BMW…",
+        "empty_message": "No matching make or model. Try another term or scroll the full list below.",
+        "padding_top": 48,
+        "padding_bottom": 32
+      }
+    },
     "compat-hero": {
       "type": "rich-text",
       "blocks": {
@@ -110,7 +125,7 @@
     "quiz-placeholder": {
       "type": "custom-liquid",
       "settings": {
-        "liquid": "<div class=\"al-quiz-placeholder\" style=\"max-width:780px;margin:0 auto 0;padding:0 20px 56px;\">\n  <div style=\"background:linear-gradient(135deg,#0F0F12,#161619);border:1px dashed rgba(59,142,248,0.4);border-radius:20px;padding:56px 48px;text-align:center;position:relative;overflow:hidden;\">\n    <div style=\"position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:200px;background:radial-gradient(ellipse,rgba(59,142,248,0.18),transparent 70%);pointer-events:none;\"></div>\n    <p style=\"font-size:0.8125rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#3B8EF8;margin:0 0 14px;\">Takes 30 seconds</p>\n    <p style=\"font-size:1.5rem;font-weight:700;color:#F7F7F8;margin:0 0 12px;font-family:'General Sans',sans-serif;letter-spacing:-0.02em;line-height:1.25;\">Does the AutoLinkr<br>work with your car?</p>\n    <p style=\"color:#8A8A94;font-size:0.9375rem;margin:0 0 6px;line-height:1.65;\">Tell us your make, model, and year — we'll confirm<br>compatibility across all four AutoLinkr devices instantly.</p>\n    <p style=\"color:#F7F7F8;font-size:0.9375rem;font-weight:600;margin:0 0 28px;\">Find out in 30 seconds.</p>\n    <div style=\"display:inline-flex;align-items:center;gap:8px;background:rgba(59,142,248,0.12);border:1px solid rgba(59,142,248,0.3);border-radius:9999px;padding:8px 20px;margin-bottom:28px;\">\n      <span style=\"width:8px;height:8px;border-radius:50%;background:#3B8EF8;display:inline-block;animation:pulse 1.8s ease-in-out infinite;\"></span>\n      <span style=\"color:#3B8EF8;font-size:0.8125rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;\">Check My Car</span>\n    </div>\n    <div style=\"display:flex;justify-content:center;gap:24px;flex-wrap:wrap;\">\n      <span style=\"color:#8A8A94;font-size:0.8125rem;display:flex;align-items:center;gap:6px;\"><span style=\"color:#3B8EF8;font-size:16px;\">✓</span> No account needed</span>\n      <span style=\"color:#8A8A94;font-size:0.8125rem;display:flex;align-items:center;gap:6px;\"><span style=\"color:#3B8EF8;font-size:16px;\">✓</span> Instant result</span>\n      <span style=\"color:#8A8A94;font-size:0.8125rem;display:flex;align-items:center;gap:6px;\"><span style=\"color:#3B8EF8;font-size:16px;\">✓</span> 500+ vehicles supported</span>\n    </div>\n    <p style=\"color:#4A4A52;font-size:0.75rem;margin:28px 0 0;\">To embed: Paste your Jebbit / Typeform / custom quiz iframe code here via the theme editor → Custom Liquid section</p>\n  </div>\n  <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}</style>\n</div>",
+        "liquid": "{% render 'al-compatibility-quiz-placeholder' %}",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -518,6 +533,7 @@
   },
   "order": [
     "main-page",
+    "compat-browse",
     "compat-hero",
     "quiz-placeholder",
     "quick-match-heading",

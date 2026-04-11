@@ -353,6 +353,7 @@
         "mobile-dock-5",
         "mobile-dock-6"
       ],
+      "disabled": true,
       "settings": {
         "color_text": "",
         "color_background": "",

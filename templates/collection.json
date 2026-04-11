@@ -12,13 +12,6 @@
     "main-collection-banner": {
       "type": "main-collection-banner",
       "blocks": {
-        "spacing": {
-          "type": "spacing",
-          "settings": {
-            "height": 48,
-            "height_mobile": 0
-          }
-        },
         "breadcrumb": {
           "type": "breadcrumb",
           "settings": {
@@ -34,14 +27,13 @@
         }
       },
       "block_order": [
-        "spacing",
         "breadcrumb",
         "title"
       ],
       "settings": {
         "transparent_header": true,
         "show_image": true,
-        "image_height": "750px",
+        "image_height": "adapt",
         "content_position": "md:items-end md:justify-start",
         "text_alignment": "left",
         "image_height_mobile": "auto",

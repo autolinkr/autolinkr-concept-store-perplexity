@@ -155,6 +155,10 @@
                           <p class="rte {{ block.settings.text_size }} leading-tight">{{ block.settings.text }}</p>
                         </div>
                       </div>
+                      {%- comment -%} Moon Bundles: mount point after the third consecutive product info text row (emoji benefits). {%- endcomment -%}
+                      {%- if block_index == 3 -%}
+                        <div class="moonbundleCustomLoader"></div>
+                      {%- endif -%}
                     {%- else -%}
                       <p class="product__vendor {{ block.settings.text_size }}" {{ block.shopify_attributes }}>
                         <a href="{{ product.vendor | url_for_vendor }}" title="{{ product.vendor | escape }}" class="reversed-link">

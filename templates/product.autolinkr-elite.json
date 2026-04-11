@@ -40,7 +40,7 @@
             "icon": "lightning",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Wireless CarPlay & Android Auto — no cables, auto-connects every drive.",
+            "text": "Wireless CarPlay & Android Auto",
             "text_size": "text-base"
           }
         },
@@ -50,7 +50,7 @@
             "icon": "devices",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Stream Netflix, YouTube, Hulu, Disney+, Live TV and more — simultaneously with navigation.",
+            "text": "Stream Netflix, YouTube, Hulu, Disney+, Live TV and more",
             "text_size": "text-base"
           }
         },
@@ -60,7 +60,7 @@
             "icon": "check_mark",
             "iwidth": "custom",
             "icon_width": 36,
-            "text": "Split-screen multitasking, 8GB RAM, 64GB storage. The only CarPlay adapter with true split-screen.",
+            "text": "Split-screen, 8GB RAM, 64GB storage",
             "text_size": "text-base"
           }
         },

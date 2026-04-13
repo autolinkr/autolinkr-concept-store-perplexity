@@ -25,7 +25,7 @@
   assign spinning_block = section.blocks | where: 'type', 'spinning_text' | first
 -%}
 
-<div class="featured-product product product--{{ section.settings.gallery_layout }} flex flex-col items-start lg:grid gap-5 w-full relative">
+<div class="featured-product product al-product-layout product--{{ section.settings.gallery_layout }} flex flex-col items-start lg:grid gap-0 w-full relative">
   <media-gallery
     class="product__gallery product__gallery--{{ mobile_layout }} block w-full relative
     {%- if gallery_layout == 'scroll' %} xl:grid xl:items-start gap-5 h-full{% endif -%}"

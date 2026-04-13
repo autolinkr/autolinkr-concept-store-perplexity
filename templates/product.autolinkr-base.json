@@ -23,11 +23,30 @@
     "al-reviews": {
       "type": "apps",
       "settings": {}
+    },
+    "areviews_1776030470_a26814": {
+      "type": "apps",
+      "blocks": {
+        "areviews_reviews_importer_areviews_display_reviews_A51D54": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_A51D54"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "al-product-hero",
     "al-product-features",
-    "al-reviews"
+    "al-reviews",
+    "areviews_1776030470_a26814"
   ]
 }

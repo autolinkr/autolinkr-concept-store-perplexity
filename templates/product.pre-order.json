@@ -139,11 +139,16 @@
         "sticky_buy_button": {
           "type": "sticky_buy_button",
           "settings": {}
+        },
+        "areviews_reviews_importer_areviews_title_rating_B523C1": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "areviews_reviews_importer_areviews_title_rating_B523C1",
         "description",
         "countdown",
         "variant_picker",
@@ -252,10 +257,29 @@
         "heading": "Need help?",
         "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.</p>"
       }
+    },
+    "areviews_1776030474_a26814": {
+      "type": "apps",
+      "blocks": {
+        "areviews_reviews_importer_areviews_display_reviews_69E3C2": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_69E3C2"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main-product",
-    "help-drawer"
+    "help-drawer",
+    "areviews_1776030474_a26814"
   ]
 }

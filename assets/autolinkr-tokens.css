@@ -703,10 +703,73 @@ details[is="accordion-details"] > div:not(.dropdown) strong {
   padding-top: 8px !important;
 }
 
-/* Tighten product info block spacing — bring buy buttons up */
-.main-product .product__info-wrapper > * {
-  margin-bottom: 4px !important;
+/* Product grid (gallery + info): 8px outer padding; vertical stack has no row gap */
+.al-product-layout.product {
+  gap: 0 !important;
+  row-gap: 0 !important;
+  column-gap: 0 !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
 }
+
+/*
+ * Desktop: restore horizontal gutter between gallery and product info.
+ * Replacing gap-5 with gap-0 removed the grid column-gap (~20px); flex-col mobile unchanged.
+ */
+@media screen and (min-width: 1024px) {
+  .al-product-layout.product.lg\:grid {
+    column-gap: 20px !important;
+  }
+}
+
+/*
+ * Product info column: 8px between blocks (replaces removed theme .product__info > * + * { margin-block-start: var(--sp-6) }).
+ * Applies to main product, featured product, and modal — all use <product-info class="product__info">.
+ */
+product-info.product__info > * + *,
+.product product-info.product__info > * + *,
+.product .animate-element.product__info > * + * {
+  margin-block-start: 8px !important;
+}
+
+/* Areviews title-rating block: no margin on Shopify wrapper; vertical rhythm on inner span */
+.product [id*="shopify-block-"][id*="areviews_reviews_importer_areviews_title_rating"],
+product-info [id*="shopify-block-"][id*="areviews_reviews_importer_areviews_title_rating"],
+.product .animate-element [id*="shopify-block-"][id*="areviews_reviews_importer_areviews_title_rating"] {
+  margin: 0 !important;
+}
+.product [id*="shopify-block-"][id*="areviews_reviews_importer_areviews_title_rating"] > div.areviews_main_header_container > span,
+product-info [id*="shopify-block-"][id*="areviews_reviews_importer_areviews_title_rating"] > div.areviews_main_header_container > span,
+.product .animate-element [id*="shopify-block-"][id*="areviews_reviews_importer_areviews_title_rating"] > div.areviews_main_header_container > span {
+  margin: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 4px !important;
+}
+
+/* Product title block: no top margin (spacing from Areviews/other blocks uses their margins); 8px below only */
+product-info.product__info > .product__title.grid,
+.product product-info.product__info > .product__title.grid,
+.product .animate-element.product__info > .product__title.grid {
+  margin-block-start: 0 !important;
+  margin-block-end: 8px !important;
+}
+
+/* Title / price stacks: 8px between heading, price, rating (gap utilities removed) */
+.product .product__title.grid > * + *,
+.product .product__price.grid > * + * {
+  margin-block-start: 8px !important;
+}
+
+/* Align theme sibling rules to 8px where blocks are not the title (title: margin-block-end only, no top) */
+.product .product__vendor + :is(.product__sku, .product__badges),
+.product .product__sku + :is(.product__vendor, .product__badges),
+.product .product__badges + :is(.product__sku, .product__vendor) {
+  margin-block-start: 8px !important;
+}
+.product .product__title + .product__rating {
+  margin-block-start: 8px !important;
+}
+
 .main-product .product__info-wrapper .product-form,
 .main-product .product__info-wrapper .product-form__buttons {
   margin-top: 0 !important;

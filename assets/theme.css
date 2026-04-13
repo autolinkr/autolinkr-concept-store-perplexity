@@ -11902,10 +11902,6 @@ noscript .product-form__input {
   width: 100%;
 }
 
-.product__info>*+* {
-  margin-block-start: var(--sp-6);
-}
-
 .product__breadcrumb {
   border-block-end: 1px solid rgb(var(--color-border));
   padding-block-end: var(--sp-3);

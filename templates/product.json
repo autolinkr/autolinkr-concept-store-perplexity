@@ -147,17 +147,22 @@
           "type": "liquid",
           "disabled": true,
           "settings": {
-            "liquid": "<style>\n/* Hide the video by default */\nvideo {\n    display: none;\n}\n\n/* Show the video only on mobile screens (max-width 768px) */\n@media screen and (max-width: 768px) {\n    video {\n        display: block;\n        width: 100%;\n        height: 250px;\n        margin: 0 auto;\n    }\n}\n</style>\n\n<div style=\"display: flex\">\n    <video muted autoplay playsinline loop>\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/06f041b8cbf8469caae96aec566f79db.mov\" \n                type=\"video/mp4\">\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/06f041b8cbf8469caae96aec566f79db.mov\" \n                type=\"video/mp4\">\n    </video>\n</div>"
+            "liquid": "<style>\n\nvideo {\n    display: none;\n}\n\n\n@media screen and (max-width: 768px) {\n    video {\n        display: block;\n        width: 100%;\n        height: 250px;\n        margin: 0 auto;\n    }\n}\n</style>\n\n<div style=\"display: flex\">\n    <video muted autoplay playsinline loop>\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/06f041b8cbf8469caae96aec566f79db.mov\" \n                type=\"video/mp4\">\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/06f041b8cbf8469caae96aec566f79db.mov\" \n                type=\"video/mp4\">\n    </video>\n</div>"
           }
         },
         "sticky_buy_button": {
           "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "areviews_reviews_importer_areviews_title_rating_9DFF7E": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "areviews_reviews_importer_areviews_title_rating_9DFF7E",
         "description",
         "countdown",
         "variant_picker",
@@ -1274,6 +1279,24 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "areviews_1776030452_a26814": {
+      "type": "apps",
+      "blocks": {
+        "areviews_reviews_importer_areviews_display_reviews_12637B": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_12637B"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -1291,6 +1314,7 @@
     "product-details",
     "faq",
     "product-recommendations",
-    "recently-viewed"
+    "recently-viewed",
+    "areviews_1776030452_a26814"
   ]
 }

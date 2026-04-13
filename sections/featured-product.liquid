@@ -123,7 +123,7 @@
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
     {%- if product != blank -%}
       {%- assign spinning_block = section.blocks | where: 'type', 'spinning_text' | first -%}
-      <div class="featured-product product product--{{ section.settings.gallery_layout }}{% if media_count == 0 %} no-media{% endif %} flex flex-col items-start lg:grid gap-5 w-full relative">
+      <div class="featured-product product al-product-layout product--{{ section.settings.gallery_layout }}{% if media_count == 0 %} no-media{% endif %} flex flex-col items-start lg:grid gap-0 w-full relative">
         {%- if media_count > 0 -%}
           <div class="product__gallery-container{% if section.settings.enable_sticky_info %} lg:sticky{% endif %} flex flex-col gap-0 md:gap-8 relative w-full">
             {%- render 'product-media-gallery',
@@ -284,7 +284,7 @@
                   assign price_block = section.blocks | where: "type", "price" | first
                   assign rating_block = section.blocks | where: "type", "rating" | first
                 -%}
-                <div class="product__title grid gap-3{% if price_block == blank and block.settings.show_price %} with-price{% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %} with-price--on-sale{% endif %}{% endif %}" {{ block.shopify_attributes }}>
+                <div class="product__title grid gap-0{% if price_block == blank and block.settings.show_price %} with-price{% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %} with-price--on-sale{% endif %}{% endif %}" {{ block.shopify_attributes }}>
                   <{{ block.settings.title_tag }} class="heading leading-none {{ block.settings.title_size }} mobile:{{ block.settings.title_size_mobile }} col-span-full">
                     {%- if settings.enable_heading_reveal -%}
                       <split-words class="split-words js-invisible block" data-animate="fade-up">{{ product.title }}</split-words>
@@ -321,7 +321,7 @@
                 {%- endif -%}
 
               {%- when 'price' -%}
-                <div class="product__price grid gap-3" {{ block.shopify_attributes }}>
+                <div class="product__price grid gap-0" {{ block.shopify_attributes }}>
                   <div class="no-js-hidden" id="Price-{{ section.id }}-{{ product.id }}">
                     {%- render 'product-price', product: product, placeholder: placeholder, use_variant: true, class: 'flex flex-wrap items-baseline gap-2 lg:gap-1d5' -%}
                     

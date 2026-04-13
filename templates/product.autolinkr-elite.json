@@ -209,29 +209,24 @@
         "rounded": false
       }
     },
-    "video-3d-elite": {
-      "type": "al-model-viewer",
+    "video-review": {
+      "type": "al-video-section",
       "settings": {
-        "padding_top": 40,
+        "padding_top": 20,
         "padding_bottom": 40,
         "max_width": 1200,
         "media_max_width": 900,
-        "viewer_height": 500,
-        "viewer_height_mobile": 360,
         "text_align": "center",
-        "eyebrow": "AutoLinkr Elite™ in 3D",
-        "heading": "The Most Powerful CarPlay Adapter. Period.",
+        "eyebrow": "Real customers. Real results.",
+        "heading": "Verified by <strong>50,000+</strong> Drivers",
         "heading_tag": "h2",
-        "subheading": "Drag to rotate. See every angle of the device that changes how you drive.",
-        "glb_url": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb",
-        "ios_ar_url": "",
-        "alt_text": "AutoLinkr Elite™ 3D model — drag to rotate",
-        "auto_rotate": true,
-        "auto_rotate_delay": 0,
-        "rotation_speed": 20,
-        "ar": false,
+        "subheading": "",
+        "youtube_id": "8B6vj1-NabM",
+        "video_url": "",
+        "poster_image": "shopify://shop_images/ElevenLabs_image_nano-banana-2_Create_a_cle..._2026-02-27T21_51_25_1.png",
+        "autoplay": false,
         "cta_label": "",
-        "cta_link": "/products/autolinkr-elite",
+        "cta_link": "",
         "ghost_label": "",
         "ghost_link": ""
       }
@@ -316,24 +311,29 @@
         "divider": false
       }
     },
-    "video-review": {
-      "type": "al-video-section",
+    "video-3d-elite": {
+      "type": "al-model-viewer",
       "settings": {
         "padding_top": 40,
         "padding_bottom": 40,
         "max_width": 1200,
         "media_max_width": 900,
+        "viewer_height": 500,
+        "viewer_height_mobile": 360,
         "text_align": "center",
-        "eyebrow": "Real customers. Real results.",
-        "heading": "Verified by <strong>50,000+</strong> Drivers",
+        "eyebrow": "AutoLinkr Elite™ in 3D",
+        "heading": "The Most Powerful CarPlay Adapter. Period.",
         "heading_tag": "h2",
         "subheading": "",
-        "youtube_id": "8B6vj1-NabM",
-        "video_url": "",
-        "poster_image": "shopify://shop_images/ElevenLabs_image_nano-banana-2_Create_a_cle..._2026-02-27T21_51_25_1.png",
-        "autoplay": false,
+        "glb_url": "https://cdn.shopify.com/3d/models/5d8d79bbe28535d5/AutoLinkr_With_Light.glb",
+        "ios_ar_url": "",
+        "alt_text": "AutoLinkr Elite™ 3D model — drag to rotate",
+        "auto_rotate": true,
+        "auto_rotate_delay": 0,
+        "rotation_speed": 20,
+        "ar": false,
         "cta_label": "",
-        "cta_link": "",
+        "cta_link": "/products/autolinkr-elite",
         "ghost_label": "",
         "ghost_link": ""
       }
@@ -1167,9 +1167,9 @@
   },
   "order": [
     "main-product",
-    "video-3d-elite",
-    "logo-marquee",
     "video-review",
+    "logo-marquee",
+    "video-3d-elite",
     "testimonials-1",
     "image-compatibility",
     "image-splitscreen",

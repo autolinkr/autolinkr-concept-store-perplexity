@@ -187,6 +187,10 @@
         "rating": {
           "type": "rating",
           "settings": {}
+        },
+        "areviews_reviews_importer_areviews_title_rating_28CB1F": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {}
         }
       },
       "block_order": [
@@ -194,6 +198,7 @@
         "badges",
         "text-dash-badge",
         "title",
+        "areviews_reviews_importer_areviews_title_rating_28CB1F",
         "text-tagline",
         "variant_picker",
         "text-variant-note",
@@ -898,6 +903,24 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "areviews_1776030471_a26814": {
+      "type": "apps",
+      "blocks": {
+        "areviews_reviews_importer_areviews_display_reviews_23C202": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_23C202"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -912,6 +935,7 @@
     "testimonials-banner",
     "pro-crosssell",
     "product-recommendations",
-    "apps-reviews"
+    "apps-reviews",
+    "areviews_1776030471_a26814"
   ]
 }

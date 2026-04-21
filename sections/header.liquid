@@ -7,6 +7,12 @@
     --color-transparent: {{ section.settings.transparent_color_text.rgb }};
     --color-localization: {{ section.settings.color_localization.rgb }};
   }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} {
+      --section-padding-top: {{ section.settings.padding_top_mobile }}px;
+      --section-padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
 </style>
 
 {%- liquid
@@ -377,6 +383,26 @@
       "unit": "px",
       "label": "t:sections.global.settings.padding_bottom.label",
       "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (mobile)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (mobile)",
+      "default": 12
     },
     {
       "type": "checkbox",

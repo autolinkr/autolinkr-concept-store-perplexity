@@ -1088,7 +1088,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Wireless CarPlay, streaming apps, and a 30-day guarantee — all for $79.99 with free shipping.</p>",
+            "text": "",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,

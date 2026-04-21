@@ -1,0 +1,362 @@
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "areviews_title_rating": {
+          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-lg",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h1",
+            "show_price": true,
+            "show_rating": false
+          }
+        },
+        "benefit-1": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "💳 $20 Store Credit — sent instantly to your account after joining.",
+            "text_size": "text-base"
+          }
+        },
+        "benefit-2": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "💎 15% off every order — automatically applied at checkout, forever.",
+            "text_size": "text-base"
+          }
+        },
+        "benefit-3": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "🎁 Free quarterly gifts + priority support + 1-year warranty on all purchases.",
+            "text_size": "text-base"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "tab-what-you-get": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": true,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "What's Included",
+            "content": "<ul><li>💳 <strong>$20 Store Credit</strong> — delivered to your account automatically via email after purchase</li><li>💎 <strong>15% Off Every Order</strong> — discount applied automatically at checkout for as long as you're a member</li><li>🎁 <strong>Free Quarterly Gifts</strong> — surprise products sent to VIP members every quarter</li><li>🛡 <strong>1-Year Warranty</strong> on all AutoLinkr purchases made while a member</li><li>⚡ <strong>Priority Support</strong> — skip the queue, get faster responses from our team</li></ul>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "tab-how-credit-works": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "How the $20 Credit Works",
+            "content": "<p>After completing your membership purchase, your $20 store credit is automatically sent to the email address on your order. Simply apply it at checkout on your next purchase — no codes to remember, no manual steps.</p><p>The $20 credit can be used on any AutoLinkr product and has no expiration date.</p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "tab-membership-terms": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Membership Terms",
+            "content": "<p>AutoLinkr VIP Membership is a one-time purchase of $9.99. There is no recurring charge or subscription — you pay once and the benefits are yours.</p><p>The 15% discount applies to all future orders placed with the same account. Quarterly gift eligibility begins 90 days after your membership purchase. Priority support access begins immediately.</p><p>Membership is non-transferable and valid for one account per purchase.</p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "tab-support": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Questions?",
+            "content": "<p>VIP members get priority support — we respond faster and go further to make things right.</p><p>Email us at <a href=\"mailto:support@theautolinkr.com\">support@theautolinkr.com</a> and mention your VIP membership for priority handling.</p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_title_rating",
+        "title",
+        "benefit-1",
+        "benefit-2",
+        "benefit-3",
+        "buy_buttons",
+        "sticky_buy_button",
+        "tab-what-you-get",
+        "tab-how-credit-works",
+        "tab-membership-terms",
+        "tab-support"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": 50,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "below",
+        "image_ratio": "square",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": true,
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+
+    "how-it-works": {
+      "type": "al-how-it-works",
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "heading": "Join for $9.99",
+            "body": "One-time payment. No subscriptions, no renewals, no surprises.",
+            "badge": "30 seconds",
+            "image": "",
+            "image_ratio": "4/3"
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "heading": "Get $20 Credit Instantly",
+            "body": "Your $20 store credit is emailed to you automatically — use it on any order, any time.",
+            "badge": "Automatic",
+            "image": "",
+            "image_ratio": "4/3"
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "heading": "Save 15% Forever",
+            "body": "Every order you place gets 15% off — automatically applied at checkout for life.",
+            "badge": "Every order",
+            "image": "",
+            "image_ratio": "4/3"
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3"],
+      "settings": {
+        "eyebrow": "How It Works",
+        "heading": "Three Steps to a Better Deal. Every Time.",
+        "subheading": "Join once. Save forever.",
+        "cta_label": "Join AutoLinkr VIP",
+        "cta_link": "/products/autolinkr-vip-membership",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+
+    "testimonials": {
+      "type": "testimonials-banner",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"Joined VIP on a whim and the $20 credit covered most of my next order. The 15% off is basically already paid for itself after two purchases. No-brainer.\"</p>",
+            "author": "Marcus T.",
+            "author_info": "AutoLinkr Pro™ Owner \u2014 Verified Member",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"Between the instant credit and the discount on every order, this is the easiest $9.99 I've ever spent. Already ordered accessories and saved way more than the membership cost.\"</p>",
+            "author": "Jess R.",
+            "author_info": "AutoLinkr Elite™ Owner \u2014 Verified Member",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"The priority support alone is worth it. Had a setup question and heard back in under an hour. That never happens anywhere else.\"</p>",
+            "author": "Derek M.",
+            "author_info": "AutoLinkr Pro™ Owner \u2014 Verified Member",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": ["t1", "t2", "t3"],
+      "settings": {
+        "heading": "What VIP Members Are Saying",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "Is this a subscription? Will I be charged again?",
+            "text": "<p>No. AutoLinkr VIP Membership is a one-time payment of $9.99. You are never charged again. There is no auto-renewal, no monthly fee, and no cancellation required.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "When do I receive the $20 store credit?",
+            "text": "<p>Your $20 store credit is sent automatically to the email address on your order shortly after your purchase is confirmed. No action required on your part.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "How does the 15% discount work?",
+            "text": "<p>Once you become a VIP member, the 15% discount is applied automatically at checkout on every future order placed with the same account. You don't need a coupon code \u2014 it just works.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "What are the quarterly gifts?",
+            "text": "<p>Every quarter, VIP members receive a free AutoLinkr product or accessory shipped to them \u2014 no purchase necessary. The product varies each quarter and is chosen by our team. Gifts begin 90 days after your membership purchase.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "Does the 1-year warranty apply to past purchases?",
+            "text": "<p>The extended 1-year warranty applies to all AutoLinkr purchases made while you are an active VIP member. It does not apply retroactively to purchases made before joining.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "What does priority support mean?",
+            "text": "<p>VIP members are flagged in our support system and receive faster response times and elevated handling. Email us at support@theautolinkr.com and mention your VIP membership.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q7": {
+          "type": "question",
+          "settings": {
+            "title": "Can I share my membership with someone else?",
+            "text": "<p>Membership is non-transferable and tied to the purchasing account. Each person must purchase their own membership to receive the benefits.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7"],
+      "settings": {
+        "style": "with-border",
+        "heading": "Common Questions",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "overlay_opacity": 4,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+
+    "apps-reviews": {
+      "type": "apps",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    }
+  },
+
+  "order": [
+    "main-product",
+    "how-it-works",
+    "testimonials",
+    "faq",
+    "apps-reviews"
+  ]
+}

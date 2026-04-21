@@ -3,8 +3,14 @@
     "main-product": {
       "type": "main-product",
       "blocks": {
+        "liquid_by7eJG": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% if product.reviews_count > 0 %}\n  {% render 'areviews-rating' %}\n{% else %}\n  <div class=\"mobile-spacer-8\" style=\"display: none;\"><\/div>\n{% endif %}\n\n<style>\n  @media (max-width: 749px) {\n    .mobile-spacer-8 { display: block !important; height: 8px; }\n  }\n<\/style>"
+          }
+        },
         "areviews_title_rating": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {}
         },
         "title": {
@@ -23,7 +29,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "\ud83d\udcb3 $20 Store Credit \u2014 sent instantly to your account after joining.",
+            "text": "💳 $20 Store Credit",
             "text_size": "text-base"
           }
         },
@@ -33,7 +39,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "\ud83d\udc8e 15% off every order \u2014 automatically applied at checkout, forever.",
+            "text": "💎<strong> 15% off every order <\/strong>",
             "text_size": "text-base"
           }
         },
@@ -43,7 +49,27 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "\ud83c\udf81 Free quarterly gifts + priority support + 1-year warranty on all purchases.",
+            "text": "🎁 <strong>Free quarterly gifts<\/strong>",
+            "text_size": "text-base"
+          }
+        },
+        "text_VLKWe8": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "🛡 <strong>1-Year Warranty<\/strong>",
+            "text_size": "text-base"
+          }
+        },
+        "text_YBWGP8": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "⚡ <strong>Priority Support<\/strong>",
             "text_size": "text-base"
           }
         },
@@ -66,11 +92,11 @@
         "tab-what-you-get": {
           "type": "collapsible_tab",
           "settings": {
-            "opened": false,
+            "opened": true,
             "style": "with-border",
             "icon": "none",
             "heading": "What's Included",
-            "content": "<ul><li>\ud83d\udcb3 <strong>$20 Store Credit</strong> \u2014 delivered to your account automatically via email after purchase</li><li>\ud83d\udc8e <strong>15% Off Every Order</strong> \u2014 discount applied automatically at checkout for as long as you're a member</li><li>\ud83c\udf81 <strong>Free Quarterly Gifts</strong> \u2014 surprise products sent to VIP members every quarter</li><li>\ud83d\udee1 <strong>1-Year Warranty</strong> on all AutoLinkr purchases made while a member</li><li>\u26a1 <strong>Priority Support</strong> \u2014 skip the queue, get faster responses from our team</li></ul>",
+            "content": "<ul><li>💳 <strong>$20 Store Credit<\/strong> — delivered to your account automatically via email after purchase<\/li><li>💎 <strong>15% Off Every Order<\/strong> — discount applied automatically at checkout for as long as you're a member<\/li><li>🎁 <strong>Free Quarterly Gifts<\/strong> — surprise products sent to VIP members every quarter<\/li><li>🛡 <strong>1-Year Warranty<\/strong> on all AutoLinkr purchases made while a member<\/li><li>⚡ <strong>Priority Support<\/strong> — skip the queue, get faster responses from our team<\/li><\/ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -83,7 +109,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "How the $20 Credit Works",
-            "content": "<p>After completing your membership purchase, your $20 store credit is automatically sent to the email address on your order. Simply apply it at checkout on your next purchase \u2014 no codes to remember, no manual steps.</p><p>The $20 credit can be used on any AutoLinkr product and has no expiration date.</p>",
+            "content": "<p>After completing your membership purchase, your $20 store credit is automatically sent to the email address on your order. Simply apply it at checkout on your next purchase — no codes to remember, no manual steps.<\/p><p>The $20 credit can be used on any AutoLinkr product and has no expiration date.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -97,7 +123,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Membership Terms",
-            "content": "<p>AutoLinkr VIP Membership is a one-time purchase of $9.99. There is no recurring charge or subscription \u2014 you pay once and the benefits are yours.</p><p>The 15% discount applies to all future orders placed with the same account. Quarterly gift eligibility begins 90 days after your membership purchase. Priority support access begins immediately.</p><p>Membership is non-transferable and valid for one account per purchase.</p>",
+            "content": "<p>AutoLinkr VIP Membership is a one-time purchase of $9.99. There is no recurring charge or subscription — you pay once and the benefits are yours.<\/p><p>The 15% discount applies to all future orders placed with the same account. Quarterly gift eligibility begins 90 days after your membership purchase. Priority support access begins immediately.<\/p><p>Membership is non-transferable and valid for one account per purchase.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -110,7 +136,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Questions?",
-            "content": "<p>VIP members get priority support \u2014 we respond faster and go further to make things right.</p><p>Email us at <a href=\"mailto:support@theautolinkr.com\">support@theautolinkr.com</a> and mention your VIP membership for priority handling.</p>",
+            "content": "<p>VIP members get priority support — we respond faster and go further to make things right.<\/p><p>Email us at <a href=\"mailto:support@theautolinkr.com\">support@theautolinkr.com<\/a> and mention your VIP membership for priority handling.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -118,11 +144,14 @@
         }
       },
       "block_order": [
+        "liquid_by7eJG",
         "areviews_title_rating",
         "title",
         "benefit-1",
         "benefit-2",
         "benefit-3",
+        "text_VLKWe8",
+        "text_YBWGP8",
         "buy_buttons",
         "sticky_buy_button",
         "tab-what-you-get",
@@ -160,27 +189,27 @@
             "body": "One-time payment. No subscriptions, no renewals, no surprises.",
             "badge": "30 seconds",
             "image_url": "",
-            "image_ratio": "4/3"
+            "image_ratio": "4\/3"
           }
         },
         "step-2": {
           "type": "step",
           "settings": {
             "heading": "Get $20 Credit Instantly",
-            "body": "Your $20 store credit is emailed to you automatically \u2014 use it on any order, any time.",
+            "body": "Your $20 store credit is emailed to you automatically — use it on any order, any time.",
             "badge": "Automatic",
             "image_url": "",
-            "image_ratio": "4/3"
+            "image_ratio": "4\/3"
           }
         },
         "step-3": {
           "type": "step",
           "settings": {
             "heading": "Save 15% Forever",
-            "body": "Every order you place gets 15% off \u2014 automatically applied at checkout for life.",
+            "body": "Every order you place gets 15% off — automatically applied at checkout for life.",
             "badge": "Every order",
             "image_url": "",
-            "image_ratio": "4/3"
+            "image_ratio": "4\/3"
           }
         }
       },
@@ -197,7 +226,7 @@
         "heading": "Three Steps to a Better Deal. Every Time.",
         "subheading": "Join once. Save forever.",
         "cta_label": "Join AutoLinkr VIP",
-        "cta_link": "/products/autolinkr-vip-membership"
+        "cta_link": "\/products\/autolinkr-vip-membership"
       }
     },
     "testimonials": {
@@ -207,9 +236,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Joined VIP on a whim and the $20 credit covered most of my next order. The 15% off is basically already paid for itself after two purchases. No-brainer.\"</p>",
+            "text": "<p>\"Joined VIP on a whim and the $20 credit covered most of my next order. The 15% off is basically already paid for itself after two purchases. No-brainer.\"<\/p>",
             "author": "Marcus T.",
-            "author_info": "AutoLinkr Pro\u2122 Owner \u2014 Verified Member",
+            "author_info": "AutoLinkr Pro™ Owner — Verified Member",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -221,9 +250,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Between the instant credit and the discount on every order, this is the easiest $9.99 I've ever spent. Already ordered accessories and saved way more than the membership cost.\"</p>",
+            "text": "<p>\"Between the instant credit and the discount on every order, this is the easiest $9.99 I've ever spent. Already ordered accessories and saved way more than the membership cost.\"<\/p>",
             "author": "Jess R.",
-            "author_info": "AutoLinkr Elite\u2122 Owner \u2014 Verified Member",
+            "author_info": "AutoLinkr Elite™ Owner — Verified Member",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -235,9 +264,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"The priority support alone is worth it. Had a setup question and heard back in under an hour. That never happens anywhere else.\"</p>",
+            "text": "<p>\"The priority support alone is worth it. Had a setup question and heard back in under an hour. That never happens anywhere else.\"<\/p>",
             "author": "Derek M.",
-            "author_info": "AutoLinkr Pro\u2122 Owner \u2014 Verified Member",
+            "author_info": "AutoLinkr Pro™ Owner — Verified Member",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -253,7 +282,7 @@
       ],
       "settings": {
         "transparent_header": false,
-        "image": "shopify://shop_images/StylishInterior.webp",
+        "image": "shopify:\/\/shop_images\/StylishInterior.webp",
         "image_height": "650px",
         "content_position": "md:items-center md:justify-center",
         "image_height_mobile": "auto",
@@ -281,7 +310,7 @@
           "type": "question",
           "settings": {
             "title": "Is this a subscription? Will I be charged again?",
-            "text": "<p>No. AutoLinkr VIP Membership is a one-time payment of $9.99. You are never charged again. There is no auto-renewal, no monthly fee, and no cancellation required.</p>",
+            "text": "<p>No. AutoLinkr VIP Membership is a one-time payment of $9.99. You are never charged again. There is no auto-renewal, no monthly fee, and no cancellation required.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -290,7 +319,7 @@
           "type": "question",
           "settings": {
             "title": "When do I receive the $20 store credit?",
-            "text": "<p>Your $20 store credit is sent automatically to the email address on your order shortly after your purchase is confirmed. No action required on your part.</p>",
+            "text": "<p>Your $20 store credit is sent automatically to the email address on your order shortly after your purchase is confirmed. No action required on your part.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -299,7 +328,7 @@
           "type": "question",
           "settings": {
             "title": "How does the 15% discount work?",
-            "text": "<p>Once you become a VIP member, the 15% discount is applied automatically at checkout on every future order placed with the same account. You don't need a coupon code \u2014 it just works.</p>",
+            "text": "<p>Once you become a VIP member, the 15% discount is applied automatically at checkout on every future order placed with the same account. You don't need a coupon code — it just works.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -308,7 +337,7 @@
           "type": "question",
           "settings": {
             "title": "What are the quarterly gifts?",
-            "text": "<p>Every quarter, VIP members receive a free AutoLinkr product or accessory shipped to them \u2014 no purchase necessary. The product varies each quarter and is chosen by our team. Gifts begin 90 days after your membership purchase.</p>",
+            "text": "<p>Every quarter, VIP members receive a free AutoLinkr product or accessory shipped to them — no purchase necessary. The product varies each quarter and is chosen by our team. Gifts begin 90 days after your membership purchase.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -317,7 +346,7 @@
           "type": "question",
           "settings": {
             "title": "Does the 1-year warranty apply to past purchases?",
-            "text": "<p>The extended 1-year warranty applies to all AutoLinkr purchases made while you are an active VIP member. It does not apply retroactively to purchases made before joining.</p>",
+            "text": "<p>The extended 1-year warranty applies to all AutoLinkr purchases made while you are an active VIP member. It does not apply retroactively to purchases made before joining.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -326,7 +355,7 @@
           "type": "question",
           "settings": {
             "title": "What does priority support mean?",
-            "text": "<p>VIP members are flagged in our support system and receive faster response times and elevated handling. Email us at support@theautolinkr.com and mention your VIP membership.</p>",
+            "text": "<p>VIP members are flagged in our support system and receive faster response times and elevated handling. Email us at support@theautolinkr.com and mention your VIP membership.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -335,7 +364,7 @@
           "type": "question",
           "settings": {
             "title": "Can I share my membership with someone else?",
-            "text": "<p>Membership is non-transferable and tied to the purchasing account. Each person must purchase their own membership to receive the benefits.</p>",
+            "text": "<p>Membership is non-transferable and tied to the purchasing account. Each person must purchase their own membership to receive the benefits.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -375,7 +404,7 @@
         "color_button_gradient": "",
         "color_overlay": "#ffffff",
         "overlay_opacity": 4,
-        "padding_top": 72,
+        "padding_top": 32,
         "padding_bottom": 0,
         "divider": false,
         "narrow": true,
@@ -384,9 +413,21 @@
     },
     "apps-reviews": {
       "type": "apps",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [

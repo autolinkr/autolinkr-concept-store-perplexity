@@ -384,64 +384,9 @@
     },
     "apps-reviews": {
       "type": "apps",
-      "blocks": {
-        "areviews": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/display-reviews/a3c030e5-0c03-48e1-b0a5-5767609fedef",
-          "settings": {
-            "hide_title_rating": false,
-            "theme_font": "inherit",
-            "stars_color": "#f3c621",
-            "write_reviews_button_color": "#373737"
-          }
-        }
-      },
-      "block_order": [
-        "areviews"
-      ],
-      "settings": {
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "review-spacer": {
-      "type": "rich-text",
-      "blocks": {
-        "spacer-text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Be the first AutoLinkr VIP member to leave a review.</p>",
-            "text_font": "body",
-            "text_size": "subtext-md",
-            "text_max_size": 40,
-            "text_line_height": 1.6,
-            "text_letter_spacing": 0,
-            "text_capitalize": false,
-            "secondary_color": true,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        }
-      },
-      "block_order": [
-        "spacer-text"
-      ],
-      "settings": {
-        "text_alignment": "center",
-        "text_alignment_mobile": "center",
-        "content_width": "medium",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "rounded": false
-      }
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
     }
   },
   "order": [
@@ -449,7 +394,6 @@
     "how-it-works",
     "testimonials",
     "faq",
-    "review-spacer",
     "apps-reviews"
   ]
 }

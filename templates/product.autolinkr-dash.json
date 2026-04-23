@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main-product": {
@@ -139,7 +130,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Full Specifications",
-            "content": "<ul><li><strong>Resolution:</strong> Dual 1080P Full HD (front + rear)</li><li><strong>Lens:</strong> 170° ultra-wide angle front, 150° rear</li><li><strong>Night Vision:</strong> Advanced IR LED night vision (front + rear)</li><li><strong>Connectivity:</strong> WiFi + Bluetooth for app control (iOS & Android)</li><li><strong>Loop Recording:</strong> Auto-overwrites oldest footage when storage is full</li><li><strong>G-Sensor:</strong> Collision detection locks and protects footage automatically</li><li><strong>Parking Mode:</strong> 24/7 parking surveillance mode</li><li><strong>Storage:</strong> Supports Class 10 MicroSD up to 128GB</li><li><strong>Power:</strong> Hardwire kit included for parking mode</li></ul>",
+            "content": "<ul><li><strong>Resolution:<\/strong> Dual 1080P Full HD (front + rear)<\/li><li><strong>Lens:<\/strong> 170° ultra-wide angle front, 150° rear<\/li><li><strong>Night Vision:<\/strong> Advanced IR LED night vision (front + rear)<\/li><li><strong>Connectivity:<\/strong> WiFi + Bluetooth for app control (iOS & Android)<\/li><li><strong>Loop Recording:<\/strong> Auto-overwrites oldest footage when storage is full<\/li><li><strong>G-Sensor:<\/strong> Collision detection locks and protects footage automatically<\/li><li><strong>Parking Mode:<\/strong> 24\/7 parking surveillance mode<\/li><li><strong>Storage:<\/strong> Supports Class 10 MicroSD up to 128GB<\/li><li><strong>Power:<\/strong> Hardwire kit included for parking mode<\/li><\/ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -152,7 +143,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Which Storage Option Should I Choose?",
-            "content": "<p><strong>No SD Card:</strong> Best if you already own a Class 10 MicroSD card (up to 128GB). Just insert and record.</p><p><strong>32GB (included):</strong> Holds approximately 4–5 hours of dual 1080P footage. Perfect for daily driving and commuters.</p><p><strong>64GB (included):</strong> Holds approximately 8–10 hours of dual 1080P footage. Best for long road trips, rideshare drivers, or maximum coverage.</p><p><em>All pre-installed cards are Class 10 rated for optimal dashcam performance.</em></p>",
+            "content": "<p><strong>No SD Card:<\/strong> Best if you already own a Class 10 MicroSD card (up to 128GB). Just insert and record.<\/p><p><strong>32GB (included):<\/strong> Holds approximately 4–5 hours of dual 1080P footage. Perfect for daily driving and commuters.<\/p><p><strong>64GB (included):<\/strong> Holds approximately 8–10 hours of dual 1080P footage. Best for long road trips, rideshare drivers, or maximum coverage.<\/p><p><em>All pre-installed cards are Class 10 rated for optimal dashcam performance.<\/em><\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -165,7 +156,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Installation & Setup",
-            "content": "<p><strong>Setup takes under 10 minutes</strong> with no tools required:</p><ul><li>Mount to windshield using included 3M adhesive mount</li><li>Route the rear camera cable along your headliner to the rear window</li><li>Plug into 12V power outlet — or use included hardwire kit for parking mode</li><li>Download the WiFi app to preview footage, adjust settings, and download clips</li></ul><p>The camera starts recording automatically every time you start the car.</p>",
+            "content": "<p><strong>Setup takes under 10 minutes<\/strong> with no tools required:<\/p><ul><li>Mount to windshield using included 3M adhesive mount<\/li><li>Route the rear camera cable along your headliner to the rear window<\/li><li>Plug into 12V power outlet — or use included hardwire kit for parking mode<\/li><li>Download the WiFi app to preview footage, adjust settings, and download clips<\/li><\/ul><p>The camera starts recording automatically every time you start the car.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -178,7 +169,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping, Returns & Guarantee",
-            "content": "<p>Shipping is <strong>FREE</strong> on every order. Ships within 1–2 business days, delivered in 3–5 business days for most US customers.</p><p><strong>30-Day Guarantee</strong> — You have 30 days from the date you receive your unit to return it. No questions asked.</p><p><strong>1-Year Warranty</strong> — Covered against all manufacturing defects.</p>",
+            "content": "<p>Shipping is <strong>FREE<\/strong> on every order. Ships within 1–2 business days, delivered in 3–5 business days for most US customers.<\/p><p><strong>30-Day Guarantee<\/strong> — You have 30 days from the date you receive your unit to return it. No questions asked.<\/p><p><strong>1-Year Warranty<\/strong> — Covered against all manufacturing defects.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -189,7 +180,7 @@
           "settings": {}
         },
         "areviews_reviews_importer_areviews_title_rating_28CB1F": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {}
         }
       },
@@ -289,9 +280,9 @@
         "eyebrow": "In Action",
         "heading": "Always Recording. Always Protected.",
         "heading_tag": "h2",
-        "subheading": "Dual 1080P front + rear with IR night vision, WiFi app, and 24/7 parking mode",
+        "subheading": "Dual 1080P front + rear with IR night vision, WiFi app, and 24\/7 parking mode",
         "youtube_id": "",
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/f710c015c61142c997c93fa5dd13c01d.mov",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f710c015c61142c997c93fa5dd13c01d.mov",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",
@@ -308,7 +299,7 @@
             "icon": "camera",
             "custom_icon": "",
             "heading": "Dual 1080P Full HD",
-            "text": "<p>Two cameras. One system. Simultaneous 1080P front and rear recording captures everything — every lane, every moment, every incident.</p>",
+            "text": "<p>Two cameras. One system. Simultaneous 1080P front and rear recording captures everything — every lane, every moment, every incident.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -319,7 +310,7 @@
             "icon": "moon",
             "custom_icon": "",
             "heading": "IR Night Vision",
-            "text": "<p>Advanced infrared LEDs illuminate the road and cabin in complete darkness. See license plates, hazards, and details that standard cameras miss at night.</p>",
+            "text": "<p>Advanced infrared LEDs illuminate the road and cabin in complete darkness. See license plates, hazards, and details that standard cameras miss at night.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -330,7 +321,7 @@
             "icon": "wifi",
             "custom_icon": "",
             "heading": "WiFi App Control",
-            "text": "<p>Connect your iPhone or Android to preview live footage, download clips, and adjust settings — all wirelessly from the AutoLinkr Dash app.</p>",
+            "text": "<p>Connect your iPhone or Android to preview live footage, download clips, and adjust settings — all wirelessly from the AutoLinkr Dash app.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -340,8 +331,8 @@
           "settings": {
             "icon": "clock",
             "custom_icon": "",
-            "heading": "24/7 Parking Mode",
-            "text": "<p>Stay protected even when parked. Parking mode activates automatically and records any motion or impact — always watching, even when you're not.</p>",
+            "heading": "24\/7 Parking Mode",
+            "text": "<p>Stay protected even when parked. Parking mode activates automatically and records any motion or impact — always watching, even when you're not.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -352,7 +343,7 @@
             "icon": "bolt",
             "custom_icon": "",
             "heading": "G-Sensor Collision Lock",
-            "text": "<p>Any impact triggers the G-sensor to lock and protect that footage from loop overwrite. Your evidence stays safe exactly when you need it most.</p>",
+            "text": "<p>Any impact triggers the G-sensor to lock and protect that footage from loop overwrite. Your evidence stays safe exactly when you need it most.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -363,7 +354,7 @@
             "icon": "loop",
             "custom_icon": "",
             "heading": "Loop Recording",
-            "text": "<p>Never worry about running out of storage. Loop recording auto-deletes the oldest footage to keep recording continuously without any manual management.</p>",
+            "text": "<p>Never worry about running out of storage. Loop recording auto-deletes the oldest footage to keep recording continuously without any manual management.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -426,7 +417,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Most dashcams produce grainy, unusable footage at night. AutoLinkr Dash™ uses dedicated IR LED night vision on both the front and rear cameras — delivering crystal-clear 1080P video even in complete darkness.</p><p>License plates. Road signs. Other vehicles. See them all — parked or moving, night or day.</p>",
+            "text": "<p>Most dashcams produce grainy, unusable footage at night. AutoLinkr Dash™ uses dedicated IR LED night vision on both the front and rear cameras — delivering crystal-clear 1080P video even in complete darkness.<\/p><p>License plates. Road signs. Other vehicles. See them all — parked or moving, night or day.<\/p>",
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
@@ -442,7 +433,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop AutoLinkr Dash™ — From $69.99",
-            "button_link": "/products/autolinkr-dash",
+            "button_link": "\/products\/autolinkr-dash",
             "button_style": "primary",
             "button_size": "md",
             "button_external": false,
@@ -573,7 +564,7 @@
         "s3": {
           "type": "text",
           "settings": {
-            "text": "24/7 Parking Mode",
+            "text": "24\/7 Parking Mode",
             "text_size": 100,
             "text_font": "body",
             "highlighted_text": "none",
@@ -645,7 +636,7 @@
             "icon": "question",
             "custom_icon": "",
             "heading": "Does it work without WiFi?",
-            "text": "<p>Yes. The Dash records to the SD card at all times, with or without WiFi. The WiFi is only needed to preview or download clips to your phone.</p>",
+            "text": "<p>Yes. The Dash records to the SD card at all times, with or without WiFi. The WiFi is only needed to preview or download clips to your phone.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -656,7 +647,7 @@
             "icon": "question",
             "custom_icon": "",
             "heading": "What SD card do I need?",
-            "text": "<p>Any Class 10 MicroSD card up to 128GB works perfectly. Or choose the 32GB or 64GB pre-installed options at checkout to skip this step entirely.</p>",
+            "text": "<p>Any Class 10 MicroSD card up to 128GB works perfectly. Or choose the 32GB or 64GB pre-installed options at checkout to skip this step entirely.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -667,7 +658,7 @@
             "icon": "question",
             "custom_icon": "",
             "heading": "Will it drain my battery?",
-            "text": "<p>No — the Dash draws power from your 12V port and stops when the car turns off. For parking mode, use the included hardwire kit which has a low-voltage cutoff to protect your battery.</p>",
+            "text": "<p>No — the Dash draws power from your 12V port and stops when the car turns off. For parking mode, use the included hardwire kit which has a low-voltage cutoff to protect your battery.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -717,7 +708,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"The night vision on this thing is unreal. I can read license plates in complete darkness. It saved me when someone hit my parked car — parking mode caught everything.\"</p>",
+            "text": "<p>\"The night vision on this thing is unreal. I can read license plates in complete darkness. It saved me when someone hit my parked car — parking mode caught everything.\"<\/p>",
             "author": "Marcus J.",
             "author_info": "2021 Toyota 4Runner — Verified Buyer",
             "author_url": "",
@@ -731,7 +722,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"I drive for Uber and the AutoLinkr Dash has given me peace of mind I didn't know I was missing. Front and rear 1080P footage, and the WiFi app makes it easy to save anything I need.\"</p>",
+            "text": "<p>\"I drive for Uber and the AutoLinkr Dash has given me peace of mind I didn't know I was missing. Front and rear 1080P footage, and the WiFi app makes it easy to save anything I need.\"<\/p>",
             "author": "Linda H.",
             "author_info": "Rideshare Driver — Verified Buyer",
             "author_url": "",
@@ -745,7 +736,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Installation took me literally 8 minutes. The image quality during the day is sharp, and the night vision actually works unlike my last camera. Best $70 I've spent on my car.\"</p>",
+            "text": "<p>\"Installation took me literally 8 minutes. The image quality during the day is sharp, and the night vision actually works unlike my last camera. Best $70 I've spent on my car.\"<\/p>",
             "author": "Ryan P.",
             "author_info": "2020 Honda CR-V — Verified Buyer",
             "author_url": "",
@@ -908,7 +899,7 @@
       "type": "apps",
       "blocks": {
         "areviews_reviews_importer_areviews_display_reviews_23C202": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
             "hide_areviews_title_rating": false,
             "areviews_theme_font": "inherit",

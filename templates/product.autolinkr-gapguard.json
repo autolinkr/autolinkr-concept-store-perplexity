@@ -1,19 +1,10 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main-product": {
       "type": "main-product",
       "blocks": {
         "areviews_title_rating": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {}
         },
         "title": {
@@ -99,7 +90,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>The AutoLinkr GapGuard™ is a sleek, universal seat gap filler that blocks the space between your car seat and center console — preventing phones, keys, coins, cards, and anything else from disappearing into that impossible-to-reach gap.</p><p>It slides into place in under 10 seconds with zero tools and fits virtually any car. The non-slip material keeps it locked in position so it never shifts while you drive.</p><p>Clean, minimal design that blends into any interior. Stop fishing around under your seat — GapGuard just solves the problem permanently.</p>",
+            "content": "<p>The AutoLinkr GapGuard™ is a sleek, universal seat gap filler that blocks the space between your car seat and center console — preventing phones, keys, coins, cards, and anything else from disappearing into that impossible-to-reach gap.<\/p><p>It slides into place in under 10 seconds with zero tools and fits virtually any car. The non-slip material keeps it locked in position so it never shifts while you drive.<\/p><p>Clean, minimal design that blends into any interior. Stop fishing around under your seat — GapGuard just solves the problem permanently.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -112,7 +103,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p>Universal fit — designed to work with the vast majority of cars, trucks, and SUVs.</p><ul><li>Fits standard seat-to-console gaps (1–3 inches)</li><li>No tools or installation required</li><li>Flexible material conforms to most gap shapes</li><li>Works with heated seats and seat adjustment mechanisms</li></ul>",
+            "content": "<p>Universal fit — designed to work with the vast majority of cars, trucks, and SUVs.<\/p><ul><li>Fits standard seat-to-console gaps (1–3 inches)<\/li><li>No tools or installation required<\/li><li>Flexible material conforms to most gap shapes<\/li><li>Works with heated seats and seat adjustment mechanisms<\/li><\/ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -125,7 +116,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Tech Specs",
-            "content": "<ul><li>Material: Premium leatherette + non-slip base</li><li>Gap coverage: 1–3 inch seat-to-console gaps</li><li>Installation: Slide-in, no tools, under 10 seconds</li><li>Pack includes: 2× GapGuard filler strips (driver + passenger side)</li><li>Colors: Black</li></ul>",
+            "content": "<ul><li>Material: Premium leatherette + non-slip base<\/li><li>Gap coverage: 1–3 inch seat-to-console gaps<\/li><li>Installation: Slide-in, no tools, under 10 seconds<\/li><li>Pack includes: 2× GapGuard filler strips (driver + passenger side)<\/li><li>Colors: Black<\/li><\/ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -138,7 +129,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping",
-            "content": "<p>You can expect your <strong>AutoLinkr Gap Guard™</strong> within 5-10 business days from your order date.</p>",
+            "content": "<p>You can expect your <strong>AutoLinkr Gap Guard™<\/strong> within 5-10 business days from your order date.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -216,7 +207,7 @@
       "type": "apps",
       "blocks": {
         "areviews_reviews_importer_areviews_display_reviews_pRkBcA": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
             "hide_areviews_title_rating": false,
             "areviews_theme_font": "inherit",

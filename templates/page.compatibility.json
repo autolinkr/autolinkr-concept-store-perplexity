@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main-page": {
@@ -29,7 +20,7 @@
       "settings": {
         "eyebrow": "",
         "heading": "",
-        "subheading": "<p>Browse by make for supported models and years. For cars with factory wired CarPlay or Android Autoand adata USB port—confirm in your vehicle. Applies to AutoLinkr adapters: <strong>AutoLinkr, AutoLinkr Lite, AutoLinkr Pro™, AutoLinrk Elite™ </strong>on a compatible factory screen.</p>",
+        "subheading": "<p>Browse by make for supported models and years. For cars with factory wired CarPlay or Android Autoand adata USB port—confirm in your vehicle. Applies to AutoLinkr adapters: <strong>AutoLinkr, AutoLinkr Lite, AutoLinkr Pro™, AutoLinrk Elite™ <\/strong>on a compatible factory screen.<\/p>",
         "seo_description": "Vehicle list for AutoLinkr adapters (AutoLinkr, Lite, Pro, Elite): factory wired CarPlay or Android Auto required. Not for Tablet or cars without factory integration.",
         "show_search": true,
         "search_label": "Filter makes & models",
@@ -45,7 +36,7 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>🔍 COMPATIBILITY CHECKER</p>",
+            "text": "<p>🔍 COMPATIBILITY CHECKER<\/p>",
             "text_font": "body",
             "text_size": "text-sm",
             "text_max_size": 32,
@@ -71,7 +62,7 @@
         "subhead": {
           "type": "text",
           "settings": {
-            "text": "<p>Answer 3 questions and we'll tell you exactly which AutoLinkr is right for you — or browse the quick-match guide below.</p>",
+            "text": "<p>Answer 3 questions and we'll tell you exactly which AutoLinkr is right for you — or browse the quick-match guide below.<\/p>",
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
@@ -156,7 +147,7 @@
         "h2": {
           "type": "text",
           "settings": {
-            "text": "<p>Match your car situation to the right product — it's that simple.</p>",
+            "text": "<p>Match your car situation to the right product — it's that simple.<\/p>",
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
@@ -215,7 +206,7 @@
             "icon": "devices",
             "custom_icon": "",
             "heading": "I have factory CarPlay",
-            "text": "<p><strong>AutoLinkr Pro™ — $79.99</strong><br>Cut the wire. Get wireless CarPlay + Netflix, YouTube, and Google Play on your factory screen. Best value.</p><p><a href=\"/products/the-autolinkr-pro\">Shop Pro →</a></p>",
+            "text": "<p><strong>AutoLinkr Pro™ — $79.99<\/strong><br>Cut the wire. Get wireless CarPlay + Netflix, YouTube, and Google Play on your factory screen. Best value.<\/p><p><a href=\"\/products\/the-autolinkr-pro\">Shop Pro →<\/a><\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -226,7 +217,7 @@
             "icon": "lightning",
             "custom_icon": "",
             "heading": "I want split-screen multitasking",
-            "text": "<p><strong>AutoLinkr Elite™ — $199.99</strong><br>The only adapter with true split-screen — run navigation and Netflix side-by-side. Faster CPU, more powerful.</p><p><a href=\"/products/the-autolinkr-elite\">Shop Elite →</a></p>",
+            "text": "<p><strong>AutoLinkr Elite™ — $199.99<\/strong><br>The only adapter with true split-screen — run navigation and Netflix side-by-side. Faster CPU, more powerful.<\/p><p><a href=\"\/products\/the-autolinkr-elite\">Shop Elite →<\/a><\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -237,7 +228,7 @@
             "icon": "phone",
             "custom_icon": "",
             "heading": "My car has no factory CarPlay",
-            "text": "<p><strong>AutoLinkr Tablet™</strong><br>A portable wireless CarPlay screen that works in any car — no factory screen needed. Works with iPhone and Android.</p><p><a href=\"/products/autolinkr-tablet\">Shop Tablet →</a></p>",
+            "text": "<p><strong>AutoLinkr Tablet™<\/strong><br>A portable wireless CarPlay screen that works in any car — no factory screen needed. Works with iPhone and Android.<\/p><p><a href=\"\/products\/autolinkr-tablet\">Shop Tablet →<\/a><\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -248,7 +239,7 @@
             "icon": "eye",
             "custom_icon": "",
             "heading": "I want dashcam protection",
-            "text": "<p><strong>AutoLinkr Dash™ — $69.99</strong><br>Dual 1080P front + rear, IR night vision, 170° wide-angle. Works in any car with a 12V outlet.</p><p><a href=\"/products/autolinkr-dashcam\">Shop Dash →</a></p>",
+            "text": "<p><strong>AutoLinkr Dash™ — $69.99<\/strong><br>Dual 1080P front + rear, IR night vision, 170° wide-angle. Works in any car with a 12V outlet.<\/p><p><a href=\"\/products\/autolinkr-dashcam\">Shop Dash →<\/a><\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -299,7 +290,7 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>ℹ️ IMPORTANT TO KNOW</p>",
+            "text": "<p>ℹ️ IMPORTANT TO KNOW<\/p>",
             "text_font": "body",
             "text_size": "text-sm",
             "text_max_size": 32,
@@ -325,7 +316,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>AutoLinkr Pro and Elite are wireless adapters — they upgrade your existing wired factory CarPlay to wireless. They do not add CarPlay to cars that do not have it. If your car did not come with CarPlay from the factory, the AutoLinkr Tablet™ is the right solution.</p>",
+            "text": "<p>AutoLinkr Pro and Elite are wireless adapters — they upgrade your existing wired factory CarPlay to wireless. They do not add CarPlay to cars that do not have it. If your car did not come with CarPlay from the factory, the AutoLinkr Tablet™ is the right solution.<\/p>",
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
@@ -385,7 +376,7 @@
             "icon": "clipboard",
             "custom_icon": "",
             "heading": "Check Your Car Manual",
-            "text": "<p>Look for 'Apple CarPlay' in your vehicle's feature list or infotainment section of the owner's manual.</p>",
+            "text": "<p>Look for 'Apple CarPlay' in your vehicle's feature list or infotainment section of the owner's manual.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -396,7 +387,7 @@
             "icon": "phone",
             "custom_icon": "",
             "heading": "Plug In Your iPhone",
-            "text": "<p>Connect your iPhone via USB to your car. If a CarPlay icon appears on your screen, you have factory CarPlay.</p>",
+            "text": "<p>Connect your iPhone via USB to your car. If a CarPlay icon appears on your screen, you have factory CarPlay.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -407,7 +398,7 @@
             "icon": "devices",
             "custom_icon": "",
             "heading": "Check Your Screen",
-            "text": "<p>If you see a CarPlay interface when plugged in — you're compatible with Pro or Elite. No interface? Try the Tablet.</p>",
+            "text": "<p>If you see a CarPlay interface when plugged in — you're compatible with Pro or Elite. No interface? Try the Tablet.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -468,7 +459,7 @@
         "body": {
           "type": "text",
           "settings": {
-            "text": "<p>Message us your car make, model, and year — we'll tell you exactly which AutoLinkr fits.</p>",
+            "text": "<p>Message us your car make, model, and year — we'll tell you exactly which AutoLinkr fits.<\/p>",
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
@@ -484,7 +475,7 @@
           "type": "button",
           "settings": {
             "button_label": "Contact Us",
-            "button_link": "/pages/contact",
+            "button_link": "\/pages\/contact",
             "button_style": "primary",
             "button_size": "large",
             "button_external": false,

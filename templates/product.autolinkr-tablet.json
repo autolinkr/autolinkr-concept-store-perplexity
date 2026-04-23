@@ -1,19 +1,10 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main-product": {
       "type": "main-product",
       "blocks": {
         "areviews_reviews_importer_areviews_title_rating_AiWfzx": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {}
         },
         "title": {
@@ -98,7 +89,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Tablet™ is the portable wireless CarPlay and Android Auto screen that works in any car — no factory CarPlay required. Just mount it on your dashboard or windshield, connect your phone, and you're streaming and navigating in under 60 seconds.</p><p>The 7\" HD touchscreen supports Netflix, YouTube, Hulu, Disney+, Google Maps, Waze, Spotify, and the full Google Play Store. It works with both iPhone and Android out of the box.</p><p>Unlike other CarPlay adapters that require your car to already have CarPlay built in, AutoLinkr Tablet™ brings the full connected experience to any vehicle — from a 2005 Toyota to a 2024 pickup truck.</p>",
+            "content": "<p>AutoLinkr Tablet™ is the portable wireless CarPlay and Android Auto screen that works in any car — no factory CarPlay required. Just mount it on your dashboard or windshield, connect your phone, and you're streaming and navigating in under 60 seconds.<\/p><p>The 7\" HD touchscreen supports Netflix, YouTube, Hulu, Disney+, Google Maps, Waze, Spotify, and the full Google Play Store. It works with both iPhone and Android out of the box.<\/p><p>Unlike other CarPlay adapters that require your car to already have CarPlay built in, AutoLinkr Tablet™ brings the full connected experience to any vehicle — from a 2005 Toyota to a 2024 pickup truck.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -111,7 +102,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p><strong>Works in any car</strong> — no factory CarPlay required.</p><ul><li>iPhone 7+ (iOS 10 or later) for Apple CarPlay</li><li>Android 11+ for Android Auto</li><li>Connects via Bluetooth + USB-C or USB-A</li><li>Universal air vent or dashboard mount included</li></ul><p>Unlike standard CarPlay adapters, AutoLinkr Tablet™ is a standalone device — it doesn't need to plug into your car's infotainment system.</p>",
+            "content": "<p><strong>Works in any car<\/strong> — no factory CarPlay required.<\/p><ul><li>iPhone 7+ (iOS 10 or later) for Apple CarPlay<\/li><li>Android 11+ for Android Auto<\/li><li>Connects via Bluetooth + USB-C or USB-A<\/li><li>Universal air vent or dashboard mount included<\/li><\/ul><p>Unlike standard CarPlay adapters, AutoLinkr Tablet™ is a standalone device — it doesn't need to plug into your car's infotainment system.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -124,7 +115,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Tech Specs",
-            "content": "<ul><li>Screen: 7\" IPS HD touchscreen (1024×600)</li><li>Wireless: Bluetooth 5.0, WiFi 2.4GHz/5GHz dual-band</li><li>OS: Android-based</li><li>Connections: USB-C power, FM transmitter, Bluetooth audio</li><li>Compatible: Apple CarPlay (wireless), Android Auto (wireless)</li><li>Mount: Universal air vent mount included</li><li>Power: Powered via car USB port or included adapter</li></ul>",
+            "content": "<ul><li>Screen: 7\" IPS HD touchscreen (1024×600)<\/li><li>Wireless: Bluetooth 5.0, WiFi 2.4GHz\/5GHz dual-band<\/li><li>OS: Android-based<\/li><li>Connections: USB-C power, FM transmitter, Bluetooth audio<\/li><li>Compatible: Apple CarPlay (wireless), Android Auto (wireless)<\/li><li>Mount: Universal air vent mount included<\/li><li>Power: Powered via car USB port or included adapter<\/li><\/ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -137,7 +128,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping",
-            "content": "<p>You can expect your <strong>AutoLinkr Tablet™</strong> within 5-10 business days from your order date.</p>",
+            "content": "<p>You can expect your <strong>AutoLinkr Tablet™<\/strong> within 5-10 business days from your order date.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -215,7 +206,7 @@
       "type": "apps",
       "blocks": {
         "areviews_reviews_importer_areviews_display_reviews_F9nw3m": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
             "hide_areviews_title_rating": false,
             "areviews_theme_font": "inherit",

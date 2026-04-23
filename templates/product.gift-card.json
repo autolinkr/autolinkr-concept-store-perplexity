@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main-product": {
@@ -78,7 +69,7 @@
           }
         },
         "areviews_reviews_importer_areviews_title_rating_94E012": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsTitleRating/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {}
         }
       },
@@ -120,7 +111,7 @@
           "settings": {
             "icon": "rocket",
             "heading": "Shipping Information",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#b45309",
@@ -135,7 +126,7 @@
           "settings": {
             "icon": "headphone",
             "heading": "Customer Support",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#0369a1",
@@ -150,7 +141,7 @@
           "settings": {
             "icon": "chat_bubble",
             "heading": "FAQ’s",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#be123c",
@@ -165,7 +156,7 @@
           "settings": {
             "icon": "phone",
             "heading": "Contact Us",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#4d7c0f",
@@ -184,7 +175,7 @@
       ],
       "settings": {
         "heading": "Need help?",
-        "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.</p>"
+        "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.<\/p>"
       }
     },
     "product-recommendations": {
@@ -254,7 +245,7 @@
       "type": "apps",
       "blocks": {
         "areviews_reviews_importer_areviews_display_reviews_CC47EE": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
             "hide_areviews_title_rating": false,
             "areviews_theme_font": "inherit",

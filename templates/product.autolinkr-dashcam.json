@@ -74,7 +74,7 @@
             "icon": "lock",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "Dual 1080P Front & Interior Recording",
+            "text": "Dual 1080P dash cam with WiFi app — connects to your phone",
             "text_size": "text-base"
           }
         },
@@ -299,7 +299,7 @@
         "media_max_width": 900,
         "text_align": "center",
         "eyebrow": "AutoLinkr Dash™ In Action",
-        "heading": "Dual 1080P. Front and Rear.",
+        "heading": "Dual 1080P Front & Rear Dash Cam",
         "heading_tag": "h2",
         "subheading": "Complete 360° protection for your vehicle — IR night vision, WiFi app control, and 24/7 parking mode",
         "youtube_id": "",
@@ -654,7 +654,7 @@
         "heading_kjy898": {
           "type": "heading",
           "settings": {
-            "heading": "Records Everything.",
+            "heading": "Records Everything. Connects to Your Phone.",
             "heading_size": "h2",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -797,12 +797,42 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "question_phone": {
+          "type": "question",
+          "settings": {
+            "title": "Does it connect to my phone?",
+            "text": "<p>Yes. AutoDash™ connects directly to your phone via the built-in WiFi app (iOS & Android). View live footage, download clips, and adjust settings from your phone — no computer needed.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_frontrear": {
+          "type": "question",
+          "settings": {
+            "title": "Does it record front and rear at the same time?",
+            "text": "<p>Yes. AutoDash™ records both the road ahead and the vehicle interior simultaneously in dual 1080P Full HD. Both channels run continuously whenever the car is on.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_cloud": {
+          "type": "question",
+          "settings": {
+            "title": "Does it support cloud backup?",
+            "text": "<p>AutoDash™ stores footage locally on the MicroSD card. Clips can be downloaded to your phone via the WiFi app for manual backup to cloud storage like Google Drive or iCloud.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
         }
       },
       "block_order": [
         "question_xH9dRz",
         "question_UEKLiJ",
-        "question_jNxHfP"
+        "question_jNxHfP",
+        "question_phone",
+        "question_frontrear",
+        "question_cloud"
       ],
       "name": "t:sections.faq.name",
       "settings": {

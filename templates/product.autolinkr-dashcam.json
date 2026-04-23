@@ -199,14 +199,14 @@
             "text_size": "text-sm"
           }
         },
-        "collapsible-sd-guide": {
+        "collapsible-description": {
           "type": "collapsible_tab",
           "settings": {
             "opened": false,
             "style": "with-border",
             "icon": "none",
-            "heading": "Which Storage Option Should I Choose?",
-            "content": "<p><strong>No SD Card:</strong> Best if you already own a Class 10 MicroSD card (up to 128GB). Just insert and record.</p><p><strong>32GB (included):</strong> Holds approximately 4–5 hours of dual 1080P footage. Perfect for daily driving and commuters.</p><p><strong>64GB (included):</strong> Holds approximately 8–10 hours of dual 1080P footage. Best for long road trips, rideshare drivers, or maximum coverage.</p><p><em>All pre-installed cards are Class 10 rated for optimal dashcam performance.</em></p>",
+            "heading": "Description",
+            "content": "<p>AutoDash™ is a 1080P dual dash cam that records both the road ahead and the vehicle interior simultaneously — two channels of full HD coverage, running automatically every time you start your car.</p><p>Unlike basic single-lens cameras, AutoDash™ is a front and rear dash cam in one device: a 170° ultra-wide front camera captures the road in crystal-clear detail, while the interior IR camera records what's happening inside the vehicle. Both channels run in continuous 1080P Full HD, day and night.</p><p>The built-in WiFi makes AutoDash™ a dash cam that connects to your phone. Download the free iOS or Android app to preview live footage, pull clips, and adjust settings wirelessly — no computer, no cables. Footage can be saved directly to your phone and backed up to Google Drive, iCloud, or any cloud storage you use.</p><p>G-sensor collision detection automatically locks and protects footage the moment an impact is detected, so critical evidence is never overwritten by loop recording. And with 24/7 parking mode — powered by the included hardwire kit — AutoDash™ keeps watching even when you're not in the car.</p><p>Plug it in once. It records everything after that.</p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -263,8 +263,8 @@
         "text-trust-1",
         "text-trust-2",
         "text-trust-3",
+        "collapsible-description",
         "collapsible-specs",
-        "collapsible-sd-guide",
         "collapsible-install",
         "collapsible-shipping",
         "rating"

@@ -2,14 +2,17 @@
 # https://shopify.dev/docs/themes/tools/cli/configuration
 
 [environments.development]
-# ConceptThemePerplexity — ID confirmed 2026-03-12
-theme = "184215470114"
+# ConceptThemeBackup — unpublished, safe dev target
+theme = "184028332066"
 store = "aa3954.myshopify.com"
 ignore = [
   "_reference-autolinkr-concept-store/**"
 ]
 
 [environments.production]
+# ConceptThemePerplexity — LIVE THEME (role: main). Skill refuses to push here.
+# To deploy, demote/swap roles in Shopify admin first, or use --env production
+# (which still hits the role check unless explicitly bypassed).
 theme = "184215470114"
 store = "aa3954.myshopify.com"
 ignore = [

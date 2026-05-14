@@ -1,0 +1,1017 @@
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "disabled": true,
+          "settings": {
+            "show_collections_link": true,
+            "show_product_title": true
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "disabled": true,
+          "settings": {
+            "show_sold_out": false,
+            "show_save_amount": true,
+            "save_type": "percent"
+          }
+        },
+        "areviews_reviews_importer_areviews_title_rating_hnPPyw": {
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {}
+        },
+        "text-dash-badge": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "📹 4K + 1080P Dual-Channel · STARVIS 2 · Built-in GPS",
+            "text_size": "text-sm"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-lg",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h1",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "description_RtHtrP": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "text_size": "text-base"
+          }
+        },
+        "liquid_rigPKB": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "📹 4K Front + 1080P Rear Recording\n🌙 STARVIS 2 Night Vision\n📡 Built-in WiFi + GPS"
+          }
+        },
+        "text-tagline": {
+          "type": "text",
+          "settings": {
+            "icon": "lock",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "4K UHD front + 1080P rear with STARVIS 2 sensor and built-in GPS",
+            "text_size": "text-base"
+          }
+        },
+        "text_twwTrj": {
+          "type": "text",
+          "settings": {
+            "icon": "recycling",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "Auto Loop Recording + G-Sensor Collision Lock",
+            "text_size": "text-base"
+          }
+        },
+        "text_94MYt7": {
+          "type": "text",
+          "settings": {
+            "icon": "check_mark",
+            "iwidth": "fit",
+            "icon_width": 24,
+            "text": "Built-in GPS + WiFi App Control",
+            "text_size": "text-base"
+          }
+        },
+        "text_mYYTUf": {
+          "type": "text",
+          "settings": {
+            "icon": "eye",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "STARVIS 2 Night Vision — Read Plates After Dark",
+            "text_size": "text-base"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "enable_dynamic_variants": true,
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": false,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "text-variant-note": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "",
+            "text_size": "text-sm"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_price": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "icon_list": {
+          "type": "icon_list",
+          "settings": {
+            "heading": "",
+            "enable_carousel": false,
+            "show_below_media": true
+          }
+        },
+        "text-trust-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "✓ Free & Fast Shipping",
+            "text_size": "text-sm"
+          }
+        },
+        "text-trust-2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "✓ 30-Day Money-Back Guarantee",
+            "text_size": "text-sm"
+          }
+        },
+        "text-trust-3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "✓ 1-Year Warranty — Plug-In & Record in Minutes",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-description": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Description",
+            "content": "<p>AutoLinkr Dash Pro™ is a true 4K dual-channel dash camera that captures the road ahead in 3840×2160 UHD and the road behind in 1080P FHD — simultaneously, automatically, every time you start your car.<\/p><p>At its core is the STARVIS 2 image sensor paired with F1.5 and F1.8 large-aperture lenses and 6-layer optical glass. Combined with WDR + HDR processing, the result is footage clear enough to read license plates and street signs in daylight, glare, and after dark — exactly when you need that evidence most.<\/p><p>A 170° front field of view and 140° rear field of view dramatically reduce blind spots. Built-in GPS embeds location, speed, and route directly into your recordings — so every clip is timestamped, mapped, and ready to share. Built-in WiFi lets you preview, download, and send clips to your phone wirelessly through the AutoLinkr app, with OTA firmware updates handled the same way.<\/p><p>G-sensor collision detection automatically locks any impact footage so it's never overwritten by loop recording. With the optional hardwire kit, 24H Parking Monitor mode keeps the camera watching even when your car is off — motion and impact triggered, with a low-power time-lapse option for full-day surveillance.<\/p><p>One install. Continuous coverage. Evidence-grade footage, front and rear, day and night.<\/p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Full Specifications",
+            "content": "<ul><li><strong>Front Camera:<\/strong> 4K UHD (3840×2160)<\/li><li><strong>Rear Camera:<\/strong> 1080P FHD<\/li><li><strong>Image Sensor:<\/strong> STARVIS 2<\/li><li><strong>Aperture:<\/strong> F1.5 (front) + F1.8 (rear)<\/li><li><strong>Lens:<\/strong> 6-layer optical glass<\/li><li><strong>Field of View:<\/strong> 170° front · 140° rear<\/li><li><strong>Screen:<\/strong> 3.18″ IPS<\/li><li><strong>Image Processing:<\/strong> WDR + HDR<\/li><li><strong>GPS:<\/strong> Built-in (location, speed, and route embedded into footage)<\/li><li><strong>WiFi:<\/strong> Built-in 2.4 GHz (iOS + Android app)<\/li><li><strong>OTA Updates:<\/strong> Wireless firmware over WiFi<\/li><li><strong>Loop Recording:<\/strong> Auto-overwrites oldest footage<\/li><li><strong>G-Sensor:<\/strong> Auto-locks impact footage from overwrite<\/li><li><strong>Parking Monitor:<\/strong> 24H motion + impact mode (requires hardwire kit, sold separately)<\/li><li><strong>Night Vision:<\/strong> STARVIS 2 + IR-enhanced low-light<\/li><li><strong>Storage:<\/strong> 64GB SD card included, supports up to 256GB<\/li><li><strong>Voltage:<\/strong> 12–24V input (5V device, 5W consumption)<\/li><li><strong>Working Temperature:<\/strong> -30°C to +50°C<\/li><li><strong>Mounting:<\/strong> 180° rotating slider mount, 3M adhesive + electrostatic sticker<\/li><li><strong>In the Box:<\/strong> Front 4K cam, 1080P rear cam, GPS-built-in mount, 64GB SD card, 21.3 ft rear camera cable, 11.5 ft power cable with 12V car charger, 2 electrostatic stickers<\/li><\/ul>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-install": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Installation & Setup",
+            "content": "<p><strong>Setup takes about 30 minutes<\/strong> with no tools required:<\/p><ul><li>Apply the included electrostatic sticker to your windshield, then mount the front camera with the 3M adhesive pad on the 180° rotating slider mount<\/li><li>Route the 21.3 ft rear camera cable along your headliner and down to the rear window (cable length covers full-size SUVs and trucks)<\/li><li>Plug the front camera into your 12V power port using the included 11.5 ft power cable<\/li><li>For 24H Parking Monitor, install the hardwire kit (sold separately) into your fuse box — includes low-voltage cutoff to protect your battery<\/li><li>Pair your phone to the camera over built-in WiFi using the AutoLinkr app to preview live footage, download clips, and update firmware<\/li><\/ul><p>The camera powers on, locks in GPS, and starts recording automatically every time you start your vehicle.<\/p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible-shipping": {
+          "type": "collapsible_tab",
+          "settings": {
+            "opened": false,
+            "style": "with-border",
+            "icon": "none",
+            "heading": "Shipping & Returns",
+            "content": "<p>You can expect your <strong>AutoLinkr Dash Pro™<\/strong> within 5-10 business days from your order date.<\/p>",
+            "page": "",
+            "liquid": "",
+            "text_size": "text-sm"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "breadcrumb",
+        "badges",
+        "areviews_reviews_importer_areviews_title_rating_hnPPyw",
+        "text-dash-badge",
+        "title",
+        "description_RtHtrP",
+        "liquid_rigPKB",
+        "text-tagline",
+        "text_twwTrj",
+        "text_94MYt7",
+        "text_mYYTUf",
+        "variant_picker",
+        "text-variant-note",
+        "buy_buttons",
+        "sticky_buy_button",
+        "icon_list",
+        "text-trust-1",
+        "text-trust-2",
+        "text-trust-3",
+        "collapsible-description",
+        "collapsible-specs",
+        "collapsible-install",
+        "collapsible-shipping",
+        "rating"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": 66,
+        "gallery_layout": "stacked",
+        "thumbnail_position": "bottom",
+        "image_ratio": "square",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "columns",
+        "image_ratio_mobile": "square",
+        "mobile_thumbnail": true,
+        "padding_top": 8,
+        "padding_bottom": 36,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "video-demo": {
+      "type": "al-video-section",
+      "disabled": true,
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "max_width": 1200,
+        "media_max_width": 900,
+        "text_align": "center",
+        "eyebrow": "AutoLinkr Dash Pro™ In Action",
+        "heading": "4K + 1080P Front & Rear Dash Cam",
+        "heading_tag": "h2",
+        "subheading": "Complete 360° protection for your vehicle — STARVIS 2 night vision, built-in GPS, and 24H parking monitor",
+        "youtube_id": "",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f710c015c61142c997c93fa5dd13c01d.mov",
+        "autoplay": true,
+        "cta_label": "",
+        "cta_link": "",
+        "ghost_label": "",
+        "ghost_link": ""
+      }
+    },
+    "multicolumn-features": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "col-1": {
+          "type": "column",
+          "settings": {
+            "icon": "camera",
+            "custom_icon": "",
+            "heading": "4K Front + 1080P Rear",
+            "text": "<p>True 4K UHD up front (3840×2160) and 1080P FHD behind — simultaneous, evidence-grade footage from both directions, every drive.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "col-2": {
+          "type": "column",
+          "settings": {
+            "icon": "moon",
+            "custom_icon": "",
+            "heading": "STARVIS 2 Night Vision",
+            "text": "<p>The STARVIS 2 sensor with F1.5/F1.8 large-aperture lenses and WDR + HDR processing captures clear, readable footage even in low light — including license plates after dark.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "col-3": {
+          "type": "column",
+          "settings": {
+            "icon": "wifi",
+            "custom_icon": "",
+            "heading": "Built-in WiFi + GPS",
+            "text": "<p>Preview live footage, download clips, and update firmware wirelessly through the AutoLinkr app. Built-in GPS embeds location, speed, and route into every recording.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "col-4": {
+          "type": "column",
+          "settings": {
+            "icon": "clock",
+            "custom_icon": "",
+            "heading": "24H Parking Monitor",
+            "text": "<p>With the optional hardwire kit, Dash Pro keeps watching even when your car is off — motion and impact triggered, with a low-power time-lapse mode for all-day surveillance.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "col-5": {
+          "type": "column",
+          "settings": {
+            "icon": "bolt",
+            "custom_icon": "",
+            "heading": "G-Sensor Collision Lock",
+            "text": "<p>Any impact triggers the G-sensor to instantly lock and protect that footage from loop overwrite. Your evidence stays safe exactly when you need it most.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "col-6": {
+          "type": "column",
+          "settings": {
+            "icon": "loop",
+            "custom_icon": "",
+            "heading": "Loop Recording",
+            "text": "<p>Never worry about running out of storage. Loop recording auto-deletes the oldest footage to keep recording continuously — supports up to 256GB SD cards.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "col-1",
+        "col-2",
+        "col-3",
+        "col-4",
+        "col-5",
+        "col-6"
+      ],
+      "disabled": true,
+      "settings": {
+        "style": "with-border",
+        "columns": 3,
+        "text_alignment": "left",
+        "heading": "Professional-Grade Protection",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "Everything you need to capture every moment on the road — in 4K",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "testimonials-banner": {
+      "type": "testimonials-banner",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"The video clarity and overall build quality of this system are truly outstanding — far better than I expected, especially given the affordable price. I can read license plates at a reasonable distance, which is something you typically only find in systems that cost much more.\"<\/p>",
+            "author": "Steven",
+            "author_info": "Verified Buyer — 4K Front + Rear",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"Crystal-clear footage and easy setup. Even at night, thanks to the STARVIS 2 sensor, details like license plates and road signs are easy to spot. The app makes viewing and downloading clips extremely convenient. Highly recommend.\"<\/p>",
+            "author": "Chandaritas",
+            "author_info": "Verified Buyer — STARVIS 2 Night Vision",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>\"Six cameras for the family fleet. Within a couple days of installation, someone stepped out in front of me in traffic — had I not been able to miss him, the 4K footage would have proven I was not at fault. Worth every dollar.\"<\/p>",
+            "author": "HamRadio.World",
+            "author_info": "Verified Buyer — Family Fleet",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify:\/\/shop_images\/AutoDash_Lifestyle.png",
+        "image_height": "650px",
+        "content_position": "md:items-center md:justify-center",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-center justify-center",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 35,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_EJAAkb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QUGNpt": {
+          "type": "heading",
+          "settings": {
+            "heading": "4K Front. 1080P Rear. STARVIS 2.",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_4YWKbq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Complete 360° protection for your vehicle — STARVIS 2 night vision, built-in GPS, and 24H parking monitor<\/p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_L9UQLA": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Shop AutoLinkr Dash Pro™",
+            "button_link": "\/products\/autolinkr-dash-pro",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_QUGNpt",
+        "text_4YWKbq",
+        "button_L9UQLA"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Gemini_Generated_Image_cvuaiycvuaiycvua_6288a20b-602d-41f2-ba33-634c0159940f.png",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "middle",
+        "image_mobile": "shopify:\/\/shop_images\/Gemini_Generated_Image_cvuaiycvuaiycvua_6288a20b-602d-41f2-ba33-634c0159940f.png",
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image-nightvision": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Night Vision That Actually Works.",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most dash cams produce grainy, unusable footage at night. AutoLinkr Dash Pro™ pairs the STARVIS 2 sensor with F1.5 and F1.8 large-aperture lenses, a 6-layer optical glass build, and WDR + HDR processing — delivering sharp, low-noise video even in complete darkness.<\/p><p>License plates. Road signs. Other vehicles. See them clearly — parked or moving, day or night.<\/p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Shop AutoLinkr Dash Pro™",
+            "button_link": "\/products\/autolinkr-dash-pro",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Gemini_Generated_Image_mzjk4hmzjk4hmzjk.png",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "middle",
+        "image_mobile": "shopify:\/\/shop_images\/Gemini_Generated_Image_mzjk4hmzjk4hmzjk.png",
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_8xYRyt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kjy898": {
+          "type": "heading",
+          "settings": {
+            "heading": "Records Everything. Connects to Your Phone.",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_AhhiJC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>AutoLinkr Dash Pro™ records the road ahead in 4K UHD and the road behind in 1080P FHD — giving you complete, continuous coverage every moment you're behind the wheel. Loop recording keeps your storage free by automatically overwriting the oldest footage when space runs out, so you're always capturing what's happening now without ever needing to manage files.<\/p><p>Built-in WiFi connects directly to your phone through the AutoLinkr app, where you can preview live, download clips, and share footage in seconds. Built-in GPS embeds location, speed, and route into every recording — so every clip is mapped, timestamped, and ready to share with friends, family, or insurance.<\/p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_VdHjFk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Shop AutoLinkr Dash Pro™",
+            "button_link": "\/products\/autolinkr-dash-pro",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_kjy898",
+        "text_AhhiJC",
+        "button_VdHjFk"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AutoDash_Specs_02047ef2-2832-4722-ab5d-6412369138ed.png",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "middle",
+        "image_mobile": "shopify:\/\/shop_images\/AutoDash_Specs_02047ef2-2832-4722-ab5d-6412369138ed.png",
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "feature-strip": {
+      "type": "al-feature-strip",
+      "blocks": {
+        "f1": {
+          "type": "item",
+          "settings": {
+            "icon": "camera",
+            "title": "4K + 1080P",
+            "subtitle": "Front + rear recording"
+          }
+        },
+        "f2": {
+          "type": "item",
+          "settings": {
+            "icon": "moon",
+            "title": "STARVIS 2",
+            "subtitle": "Reads plates after dark"
+          }
+        },
+        "f3": {
+          "type": "item",
+          "settings": {
+            "icon": "wifi",
+            "title": "WiFi + GPS",
+            "subtitle": "iOS & Android app"
+          }
+        },
+        "f4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "G-Sensor Lock",
+            "subtitle": "Collision auto-protect"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "settings": {}
+    },
+    "faq_E4tci4": {
+      "type": "faq",
+      "blocks": {
+        "question_xH9dRz": {
+          "type": "question",
+          "settings": {
+            "title": "How is the Dash Pro different from the regular Dash?",
+            "text": "<p>The Dash Pro records in true 4K UHD up front (vs 1080P) and uses the STARVIS 2 image sensor for dramatically better low-light performance. It also adds built-in GPS — so location, speed, and route are embedded in every clip.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_UEKLiJ": {
+          "type": "question",
+          "settings": {
+            "title": "What SD card does it use?",
+            "text": "<p>A 64GB SD card is included in the box. The Dash Pro supports cards up to 256GB if you want to extend record time before loop overwrite — recommended for road trips and cross-country driving.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_jNxHfP": {
+          "type": "question",
+          "settings": {
+            "title": "Will it work with my vehicle?",
+            "text": "<p>Yes — the Dash Pro is a universal dash camera designed for any 12–24V vehicle. It works in cars, SUVs, trucks, and vans regardless of make or model.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_phone": {
+          "type": "question",
+          "settings": {
+            "title": "Does it connect to my phone?",
+            "text": "<p>Yes. The Dash Pro has built-in WiFi and pairs directly with your iPhone or Android through the AutoLinkr app — preview live footage, download clips, and share to your camera roll without removing the SD card.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_frontrear": {
+          "type": "question",
+          "settings": {
+            "title": "Does it record front and rear at the same time?",
+            "text": "<p>Yes. The Dash Pro records 4K UHD (3840×2160) up front and 1080P FHD behind, simultaneously and continuously, every time the car is on.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_cloud": {
+          "type": "question",
+          "settings": {
+            "title": "How does 24H Parking Monitor work?",
+            "text": "<p>Parking Monitor requires the optional hardwire kit, which connects the camera directly to your fuse box with a low-voltage cutoff to protect your battery. Once installed, the camera stays on after you park and records when motion or impact is detected, or in low-power time-lapse for full-day coverage.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_xH9dRz",
+        "question_UEKLiJ",
+        "question_jNxHfP",
+        "question_phone",
+        "question_frontrear",
+        "question_cloud"
+      ],
+      "name": "t:sections.faq.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "pro-crosssell": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h3",
+            "show_price": true,
+            "show_rating": false
+          }
+        },
+        "text-crosssell": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "Pair your Dash Pro with AutoLinkr Pro™ — wireless CarPlay and Android Auto plus Netflix, YouTube, and the full Google Play Store on your factory screen. 60-second plug-and-play setup.",
+            "text_size": "text-sm"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {
+            "show_sold_out": false,
+            "show_save_amount": false,
+            "save_type": "percent"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "text-crosssell",
+        "badges",
+        "buy_buttons"
+      ],
+      "settings": {
+        "product": "the-autolinkr-pro",
+        "enable_sticky_info": true,
+        "media_size": 50,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "mobile_layout": "partial",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "heading": "Complete Your Setup",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "apps-reviews": {
+      "type": "apps",
+      "blocks": {
+        "areviews_reviews_importer_areviews_display_reviews_LerhtT": {
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
+          }
+        },
+        "areviews_reviews_importer_areviews_title_rating_d7dW8T": {
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_LerhtT",
+        "areviews_reviews_importer_areviews_title_rating_d7dW8T"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "video-demo",
+    "multicolumn-features",
+    "testimonials-banner",
+    "image_with_text_EJAAkb",
+    "image-nightvision",
+    "image_with_text_8xYRyt",
+    "feature-strip",
+    "faq_E4tci4",
+    "pro-crosssell",
+    "product-recommendations",
+    "apps-reviews"
+  ]
+}

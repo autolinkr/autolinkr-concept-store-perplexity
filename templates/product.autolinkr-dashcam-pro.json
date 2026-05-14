@@ -56,7 +56,7 @@
           "type": "liquid",
           "disabled": true,
           "settings": {
-            "liquid": "📹 4K Front + 1080P Rear Recording\n🌙 STARVIS 2 Night Vision\n📡 Built-in WiFi + GPS"
+            "liquid": "📹 4K + 1080P Dual\n🌙 STARVIS 2 Night Vision\n📡 Built-in WiFi + GPS"
           }
         },
         "text-tagline": {
@@ -65,7 +65,7 @@
             "icon": "lock",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "4K UHD front + 1080P rear with STARVIS 2 sensor and built-in GPS",
+            "text": "4K + 1080P dual-channel dash cam",
             "text_size": "text-base"
           }
         },
@@ -75,7 +75,7 @@
             "icon": "recycling",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "Auto Loop Recording + G-Sensor Collision Lock",
+            "text": "Auto Loop + G-Sensor Lock",
             "text_size": "text-base"
           }
         },
@@ -85,7 +85,7 @@
             "icon": "check_mark",
             "iwidth": "fit",
             "icon_width": 24,
-            "text": "Built-in GPS + WiFi App Control",
+            "text": "Built-in WiFi + GPS",
             "text_size": "text-base"
           }
         },
@@ -95,7 +95,7 @@
             "icon": "eye",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "STARVIS 2 Night Vision — Read Plates After Dark",
+            "text": "STARVIS 2 Night Vision",
             "text_size": "text-base"
           }
         },
@@ -184,7 +184,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p>AutoLinkr Dash Pro™ is a true 4K dual-channel dash camera that captures the road ahead in 3840×2160 UHD and the road behind in 1080P FHD — simultaneously, automatically, every time you start your car.<\/p><p>At its core is the STARVIS 2 image sensor paired with F1.5 and F1.8 large-aperture lenses and 6-layer optical glass. Combined with WDR + HDR processing, the result is footage clear enough to read license plates and street signs in daylight, glare, and after dark — exactly when you need that evidence most.<\/p><p>A 170° front field of view and 140° rear field of view dramatically reduce blind spots. Built-in GPS embeds location, speed, and route directly into your recordings — so every clip is timestamped, mapped, and ready to share. Built-in WiFi lets you preview, download, and send clips to your phone wirelessly through the AutoLinkr app, with OTA firmware updates handled the same way.<\/p><p>G-sensor collision detection automatically locks any impact footage so it's never overwritten by loop recording. With the optional hardwire kit, 24H Parking Monitor mode keeps the camera watching even when your car is off — motion and impact triggered, with a low-power time-lapse option for full-day surveillance.<\/p><p>One install. Continuous coverage. Evidence-grade footage, front and rear, day and night.<\/p>",
+            "content": "<p>AutoLinkr Dash Pro™ is a true 4K dual-channel dash cam — 4K UHD up front, 1080P FHD behind, recording every drive automatically.<\/p><ul><li><strong>STARVIS 2 sensor + F1.5\/F1.8 lenses<\/strong> — sharp, plate-readable footage day and night<\/li><li><strong>170° front · 140° rear<\/strong> — minimal blind spots<\/li><li><strong>Built-in GPS<\/strong> — embeds location, speed, and route into every clip<\/li><li><strong>Built-in WiFi + app<\/strong> — preview, download, and share without removing the SD card<\/li><li><strong>G-Sensor + Loop Recording<\/strong> — auto-locks impact footage, never runs out of space<\/li><li><strong>24H Parking Monitor<\/strong> — keeps watching while you're away (requires hardwire kit)<\/li><\/ul><p>Install once. Records every drive.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -210,7 +210,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Installation & Setup",
-            "content": "<p><strong>Setup takes about 30 minutes<\/strong> with no tools required:<\/p><ul><li>Apply the included electrostatic sticker to your windshield, then mount the front camera with the 3M adhesive pad on the 180° rotating slider mount<\/li><li>Route the 21.3 ft rear camera cable along your headliner and down to the rear window (cable length covers full-size SUVs and trucks)<\/li><li>Plug the front camera into your 12V power port using the included 11.5 ft power cable<\/li><li>For 24H Parking Monitor, install the hardwire kit (sold separately) into your fuse box — includes low-voltage cutoff to protect your battery<\/li><li>Pair your phone to the camera over built-in WiFi using the AutoLinkr app to preview live footage, download clips, and update firmware<\/li><\/ul><p>The camera powers on, locks in GPS, and starts recording automatically every time you start your vehicle.<\/p>",
+            "content": "<p><strong>About 30 minutes. No tools required.<\/strong><\/p><ol><li><strong>Mount the front camera<\/strong> with the included sticker + 3M pad<\/li><li><strong>Route the rear camera<\/strong> along your headliner to the back window (21.3 ft cable)<\/li><li><strong>Plug into 12V<\/strong> — or install the optional hardwire kit for 24H Parking Mode<\/li><li><strong>Pair your phone<\/strong> over WiFi using the AutoLinkr app<\/li><\/ol><p>Auto-records and locks GPS every time you start the car.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -420,7 +420,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"The video clarity and overall build quality of this system are truly outstanding — far better than I expected, especially given the affordable price. I can read license plates at a reasonable distance, which is something you typically only find in systems that cost much more.\"<\/p>",
+            "text": "<p>\"The clarity is outstanding — better than systems twice the price. I can read license plates at a real distance.\"<\/p>",
             "author": "Steven",
             "author_info": "Verified Buyer — 4K Front + Rear",
             "author_url": "",
@@ -434,7 +434,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Crystal-clear footage and easy setup. Even at night, thanks to the STARVIS 2 sensor, details like license plates and road signs are easy to spot. The app makes viewing and downloading clips extremely convenient. Highly recommend.\"<\/p>",
+            "text": "<p>\"Crystal-clear footage day and night. STARVIS 2 makes plates and road signs easy to spot.\"<\/p>",
             "author": "Chandaritas",
             "author_info": "Verified Buyer — STARVIS 2 Night Vision",
             "author_url": "",
@@ -448,7 +448,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>\"Six cameras for the family fleet. Within a couple days of installation, someone stepped out in front of me in traffic — had I not been able to miss him, the 4K footage would have proven I was not at fault. Worth every dollar.\"<\/p>",
+            "text": "<p>\"One in every family vehicle. Real peace of mind on the road — and the 4K footage is incredible.\"<\/p>",
             "author": "HamRadio.World",
             "author_info": "Verified Buyer — Family Fleet",
             "author_url": "",
@@ -580,7 +580,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Most dash cams produce grainy, unusable footage at night. AutoLinkr Dash Pro™ pairs the STARVIS 2 sensor with F1.5 and F1.8 large-aperture lenses, a 6-layer optical glass build, and WDR + HDR processing — delivering sharp, low-noise video even in complete darkness.<\/p><p>License plates. Road signs. Other vehicles. See them clearly — parked or moving, day or night.<\/p>",
+            "text": "<p>The STARVIS 2 sensor, F1.5\/F1.8 large-aperture lenses, and WDR + HDR processing deliver sharp, plate-readable footage even in complete darkness — so license plates, road signs, and other vehicles stay clear, day or night.<\/p>",
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
@@ -656,7 +656,7 @@
         "text_AhhiJC": {
           "type": "text",
           "settings": {
-            "text": "<p>AutoLinkr Dash Pro™ records the road ahead in 4K UHD and the road behind in 1080P FHD — giving you complete, continuous coverage every moment you're behind the wheel. Loop recording keeps your storage free by automatically overwriting the oldest footage when space runs out, so you're always capturing what's happening now without ever needing to manage files.<\/p><p>Built-in WiFi connects directly to your phone through the AutoLinkr app, where you can preview live, download clips, and share footage in seconds. Built-in GPS embeds location, speed, and route into every recording — so every clip is mapped, timestamped, and ready to share with friends, family, or insurance.<\/p>",
+            "text": "<p>4K UHD up front, 1080P FHD behind — continuous, simultaneous coverage with loop recording so you never have to manage files. Built-in WiFi pairs to the AutoLinkr app for instant preview and download, and built-in GPS maps and timestamps every clip — ready to share with friends, family, or insurance.<\/p>",
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
@@ -877,7 +877,7 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "Pair your Dash Pro with AutoLinkr Pro™ — wireless CarPlay and Android Auto plus Netflix, YouTube, and the full Google Play Store on your factory screen. 60-second plug-and-play setup.",
+            "text": "AutoLinkr Pro™ turns your factory screen into a wireless CarPlay + Android Auto hub — with Netflix, YouTube, and the full Google Play Store. 60-second plug-and-play setup, no wiring required.",
             "text_size": "text-sm"
           }
         },

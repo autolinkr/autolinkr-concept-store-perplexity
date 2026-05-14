@@ -39,7 +39,7 @@
           "type": "question",
           "settings": {
             "title": "What's the difference between AutoLinkr Base, Pro, and Elite?",
-            "text": "<p><strong>AutoLinkr Lite™:<\/strong> Wireless <strong>CarPlay and Android Auto<\/strong> — no Netflix\/YouTube streaming. Ideal for a simple wireless phone link. <a href=\"\/products\/autolinkr-lite\">Shop Lite →<\/a><\/p><p><strong>AutoLinkr Base™:<\/strong> Wireless CarPlay-focused entry (see product page for current pricing and specs). <a href=\"\/products\/autolinkr-base\">Shop Base →<\/a><\/p><p><strong>AutoLinkr Pro™ ($79.99):<\/strong> Wireless CarPlay + Netflix, YouTube, and Google Play. Best value for iPhone drivers who want streaming on the factory screen. <a href=\"\/products\/the-autolinkr-pro\">Shop Pro →<\/a><\/p><p><strong>AutoLinkr Elite™ ($199.99):<\/strong> Everything in Pro + true split-screen + faster performance. <a href=\"\/products\/the-autolinkr-elite\">Shop Elite →<\/a><\/p><p>Want the biggest upgrade from Pro? Elite runs two apps side by side and stays smoother under load.<\/p>",
+            "text": "<p><strong>AutoLinkr Lite™:<\/strong> Wireless <strong>CarPlay and Android Auto<\/strong> — no Netflix\/YouTube streaming. Ideal for a simple wireless phone link. <a href=\"\/products\/autolinkr-lite\">Shop Lite →<\/a><\/p><p><strong>AutoLinkr Base™:<\/strong> Wireless CarPlay-focused entry (see product page for current pricing and specs). <a href=\"\/products\/autolinkr-base\">Shop Base →<\/a><\/p><p><strong>AutoLinkr Pro™:<\/strong> Wireless CarPlay + Netflix, YouTube, and Google Play. Best value for iPhone drivers who want streaming on the factory screen. <a href=\"\/products\/the-autolinkr-pro\">Shop Pro →<\/a><\/p><p><strong>AutoLinkr Elite™ :<\/strong> Everything in Pro + true split-screen + faster performance. <a href=\"\/products\/the-autolinkr-elite\">Shop Elite →<\/a><\/p><p>Want the biggest upgrade from Pro? Elite runs two apps side by side and stays smoother under load.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -562,7 +562,7 @@
           "type": "question",
           "settings": {
             "title": "How does the $20 store credit work?",
-            "text": "<p>VIP members receive <strong>$20 in store credit<\/strong> to use toward any purchase on <strong>autolinkr.com<\/strong>. Credit is part of the membership benefit — apply it at checkout like any other AutoLinkr store credit. Full terms appear on the <a href=\"\/products\/vip-membership\">VIP product page<\/a>.<\/p>",
+            "text": "<p>VIP members receive <strong>$20 in store credit<\/strong> to use toward any purchase at <strong>www.theautolinkr.com.<\/strong> Credit is part of the membership benefit — apply it at checkout like any other AutoLinkr store credit. Full terms appear on the <a href=\"\/products\/vip-membership\">VIP product page<\/a>.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }

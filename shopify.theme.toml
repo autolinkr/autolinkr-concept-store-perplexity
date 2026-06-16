@@ -1,18 +1,30 @@
 # Shopify Theme Configuration
 # https://shopify.dev/docs/themes/tools/cli/configuration
 
+# DEFAULT / SCRATCH target — a safe, unpublished theme.
+# Any experimentation, dry-runs, or non-product-launch theme work goes here so a
+# stray push can never hit the live store. The new-product-launch Stage-6 deploy
+# does NOT use this env — it targets production (see below) with --allow-live.
 [environments.development]
-# ConceptThemeBackup — unpublished, safe dev target
-theme = "184028332066"
+# ConceptThemePerplexityV2.0 — unpublished draft, safe scratch target
+theme = "187077099554"
 store = "aa3954.myshopify.com"
 ignore = [
   "_reference-autolinkr-concept-store/**"
 ]
 
+# LIVE deploy target — ConceptThemePerplexity, role: main (the real storefront).
+# Owner directive (2026-06-16): new product pages are built directly on the live
+# theme, ADDITIVE-ONLY — a new templates/product.<suffix>.json plus any NEW
+# product-specific sections. NEVER modify a shared/global section here.
+#   - Writing here requires the single-file pusher with the explicit --allow-live flag:
+#       python theme_push_one.py templates/product.<suffix>.json --env production --allow-live --yes
+#   - The bulk pusher (theme_push.py) ALWAYS refuses role:main — blasting all files
+#     to live is never allowed.
+#   - The product stays status=draft until Nick/Alec flip it active, so customers
+#     never see the new page before approval even though its template lives on prod.
+#   - Every live push is committed + pushed to GitHub for one-command revert.
 [environments.production]
-# ConceptThemePerplexity — LIVE THEME (role: main). Skill refuses to push here.
-# To deploy, demote/swap roles in Shopify admin first, or use --env production
-# (which still hits the role check unless explicitly bypassed).
 theme = "184215470114"
 store = "aa3954.myshopify.com"
 ignore = [

@@ -268,7 +268,8 @@
         "heading_tag": "h2",
         "subheading": "Your whole phone on the car's screen — smooth, in sync, and lag-free. The one thing every cheap dongle promises and fails to deliver. Dual-band 5.8GHz Wi-Fi keeps the picture locked in.",
         "youtube_id": "",
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/2a9b3c1f04034a5bbbb7d5074334392c.mp4",
+        "video_url": "",
+        "poster_image": "shopify://shop_images/lite-06-mirroring.jpg",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",
@@ -279,7 +280,7 @@
     "compatibility": {
       "type": "al-compatibility",
       "settings": {
-        "image": "shopify://shop_images/2M2A9277.jpg",
+        "image": "shopify://shop_images/lite-05-incar.jpg",
         "button_label": "Check Compatibility →",
         "button_link": "/pages/supported-cars",
         "padding_top": 36,
@@ -296,7 +297,7 @@
             "body": "Insert into your car's USB port. No tools, no wiring.",
             "badge": "30 sec",
             "image_url": "",
-            "image": "shopify://shop_images/AutoLinkr_Flat_White_Zoom_1.png",
+            "image": "shopify://shop_images/lite-04-connectors.jpg",
             "image_ratio": "4/3"
           }
         },
@@ -307,7 +308,7 @@
             "body": "Pair once. Your car remembers it forever.",
             "badge": "One time",
             "image_url": "",
-            "image": "shopify://shop_images/2M2A9259.jpg",
+            "image": "shopify://shop_images/lite-05-incar.jpg",
             "image_ratio": "16/9"
           }
         },
@@ -318,7 +319,7 @@
             "body": "CarPlay, Android Auto and screen mirroring fire up automatically.",
             "badge": "Every drive",
             "image_url": "",
-            "image": "shopify://shop_images/IMG_2863.heic",
+            "image": "shopify://shop_images/lite-06-mirroring.jpg",
             "image_ratio": "1/1"
           }
         }
@@ -362,7 +363,8 @@
         "heading_tag": "h2",
         "subheading": "Engineered for the heat, vibration and daily on-off of real driving. While bargain dongles fade after a few months, the Lite is built to keep connecting, drive after drive.",
         "youtube_id": "",
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/f710c015c61142c997c93fa5dd13c01d.mov",
+        "video_url": "",
+        "poster_image": "shopify://shop_images/lite-feature-connection.jpg",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",

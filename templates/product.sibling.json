@@ -131,11 +131,16 @@
         "sticky_buy_button": {
           "type": "sticky_buy_button",
           "settings": {}
+        },
+        "areviews_reviews_importer_areviews_title_rating_E3BF70": {
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsTitleRating\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "areviews_reviews_importer_areviews_title_rating_E3BF70",
         "description",
         "countdown",
         "product_variations",
@@ -877,6 +882,24 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "areviews_1780810772_a26814": {
+      "type": "apps",
+      "blocks": {
+        "areviews_reviews_importer_areviews_display_reviews_8E09A1": {
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "settings": {
+            "hide_areviews_title_rating": false,
+            "areviews_theme_font": "inherit",
+            "areviews_stars_colors": "#f3c621",
+            "areviews_write_reviews_botton_color": "#373737"
+          }
+        }
+      },
+      "block_order": [
+        "areviews_reviews_importer_areviews_display_reviews_8E09A1"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -890,6 +913,7 @@
     "product-details",
     "faq",
     "product-recommendations",
-    "recently-viewed"
+    "recently-viewed",
+    "areviews_1780810772_a26814"
   ]
 }

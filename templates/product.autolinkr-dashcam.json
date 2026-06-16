@@ -65,7 +65,7 @@
             "icon": "lock",
             "iwidth": "custom",
             "icon_width": 24,
-            "text": "Dual 1080P dash cam with WiFi app — connects to your phone",
+            "text": "1080P Dash Cam + Backup Camera",
             "text_size": "text-base"
           }
         },
@@ -416,13 +416,13 @@
     "testimonials-banner": {
       "type": "testimonials-banner",
       "blocks": {
-        "t1": {
+        "t2": {
           "type": "testimonial",
           "settings": {
-            "icon": "quote",
-            "text": "<p>\"The night vision on this thing is unreal. I can read license plates in complete darkness. It saved me when someone hit my parked car — parking mode caught everything.\"<\/p>",
-            "author": "Marcus J.",
-            "author_info": "2021 Toyota 4Runner — Verified Buyer",
+            "icon": "none",
+            "text": "<p>⭐⭐⭐⭐⭐<br\/>\"I drive for Uber and the AutoLinkr Dash has given me peace of mind I didn't know I was missing. Front and rear 1080P footage, and the WiFi app makes it easy to save anything I need.\"<\/p><p>- Linda H.<\/p>",
+            "author": "",
+            "author_info": "",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -430,13 +430,13 @@
             "highlighted_scribble": "circle"
           }
         },
-        "t2": {
+        "t1": {
           "type": "testimonial",
           "settings": {
-            "icon": "quote",
-            "text": "<p>\"I drive for Uber and the AutoLinkr Dash has given me peace of mind I didn't know I was missing. Front and rear 1080P footage, and the WiFi app makes it easy to save anything I need.\"<\/p>",
-            "author": "Linda H.",
-            "author_info": "Rideshare Driver — Verified Buyer",
+            "icon": "none",
+            "text": "<p>⭐⭐⭐⭐⭐<\/p><p>\"The night vision on this thing is unreal. I can read license plates in complete darkness. It saved me when someone hit my parked car — parking mode caught everything.\"<\/p><p>- Marcus J.<\/p>",
+            "author": "",
+            "author_info": "",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -447,10 +447,10 @@
         "t3": {
           "type": "testimonial",
           "settings": {
-            "icon": "quote",
-            "text": "<p>\"Installation took me literally 8 minutes. The image quality during the day is sharp, and the night vision actually works unlike my last camera. Best $70 I've spent on my car.\"<\/p>",
-            "author": "Ryan P.",
-            "author_info": "2020 Honda CR-V — Verified Buyer",
+            "icon": "none",
+            "text": "<p>⭐⭐⭐⭐⭐<\/p><p>\"Installation took me literally 8 minutes. The image quality during the day is sharp, and the night vision actually works unlike my last camera. Best $70 I've spent on my car.\"<\/p><p>- Ryan P.<\/p>",
+            "author": "",
+            "author_info": "",
             "author_url": "",
             "image_ratio": "rounded",
             "image_height": 30,
@@ -460,13 +460,13 @@
         }
       },
       "block_order": [
-        "t1",
         "t2",
+        "t1",
         "t3"
       ],
       "settings": {
         "transparent_header": false,
-        "image": "shopify:\/\/shop_images\/AutoDash_Lifestyle.png",
+        "image": "shopify:\/\/shop_images\/Driving.jpg",
         "image_height": "650px",
         "content_position": "md:items-center md:justify-center",
         "image_height_mobile": "auto",
@@ -908,6 +908,7 @@
         "badges",
         "buy_buttons"
       ],
+      "disabled": true,
       "settings": {
         "product": "the-autolinkr-pro",
         "enable_sticky_info": true,

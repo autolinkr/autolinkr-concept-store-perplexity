@@ -9,7 +9,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "SPRING SALE",
+            "text": "SUMMER SALE",
             "link": "",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -363,6 +363,41 @@
             "card_badge_5": ""
           }
         },
+        "al_mega_menu_6HJnDd": {
+          "type": "al_mega_menu",
+          "settings": {
+            "menu_title": "Dash Cams",
+            "menu_label": "DASH CAMS",
+            "view_all_label": "",
+            "view_all_link": "shopify:\/\/collections\/all",
+            "footer_label": "",
+            "footer_link": "shopify:\/\/collections\/dash-cams",
+            "image_shape": "square",
+            "columns": 4,
+            "card_image_1": "shopify:\/\/shop_images\/ElevenLabs_image_nano-banana-pro_Recreate_this_2026-05-25T18_03_36.png",
+            "card_title_1": "AutoLinkr Dash™",
+            "card_sub_1": "",
+            "card_link_1": "shopify:\/\/products\/autodash",
+            "card_badge_1": "",
+            "card_image_2": "shopify:\/\/shop_images\/final_36ca9735-8e44-4826-ac28-436237836d97.jpg",
+            "card_title_2": "AutoLinkr Dash Pro™",
+            "card_sub_2": "",
+            "card_link_2": "shopify:\/\/products\/autolinkr-dash-pro",
+            "card_badge_2": "",
+            "card_title_3": "",
+            "card_sub_3": "",
+            "card_link_3": "shopify:\/\/products\/the-autolinkr-elite",
+            "card_badge_3": "",
+            "card_title_4": "",
+            "card_sub_4": "",
+            "card_link_4": "",
+            "card_badge_4": "",
+            "card_title_5": "",
+            "card_sub_5": "",
+            "card_link_5": "",
+            "card_badge_5": ""
+          }
+        },
         "al_mm_dashcams": {
           "type": "al_mega_menu",
           "disabled": true,
@@ -477,6 +512,7 @@
         "mega_menu_dashcams",
         "mega_menu_accessories",
         "al_mm_adapters",
+        "al_mega_menu_6HJnDd",
         "al_mm_dashcams",
         "al_mega_menu_UkUMxF",
         "al_mm_accessories"

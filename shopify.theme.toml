@@ -5,9 +5,12 @@
 # Any experimentation, dry-runs, or non-product-launch theme work goes here so a
 # stray push can never hit the live store. The new-product-launch Stage-6 deploy
 # does NOT use this env — it targets production (see below) with --allow-live.
+#
+# This repo is the LIVE-STORE MIRROR ONLY. The ConceptThemeZoV2.0 redesign
+# (theme 187077099554) lives in its own separate repo — do NOT target it here.
 [environments.development]
-# ConceptThemePerplexityV2.0 — unpublished draft, safe scratch target
-theme = "187077099554"
+# ConceptThemeBackup — unpublished, safe scratch target for live-bound dry-runs
+theme = "184028332066"
 store = "aa3954.myshopify.com"
 ignore = [
   "_reference-autolinkr-concept-store/**"

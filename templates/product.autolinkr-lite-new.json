@@ -85,7 +85,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Description",
-            "content": "<p><strong>Your phone, on your car's screen — wirelessly, and without the lag.</strong></p><p>The AutoLinkr Lite™ turns your car's wired CarPlay or Android Auto into a fully wireless connection, then goes one step further: it mirrors your <em>entire</em> phone screen to your dash. Maps, music, your favorite apps — and video for your passengers when you're parked — all on the bigger display, no cable in sight.</p><p>Plug it into your car's USB port once. It pairs in seconds and reconnects automatically every time you start the engine — no app, no menus, no fuss. Dual-band 5.8GHz Wi-Fi keeps the picture smooth and the connection locked in, so you get the one thing the cheap dongles can't deliver: mirroring that doesn't stutter and a link that doesn't drop.</p><p>Whether it's the daily commute or a weekend road trip, the Lite makes your car feel years newer — for a fraction of the price of a new head unit. The smart, simple way to go wireless.</p>",
+            "content": "<p><strong>Your phone, on your car's screen — wirelessly, and without the lag.<\/strong><\/p><p>The AutoLinkr Lite™ turns your car's wired CarPlay or Android Auto into a fully wireless connection, then goes one step further: it mirrors your <em>entire<\/em> phone screen to your dash. Maps, music, your favorite apps — and video for your passengers when you're parked — all on the bigger display, no cable in sight.<\/p><p>Plug it into your car's USB port once. It pairs in seconds and reconnects automatically every time you start the engine — no app, no menus, no fuss. Dual-band 5.8GHz Wi-Fi keeps the picture smooth and the connection locked in, so you get the one thing the cheap dongles can't deliver: mirroring that doesn't stutter and a link that doesn't drop.<\/p><p>Whether it's the daily commute or a weekend road trip, the Lite makes your car feel years newer — for a fraction of the price of a new head unit. The smart, simple way to go wireless.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -98,7 +98,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Compatibility",
-            "content": "<p>Works with virtually any vehicle that has <strong>factory wired Apple CarPlay or Android Auto</strong>, and with aftermarket head units that support it.</p><p>Compatible with hundreds of models from Toyota, Honda, Ford, Chevrolet, Nissan, Hyundai, Kia, VW, BMW, Mercedes and more. Includes both <strong>USB-A and USB-C</strong> adapters, so it fits virtually any port.</p><p><strong>Not compatible with:</strong> vehicles that have no built-in CarPlay/Android Auto at all (no factory or aftermarket head-unit support).</p><p><a href=\"/pages/supported-cars\">Check Your Car →</a><br/>Not sure? Contact us and we'll confirm in minutes.</p>",
+            "content": "<p>Works with virtually any vehicle that has <strong>factory wired Apple CarPlay or Android Auto<\/strong>, and with aftermarket head units that support it.<\/p><p>Compatible with hundreds of models from Toyota, Honda, Ford, Chevrolet, Nissan, Hyundai, Kia, VW, BMW, Mercedes and more. Includes both <strong>USB-A and USB-C<\/strong> adapters, so it fits virtually any port.<\/p><p><strong>Not compatible with:<\/strong> vehicles that have no built-in CarPlay\/Android Auto at all (no factory or aftermarket head-unit support).<\/p><p><a href=\"\/pages\/supported-cars\">Check Your Car →<\/a><br\/>Not sure? Contact us and we'll confirm in minutes.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -111,7 +111,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "What's Included",
-            "content": "<ul><li>✔ AutoLinkr Lite™ wireless adapter</li><li>✔ USB-C connector (attached)</li><li>✔ USB-A adapter</li><li>✔ Quick-start guide</li><li>✔ Backed by the AutoLinkr warranty</li></ul>",
+            "content": "<ul><li>✔ AutoLinkr Lite™ wireless adapter<\/li><li>✔ USB-C connector (attached)<\/li><li>✔ USB-A adapter<\/li><li>✔ Quick-start guide<\/li><li>✔ Backed by the AutoLinkr warranty<\/li><\/ul>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -124,7 +124,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Shipping",
-            "content": "<p>Ships within 24 hours from our US warehouse. Standard delivery 3–7 business days. <strong>Free shipping on 2-packs.</strong> Tracking sent the moment it ships.</p>",
+            "content": "<p>Ships within 24 hours from our US warehouse. Standard delivery 3–7 business days. <strong>Free shipping on 2-packs.<\/strong> Tracking sent the moment it ships.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -137,7 +137,7 @@
             "style": "with-border",
             "icon": "none",
             "heading": "Safety Disclaimer",
-            "content": "<p>⚠️ Drive responsibly. Video and full-screen mirroring features are intended for use by passengers or while the vehicle is <strong>safely parked</strong>. Never watch video content while driving. Always follow your local distracted-driving laws. AutoLinkr is not affiliated with Apple or Google; \"CarPlay\" and \"Android Auto\" are trademarks of their respective owners.</p>",
+            "content": "<p>⚠️ Drive responsibly. Video and full-screen mirroring features are intended for use by passengers or while the vehicle is <strong>safely parked<\/strong>. Never watch video content while driving. Always follow your local distracted-driving laws. AutoLinkr is not affiliated with Apple or Google; \"CarPlay\" and \"Android Auto\" are trademarks of their respective owners.<\/p>",
             "page": "",
             "liquid": "",
             "text_size": "text-sm"
@@ -226,14 +226,62 @@
     "press-marquee": {
       "type": "al-logo-marquee",
       "blocks": {
-        "logo-1": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-forbes.png", "link": "" } },
-        "logo-2": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-the-verge.png", "link": "" } },
-        "logo-3": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-wired.png", "link": "" } },
-        "logo-4": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-techradar.png", "link": "" } },
-        "logo-5": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-car-and-driver.png", "link": "" } },
-        "logo-6": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-motor-trend.png", "link": "" } },
-        "logo-7": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-road-and-track.png", "link": "" } },
-        "logo-8": { "type": "logo", "settings": { "image": "shopify://shop_images/press-logo-business-insider.png", "link": "" } }
+        "logo-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-forbes.png",
+            "link": ""
+          }
+        },
+        "logo-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-the-verge.png",
+            "link": ""
+          }
+        },
+        "logo-3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-wired.png",
+            "link": ""
+          }
+        },
+        "logo-4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-techradar.png",
+            "link": ""
+          }
+        },
+        "logo-5": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-car-and-driver.png",
+            "link": ""
+          }
+        },
+        "logo-6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-motor-trend.png",
+            "link": ""
+          }
+        },
+        "logo-7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-road-and-track.png",
+            "link": ""
+          }
+        },
+        "logo-8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/press-logo-business-insider.png",
+            "link": ""
+          }
+        }
       },
       "block_order": [
         "logo-1",
@@ -264,12 +312,12 @@
         "media_max_width": 900,
         "text_align": "center",
         "eyebrow": "The Difference",
-        "heading": "Screen Mirroring That <strong>Actually Works.</strong>",
+        "heading": "Screen Mirroring That <strong>Actually Works.<\/strong>",
         "heading_tag": "h2",
         "subheading": "Your whole phone on the car's screen — smooth, in sync, and lag-free. The one thing every cheap dongle promises and fails to deliver. Dual-band 5.8GHz Wi-Fi keeps the picture locked in.",
         "youtube_id": "",
         "video_url": "",
-        "poster_image": "shopify://shop_images/lite-06-mirroring.jpg",
+        "poster_image": "shopify:\/\/shop_images\/lite-06-mirroring.jpg",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",
@@ -280,9 +328,9 @@
     "compatibility": {
       "type": "al-compatibility",
       "settings": {
-        "image": "shopify://shop_images/lite-05-incar.jpg",
+        "image": "shopify:\/\/shop_images\/lite-05-incar.jpg",
         "button_label": "Check Compatibility →",
-        "button_link": "/pages/supported-cars",
+        "button_link": "\/pages\/supported-cars",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -297,8 +345,8 @@
             "body": "Insert into your car's USB port. No tools, no wiring.",
             "badge": "30 sec",
             "image_url": "",
-            "image": "shopify://shop_images/lite-04-connectors.jpg",
-            "image_ratio": "4/3"
+            "image": "shopify:\/\/shop_images\/lite-04-connectors.jpg",
+            "image_ratio": "4\/3"
           }
         },
         "step-2": {
@@ -308,8 +356,8 @@
             "body": "Pair once. Your car remembers it forever.",
             "badge": "One time",
             "image_url": "",
-            "image": "shopify://shop_images/lite-05-incar.jpg",
-            "image_ratio": "16/9"
+            "image": "shopify:\/\/shop_images\/lite-05-incar.jpg",
+            "image_ratio": "16\/9"
           }
         },
         "step-3": {
@@ -319,8 +367,8 @@
             "body": "CarPlay, Android Auto and screen mirroring fire up automatically.",
             "badge": "Every drive",
             "image_url": "",
-            "image": "shopify://shop_images/lite-06-mirroring.jpg",
-            "image_ratio": "1/1"
+            "image": "shopify:\/\/shop_images\/lite-06-mirroring.jpg",
+            "image_ratio": "1\/1"
           }
         }
       },
@@ -347,7 +395,7 @@
         "heading": "",
         "subheading": "",
         "cta_label": "▶ Watch Setup Video",
-        "cta_link": "https://www.youtube.com/watch?v=27BN5EGinmg&t=8s"
+        "cta_link": "https:\/\/www.youtube.com\/watch?v=27BN5EGinmg&t=8s"
       }
     },
     "built-to-last": {
@@ -364,7 +412,7 @@
         "subheading": "Engineered for the heat, vibration and daily on-off of real driving. While bargain dongles fade after a few months, the Lite is built to keep connecting, drive after drive.",
         "youtube_id": "",
         "video_url": "",
-        "poster_image": "shopify://shop_images/lite-feature-connection.jpg",
+        "poster_image": "shopify:\/\/shop_images\/lite-feature-connection.jpg",
         "autoplay": true,
         "cta_label": "",
         "cta_link": "",
@@ -440,7 +488,7 @@
       ],
       "settings": {
         "eyebrow": "",
-        "heading": "<strong>Packed With Purpose.</strong>",
+        "heading": "<strong>Packed With Purpose.<\/strong>",
         "subheading": "Six reasons drivers pick the Lite over a no-name dongle.",
         "padding_top": 48,
         "padding_bottom": 48
@@ -454,21 +502,21 @@
           "settings": {
             "product": "autolinkr-lite-wireless-carplay-adapter",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
+            "value_1": "<p>✓<\/p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>✓</p>",
+            "value_2": "<p>✓<\/p>",
             "heading_3": "Full Screen Mirroring",
-            "value_3": "<p>✓</p>",
+            "value_3": "<p>✓<\/p>",
             "heading_4": "Dual-band 5.8GHz Wi-Fi",
-            "value_4": "<p>✓</p>",
+            "value_4": "<p>✓<\/p>",
             "heading_5": "Plug-and-play, auto-connect",
-            "value_5": "<p>✓</p>",
-            "heading_6": "Built-in streaming OS (Netflix/YouTube)",
-            "value_6": "<p>✗</p>",
+            "value_5": "<p>✓<\/p>",
+            "heading_6": "Built-in streaming OS (Netflix\/YouTube)",
+            "value_6": "<p>✗<\/p>",
             "heading_7": "Google Play Store apps",
-            "value_7": "<p>✗</p>",
+            "value_7": "<p>✗<\/p>",
             "heading_8": "Price",
-            "value_8": "<p>$59.99</p>",
+            "value_8": "<p>$59.99<\/p>",
             "heading_9": "",
             "value_9": "",
             "heading_10": "",
@@ -481,21 +529,21 @@
           "settings": {
             "product": "the-autolinkr-pro",
             "heading_1": "Wireless CarPlay",
-            "value_1": "<p>✓</p>",
+            "value_1": "<p>✓<\/p>",
             "heading_2": "Wireless Android Auto",
-            "value_2": "<p>✓</p>",
+            "value_2": "<p>✓<\/p>",
             "heading_3": "Full Screen Mirroring",
-            "value_3": "<p>✓</p>",
+            "value_3": "<p>✓<\/p>",
             "heading_4": "Dual-band 5.8GHz Wi-Fi",
-            "value_4": "<p>✓</p>",
+            "value_4": "<p>✓<\/p>",
             "heading_5": "Plug-and-play, auto-connect",
-            "value_5": "<p>✓</p>",
-            "heading_6": "Built-in streaming OS (Netflix/YouTube)",
-            "value_6": "<p>✓</p>",
+            "value_5": "<p>✓<\/p>",
+            "heading_6": "Built-in streaming OS (Netflix\/YouTube)",
+            "value_6": "<p>✓<\/p>",
             "heading_7": "Google Play Store apps",
-            "value_7": "<p>✓</p>",
+            "value_7": "<p>✓<\/p>",
             "heading_8": "Price",
-            "value_8": "<p>$79.99</p>",
+            "value_8": "<p>$79.99<\/p>",
             "heading_9": "",
             "value_9": "",
             "heading_10": "",
@@ -622,7 +670,7 @@
           "type": "question",
           "settings": {
             "title": "Will the screen mirroring lag or fall out of sync like the cheap ones?",
-            "text": "<p>No — that's the whole point of the Lite. Its dual-band 5.8GHz Wi-Fi is built for a smooth, low-latency picture so mirroring stays in sync. If it ever doesn't perform in your car, you're covered by our 30-day money-back guarantee.</p>",
+            "text": "<p>No — that's the whole point of the Lite. Its dual-band 5.8GHz Wi-Fi is built for a smooth, low-latency picture so mirroring stays in sync. If it ever doesn't perform in your car, you're covered by our 30-day money-back guarantee.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -631,7 +679,7 @@
           "type": "question",
           "settings": {
             "title": "Will it keep disconnecting?",
-            "text": "<p>The Lite is engineered for a stable, auto-reconnecting link — no dropout loops. It re-pairs automatically every time you start the car.</p>",
+            "text": "<p>The Lite is engineered for a stable, auto-reconnecting link — no dropout loops. It re-pairs automatically every time you start the car.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -640,7 +688,7 @@
           "type": "question",
           "settings": {
             "title": "Will this work with my car?",
-            "text": "<p>If your car shows Apple CarPlay or Android Auto when you plug your phone in with a cable, the Lite makes it wireless. It works with hundreds of models — and if you're unsure, <a href=\"/pages/supported-cars\">check compatibility</a> or message us and we'll confirm in minutes.</p>",
+            "text": "<p>If your car shows Apple CarPlay or Android Auto when you plug your phone in with a cable, the Lite makes it wireless. It works with hundreds of models — and if you're unsure, <a href=\"\/pages\/supported-cars\">check compatibility<\/a> or message us and we'll confirm in minutes.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -649,7 +697,7 @@
           "type": "question",
           "settings": {
             "title": "Does it work with both iPhone and Android?",
-            "text": "<p>Yes. Wireless CarPlay for iPhone, wireless Android Auto for Android — plus screen mirroring on both.</p>",
+            "text": "<p>Yes. Wireless CarPlay for iPhone, wireless Android Auto for Android — plus screen mirroring on both.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -658,7 +706,7 @@
           "type": "question",
           "settings": {
             "title": "Will it still work after an iOS or Android update?",
-            "text": "<p>Yes. The Lite is designed to keep working through phone and OS updates, and we keep its firmware current.</p>",
+            "text": "<p>Yes. The Lite is designed to keep working through phone and OS updates, and we keep its firmware current.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -667,7 +715,7 @@
           "type": "question",
           "settings": {
             "title": "Is this just a rebadged $29 dongle?",
-            "text": "<p>No. It's an AutoLinkr product — tuned for reliable mirroring and connection, backed by our warranty, real support, and a brand 50,000+ drivers already trust. That's what the $29 no-names can't stand behind.</p>",
+            "text": "<p>No. It's an AutoLinkr product — tuned for reliable mirroring and connection, backed by our warranty, real support, and a brand 50,000+ drivers already trust. That's what the $29 no-names can't stand behind.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -676,7 +724,7 @@
           "type": "question",
           "settings": {
             "title": "Do I need Wi-Fi or a data plan for it to work?",
-            "text": "<p>No separate Wi-Fi needed — it creates its own direct link to your car. Streaming or mapping apps use your phone's data as they normally would.</p>",
+            "text": "<p>No separate Wi-Fi needed — it creates its own direct link to your car. Streaming or mapping apps use your phone's data as they normally would.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -685,7 +733,7 @@
           "type": "question",
           "settings": {
             "title": "Can I watch video while the car is moving?",
-            "text": "<p>Video and full mirroring are for passengers or when you're safely parked. Please never watch video while driving — follow your local laws.</p>",
+            "text": "<p>Video and full mirroring are for passengers or when you're safely parked. Please never watch video while driving — follow your local laws.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -694,7 +742,7 @@
           "type": "question",
           "settings": {
             "title": "Can I move it between cars?",
-            "text": "<p>Yes. Unplug it, plug it into another compatible car, and pair once. Many drivers grab the 2-pack so every car is covered.</p>",
+            "text": "<p>Yes. Unplug it, plug it into another compatible car, and pair once. Many drivers grab the 2-pack so every car is covered.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -703,7 +751,7 @@
           "type": "question",
           "settings": {
             "title": "What if it doesn't work with my car?",
-            "text": "<p>You're protected by a 30-day money-back guarantee. If it doesn't perform in your vehicle, send it back for a full refund.</p>",
+            "text": "<p>You're protected by a 30-day money-back guarantee. If it doesn't perform in your vehicle, send it back for a full refund.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -712,7 +760,7 @@
           "type": "question",
           "settings": {
             "title": "How long does shipping take?",
-            "text": "<p>Ships within 24 hours; standard delivery is 3–7 business days, with tracking. Free shipping on 2-packs.</p>",
+            "text": "<p>Ships within 24 hours; standard delivery is 3–7 business days, with tracking. Free shipping on 2-packs.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -809,7 +857,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Wireless CarPlay, Android Auto and screen mirroring that actually works — backed by AutoLinkr.</p>",
+            "text": "<p>Wireless CarPlay, Android Auto and screen mirroring that actually works — backed by AutoLinkr.<\/p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -825,7 +873,7 @@
           "type": "button",
           "settings": {
             "button_label": "Add to Cart",
-            "button_link": "/products/autolinkr-lite-wireless-carplay-adapter",
+            "button_link": "\/products\/autolinkr-lite-wireless-carplay-adapter",
             "button_style": "primary",
             "button_size": "lg",
             "button_external": false,
@@ -836,7 +884,7 @@
           "type": "button",
           "settings": {
             "button_label": "Check Your Car's Compatibility →",
-            "button_link": "/pages/supported-cars",
+            "button_link": "\/pages\/supported-cars",
             "button_style": "link",
             "button_size": "md",
             "button_external": false,
@@ -886,7 +934,7 @@
       "type": "apps",
       "blocks": {
         "areviews_display_reviews": {
-          "type": "shopify://apps/areviews-reviews-importer/blocks/AreviewsDisplayReviews/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
+          "type": "shopify:\/\/apps\/areviews-reviews-importer\/blocks\/AreviewsDisplayReviews\/ab0ec5fe-c95b-4fd6-bfb8-db2a30d0756f",
           "settings": {
             "hide_areviews_title_rating": false,
             "areviews_theme_font": "inherit",
